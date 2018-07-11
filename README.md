@@ -102,32 +102,41 @@ La interfaz debe permitir lo siguiente:
 
 #### Muro/timeline de la red social
 
-* Validaciones:
+* Validaciones (debe tener al menos 8):
   - Al apretar el botón de publicar, debe validar que exista contenido en el input.
 * Comportamiento:
-  - Poder publicar un post.
-  - Poder poner like a una publicación.
-  - Llevar un conteo de los likes.
-  - Poder eliminar un post específico.
-  - Poder filtrar los posts sólo para mis amigos y para todo público.
-  - Pedir confirmación antes de eliminar un post.
-  - Al darle click en el botón editar, debe cambiar el texto por un input que
-    permita editar el texto y cambiar el link por guardar.
-  - Al darle guardar debe cambiar de vuelta a un texto normal pero con la
-    información editada.
-  - Al recargar la página debo de poder ver los textos editados
+  - Debe poder publicar un post, imagen, post e imagen, etc.
+  - Poder poder like/Estrella (o similar) a una publicación.
+  - Debe poder llevar ó ver cuántos me like/Estrella (o similar) tiene una publicación.
+  - Debe poder eliminar un post/publicación específico.
+  - Debe pedir una confirmación antes de eliminar un post/publicación.
+  - Al darle click en el botón *editar*, debe poder cambiar el texto, imagen, post e imagen, o lo que contenga la publicación.
+    (se sugiere que el texto cambie a un input, permita editar el texto y que el
+    tenga un botón `editar` se convierta en `guardar`).
+  - Al editar solo debe poder editar sus propios post y **NO** los post de los demás usuarios.
+  - Al darle `guardar` debe regresar de vuelta a la forma que tenia antes la publicación
+    a un texto normal pero con la información editada.
+  - Al recargar la página debo de poder ver los textos editados y publicaciones
+    anteriores (persistencia).
+  - Debe poder agregar nuevos amigos
+  - Debe poder aceptar solicitudes de amigos
+  - Debe poder eliminar amigos
+  - Debe poder filtrar los posts sólo para mis amigos y para todo público.
+  - Debe poder publicar solo para mis amigos
+  - Debe poder publicar públicamente, visible para todos los usuarios de la red social.
+  - Debe poder enviar mensajes privados a mis amigos.
 * Perspectiva de interfaz:
   ![Muro](https://user-images.githubusercontent.com/9284690/40994768-c52c3442-68c2-11e8-99a5-9e127e700dee.png)
 
 #### Otras consideraciones
 
-* La aplicación no debe dejar hacer publicaciones vacías de ningun tipo.
-* El usuario debe poder agregar, editar y eliminar contenido de la red
-  social.
-* El usuario debe poder definir la privacidad de lo que pública.
-* Al editar contenido, el contenido editado se verá automáticamente,
-  inmediatamente después de guardar.
-* Al recargar la página se deben poder ver los contenidos editados.
+  - La aplicación **NO** debe poder dejar hacer publicaciones vacías de ningún tipo.
+  - El usuario debe poder agregar, editar y eliminar contenido de la red
+    social.
+  - El usuario debe poder definir la privacidad de lo que pública.
+  - Al editar contenido, el contenido editado se verá automáticamente,
+    inmediatamente después de guardar.
+  - Al recargar la página se deben poder ver los contenidos editados.
 
 Para armar la interfaz visual, utiliza como base alguna de estas guías de
 componentes:
@@ -410,6 +419,9 @@ Esta la podríamos haber dividido en algunas más pequeñas, por ejemplo:
 
 Como ves, dividirla en 1 y 2, hace que sea mucho más fácil imaginar y entender
 lo que el equipo tiene que conseguir para completarla.
+
+### Te dejamos un ejemplo de una historias de usuario para este proyecto
+
 
 Otras:
 
