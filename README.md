@@ -399,7 +399,7 @@ modificar datos existentes. Estos datos se podrán guardar localmente usando
 [`localStorage`](https://developer.mozilla.org/es/docs/Web/API/Window/localStorage)
 o de forma remota usando [Firebase](https://firebase.google.com/).
 
-### Te dejamos un ejemplo de una historias de usuario
+### Te dejamos un ejemplo de una historias de usuario del proyecto anterior (_Data-dasboard_)
 
 En el proyecto "Data Dashboard", la primera historia "épica" podría haber sido:
 
