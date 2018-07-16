@@ -13,24 +13,20 @@
 
 <body>
 
-    <div id="loginbox" class="container">
-        <input id="textEmail" type="email" placeholder="Tu email">
+  <div class="login-box">
+  <img src="avatar.png" class="avatar">
+      <h1>Login Here</h1>
+          <form>
+          <p>Username</p>
+          <input type="text" name="username" placeholder="Enter Username">
+          <p>Password</p>
+          <input type="password" name="password" placeholder="Enter Password">
+          <input type="submit" name="submit" value="Login">
+          <a href="#">Forget Password</a>
+          </form>
 
 
-        <input id="textPassword" type="password" placeholder="Tu contraseña">
-
-        <button id="btnLogIn" class="btn btn-action">
-        Log in
-        </button>
-
-        <button id="btnSingUp" class="btn btn-secondary">
-        Sing up
-        </button>
-
-        <button id="btnLogOut" calss="" btn btn-action hide>
-        Log out
-        </button>
-    </div>
+      </div>
 
     <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
     <script src="js/index.js"></script>
