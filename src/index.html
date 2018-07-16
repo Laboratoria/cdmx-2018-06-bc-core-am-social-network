@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Foodbook</title>
+    
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  //ya nos estamos conectado a firebase a través de nuestro sitio web
+  var config = {
+    apiKey: "AIzaSyBJVkG4r0b5pauCPkgJ7lF8TNGwqlNE7Z0",
+    authDomain: "red-social-ea5c4.firebaseapp.com",
+    databaseURL: "https://red-social-ea5c4.firebaseio.com",
+    projectId: "red-social-ea5c4",
+    storageBucket: "red-social-ea5c4.appspot.com",
+    messagingSenderId: "596516685843"
+  };
+  firebase.initializeApp(config);
+</script>
+</head>
+<body>
+    <div class= "container">
+        <input id="email-text" type="email" placeholder="Email">
+        <input id="password-text" type="password" placeholder="Password">
+        <button id="btn-signup" onclick="registrar()">Ingresa con Google</button>
+        <button id="btn-login">Ingresa con Facebook</button>
+    
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
