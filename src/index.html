@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Foodbook</title>
-    
-<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  //ya nos estamos conectado a firebase a través de nuestro sitio web
-  var config = {
-    apiKey: "AIzaSyBJVkG4r0b5pauCPkgJ7lF8TNGwqlNE7Z0",
-    authDomain: "red-social-ea5c4.firebaseapp.com",
-    databaseURL: "https://red-social-ea5c4.firebaseio.com",
-    projectId: "red-social-ea5c4",
-    storageBucket: "red-social-ea5c4.appspot.com",
-    messagingSenderId: "596516685843"
-  };
-  firebase.initializeApp(config);
-</script>
-</head>
-<body>
-    <div class= "container">
-        <input id="email-text" type="email" placeholder="Email">
-        <input id="password-text" type="password" placeholder="Password">
-        <button id="btn-signup" onclick="registrar()">Ingresa con Google</button>
-        <button id="btn-login">Ingresa con Facebook</button>
-    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Social Network</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?faily=Roboto:300,500" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 
-    </div>
-    <script src="index.js"></script>
+</head>
+
+<body>
+
+  <div class="login-box">
+  <img src="avatar.png" class="avatar">
+      <h1>Login Here</h1>
+          <form>
+          <p>Username</p>
+          <input type="text" name="username" placeholder="Enter Username">
+          <p>Password</p>
+          <input type="password" name="password" placeholder="Enter Password">
+          <button value="Login">
+          <a href="#">Forget Password</a>
+          </form>
+
+
+      </div>
+
+    <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+    <script src="js/index.js"></script>
 </body>
+
 </html>
+
