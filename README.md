@@ -1,3 +1,34 @@
+El _boilerplate_ contiene una estructura de archivos como punto de partida así
+como toda la configuración de dependencias y tests de ejemplo:
+
+```text
+./
+├── .editorconfig
+├── .eslintrc
+├── .gitignore
+├── README.md
+├── package.json
+├── src
+│     └── css
+│     │   └── main.css
+│     ├── js 
+│     │    └──── index.js
+│     │    └──── data.js
+│     ├── views 
+│     │    └──── view1.html
+│     ├── images 
+│     │    └──── image1
+│     │    └──── image2
+│     └── index.html
+└── test
+    ├── data.spec.js
+    ├── fixtures.js
+    ├── headless.js
+    └── index.html
+
+```
+
+
 # Creando una Red Social
 
 ## Preámbulo
