@@ -1,0 +1,11 @@
+#cuerpo{
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 5%;
+    margin-top: 8%;
+    margin-bottom: 8%;
+  }
+#buton{
+    position: relative;
+    top: 2em;
+  }
