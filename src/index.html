@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCgMJoPu-MKQgVZpkMTYo6a6CVTrPpllQ0",
+      authDomain: "red-social-f407d.firebaseapp.com",
+      databaseURL: "https://red-social-f407d.firebaseio.com",
+      projectId: "red-social-f407d",
+      storageBucket: "red-social-f407d.appspot.com",
+      messagingSenderId: "862806390134"
+    };
+    firebase.initializeApp(config);
+
+  </script>
+  
+
+  <body>
+    <h4>Registro de Usuarios</h4>
+    <input id="email" type="email" placeholder="Ingresa email">
+    <input id="contraseña" type="password" placeholder="Ingresa contraseña">
+    <button onclick="registrar()">Enviar</button>
+
+    <h5>Ingreso de Usuarios</h5>
+    <input id="email2" type="email" placeholder="Ingresa email">
+    <input id="contraseña2" type="password" placeholder="Ingresa contraseña">
+    <button onclick="ingresar()">Acceder</button>
+
+    <div id="contenido">
+
+      <p>Bienvenido</p>
+
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+
+</html>
