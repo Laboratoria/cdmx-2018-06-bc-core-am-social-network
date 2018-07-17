@@ -1,1 +1,6 @@
 # Aqui debes poner los archivos que no quieras que se suban a Github
+*.swp
+.nyc_output/
+coverage/
+node_modules/
+package-lock.json
