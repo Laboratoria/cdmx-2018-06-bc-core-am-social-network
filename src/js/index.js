@@ -6,6 +6,44 @@ var config = {
   messagingSenderId: "705442568830",
 };
 firebase.initializeApp(config);
+const Email = document.getElementById('Email');
+const Password = document.getElementById('Password');
+const LogIn =document.getElementById('LogIn');
+const SignUp = document.getElementById('SignUp');
+const LogOut = document.getElementById('LogOut');
+// Funcionalidad del boton LogIn
+LogIn.addEventListener( 'click', e => {
+//Obteniendo e-mail y password
+const email = intText.value;
+const passw = intPass.value;
+const auth = firebase.auth();
+//  Sign In
+const promise = auth.signInWithEmailAndPassword(email, passw);
+promise.catch(e => console.log(e.message));
+});
+// Funcionalidad del boton SignUp
+   SignUp.addEventListener('click', e =>{
+   //Creando usuarios con SignUp
+   const email = intText.value;
+   const passw = intPass.value;
+   const auth = firebase.auth();
+   // Se entra con Sign In
+   const promise = auth.createUserWithEmailAndPassword(email, passw);
+   promise.catch(e => console.log(e.message));
+   LogOut.addEventListener('click', e =>{
+    firebase.auth().SignOut();
+   });
+   // Se identifica al usuario y se deja entrar a la firebase console (listener de autentificacion en tiempo real)
+        firebase.auth().onAuthStateChanged( firebaseUser =>{
+        if(firebaseUser){
+        console.log(firebaseUser);
+        LogOut.classList.remove('hide');
+        }else{
+        console.log('Not logged in');
+        LogOut.classList.add('hide');
+        }
+        });
+    });
 
 var provider = new firebase.auth.GoogleAuthProvider();
 
@@ -36,5 +74,6 @@ function googleSignout() {
       console.log('Signout Failed')
    });
 }
-//funcionalidad del boton de fb y el login normal
-// agregar el local storage para el primer comentario 
+const Siguiente = () => {
+//mandar a wall.html
+}
