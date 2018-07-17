@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # **Social Network**
 
 ## Definición del usuario.
