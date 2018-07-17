@@ -10,6 +10,7 @@
     <link rel="icon">
 </head>
 <body>
+  <h2 id='userSpace'></h2>
   <pre id = 'obj'>
   </pre>
         <header id="encabezado">
@@ -18,9 +19,10 @@
     <section class="container-fluid offset-md-1"></section>
     <div id="cuerpo" class= "text-center col-4 offset-md-4">
         <form id="usuario" class="text-center form-group">
-          <input type="email" class="form-control" placeholder="Usuario">
-          <input type="password" class="form-control" placeholder="Contraseña">
-          <input type="button" value="Ingresar" class="btn btn-dark btn-md" id="button">
+          <input id = "email" type="email" class="form-control" placeholder="Usuario">
+          <input id = "psw" type="password" class="form-control" placeholder="Contraseña">
+          <input type="button" value="Ingresar con Google" class="btn btn-dark btn-md" id="button">
+          <input type="button" value="Ingresar con correo" class="btn btn-dark btn-md" id="buttonEmail">
         </form>
       </div>
       <p>No estás registrado?  <a href="./registro.html" title="Registro de nuevo usuario">Registrate Aquí</a></p>
