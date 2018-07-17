@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1.0">
+  <title>LOGIN</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
+
+</head>
+<body>
+  <!-- FORMULARIO DE INCIO DE SESION -->
+  <div class="container">
+
+    <form id="loginform" method="" action="">
+      <input type="text" class="input" placeholder="Correo" id="correo"/>
+      <input type="password" class="input" placeholder="Contraseña" id="login" />
+      <input type="submit" class="loginbutton iniciar" value="Iniciar sesión" onclick="abrirPagina()" target="_self"/>
+      <input type="submit" class="loginbutton registrar" value="Registrar" onclick="abrirPagina()" target="_self"/>
+      <input type="submit" class="loginbutton face" value="Facebook" onclick="abrirPagina()" target="_self"/>
+      <input type="submit" class="loginbutton google" value="Google" onclick="abrirPagina()" target="_self"/>
+    </form>
+  </div>
+
+
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDF6pmMzyiBN_rgrRjgKzVduWUiwfB_vNI",
+    authDomain: "usuarios-53fee.firebaseapp.com",
+    databaseURL: "https://usuarios-53fee.firebaseio.com",
+    projectId: "usuarios-53fee",
+    storageBucket: "usuarios-53fee.appspot.com",
+    messagingSenderId: "164308838159"
+  };
+  firebase.initializeApp(config);
+</script>
+
+</body>
+</html>
