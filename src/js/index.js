@@ -20,6 +20,7 @@ const btnLogout = document.getElementById('btnLogout');
     // Se agrega el evento click para el boton LogIn
     btnLogin.addEventListener( 'click', e => {     
     //Obteniendo e-mail y password
+    console.log('se escucho el evento click en el boton login')
     const email = txtEmail.value;
     const passw = txtPassword.value;
     const auth = firebase.auth();
