@@ -32,10 +32,10 @@ window.initializeFirebase = () => {
   window.signOutUser = () => {
     firebase.auth().signOut().then(() => {
       // Sign-out successful.
-      location.href = ('views/view2');
+      location.href = ('views/logOut.html');
     }).catch((error) => {
       // An error happened.
-      console.log('No')
+      alert('No se ha podido cerrar sesión.');
     });
   }
 
