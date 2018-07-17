@@ -1,4 +1,4 @@
-// Initialize Firebase
+// Initialize Firebase //
 window.initializeFirebase = () => {
     firebase.initializeApp({
         apiKey: "AIzaSyA2_g2xx4nNZIKuqwbaUwk3HaA4mEesgCM",
@@ -8,13 +8,43 @@ window.initializeFirebase = () => {
         storageBucket: "",
         messagingSenderId: "805982016843"
     });
+  },
+  
+  // Login Function... User and email validation //
+  window.loginUser = (email, password) => {
+    firebase.auth().signInWithEmailAndPassword(email, password)
+    .then((event) => {
+      location.href = ('views/view1.html');
+    })
+    .catch((error) => {
+      // Handle Errors here.
+      let errorCode = error.code;
+      let errorMessage = error.message;
+      if (errorCode === 'auth/wrong-password') {
+        alert('Contraseña invalida');
+      } else if (errorCode === 'auth/user-not-found' || errorCode === 'auth/invalid-email') {
+        alert('Por favor verifica tu usuario');
+      }
+    });
   }
   
+  // Log Out Function //
+  window.signOutUser = () => {
+    firebase.auth().signOut().then(() => {
+      // Sign-out successful.
+      location.href = ('views/view2');
+    }).catch((error) => {
+      // An error happened.
+      console.log('No')
+    });
+  }
+
+
   window.checkLoggedUser = (user) => {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         // User is signed in.
-        window.location.href = ('views/newsfeed.html');
+        window.location.href = ('views/view1.html');
   
       } else {
         // No user is signed in.
@@ -25,34 +55,9 @@ window.initializeFirebase = () => {
   
   
   // Initialize Cloud Firestore through Firebase
-  window.initializeFirestore = () => {
-    let db = firebase.firestore();
-  }
-  
-  
-  window.loginUser = (email, password) => {
-    firebase.auth().signInWithEmailAndPassword(email, password).catch((error) => {
-      // Handle Errors here.
-      let errorCode = error.code;
-      let errorMessage = error.message;
-      console.log(errorCode);
-      if (errorCode === 'auth/wrong-password') {
-        alert('Contraseña invalida');
-      } else if (errorCode === 'auth/user-not-found' || errorCode === 'auth/invalid-email') {
-        alert('Por favor verifica tu usuario');
-      }
-    });
-  }
-  
-  
-  window.signOutUser = () => {
-    firebase.auth().signOut().then(() => {
-      // Sign-out successful.
-    }).catch((error) => {
-      // An error happened.
-    });
-  }
-  
+  // window.initializeFirestore = () => {
+  //   let db = firebase.firestore();
+  // }
   
   window.createNewUser = () => {
     firebase.auth().createUserWithEmailAndPassword(email, password).catch((error) => {
