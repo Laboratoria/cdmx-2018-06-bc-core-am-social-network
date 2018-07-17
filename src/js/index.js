@@ -1,3 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+
 // Inicializar Firebase
  const config = {
    apiKey: "AIzaSyCt9yjfxwLkam9k--FRqUyqn-nw2pOgrdY",
@@ -22,25 +33,51 @@ authGoogle = () => {
 
 authentificating = (provider) =>{
   firebase.auth().signInWithPopup(provider).then(function(result) {
-  // This gives you a Google Access Token. You can use it to access the Google API.
+  // Da el Token de acceso a Google. Usar para acceder a la API de Google
   var token = result.credential.accessToken;
-  // The signed-in user info.
+  // Datos del usuario logeado
   var user = result.user;
   console.log(result);
-  // ...
 }).catch(function(error) {
-  // Handle Errors here.
-  console.log(error);
+  // enerar error
   var errorCode = error.code;
-  console.log(errorCode);
   var errorMessage = error.message;
-  console.log(errorMessage);
-  // The email of the user's account used.
+  // Este email ya esta en uso
   var email = error.email;
   console.log(email);
-  // The firebase.auth.AuthCredential type that was used.
+  // Los permisos del firebase.auth.AuthCredential ya fueron usados.
   var credential = error.credential;
   console.log(credential);
-  // ...
 });
 }
+
+const authEmail = document.getElementById('buttonEmail');
+const userEmail = document.getElementById('email').value;
+const userPsw = document.getElementById('psw').value;
+
+authEmail.addEventListener('click', (event) =>{
+  authentificationsUsersByEmail();
+});
+authentificationsUsersByEmail= () =>{
+  firebase.auth().createUserWithEmailAndPassword(userEmail, userPsw)
+  .then(function(){
+    console.log(userEmail);
+    sigInByEmail(userEmail, userPsw);
+  })
+  .catch(function(error) {
+  // Manejo de errores
+  var errorCode = error.code;
+  var errorMessage = error.message;
+});
+}
+sigInByEmail = (userEmail, userPsw) => {
+  firebase.auth().signInWithEmailAndPassword(userEmail, userPsw).catch(function(error) {
+  // Manejo de error
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // ...
+  });
+}
+/*const userPrintSpace = document.getElementById('obj');
+let database = firebase.database().ref().child('obj');
+database.on('value', snap => console.log(snap.val()));*/
