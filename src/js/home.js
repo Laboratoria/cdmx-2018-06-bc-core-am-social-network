@@ -16,7 +16,7 @@
   // Add logout event
   btnLogout.addEventListener('click', event => {
     firebase.auth().signOut();
-    window.location.assign('index.html');
+    window.location.assign('../index.html');
   });
 
   firebase.auth().onAuthStateChanged(firebaseUser => {

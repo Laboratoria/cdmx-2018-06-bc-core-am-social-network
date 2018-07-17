@@ -34,7 +34,7 @@
   firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
       console.log(firebaseUser);
-      window.location.assign('home.html');
+      window.location.assign('../views/home.html');
       let user = firebase.auth().currentUser;
       if (user !== null) {
         user.updateProfile({

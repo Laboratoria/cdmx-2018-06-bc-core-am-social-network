@@ -30,7 +30,7 @@
   firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
       console.log(firebaseUser);
-      window.location.assign('../views/home.html');
+      window.location.assign('../src/views/home.html');
       let user = firebase.auth().currentUser;
       if (user !== null) {
         // let emailId = user.email;
