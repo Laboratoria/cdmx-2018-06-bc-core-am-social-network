@@ -114,8 +114,10 @@ UX Sketching
 
 a) [Ideal] (Pendiente)
 
-b) Versión 1.0 ![Login Mobile](images/mobile.gif)
-               ![Login Web](images/web.gif) 
+b) Versión 1.0 Baja Fidelidad ![Login Mobile](images/mobile.gif)
+                              ![Login Web](images/web.gif) 
+
+               Alta Fidelidad (https://www.figma.com/file/LeDMOc6n08FLECZQ5FFXlf3B/Welcome-Register)               
 
 
 Prototipo de alta fidelidad
