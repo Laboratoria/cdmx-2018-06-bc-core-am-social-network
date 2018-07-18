@@ -18,10 +18,12 @@
 
   // Add signup event
   btnSignUp.addEventListener('click', event => {
-    // Get email and password
+    // Get name, email and password
+    const name = txtName.value;
     const email = txtEmail.value;
     const password = txtPassword.value;
     const auth = firebase.auth();
+    window.social.displayNickname(name);
     // Sign in
     const promise = auth.createUserWithEmailAndPassword(email, password);
     promise

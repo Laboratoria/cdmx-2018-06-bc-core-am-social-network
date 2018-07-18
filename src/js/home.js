@@ -27,3 +27,11 @@
     }
   });
 }());
+
+const postText = document.getElementById('post-entry');
+const btnShare = document.getElementById('new-post');
+
+btnShare.addEventListener('click', event => {
+  let textInPost = postText.value;
+  window.social.displayPost(textInPost);
+});
