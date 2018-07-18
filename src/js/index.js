@@ -20,10 +20,10 @@ firebase.initializeApp(config);
 //
 const authentificationsUsers = document.getElementById('button');
 
+const authentificationsUsers = document.getElementById('button');
 authentificationsUsers.addEventListener('click', (event) =>{
   authGoogle();
 });
-
 authGoogle = () => {
   var provider = new firebase.auth.GoogleAuthProvider();
   authentificating(provider);
