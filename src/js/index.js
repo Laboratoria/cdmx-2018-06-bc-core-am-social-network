@@ -1,12 +1,3 @@
-let comment = document.getElementById('entrada');
-
-// Función de Compartir comment:
-const share = () => {
-  let comentario = comment.value;
-  const getCommits = document.getElementById('comentarios');
-  // EN algún lugar le tengo que insertar la información comentario
-  // `<textarea id="demo" cols="20" rows="3" class="form-control" readonly="true"></textarea>`
-};
 // Inicializar Firebase
 const config = {
   apiKey: 'AIzaSyCt9yjfxwLkam9k--FRqUyqn-nw2pOgrdY',
@@ -17,8 +8,6 @@ const config = {
   messagingSenderId: '1728202919'
 };
 firebase.initializeApp(config);
-//
-const authentificationsUsers = document.getElementById('button');
 
 const authentificationsUsers = document.getElementById('button');
 authentificationsUsers.addEventListener('click', (event) =>{
@@ -79,3 +68,13 @@ sigInByEmail = (userEmail, userPsw) => {
 /* const userPrintSpace = document.getElementById('obj');
 let database = firebase.database().ref().child('obj');
 database.on('value', snap => console.log(snap.val()));*/
+
+// __ Function Share Comment:
+let comment = document.getElementById('entrada');
+
+const share = () => {
+  let comentario = comment.value;
+  const getCommits = document.getElementById('comentarios');
+  // EN algún lugar le tengo que insertar la información comentario
+  // `<textarea id="demo" cols="20" rows="3" class="form-control" readonly="true"></textarea>`
+};
