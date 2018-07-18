@@ -8,14 +8,7 @@ const config = {
   messagingSenderId: '1728202919'
 };
 firebase.initializeApp(config);
-let comment = document.getElementById('entrada');
-// Función de Compartir comment:
-const share = () => {
-  let comentario = comment.value;
-  const getCommits = document.getElementById('comentarios');
-  // EN algún lugar le tengo que insertar la información comentario
-  // `<textarea id="demo" cols="20" rows="3" class="form-control" readonly="true"></textarea>`
-};
+
 // Con Gmail de Google
 const authentificationsUsers = document.getElementById('button');
 authentificationsUsers.addEventListener('click', (event) =>{
@@ -50,45 +43,45 @@ ingresar = () =>{
   let emailU = document.getElementById('uEmail').value;
   let passwordU = document.getElementById('uPsw').value;
   firebase.auth().signInWithEmailAndPassword(emailU, passwordU)
-  .then(function(){
-    observadorEmail();
-  })
-  .catch(function(error) {
-  // Manejo de error
-  var errorCode = error.code; console.log(errorCode);
-  var errorMessage = error.message; console.log(errorMessage);
-  // ...
-});
-}
+    .then(function() {
+      observadorEmail();
+    })
+    .catch(function(error) {
+      // Manejo de error
+      var errorCode = error.code; console.log(errorCode);
+      var errorMessage = error.message; console.log(errorMessage);
+      // ...
+    });
+};
 
 observadorEmail = ()=>{
   let nameU = document.getElementById('uName').value;
   console.log(nameU);
   firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    userSpace(nameU);
-    // Usuario logeado
-    var displayName = user.displayName;
-    var email = user.email;
-    var emailVerified = user.emailVerified;
-    var photoURL = user.photoURL;
-    var isAnonymous = user.isAnonymous;
-    var uid = user.uid;
-    var providerData = user.providerData;
-    console.log("Activo");
-  } else {
-    console.log("No hay usuario");
-  }
-});
-}
-//observadorEmail();
+    if (user) {
+      userSpace(nameU);
+      // Usuario logeado
+      var displayName = user.displayName;
+      var email = user.email;
+      var emailVerified = user.emailVerified;
+      var photoURL = user.photoURL;
+      var isAnonymous = user.isAnonymous;
+      var uid = user.uid;
+      var providerData = user.providerData;
+      console.log('Activo');
+    } else {
+      console.log('No hay usuario');
+    }
+  });
+};
+// observadorEmail();
 
-userSpace =(user)=>{
+userSpace = (user)=>{
   let nameU = user;
   let contenido = document.getElementById('container');
   contenido.innerHTML = `<p>${'Bienvenido'}${' '}${nameU}</p>
   <button type="button" id="buttonLogout" onclick="cerrar()">LogOut</button>`;
-}
+};
 cerrar = () =>{
   let contenido = document.getElementById('container');
   firebase.auth().signOut()
