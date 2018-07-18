@@ -17,38 +17,39 @@
   const logout = document.getElementById('logout');
 
 // Agregar evento para el botón de inicio de sesión
-  login.addEventListener('click', e => {
+  login.addEventListener('click', event => {
 // Obtenemos valor de email y password
     const emailValue = email.value;
     const passwordValue = password.value;
     const auth = firebase.auth();
-// Para iniciar sesión
+// Para iniciar sesión 
     const promise = auth.signInWithEmailAndPassword(emailValue, passwordValue);
-    promise.catch(e => console.log(e.message));
+    promise.catch(event => console.log(event.message));
 
   });
 
 // Añadiendo el evento del botón de registrarse
 
-  signup.addEventListener('click', e => {
+  signup.addEventListener('click', event => {
     const emailValue = email.value;
     const passwordValue = password.value;
     const auth = firebase.auth();
 
     const promise = auth.createUserWithEmailAndPassword(emailValue, passwordValue);
-    promise.catch(e => console.log(e.message));
+    promise.catch(event => console.log(event.message));
   });
 
-   logout.addEventListener('click', e => {
+   logout.addEventListener('click', event => {
      firebase.auth().signOut();
-   });
+   }); 
 
   firebase.auth().onAuthStateChanged(firebaseUser => {
     if(firebaseUser){
       console.log(firebaseUser);
     } else {
       console.log('not logged in');
-    }
+      logout.classList.add('hide');
+    } 
   })
 }());
 
