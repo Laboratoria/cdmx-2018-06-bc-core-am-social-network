@@ -15,3 +15,4 @@ Contribuidor:
 2. Instala dependencias.
 3. Solicita pull requests.
 
+Nota: No olvides que aún seguimos trabajando en este proyecto, y por lo tanto nos encontramos en una versión Beta.
