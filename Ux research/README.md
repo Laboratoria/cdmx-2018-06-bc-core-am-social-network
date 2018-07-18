@@ -78,7 +78,7 @@ También es importante resaltar que los encuestados se encontraron interesados e
 
 >“Me gustaría poder hacer amigos, que compartan tips y que promocionen eventos o recomiendes sitios donde relajarse; así como crear grupos”.
 
-## Benchmark
+# Benchmark
 
 En conjunto con la elaboración de encuentas y su análisis preliminar, se empezó a trabajar en un Benchmark para permitirnos analizar tanto los sitios web como las aplicaciones móviles con la que se compartía una visión similar.
 
@@ -101,3 +101,5 @@ Hoy en día, menos es más y las propuestas actuales de las apps ofrecen textos 
 **Estas páginas son poco activas, volviéndose complicada la comunicación con algún experto de manera inmediata.
 
 **Las páginas están saturadas de información excesiva y poco organizada.
+
+# Sketching
