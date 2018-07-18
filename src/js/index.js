@@ -11,7 +11,7 @@
   firebase.initializeApp(config);
 
 
-   // Get elements
+   // Getting elements
    let mail = document.getElementById('email');
    let password = document.getElementById('password');
    const logIn = document.getElementById('log-in');
@@ -33,32 +33,18 @@
       email: email.value
      }
      localStorage.setItem("key", JSON.stringify(usuario));
-     console.log(usuario);
+    
 // para iniciar sesión (log in)
 window.homeNetwork.mostrar(usuario);
      const promise = auth.signInWithEmailAndPassword(emailValue, passwordValue);
      promise.catch(e => console.log(e.message));
     //  datosUsuario(emailValue, passwordValue);
    });
-
   
-    //  let datosUsuario = (emailValue,passwordValue) => {
-    //   let usuario ={
-    //    name: username.value,
-    //    apellido: lastname.value,
-    //    email: email.value
-    //   }
-     
-    //  }
-   
-   
-
-  
-
    //botón de registrarse (sign up)
 
    signUp.addEventListener('click', e => {
-    event.preventDefault();
+    // event.preventDefault();
 
      let emailValue = email.value;
      let passwordValue = password.value;
