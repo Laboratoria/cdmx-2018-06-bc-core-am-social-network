@@ -45,14 +45,6 @@ body{
     -moz-transition: 0.3s;
 }
 
-/*.container button:hover
-.logged-in button:hover {
-    background: #fff;
-    color: #26a69a;
-    border: 1px solid #26a69a;
-    cursor: pointer;
-}*/
-
 .btn:hover{
     background: #fff;
     color: #26a69a;
