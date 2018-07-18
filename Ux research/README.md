@@ -45,7 +45,7 @@ Al preguntar si padecían de depresión solamente el 16% contestó afirmativamen
 El 38% respondió que no consideraban tener ansiedad mientras que el 61% consideraban tenerla.
 Cuando se preguntó si conocían a alguien que padeciera tanto de depresión como de ansiedad, el 71% respondió afirmativamente:
 <p align="center">
-  <img src="../Ux research/img/conocesAlguien.png"  title="¿Conoces a alguien con estos padecimientos?">
+  <img src="../Ux research/img/conocesAlguien.PNG"  title="¿Conoces a alguien con estos padecimientos?">
 </p>
 El 50% respondió que se trataba de algún amigo, mientras que el porcentaje restante se concentraba en algún conocido o familiar. Sorprendentemente el 76% de los encuestados respondieron negativamente al preguntarles si contaban con una red de apoyo emocional, y el 23% restante se mantenían en contacto con esta principalmente en persona, pero hacían uso de otras herramientas como el uso de internet o teléfono.
 <p align="center">
@@ -130,3 +130,7 @@ Después de elegir el nombre que nos representaría, decidimos dar el siguiente 
 <p align="center">
   <img src="../Ux research/sketch/sketchGeneral2.jpg"  title="Sketch">
 </p>
+
+## Regístro y login
+Principalmente, la forma de registro consta en obtener el correo y contraseña del futuro usuario, sin embargo, también se tiene planeado implementar la función de regístrarse y loguearse a la cuenta tanto con facebook y google. <br>
+En un principio se tenía contemplado solamente el acceso y el regístro mediante un nombre usuario, correo electrónico y un password, ya que 
