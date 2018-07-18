@@ -1,6 +1,7 @@
-let texto = document.getElementById('texto');
+let texto = document.getElementById('textInput');
 let boton = document.getElementById('botonP');
 let comentario = document.getElementById('comentario');
+
 boton.addEventListener('click', evento =>{
-comentario.innerHTML = texto.value
+  newPost.innerHTML = textInput.value;
 });
