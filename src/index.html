@@ -2,23 +2,42 @@
 
 <head>
   <title>Authentication Example</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link rel="stylesheet" href="views/style.css">
 </head>
 
 <body>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
   <form>
+    <div class="main">
+
+
+        <div class="container">
+    <center>
+    <div class="middle">
+          <div id="login">
     <div class="container">
-   <input id="intText" type="email" placeholder="Email">
-   <input id="intPass" type="password" placeholder="Password" >
+      <p ><span class="fa fa-user"></span><input id="intText" type="email" Placeholder="Email" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
+      <p><span class="fa fa-lock"></span><input id="intPass" type="password" Placeholder="Password" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
    <button id="LogIn">Login</button>
    <button id="SignUp">Sign Up</button>
    <button id="LogOut">Log out</buton>
   </div>
-    <div id="Google">
-  <button onclick = "googleSignin()">Google Sign in</button>
-  <button onclick = "googleSignout()">Google Sign out</button>
-</div>
+
   </form>
   <button onclick="Siguiente()">Entrar</button>
+
+  </div>
+  </div>
+  </div>
+  <div id="Google">
+<button onclick = "googleSignin()">Google Sign in</button>
+<button onclick = "googleSignout()">Google Sign out</button>
+</div>
   <!--  -->
   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-auth.js"></script>
