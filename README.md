@@ -1,5 +1,134 @@
-El _boilerplate_ contiene una estructura de archivos como punto de partida así
-como toda la configuración de dependencias y tests de ejemplo:
+# Red social UX-COM
+
+## Proceso de UX
+  Nuestro primer acercamiento lo haremos a través del proceso de diseño, donde pasamos por diferentes etapas como:
+
+1. Descubrimiento e investigación
+Benchmark: 
+  Investigación que apunta a reflejar las mejores prácticas de cada uno de los productos, redes o plataformas elegidas sobre el área de interés (Desarrollo UX). Implica aprender sobre estas prácticas y adaptar las nuestras según lo aprendido, llevando a cabo los cambios necesarios, adaptándolas al contexto en el cual deseamos llevar a cabo nuestra red social. 
+  Las comunidades online son un gran lugar para buscar soluciones, buscar código y recibir feedback en cuanto a nuestros diseños. A continuación las más usadas dentro del área de diseño de experiencia de usuaria alrededor del mundo: 
+
+  Dribble.
+  Su meta es ayudar a diseñadorxs a construir su equipo y marca, se describe como una comunidad vibrante y una red social para cualquier persona a la que le interese el diseño. Su página principal funciona como un repositorio que muestra los diseños más populares (shots), todxs lxs artistas tienen que ganar el derecho de postear imágenes en el sitio. Sus principales usuarios son diseñadorxs web, diseñadorxs de logo, diseñadorxs gráficos, tipógrafxs e ilustradorxs que muestran y comparten sus trabajos creativos. 
+
+  Designer Hangout.
+  Red social por invitación, formada por más de 10,000 diseñadorxs de UX e investigadorxs que discuten tendencias, dan consejos, comparten historias descubren insights, descubren oportunidades y conectan en persona. Mundialmente aclamada como la página más confiable sobre UX, manteniéndose a la vanguardia y recomendada por personas influyentes dentro de la industria. Se anuncia como el ‘arma secreta’ de lxs diseñadorxs, acompañándoles a progresar en su carrera y cumpliendo sus metas de vida. 
+
+  The Interaction Design Community.
+  El contenido es lo más importante en el campo del diseño UX, esta comunidad ha apoyado a la creación de 468 grupos locales en 85 países alrededor del mundo, es un gran lugar para estar al tanto de actividades local, ampliar redes profesionales y encontrar empleo u ofrecerlo, crear amistades y relaciones entre clientxs. 
+
+  Mockplus Discussion Community
+  Estrella en ascenso de la industria de las herramientas para prototipado, permite postear y compartir recursos de diseño, así como preocupaciones sobre el mismo. Hay un sistema de ranking para aquellos que contribuyen a los distintos temas o ayudan a resolver problemas, haciéndolo un lugar ideal para establecer prestigio y mantener relaciones profesionales. 
+
+  UX Mastery.
+  Apunta a ayudar a profesionales UX a comenzar y mejorar en el camino del diseño, está abierta para cualquiera que ame el UX, que busque y comparta consejos sobre UX. Si buscas unx mentorx, obtener consejos de carrera, crear redes con colegas y quieres que tu portafolio tenga reviews, este es el lugar para ti.
+
+  UX Design Community.
+  Hay 600 UXers en Slack que discuten sobre experiencia de usuarix. El propósito de esta comunidad es compartir recursos y conocimiento, intercambiar problemas de diseño y procurar el crecimiento propio y ajeno. Es genial conocer a más diseñadorxs cuando te encuentras ante un problema o trabajas en un ambiente aislado. Debes llenar un formulario para ser invitadx a formar parte. 
+
+  Stack Exchange. 
+  Website de preguntas y respuestas sobre diseño de experiencia de usuarix, para UXers, arquitectxs de la información y diseñadores de interacción humanx computadora, todxs pueden responder o contestar preguntas. Todas las preguntas tienen etiquetas con diferentes áreas, como usabilidad, diseño de website, de interacción, comportamiento de usuarix y expectativas de usuarix. 
+
+  Web Designer Forum. 
+  Foro del Reino Unido, tiene más de 3 mil miembros. Muy activo para su tamaño, un gran lugar para aquellos que quieran formar relaciones profesionales con diseñadores web de la región. Tiene apartados como Galería, Trabajos y Marketplace. 
+
+  Graphic Designer Forum. 
+  Puede ser uno de los foros más grandes y más antiguos con más de 20 mil usuarixs. La comunidad es grande y activa, consiste de varias categorías como recursos para el diseño web, desarrollo web y más. 
+
+  Site Point Forum. 
+  Enorme comunidad con más de 250 mil miembros, es el lugar perfecto para hacer networking, encontrar tips de programación y consejos de negocio. Puedes encontrar respuestas sobre PHP, HTML, JavaScript, CSS, marketing, database, UX design y hosting, etc. Su marketplace permite vender y comprar websites y diseños. 
+
+  Designer News. 
+  Lanzada en 2012 como un lugar para discutir y compartir cosas interesantes en la industria, es una comunidad global de personas que trabajan en el diseño y la tecnología o aquellos que están interesados en esos temas. Comenzó por invitación propia, permite que la comunidad decida el contenido más designer friendly por medio de votos en historias. 
+
+  Hacker News.
+  Website de noticias sociales que se enfoca en entrepreneurship y ciencia computacional. Todo el contenido que puede ser posteado es siempre definido como cualquier cosa que gratifique la curiosidad intelectual. 
+
+  How Design.
+  Es una de las comunidades de diseño más populares y casi todos en la industria ha leído u oído de ella de tanto en tanto. Se divide en diferentes categorías, como Noticias, Diseño de Negocio, Interactividad, Diseño de Carrera, Aprendizaje Online, Eventos, etc. Es un gran lugar para tener conversaciones decentes, seas nuevo o experto en el campo. 
+
+  Designers Talk Forum.
+  Foro grande y activo, con un diseño limpio. Muchas secciones dedicadas al código, diseño web, diseño gráfico, con más de 25 mil miembros de la comunidad.
+
+  Estos son los resultados encontrados: (https://docs.google.com/spreadsheets/d/12TgtT0ZyRIrfcXpkCuPqBlR949jqibWoMIb1VhdM80w/edit?usp=sharing)
+
+Usuarixs: 
+  Mujeres interesadas en la tecnología, con uso avanzado de la misma. 
+  Se desempeñan en el ámbito laboral del diseño de experiencia de usuaria, o en áreas afines. 
+  Con interés en el diseño de experiencia de usuaria o en áreas afines. 
+  Interesadas en compartir experiencias profesionales.
+  Interesadas en resolver dudas y contribuir en una comunidad de mujeres dentro del mundo tech.
+  Realizan estudios en el área de diseño de experiencia de usuaria o en áreas afines. 
+  Empresas/Startups con interés en el área de diseño de experiencia de usuaria o áreas afines.
+
+Necesidades de las usuarias:
+  Con el fin de conocer las necesidades que nuestras usuarias resolverán por medio de la red que desarrollamos, realizamos una encuesta con 23 mujeres de entre 17 y 35 años. A continuación presentamos los resultados (https://docs.google.com/spreadsheets/d/1tdL_Z2u1T8LmSBOT33srOw7rCvrES5CCrji7YjZg6cg/edit#gid=273965330)
+Destacamos las siguientes necesidades:
+  Complementar y compartir conocimientos sobre UX
+  Complementar su quehacer profesional como programadoras o diseñadoras de experiencia de usuaria
+  Hacer comunidad dentro del ámbito donde puedan encontrar apoyo
+  Conocer experiencias de otras mujeres dentro del ámbito profesional
+  Intercambiar y obtener información actualizada
+  Poder compartir su trabajo
+  Acceder a oportunidades laborales
+
+Objetivos de las usuarias: 
+  Formar parte de una red social en la cual puedan intercambiar información sobre UX, así como compartir experiencias laborales con otras mujeres, ser parte de una comunidad activa y actualizada, y al mismo tiempo poder compartir su trabajo para así acceder a oportunidades laborales dentro del rubro. 
+
+Pain points: 
+  Dificultad al encontrar recursos u opciones educativas de calidad sobre UX. 
+  Consideran al UX como un trabajo muy pesado, donde cuesta aterrizar ideas durante su desarrollo.
+  No conocen a más UXers en el medio para poder hablar sobre el tema.
+  No existen suficientes recursos que profundicen en los recursos y herramientas. 
+  Existe mucho material informativo sin rumbo fijo. 
+  Aprender a lidiar con lo que los clientes desean. 
+  Existe información muy variada pero no específica. 
+  Existen muy pocos cursos accesibles y con acreditación.
+
+Sentimientos:
+  Confusión.
+  Pesadez. 
+  Desinformación.  
+  Abrumación. 
+  Falta de apoyo. 
+  Desconocimiento.
+  Soledad.
+
+Técnicas usadas en esta fase: 
+  Encuesta (https://docs.google.com/spreadsheets/d/1tdL_Z2u1T8LmSBOT33srOw7rCvrES5CCrji7YjZg6cg/edit#gid=273965330)
+
+5. Objetivos del negocio: (Enlistarlo(s))
+
+6. Motivaciones del negocio para la red social UX-COM:(Enlistarlo(s))
+
+2. Síntesis y definición
+  (Dada la fase anterior de investigación, ahora vamos a tomar todos los datos más importantes y transformarlos en información valiosa para comenzar a orientarse a la solución. También vamos a entender lo que la empresa quiere de ese producto y comenzar a entender ambas visiones con el fin de encontrar un punto armónico)
+
+1. Cuáles crees que son los datos más importantes a tener en cuenta para la red social UX-COM:
+
+2. Lo que los usuarios esperan obtener:
+
+3. Insights:
+
+5. Insights del negocio:
+
+3. Ideación
+  (Acá se comienza a pensar esa solución tomando en cuenta la información recopilada y procesada)
+
+4. Prototipado
+  (Esta es la fase creativa, donde se comienza a construir el Data dashboard con la información obtenida de las fases anteriores. Se reafirma crear la experiencia de usuario, donde la solución resuelve necesidades y facilita la vida)
+
+  Logo y paleta de color: 
+  (https://www.figma.com/file/HZZFMspweDqfLZG706yjFaAq/UX-COM)
+
+  Sketch: (Adjuntar liga)
+
+  Prototipo en figma: (Adjuntar liga)
+
+5. User testing
+  (Si deseas validar tu propuesta, acércate a tu usuario y que te de feedback con el fin de mejorar tu producto en beneficio del negocio y de tu usuarix).
+
+## Estructura del boilerplate:
 
 ```text
 ./
@@ -26,7 +155,7 @@ como toda la configuración de dependencias y tests de ejemplo:
     ├── headless.js
     └── index.html
 
-```
+
 
 
 # Creando una Red Social
