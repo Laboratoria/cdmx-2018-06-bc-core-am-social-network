@@ -1,4 +1,5 @@
 initializeFirebase();
+currentUserLoggedIn();
 
 document.getElementById("login-button").addEventListener('click', event => {
     event.preventDefault();

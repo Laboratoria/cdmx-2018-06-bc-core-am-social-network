@@ -27,6 +27,19 @@ window.initializeFirebase = () => {
       }
     });
   }
+
+  // Current user function //
+  window.currentUserLoggedIn = () => {
+    firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+      // User is signed in.
+      console.log('siii');
+    } else {
+      // No user is signed in.
+      console.log('nooo');
+    }
+  });
+}
   
   // Log Out Function //
   window.signOutUser = () => {
