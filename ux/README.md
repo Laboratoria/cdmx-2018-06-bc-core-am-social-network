@@ -48,10 +48,8 @@ An **app-mobile first** web based design was realized. This is our first version
 
 ![inicio](https://anndygrs.github.io/cdmx-2018-06-bc-core-am-social-network/ux/images/sketch-mobile/Inicio.jpg)
 ![inicio-sesion](https://anndygrs.github.io/cdmx-2018-06-bc-core-am-social-network/ux/images/sketch-mobile/Inicio-sesion.jpg)
-
 ![inicio-registro](https://anndygrs.github.io/cdmx-2018-06-bc-core-am-social-network/ux/images/sketch-mobile/Registro.jpg)
 ![registro-adicional](https://anndygrs.github.io/cdmx-2018-06-bc-core-am-social-network/ux/images/sketch-mobile/Registro-adicional.jpg)
-
 ![muro](https://anndygrs.github.io/cdmx-2018-06-bc-core-am-social-network/ux/images/sketch-mobile/Muro.jpg)
 ![sidebar](https://anndygrs.github.io/cdmx-2018-06-bc-core-am-social-network/ux/images/sketch-mobile/Sidebar.jpg)
 
@@ -59,8 +57,6 @@ An **app-mobile first** web based design was realized. This is our first version
 
 ![inicio-registro](https://anndygrs.github.io/cdmx-2018-06-bc-core-am-social-network/ux/images/sketch-desktop/Inicio-Registro.jpg)
 ![acerca-nosotras](https://anndygrs.github.io/cdmx-2018-06-bc-core-am-social-network/ux/images/sketch-desktop/Acerca-de-nosotras.jpg)
-
 ![registro-adicional](https://anndygrs.github.io/cdmx-2018-06-bc-core-am-social-network/ux/images/sketch-desktop/Registro-adicional.jpg)
 ![muro](https://anndygrs.github.io/cdmx-2018-06-bc-core-am-social-network/ux/images/sketch-desktop/Muro.jpg)
-
 ![sidebar](https://anndygrs.github.io/cdmx-2018-06-bc-core-am-social-network/ux/images/sketch-desktop/Sidebar.jpg)
