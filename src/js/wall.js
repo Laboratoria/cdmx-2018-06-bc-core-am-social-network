@@ -1,3 +1,5 @@
+wall 
+
 const form = document.querySelector('form');
 const ul = document.querySelector('ul');
 const button = document.querySelector('Share');
@@ -28,4 +30,4 @@ Share.addEventListener('click', function () {
   while (ul.firstChild) {
     ul.removeChild(ul.firstChild);
   }
-});
+  });
