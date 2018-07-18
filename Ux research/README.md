@@ -102,4 +102,14 @@ Hoy en día, menos es más y las propuestas actuales de las apps ofrecen textos 
 
 **Las páginas están saturadas de información excesiva y poco organizada.
 
+# Buscando el nombre ideal
+
+Trabajando en conjunto, se decidió aplicar una dinámica para la elección de un nombre que describiera nuestra visión y misión.
+Dicha dinámica constó en una lluvia de ideas, en donde se pretendía obtener un nombre que fomentara una actitud positiva y de perseverancia ante la vida. </br> Se obtuvieron tres nombres tentativos:
+* Lumos
+* Luciérnaga
+* Lux
+
+
 # Sketching
+
