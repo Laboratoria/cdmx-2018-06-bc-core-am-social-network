@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCU1xkVag73YWUERya-On5x4VaBBXzXxgo",
+    authDomain: "red-social-237f9.firebaseapp.com",
+    databaseURL: "https://red-social-237f9.firebaseio.com",
+    projectId: "red-social-237f9",
+    storageBucket: "red-social-237f9.appspot.com",
+    messagingSenderId: "839140955395"
+  };
+  firebase.initializeApp(config);
+</script>
+    <title>CLUSTER</title>
+</head>
+<body>
+<h4>registro de usuarios</h4>
+    <input type="email" id="email" placeholder="Ingresa tu email">
+    <input type="password" id="contrasena" placeholder="Ingresa tu contraseña">
+    <button onclick="registrar()">Enviar</button>
+<h4>ingreso de usuarios</h4>
+    <input type="email" id="email2" placeholder="Ingresa tu email">
+    <input type="password" id="contrasena2" placeholder="Ingresa tu contraseña">
+<a href="app.html">
+    <button onclick="ingreso()">Enviar</button>
+</a>
+<div id="contenido2"></div>
+    <script src="index.js"></script>
+</body>
+</html>
