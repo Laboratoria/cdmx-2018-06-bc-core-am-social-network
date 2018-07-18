@@ -29,7 +29,7 @@ Como primera aproximación a la opinión pública, se decidió usar la modalidad
 Se logró obtener un total de 39 participantes de las cuales 27 se identifican con el género femenino y el restante con el masculino.
 
 <p align="center">
-  <img src="../Ux research/img/genero.png"  title="¿Con cuál género te identificas?">
+  <img src="../Ux research/img/genero.PNG"  title="¿Con cuál género te identificas?"/>
 </p>
 
 Las actividades de nuestros encuestados se resumen en las siguientes:
@@ -37,10 +37,10 @@ Las actividades de nuestros encuestados se resumen en las siguientes:
 Al preguntar si padecían de depresión solamente el 16% contestó afirmativamente mientras que el 59% consideraban que no la padecían. Sin embargo, cuando se preguntó si consideraban que padecían ansiedad las cifras se invirtieron.
 
 <p align="center">
-  <img src="../Ux research/img/Considerasdepresion.png"  title="¿Consideras que tienes depresión?">
+  <img src="../Ux research/img/Considerasdepresion.PNG"  title="¿Consideras que tienes depresión?"/>
 </p>
 <p align="center">
-  <img src="../Ux research/img/ConsiderasAnsiedad.png"  title="¿Consideras que tienes ansiedad?">
+  <img src="../Ux research/img/ConsiderasAnsiedad.PNG"  title="¿Consideras que tienes ansiedad?"/>
 </p>
 El 38% respondió que no consideraban tener ansiedad mientras que el 61% consideraban tenerla.
 Cuando se preguntó si conocían a alguien que padeciera tanto de depresión como de ansiedad, el 71% respondió afirmativamente:
@@ -49,14 +49,14 @@ Cuando se preguntó si conocían a alguien que padeciera tanto de depresión com
 </p>
 El 50% respondió que se trataba de algún amigo, mientras que el porcentaje restante se concentraba en algún conocido o familiar. Sorprendentemente el 76% de los encuestados respondieron negativamente al preguntarles si contaban con una red de apoyo emocional, y el 23% restante se mantenían en contacto con esta principalmente en persona, pero hacían uso de otras herramientas como el uso de internet o teléfono.
 <p align="center">
-  <img src="../Ux research/img/cuentasdconApoyo.png"  title="¿Cuentas con una red de apoyo emocional?">
+  <img src="../Ux research/img/cuentasdconApoyo.PNG"  title="¿Cuentas con una red de apoyo emocional?">
 </p>
 <p align="center">
-  <img src="../Ux research/img/contarconred.png"  title="Si no tienes una red de apoyo, ¿te gustaría contar con una?">
+  <img src="../Ux research/img/contarconred.PNG"  title="Si no tienes una red de apoyo, ¿te gustaría contar con una?">
 </p>
 Del 76% , es decir 30 personas, que respondieron negativamente al tener una red de apoyo emocional, 26 es decir el 66% dijeron que les gustaría contar con una, mientras que el 17% no estaba seguro y el restante no tenía interés alguno. Así mismo, al preguntarles si usarían una red social enfocada en generar apoyo para personas con depresión y/o ansiedad la respuesta fue positiva:
 <p align="center">
-  <img src="../Ux research/img/usarias.png"  title="Usarías una red social enfocada a generar redes de apoyo para personas con depresión y ansiedad?">
+  <img src="../Ux research/img/usarias.PNG"  title="Usarías una red social enfocada a generar redes de apoyo para personas con depresión y ansiedad?">
 </p>
 
 En resumen, el generar redes de apoyo tanto para este sector vulnerable así como el sector restante de la población es de suma importancia.
@@ -83,10 +83,10 @@ También es importante resaltar que los encuestados se encontraron interesados e
 En conjunto con la elaboración de encuentas y su análisis preliminar, se empezó a trabajar en un Benchmark para permitirnos analizar tanto los sitios web como las aplicaciones móviles con la que se compartía una visión similar.
 
 <p align="center">
-  <img src="../Ux research/img/benchmark.png"  title="Benchmark">
+  <img src="../Ux research/img/benchmark.PNG"  title="Benchmark">
 </p>
 <p align="center">
-  <img src="../Ux research/img/benchmark2.png"  title="Benchmark">
+  <img src="../Ux research/img/benchmark2.PNG"  title="Benchmark">
 </p>
 
 ## Conclusión
