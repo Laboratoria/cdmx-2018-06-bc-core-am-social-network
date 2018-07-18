@@ -1,4 +1,11 @@
 # El papel de las redes sociales de apoyo en la prevención de la depresión y ansiedad.
+La depresión es una enfermedad frecuente en todo el mundo, y se calcula que afecta a más de 300  millones de personas. Cada año se suicidan cerca de 800,000 personas, y el suicidio es la segunda causa de muerte en el grupo etario de 15 a 29 años.
+>Aunque hay tratamientos eficaces para la depresión, más de la mitad de los afectados en todo el mundo, y más del 90% en muchos países, no recibe la atención adecuada. Entre los obstáculos principales que impiden una atención eficaz se encuentran la falta de recursos y de personal sanitario capacitados, además de la estigmatización de los trastornos mentales y la evaluación clínica inexacta. Otra barrera para la atención eficaz es la evaluación errónea. En países de todo tipo de ingresos, las personas con depresión a menudo no son correctamente diagnosticadas, mientras que otras que en realidad no la padecen son a menudo diagnosticadas erróneamente y tratadas con antidepresivos.
+
+En Latinoamérica, Brasil es el país con mayor prevalencia de depresión con 5,8 por ciento; seguido de Cuba con 5,5 y Paraguay con 5,2. Chile y Uruguay tienen el 5 por ciento; Perú, 4,8; mientras Argentina, Colombia, Costa Rica y República Dominicana muestran 4,7 por ciento.
+A ellos les siguen Ecuador con 4,6 por ciento; Bolivia, El Salvador y Panamá con 4,4 por ciento; México, Nicaragua y Venezuela con 4,2 por ciento; Honduras con 4,2 por ciento) y Guatemala con el 3,7 por ciento.
+
+
 
 Acorde con la OMS, la depresión es el resultado de interacciones complejas entre factores sociales, psicológicos y biológicos. Aquellas personas que han pasado por circunstancias adversas como el desempleo, luto o traumatismos psicológicos tienden a tener más probabilidades de sufrir depresión y esta a su vez, puede generar más estrés y disfunción, empeorar la situación vital de la persona afectada y, por consiguiente, la propia depresión.En México, según Corina Benjet, investigadora del Instituto Nacional de Psiquiatría Ramón de la Fuente Muñiz (INPRFM) la población más vulnerable son jóvenes entre el rango de 15 y 24 años de edad.En este contexto la existencia de redes de apoyo para una persona es vital ya que previene la exclusión social además de mejorar la salud tanto física como mental fortaleciendo el bienestar general de la persona. Sin embargo, tener o contar con estas puede ser difícil, especialmente si se está pasando por un periodo de crisis. **Una de nuestras metas creando Lux, es generar un espacio seguro para las personas que están pasando por problemas similares en donde puedan encontrar una red de apoyo en la cual expresarse y sostenerse a través de la auto ayuda y la ayuda mutua.** 
 
@@ -71,3 +78,26 @@ También es importante resaltar que los encuestados se encontraron interesados e
 
 >“Me gustaría poder hacer amigos, que compartan tips y que promocionen eventos o recomiendes sitios donde relajarse; así como crear grupos”.
 
+## Benchmark
+
+En conjunto con la elaboración de encuentas y su análisis preliminar, se empezó a trabajar en un Benchmark para permitirnos analizar tanto los sitios web como las aplicaciones móviles con la que se compartía una visión similar.
+
+<p align="center">
+  <img src="../Ux research/img/benchmark.png"  title="Benchmark">
+</p>
+<p align="center">
+  <img src="../Ux research/img/benchmark2.png"  title="Benchmark">
+</p>
+
+## Conclusión
+La seguridad y seriedad en este tipo de aplicaciones es cuestionable y estas se pueden volver detonantes en personas con trastornos psicológicos debido a que no se puede garantizar que toda la gente que ingresa realmente padezca depresión o simplemente use las apps para divertirse e incluso practicar bullying a los diversos usuarios de las mismas.
+
+Detectamos en varias de las aplicaciones un mal uso de las mismas por parte de algunos usuarios que sólo se dedican a ofender y molestar a otros.
+
+El idioma es otra barrera que no permite una comunicación asertiva entre usuarios y expertos, hace falta que existan más apps con versión en español.
+
+Hoy en día, menos es más y las propuestas actuales de las apps ofrecen textos largos y tediosos que dificultan la lectura y la hacen aburrida y cansada.
+
+**Estas páginas son poco activas, volviéndose complicada la comunicación con algún experto de manera inmediata.
+
+**Las páginas están saturadas de información excesiva y poco organizada.
