@@ -39,18 +39,20 @@ window.initializeFirebase = () => {
       console.log('nooo');
     }
   });
-}
+},
   
   // Log Out Function //
-  window.signOutUser = () => {
-    firebase.auth().signOut().then(() => {
-      // Sign-out successful.
-      location.href = ('views/logOut.html');
-    }).catch((error) => {
-      // An error happened.
-      alert('No se ha podido cerrar sesión.');
-    });
-  }
+ window.logOutUser = () => {
+   firebase.auth().signOut().then(() => {
+    // Sign-out successful.
+    localStorage.clear();
+    location.href = ('../views/logOut.html');
+  }).catch(function(error) {
+    // An error happened.
+    alert('Ocurrió un error, intenta salir nuevamente.');
+  });
+}
+
 
 
   window.checkLoggedUser = (user) => {
