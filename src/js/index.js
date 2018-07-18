@@ -19,18 +19,15 @@
    messagingSenderId: "1728202919"
  };
   firebase.initializeApp(config);
-//
-const authentificationsUsers = document.getElementById('button');
 
+const authentificationsUsers = document.getElementById('button');
 authentificationsUsers.addEventListener('click', (event) =>{
   authGoogle();
 });
-
 authGoogle = () => {
   var provider = new firebase.auth.GoogleAuthProvider();
   authentificating(provider);
 }
-
 authentificating = (provider) =>{
   firebase.auth().signInWithPopup(provider).then(function(result) {
   // Da el Token de acceso a Google. Usar para acceder a la API de Google
@@ -51,33 +48,6 @@ authentificating = (provider) =>{
 });
 }
 
-const authEmail = document.getElementById('buttonEmail');
-const userEmail = document.getElementById('email').value;
-const userPsw = document.getElementById('psw').value;
-
-authEmail.addEventListener('click', (event) =>{
-  authentificationsUsersByEmail();
-});
-authentificationsUsersByEmail= () =>{
-  firebase.auth().createUserWithEmailAndPassword(userEmail, userPsw)
-  .then(function(){
-    console.log(userEmail);
-    sigInByEmail(userEmail, userPsw);
-  })
-  .catch(function(error) {
-  // Manejo de errores
-  var errorCode = error.code;
-  var errorMessage = error.message;
-});
-}
-sigInByEmail = (userEmail, userPsw) => {
-  firebase.auth().signInWithEmailAndPassword(userEmail, userPsw).catch(function(error) {
-  // Manejo de error
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  // ...
-  });
-}
 /*const userPrintSpace = document.getElementById('obj');
 let database = firebase.database().ref().child('obj');
 database.on('value', snap => console.log(snap.val()));*/
