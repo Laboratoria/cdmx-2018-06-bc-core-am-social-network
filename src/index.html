@@ -1,42 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Social Network</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?faily=Roboto:300,500" rel="stylesheet">
-    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-    <link rel="stylesheet"  href="css/main.css">
-   
-    
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Social Network</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+
+
 </head>
 
 <body>
-<section class="container"> 
-  <div class="login-box">
-  <img src="avatar.png" class="avatar">
-      <h1>Login Here</h1>
-      <!-- <form action="">
-          <input id="email" type="email" placeholder="Enter Email">
-          <input type="password" name="" id="password" placeholder="Enter Password">
-          <button id="btn-login">Iniciar sesion</button>
-          <button id="btn-signup">Registararse</button>
-      </form> -->
-          <form>
-          <p>Username</p>
-          <input id="email" type="email"  placeholder="Enter Email">
-          <p>Password</p>
-          <input id="password" type="password"  placeholder="Enter Password">
-          <button id="btn-login" > Iniciar sesión </button>
-          <button id="btn-signup"> Registrarse </button>
-          <a href="#">Forget Password</a>
-          </form>
+  <nav>
+    <div class="nav-wrapper">
+      <form>
+        <div class="input-field">
+                <a href="#!" class="brand-logo">Foodbook</a>
+          <input id="search" type="search" required>
+          </label>
+          <i class="material-icons">close</i>
+        </div>
+      </form>
+    </div>
+  </nav>
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="first_name" type="text" class="validate">
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="last_name" type="text" class="validate">
+          <label for="last_name">Last Name</label>
+        </div>
       </div>
-    </section>
-    <script src="js/index.js"></script>
-   
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <a id="log-in" class="waves-effect waves-light btn">Iniciar sesión</a>
+      <a id="sign-up" class="waves-effect waves-light btn">Registrarse</a>
+    </form>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/app.js"></script>
+
+
 </body>
 
 </html>
-
