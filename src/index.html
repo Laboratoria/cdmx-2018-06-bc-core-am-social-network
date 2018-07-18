@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Women-G</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+</head>
+
+<body>
+    <div id="content">
+        <section class="fondo" id="home">
+            <button id="session" class="btn">Iniciar Sesion</button>
+            <br>
+            <p>Aun no te registras? Haz click
+                <a href="#" id="newSession">aqui</a>
+            </p>
+        </section>
+
+        <section class="fondo" id="registeredUser">
+            <p class="p-bottom">Inicia sesion</p>
+            <input id="email" type="email" placeholder="Ingresa tu email">
+            <input id="password" type="password" placeholder="Ingresa tu contraseña">
+            <button class="btn" id="signIn">Enviar</button>
+        </section>
+
+        <section class="fondo" id="newUser">
+            <p class="p-bottom">Usuario nuevo</p>
+            <input id="newEmail" type="email" placeholder="Ingresa tu email">
+            <input id="newPassword" type="password" placeholder="Ingresa tu contraseña">
+            <button class="btn" id="signUp">Enviar</button>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
