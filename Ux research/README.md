@@ -29,7 +29,7 @@ Como primera aproximación a la opinión pública, se decidió usar la modalidad
 Se logró obtener un total de 39 participantes de las cuales 27 se identifican con el género femenino y el restante con el masculino.
 
 <p align="center">
-  <img src="../Ux research/img/genero.png"  title="¿Con cuál género te identificas?">
+  <img src="../Ux research/img/genero.png"  title="¿Con cuál género te identificas?"/>
 </p>
 
 Las actividades de nuestros encuestados se resumen en las siguientes:
@@ -37,10 +37,10 @@ Las actividades de nuestros encuestados se resumen en las siguientes:
 Al preguntar si padecían de depresión solamente el 16% contestó afirmativamente mientras que el 59% consideraban que no la padecían. Sin embargo, cuando se preguntó si consideraban que padecían ansiedad las cifras se invirtieron.
 
 <p align="center">
-  <img src="../Ux research/img/Considerasdepresion.png"  title="¿Consideras que tienes depresión?">
+  <img src="../Ux research/img/Considerasdepresion.png"  title="¿Consideras que tienes depresión?"/>
 </p>
 <p align="center">
-  <img src="../Ux research/img/ConsiderasAnsiedad.png"  title="¿Consideras que tienes ansiedad?">
+  <img src="../Ux research/img/ConsiderasAnsiedad.png"  title="¿Consideras que tienes ansiedad?"/>
 </p>
 El 38% respondió que no consideraban tener ansiedad mientras que el 61% consideraban tenerla.
 Cuando se preguntó si conocían a alguien que padeciera tanto de depresión como de ansiedad, el 71% respondió afirmativamente:
