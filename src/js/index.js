@@ -27,17 +27,32 @@ window.initializeFirebase = () => {
       }
     });
   }
+
+  // Current user function //
+  window.currentUserLoggedIn = () => {
+    firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+      // User is signed in.
+      console.log('siii');
+    } else {
+      // No user is signed in.
+      console.log('nooo');
+    }
+  });
+},
   
   // Log Out Function //
-  window.signOutUser = () => {
-    firebase.auth().signOut().then(() => {
-      // Sign-out successful.
-      location.href = ('views/logOut.html');
-    }).catch((error) => {
-      // An error happened.
-      alert('No se ha podido cerrar sesión.');
-    });
-  }
+ window.logOutUser = () => {
+   firebase.auth().signOut().then(() => {
+    // Sign-out successful.
+    localStorage.clear();
+    location.href = ('../views/logOut.html');
+  }).catch(function(error) {
+    // An error happened.
+    alert('Ocurrió un error, intenta salir nuevamente.');
+  });
+}
+
 
 
   window.checkLoggedUser = (user) => {
