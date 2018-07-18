@@ -46,22 +46,6 @@ authentificating = (provider) =>{
   });
 };
 
-registrar = () =>{
-  let email = document.getElementById('userEmail').value;
-  let password = document.getElementById('userPsw').value;
-  let userName = document.getElementById('username').value;
-  firebase.auth().createUserWithEmailAndPassword(email, password)
-  .then(function(){
-    verificarEmail();
-  })
-  .catch(function(error) {
-  // Manejo de errores
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  console.log(errorCode);
-  console.log(errorMessage);
-  });
-}
 ingresar = () =>{
   let emailU = document.getElementById('uEmail').value;
   let passwordU = document.getElementById('uPsw').value;
@@ -115,13 +99,4 @@ cerrar = () =>{
   .catch(function(){
     console.log(error);
   })
-}
-
-verificarEmail = ()=>{
-  let vefificarU = firebase.auth().currentUser;
-  vefificarU.sendEmailVerification().then(function(){
-    console.log("enviando email");
-  }).catch(function(){
-    console.log(error);
-  });
 }
