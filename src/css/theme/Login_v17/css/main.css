@@ -40,6 +40,23 @@
 	box-sizing: border-box;
 }
 
+.welcome-text{
+  font-family: 'roboto';
+font-size: 20px;
+font-weight: 700;
+line-height: 1.4;
+color: whitesmoke;
+text-transform: uppercase;
+align-content: center;
+margin-top: 10em;
+padding: 2em;
+}
+
+p.welcome-text{
+  color: whitesmoke;
+  font-family: 'roboto';
+}
+
 body, html {
 	height: 100%;
 	font-family: Poppins-Regular, sans-serif;
@@ -72,13 +89,6 @@ h1,h2,h3,h4,h5,h6 {
 	margin: 0px;
 }
 
-p {
-	font-family: Poppins-Regular;
-	font-size: 14px;
-	line-height: 1.7;
-	color: #666666;
-	margin: 0px;
-}
 
 ul, li {
 	margin: 0px;
@@ -132,24 +142,28 @@ iframe {
 /*==================================================================
 [ Text ]*/
 .txt1 {
-  font-family: Poppins-Regular;
+  font-family: 'roboto';
   font-size: 13px;
+  font-weight: 500;
   line-height: 1.4;
-  color: #999999;
+  color: whitesmoke;
 }
 
 .txt2 {
-  font-family: Poppins-Regular;
+  font-family: 'roboto';
   font-size: 13px;
+  font-weight: 500;
   line-height: 1.4;
-  color: #00ad5f;
+  color: #7D5AC2;
+
 }
 
 .txt3 {
-  font-family: Poppins-Regular;
+  font-family: 'roboto';
   font-size: 15px;
+  font-weight: 500;
   line-height: 1.4;
-  color: #00ad5f;
+  color: whitesmoke;
   text-transform: uppercase;
 }
 
@@ -212,6 +226,7 @@ iframe {
   background-position: center;
   position: relative;
   z-index: 1;
+  background-image: url('http://4.bp.blogspot.com/-uJ5is1nlxzk/VBMtGOSyp4I/AAAAAAAAGls/mk5FFCVALz8/s1600/IMG_0378_2.jpg');
 }
 
 .login100-more::before {
@@ -240,12 +255,14 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   padding: 303px 65px 40px 65px;
+  background-color: rgba(255, 94, 58, 0.95);
 }
 
 .login100-form-title {
-  font-family: Poppins-Regular;
+  font-family: 'roboto';
+  font-weight: 700;
   font-size: 20px;
-  color: #555555;
+  color: whitesmoke;
   line-height: 1.2;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -280,11 +297,10 @@ iframe {
   display: block;
   width: 100%;
   background: transparent;
-  font-family: Poppins-Regular;
   font-size: 18px;
-  color: #666666;
   line-height: 1.2;
   padding: 0 25px;
+
 }
 
 input.input100 {
@@ -342,6 +358,7 @@ input.input100 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: #7D5AC2;
 }
 
 .login100-form-btn {
@@ -356,7 +373,7 @@ input.input100 {
   width: 100%;
   height: 50px;
   border-radius: 3px;
-  background: #00ad5f;
+  background-color: #7D5AC2;
 
   font-family: Montserrat-Bold;
   font-size: 12px;
@@ -419,6 +436,10 @@ input.input100 {
   }
 }
 
+.input100::placeholder{
+  color: whitesmoke;
+  font-family: 'roboto';
+}
 
 /*------------------------------------------------------------------
 [ Alert validate ]*/
@@ -486,6 +507,3 @@ input.input100 {
     opacity: 1;
   }
 }
-
-
-
