@@ -19,14 +19,19 @@
     <section class="container-fluid offset-md-1"></section>
     <div id="cuerpo" class= "text-center col-4 offset-md-4">
         <form id="usuario" class="text-center form-group">
-          <input id = "email" type="email" class="form-control" placeholder="Usuario">
-          <input id = "psw" type="password" class="form-control" placeholder="Contraseña">
-          <input type="button" value="Ingresar con Google" class="btn btn-dark btn-md" id="button">
-          <input type="button" value="Ingresar con correo" class="btn btn-dark btn-md" id="buttonEmail">
+          <h4>Ingreso de Usuarios</h4>
+          <input type="email" id="uEmail" placeholder="Ingresa email">
+          <input type="password" id="uPsw" placeholder="Ingresa password">
+          <input type="text" id="uName" placeholder="Ingrese su nombre de usuario">
+          <button type="button" id = "buttonIngresar" name="enviar" onclick="ingresar()" class="btn btn-dark btn-md">Enviar</button>
+          <a class="btn btn-dark" href="formularioperfil.html" role="button">Continuar con mi Perfil</a>
+            <!--Registro con Gmail de Google-->
+            <input type="button" value="Ingresar con Google" class="btn btn-dark btn-md" id="button">
         </form>
       </div>
       <p>No estás registrado?  <a href="./registro.html" title="Registro de nuevo usuario">Registrate Aquí</a></p>
     </section>
+    <div id="container"></div>
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-auth.js"></script>

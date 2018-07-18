@@ -1,11 +1,5 @@
-# Aqui debes poner los archivos que no quieras que se suban a Github
-<<<<<<< HEAD
-
-pregundarle a sashimi que va aquí que no entendí
-=======
 .DS_Store
 *.swp
 .nyc_output/
 coverage/
 node_modules/
->>>>>>> f62bec794394e904c017c84ab6005756c3118d87
