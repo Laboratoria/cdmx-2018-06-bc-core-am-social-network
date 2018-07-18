@@ -13,29 +13,30 @@
   <div class="container">
 
     <form id="loginform" method="" action="">
-      <input type="text" class="input" placeholder="Correo" id="correo"/>
-      <input type="password" class="input" placeholder="Contraseña" id="login" />
-      <input type="submit" class="loginbutton iniciar" value="Iniciar sesión" onclick="abrirPagina()" target="_self"/>
-      <input type="submit" class="loginbutton registrar" value="Registrar" onclick="abrirPagina()" target="_self"/>
-      <input type="submit" class="loginbutton face" value="Facebook" onclick="abrirPagina()" target="_self"/>
-      <input type="submit" class="loginbutton google" value="Google" onclick="abrirPagina()" target="_self"/>
+      <input type="text" id="mail" class="input" placeholder="Correo"/>
+      <input type="password" id="password" class="input" placeholder="Contraseña" />
+      <input type="button" id="btnLogin" class="loginbutton iniciar" value="Iniciar sesión" target="_self"/>
+      <input type="button" id="btnSign" class="loginbutton registrar" value="Registrar"  target="_self"/>
+      <input type="submit" id="btnFb" class="loginbutton face" value="Facebook" onclick="abrirPagina()" target="_self"/>
+      <input type="submit" id="btnGg" class="loginbutton google" value="Google" onclick="abrirPagina()" target="_self"/>
     </form>
   </div>
 
 
-<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
 <script>
   // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyDF6pmMzyiBN_rgrRjgKzVduWUiwfB_vNI",
-    authDomain: "usuarios-53fee.firebaseapp.com",
-    databaseURL: "https://usuarios-53fee.firebaseio.com",
-    projectId: "usuarios-53fee",
-    storageBucket: "usuarios-53fee.appspot.com",
-    messagingSenderId: "164308838159"
+    apiKey: "AIzaSyCGT48tRRTrbUJvfWb3PvKZfSgISreF1S0",
+    authDomain: "red-social-96a75.firebaseapp.com",
+    databaseURL: "https://red-social-96a75.firebaseio.com",
+    projectId: "red-social-96a75",
+    storageBucket: "",
+    messagingSenderId: "775319261849"
   };
   firebase.initializeApp(config);
 </script>
+  <script src="js/index.js"></script>
 
 </body>
 </html>
