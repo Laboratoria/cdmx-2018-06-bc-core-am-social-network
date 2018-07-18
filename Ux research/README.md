@@ -110,6 +110,23 @@ Dicha dinámica constó en una lluvia de ideas, en donde se pretendía obtener u
 * Luciérnaga
 * Lux
 
+El nombre que se eligió fue **Lux** [Luz en latín], ya que era sencillo y corto de memorizar, así mismo, refleja en una sola palabra lo que se pretende transmitir.
+<p align="center">
+  <img src="../Ux research/sketch/trabajando.jpg"  title="Trabjando en equipo">
+</p>
+
+<p align="center">
+  <img src="../Ux research/sketch/nombre.jpg"  title="Lluvia de ideas">
+</p>
+
 
 # Sketching
 
+Después de elegir el nombre que nos representaría, decidimos dar el siguiente paso: Trabajar en la interfaz y el flujo de esta:
+
+<p align="center">
+  <img src="../Ux research/sketch/sketchGeneral.jpg"  title="Sketch">
+</p>
+<p align="center">
+  <img src="../Ux research/sketch/sketchGeneral2.jpg"  title="Sketch">
+</p>
