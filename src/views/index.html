@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+</head>
+
+<body>
+  
+  <div class="container">
+
+    <h4>Registro de Usuario</h4>
+
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="email" type="email" class="validate">
+        <label for="email">Email</label>
+        <span class="helper-text" data-error="wrong" data-success="right"></span>
+      </div>
+    </div>
+
+
+
+    <div class="row">
+
+      <div class="input-field col s12">
+        <input id="password" type="password" class="validate">
+        <label for="password">Password</label>
+        <span class="helper-text" data-error="wrong" data-success="right"></span>
+      </div>
+    </div>
+    <a class="waves-effect waves-light btn" onclick="registrar()">registrarse</a>
+    </form>
+  </div>
+  </div>
+
+
+
+
+
+
+
+  <div class="container">
+
+    <h4>Ingreso de Usuario</h4>
+
+    <div class="row">
+
+      <div class="input-field col s12">
+        <input id="emailIngresar" type="email" class="validate">
+        <label for="email">Email</label>
+        <span class="helper-text" data-error="wrong" data-success="right"></span>
+      </div>
+    </div>
+
+
+
+    <div class="row">
+
+      <div class="input-field col s12">
+        <input id="passwordIngresar" type="password" class="validate">
+        <label for="password">Password</label>
+        <span class="helper-text" data-error="wrong" data-success="right"></span>
+      </div>
+    </div>
+    <a href="view1.html" onclick="ingresar()" class="waves-effect waves-light btn">Acceder</a>
+    </form>
+    <div id="contenido">
+    </div>
+  </div>
+
+
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
