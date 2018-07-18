@@ -1,50 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+ </head>
+ <body>
+
+  <div class="container">
+     <h4>Registro de Usuario</h4>   
+     
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12 ">
+              <input id="email" type="email" class="validate">
+              <label for="email">Email</label>
+              <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 ">
+              <input id="password" type="password" class="validate">
+              <label for="password">Password</label>
+            </div>
+          </div>
+          <a onclick="registrar()" class="waves-effect waves-teal btn-flat">Button</a>
+        </form>
+      </div>
 
 
-    <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
-    <script>
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyC3-Ko-NLEwcZEnIRY0sOiR1H-fa3bE1fk",
-        authDomain: "red-social-867d8.firebaseapp.com",
-        databaseURL: "https://red-social-867d8.firebaseio.com",
-        projectId: "red-social-867d8",
-        storageBucket: "red-social-867d8.appspot.com",
-        messagingSenderId: "824981624283"
-    };
-    firebase.initializeApp(config);
-    </script>
-    
-   
+ </div>
 
-</head>
-<body>
-    <h4>Registro de Usuarios</h4>
-    <input id="email" type="email" placeholder="ingresa email">
-    <input id="password" type="password" placeholder="ingresa contraseña">
-    <button onclick="registrar()">Enviar</button>
+ <div class="container">
+     <h4>Ingreso de Usuario</h4>   
+     
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12 ">
+              <input id="emailIngreso" type="email" class="validate">
+              <label for="email">Email</label>
+              <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 ">
+              <input id="passwordIngreso" type="password" class="validate">
+              <label for="password">Password</label>
+            </div>
+          </div>
+          <a onclick="ingreso()" class="waves-effect waves-teal btn-flat">Button</a>
+        </form>
 
-    <h4>Ingreso de Usuarios</h4>
-    <input id="emailIngreso" type="email" placeholder="ingresa email">
-    <input id="passwordIngreso" type="password" placeholder="ingresa contraseña">
-    <button onclick="ingreso()">Acceder</button>
+        <div id="contenido">
 
-    <div id="contenido">
+      </div>
+
+
+ </div>
+
+
+
+        <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+        <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyC3-Ko-NLEwcZEnIRY0sOiR1H-fa3bE1fk",
+            authDomain: "red-social-867d8.firebaseapp.com",
+            databaseURL: "https://red-social-867d8.firebaseio.com",
+            projectId: "red-social-867d8",
+            storageBucket: "red-social-867d8.appspot.com",
+            messagingSenderId: "824981624283"
+        };
+        firebase.initializeApp(config);
+        </script>
+
+
+        <script src="js/app.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+ </body>
+ </html>
         
-    </div>
-
-
-    <script src="js/app.js"></script>
-    
-    
-
-</body>
-</html>
