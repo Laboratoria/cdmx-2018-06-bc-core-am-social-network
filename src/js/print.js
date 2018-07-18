@@ -9,3 +9,10 @@ const printName = (userCharged) => {
   let toPrint = `¡Bienvenidx ${userCharged}! Te has logueado exitosamente`;
   nameToPrint.innerHTML = toPrint;
 };
+
+window.printPost = () => {
+  let postToPrint = localStorage.getItem('text');
+  let sendPost = document.getElementById('new-posts');
+  let textToPrint = `<p class="post-paragraph">${postToPrint}</p>`;
+  sendPost.innerHTML += textToPrint;
+};
