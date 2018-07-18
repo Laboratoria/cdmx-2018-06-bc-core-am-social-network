@@ -2,27 +2,39 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>GarnachApp Newsfeed</title>
-    <!--Agregando link para poder usar Bootstrap CSS-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>GarnachApp Newsfeed</title>
+  <!--Agregando link para poder usar Bootstrap CSS-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css" />
+
 </head>
 
 <body>
-  <div class="container-fluid">
-    <header> Bienvenido </header>
-    <section>
-        <div id="post" class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text">Post</span>
-            </div>
-            <textarea class="form-control" aria-label="GarnachApp"></textarea>
-          </div>
-    </section>
+  <div class="container">
+    <header>
+      <div class="row">
+        <div class="col-9 col-md-9">GarnachApp</div>
+        <div id="user-profile-name" class="col-3 col-md-3">Usuario</div>
+      </div>
+    </header>
+    <div>
+      <div class="col-4 col-md-4">
+        <textarea class="form-control" aria-label="GarnachApp"></textarea>
+        <button class="btn btn-primary">Publicar</button>
+      </div>
+      <div class="col-4 col-md-4">
+        <textarea class="form-control" aria-label="GarnachApp"></textarea>
+        <button class="btn btn-primary">Publicar</button>
+      </div>
+      <div class="col-4 col-md-4">
+        <textarea class="form-control" aria-label="GarnachApp"></textarea>
+        <button class="btn btn-primary">Publicar</button>
+      </div>
+    </div>
   </div>
 </body>
 

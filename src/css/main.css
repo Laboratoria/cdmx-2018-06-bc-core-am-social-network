@@ -1,0 +1,17 @@
+body{
+    background-color: rgba(255, 94, 58, 0.95);
+    font-family: 'roboto';
+    font-weight: 700;
+    font-size: 2em;
+    color: aliceblue;
+}
+
+header{
+    margin: 1.2em;
+}
+
+.form-control{
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
