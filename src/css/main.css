@@ -1,0 +1,33 @@
+#content{
+    text-align: center;
+}
+
+#registeredUser {
+    display: none;
+}
+
+#newUser {
+    display: none;
+}
+
+.btn {
+    background-color: #C27BA0;
+    color: #FFFFFF;
+    font-size: 1em;
+    border-radius: .3rem;
+    padding: .5rem 2.5rem;
+    margin-top: 6px;
+    position: center;
+}
+
+.fondo {
+    position: absolute;
+    bottom: 6em;
+}
+
+.p-bottom {
+    position: relative;
+    text-align: center;
+    font-size: 3em;
+    color: rgb(65, 21, 105);
+}
