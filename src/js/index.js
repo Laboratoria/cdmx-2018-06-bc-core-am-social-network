@@ -36,7 +36,7 @@ window.initializeFirebase = () => {
       console.log('siii');
     } else {
       // No user is signed in.
-      console.log('nooo');
+      //console.log('nooo');
     }
   });
 },
