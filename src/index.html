@@ -21,12 +21,12 @@
     <div class="middle">
           <div id="login">
     <div class="container">
-      <p ><span class="fa fa-user"></span><input id="intText" type="email" Placeholder="Email" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
-      <p><span class="fa fa-lock"></span><input id="intPass" type="password" Placeholder="Password" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
-   <button id="LogIn">Login</button>
-   <button id="SignUp">Sign Up</button>
-   <button id="LogOut">Log out</buton>
-  </div>
+      <p ><span class="fa fa-user"></span><input id="txtEmail" type="email" placeholder="Email" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
+      <p><span class="fa fa-lock"></span><input id="txtPassword" type="password" placeholder="Password" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
+    <button id="btnLogin">Log In</button>
+   <button id="btnSignUp">Sign Up</button>
+   <button id="btnLogout">Log Out</button>
+</div>
 
   </form>
   <button onclick="Siguiente()">Entrar</button>
@@ -37,7 +37,10 @@
   <div id="Google">
 <button onclick = "googleSignin()">Google Sign in</button>
 <button onclick = "googleSignout()">Google Sign out</button>
+<button onclick = "facebookSignin()">Facebook Signin</button>
+<button onclick = "facebookSignout()">Facebook Signout</button>
 </div>
+
   <!--  -->
   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-auth.js"></script>
