@@ -1,0 +1,52 @@
+/* index.html FORMAT */
+#bodyindex, #bodyapp {
+  background-color: #96064e;
+  color:antiquewhite;
+}
+
+#logo {
+  border-radius: 250px;
+  width: 30%;
+  margin-top: 20%;
+}
+
+.inicio {
+  width: 40%;
+  margin-left: 25%;
+  margin-top: 20%
+}
+
+#email, #contrasena {
+  margin: 10%;
+}
+
+
+
+
+
+
+/* app.html FORMAT */
+#textInput {
+  padding: 5px;
+  border-radius: 7px;
+  margin-left: 4%;
+}
+
+#botonP {
+  background-color: #680134;
+  color: antiquewhite;
+  border-radius: 7px;
+  box-shadow: 0;
+  border: none;
+  padding: 4px 5px;
+  float: right;
+}
+
+#newPost {
+  padding: 5px;
+  border-radius: 7px;
+  background-color: #680134;
+  color: antiquewhite;
+  margin-left: 6%;
+  margin-top: 10%;
+}

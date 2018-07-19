@@ -1,37 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCU1xkVag73YWUERya-On5x4VaBBXzXxgo",
-    authDomain: "red-social-237f9.firebaseapp.com",
-    databaseURL: "https://red-social-237f9.firebaseio.com",
-    projectId: "red-social-237f9",
-    storageBucket: "red-social-237f9.appspot.com",
-    messagingSenderId: "839140955395"
-  };
-  firebase.initializeApp(config);
-</script>
+
+  <head>
     <title>CLUSTER</title>
-</head>
-<body>
-<h4>registro de usuarios</h4>
-    <input type="email" id="email" placeholder="Ingresa tu email">
-    <input type="password" id="contrasena" placeholder="Ingresa tu contraseña">
-    <button onclick="registrar()">Enviar</button>
-<h4>ingreso de usuarios</h4>
-    <input type="email" id="email2" placeholder="Ingresa tu email">
-    <input type="password" id="contrasena2" placeholder="Ingresa tu contraseña">
-<a href="app.html">
-    <button onclick="ingreso()">Enviar</button>
-</a>
-<div id="contenido2"></div>
-    <script src="index.js"></script>
-</body>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/main.css">
+  </head>
+
+  <body id="bodyindex">
+    <img src="images/icon1.png" alt="..." class="img-thumbnail mx-auto d-block" id="logo">
+    <section class="inicio" id="registro">
+      <h4>Registrate</h4>
+        <input type="email" id="email" placeholder="Ingresa tu email">
+        <input type="password" id="contrasena" placeholder="Ingresa tu contraseña">
+        <button onclick="registrar()">Enviar</button>
+    </section>
+    <section class="inicio" id="ingreso">
+      <h4>Iniciar sesión</h4>
+        <input type="email" id="email2" placeholder="Ingresa tu email">
+        <input type="password" id="contrasena2" placeholder="Ingresa tu contraseña">
+        <a href="">¿No tienes cuenta aún? Registrate aqui</a>
+        <a href="app.html">
+          <button onclick="ingreso()">Enviar</button>
+        </a>
+    </section>
+    <div id="contenido2"></div>
+
+
+    <script src="js/index.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCU1xkVag73YWUERya-On5x4VaBBXzXxgo",
+        authDomain: "red-social-237f9.firebaseapp.com",
+        databaseURL: "https://red-social-237f9.firebaseio.com",
+        projectId: "red-social-237f9",
+        storageBucket: "red-social-237f9.appspot.com",
+        messagingSenderId: "839140955395"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+
+  </body>
+
 </html>
