@@ -2,24 +2,12 @@ document.getElementById('session').addEventListener('click', event => {
   document.getElementById('home').style.display = 'none';
   let showSession = document.getElementById('registeredUser');
   showSession.style.display = 'block';
-  /* document.getElementById('content').innerHTML = `<section class="fondo" id="registeredUser">
-  <p class="p-bottom">Inicia sesion</p>
-  <input id="email" type="email" placeholder="Ingresa tu email">
-  <input id="password" type="password" placeholder="Ingresa tu contraseña">
-  <button class="btn" id="signIn">Enviar</button>
-</section>`; */
 });
 
 document.getElementById('newSession').addEventListener('click', event => {
   document.getElementById('home').style.display = 'none';
   let newSession = document.getElementById('newUser');
   newSession.style.display = 'block';
-  /* document.getElementById('content').innerHTML = `<section class="fondo" id="newUser">
-  <p class="p-bottom">Usuario nuevo</p>
-  <input id="newEmail" type="email" placeholder="Ingresa tu email">
-  <input id="newPassword" type="password" placeholder="Ingresa tu contraseña">
-  <button class="btn" id="signUp">Enviar</button>
-</section>`; */
 });
 
 let config = {
