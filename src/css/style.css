@@ -1,0 +1,14 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background: url(https://cdn.pixabay.com/photo/2016/06/20/03/15/pier-1467984_960_720.jpg);
+    background-position: center;
+}
+
+form{
+    background-color: aliceblue;
+    
+}
