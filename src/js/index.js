@@ -1,74 +1,67 @@
- (function () {
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCbW5lXCLbbrY6EkFROvAukVs8herq8G-Y",
-    authDomain: "social-network-5b9ef.firebaseapp.com",
-    databaseURL: "https://social-network-5b9ef.firebaseio.com",
-    projectId: "social-network-5b9ef",
-    storageBucket: "",
-    messagingSenderId: "1074635944561"
-  };
-  firebase.initializeApp(config);
+ louncher = () => {
+   // Initialize Firebase
+   let config = {
+     apiKey: "AIzaSyCbW5lXCLbbrY6EkFROvAukVs8herq8G-Y",
+     authDomain: "social-network-5b9ef.firebaseapp.com",
+     databaseURL: "https://social-network-5b9ef.firebaseio.com",
+     projectId: "social-network-5b9ef",
+     storageBucket: "",
+     messagingSenderId: "1074635944561"
+   };
+   //con el método firebase.initializeApp se aplica la configuración que está nuestra variable config
+   firebase.initializeApp(config);
 
 
-   // Get elements
+   // Getting elements (obteniendo elementos globales: inputs y botones)
    let mail = document.getElementById('email');
    let password = document.getElementById('password');
    const logIn = document.getElementById('log-in');
    const signUp = document.getElementById('sign-up');
-   const username = document.getElementById('first_name');
-   const lastname = document.getElementById('last_name');
+   let username = document.getElementById('first_name');
+   let lastname = document.getElementById('last_name');
 
+  //botón de registrarse (sign up)
 
-   // agregar evento click al botón de log in
+  signUp.addEventListener('click', e => {
+    if (mail.value === "" || mail.value === " " || password.value === "" || password.value === " ") {
+     alert("No ingresaste un correo o una contraseña válida")
+   } else {
+    let emailValue = email.value;
+    let passwordValue = password.value;
+    const auth = firebase.auth();
+
+    // para registrarse ( sign in)
+    const promise = auth.createUserWithEmailAndPassword(emailValue, passwordValue);
+    promise.catch(e => console.log(e.message));
+   }
+  });
+
+   // agregar evento click al botón de log in (iniciar sesión)
    logIn.addEventListener('click', e => {
-    event.preventDefault();
-     // Obtener valores de email y password
-     let emailValue = mail.value;
-     let passwordValue = password.value;
-     const auth = firebase.auth();
-     let usuario ={
-      name: username.value,
-      apellido: lastname.value,
-      email: email.value
+     // condicionando el flujo de inicio de sesión 
+     if (mail.value === "" || mail.value === " " || password.value === "" || password.value === " ") {
+       alert("No ingresaste un correo o una contraseña válida")
+     } else {
+      let emailValue = mail.value;
+      let passwordValue = password.value;
+      const auth = firebase.auth();
+      let usuario = {
+        name: username.value,
+        apellido: lastname.value,
+        email: email.value
+      }
+      localStorage.setItem("key", JSON.stringify(usuario));
+ 
+      // para iniciar sesión (log in)
+      window.homeNetwork.mostrar(usuario);
+      const promise = auth.signInWithEmailAndPassword(emailValue, passwordValue);
+      promise.catch(e => console.log(e.message));
+      //  datosUsuario(emailValue, passwordValue);
      }
-     localStorage.setItem("key", JSON.stringify(usuario));
-     console.log(usuario);
-// para iniciar sesión (log in)
-window.homeNetwork.mostrar(usuario);
-     const promise = auth.signInWithEmailAndPassword(emailValue, passwordValue);
-     promise.catch(e => console.log(e.message));
-    //  datosUsuario(emailValue, passwordValue);
-   });
-
-  
-    //  let datosUsuario = (emailValue,passwordValue) => {
-    //   let usuario ={
-    //    name: username.value,
-    //    apellido: lastname.value,
-    //    email: email.value
-    //   }
      
-    //  }
-   
-   
-
-  
-
-   //botón de registrarse (sign up)
-
-   signUp.addEventListener('click', e => {
-    event.preventDefault();
-
-     let emailValue = email.value;
-     let passwordValue = password.value;
-     const auth = firebase.auth();
-
-     // para registrarse ( sign in)
-     const promise = auth.createUserWithEmailAndPassword(emailValue, passwordValue);
-     promise.catch(e => console.log(e.message));
-
    });
+
+ 
 
    firebase.auth().onAuthStateChanged(firebaseUser => {
      if (firebaseUser) {
@@ -77,4 +70,5 @@ window.homeNetwork.mostrar(usuario);
        console.log('not logged in ')
      }
    })
- }());
+ }
+ louncher();
