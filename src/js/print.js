@@ -1,10 +1,4 @@
 //para cargar la información desde que abre la página
-// window.onload = cargar = () =>{
-// let usuarioObtenido = JSON.parse(localStorage.getItem("key"));
-// // console.log(usuarioObtenido);
-// print(usuarioObtenido);
-// }
-
 window.onload = print1 =() =>{
     let dataStorage = JSON.parse(localStorage.getItem("key"));
     console.log(dataStorage);
