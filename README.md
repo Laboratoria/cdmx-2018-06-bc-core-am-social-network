@@ -66,17 +66,17 @@ Comenzando con la tarea de busqueda logramos obtener los siguientes datos respec
 Tomando como base a cuatro de las principales redes sosciales, Facebook, Pinterest, Instagram y Snapchat.
 
 * Redes sociales
-!(/scr/images/1.jpg)
-Format: ![Alt Facebook]
+![GitHub Facebook](/scr/images/1.jpg)
 
-!(/scr/images/2.jpg)
-Format: ![Alt Pinterest]
 
-!(/scr/images/3.jpg)
-Format: ![Alt Instagram]
+![GitHub Pinterest](/scr/images/2.jpg)
 
-!(/scr/images/4.jpg)
-Format: ![Alt Snapchat]
+
+![GitHub Instagram](/scr/images/3.jpg)
+
+
+![GitHub Snapchat](/scr/images/4.jpg)
+
 
 Evaluando cada una de las redes se acordo en el primer sprint presentar la pantalla Log In
 en colores solidos, y con acciones a realizar precisas.
