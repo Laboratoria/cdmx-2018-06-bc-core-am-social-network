@@ -22,11 +22,12 @@
       <button type="button" class="btn btn-warning" id="log-in" name="button" onclick="location='views/login.html'">Inicia sesión</button>
     </div>
   </header>
-
+  
   <div class="container">
     <div class="row" id="texto">
       <div class="col-sm-12">
         <p> Esta aplicación tiene la finalidad de generar una red de apoyo para personas que padecen o han padecido Leucemia su intención es que sea un instrumento en su entorno día a día.</p>
+
         <p> Al ingresar aquí y registrarte podrás interactuar con miles de personas que están pasado por la misma situación que tú, este espacio fue diseñado pensando en que no estarás solo ya que además de las personas que se encuentran aquí podrás recurriral
           panel de profesionales que con gusto te apoyaran escuchándote sin prisas, serenamente y con atención teniendo interés en todas esa vivencias profundas y lo más importante es que en este espacio nadie te juzgará al contrario te comprenderán y
           te respetarán.</p>
@@ -36,10 +37,8 @@
       <!-- <button class="log-in"type="button" name="button" onclick="login()">Inicia sesión</button> -->
       <button type="button" class="btn btn-warning col-sm-12" id="sign-up" name="button" onclick="location='views/signup.html'">Registrate</button>
     </div>
-  </div>
-
-  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-  <script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script>
     // Initialize Firebase
     var config = {
       apiKey: "AIzaSyCjN9x4Q4B8Nx5xf1ZoKLpWn4mTPiuuC3c",
@@ -52,6 +51,7 @@
     firebase.initializeApp(config);
   </script>
   <!--script src="js/main.js"></script>
+
   <!--Bootstrap CDN JS, Popper.js y jQuery -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

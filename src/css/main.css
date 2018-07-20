@@ -8,8 +8,8 @@ header {
   padding-left: 1em;
   padding-right: 1em;
 }
-
-img {
+  
+img{
   width: 120px;
   height: 130px;
 }
@@ -18,12 +18,12 @@ nav {
   padding-top: 2em;
 }
 
-.container {
+.container{
   padding-top: 3em;
   padding-left: 1em;
   padding-right: 1em;
 }
 
-#texto {
+#texto{
   padding-top: 1em;
 }
