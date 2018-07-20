@@ -66,10 +66,10 @@ Comenzando con la tarea de busqueda logramos obtener los siguientes datos respec
 Tomando como base a cuatro de las principales redes sosciales, Facebook, Pinterest, Instagram y Snapchat.
 
 * Redes sociales
-![GitHub Facebook](scr/images/1.jpg)
+![GitHub Facebook](https://github.com/gloryarz/cdmx-2018-06-bc-core-am-social-network/blob/master/src/images/1.jpg)
 
 
-![GitHub Pinterest](scr/images/2.jpg)
+![GitHub](https://github.com/gloryarz/cdmx-2018-06-bc-core-am-social-network/blob/master/src/images/1.jpg)
 
 
 ![GitHub Instagram](scr/images/3.jpg)
