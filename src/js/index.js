@@ -1,12 +1,13 @@
-// (function() { 
+// Para ingreso con correo y contraseña
+
 // Initialize Firebase
-const config = {
-  apiKey: 'AIzaSyC9JZpmKLPBvfy3FN6n-HeHJ8g1ncj_xFM',
-  authDomain: 'red-social-98290.firebaseapp.com',
-  databaseURL: 'https://red-social-98290.firebaseio.com',
-  projectId: 'red-social-98290',
-  storageBucket: 'red-social-98290.appspot.com',
-  messagingSenderId: '186702904423'
+var config = {
+  apiKey: 'AIzaSyCwZtKNwCJJTU-oRr5j2LL921ZbKPP6ovQ',
+  authDomain: 'social-network-laboratoria.firebaseapp.com',
+  databaseURL: 'https://social-network-laboratoria.firebaseio.com',
+  projectId: 'social-network-laboratoria',
+  storageBucket: 'social-network-laboratoria.appspot.com',
+  messagingSenderId: '67671745906'
 };
 firebase.initializeApp(config);
 
@@ -50,5 +51,20 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
     logout.classList.add('hide');
   } 
 });
-// }());
+
+// Para ingresar con google
+
+const provider = new firebase.auth.GoogleAuthProvider();
+const loginGoogle = document.getElementById('login-google');
+
+loginGoogle.addEventListener('click', event => {
+  firebase.auth()
+    .signInWithPopup(provider) // popUp te va a dar la ventana de acceso a tu cuenta de google. parámetro de la variable provider que tiene la autenticación con google
+    
+    .then(function(provider) { // entonces ejecuta la función que es el resultado (acceder con google)
+      console.log(result);
+      console.log(provider);
+    });
+});
+
 
