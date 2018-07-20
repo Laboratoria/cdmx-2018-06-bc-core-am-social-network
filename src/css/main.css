@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  border: 0;
+}
+
+header {
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+img {
+  width: 120px;
+  height: 130px;
+}
+
+nav {
+  padding-top: 2em;
+}
+
+.container {
+  padding-top: 3em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+#texto {
+  padding-top: 1em;
+}
