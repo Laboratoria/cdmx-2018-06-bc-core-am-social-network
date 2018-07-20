@@ -4,11 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width initial-scale=1.0">
   <title>LOGIN</title>
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
   <link rel="stylesheet" href="css/style.css"/>
   <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
 
 </head>
 <body>
+    <div id="firebaseui-auth-container"></div>
+    <div id="loader">Loading...</div>
   <!-- FORMULARIO DE INCIO DE SESION -->
   <div class="container">
 
@@ -23,20 +28,9 @@
   </div>
 
 
-  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCGT48tRRTrbUJvfWb3PvKZfSgISreF1S0",
-    authDomain: "red-social-96a75.firebaseapp.com",
-    databaseURL: "https://red-social-96a75.firebaseio.com",
-    projectId: "red-social-96a75",
-    storageBucket: "",
-    messagingSenderId: "775319261849"
-  };
-  firebase.initializeApp(config);
-</script>
-  <script src="js/index.js"></script>
+  
 
+  <script src="js/index.js"></script>
+  <script src="js/login.js"></script>
 </body>
 </html>
