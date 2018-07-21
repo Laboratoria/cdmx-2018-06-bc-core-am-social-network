@@ -1,0 +1,78 @@
+body{
+    background: #00ad83;
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container,
+.logged-in {
+    width: 25%;
+    margin: 0 auto;
+    margin-top: 1.5em;
+    padding: 3em;
+    border: 1px solid lightgrey;
+    background: white;
+}
+
+.container input {
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    padding: 1em;
+    outline: none;
+    width: 100%;
+    margin-bottom: 1.5em;
+}
+
+.container input:focus {
+    border: 1px solid #777;
+}
+
+.container button,
+.logged-in button {
+    background: #26a69a;
+    color: #fff;
+    border: 0px;
+    border-radius: 5px;
+    padding: 1em;
+    display: block;
+    width: 100%;
+    margin-bottom: 1.5em;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+}
+
+/*.container button:hover
+.logged-in button:hover {
+    background: #fff;
+    color: #26a69a;
+    border: 1px solid #26a69a;
+    cursor: pointer;
+
+}*/
+
+.btn:hover{
+    background: #fff;
+    color: #26a69a;
+    border: 1px solid #26a69a;
+    cursor: pointer;
+}
+
+#link-register{
+    color: #00766c;
+    text-align: right;
+}
+
+@media screen and (max-width: 767px) {
+    .container,
+    .logged-in{
+        width: 100%;
+    }
+
+    #btn-logout{
+        width: 30%;
+    }
+}
