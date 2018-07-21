@@ -1,29 +1,35 @@
 * {
-  padding: 0;
-  border: 0;
+  padding: 0px;
+  border: 0px;
+}
+
+.container{
+  width: 960px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 header {
-  padding-top: 1em;
-  padding-left: 1em;
-  padding-right: 1em;
+  height:150px;
+  margin-top:0px;
+  background-color: blue;
 }
 
 img {
-  width: 120px;
-  height: 130px;
+  width: 90px;
 }
 
 nav {
   padding-top: 2em;
 }
 
-.container {
-  padding-top: 3em;
-  padding-left: 1em;
-  padding-right: 1em;
-}
-
 #texto {
   padding-top: 1em;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
 }
