@@ -74,7 +74,7 @@ Descubrimiento de nuevas opciones para satisfacer la necesidad de alimentación 
 
 **[¿Cuáles son las principales funcionalidades del producto y cuál es su prioridad?]**
 
-Aquí las Historias de Usuario
+![Historias de Usuario:](images/historiasUsuario.jpg)
 
 **[¿Cómo verificaste que el producto les está resolviendo sus problemas?]**
 
@@ -96,9 +96,9 @@ Arquetipo de usuario.
 Pensar en qué contexto el usuario va a usar la red?
 Por qué la usará? Motivaciones del usuario]**
 
-1. Benchmark
+1. ![Benchmark](images/Benchmark.jpg)
 
-2. Encuesta
+2. ![Encuesta](images/graficos.jpg) 
 
 3. Entrevistas con usuarios
 
@@ -117,14 +117,14 @@ a) [Ideal] (Pendiente)
 b) Versión 1.0 Baja Fidelidad ![Login Mobile](images/mobile.gif)
                               ![Login Web](images/web.gif) 
 
-               [Alta Fidelidad](https://www.figma.com/file/LeDMOc6n08FLECZQ5FFXlf3B/Welcome-Register)               
+               [Alta Fidelidad] (https://www.figma.com/file/LeDMOc6n08FLECZQ5FFXlf3B/Welcome-Register)               
 
+**2. Entregables del 2do. Sprint**
 
 Prototipo de alta fidelidad
 	
 a) [Login] (Pendiente)
 
-**2. Entregables del 2do. Sprint**
 
 **3. Entregables del 3er. Sprint**
 
@@ -132,16 +132,13 @@ a) [Login] (Pendiente)
 Desarrollado con:
 
 * Javascript (ES6)
-* HTML6
+* HTML5
 * CSS3
 * Bootstrap
 * Firebase
  
 ##Detalles de uso y contenido
 
-Aquí la documentación se refiere sólo a [Responsive 
-Design]
-(https://www.mediaclick.es/blog/diseno-web-responsive-design-y-la-importancia-del-mobile-first/)
 
 La interfaz actual tiene como características:
 
@@ -179,13 +176,15 @@ Carpetas  (PENDIENTE)
 
 ##¿Cómo hacer Sign up/Log in en nuestra red social?
 
-Para probar la plataforma actual, se debe contar con acceso a internet e ingresar a la [liga:] (Pendiente)
+Para probar la plataforma actual, se debe contar con acceso a internet e ingresar a la [liga:] (https://jetzable.github.io/cdmx-2018-06-bc-core-am-social-network/src)
  
 ##Colaboradoras
 
 [Aquí las ligas para direccionar a nuestros GitHub]
 
-Palmidia Garay
+[Palmidia Garay] (https://github.com/jetzable/cdmx-2018-06-bc-core-am-social-network)
+[Vianey Lara] (https://github.com/ViniciaLaraRangel/cdmx-2018-06-bc-core-am-social-network)
+[Copelia Altamirano] (https://github.com/Copelia/cdmx-2018-06-bc-core-am-social-network)
 
 ## Checklist
 
@@ -195,8 +194,8 @@ Palmidia Garay
 
 ### `README.md`
 
-* [ ] Definición del producto.
-* [ ] Benchamark de las principales redes sociales.
+* [x] Definición del producto.
+* [x] Benchamark de las principales redes sociales.
 * [ ] Resumen de entrevistas con usuarios.
 * [ ] Link/screenshots prototipo de alta fidelidad.
 * [ ] Conclusiones de pruebas del prototipo con usuarios.
@@ -217,14 +216,14 @@ Palmidia Garay
 
 ### Inicio de sesión (sign in)
 
-* [ ] Permite iniciar sesión.
-* [ ] Valida email.
-* [ ] Valida password.
-* [ ] Muestra mensajes de error.
+* [x] Permite iniciar sesión.
+* [x] Valida email.
+* [x] Valida password.
+* [x] Muestra mensajes de error.
 
 ### Muro (wall/feed)
 
-* [ ] Muestra _muro_.
+* [x] Muestra _muro_.
 * [ ] Permite publicar nuevos posts.
 * [ ] Permite eliminar posts.
 * [ ] Pide confirmación antes de borrar posts.
