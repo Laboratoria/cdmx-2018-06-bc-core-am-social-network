@@ -19,13 +19,18 @@
         <form>
           <input type="email" id="email" placeholder="Email de usuario">
           <input type="password" id="password" placeholder="Contraseña">
-          <input type="text" placeholder="Nombre de usuario">
+          <input type="text" placeholder="Nombre de usuario" id="user-name">
           <input type="button" value="Registrar" id="register">
         </form>  
       </div>
     </div>
-    
-    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <div>
+      <form>
+        <input type="button" id="google-user" value="Ingresa con google">
+        <input type="button" id="facebook-user" value="Ingresa con facebook">
+      </form>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
     <script>
       // Initialize Firebase
       var config = {
@@ -33,13 +38,13 @@
         authDomain: "feminismi-6e40a.firebaseapp.com",
         databaseURL: "https://feminismi-6e40a.firebaseio.com",
         projectId: "feminismi-6e40a",
-        storageBucket: "",
+        storageBucket: "feminismi-6e40a.appspot.com",
         messagingSenderId: "638405712713"
       };
       firebase.initializeApp(config);
     </script>
     <script src="./js/index.js"></script>
-    <script src="./js/authen.js"></script>
     <script src="./js/database.js"></script>
+    <script src="./js/authen.js"></script>
   </body>
 </html>
