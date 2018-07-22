@@ -9,8 +9,15 @@
   });
 
   firebase.auth().onAuthStateChanged(firebaseUser => {
-    if (firebaseUser) {
-      console.log(firebaseUser);
+    // if (firebaseUser) {
+    console.log(firebaseUser);
+    let user = firebase.auth().currentUser;
+    if (user !== null) {
+      // let emailId = user.email;
+      user.updateProfile({
+        displayName: user.displayName
+      });
+      document.getElementById('user-paragraph').innerHTML = `Bienvenidx ${user.displayName}`;
     } else {
       console.log('not logged in');
     }
