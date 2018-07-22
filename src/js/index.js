@@ -12,16 +12,16 @@
     promise.catch(event => alert(event.message));
   });
   
-  // // Add login event
-  // btnLogin.addEventListener('click', event => {
-  //   // Get email and password
-  //   const email = txtEmail.value;
-  //   const password = txtPassword.value;
-  //   const auth = firebase.auth();
-  //   // Sign in
-  //   const promise = auth.signInWithEmailAndPassword(email, password);
-  //   promise.catch(event => alert(event.message));
-  // });
+  // Add login event
+  btnLogin.addEventListener('click', event => {
+    // Get email and password
+    const email = txtEmail.value;
+    const password = txtPassword.value;
+    const auth = firebase.auth();
+    // Sign in
+    const promise = auth.signInWithEmailAndPassword(email, password);
+    promise.catch(event => alert(event.message));
+  });
   // Add a realtime listener
   firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser) { 
