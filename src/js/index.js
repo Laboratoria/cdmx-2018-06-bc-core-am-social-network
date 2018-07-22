@@ -1,80 +1,66 @@
-let app_fireBase = {};
-(function(){
- // Initialize Firebase
- var config = {
-    apiKey: "AIzaSyCGT48tRRTrbUJvfWb3PvKZfSgISreF1S0",
-    authDomain: "red-social-96a75.firebaseapp.com",
-    databaseURL: "https://red-social-96a75.firebaseio.com",
-    projectId: "red-social-96a75",
-    storageBucket: "",
-    messagingSenderId: "775319261849"
-  };
-  firebase.initializeApp(config);
-  app_fireBase = firebase;
-})()
-  
-/*
 // Get HTML elements for Login
 const email = document.getElementById('mail');
 const password = document.getElementById('password');
 const btnLogin = document.getElementById('btnLogin');
 const btnSign = document.getElementById('btnSign');
+const btnSignup = document.getElementById('btnSignup');
+const name = document.getElementById('name');
+const btnFb = document.getElementById('btnFb');
+const btnGg = document.getElementById('btnGg');
 
-// Email and password Login event
-btnLogin.addEventListener('click', e => {
-    const mail = email.value;
-    const pass = password.value;
-    const auth = firebase.auth();
-
-    const promise = auth.signInWithEmailAndPassword(mail, pass);
-    console.log("mail" + mail);
-    console.log("pass" + pass);
-    
-    promise.catch(e => console.log(e.message))
-});
-
+// Sign up new users
 btnSign.addEventListener('click', e => {
-    const mail = email.value;
-    const pass = password.value;
-    const auth = firebase.auth();
-
-    const promise = auth.createUserWithEmailAndPassword(mail, pass);
-    promise.catch(e => console.log(e.message))
+  name.style.display = "block";
+  btnLogin.style.display = "none";
+  btnFb.style.display = "none";
+  btnGg.style.display = "none";
+  btnSign.style.display = "none";
+  btnSignup.style.display = "block";
 });
 
-firebase.auth().onAuthStateChanged(firebaseUser => {
-    if(firebaseUser){
-        console.log(firebaseUser);
-        
-    } else {
-        console.log('no se ha accesado');
-        
+// Crear usuario nuevo mail, contraseña, nombre
+btnSignup.addEventListener('click', e => {
+  const mail = email.value;
+  const pass = password.value;
+  const nameValue = name.value;
+
+  const promise = firebase.auth().createUserWithEmailAndPassword(mail, pass);
+  promise.catch(e => console.log(e.message))
+
+  let ref = database.ref('user');
+  let data = {
+    name: nameValue,
+    mail: mail,
+    message: {
     }
-})
-*/
-let mainApp = {};
-(function(){
-    let firebase = app_fireBase;
-let uid = null;
+  }
+  ref.push(data);
+  window.location.reload();
+});
 
-    firebase.auth().onAuthStateChanged(function(user) {
-        if (user) {
-        // User is signed in.
-            uid = user.uid
-        } else {
-            uid = null;
-            window.location.replace('https://github.com/gloryarz/cdmx-2018-06-bc-core-am-social-network');
-        }
-    });
+// Login con email y password
+btnLogin.addEventListener('click', e => {
+  const mail = email.value;
+  const pass = password.value;
 
-    function logOut (){
-        firebase.auth().signOut();
-    }
+  const promise = firebase.auth().signInWithEmailAndPassword(mail, pass);
+  promise.catch(e => console.log(e.message))
+});
 
-    mainApp.logOut = logOut;
+//Login with Google
+btnGg.addEventListener('click', e => {
 
-})()
+});
 
 
+firebase.auth().onAuthStateChanged(function (user) {
+  if (user) {
+    window.location.assign('views/home.html');
 
-// document.getElementById('logout').addEventListener('click', )
+  } else {
+    console.log('no se ha accesado');
+  }
+});
+
+
+
