@@ -2,7 +2,7 @@
 
 ## Introducción
 
-Tercer proyecto del common core durante el Bootcamp de la 6ta Generación de Laboratoria: **Social Network.**
+proyecto del common core durante el Bootcamp de la 6ta Generación de Laboratoria: **Social Network.**
 
 El reto consiste en crear una WebApp del tipo red social. El giro de este producto será: **Alimentación** y se enfoca en proponer un modelo de negocio que convenza a nuestra entrepreneur/clienta (Sofía) de otorgar financiamiento y así continuar con el desarrollo de la plataforma. 
 
