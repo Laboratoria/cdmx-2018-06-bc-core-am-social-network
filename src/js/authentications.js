@@ -4,7 +4,7 @@ const config = {
   authDomain: 'diabetessocialmedia.firebaseapp.com',
   databaseURL: 'https://diabetessocialmedia.firebaseio.com',
   projectId: 'diabetessocialmedia',
-  storageBucket: '', // diabetessocialmedia.appspot.com
+  storageBucket: 'diabetessocialmedia.appspot.com', // 
   messagingSenderId: '1728202919'
 };
 
