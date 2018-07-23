@@ -1,7 +1,7 @@
 // Para ingreso con correo y contraseña
 
 // Initialize Firebase
-var config = {
+const config = {
   apiKey: 'AIzaSyCwZtKNwCJJTU-oRr5j2LL921ZbKPP6ovQ',
   authDomain: 'social-network-laboratoria.firebaseapp.com',
   databaseURL: 'https://social-network-laboratoria.firebaseio.com',
@@ -19,6 +19,8 @@ const logout = document.getElementById('logout');
 
 // Agregar evento para el botón de inicio de sesión
 login.addEventListener('click', event => {
+  event.preventDefault();
+  console.log('hola');
   // Obtenemos valor de email y password
   const emailValue = email.value;
   const passwordValue = password.value;
@@ -31,6 +33,7 @@ login.addEventListener('click', event => {
 // Añadiendo el evento del botón de registrarse
 
 signup.addEventListener('click', event => {
+  event.preventDefault();
   const emailValue = email.value;
   const passwordValue = password.value;
   const auth = firebase.auth();
@@ -41,7 +44,7 @@ signup.addEventListener('click', event => {
 
 logout.addEventListener('click', event => {
   firebase.auth().signOut();
-}); 
+});
 
 firebase.auth().onAuthStateChanged(firebaseUser => {
   if (firebaseUser) {
@@ -49,7 +52,7 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
   } else {
     console.log('not logged in');
     logout.classList.add('hide');
-  } 
+  }
 });
 
 // Para ingresar con google
@@ -58,13 +61,12 @@ const provider = new firebase.auth.GoogleAuthProvider();
 const loginGoogle = document.getElementById('login-google');
 
 loginGoogle.addEventListener('click', event => {
+  event.preventDefault();
   firebase.auth()
     .signInWithPopup(provider) // popUp te va a dar la ventana de acceso a tu cuenta de google. parámetro de la variable provider que tiene la autenticación con google
-    
+
     .then(function(provider) { // entonces ejecuta la función que es el resultado (acceder con google)
       console.log(result);
       console.log(provider);
     });
 });
-
-
