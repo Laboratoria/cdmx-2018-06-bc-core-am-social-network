@@ -3,42 +3,32 @@ body{
     font-family: 'roboto';
     font-weight: 700;
     font-size: 2em;
-    text-align: right;
-}
-
-/*texto-Garnachapp{
-  text-align: right;
-}*/
+    }
 
 #garnachapp-tittle{
 margin-top: 1.4em;
 }
 .p{
-   text-align: center;
+   text-align: right;
 }
 .dropup .dropdown-toggle::after{
   margin-left: 0 !important ;
 }
 
-.text-area{
+/*.text-area {
 width: 100%;
-}
+}*/
 
 header{
-    margin: 1.2em;
-}
-
-.card-img-left {
-    border-bottom-left-radius: calc(.25rem - 1px);
-    border-top-left-radius: calc(.25rem - 1px);
-    float: left;
-    padding-right: 1em;
-    margin-bottom: -1.25em;
+    margin: 1em;
 }
 
 .form-control{
-    margin-top: 5em;
-    margin-bottom: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    height: 7em;
+    border: solid 1px #000000;
+    
 }
 
 @media (max-width: 0px) { /* Change this to 0 */
