@@ -2,7 +2,7 @@
   // Get elements
   const btnLogout = document.getElementById('btn-logout');
   // Get a reference to the database service
-  var database = firebase.database();
+  let database = firebase.database();
 
   // Add logout event
   btnLogout.addEventListener('click', event => {
@@ -27,7 +27,7 @@
     agregarUser(user.uid, user.displayName, user.email);
   });
   function agregarUser(uid, name, email) {
-    var conectados = userConect.push({
+    let conectados = userConect.push({
       uid: uid,
       name: name,
       email: email
