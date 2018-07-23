@@ -10,6 +10,14 @@
   margin-top: 2%;
 }
 
+
+·bodyindex{
+  text-align:center;
+  width: 10%;
+  margin-left: 25%;
+  margin-top: 2%
+
+}
 .inicio {
   text-align:center;
   width: 40%;
@@ -19,7 +27,7 @@
 }
 
 #email, #contrasena {
-  margin: 10%;
+  margin: 0;
 }
 
 
@@ -38,6 +46,27 @@
   border: none;
   padding: 4px 5px;
   float: right;
+}
+
+#registrar,#facebook,#google{
+
+  background-color: #680134;
+  color: antiquewhite;
+  border-radius: 8px;
+  box-shadow: 0;
+  border: none;
+  padding: 4px 5px;
+  float:none
+}
+#enviar{
+
+  background-color: #680134;
+  color: antiquewhite;
+  border-radius: 8px;
+  box-shadow: 0;
+  border: none;
+  padding: 4px 5px;
+  float:none
 }
 
 #newPost {

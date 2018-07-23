@@ -119,29 +119,10 @@ function google() {
 
 });
 }
-
-
-facebook.addEventListener('click', function() {
-let provider = new firebase.auth.FacebookAuthProvider();
-console.log('Diste un click')
-firebase.auth().signInWithPopup(provider)
-console.log(provider)
-.then(function(authData) {
-
-  // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-  let token = authData.credential.accessToken;
-  // The signed-in user info.
-  let user = authData.user;
-})
-.catch(function(error) {
-  // Handle Errors here.
-  let errorCode = error.code;
-  let errorMessage = error.message;
-  // The email of the user's account used.
-  let email = error.email;
-  // The firebase.auth.AuthCredential type that was used.
-  let credential = error.credential;
-});
-});
-
-
+function facebook() {
+  var provider = new firebase.auth.FacebookAuthProvider();
+  firebase.auth()
+  .signInWithPopup(provider)
+  .then(function(result) {
+  });
+}
