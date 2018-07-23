@@ -14,7 +14,7 @@ const authGoogle = () => {
 
 const authFacebook = () => {
   var provider = new firebase.auth.FacebookAuthProvider();
-  authenticating(provider);
+  authentificating(provider);
 };
 
 const authentificating = (provider) =>{
@@ -23,6 +23,10 @@ const authentificating = (provider) =>{
     var token = result.credential.accessToken;
     // Datos del usuario logeado
     var user = result.user;
+
+    // if (user =="USUARIO1" && password=="CONTRASEÑA1") {
+    //   window.location= 'home.html';
+
     console.log(result);
   }).catch(function(error) {
     // enerar error
@@ -34,6 +38,7 @@ const authentificating = (provider) =>{
     // Los permisos del firebase.auth.AuthCredential ya fueron usados.
     var credential = error.credential;
     console.log(credential);
+
   });
 };
 
