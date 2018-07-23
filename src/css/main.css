@@ -1,4 +1,4 @@
-@media (max-width: 992px) {
+/*@media (max-width: 992px) {
   .welcome {
     width: 50%;
     float: right;
@@ -9,14 +9,14 @@
       width: 50%;
   
     }
-  /*.welcome ::before  {
+  .welcome ::before  {
     width: 100%;    
     display: block;
     position: absolute;
-  }*/
-}
+  }
+}*/
 
-@media (max-width: 475px) {
+/*@media (max-width: 475px) {
 
 
   .login-form {
@@ -27,7 +27,7 @@
   }
 }
 
-/*@media (max-width: 768px) {
+@media (max-width: 768px) {
   .container {
 
   }

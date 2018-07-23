@@ -13,10 +13,11 @@ body{
   color: white;
 }
 
-.register-box {
+/*.register-box {
   margin: 0.5px;
   text-align: -webkit-center;
-}
+}*/
+
 .txt2 {
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
@@ -30,8 +31,12 @@ body{
 }
 
 /*============Formulario=======================*/
-.container {
-}
+/*.contenedor {
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+
+}*/
 
 .login-form {
   width: 100%;
@@ -83,19 +88,24 @@ body{
 
 .btn-box {
   text-align: -webkit-center;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
 
 .input::placeholder{
   color: white;
 }
 
+#register-button {
+    text-align: center !important;
+}
+
 /*==================Imagen de Bienvenida=============*/
 
 
-.welcome-box {
+.welcome {
   height: 100%;
+  width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -104,11 +114,18 @@ body{
   background-image: url('http://4.bp.blogspot.com/-uJ5is1nlxzk/VBMtGOSyp4I/AAAAAAAAGls/mk5FFCVALz8/s1600/IMG_0378_2.jpg');
 }
 
+
+#imagen-welcome {
+  padding-right: 0% !important;
+  padding-left: 0% !important;
+ }
+
 .welcome-text{
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-style: bold;
   color: white;
+  font-weight: 700;
   align-content: center;
   padding: 1em;
   }
@@ -123,3 +140,4 @@ body{
   justify-content: flex-end;
   padding: 10px;
  }
+
