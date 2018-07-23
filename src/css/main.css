@@ -5,24 +5,22 @@
 }
 
 #logo {
-  border-radius: 250px;
-  width: 30%;
-  margin-top: 20%;
+  border-radius: 200px;
+  width: 15%;
+  margin-top: 2%;
 }
 
 .inicio {
+  text-align:center;
   width: 40%;
   margin-left: 25%;
-  margin-top: 20%
+  margin-top: 2%
+
 }
 
 #email, #contrasena {
   margin: 10%;
 }
-
-
-
-
 
 
 /* app.html FORMAT */
