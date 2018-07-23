@@ -6,7 +6,6 @@ document.getElementById('btn-facebook').addEventListener('click', (event) =>{
   authFacebook();
 });// Por hacer
 
-
 const authGoogle = () => {
   var provider = new firebase.auth.GoogleAuthProvider();
   authentificating(provider);
