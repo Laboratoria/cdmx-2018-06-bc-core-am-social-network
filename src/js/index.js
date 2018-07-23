@@ -6,45 +6,53 @@ var config = {
   messagingSenderId: "705442568830",
 };
 firebase.initializeApp(config);
-const Email = document.getElementById('Email');
-const Password = document.getElementById('Password');
-const LogIn =document.getElementById('LogIn');
-const SignUp = document.getElementById('SignUp');
-const LogOut = document.getElementById('LogOut');
-// Funcionalidad del boton LogIn
-LogIn.addEventListener( 'click', e => {
-//Obteniendo e-mail y password
-const email = intText.value;
-const passw = intPass.value;
-const auth = firebase.auth();
-//  Sign In
-const promise = auth.signInWithEmailAndPassword(email, passw);
-promise.catch(e => console.log(e.message));
+console.log('estas dentro del firebase');
+// DOM.
+//El login con correo ya sirve bien, checarlo.
+const txtEmail = document.getElementById('txtEmail');
+const txtPassword = document.getElementById('txtPassword');
+const btnLogin = document.getElementById('btnLogin');
+const btnSignUp = document.getElementById(`btnSignUp`);
+const btnLogout = document.getElementById('btnLogout');
+
+    // Evento  para el boton LogIn
+    btnLogin.addEventListener( 'click', e => {
+    //Obteniendo e-mail y password
+    console.log('se escucho el evento click en el boton login')
+    const email = txtEmail.value;
+    const passw = txtPassword.value;
+    const auth = firebase.auth();
+    //  Sign In
+    const promise = auth.signInWithEmailAndPassword(email, passw);
+    promise.catch(e => console.log(e.message));
+
 });
-// Funcionalidad del boton SignUp
-   SignUp.addEventListener('click', e =>{
-   //Creando usuarios con SignUp
-   const email = intText.value;
-   const passw = intPass.value;
-   const auth = firebase.auth();
-   // Se entra con Sign In
-   const promise = auth.createUserWithEmailAndPassword(email, passw);
-   promise.catch(e => console.log(e.message));
-   LogOut.addEventListener('click', e =>{
-    firebase.auth().SignOut();
-   });
-   // Se identifica al usuario y se deja entrar a la firebase console (listener de autentificacion en tiempo real)
+    // Evento para el boton SignUp
+    btnSignUp.addEventListener('click', e =>{
+    //Creando usuarios con el btnSignUp
+    const email = txtEmail.value;
+    const passw = txtPassword.value;
+    const auth = firebase.auth();
+    //  Sign In
+    const promise = auth.createUserWithEmailAndPassword(email, passw);
+    promise.catch(e => console.log(e.message));
+    btnLogout.addEventListener('click', e =>{
+     firebase.auth().signOut();
+    });
+
+// Se identifica al usuario y se deja entrar a la firebase console
         firebase.auth().onAuthStateChanged( firebaseUser =>{
         if(firebaseUser){
         console.log(firebaseUser);
-        LogOut.classList.remove('hide');
+        btnLogout.classList.remove('hide');
         }else{
         console.log('Not logged in');
-        LogOut.classList.add('hide');
+        btnLogout.classList.add('hide');
         }
         });
     });
 
+//Login con Google
 var provider = new firebase.auth.GoogleAuthProvider();
 
 function googleSignin() {
@@ -72,6 +80,51 @@ function googleSignout() {
       console.log('Signout Succesfull')
    }, function(error) {
       console.log('Signout Failed')
+   });
+}
+//Login con Facebook
+// Hay que hacer el punto 2 y el 3 a para obtener el APP ID y habilitarla aqui
+//dicen como https://firebase.google.com/docs/auth/web/facebook-login?hl=es-419
+window.fbAsyncInit = function() {
+   FB.init ({
+      appId      : 'APP_ID', //aqui agregar el app id de fb que se consiguio y ya
+      xfbml      : true,
+      version    : 'v2.6'
+   });
+};
+
+(function(d, s, id) {
+   var js, fjs = d.getElementsByTagName(s)[0];
+   if (d.getElementById(id)) {return;}
+   js = d.createElement(s); js.id = id;
+   js.src = "//connect.facebook.net/en_US/sdk.js";
+   fjs.parentNode.insertBefore(js, fjs);
+} (document, 'script', 'facebook-jssdk'));
+
+var provider = new firebase.auth.FacebookAuthProvider();
+
+function facebookSignin() {
+   firebase.auth().signInWithPopup(provider)
+
+   .then(function(result) {
+      var token = result.credential.accessToken;
+      var user = result.user;
+
+      console.log(token)
+      console.log(user)
+   }).catch(function(error) {
+      console.log(error.code);
+      console.log(error.message);
+   });
+}
+
+function facebookSignout() {
+   firebase.auth().signOut()
+
+   .then(function() {
+      console.log('Signout successful!')
+   }, function(error) {
+      console.log('Signout failed')
    });
 }
 const Siguiente = () => {
