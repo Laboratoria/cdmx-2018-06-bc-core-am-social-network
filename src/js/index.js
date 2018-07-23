@@ -1,15 +1,26 @@
-function registrar() {
+var config = {
+  apiKey: "AIzaSyCU1xkVag73YWUERya-On5x4VaBBXzXxgo",
+  authDomain: "red-social-237f9.firebaseapp.com",
+  databaseURL: "https://red-social-237f9.firebaseio.com",
+  projectId: "red-social-237f9",
+  storageBucket: "red-social-237f9.appspot.com",
+  messagingSenderId: "839140955395"
+};
+firebase.initializeApp(config);
+
+registrar.addEventListener('click', function(){
   console.log('diste un click');
   let email = document.getElementById('email').value;
   let contrasena = document.getElementById('contrasena').value;
-  firebase.auth().createUserWithEmailAndPassword(email, contrasena)
-    .then(function () {
-      verificar()
+  firebase.auth()
+       .createUserWithEmailAndPassword(email, contrasena)
+       .then(function () {
+       verificar()
     })
     .catch(function (error) {
       // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
+      let errorCode = error.code;
+      let errorMessage = error.message;
       // ...
       // console.log(errorCode);
       // console.log(errorMessage);
@@ -17,12 +28,14 @@ function registrar() {
 
     });
 
-}
+});
 
 function ingreso() {
   let email2 = document.getElementById('email2').value;
   let contrasena2 = document.getElementById('contrasena2').value;
-  firebase.auth().signInWithEmailAndPassword(email2, contrasena2).catch(function (error) {
+  firebase.auth()
+          .signInWithEmailAndPassword(email2, contrasena2)
+          .catch(function (error) {
     // Handle Errors here.
     var errorCode = error.code;
     var errorMessage = error.message;
@@ -35,24 +48,22 @@ function ingreso() {
 
 }
 function observador() {
-  firebase.auth().onAuthStateChanged(function (user) {
+  firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // console.log('Existe usuario activo');
       aparece(user);
       // User is signed in.
-      var displayName = user.displayName;
-
-      var email = user.email;
-
-      var emailVerified = user.emailVerified;
+      let displayName = user.displayName;
+      let email = user.email;
+      let emailVerified = user.emailVerified;
       // console.log('*********************');
       // console.log(user.emailVerified);
       // console.log('*********************');
 
-      var photoURL = user.photoURL;
-      var isAnonymous = user.isAnonymous;
-      var uid = user.uid;
-      var providerData = user.providerData;
+      let photoURL = user.photoURL;
+      let isAnonymous = user.isAnonymous;
+      let uid = user.uid;
+      let providerData = user.providerData;
       // ...
     } else {
       // User is signed out.
@@ -73,9 +84,9 @@ function aparece(user) {
 
 }
 function verificar() {
-  var user = firebase.auth().currentUser;
+  let user = firebase.auth().currentUser;
 
-  user.sendEmailVerification().then(function () {
+  user.sendEmailVerification().then(function() {
     // Email sent.
     console.log('Enviando correo...');
 
@@ -84,5 +95,34 @@ function verificar() {
     console.log(error);
 
   });
+}
+/*
+const googlelogin = document.getElementById('google');
+const provider = new firebase.auth.GoogleAuthProvider();
 
+ googlelogin.addEventListener('click', event => {
+   console.log(hola)
+  firebase.auth()
+  .signInWithPopup(provider)
+  .then(function(result) {
+
+});
+});*/
+function google() {
+  console.log('Diste un click')
+  var provider = new firebase.auth.GoogleAuthProvider();
+
+  provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+  firebase.auth()
+  .signInWithPopup(provider)
+  .then(function(result) {
+
+});
+}
+function facebook() {
+  var provider = new firebase.auth.FacebookAuthProvider();
+  firebase.auth()
+  .signInWithPopup(provider)
+  .then(function(result) {
+  });
 }

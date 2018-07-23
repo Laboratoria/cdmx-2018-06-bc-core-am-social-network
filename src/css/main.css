@@ -5,24 +5,30 @@
 }
 
 #logo {
-  border-radius: 250px;
-  width: 30%;
-  margin-top: 20%;
+  border-radius: 200px;
+  width: 15%;
+  margin-top: 2%;
 }
 
+
+·bodyindex{
+  text-align:center;
+  width: 10%;
+  margin-left: 25%;
+  margin-top: 2%
+
+}
 .inicio {
+  text-align:center;
   width: 40%;
   margin-left: 25%;
-  margin-top: 20%
+  margin-top: 2%
+
 }
 
 #email, #contrasena {
-  margin: 10%;
+  margin: 0;
 }
-
-
-
-
 
 
 /* app.html FORMAT */
@@ -42,6 +48,27 @@
   float: right;
 }
 
+#registrar,#facebook,#google{
+
+  background-color: #680134;
+  color: antiquewhite;
+  border-radius: 8px;
+  box-shadow: 0;
+  border: none;
+  padding: 4px 5px;
+  float:none
+}
+#enviar{
+
+  background-color: #680134;
+  color: antiquewhite;
+  border-radius: 8px;
+  box-shadow: 0;
+  border: none;
+  padding: 4px 5px;
+  float:none
+}
+
 #newPost {
   padding: 5px;
   border-radius: 7px;
@@ -54,3 +81,4 @@
 .contenidoC {
   color: black;
 }
+
