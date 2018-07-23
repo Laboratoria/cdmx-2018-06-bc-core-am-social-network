@@ -14,7 +14,7 @@ const authGoogle = () => {
 
 const authFacebook = () => {
   var provider = new firebase.auth.FacebookAuthProvider();
-  authenticating(provider);
+  authentificating(provider);
 };
 
 const authentificating = (provider) =>{

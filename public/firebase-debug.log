@@ -1,0 +1,42 @@
+[debug] [2018-07-23T21:09:37.666Z] ----------------------------------------------------------------------
+[debug] [2018-07-23T21:09:37.677Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\YOCELIN\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-07-23T21:09:37.678Z] CLI Version:   3.19.3
+[debug] [2018-07-23T21:09:37.678Z] Platform:      win32
+[debug] [2018-07-23T21:09:37.678Z] Node Version:  v8.11.3
+[debug] [2018-07-23T21:09:37.680Z] Time:          Mon Jul 23 2018 16:09:37 GMT-0500 (Hora de verano central (México))
+[debug] [2018-07-23T21:09:37.681Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-07-23T21:09:37.749Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-07-23T21:09:37.750Z] > authorizing via signed-in user
+[debug] [2018-07-23T21:09:37.759Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-07-23T21:09:37.760Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/v9UNMheXj2RARRWp4wg_0oXyhvRBguhd7lSY3evZQxA',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Mon Jul 23 2018 16:09:37 GMT-0500 (Hora de verano central (México))
+[debug] [2018-07-23T21:09:38.229Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-23T21:09:38.350Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/diabetipsoficial  
+  
+ Mon Jul 23 2018 16:09:38 GMT-0500 (Hora de verano central (México))
+[debug] [2018-07-23T21:09:38.997Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-23T21:09:38.999Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/diabetipsoficial/tokens  
+  
+ Mon Jul 23 2018 16:09:38 GMT-0500 (Hora de verano central (México))
+[debug] [2018-07-23T21:09:39.405Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-23T21:09:39.408Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/diabetipsoficial  
+  
+ Mon Jul 23 2018 16:09:39 GMT-0500 (Hora de verano central (México))
+[debug] [2018-07-23T21:09:39.814Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\YOCELIN\Documents\Laboratoria\javascript\cdmx-2018-06-bc-core-am-social-network'...
+[info] 
+[debug] [2018-07-23T21:09:39.820Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1025645095828/clients/_:getWebAppConfig  
+  
+ Mon Jul 23 2018 16:09:39 GMT-0500 (Hora de verano central (México))
+[debug] [2018-07-23T21:09:40.313Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[info] Shutting down...
