@@ -9,6 +9,7 @@ let config = {
 };
 firebase.initializeApp(config); // con el método firebase.initializeApp se aplica la configuración que está nuestra variable config
 
+var database = firebase.database();
 
 // Getting elements (obteniendo elementos globales: inputs y botones)
 let mail = document.getElementById('email');
@@ -17,8 +18,8 @@ let username = document.getElementById('first_name');
 let lastname = document.getElementById('last_name');
 const logInBtn = document.getElementById('log-in-btn');
 const signUpBtn = document.getElementById('sign-up-btn');
-let publicarBtn = document.getElementById('publicar-btn');
-let logoutBtn = document.getElementById('logout-btn');
+// let publicarBtn = document.getElementById('publicar-btn');
+// let logoutBtn = document.getElementById('logout-btn');
 // declarando función "launcher" que inicialice la config de firebase
 
 // botón de registrarse (sign up) escucha el evento click y ejecuta una función
@@ -69,7 +70,7 @@ logInBtn.addEventListener('click', event => {
         console.log(errorCode);
         alert(errorMessage); // mensaje de firebase "This password is invalid or the user does not have a password"
       });
-    localStorage.setItem('key', JSON.stringify(uruario));
+    localStorage.setItem('key', JSON.stringify(usuario));
     window.homeNetwork.mostrar(usuario);
   }
 });
@@ -99,6 +100,7 @@ firebase.auth().onAuthStateChanged(user => { // cambiar el estado de logeado a n
   }
 });
 
+const logoutBtn = document.getElementById('logout-btn');
 logoutBtn. addEventListener('click', event=>{
   firebase.auth().signOut()
     .then(() =>{
@@ -107,13 +109,23 @@ logoutBtn. addEventListener('click', event=>{
     .catch();
 });
  
+let loginFacebookBtn = document.getElementById('login-facebook-btn');
+loginFacebookBtn.addEventListener('click', event =>{
+  const provider = new firebase.auth.FacebookAuthProvider();
+  // provider.setCostumParameters({
+  //   'display': 'popup'
+  // });
+  firebase.auth().signInWithPopup(provider)
+    .then((result)=> { // entonces ejecuta la función que es el resultado (acceder con google)
+      console.log('login con facebook');
+    });
+});
 
-// iniciar sesión con facebook
-// const loginFacebook = document.getElementById('login-facebook');
+// Firebase database
 
-
-// publicarBtn.addEventListener('click', event1=>{
-//   alert('diste un click');
-//   // publicacion = document.getElementById('input-publicacion').value;
-//   // localStorage.setItem('key', JSON.stringify(publicacion));
-// });
+// const messageInput = document.getElementsByClassName('inputMessage');
+// const message = ()=>{
+//   let currentUser = firebase.auth().currentUser;
+//   let messageValue = messageInput.value;
+//   firebase.database().ref()
+// };

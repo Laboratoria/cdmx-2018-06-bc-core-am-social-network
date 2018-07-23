@@ -5,8 +5,8 @@ window.onload = print1 = () => { // declaramos la función print1
   let resultado = document.getElementById('resultado');
   let pintar =
     `<ul>
-    // <li>Nombre: ${dataStorage.name}</li>
-    // <li>Apellido: ${dataStorage.apellido}</li>
+    <li>Nombre: ${dataStorage.name}</li>
+    <li>Apellido: ${dataStorage.apellido}</li>
     <li>Email: ${dataStorage.email}</li>
     </ul>`;
 

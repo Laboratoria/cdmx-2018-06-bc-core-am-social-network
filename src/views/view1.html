@@ -28,20 +28,21 @@
 
 
   <div class="row">
-    <form class="col s12 m12">
-
+    <form class="col s12 l12">
       <div class="row">
-        <div id="input-publicacion" class="input-field">
+        <div class="col s12 l12 offset4">
+        <div id="input-publicacion" class="input-field" >
           <i class="small material-icons right prefix">mode_edit</i>
-          <textarea id="icon_prefix2" class="materialize-textarea col s10 m10"></textarea>
-          <label class=" col s12 " for="icon_prefix2">Escribe aquí para tus amigos </label>
+          <textarea id="icon_prefix2" class="materialize-textarea col s12 m12 l12 inputMessage"></textarea>
+          <label  for="icon_prefix2">Escribe aquí para tus amigos </label>
         </div>
       </div>
-      <a id="publicar-btn" class="waves-effect waves-light btn col s4">publicar</a>
+      </div>
+      <a id="publicar-btn" class="waves-effect waves-light btn col s4 l4">publicar</a>
       <div class="row">
-        <div class="col s12">
+        <div class="col s12 l12">
           <div id="card">
-          <!-- <div class="card grey lighten-3"> -->
+            <!-- <div class="card grey lighten-3"> -->
             <!-- <div class="card-content white-text">
               <p></p>
             </div>
@@ -50,26 +51,27 @@
               <i class="small material-icons right">favorite</i>
             </div> -->
           </div>
-          </div>
         </div>
-     
+      </div>
 
-  <div id="resultado">
-    <!-- <ul>
+
+      <div id="resultado">
+        <!-- <ul>
       <li>Nombre:</li>
       <li>Apellido:</li>
       <li>Email:</li>
 
     </ul> -->
 
-  </div>
+      </div>
     </form>
-</div>
+  </div>
 
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
   <script src="../js/app.js"></script>
   <script src="../js/print.js"></script>
+  <!-- <script src="../js/index.js"> </script> -->
 </body>
 
 </html>
