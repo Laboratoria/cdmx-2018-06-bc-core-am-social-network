@@ -1,17 +1,8 @@
 (function() {
-  // Initialize Firebase
-  var config = {
-    apiKey: 'AIzaSyC20SbyxB9RKJgcfTvfYuhJKxuuxh0RQBQ',
-    authDomain: 'prueba-firebase-ef04b.firebaseapp.com',
-    databaseURL: 'https://prueba-firebase-ef04b.firebaseio.com',
-    projectId: 'prueba-firebase-ef04b',
-    storageBucket: 'prueba-firebase-ef04b.appspot.com',
-    messagingSenderId: '499846254860'
-  };
-  firebase.initializeApp(config);
-
   // Get elements
   const btnLogout = document.getElementById('btn-logout');
+  // Get a reference to the database service
+  var database = firebase.database();
 
   // Add logout event
   btnLogout.addEventListener('click', event => {
@@ -20,12 +11,28 @@
   });
 
   firebase.auth().onAuthStateChanged(firebaseUser => {
-    if (firebaseUser) {
-      console.log(firebaseUser);
+    // if (firebaseUser) {
+    console.log(firebaseUser);
+    let user = firebase.auth().currentUser;
+    if (user !== null) {
+      // let emailId = user.email;
+      user.updateProfile({
+        displayName: user.displayName
+      });
+      document.getElementById('user-paragraph').innerHTML = `Bienvenidx ${user.displayName}`;
     } else {
       console.log('not logged in');
     }
+    userConect = database.ref('data');
+    agregarUser(user.uid, user.displayName, user.email);
   });
+  function agregarUser(uid, name, email) {
+    var conectados = userConect.push({
+      uid: uid,
+      name: name,
+      email: email
+    });
+  }
 }());
 
 const postText = document.getElementById('post-entry');

@@ -1,15 +1,4 @@
 (function() {
-  // Initialize Firebase
-  var config = {
-    apiKey: 'AIzaSyC20SbyxB9RKJgcfTvfYuhJKxuuxh0RQBQ',
-    authDomain: 'prueba-firebase-ef04b.firebaseapp.com',
-    databaseURL: 'https://prueba-firebase-ef04b.firebaseio.com',
-    projectId: 'prueba-firebase-ef04b',
-    storageBucket: 'prueba-firebase-ef04b.appspot.com',
-    messagingSenderId: '499846254860'
-  };
-  firebase.initializeApp(config);
-
   // Get elements
   const txtName = document.getElementById('txt-name');
   const txtEmail = document.getElementById('txt-email');
