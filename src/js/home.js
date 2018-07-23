@@ -33,12 +33,19 @@
       email: email
     });
   }
+
+  const postText = document.getElementById('post-entry'); // Texto de entrada
+  const btnShare = document.getElementById('new-post'); // Boton de compartir
+  
+
+  btnShare.addEventListener('click', event => { // Evento para mandar el texto dee entrada a la database
+    const currentUser = firebase.auth().currentUser;
+    let textInPost = postText.value;
+    const newPostKey = firebase.database().ref().child('posts').push().key;
+    firebase.database().ref(`posts/${newPostKey}`).set({
+      creator: currentUser.uid,
+      creatorName: currentUser.displayName,
+      text: textInPost
+    });
+  });
 }());
-
-const postText = document.getElementById('post-entry');
-const btnShare = document.getElementById('new-post');
-
-btnShare.addEventListener('click', event => {
-  let textInPost = postText.value;
-  window.social.displayPost(textInPost);
-});
