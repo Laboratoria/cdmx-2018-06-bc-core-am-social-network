@@ -120,7 +120,11 @@ function google() {
 });
 }
 function facebook() {
+  console.log('Diste un click')
   var provider = new firebase.auth.FacebookAuthProvider();
+  console.log('Diste un click2')
+  provider.addScope('public_profile.');
+  console.log('Diste un click2')
   firebase.auth()
   .signInWithPopup(provider)
   .then(function(result) {
