@@ -1,3 +1,32 @@
-body{
-    background-color:rgb(255, 153, 102, 0.2);
+/* body{
+    /* background-color:rgb(255, 153, 102, 0.2); */ 
+
+.labelPublicacion{
+    font-size:12px;
 }
+
+#card { 
+height: 140px;
+width: 290px;
+left: 25px;
+right: 15px;
+} 
+/* 
+#icon_prefix2 {
+width: 211px;
+} */
+.logi{
+    background-color: #8bc34a;
+}
+
+body{
+   /* background-image: URL(https://static1.squarespace.com/static/5831f95020099e07c31b31f1/t/5890bfd35016e1497f69868a/1485888908644/Berry+Warrior+Chia+Smoothie+Bowl); */
+   background-repeat:no-repeat;
+   background-size: cover;
+   height: 100%;
+}
+
+html{
+    height: 100%;
+}
+
