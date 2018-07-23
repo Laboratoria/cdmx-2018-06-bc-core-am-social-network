@@ -1,17 +1,50 @@
-body{
-    background-color: rgba(255, 94, 58, 0.95);
-    font-family: 'roboto';
-    font-weight: 700;
-    font-size: 2em;
-    color: aliceblue;
+@media (max-width: 992px) {
+  .welcome {
+    width: 50%;
+    float: right;
+    display: block;
+
+  }
+    .login-form {
+      width: 50%;
+  
+    }
+  /*.welcome ::before  {
+    width: 100%;    
+    display: block;
+    position: absolute;
+  }*/
 }
 
-header{
-    margin: 1.2em;
+@media (max-width: 475px) {
+
+
+  .login-form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+  }
 }
 
-.form-control{
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
+/*@media (max-width: 768px) {
+  .container {
+
+  }
+
+  .welcome {
+
+  }
 }
+
+@media (max-width: 576px) {
+  .container {
+ 
+  }
+
+}*/
+
+
+
+
 
