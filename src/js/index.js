@@ -1,5 +1,16 @@
+// Inicializar Firebase
+const config = {
+  apiKey: 'AIzaSyCt9yjfxwLkam9k--FRqUyqn-nw2pOgrdY',
+  authDomain: 'diabetessocialmedia.firebaseapp.com',
+  databaseURL: 'https://diabetessocialmedia.firebaseio.com',
+  projectId: 'diabetessocialmedia',
+  storageBucket: 'diabetessocialmedia.appspot.com',
+  messagingSenderId: '1728202919'
+};
+firebase.initializeApp(config);
+
 // Con Gmail de Google
-const authentificationsUsers = document.getElementById('btn-google');
+const authentificationsUsers = document.getElementById('button');
 authentificationsUsers.addEventListener('click', (event) =>{
   authGoogle();
 });
@@ -28,13 +39,13 @@ authentificating = (provider) =>{
   });
 };
 
-registrar = () => {
+registrar = () =>{
   let email = document.getElementById('userEmail').value;
   let password = document.getElementById('userPsw').value;
   let userName = document.getElementById('username').value;
   firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(function() {
-      // verificarEmail();
+      verificarEmail();
     })
     .catch(function(error) {
     // Manejo de errores
@@ -44,7 +55,6 @@ registrar = () => {
       console.log(errorMessage);
     });
 };
-
 ingresar = () =>{
   let emailU = document.getElementById('uEmail').value;
   let passwordU = document.getElementById('uPsw').value;
