@@ -62,8 +62,8 @@ loginGoogle.addEventListener('click', event => {
     .signInWithPopup(provider) // popUp te va a dar la ventana de acceso a tu cuenta de google. parámetro de la variable provider que tiene la autenticación con google
     
     .then(function(provider) { // entonces ejecuta la función que es el resultado (acceder con google)
-      console.log(result);
-      console.log(provider);
+      // console.log(result);
+      // console.log(provider);
     });
 });
 
