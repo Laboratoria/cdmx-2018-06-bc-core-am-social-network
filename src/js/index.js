@@ -1,6 +1,10 @@
 // Con Gmail de Google
-document.getElementById('btn-google').addEventListener('click', authGoogle);
-document.getElementById('btn-facebook').addEventListener('click', authFacebook);// Por hacer
+document.getElementById('btn-google').addEventListener('click', (event) =>{
+  authGoogle();
+});
+document.getElementById('btn-facebook').addEventListener('click', (event) =>{
+  authFacebook();
+});// Por hacer
 
 
 const authGoogle = () => {
@@ -10,7 +14,7 @@ const authGoogle = () => {
 
 const authFacebook = () => {
   var provider = new firebase.auth.FacebookAuthProvider();
-  authentication(provider);
+  authenticating(provider);
 };
 
 const authentificating = (provider) =>{
@@ -32,6 +36,8 @@ const authentificating = (provider) =>{
     console.log(credential);
   });
 };
+
+// Registro por correo
 
 registrar = () =>{
   let email = document.getElementById('userEmail').value;

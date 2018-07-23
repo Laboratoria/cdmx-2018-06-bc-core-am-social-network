@@ -1,11 +1,11 @@
 // Inicializar Firebase
 const config = {
-  apiKey: 'AIzaSyCt9yjfxwLkam9k--FRqUyqn-nw2pOgrdY',
-  authDomain: 'diabetessocialmedia.firebaseapp.com',
-  databaseURL: 'https://diabetessocialmedia.firebaseio.com',
-  projectId: 'diabetessocialmedia',
-  storageBucket: 'diabetessocialmedia.appspot.com', //
-  messagingSenderId: '1728202919'
+  apiKey: 'AIzaSyBoO-dyO4PywqOJJVLDAucttJLMlM5N3vs',
+  authDomain: 'diabetipsoficial.firebaseapp.com',
+  databaseURL: 'https://diabetipsoficial.firebaseio.com',
+  projectId: 'diabetipsoficial',
+  storageBucket: 'diabetipsoficial.appspot.com',
+  messagingSenderId: '1025645095828'
 };
 
 firebase.initializeApp(config);
