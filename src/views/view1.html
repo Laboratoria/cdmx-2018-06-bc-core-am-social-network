@@ -13,22 +13,37 @@
         <h2>Es super fácil y rápido!</h2>
     </header>
     <section class = "container-fluid">
-        <form>
+        <form id = "form-signup">
+            <div class="form-group">
+                <label for="input-name">Ingresa tu nombre</label>
+                <input type="text" class="form-control" name = "nombre" id="input-name" placeholder="Nombre">
+            </div>
             <div class="form-group">
               <label for="input-email">Ingresa tu correo electrónico</label>
-              <input type="email" class="form-control" id="input-email" placeholder="Coreo electrónico">
+              <input type="email" class="form-control" name = "correo" id="input-email" placeholder="Coreo electrónico">
             </div>
             <div class="form-group">
               <label for="input-password">Ingresa una contraseña</label>
-              <input type="password" class="form-control" id="input-password" placeholder="Contraseña">
+              <input type="password" class="form-control" name = "password" id="input-password" placeholder="Contraseña">
             </div>
             <div class="form-group">
                 <label for="input-age">Ingresa tu edad</label>
-                <input type="text" class="form-control" id="input-age" placeholder="Edad">
-              </div>
+                <input type="text" class="form-control" name = "edad" id="input-age" placeholder="Edad">
+            </div>
+            <div class="form-group">
+                    <label for="input-pais">Ingresa tu pais</label>
+                    <input type="text" class="form-control" name = "pais" id="input-pais" placeholder="Pais">
+            </div>
+            <div class="form-group">
+                    <label for="input-ciudad">Ingresa tu ciudad</label>
+                    <input type="text" class="form-control" name = "ciudad" id="input-ciudad" placeholder="Ciudad">
+            </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
           </form>
     </section>
     <footer></footer>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+    <script src="../js/credenciales.js"></script>
+    <script src="../js/index.js"></script>
 </body>
 </html>
