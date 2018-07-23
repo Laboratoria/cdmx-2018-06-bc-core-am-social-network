@@ -171,7 +171,14 @@ Esta app es un caso muy particular, ya que su idea ha sido desarrollada por Nico
 ### 15 Eat & Move-O-Matic
 Y terminamos con Eat & Move-O-Matic, la más “gamificada” de todas las que hablamos aquí. Diseñada y desarrollada por la New Mexico State University, dispone de una serie de pequeños juegos, preguntas y respuestas y comparativas que nos permitirán ahondar tanto en la parte de la nutrición de los alimentos como en la del ejercicio físico, con mucha información que muestra de forma tremendamente visual. Disponible gratis en iOS.
    
-   
+En su mayoria, las aplicaciones usan colores y lenguaje muy sencillo de entender, su interfaz es muy organica y contrastante, usan de fondo el blanco para que los colores, verde, naranja o rojo, que son los que más se usan, no sean tan agresivos.
+
+<img align="center" src="./imagenes-ux/benchmark1.png"/>
+<img align="center" src="./imagenes-ux/benchmark2.jpg"/>
+<img align="center" src="./imagenes-ux/mysugr-logbook-phone.png"/>
+<img align="center" src="./imagenes-ux/selecting-2Harvest.png"/>
+
+
 
 
 Hacer un  prototipo de alta fidelidad. FFIGMAAAAA
