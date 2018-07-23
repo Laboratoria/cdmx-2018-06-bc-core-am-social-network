@@ -12,36 +12,27 @@
 </head>
 
 <body>
-<<<<<<< HEAD
   <container>
-      <header clas= "row">
-        <nav>
-          <div class= "col-xs-2 col-sm-2 col-md-4 col-lg-4 offset-col-xs-2 col-sm-4 col-md-4 col-lg-4l">
-              <img src="images/descarga.jpg" alt="imagen encabezado">
-          </div>
-          <h1 class="col-xs-2 col-sm-2 col-md-4 col-lg-4 offset-col-xs-2 col-sm-4 col-md-4 col-lg-4l">TITULO</h1>
-        </nav>
-      </header>
-      <button type="button" class="col-xs-2 col-sm-2 col-md-2 col-lg-2" id="log-in" name="button" onclick="location='views/login.html'">Inicia sesión</button>
-      </header>
-      <section>
-          <p> Esta aplicación tiene la finalidad de generar una red de apoyo para personas que padecen o han padecido Leucemia su intención es que sea un instrumento en su entorno día a día.</p>
-          <p> Al ingresar aquí y registrarte podrás interactuar con miles de personas que están pasado por la misma situación que tú, este espacio fue diseñado pensando en que no estarás solo ya que además de las personas que se encuentran aquí podrás recurriral
-            panel de profesionales que con gusto te apoyaran escuchándote sin prisas, serenamente y con atención teniendo interés en todas esa vivencias profundas y lo más importante es que en este espacio nadie te juzgará al contrario te comprenderán y
-            te respetarán.</p>
-      </section>
-      <div class="row">
-        <!-- <button class="log-in"type="button" name="button" onclick="login()">Inicia sesión</button> -->
-        <button type="button" class="btn btn-warning col-sm-12" id="sign-up" name="button" onclick="location='views/signup.html'">Registrate</button>
-        </div>
-    
-    
-
+    <header class="row" id="encabezado">
+      <img class="col-xs-3 col-sm-3 col-md-6 col-lg-6 offset col-xs-3 col-sm-3 col-md-3 col-lg-6" src="images/encabezado.jpg" alt="imagen encabezado">
+        <button type="button" class="col-xs-2 col-sm-2 col-md-2 col-lg-2 offset col-xs-2 col-sm-2 col-md-2 col-lg-2" id="log-in" name="button" onclick="location='views/login.html'">Inicia sesión</button>      
+    </header>
+    <section id="Contenido">
+      <article>
+        <p> Esta aplicación tiene la finalidad de generar una red de apoyo para personas que padecen o han padecido Leucemia su intención es que sea un instrumento en su entorno día a día.</p>
+        <p> Al ingresar aquí y registrarte podrás interactuar con miles de personas que están pasado por la misma situación que tú, este espacio fue diseñado pensando en que no estarás solo ya que además de las personas que se encuentran aquí podrás recurriral
+          panel de profesionales que con gusto te apoyaran escuchándote sin prisas, serenamente y con atención teniendo interés en todas esa vivencias profundas y lo más importante es que en este espacio nadie te juzgará al contrario te comprenderán y
+          te respetarán.</p>
+      </article>
+    </section>
+    <div class="row">
+      <!-- <button class="log-in"type="button" name="button" onclick="login()">Inicia sesión</button> -->
+      <button type="button" class="col-sm-1 col-md-1" id="sign-up" name="button" onclick="location='views/signup.html'">Registrate</button>
+    </div>
   </container>
 
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
   <script>
-
     // Initialize Firebase
     var config = {
       apiKey: "AIzaSyCjN9x4Q4B8Nx5xf1ZoKLpWn4mTPiuuC3c",

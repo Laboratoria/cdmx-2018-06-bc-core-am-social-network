@@ -1,40 +1,49 @@
-* {
+*{
+  margin: 0px;
   padding: 0px;
-  border: 0px;
 }
 
-.container{
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #000000;
+  background-color: beige;
+
+}
+
+img{
+  border-radius: 20px;
+  margin-right: 0px;  
+}
+
+#encabezado{
   width: 960px;
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
   border-radius: 20px;
+  border: groove;
   overflow: hidden;
 }
 
-header {
-  height:150px;
-  margin-top:0px;
-  background-color: blue;
+header{
+  height: 150px;
+  margin: auto;
 }
 
-img {
-  width: 90px;
-
-nav {
-  padding-top: 2em;
+nav{
+  height: 60px;
+  margin-top: 20px;
 }
 
-.container{
-  padding-top: 3em;
-  padding-left: 1em;
-  padding-right: 1em;
+#Contenido{
+  width: 960px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
 }
 
-#texto{
-  padding-top: 1em;
-}
 
-body{
-  font-family: 'Montserrat', sans-serif;
-}
+
+
+
