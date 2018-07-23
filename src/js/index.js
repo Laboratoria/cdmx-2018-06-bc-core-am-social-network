@@ -6,7 +6,10 @@ var config = {
   storageBucket: "red-social-237f9.appspot.com",
   messagingSenderId: "839140955395"
 };
+
+
 firebase.initializeApp(config);
+
 
 registrar.addEventListener('click', function(){
   console.log('diste un click');
@@ -116,7 +119,7 @@ function google() {
   firebase.auth()
   .signInWithPopup(provider)
   .then(function(result) {
-
+    newDoc();
 });
 }
 function facebook() {
@@ -124,5 +127,10 @@ function facebook() {
   firebase.auth()
   .signInWithPopup(provider)
   .then(function(result) {
+    newDoc();
   });
+}
+
+function newDoc() {
+  window.location.assign("app.html")
 }
