@@ -1,3 +1,28 @@
+body{
+    background-color: rgba(255, 94, 58, 0.95);
+    font-family: 'roboto';
+    font-weight: 700;
+    font-size: 2em;
+    text-align: right;
+}
+
+/*texto-Garnachapp{
+  text-align: right;
+}*/
+
+#garnachapp-tittle{
+margin-top: 1.4em;
+}
+.p{
+   text-align: center;
+}
+.dropup .dropdown-toggle::after{
+  margin-left: 0 !important ;
+}
+
+.text-area{
+width: 100%;
+=======
 @media (max-width: 992px) {
   .welcome {
     width: 50%;
@@ -14,18 +39,42 @@
     display: block;
     position: absolute;
   }*/
+  
+.card-img-left {
+    border-bottom-left-radius: calc(.25rem - 1px);
+    border-top-left-radius: calc(.25rem - 1px);
+    float: left;
+    padding-right: 1em;
+    margin-bottom: -1.25em;
 }
 
-@media (max-width: 475px) {
+.form-control{
+    margin-top: 5em;
+    margin-bottom: 1.5em;
+}
 
-
-  .login-form {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-
+@media (max-width: 0px) { /* Change this to 0 */
+    .navbar-nav .open .dropdown-menu {
+      position: fixed;
+      float: none;
+      width: auto;
+      margin-top: 0;
+      background-color: transparent;
+      border: 0;
+      box-shadow: none;
+    }
+    .navbar-nav .open .dropdown-menu > li > a,
+    .navbar-nav .open .dropdown-menu .dropdown-header {
+      padding: 5px 15px 5px 25px;
+    }
+    .navbar-nav .open .dropdown-menu > li > a {
+      line-height: 20px;
+    }
+    .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-nav .open .dropdown-menu > li > a:focus {
+      background-image: none;
+    }
   }
-}
 
 /*@media (max-width: 768px) {
   .container {
@@ -43,8 +92,4 @@
   }
 
 }*/
-
-
-
-
 
