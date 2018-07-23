@@ -9,6 +9,23 @@ const config = {
 };
 firebase.initializeApp(config);
 
+// login con fb
+// FB.getLoginStatus(function(response) {
+//   statusChangeCallback(response);
+// });
+
+// {
+//   status: 'connected',
+//   authResponse: {
+//       accessToken: '...',
+//       expiresIn:'...',
+//       signedRequest:'...',
+//       userID:'...'
+//   }
+// },
+
+// Si la persona no ha iniciado sesión en la aplicación o en Facebook, solicítalo desde el cuadro de diálogo de inicio de sesión con el método FB.login() o muéstrale el botón "Iniciar sesión".
+
 // Con Gmail de Google
 const authentificationsUsers = document.getElementById('button');
 authentificationsUsers.addEventListener('click', (event) =>{
@@ -121,3 +138,7 @@ verificarEmail = ()=>{
 /* const userPrintSpace = document.getElementById('obj');
 let database = firebase.database().ref().child('obj');
 database.on('value', snap => console.log(snap.val()));*/
+// inicio de sesión con facebook
+btnLogin.addEventListener("click", function (){
+  event.preventDefault();
+})
