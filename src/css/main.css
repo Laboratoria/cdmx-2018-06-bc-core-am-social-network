@@ -17,10 +17,30 @@ margin-top: 1.4em;
 
 /*.text-area {
 width: 100%;
-}*/
+=======
+@media (max-width: 992px) {
+  .welcome {
+    width: 50%;
+    float: right;
+    display: block;
 
-header{
-    margin: 1em;
+  }
+    .login-form {
+      width: 50%;
+  
+    }
+  /*.welcome ::before  {
+    width: 100%;    
+    display: block;
+    position: absolute;
+  }*/
+  
+.card-img-left {
+    border-bottom-left-radius: calc(.25rem - 1px);
+    border-top-left-radius: calc(.25rem - 1px);
+    float: left;
+    padding-right: 1em;
+    margin-bottom: -1.25em;
 }
 
 .form-control{
@@ -53,4 +73,21 @@ header{
       background-image: none;
     }
   }
-  
+
+/*@media (max-width: 768px) {
+  .container {
+
+  }
+
+  .welcome {
+
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+ 
+  }
+
+}*/
+
