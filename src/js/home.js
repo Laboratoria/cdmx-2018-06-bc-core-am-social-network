@@ -23,12 +23,12 @@
     } else {
       console.log('not logged in');
     }
-    userConect = database.ref('data');
-    agregarUser(user.uid, user.displayName, user.email);
+    let id = user.uid;
+    userConect = database.ref('users/' + id);
+    addUser(user.displayName, user.email);
   });
-  function agregarUser(uid, name, email) {
-    let conectados = userConect.push({
-      uid: uid,
+  function addUser(name, email) {
+    let conect = userConect.push({
       name: name,
       email: email
     });
