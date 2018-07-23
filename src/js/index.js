@@ -1,50 +1,31 @@
-// Inicializar Firebase
-const config = {
-  apiKey: 'AIzaSyCt9yjfxwLkam9k--FRqUyqn-nw2pOgrdY',
-  authDomain: 'diabetessocialmedia.firebaseapp.com',
-  databaseURL: 'https://diabetessocialmedia.firebaseio.com',
-  projectId: 'diabetessocialmedia',
-  storageBucket: 'diabetessocialmedia.appspot.com',
-  messagingSenderId: '1728202919'
-};
-firebase.initializeApp(config);
-
-// login con fb
-// FB.getLoginStatus(function(response) {
-//   statusChangeCallback(response);
-// });
-
-// {
-//   status: 'connected',
-//   authResponse: {
-//       accessToken: '...',
-//       expiresIn:'...',
-//       signedRequest:'...',
-//       userID:'...'
-//   }
-// },
-
-// Si la persona no ha iniciado sesión en la aplicación o en Facebook, solicítalo desde el cuadro de diálogo de inicio de sesión con el método FB.login() o muéstrale el botón "Iniciar sesión".
-
 // Con Gmail de Google
-const authentificationsUsers = document.getElementById('button');
-authentificationsUsers.addEventListener('click', (event) =>{
+document.getElementById('btn-google').addEventListener('click', (event) =>{
   authGoogle();
 });
-authGoogle = () => {
+document.getElementById('btn-facebook').addEventListener('click', (event) =>{
+  authFacebook();
+});// Por hacer
+
+
+const authGoogle = () => {
   var provider = new firebase.auth.GoogleAuthProvider();
   authentificating(provider);
 };
 
-authentificating = (provider) =>{
+const authFacebook = () => {
+  var provider = new firebase.auth.FacebookAuthProvider();
+  authenticating(provider);
+};
+
+const authentificating = (provider) =>{
   firebase.auth().signInWithPopup(provider).then(function(result) {
-  // Da el Token de acceso a Google. Usar para acceder a la API de Google
+    // Da el Token de acceso a Google. Usar para acceder a la API de Google
     var token = result.credential.accessToken;
     // Datos del usuario logeado
     var user = result.user;
     console.log(result);
   }).catch(function(error) {
-  // enerar error
+    // enerar error
     var errorCode = error.code;
     var errorMessage = error.message;
     // Este email ya esta en uso
@@ -56,6 +37,8 @@ authentificating = (provider) =>{
   });
 };
 
+// Registro por correo
+
 registrar = () =>{
   let email = document.getElementById('userEmail').value;
   let password = document.getElementById('userPsw').value;
@@ -65,7 +48,7 @@ registrar = () =>{
       verificarEmail();
     })
     .catch(function(error) {
-      // Manejo de errores
+    // Manejo de errores
       var errorCode = error.code;
       var errorMessage = error.message;
       console.log(errorCode);
@@ -80,10 +63,10 @@ ingresar = () =>{
       observadorEmail();
     })
     .catch(function(error) {
-      // Manejo de error
+    // Manejo de error
       var errorCode = error.code; console.log(errorCode);
       var errorMessage = error.message; console.log(errorMessage);
-      // ...
+    // ...
     });
 };
 
@@ -139,6 +122,6 @@ verificarEmail = ()=>{
 let database = firebase.database().ref().child('obj');
 database.on('value', snap => console.log(snap.val()));*/
 // inicio de sesión con facebook
-btnLogin.addEventListener("click", function (){
+btnLogin.addEventListener('click', function() {
   event.preventDefault();
-})
+});
