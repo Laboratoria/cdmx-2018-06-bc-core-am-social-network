@@ -8,14 +8,13 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:500" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
-
 </head>
 
 <body>
-  <container>
+  <div class= "container">
     <header class="row" id="encabezado">
       <img class="col-xs-3 col-sm-3 col-md-6 col-lg-6 offset col-xs-3 col-sm-3 col-md-3 col-lg-6" src="images/encabezado.jpg" alt="imagen encabezado">
-        <button type="button" class="col-xs-2 col-sm-2 col-md-2 col-lg-2 offset col-xs-2 col-sm-2 col-md-2 col-lg-2" id="log-in" name="button" onclick="location='views/login.html'">Inicia sesión</button>      
+        <button type="button" class="col-xs-2 col-sm-2 col-md-2 col-lg-2 offset col-xs-2 col-sm-2 col-md-2 col-lg-2" id="log-in" name="button"><a href="views/login.html">Inicia sesión</button>      
     </header>
     <section id="Contenido">
       <article>
@@ -26,31 +25,12 @@
       </article>
     </section>
     <div class="row">
-      <!-- <button class="log-in"type="button" name="button" onclick="login()">Inicia sesión</button> -->
-      <button type="button" class="col-sm-1 col-md-1" id="sign-up" name="button" onclick="location='views/signup.html'">Registrate</button>
+      <button type="button" class="col-sm-1 col-md-1" id="sign-up" name="button"><a href="views/view1.html">Registrate</button>
     </div>
-  </container>
+  </div>
 
-  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyCjN9x4Q4B8Nx5xf1ZoKLpWn4mTPiuuC3c",
-      authDomain: "red-social-19985.firebaseapp.com",
-      databaseURL: "https://red-social-19985.firebaseio.com",
-      projectId: "red-social-19985",
-      storageBucket: "red-social-19985.appspot.com",
-      messagingSenderId: "169924096887"
-    };
-    firebase.initializeApp(config);
-  </script>
-  <!--script src="js/main.js"></script>
-
-  <!--Bootstrap CDN JS, Popper.js y jQuery -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
-
 </body>
-
-</html>
+</html>   
