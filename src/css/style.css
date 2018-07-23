@@ -1,5 +1,5 @@
 body{
-	background-image: url("../images/mama.png");
+	background-image: white;
 	background-repeat: no-repeat;   /* no repite la imagen*/
 	position: static;
 
@@ -53,7 +53,7 @@ body{
 }
 
 .loginbutton {
-	/* background-color:#ffdd00; /*color del boton iniciar sesion*/ */
+	/* background-color:#ffdd00; /*color del boton iniciar sesion*/ 
 	display:inline-block;
 	font-family: 'Merienda', cursive;
 	font-size:18px;  /*tamaño de la letra*/

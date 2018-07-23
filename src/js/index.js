@@ -23,6 +23,7 @@ btnSignup.addEventListener('click', e => {
   const mail = email.value;
   const pass = password.value;
   const nameValue = name.value;
+  localStorage.setItem("mail", mail)
 
   const promise = firebase.auth().createUserWithEmailAndPassword(mail, pass);
   promise.catch(e => console.log(e.message))
@@ -30,19 +31,17 @@ btnSignup.addEventListener('click', e => {
   let ref = database.ref('user');
   let data = {
     name: nameValue,
-    mail: mail,
-    message: {
-    }
+    mail: mail
   }
   ref.push(data);
-  window.location.reload();
+  setTimeout((event) => { window.location.reload();}, 2000);
 });
 
 // Login con email y password
 btnLogin.addEventListener('click', e => {
   const mail = email.value;
   const pass = password.value;
-
+  localStorage.setItem("mail", mail)
   const promise = firebase.auth().signInWithEmailAndPassword(mail, pass);
   promise.catch(e => console.log(e.message))
 });
