@@ -1,5 +1,5 @@
-window.onload = initialization;
+// window.onload = initialization;
 
-initialization = () => {
-
-};
+// initialization = () => {
+//   let database = firebase.database();
+// };
