@@ -122,6 +122,6 @@ verificarEmail = ()=>{
 let database = firebase.database().ref().child('obj');
 database.on('value', snap => console.log(snap.val()));*/
 // inicio de sesión con facebook
-btnLogin.addEventListener('click', function() {
+document.getElementById("btn-google").addEventListener('click', (event) =>{
   event.preventDefault();
 });
