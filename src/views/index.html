@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Red Social</title>
   <link rel="stylesheet" type="text/css" href="../css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
 </head>
 
 <body>
-  
-  <div class="container">
 
-    <h4>Registro de Usuario</h4>
+    
+    <div class="container">
 
-    <div class="row">
-      <div class="input-field col s12">
-        <input id="email" type="email" class="validate">
-        <label for="email">Email</label>
-        <span class="helper-text" data-error="wrong" data-success="right"></span>
+        <h4>Registro de Usuario</h4>
+    
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" type="email" class="validate">
+            <label for="email">Email</label>
+            <span class="helper-text" data-error="wrong" data-success="right"></span>
+          </div>
+        </div>
+    
+    
+    
+        <div class="row">
+    
+          <div class="input-field col s12">
+            <input id="password" type="password" class="validate">
+            <label for="password">Password</label>
+            <span class="helper-text" data-error="wrong" data-success="right"></span>
+          </div>
+        </div>
+        <a onclick="registrar()" class="waves-effect waves-light btn" >registrarse</a>
+        </form>
       </div>
-    </div>
-
-
-
-    <div class="row">
-
-      <div class="input-field col s12">
-        <input id="password" type="password" class="validate">
-        <label for="password">Password</label>
-        <span class="helper-text" data-error="wrong" data-success="right"></span>
       </div>
-    </div>
-    <a onclick="registrar()" class="waves-effect waves-light btn" >registrarse</a>
-    </form>
-  </div>
-  </div>
-
+    
   <div class="container">
 
     <h4>Ingreso de Usuario</h4>
@@ -49,9 +50,7 @@
         <span class="helper-text" data-error="wrong" data-success="right"></span>
       </div>
     </div>
-
-
-
+    
     <div class="row">
 
       <div class="input-field col s12">
@@ -60,15 +59,22 @@
         <span class="helper-text" data-error="wrong" data-success="right"></span>
       </div>
     </div>
-    <a href="view1.html" onclick="ingresar()" class="waves-effect waves-light btn">Acceder</a>
+    <a href="" onclick="ingresar()" class="waves-effect waves-light btn">Acceder</a>
+    <button id="login" class="waves-effect waves-light btn">Inicia con Google</button>
+  </div>
     </form>
     <div id="contenido">
     </div>
   </div>
-
-
-  <script src="https://www.gstatic.com/firebasejs/4.1.5/firebase.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-  <script src="../js/index.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>
 </body>
 </html>
