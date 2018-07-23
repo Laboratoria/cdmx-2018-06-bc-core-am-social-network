@@ -1,21 +1,51 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <link rel="stylesheet" href="../css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
 </head>
 
 <body>
-    <button id="btnLogout" class="loginbutton iniciar">Logout</button>
-    <h1>You're Innnn!!!!</h1>
+    <nav class="teal lighten-3">
+        <div class="nav-wrapper">
+            <button id="btnLogout" class=" btn-flat teal lighten-3">Logout</button>
+        </div>
+    </nav>
+    <div class="container">
+        <section class="col s12">
+            <h4 id="dataName"></h4>
+            <input type="text"  id="postText" placeholder="¿Cuál es tu pregunta?">
+            <input type="button" id="btnPost" class="btn" value="Publicar">
+        </section>
+        <section id="comentarios" >
+           
+        </section>
 
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
     <script src="../js/firebase.js"></script>
-    <script src="../js/login.js"></script>
+    <script src="../js/home.js"></script>
+    <script src="../js/logout.js"></script>
 </body>
 
 </html>
