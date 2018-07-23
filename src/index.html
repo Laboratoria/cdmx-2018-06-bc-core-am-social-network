@@ -1,87 +1,127 @@
  <!DOCTYPE html>
  <html lang="en">
  <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-
+ 	<meta charset="UTF-8">
+ 	<title>Login</title>
+ 	<!--CSS-->
+ 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!--BOOTSTRAP-->
+ 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Merienda|Source+Sans+Pro:300|Pacifico" rel="stylesheet">
  </head>
+
+
+
+
+
  <body>
+		<p class="example">Resize the browser window to see how the background color of this paragraph changes on different screen sizes.</p>
+		<div class="logo">
+			<p>Mom to Mom <br>
+		rompiendo mitos</p>
+		</div>
+<!--FORMULARIO INGRESO-->
+ <section class="form1 container">
+		<article class="row">
+				<div class="col-lg-4 col-sm-6">
+					<h4 class="h4ti">Ingresar</h4>
+				</div>
+		</article>
 
-  <div class="container">
-     <h4>Registro de Usuario</h4>   
-     
-      <div class="row">
-        <form class="col s12">
-          <div class="row">
-            <div class="input-field col s12 ">
-              <input id="email" type="email" class="validate">
-              <label for="email">Email</label>
-              <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12 ">
-              <input id="password" type="password" class="validate">
-              <label for="password">Password</label>
-            </div>
-          </div>
-          <a onclick="registrar()" class="waves-effect waves-teal btn-flat">Button</a>
-        </form>
+		<!--EMAIL-->
+		<article class="row">
+			<div class="col-2 col-sm-3">
+					<div class="form-group">
+						<label for="exampleInputEmail1">Email</label>
+						<input type="email" class="form-control" id="emailIngreso" aria-describedby="emailHelp" placeholder="Ingresa email">
+					</div>
+					<button onclick="ingreso()" type="submit" class="btn btn-primary">Ingresar</button>
+				</div>
+		<!--CONTRASEÑA-->
+			<div class="col-2 col-sm-3">
+					<div class="form-group">
+						<label for="exampleInputPassword1">Contraseña</label>
+						<input type="password" class="form-control" id="passwordIngreso" placeholder="Ingresa Contraseña">
+					</div>
+			</div>
+		</article>
+	    
+
+		<div id="contenido">
+		</div>
+ </section>
+		<button onclick="loginGoogle()" type="submit" class="btn btn-primary">Google</button>
+		<button onclick="loginFace()" type="submit" class="btn btn-primary">FaceBook</button>
+
+ <!--FORMULARIO REGISTRO-->
+<section class="form1 container">
+    <article class="row">
+      <div class="col-lg-4 col-sm-6">
+			<h4>Registrate</h4>
+				<!--NOMBRE-->
+				<div class="form-group">
+          <label for="exampleInputEmail1">Nombre de Mamá</label>
+          <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Ingresa tú Nombre">
+				</div>
+				<!--EDAD PEQUE-->
+        <div class="form-group">
+          <label for="exampleInputEmail1">Edad de tú Peque</label>
+          <input type="text" class="form-control" id="ageBaby" aria-describedby="emailHelp" placeholder="Ingresa la edad de tú Peque">
+        </div>
+       	<!--EMAIL-->
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email</label>
+          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Ingresa email">
+				</div>
+				<!--CONTRASEÑA-->
+        <div class="form-group">
+          <label for="exampleInputPassword1">Contraseña</label>
+          <input type="password" class="form-control" id="password" placeholder="Ingresa Contraseña">
+        </div>
+        <small id="emailHelp" class="form-text text-muted">Todos los datos seran confidenciales</small>
+        <button onclick="registrar()" type="submit" class="btn btn-primary">Registrar</button>
       </div>
+    </article>
+</section>
 
 
- </div>
-
- <div class="container">
-     <h4>Ingreso de Usuario</h4>   
-     
-      <div class="row">
-        <form class="col s12">
-          <div class="row">
-            <div class="input-field col s12 ">
-              <input id="emailIngreso" type="email" class="validate">
-              <label for="email">Email</label>
-              <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12 ">
-              <input id="passwordIngreso" type="password" class="validate">
-              <label for="password">Password</label>
-            </div>
-          </div>
-          <a onclick="ingreso()" class="waves-effect waves-teal btn-flat">Button</a>
-        </form>
-
-        <div id="contenido">
-
-      </div>
-
-
- </div>
+<!--LOGIN movil-->
+<section class="sec-log">
+		<button onclick="loginMovil()" type="button" class="der boton-login">Ingresar</button>
+	 <button onclick="registroMovil()" type="button" class="boton-login">Registrar</button>
+ </section> 
 
 
 
-        <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
-        <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyC3-Ko-NLEwcZEnIRY0sOiR1H-fa3bE1fk",
-            authDomain: "red-social-867d8.firebaseapp.com",
-            databaseURL: "https://red-social-867d8.firebaseio.com",
-            projectId: "red-social-867d8",
-            storageBucket: "red-social-867d8.appspot.com",
-            messagingSenderId: "824981624283"
-        };
-        firebase.initializeApp(config);
-        </script>
+ 
 
 
-        <script src="js/app.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+			<!--SCRIPT-->
+
+	<script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+	
+	<script>
+	// Initialize Firebase
+	var config = {
+			apiKey: "AIzaSyC3-Ko-NLEwcZEnIRY0sOiR1H-fa3bE1fk",
+			authDomain: "red-social-867d8.firebaseapp.com",
+			databaseURL: "https://red-social-867d8.firebaseio.com",
+			projectId: "red-social-867d8",
+			storageBucket: "red-social-867d8.appspot.com",
+			messagingSenderId: "824981624283"
+	};
+	firebase.initializeApp(config);
+	</script>
+
+
+<script src="js/app.js"></script>
+<!--BOOTSTRAP-->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
  </body>
  </html>
         

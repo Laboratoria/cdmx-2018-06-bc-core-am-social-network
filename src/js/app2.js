@@ -1,20 +1,4 @@
-const registrar= () => {
-    let email = document.getElementById("email").value;
-    let password = document.getElementById("password").value;
-    //sie el usuario se regsitro de manera correcta se ejecutara la funcion verificar
-    firebase.auth().createUserWithEmailAndPassword(email, password)
-    .then(function(){
-        verificar()
-    })
-    .catch(function(error) {
-        // Handle Errors here.
-        let errorCode = error.code;
-        let errorMessage = error.message;
-        console.log(errorCode);
-        console.log(errorMessage);
-        // ...
-      });
-}
+
 
 const loginGoogle= () => {
     var provider = new firebase.auth.GoogleAuthProvider();
@@ -124,29 +108,3 @@ const cerrar = () => {
         console.log(eror)
     })
 };
-//verificar el correo electronico con el que se esta registrando
-const verificar = () =>{
-    //enviara correo para verificar
-    var user = firebase.auth().currentUser;
-    //usuario a quien se le mandara correo
-    user.sendEmailVerification()
-    .then(function() {
-    //si funciona se le mandara correo
-    // Email sent.
-    console.log("Enviando correo..");
-    }).catch(function(error) {
-    // An error happened.
-    console.log("error");
-    });
-
-}
-
-const loginMovil = () => {
-    location.href = "../views/ingresar.html";
-    aparece();
-}
-
-const registroMovil = () => {
-    location.href = "../views/registro.html";
-    aparece();
-}
