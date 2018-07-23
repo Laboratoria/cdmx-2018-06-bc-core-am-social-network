@@ -11,8 +11,7 @@
 </head>
 <body>
   <h2 id='userSpace'></h2>
-  <pre id = 'obj'>
-  </pre>
+  <pre id = 'obj'></pre>
   <header id="encabezado">
     <h1 class="text-center">DiabeTips</h1>
   </header>
@@ -20,19 +19,18 @@
   <div id="cuerpo" class= "text-center col-4 offset-md-4">
     <form id="usuario" action="index.html" class="text-center form-group">
       <h4>Ingreso de Usuarios</h4>
-      <!--Ingresa usuario nuevo con email -->
+
+      <!--Registro de usuario-->
       <input type="email" id="uEmail" placeholder="Ingresa email">
       <input type="password" id="uPsw" placeholder="Ingresa password">
       <input type="text" id="uName" placeholder="Ingrese su nombre de usuario">
       <button type="button" id="buttonIngresar" name="enviar" onclick="ingresar()" class="btn btn-dark btn-md">Enviar</button>
 
-      <!--Ingreso con Gmail de Google-->
-      <input type="button" value="Ingresar con Google" class="btn btn-dark btn-md" id="button">
-      <!-- <button type="button" name="button" id="btn-google">Ingresar con Google</button> -->
+      <!--Registro con Gmail de Google-->
+      <button type="button" name="button" id="btn-google">Ingresa con Google</button>
 
-      <!--Ingreso con Facebook-->
-      <!-- <button type="button" name="button" id="btn-facebook">Ingresar con Facebook</button> -->
-
+      <!--Registro con Facebook-->
+      <button type="button" name="button" id="btn-facebook">Ingresa con Google</button>
     </form>
   </div>
   <p>No estás registrado?  <a href="./registro.html" title="Registro de nuevo usuario">Registrate Aquí</a></p>
@@ -42,6 +40,7 @@
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-database.js"></script>
+<script src="js/authentications.js"></script>
 <script src="js/index.js"></script>
 </body>
 </html>

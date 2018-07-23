@@ -1,25 +1,19 @@
-// Inicializar Firebase
-const config = {
-  apiKey: 'AIzaSyCt9yjfxwLkam9k--FRqUyqn-nw2pOgrdY',
-  authDomain: 'diabetessocialmedia.firebaseapp.com',
-  databaseURL: 'https://diabetessocialmedia.firebaseio.com',
-  projectId: 'diabetessocialmedia',
-  storageBucket: 'diabetessocialmedia.appspot.com',
-  messagingSenderId: '1728202919'
-};
-firebase.initializeApp(config);
-
 // Con Gmail de Google
-const authentificationsUsers = document.getElementById('button');
-authentificationsUsers.addEventListener('click', (event) =>{
-  authGoogle();
-});
-authGoogle = () => {
+document.getElementById('btn-google').addEventListener('click', authGoogle);
+document.getElementById('btn-facebook').addEventListener('click', authFacebook);// Por hacer
+
+
+const authGoogle = () => {
   var provider = new firebase.auth.GoogleAuthProvider();
   authentificating(provider);
 };
 
-authentificating = (provider) =>{
+const authFacebook = () => {
+  var provider = new firebase.auth.FacebookAuthProvider();
+  authentication(provider);
+};
+
+const authentificating = (provider) =>{
   firebase.auth().signInWithPopup(provider).then(function(result) {
     // Da el Token de acceso a Google. Usar para acceder a la API de Google
     var token = result.credential.accessToken;
