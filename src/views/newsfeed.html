@@ -2,7 +2,6 @@
 <html lang="es">
 
 <head>
-  <title>GarnachApp Registro</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="../css/theme/Login_v17/images/icons/favicon.ico" />
@@ -17,53 +16,30 @@
   <link rel="stylesheet" type="text/css" href="../css/theme/Login_v17/vendor/daterangepicker/daterangepicker.css">
   <link rel="stylesheet" type="text/css" href="../css/theme/Login_v17/css/util.css">
   <link rel="stylesheet" type="text/css" href="../css/theme/Login_v17/css/main.css">
+  <title>GarnachApp Newsfeed</title>
 </head>
 
 <body>
-
   <div class="limiter">
-    <div class="container-login100">
-      <div class="wrap-login100">
-        <form class="login100-form validate-form">
-          <span class="login100-form-title p-b-34">
-            Garnachapp
-          </span>
-
-          <div class="wrap-input100 rs1-wrap-input100 validate-input m-b-20" data-validate="Type user name">
-            <input id="email-field" class="input100" type="text" name="username" placeholder="Usuario">
-            <span class="focus-input100"></span>
-          </div>
-          <div class="wrap-input100 rs2-wrap-input100 validate-input m-b-20" data-validate="Type password">
-            <input id="password-field" class="input100" type="password" name="pass" placeholder="Contraseña">
-            <span class="focus-input100"></span>
-          </div>
-          <div class="separation container-login100-form-btn">
-            <div class="container-login100-form-btn">
-              <button id="new-account-button" class="login100-form-btn">
-                Registrarme
-              </button>
+    <header class="card-header">Bienvenido</header>
+    <section id="post-section">
+        <div class="input-group">
+            <div class="input-group-prepend">
+              <span id="user-post-btn" class="input-group-text login100-form-btn">Recomendar</span>
             </div>
+            <textarea id="user-post" class="form-control post-section" aria-label="With textarea"></textarea>
           </div>
-        </form>
-
-        <div class="login100-more">
-          <div class="welcome-text">
-            <h1>¡Bienvenido a GarnachApp!</h1>
-            <p>Registrate Facilmente</p>
+          <div id="list-post" class="card">
           </div>
-        </div>
-      </div>
-    </div>
-    <footer class="modal-footer">
-      <p>GarnachApp</p>
-      <p>Hecho por Copelia, Vianey, Palmidia</p>
-    </footer>
+    </section>
+    <button id="log-out-btn" class="login100-form-btn">
+      Salir
+    </button>
   </div>
-
-
-  <!-- Adding Firebase -->
+  <!--////////////////////Firebase & Firestore////////////////////-->
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-firestore.js"></script>
+  <!--/////////////////Template files////////////////////////////-->
   <script src="../css/theme/Login_v17/vendor/jquery/jquery-3.2.1.min.js"></script>
   <script src="../css/theme/Login_v17/vendor/animsition/js/animsition.min.js"></script>
   <script src="../css/theme/Login_v17/vendor/bootstrap/js/popper.js"></script>
@@ -73,8 +49,9 @@
   <script src="../css/theme/Login_v17/vendor/daterangepicker/daterangepicker.js"></script>
   <script src="../css/theme/Login_v17/vendor/countdowntime/countdowntime.js"></script>
   <script src="../css/theme/Login_v17/js/main.js"></script>
+  <!--//////////////////////Basic Functions////////////////////////////////////-->
   <script src="../js/index.js"></script>
-  <script src="../js/newAccount.js"></script>
+  <script src="../js/newsfeed.js"></script>
 </body>
 
 </html>

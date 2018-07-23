@@ -42,13 +42,14 @@
 
 .welcome-text{
   font-family: 'roboto';
-font-size: 20px;
+font-size: 18px;
 font-weight: 700;
 line-height: 1.4;
 color: whitesmoke;
 text-transform: uppercase;
 align-content: center;
-margin-top: 10em;
+margin-top: 15em;
+margin-left: 3em;
 padding: 2em;
 }
 
@@ -59,12 +60,11 @@ p.welcome-text{
 
 body, html {
 	height: 100%;
-	font-family: Poppins-Regular, sans-serif;
 }
 
 /*---------------------------------------------*/
 a {
-	font-family: Poppins-Regular;
+	font-family: 'roboto';
 	font-size: 14px;
 	line-height: 1.7;
 	color: #666666;
@@ -77,6 +77,10 @@ a {
 
 a:focus {
 	outline: none !important;
+}
+
+.separation{
+  margin-top: 3em;
 }
 
 a:hover {
@@ -143,7 +147,7 @@ iframe {
 [ Text ]*/
 .txt1 {
   font-family: 'roboto';
-  font-size: 13px;
+  font-size: 18px;
   font-weight: 500;
   line-height: 1.4;
   color: whitesmoke;
@@ -151,7 +155,7 @@ iframe {
 
 .txt2 {
   font-family: 'roboto';
-  font-size: 13px;
+  font-size: 18px;
   font-weight: 500;
   line-height: 1.4;
   color: #7D5AC2;
@@ -160,13 +164,26 @@ iframe {
 
 .txt3 {
   font-family: 'roboto';
-  font-size: 15px;
+  font-size: 23px;
   font-weight: 500;
   line-height: 1.4;
   color: whitesmoke;
   text-transform: uppercase;
 }
 
+.card-header{
+  font-family: 'roboto';
+  font-weight: 800;
+  background-color: rgba(255, 94, 58, 0.95);
+  color: whitesmoke;
+}
+
+.post-section{
+  width: 60%;
+  align-self: center;
+  display: flex;
+  display: inline-block;
+}
 /*==================================================================
 [ Size ]*/
 .size1 {
@@ -276,7 +293,7 @@ iframe {
 .login100-form-title {
   font-family: 'roboto';
   font-weight: 700;
-  font-size: 20px;
+  font-size: 35px;
   color: whitesmoke;
   line-height: 1.2;
   text-transform: uppercase;
@@ -521,4 +538,11 @@ input.input100 {
     visibility: visible;
     opacity: 1;
   }
+}
+
+.modal-footer{
+  background-color: #333333;
+  font-family: 'roboto';
+  font-weight: 300;
+  color: whitesmoke;
 }
