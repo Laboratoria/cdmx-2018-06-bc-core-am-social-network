@@ -7,82 +7,113 @@ let config = {
   storageBucket: '',
   messagingSenderId: '1074635944561'
 };
+firebase.initializeApp(config); // con el método firebase.initializeApp se aplica la configuración que está nuestra variable config
+
 
 // Getting elements (obteniendo elementos globales: inputs y botones)
 let mail = document.getElementById('email');
 let password = document.getElementById('password');
-const logIn = document.getElementById('log-in');
-const signUp = document.getElementById('sign-up');
 let username = document.getElementById('first_name');
 let lastname = document.getElementById('last_name');
-
+const logInBtn = document.getElementById('log-in-btn');
+const signUpBtn = document.getElementById('sign-up-btn');
+let publicarBtn = document.getElementById('publicar-btn');
+let logoutBtn = document.getElementById('logout-btn');
 // declarando función "launcher" que inicialice la config de firebase
-const launcher = () => {
-  firebase.initializeApp(config); // con el método firebase.initializeApp se aplica la configuración que está nuestra variable config
 
-  // botón de registrarse (sign up) escucha el evento click y ejecuta una función
-  signUp.addEventListener('click', event => {
-    //  if (mail.value === "" || mail.value === " " || password.value === "" || password.value === " ") {
-    //  alert("No ingresaste un correo o una contraseña válida") //agregamos una condicional para el control de flujo
-    //  } else { // mandamos los valores de email y password como parámetros al método createUserEmailAndPassword
+// botón de registrarse (sign up) escucha el evento click y ejecuta una función
+signUpBtn.addEventListener('click', event => {
+  if (mail.value === '' || mail.value === ' ' || password.value === '' || password.value === ' ') {
+    alert('No ingresaste un correo o una contraseña válida'); // agregamos una condicional para el control de flujo
+  } else { // mandamos los valores de email y password como parámetros al método createUserEmailAndPassword
     let emailValue = email.value;
     let passwordValue = password.value;
     const auth = firebase.auth();
-    // para registrarse ( sign in)
-    const promise = auth.createUserWithEmailAndPassword(emailValue, passwordValue); // con este método creamos el usuario en la base de datos firebase
-    promise.catch(function(error) {
-      let errorCode = error.code;
-      let errorMessage = error.message;
-      console.log(promise);
-    }); // declaramos una constante promise que ejecute un alert en caso de error si el correo ya está regregistrado
-    // }
-  });
+    auth.createUserWithEmailAndPassword(emailValue, passwordValue) // con este método creamos el usuario en la base de datos firebase
+      .then(()=>{
+        location.href = 'views/view1.html';
+        console.log('usuario registrado');
+      })
+      .catch((error)=> {
+        let errorCode = error.code;
+        let errorMessage = error.message;
+        console.log(errorCode);-
+        alert(errorMessage); // "this email adress is already use by another account"
+      });
+  }
+});
 
-  // agregar evento click al botón de log in (iniciar sesión)
-  logIn.addEventListener('click', event => {
-    // condicionando el flujo de inicio de sesión 
-    if (mail.value === '' || mail.value === ' ' || password.value === '' || password.value === ' ') {
-      alert('No ingresaste un correo o una contraseña válida');
-    } else {
-      let emailValue = mail.value;
-      let passwordValue = password.value;
-      const auth = firebase.auth(); // método de firebase para hacer la autenticación de los datos
-      let usuario = { // objeto que pintamos en el dom al cambiar la página
-        name: username.value,
-        apellido: lastname.value,
-        email: email.value
-      };
-      const promise = auth.signInWithEmailAndPassword(emailValue, passwordValue); 
-      promise.catch(function(error) {
+// agregar evento click al botón de log in (iniciar sesión)
+logInBtn.addEventListener('click', event => {
+  if (mail.value === '' || mail.value === ' ' || password.value === '' || password.value === ' ') { // condicionando el flujo de inicio de sesión 
+    alert('No ingresaste un correo o una contraseña válida');
+  } else {
+    let emailValue = mail.value;
+    let passwordValue = password.value;
+    const auth = firebase.auth(); // método de firebase para hacer la autenticación de los datos
+    let usuario = { // objeto que pintamos en el dom al cambiar la página
+      // name: username.value,
+      // apellido: lastname.value,
+      email: email.value
+    };
+    auth.signInWithEmailAndPassword(emailValue, passwordValue)
+      .then(()=>{
+        console.log('has iniciado sesión');
+        localStorage.setItem('key', JSON.stringify(usuario)); // localStorage regresa solo strings al dom. necesitamos que reciba una clave y un valor
+        // para iniciar sesión (log in)
+        window.homeNetwork.mostrar(usuario); // llamamos a la función que creamos en app.js para cambiar de página
+      })
+      .catch((error)=> {
         let errorCode = error.code;
         let errorMessage = error.message; 
+        console.log(errorCode);
+        alert(errorMessage); // mensaje de firebase "This password is invalid or the user does not have a password"
       });
-      localStorage.setItem('key', JSON.stringify(usuario)); // localStorage regresa solo strings al dom. necesitamos que reciba una clave y un valor
-      // para iniciar sesión (log in)
-      window.homeNetwork.mostrar(usuario); // llamamos a la función que creamos en app.js para cambiar de página
-    }
-  });
-
-
-  firebase.auth().onAuthStateChanged(firebaseUser => { // cambiar el estado de logeado a no logeado
-    if (firebaseUser) {
-      console.log(firebaseUser);
-    } else {
-      console.log('not logged in ');
-    }
-  });
-};
-launcher();
+    localStorage.setItem('key', JSON.stringify(uruario));
+    window.homeNetwork.mostrar(usuario);
+  }
+});
 
 // autenticar con GOOGLE
-const provider = new firebase.auth.GoogleAuthProvider();
-const loginGoogle = document.getElementById('login-google');
+let loginGoogleBtn = document.getElementById('login-google-btn');
 
-loginGoogle.addEventListener('click', event=>{
-  firebase.auth()
+loginGoogleBtn.addEventListener('click', event=>{
+  const provider = new firebase.auth.GoogleAuthProvider();// google es nuestro proveedor y lo autentifique con firebase
+  firebase.auth()  
     .signInWithPopup(provider) // popUp te va a dar la ventana de acceso a tu cuenta de google. parámetro de la variable provider que tiene la autenticación con google
-    .then(function(result) { // entonces ejecuta la función que es el resultado (acceder con google)
+    .then((result)=> { // entonces ejecuta la función que es el resultado (acceder con google)
       console.log(result);
       console.log(provider);
     });
 });
+
+
+firebase.auth().onAuthStateChanged(user => { // cambiar el estado de logeado a no logeado
+  if (user) {
+    // estamos logueados
+    console.log(user);
+  } else {
+    // no estamos logueados
+    console.log('not logged in ');
+    // logoutBtn.classList.add('hide');
+  }
+});
+
+logoutBtn. addEventListener('click', event=>{
+  firebase.auth().signOut()
+    .then(() =>{
+      alert(' BYE!');
+    })
+    .catch();
+});
+ 
+
+// iniciar sesión con facebook
+// const loginFacebook = document.getElementById('login-facebook');
+
+
+// publicarBtn.addEventListener('click', event1=>{
+//   alert('diste un click');
+//   // publicacion = document.getElementById('input-publicacion').value;
+//   // localStorage.setItem('key', JSON.stringify(publicacion));
+// });

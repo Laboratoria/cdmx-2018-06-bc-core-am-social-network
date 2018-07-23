@@ -4,7 +4,13 @@ window.homeNetwork = {
     //    let dataStorage = JSON.parse(localStorage.getItem("key"));
     //  console.log(dataStorage);
 
-    //  print1(dataStorage);
+    // print1(dataStorage);
   }
-    
 };
+// };
+
+// window.home = {
+//   enterHome: ()=>{
+//     location.href = 'views/view1.html';
+//   }
+// };
