@@ -57,6 +57,17 @@ body{
     text-align: right;
 }
 
+.postCard{
+    border: 1px solid #26a69a;
+    border-radius: 5px;
+    margin-bottom: 1em; 
+    padding: 1em;
+}
+
+.postName{
+    font-weight: bold;
+}
+
 @media screen and (max-width: 767px) {
     .container,
     .logged-in{

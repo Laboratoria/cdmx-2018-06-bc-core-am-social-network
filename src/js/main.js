@@ -4,8 +4,8 @@ window.social = {
     let nameSend = localStorage.setItem('name', name);
   },
 
-  displayPost: (textInPost) => {
-    let textSend = localStorage.setItem('text', textInPost);
-    printPost();
-  }
+//   displayPost: (textInPost) => {
+//     let textSend = localStorage.setItem('text', textInPost);
+//     printPost();
+//   }
 };
