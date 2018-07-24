@@ -11,19 +11,20 @@ const liMaker = (text) => {
   const li = document.createElement('li');
   li.textContent = text;
   ul.appendChild(li);
-}
-form.addEventListener('submit', function (e) {
+};
+
+form.addEventListener('submit', function(e) {
   e.preventDefault();
 
   itemsArray.push(input.value);
   localStorage.setItem('items', JSON.stringify(itemsArray));
   liMaker(input.value);
-  input.value = "";
+  input.value = '';
 });
 data.forEach(item => {
   liMaker(item);
 });
-Share.addEventListener('click', function () {
+Share.addEventListener('click', function() {
   localStorage.clear();
   while (ul.firstChild) {
     ul.removeChild(ul.firstChild);
