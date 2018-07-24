@@ -16,11 +16,11 @@ let mail = document.getElementById('email');
 let password = document.getElementById('password');
 let username = document.getElementById('first_name');
 let lastname = document.getElementById('last_name');
+// botones
 const logInBtn = document.getElementById('log-in-btn');
 const signUpBtn = document.getElementById('sign-up-btn');
-// let publicarBtn = document.getElementById('publicar-btn');
-// let logoutBtn = document.getElementById('logout-btn');
-// declarando función "launcher" que inicialice la config de firebase
+let loginGoogleBtn = document.getElementById('login-google-btn');
+let loginFacebookBtn = document.getElementById('login-facebook-btn');
 
 // botón de registrarse (sign up) escucha el evento click y ejecuta una función
 signUpBtn.addEventListener('click', event => {
@@ -32,7 +32,7 @@ signUpBtn.addEventListener('click', event => {
     const auth = firebase.auth();
     auth.createUserWithEmailAndPassword(emailValue, passwordValue) // con este método creamos el usuario en la base de datos firebase
       .then(()=>{
-        location.href = 'views/view1.html';
+        location.href = 'view1.html';
         console.log('usuario registrado');
       })
       .catch((error)=> {
@@ -52,17 +52,11 @@ logInBtn.addEventListener('click', event => {
     let emailValue = mail.value;
     let passwordValue = password.value;
     const auth = firebase.auth(); // método de firebase para hacer la autenticación de los datos
-    let usuario = { // objeto que pintamos en el dom al cambiar la página
-      // name: username.value,
-      // apellido: lastname.value,
-      email: email.value
-    };
     auth.signInWithEmailAndPassword(emailValue, passwordValue)
       .then(()=>{
         console.log('has iniciado sesión');
-        localStorage.setItem('key', JSON.stringify(usuario)); // localStorage regresa solo strings al dom. necesitamos que reciba una clave y un valor
-        // para iniciar sesión (log in)
-        window.homeNetwork.mostrar(usuario); // llamamos a la función que creamos en app.js para cambiar de página
+        location.href = 'view1.html';
+      // window.homeNetwork.mostrar(usuario); // llamamos a la función que creamos en app.js para cambiar de página
       })
       .catch((error)=> {
         let errorCode = error.code;
@@ -70,62 +64,54 @@ logInBtn.addEventListener('click', event => {
         console.log(errorCode);
         alert(errorMessage); // mensaje de firebase "This password is invalid or the user does not have a password"
       });
-    localStorage.setItem('key', JSON.stringify(usuario));
-    window.homeNetwork.mostrar(usuario);
-  }
+  };
 });
 
 // autenticar con GOOGLE
-let loginGoogleBtn = document.getElementById('login-google-btn');
-
 loginGoogleBtn.addEventListener('click', event=>{
   const provider = new firebase.auth.GoogleAuthProvider();// google es nuestro proveedor y lo autentifique con firebase
   firebase.auth()  
     .signInWithPopup(provider) // popUp te va a dar la ventana de acceso a tu cuenta de google. parámetro de la variable provider que tiene la autenticación con google
     .then((result)=> { // entonces ejecuta la función que es el resultado (acceder con google)
+      location.href = 'view1.html';
       console.log(result);
       console.log(provider);
     });
 });
 
+// autenticar con Facebook
+loginFacebookBtn.addEventListener('click', event =>{
+  const provider = new firebase.auth.FacebookAuthProvider();
+  firebase.auth().signInWithPopup(provider)
+    .then((result)=> { // entonces ejecuta la función que es el resultado (acceder con google)
+      location.href = 'view1.html';
+      console.log('login con facebook');
+    });
+});
 
 firebase.auth().onAuthStateChanged(user => { // cambiar el estado de logeado a no logeado
   if (user) {
     // estamos logueados
     console.log(user);
+    // location.href = '../src/views/view1.html';
   } else {
     // no estamos logueados
     console.log('not logged in ');
-    // logoutBtn.classList.add('hide');
   }
 });
 
-const logoutBtn = document.getElementById('logout-btn');
-logoutBtn. addEventListener('click', event=>{
-  firebase.auth().signOut()
-    .then(() =>{
-      alert(' BYE!');
-    })
-    .catch();
-});
- 
-let loginFacebookBtn = document.getElementById('login-facebook-btn');
-loginFacebookBtn.addEventListener('click', event =>{
-  const provider = new firebase.auth.FacebookAuthProvider();
-  // provider.setCostumParameters({
-  //   'display': 'popup'
-  // });
-  firebase.auth().signInWithPopup(provider)
-    .then((result)=> { // entonces ejecuta la función que es el resultado (acceder con google)
-      console.log('login con facebook');
-    });
-});
 
 // Firebase database
 
-// const messageInput = document.getElementsByClassName('inputMessage');
-// const message = ()=>{
-//   let currentUser = firebase.auth().currentUser;
-//   let messageValue = messageInput.value;
-//   firebase.database().ref()
-// };
+const messageInput = document.getElementsByClassName('inputMessage');
+const message = ()=>{
+  let currentUser = firebase.auth().currentUser;
+  let messageValue = messageInput.value;
+
+  const newMessagekey = firebase.database().ref().child('messages').push().key;
+  firebase.database().ref(`messages/${newMessagekey}`).set({
+    creator: currentUser.uid,
+    creatorName: currentUser.displayName,
+    text: messageInput
+  });
+};
