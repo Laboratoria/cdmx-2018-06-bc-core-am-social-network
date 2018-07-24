@@ -2,7 +2,7 @@
   // Get elements
   const btnLogout = document.getElementById('btn-logout');
   // Get a reference to the database service
-  var database = firebase.database();
+  let database = firebase.database();
 
   // Add logout event
   btnLogout.addEventListener('click', event => {
@@ -23,24 +23,25 @@
     } else {
       console.log('not logged in');
     }
-    userConect = database.ref('data');
-    agregarUser(user.uid, user.displayName, user.email);
+    let id = user.uid;
+    userConect = database.ref('users/' + id);
+    addUser(user.displayName, user.email);
   });
-  function agregarUser(uid, name, email) {
-    var conectados = userConect.push({
-      uid: uid,
+
+  addUser = (name, email) => {
+    let conect = userConect.push({
       name: name,
       email: email
     });
-  }
+  };
 
   const postText = document.getElementById('post-entry'); // Texto de entrada
   const btnShare = document.getElementById('new-post'); // Boton de compartir
   
-
   btnShare.addEventListener('click', event => { // Evento para mandar el texto dee entrada a la database
     const currentUser = firebase.auth().currentUser;
     let textInPost = postText.value;
+    postText.value = '';
     const newPostKey = firebase.database().ref().child('posts').push().key;
     firebase.database().ref(`posts/${newPostKey}`).set({
       creator: currentUser.uid,
