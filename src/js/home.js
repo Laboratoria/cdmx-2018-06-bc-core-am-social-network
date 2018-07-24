@@ -1,17 +1,8 @@
 (function() {
-  // Initialize Firebase
-  var config = {
-    apiKey: 'AIzaSyC20SbyxB9RKJgcfTvfYuhJKxuuxh0RQBQ',
-    authDomain: 'prueba-firebase-ef04b.firebaseapp.com',
-    databaseURL: 'https://prueba-firebase-ef04b.firebaseio.com',
-    projectId: 'prueba-firebase-ef04b',
-    storageBucket: 'prueba-firebase-ef04b.appspot.com',
-    messagingSenderId: '499846254860'
-  };
-  firebase.initializeApp(config);
-
   // Get elements
   const btnLogout = document.getElementById('btn-logout');
+  // Get a reference to the database service
+  let database = firebase.database();
 
   // Add logout event
   btnLogout.addEventListener('click', event => {
@@ -20,10 +11,50 @@
   });
 
   firebase.auth().onAuthStateChanged(firebaseUser => {
-    if (firebaseUser) {
-      console.log(firebaseUser);
+    // if (firebaseUser) {
+    console.log(firebaseUser);
+    let user = firebase.auth().currentUser;
+    if (user !== null) {
+      // let emailId = user.email;
+      user.updateProfile({
+        displayName: user.displayName
+      });
+      document.getElementById('user-paragraph').innerHTML = `Bienvenidx ${user.displayName}`;
     } else {
       console.log('not logged in');
     }
+    let id = user.uid;
+    userConect = database.ref('users/' + id);
+    addUser(user.displayName, user.email);
   });
+
+  addUser = (name, email) => {
+    let conect = userConect.push({
+      name: name,
+      email: email
+    });
+  };
 }());
+
+const postText = document.getElementById('post-entry');
+const btnShare = document.getElementById('new-post');
+
+btnShare.addEventListener('click', event => {
+  const currentUser = firebase.auth().currentUser;
+  const textInPost = postText.value;
+  if (textInPost === '' || textInPost === ' ') {
+    alert('No ingresaste texto');
+    console.log('vacio');
+  } else {
+    console.log('texto');
+    postText.value = '';
+    // Create a unique key for messages collection
+    const newPostKey = firebase.database().ref().child('posts').push().key;
+    firebase.database().ref(`posts/${newPostKey}`).set({
+      creator: currentUser.uid,
+      creatorName: currentUser.displayName,
+      text: textInPost
+    });
+  };
+  // window.social.displayPost(textInPost);
+});
