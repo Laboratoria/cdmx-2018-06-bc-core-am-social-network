@@ -53,15 +53,16 @@ firebase.auth().onAuthStateChanged(firebaseUser => { // cuando detecta que el us
 
 // Para ingresar con google
 
-const provider = new firebase.auth.GoogleAuthProvider();
 const loginGoogle = document.getElementById('login-google');
+const provider = new firebase.auth.GoogleAuthProvider();
 
 loginGoogle.addEventListener('click', event => {
   event.preventDefault();
   firebase.auth()
-    .signInWithPopup(provider) // popUp te va a dar la ventana de acceso a tu cuenta de google. parámetro de la variable provider que tiene la autenticación con google
+    .signInWithPopup(provider) // popUp te va a dar la ventana de acceso a tu cuenta de google. Parámetro de la variable provider que tiene la autenticación con google.
 
     .then(function(provider) { // entonces ejecuta la función que es el resultado (acceder con google)
+      location.href = 'muro.html';
       // console.log(result);
       // console.log(provider);
     });
