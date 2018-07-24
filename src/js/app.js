@@ -142,11 +142,11 @@ const verificar = () =>{
 }
 
 const loginMovil = () => {
-    location.href = "../views/ingresar.html";
+    location.href = "src/views/ingresar.html";
     aparece();
 }
 
 const registroMovil = () => {
-    location.href = "../views/registro.html";
+    location.href = "src/views/registro.html";
     aparece();
 }
