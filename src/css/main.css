@@ -3,26 +3,35 @@
   background-color: #96064e;
   color:antiquewhite;
 }
-
-#logo {
-  border-radius: 250px;
-  width: 30%;
-  margin-top: 20%;
+#fondo1{
+  background-position: center;
 }
 
+#logo {
+  border-radius: 200px;
+  width: 15%;
+  margin-top: 2%;
+}
+
+
+·bodyindex{
+  text-align:center;
+  width: 10%;
+  margin-left: 25%;
+  margin-top: 2%
+
+}
 .inicio {
+  text-align:center;
   width: 40%;
   margin-left: 25%;
-  margin-top: 20%
+  margin-top: 2%
+
 }
 
 #email, #contrasena {
-  margin: 10%;
+  margin: 20% !important;
 }
-
-
-
-
 
 
 /* app.html FORMAT */
@@ -42,6 +51,27 @@
   float: right;
 }
 
+#registrar,#facebook,#google{
+
+  background-color: #680134;
+  color: antiquewhite;
+  border-radius: 8px;
+  box-shadow: 0;
+  border: none;
+  padding: 4px 5px;
+  float:none
+}
+#enviar{
+
+  background-color: #680134;
+  color: antiquewhite;
+  border-radius: 8px;
+  box-shadow: 0;
+  border: none;
+  padding: 4px 5px;
+  float:none
+}
+
 #newPost {
   padding: 5px;
   border-radius: 7px;
@@ -53,4 +83,8 @@
 
 .contenidoC {
   color: black;
+}
+
+#comentario {
+  border-radius: 10px;
 }
