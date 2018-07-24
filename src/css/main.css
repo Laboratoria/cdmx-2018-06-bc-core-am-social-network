@@ -5,26 +5,46 @@ body{
     font-size: 2em;
     }
 
+    header {
+      height: fixed;
+      /*background-image: url("../images/");*/
+    }
+
+    .img-fluid {
+      width: 25%;
+    }
+
 #garnachapp-tittle{
 margin-top: 1.4em;
 }
+
 .p{
    text-align: right;
 }
 .dropup .dropdown-toggle::after{
   margin-left: 0 !important ;
 }
-
-/*.text-area {
-width: 100%;
-=======
-@media (max-width: 992px) {
-  .welcome {
+/*Medida para RWD en smartphone*/
+  @media (min-width: 576px) {
+  .img-fluid {
     width: 50%;
-    float: right;
-    display: block;
-
   }
+/*Medida para RWD en tabletas*/
+@media (min-width: 768px) {
+  .img-fluid {
+    width: 50%;
+  }
+/*Medida para RWD en laps o desktop mediano*/
+@media (min-width: 992px) {
+  .img-fluid {
+    width: 50%;
+  }
+/*Medida para RWD en laps grandes*/
+@media (min-width: 1200px) {
+  .img-fluid {
+    width: 50%;
+  }
+
     .login-form {
       width: 50%;
   
@@ -34,14 +54,6 @@ width: 100%;
     display: block;
     position: absolute;
   }*/
-  
-.card-img-left {
-    border-bottom-left-radius: calc(.25rem - 1px);
-    border-top-left-radius: calc(.25rem - 1px);
-    float: left;
-    padding-right: 1em;
-    margin-bottom: -1.25em;
-}
 
 .form-control{
     margin-top: 1em;
@@ -49,6 +61,10 @@ width: 100%;
     height: 7em;
     border: solid 1px #000000;
     
+}
+
+.font-color{
+  color: aliceblue;
 }
 
 @media (max-width: 0px) { /* Change this to 0 */
@@ -73,21 +89,3 @@ width: 100%;
       background-image: none;
     }
   }
-
-/*@media (max-width: 768px) {
-  .container {
-
-  }
-
-  .welcome {
-
-  }
-}
-
-@media (max-width: 576px) {
-  .container {
- 
-  }
-
-}*/
-
