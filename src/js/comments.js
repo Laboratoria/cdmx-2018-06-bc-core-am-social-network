@@ -3,6 +3,7 @@ const db = firebase.database();
 const commentText = document.getElementById('comment-text');
 const commentSend = document.getElementById('send-comment');
 const printComments = document.getElementById('comments');
+
 // Impresion de mensajes
 /* El metodo ready permite que al cargar la pagina, automaticamente
 se manden pedir los datos a firebase*/
@@ -22,3 +23,10 @@ commentSend.addEventListener('click', (event) =>{
   });
   console.log(userMessage);
 });
+// contador de likes 
+let countLikes = 0;
+function countLikesadd() {
+  countLikes += 1;
+}
+
+$("#reaccion").text(countLikesadd);
