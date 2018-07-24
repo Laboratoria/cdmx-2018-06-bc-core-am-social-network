@@ -7,7 +7,7 @@ body{
 /*==================Estilo de texto======================*/
 .txt1,
 .txt3 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Bitter', serif;
   font-size: 15px;
   font-style: bold;
   color: white;
@@ -19,7 +19,7 @@ body{
 }*/
 
 .txt2 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 13px;
   font-style: bold;
   color: #7d5ac2;
@@ -50,9 +50,9 @@ body{
 }
 
 .login-title {
-  font-family: 'Roboto', sans-serif;
-  font-style: bold;
+  font-family: 'Bitter', serif;
   font-size: 20px;
+  font-weight: 800;
   color: white;
   line-height: 1.2;
   letter-spacing: 2px;
@@ -60,7 +60,7 @@ body{
   width: 100%;
   display: block;
   padding-bottom: 30px;
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 /*-------------------Input-------------------*/
@@ -121,7 +121,7 @@ body{
  }
 
 .welcome-text{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Bitter', serif;
   font-size: 18px;
   font-style: bold;
   color: white;
@@ -132,12 +132,9 @@ body{
 
  .modal-footer {
   background-color: #333333;
-  font-family: 'roboto';
+  font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   color: whitesmoke;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 10px;
+  padding-bottom: 5px;
  }
 
