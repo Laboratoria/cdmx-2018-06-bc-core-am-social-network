@@ -20,18 +20,27 @@
         displayName: user.displayName
       });
       document.getElementById('user-paragraph').innerHTML = `Bienvenidx ${user.displayName}`;
+      const userPhoto = user.photoURL;
+      if (userPhoto) {
+        document.getElementById('profile-image').innerHTML = `<img src="${user.photoURL}">`;
+      } else {
+        document.getElementById('profile-image').innerHTML = `<img src="${'../images/placeholder-user.png'}">`;
+      }
+      document.getElementById('user-email').innerHTML = `${user.email}`;
+      console.log(user.photoURL);
     } else {
       console.log('not logged in');
     }
     let id = user.uid;
     userConect = database.ref('users/' + id);
-    addUser(user.displayName, user.email);
+    addUser(user.displayName, user.email, user.photoURL);
   });
 
-  addUser = (name, email) => {
+  addUser = (name, email, photo) => {
     let conect = userConect.push({
       name: name,
-      email: email
+      email: email,
+      photo: photo
     });
   };
 }());
