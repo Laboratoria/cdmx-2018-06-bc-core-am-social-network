@@ -132,6 +132,10 @@ En conjunto con la elaboración de encuentas y su análisis preliminar, se empez
   <img src="../Ux research/img/benchmark3.jpg"  title="Trabjando en equipo">
 </p>
 
+## Regístro y login
+Principalmente, la forma de registro consta en obtener el correo y contraseña del futuro usuario, sin embargo, también se tiene planeado implementar la función de regístrarse y loguearse a la cuenta tanto con facebook y google. <br>
+En un principio se tenía contemplado solamente el acceso y el regístro mediante un nombre usuario, correo electrónico y un password, sin embargo, por comodidad del usuario se agregó la opción de loguearse mediante Google.
+
 ## Conclusión
 La seguridad y seriedad en este tipo de aplicaciones es cuestionable y estas se pueden volver detonantes en personas con trastornos psicológicos debido a que no se puede garantizar que toda la gente que ingresa realmente padezca depresión o simplemente use las apps para divertirse e incluso practicar bullying a los diversos usuarios de las mismas.
 
@@ -174,6 +178,12 @@ Después de elegir el nombre que nos representaría, decidimos dar el siguiente 
   <img src="../Ux research/sketch/sketchGeneral2.jpg"  title="Sketch">
 </p>
 
-## Regístro y login
-Principalmente, la forma de registro consta en obtener el correo y contraseña del futuro usuario, sin embargo, también se tiene planeado implementar la función de regístrarse y loguearse a la cuenta tanto con facebook y google. <br>
-En un principio se tenía contemplado solamente el acceso y el regístro mediante un nombre usuario, correo electrónico y un password, ya que 
+# Color
+
+Se eligió una paleta monocromática basada en el color turquesa ya que en la psicología del color se cree que este tonalidad ayuda a abrir líneas de comunicación, transmite confianza y estabilidad.
+
+También hay estudios que indican que los colores dentro de la gama de los azules nos permiten desahogarnos, transmite una sensación de calma y ayuda a pensar en la situación más ideal.
+
+Algunas palabras asociadas con este color son: Balance, claridad, creatividad, autosuficiencia.
+
+Todo esto se alinea con el mensaje que queremos transmitir a lxs usuarixs al usar la página web.
