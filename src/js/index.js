@@ -63,3 +63,45 @@ firebase.auth().onAuthStateChanged(function (user) {
 
 
 
+// Login con Facebook
+btnFb.addEventListener('click', e => {
+  const provider = new firebase.auth.FacebookAuthProvider();
+  provider.setCustomParameters({
+    'display' : 'popup'
+  });
+  firebase.auth().signInWithPopup(provider)
+    .then (() => {
+      console.log("Login con facebook");
+    })
+    .catch((error) => {
+      console.log("Error de firebase > " + error.code);
+      console.log("Error de firebase, mensaje >" + error.message);
+           
+    })
+}); 
+
+/* fb code
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{your-app-id}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{api-version}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+*/
