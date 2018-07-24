@@ -59,7 +59,7 @@ boton.addEventListener("click", event => {
 //   construir nuevo objeto de fecha y convertirlo a un string UTC para pintarlo de manera estandard
   const yearDateTime = new Date().toUTCString();
   // console.log(yearDateTime);
-  
+
 
   // CRUD
   // Aquí se agrega un objeto a la coleccion "comments" del firestore
@@ -67,7 +67,7 @@ boton.addEventListener("click", event => {
       dateTime: yearDateTime,
       comment: texto
     })
-    //luego, 
+    //luego,
 
     .then(function (docRef) {
       console.log("Document written with ID: ", docRef.id);
@@ -120,7 +120,7 @@ db.collection("comments").get().then((querySnapshot) => {
 
 // ASI LO TENIAMOS ANTES Y NO FUNCIONABA
 /*function comentario() {
-    
+
 
     let divPost = '';
     let comment = text.value;
