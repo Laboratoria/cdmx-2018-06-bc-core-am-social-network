@@ -7,7 +7,13 @@ const btnEdit = document.getElementById('btnEdit');
 const btnErase = document.getElementById('btnErase');
 const btnLike = document.getElementById('btnLike');
 const btnSave = document.getElementById('btnSave');
-const likes = document.getElementById('likes')
+const likes = document.getElementById('likes');
+const btnProfile = document.getElementById('btnProfile');
+const borrar = document.getElementById('borrar');
+const profile = document.getElementById('profile');
+const home = document.getElementById('home');
+const postForm = document.getElementById('postForm');
+const btnHome = document.getElementById('btnHome');
 
 let user = localStorage.getItem("mail");
 
@@ -44,10 +50,10 @@ window.onload = () => {
                 <p>${postName}</p>
                     <input type="text" id="input" readonly = "readonly" value="${text} ">
                     <p id="likes" class="inline"></p>
-                    <input type="button" id="btnLike" class="btnEdit" value="Like">
-                    <input type="button" id="btnEdit" class="btnEdit" value="Editar">
-                    <input type="button" id="btnErase" value="Eliminar"> 
-                    <input type="button" id="btnSave" class="none" value="Guardar">
+                    <input type="button" id="btnLike" class="btnEdit btn" value="Like">
+                    <input type="button" id="btnEdit" class="btnEdit btn" value="Editar">
+                    <input type="button" id="btnErase" class="btn" value="Eliminar"> 
+                    <input type="button" id="btnSave" class="btn none" value="Guardar">
                 </form>
               </div>`;
   });
@@ -74,10 +80,22 @@ btnSave.addEventListener('click', e => {
   btnEdit.style.display = "inline-block";
   btnErase.style.display = "inline-block";
   btnSave.style.display = "none";
-})
+});
 
 let count = 0;
 btnLike.addEventListener('click', e => {
   count++;
   likes.innerHTML = count;
+});
+
+btnProfile.addEventListener('click', e => {
+  postForm.style.display = "none";
+  borrar.style.display = "none";
+  comentarios.style.display = "none";
+  profile.style.display = "block";
+  profile.innerHTML = `<h3>${user}</h3>`;
+});
+
+btnHome.addEventListener('click', e => {
+  window.location.reload()
 })

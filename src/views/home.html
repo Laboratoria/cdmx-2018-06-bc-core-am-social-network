@@ -13,16 +13,18 @@
 <body>
     <nav class="teal lighten-3">
         <div class="nav-wrapper">
-            <button id="btnLogout" class=" btn-flat teal lighten-3">Logout</button>
+            <button id="btnHome" class=" btn-flat teal lighten-3">Home</button>
+            <button id="btnProfile" class=" btn-flat teal lighten-3">Perfil</button>
+            <button id="btnLogout" class=" btn-flat teal lighten-3">Salir</button>
         </div>
     </nav>
     <div class="container">
-        <section class="col s12">
+        <section class="col s12" id="postForm">
             <h4 id="dataName"></h4>
             <input type="text"  id="postText" placeholder="¿Cuál es tu pregunta?">
             <input type="button" id="btnPost" class="btn" value="Publicar">
         </section>
-        <section >
+        <section id="borrar">
             <div>
                 <form action="">
                 <p>Nombre</p>
@@ -38,7 +40,9 @@
         <section id="comentarios" >
 
         </section>
-
+        <section id="profile">
+            
+        </section>
 
     </div>
 
