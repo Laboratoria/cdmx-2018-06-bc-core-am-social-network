@@ -8,7 +8,7 @@ register.addEventListener('click', event => {
   let password = document.getElementById('password').value;
   let userName = document.getElementById('user-name').value;
   if (userName != '') {
-    authen.registerAccount(email,password); 
+    authen.registerAccount(email,password);
   } else {
     alert('Ingresa un nombre de usuario');
   }

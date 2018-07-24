@@ -58,8 +58,9 @@ window.authen = {
       }).catch(function(error) {
       // An error happened.
     });
-  }
+  },
 };
+
 const monitor = () => {
   firebase.auth().onAuthStateChanged(user => {
     if (user) {
