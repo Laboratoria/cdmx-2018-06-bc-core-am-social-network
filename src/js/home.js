@@ -26,19 +26,31 @@
     userConect = database.ref('data');
     agregarUser(user.uid, user.displayName, user.email);
   });
+
   function agregarUser(uid, name, email) {
+    let user = firebase.auth().currentUser;
+
     var conectados = userConect.push({
       uid: uid,
       name: name,
       email: email
     });
   }
+
+  const postText = document.getElementById('post-entry');
+  const btnShare = document.getElementById('new-post');
+
+  btnShare.addEventListener('click', event => {
+    const currentUser = firebase.auth().currentUser;
+    const textInPost = postText.value;
+    // Create a unique key for messages collection
+    const newPostKey = firebase.database().ref().child('posts').push().key;
+    firebase.database().ref(`posts/${newPostKey}`).set({
+      creator: currentUser.uid,
+      creatorName: currentUser.displayName,
+      text: textInPost
+    });
+    window.social.displayPost(textInPost);
+  });
 }());
 
-const postText = document.getElementById('post-entry');
-const btnShare = document.getElementById('new-post');
-
-btnShare.addEventListener('click', event => {
-  let textInPost = postText.value;
-  window.social.displayPost(textInPost);
-});
