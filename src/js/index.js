@@ -14,6 +14,8 @@ firebase.initializeApp(config);
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const login = document.getElementById('login');
+const signupEmail = document.getElementById('signup-email');
+const signupPassword = document.getElementById('signup-password');
 const signup = document.getElementById('signup');
 
 // Agregar evento para el botón de inicio de sesión
@@ -33,12 +35,15 @@ login.addEventListener('click', event => {
 
 signup.addEventListener('click', event => {
   event.preventDefault();
-  const emailValue = email.value;
-  const passwordValue = password.value;
+  const signupEmailValue = signupEmail.value;
+  const signupPasswordValue = signupPassword.value;
   const auth = firebase.auth();
 
-  const promise = auth.createUserWithEmailAndPassword(emailValue, passwordValue);
-  promise.catch(event => console.log(event.message));
+  const promise = auth.createUserWithEmailAndPassword(signupEmailValue, signupPasswordValue) // Para registrar un nuevo usuario con correo y contraseña y también hacer que entre.
+    .then(function(promise) {
+      location.href = 'muro.html';
+      promise.catch(event => console.log(event.message));
+    });
 });
 
 firebase.auth().onAuthStateChanged(firebaseUser => { // cuando detecta que el usuario se ha "logeado"
