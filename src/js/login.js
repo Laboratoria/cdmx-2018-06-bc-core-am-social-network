@@ -16,4 +16,14 @@ document.getElementById('google-sign-in').addEventListener('click', event => {
 document.getElementById('facebook-sign-in').addEventListener('click', event => {
     event.preventDefault();
     facebookUserLogin();
+});
+
+document.getElementById('twitter-sign-in').addEventListener('click', event => {
+    event.preventDefault();
+    twitterUserLogin();
+});
+
+document.getElementById('github-sign-in').addEventListener('click', event => {
+    event.preventDefault();
+    githubUserLogin();
 })
