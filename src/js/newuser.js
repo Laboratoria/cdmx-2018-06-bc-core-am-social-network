@@ -1,15 +1,4 @@
 (function() {
-  // Initialize Firebase
-  var config = {
-    apiKey: 'AIzaSyC20SbyxB9RKJgcfTvfYuhJKxuuxh0RQBQ',
-    authDomain: 'prueba-firebase-ef04b.firebaseapp.com',
-    databaseURL: 'https://prueba-firebase-ef04b.firebaseio.com',
-    projectId: 'prueba-firebase-ef04b',
-    storageBucket: 'prueba-firebase-ef04b.appspot.com',
-    messagingSenderId: '499846254860'
-  };
-  firebase.initializeApp(config);
-
   // Get elements
   const txtName = document.getElementById('txt-name');
   const txtEmail = document.getElementById('txt-email');
@@ -18,10 +7,12 @@
 
   // Add signup event
   btnSignUp.addEventListener('click', event => {
-    // Get email and password
+    // Get name, email and password
+    const name = txtName.value;
     const email = txtEmail.value;
     const password = txtPassword.value;
     const auth = firebase.auth();
+    // window.social.displayNickname(name);
     // Sign in
     const promise = auth.createUserWithEmailAndPassword(email, password);
     promise
@@ -30,16 +21,15 @@
   });
 
   // Add a realtime listener
-
   firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
       console.log(firebaseUser);
-      window.location.assign('../views/home.html');
       let user = firebase.auth().currentUser;
       if (user !== null) {
         user.updateProfile({
           displayName: txtName.value
         });
+        window.location.assign('../views/home.html');
         document.getElementById('user-paragraph').innerHTML = ` Bienvenido ${user.displayName};`;
       }
     } else {

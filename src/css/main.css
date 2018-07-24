@@ -7,7 +7,7 @@ body{
 
 .container,
 .logged-in {
-    width: 25%;
+    width: 50%;
     margin: 0 auto;
     margin-top: 1.5em;
     padding: 3em;
@@ -45,15 +45,6 @@ body{
     -moz-transition: 0.3s;
 }
 
-/*.container button:hover
-.logged-in button:hover {
-    background: #fff;
-    color: #26a69a;
-    border: 1px solid #26a69a;
-    cursor: pointer;
-
-}*/
-
 .btn:hover{
     background: #fff;
     color: #26a69a;
@@ -66,13 +57,39 @@ body{
     text-align: right;
 }
 
+.postCard{
+    border: 1px solid #26a69a;
+    border-radius: 5px;
+    margin-bottom: 1em; 
+    padding: 1em;
+}
+
+.postCard hr{
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+
+.postName{
+    font-weight: bold;
+}
+
+textarea{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #26a69a;
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
 @media screen and (max-width: 767px) {
     .container,
     .logged-in{
-        width: 100%;
+        width: 90%;
     }
 
     #btn-logout{
-        width: 30%;
+        width: 50%;
     }
 }

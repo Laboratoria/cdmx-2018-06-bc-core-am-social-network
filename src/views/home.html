@@ -19,12 +19,22 @@
 
 <body>
     <div class="logged-in" id="logged-in-section">
-        <h3>Hola!!</h3>
-        <p id="user-paragraph">Bienvenido! te has logueado exitósamente</p>
+        <h3>¡Hola!</h3>
+        <p id="user-paragraph">¡Bienvenido! Te has logueado exitosamente</p>
         <button id="btn-logout" class="btn btn-action"> Cierra sesión </button>
     </div>
+    <div class="logged-in">
+        <h3>¿Qué te dio luz este día? </h3>
+        <textarea name="post" id="post-entry" cols="30" rows="10" placeholder="Escribelo aquí"></textarea>
+        <button id="new-post" class="btn btn-action">Compartir</button>
+    </div>
+    <div class="logged-in" id="new-posts">
+        <h3>Estos son tus publicaciones:</h3>
+    </div>
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script src="../js/firebase.js"></script>
     <script src="../js/home.js"></script>
+    <script src="../js/print.js"></script>
 </body>
 
 </html>
