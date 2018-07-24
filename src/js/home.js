@@ -27,17 +27,17 @@
     userConect = database.ref('users/' + id);
     addUser(user.displayName, user.email);
   });
-  function addUser(name, email) {
+
+  addUser = (name, email) => {
     let conect = userConect.push({
       name: name,
       email: email
     });
-  }
+  };
 
   const postText = document.getElementById('post-entry'); // Texto de entrada
   const btnShare = document.getElementById('new-post'); // Boton de compartir
   
-
   btnShare.addEventListener('click', event => { // Evento para mandar el texto dee entrada a la database
     const currentUser = firebase.auth().currentUser;
     let textInPost = postText.value;

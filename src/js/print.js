@@ -7,3 +7,8 @@ window.onload = () => {
     `;
     });
 };
+const printName = (userCharged) => {
+  let nameToPrint = document.getElementById('user-paragraph');
+  let toPrint = `¡Bienvenidx ${userCharged}! Te has logueado exitosamente`;
+  nameToPrint.innerHTML = toPrint;
+};
