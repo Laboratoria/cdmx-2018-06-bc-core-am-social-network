@@ -41,6 +41,7 @@ const loginGoogle= () => {
 const loginFace= () => {
     var provider = new firebase.auth.FacebookAuthProvider();
     firebase.auth().signInWithPopup(provider).then(function(result) {
+        provider.addScope('public_profile');
         // This gives you a Google Access Token. You can use it to access the Google API.
         var token = result.credential.accessToken;
         // The signed-in user info.
