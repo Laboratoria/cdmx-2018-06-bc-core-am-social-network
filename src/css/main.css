@@ -3,33 +3,64 @@ body{
     font-family: 'roboto';
     font-weight: 700;
     font-size: 2em;
-    text-align: right;
+    }
+
+    header {
+      height: fixed;
+      /*background-image: url("../images/");*/
+    }
+
+    .img-fluid {
+      width: 25%;
+    }
+
+.form-inline{
+flex-flow: inherit;
 }
 
-/*texto-Garnachapp{
-  text-align: right;
-}*/
-
-#garnachapp-tittle{
-margin-top: 1.4em;
-}
 .p{
-   text-align: center;
+   text-align: right;
 }
 .dropup .dropdown-toggle::after{
   margin-left: 0 !important ;
 }
 
-.text-area{
-width: 100%;
-=======
-@media (max-width: 992px) {
-  .welcome {
+/*Medida para RWD en smartphone*/
+  @media (min-width: 576px) {
+  .img-fluid {
     width: 50%;
-    float: right;
-    display: block;
-
   }
+  .input-width {
+    width: 80%;
+  }
+  .navbar-nav {
+    font-size: 0.6em;
+  }
+}  
+/*Medida para RWD en tabletas*/
+@media (min-width: 768px) {
+  .img-fluid {
+    width: 50%;
+  }
+  .input-width{
+    width: 100%;
+  }
+  .navbar-nav {
+    font-size: 1em;
+  }
+}  
+/*Medida para RWD en laps o desktop mediano*/
+@media (min-width: 992px) {
+  .img-fluid {
+    width: 25%;
+  }
+}
+/*Medida para RWD en laps grandes*/
+@media (min-width: 1200px) {
+  .img-fluid {
+    width: 25%;
+  }
+}
     .login-form {
       width: 50%;
   
@@ -39,22 +70,21 @@ width: 100%;
     display: block;
     position: absolute;
   }*/
-  
-.card-img-left {
-    border-bottom-left-radius: calc(.25rem - 1px);
-    border-top-left-radius: calc(.25rem - 1px);
-    float: left;
-    padding-right: 1em;
-    margin-bottom: -1.25em;
-}
 
 .form-control{
-    margin-top: 5em;
-    margin-bottom: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    height: 7em;
+    border: solid 1px #000000;
+    
 }
 
-@media (max-width: 0px) { /* Change this to 0 */
-    .navbar-nav .open .dropdown-menu {
+.font-color{
+  color: aliceblue;
+}
+
+/*@media (max-width: 0px) { /* Change this to 0 */
+    /*.navbar-nav .open .dropdown-menu {
       position: fixed;
       float: none;
       width: auto;
@@ -74,22 +104,4 @@ width: 100%;
     .navbar-nav .open .dropdown-menu > li > a:focus {
       background-image: none;
     }
-  }
-
-/*@media (max-width: 768px) {
-  .container {
-
-  }
-
-  .welcome {
-
-  }
-}
-
-@media (max-width: 576px) {
-  .container {
- 
-  }
-
-}*/
-
+  }*/
