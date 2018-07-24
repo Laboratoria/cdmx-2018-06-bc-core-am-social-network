@@ -100,18 +100,3 @@ firebase.auth().onAuthStateChanged(user => { // cambiar el estado de logeado a n
   }
 });
 
-
-// Firebase database
-
-const messageInput = document.getElementsByClassName('inputMessage');
-const message = ()=>{
-  let currentUser = firebase.auth().currentUser;
-  let messageValue = messageInput.value;
-
-  const newMessagekey = firebase.database().ref().child('messages').push().key;
-  firebase.database().ref(`messages/${newMessagekey}`).set({
-    creator: currentUser.uid,
-    creatorName: currentUser.displayName,
-    text: messageInput
-  });
-};
