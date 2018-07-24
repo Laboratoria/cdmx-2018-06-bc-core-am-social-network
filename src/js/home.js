@@ -20,7 +20,12 @@
         displayName: user.displayName
       });
       document.getElementById('user-paragraph').innerHTML = `Bienvenidx ${user.displayName}`;
-      document.getElementById('profile-image').innerHTML = `<img src="${user.photoURL}">`;
+      const userPhoto = user.photoURL;
+      if (userPhoto) {
+        document.getElementById('profile-image').innerHTML = `<img src="${user.photoURL}">`;
+      } else {
+        document.getElementById('profile-image').innerHTML = `<img src="${'../images/placeholder-user.png'}">`;
+      }
       document.getElementById('user-email').innerHTML = `${user.email}`;
       console.log(user.photoURL);
     } else {
