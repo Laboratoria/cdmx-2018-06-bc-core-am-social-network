@@ -24,8 +24,6 @@ const dataFormat = (userName, userAge, userWeight, userSize, blodSugar, medicine
       childrenSick : childrenSick
     }
   };
-  console.log("JSON");
-  console.log(dataU);
   return dataU;
 }
 // Insertar informacion en firebase
@@ -82,10 +80,11 @@ const insertUserProfile = () =>{
     }
 }
 
-const profile = (isUser, userName, userAge, userWeight, userSize, blodSugar, medicine, nss, fatherSick, grandPsick, childrenSick) =>{
+const profile = (idUser, userName, userAge, userWeight, userSize, blodSugar, medicine, nss, fatherSick, grandPsick, childrenSick) =>{
    return '<table class="centered striped responsive-table">'+
     '<thead>'+
       '<tr>'+
+        '<th>ID</th>'+
         '<th>Nombre</th>'+
         '<th>Edad</th>'+
         '<th>Peso</th>'+
@@ -102,6 +101,7 @@ const profile = (isUser, userName, userAge, userWeight, userSize, blodSugar, med
     '</thead>'+
     '<tbody>'+
        '<tr>'+
+       '<td>'+idUser+'</td>'+
         '<td>'+userName+'</td>'+
         '<td>'+userAge+'</td>'+
         '<td>'+userWeight+'</td>'+
@@ -128,12 +128,18 @@ const printUsersDom = printUsers = () =>{
     let idUser = Object.values(data)[1].path.pieces_[indice-1];
     console.log(idUser);
     let userConsults = data.val();
-    let profileU = profile(userConsults.userName, userConsults.userAge, userConsults.userWeight, userConsults.userSize, userConsults.blodSugar, userConsults.medicine, userConsults.nss, userConsults.medicineHistory.fatherSick, userConsults.medicineHistory.grandPsick, userConsults.medicineHistory.childrenSick);
+    let profileU = profile(userConsults.idUser, userConsults.userName, userConsults.userAge, userConsults.userWeight, userConsults.userSize, userConsults.blodSugar, userConsults.medicine, userConsults.nss, userConsults.medicineHistory.fatherSick, userConsults.medicineHistory.grandPsick, userConsults.medicineHistory.childrenSick);
       printDOM('profileConteniner', profileU);
 });
 }
-const editFun = (id)=>{
+const editFun = ()=>{
 console.log("Editando");
+  let user = db.ref('userProfile');
+  user.on('child_added', (data) =>{
+    let updateU = data.val();
+    let update = profile(updateU.idUser, updateU.userName, updateU.userAge, updateU.userWeight, updateU.userSize, updateU.blodSugar, updateU.medicine, updateU.nss, updateU.fatherSick, updateU.grandPsick, updateU.childrenSick);
+    printDOM('profileConteniner',update);
+  })
 }
 const deleteFun = () =>{
   let user = db.ref('userProfile/'+idUser);
