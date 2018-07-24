@@ -16,17 +16,19 @@
 
   <!-- FORMULARIO DE INCIO DE SESION -->
   <div class="container">
+    <section class="row">
+      <form id="loginform" method="" action="">
+        <input type="text" id="name" class="input none" placeholder="Nombre"/>
+        <input type="text" id="mail" class="input" placeholder="Correo"/>
+        <input type="password" id="password" class="input" placeholder="Contraseña" />
+        <input type="button" id="btnLogin" class="loginbutton iniciar" value="Iniciar sesión" target="_self"/>
+        <input type="button" id="btnSign" class="loginbutton registrar" value="Registrar"  target="_self"/>
+        <input type="button" id="btnSignup" class="loginbutton registrar none" value="Registrar"  target="_self"/>
+        <input type="submit" id="btnFb" class="loginbutton face" value="Facebook" onclick="abrirPagina()" target="_self"/>
+        <input type="submit" id="btnGg" class="loginbutton google" value="Google" onclick="abrirPagina()" target="_self"/>
+      </form>
+    </section>
 
-    <form id="loginform" method="" action="">
-      <input type="text" id="name" class="input none" placeholder="Nombre"/>
-      <input type="text" id="mail" class="input" placeholder="Correo"/>
-      <input type="password" id="password" class="input" placeholder="Contraseña" />
-      <input type="button" id="btnLogin" class="loginbutton iniciar" value="Iniciar sesión" target="_self"/>
-      <input type="button" id="btnSign" class="loginbutton registrar" value="Registrar"  target="_self"/>
-      <input type="button" id="btnSignup" class="loginbutton registrar none" value="Registrar"  target="_self"/>
-      <input type="submit" id="btnFb" class="loginbutton face" value="Facebook" onclick="abrirPagina()" target="_self"/>
-      <input type="submit" id="btnGg" class="loginbutton google" value="Google" onclick="abrirPagina()" target="_self"/>
-    </form>
   </div>
   <div id="google" class="none">
     <h2>Google On</h2>
