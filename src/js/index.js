@@ -15,12 +15,11 @@ const email = document.getElementById('email');
 const password = document.getElementById('password');
 const login = document.getElementById('login');
 const signup = document.getElementById('signup');
-const logout = document.getElementById('logout');
 
 // Agregar evento para el botón de inicio de sesión
 login.addEventListener('click', event => {
   event.preventDefault();
-  console.log('hola');
+  // console.log('hola');
   // Obtenemos valor de email y password
   const emailValue = email.value;
   const passwordValue = password.value;
@@ -42,13 +41,10 @@ signup.addEventListener('click', event => {
   promise.catch(event => console.log(event.message));
 });
 
-logout.addEventListener('click', event => {
-  firebase.auth().signOut();
-});
-
-firebase.auth().onAuthStateChanged(firebaseUser => {
+firebase.auth().onAuthStateChanged(firebaseUser => { // cuando detecta que el usuario se ha "logeado"
   if (firebaseUser) {
-    console.log(firebaseUser);
+    // console.log(firebaseUser);
+    location.href = 'muro.html';
   } else {
     console.log('not logged in');
     logout.classList.add('hide');
@@ -66,7 +62,7 @@ loginGoogle.addEventListener('click', event => {
     .signInWithPopup(provider) // popUp te va a dar la ventana de acceso a tu cuenta de google. parámetro de la variable provider que tiene la autenticación con google
 
     .then(function(provider) { // entonces ejecuta la función que es el resultado (acceder con google)
-      console.log(result);
-      console.log(provider);
+      // console.log(result);
+      // console.log(provider);
     });
 });
