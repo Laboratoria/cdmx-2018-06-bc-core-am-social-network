@@ -1,53 +1,64 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>zoryaColect.</title>
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="">
-  </head>
-  <body>
-    <div>
-      <div>
-          <form>
-              <input type="email" id="enter-email" placeholder="Ingresa email">
-              <input type="password" id="enter-password" placeholder="Ingresa password">
-              <input type="button" value="Entrar" id="enter">
-          </form>
-      </div>
-      <div>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>zoryaColect.</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/common.css">
+</head>
+
+<body>
+  <section>
+    <div.header>
+      <h1>ZoryaColect.</h1>
+    </div.header>
+    <section.row class="centrar">
+      <div.row>
+        <form>
+          <input type="email" id="enter-email" placeholder="Email">
+          <input type="password" id="enter-password" placeholder="Password">
+          <input type="button" value="Entrar" id="enter">
+        </form>
+      </div.row>
+      <div.row>
+        <form>
+          <input type="button" id="google-user" value="Ingresa con google">
+          <input type="button" id="facebook-user" value="Ingresa con facebook">
+        </form>
+      </div.row>
+      <div.row>
         <form>
           <input type="email" id="email" placeholder="Email de usuario">
           <input type="password" id="password" placeholder="Contraseña">
           <input type="text" placeholder="Nombre de usuario" id="user-name">
           <input type="button" value="Registrar" id="register">
-        </form>  
-      </div>
-    </div>
-    <div>
-      <form>
-        <input type="button" id="google-user" value="Ingresa con google">
-        <input type="button" id="facebook-user" value="Ingresa con facebook">
-      </form>
-    </div>
-    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-database.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyBmvR-XICKHnSpAsppIMfCA9vfE3lT3yBU",
-        authDomain: "feminismi-6e40a.firebaseapp.com",
-        databaseURL: "https://feminismi-6e40a.firebaseio.com",
-        projectId: "feminismi-6e40a",
-        storageBucket: "feminismi-6e40a.appspot.com",
-        messagingSenderId: "638405712713"
-      };
-      firebase.initializeApp(config);
-    </script>
-    <script src="./js/index.js"></script>
-    <script src="./js/database.js"></script>
-    <script src="./js/authen.js"></script>
-  </body>
+        </form>
+      </div.row>
+    </section.row>
+  </section>
+
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-database.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBmvR-XICKHnSpAsppIMfCA9vfE3lT3yBU",
+      authDomain: "feminismi-6e40a.firebaseapp.com",
+      databaseURL: "https://feminismi-6e40a.firebaseio.com",
+      projectId: "feminismi-6e40a",
+      storageBucket: "feminismi-6e40a.appspot.com",
+      messagingSenderId: "638405712713"
+    };
+    firebase.initializeApp(config);
+
+  </script>
+  <script src="./js/index.js"></script>
+  <script src="./js/database.js"></script>
+  <script src="./js/authen.js"></script>
+</body>
+
 </html>
