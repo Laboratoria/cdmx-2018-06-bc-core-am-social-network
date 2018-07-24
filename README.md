@@ -61,7 +61,7 @@ Como lo hemos mencionado antes, **SHEro** es una plataforma orientada a mujeres,
 
 ### Usuario habitual
 
-Para poder usar **SHEro** únicamente requieres de un _dispositivo_ (computadora,smartphone, tablet) con _conexión a internet_, y un _navegador web_ (Chrome, Firefox, Internet Explorer, etc.).
+Para poder usar **SHEro** únicamente requieres de un _dispositivo_ (computadora, smartphone, tablet) con _conexión a internet_, y un _navegador web_ (Chrome, Firefox, Internet Explorer, etc.).
 
 Debes acceder a esta [liga](https://lexhernandez.github.io/cdmx-2018-06-bc-core-am-social-network/src/) y _registrarte_ con cualquier método (correo electrónico, Facebook o Google+). A partir de ahora, eres miembro de la comunidad **SHEro**,  ya puedes publicar contenido, usar la red de apoyo, acceder a los productos de compra/venta y ver tu perfil.
 
