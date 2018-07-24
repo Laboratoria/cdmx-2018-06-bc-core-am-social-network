@@ -6,7 +6,6 @@ document.getElementById('btn-facebook').addEventListener('click', (event) =>{
   authFacebook();
 });// Por hacer
 
-
 const authGoogle = () => {
   var provider = new firebase.auth.GoogleAuthProvider();
   authentificating(provider);
@@ -23,6 +22,10 @@ const authentificating = (provider) =>{
     var token = result.credential.accessToken;
     // Datos del usuario logeado
     var user = result.user;
+
+    // if (user =="USUARIO1" && password=="CONTRASEÑA1") {
+    //   window.location= 'home.html';
+
     console.log(result);
   }).catch(function(error) {
     // enerar error
