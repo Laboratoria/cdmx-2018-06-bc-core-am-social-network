@@ -1,18 +1,18 @@
-// login
+//login
 let provider = new firebase.auth.GoogleAuthProvider();
 
-$('#login').click(function() {
+$('#login').click(function(){
   firebase.auth()
-    .signInWithPopup(provider)
-    .then(function(result) {
-      // console.log(result.user);
-      guardaDatos(result.user);
-      $('#login').hide();
-      $('#root').append('<img src=\'' + result.user.photoURL + '\'/>');
-    });
+  .signInWithPopup(provider)
+  .then(function(result) {
+    //console.log(result.user);
+    guardaDatos(result.user);
+    $('#login').hide();
+    $('#root').append("<img src='"+result.user.photoURL+"'/>")
+  });
 });
-// esta funcion guarda datos automaticamente
-/* function guardaDatos(user){
+//esta funcion guarda datos automaticamente
+/*function guardaDatos(user){
   var usuario = {
     uid:user.uid,
     nombre:user.displayName,
@@ -23,9 +23,9 @@ $('#login').click(function() {
   .set(usuario)
 }*/
 
-// leyendo de la BD
-firebase.database().ref('runeat')
-  .on('child_added', function(s) {
-    var user = s.val();
-    $('#root').append('<img src=\'' + user.foto + '\'/>');
-  });
+//leyendo de la BD
+firebase.database().ref("runeat")
+.on("child_added", function(s){
+  var user = s.val();
+ $('#root').append("<img src='"+user.foto+"'/>")
+})

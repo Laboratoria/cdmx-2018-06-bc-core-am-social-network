@@ -1,86 +1,74 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+     <link rel="shortcut icon" href="views/imagenes/running.png"/>﻿
+     <link rel="stylesheet" href="views/style.css">
 
-<head>
-  <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
-    crossorigin="anonymous">
-  <link rel="shortcut icon" href="views/imagenes/running.png" />
-  <link rel="stylesheet" href="views/style.css">
-
-</head>
-
-<body>
+  </head>
+  <body>
 
 
 
-  <nav id="titutlo" class="navbar navbar-light bg-light">
-    <a id="titutlo" class="navbar-brand" href="#">
-      <img src="views/imagenes/funrun.png" width="30" height="30" class="d-inline-block align-top" alt=""> Runeat
-    </a>
-  </nav>
+    <nav id="titutlo" class="navbar navbar-light bg-light">
+         <a id="titutlo"class="navbar-brand" href="#">
+           <img src="views/imagenes/funrun.png" width="30" height="30" class="d-inline-block align-top" alt="">
+           Runeat
+         </a>
+       </nav>
 
-  <div class="row">
-    <div class="col" id="fondo">
-      <img src="views/imagenes/fondo.png" alt="">
-    </div>
-    <div class="col" id="datosUs">
-      <h1>Iniciar sesion</h1>
-      <p>
-        <span class="fa fa-user"></span>
-        <input id="intText" type="email" Placeholder="Email" required>
-      </p>
-      <!-- JS because of IE support; better: placeholder="Username" -->
-      <p>
-        <span class="fa fa-lock"></span>
-        <input id="intPass" type="password" Placeholder="Password" required>
-      </p>
-      <!-- JS because of IE support; better: placeholder="Password" -->
+         <div class="row">
+           <div class="col"id="fondo">
+             <img src="views/imagenes/fondo.png" alt="">
+           </div>
+           <div class="col" id="datosUs">
+             <h1>Iniciar sesion</h1>
+             <p ><span class="fa fa-user"></span><input id="intText" type="email" Placeholder="Email" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
+             <p><span class="fa fa-lock"></span><input id="intPass" type="password" Placeholder="Password" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
 
 
-      <button id="SignUp" type="button" class="btn btn-primary btn-lg btn-block">Registrarse</button>
+   <button id="SignUp" type="button" class="btn btn-primary btn-lg btn-block">Registrarse</button>
 
-      <button id="iniciogoogle" type="button" class="btn btn-secondary btn-lg btn-block">Entrar</button>
+             <button  id="iniciogoogle" type="button" class="btn btn-secondary btn-lg btn-block">Entrar</button>
 
-      <div class "col" id="loginSocial">
-        <div id="root"></div>
-        <h1>Inicia sesion con</h1>
-        <button id="login">
-          <img src="views/imagenes/google-plus.png" alt="">
-        </button>
-        <button id="face">
-          <img src="views/imagenes/facebook.png" alt="">
-        </button>
+             <div class "col" id="loginSocial">
+               <div id="root"></div>
+               <h1>Inicia sesion con</h1>
+               <button id="login"><img src="views/imagenes/google-plus.png" alt=""></button>
+               <button id="face"><img src="views/imagenes/facebook.png" alt=""></button>
 
-      </div>
+   </div>
 
 
-    </div>
+         </div>
 
-  </div>
-  </form>
+       </div>
+       </form>
 
-  <!--Links jquery y database-->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
+<!--Links jquery y database-->
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 
 
-  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyBIK_C5c7qWNN5vdWV3SF5WjPkfah4o4HQ",
-      authDomain: "foodness-inc.firebaseapp.com",
-      databaseURL: "https://foodness-inc.firebaseio.com",
-      projectId: "foodness-inc",
-      storageBucket: "foodness-inc.appspot.com",
-      messagingSenderId: "705442568830"
-    };
-    firebase.initializeApp(config);
-  </script>
-  <script type="text/javascript" src="js/index.js">
-  </script>
-</body>
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBIK_C5c7qWNN5vdWV3SF5WjPkfah4o4HQ",
+    authDomain: "foodness-inc.firebaseapp.com",
+    databaseURL: "https://foodness-inc.firebaseio.com",
+    projectId: "foodness-inc",
+    storageBucket: "foodness-inc.appspot.com",
+    messagingSenderId: "705442568830"
+  };
+  firebase.initializeApp(config);
+</script>
+<script type="text/javascript" src="js/index.js">
 
+</script>
+  </body>
 </html>
