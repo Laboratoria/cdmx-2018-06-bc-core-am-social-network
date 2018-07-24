@@ -26,17 +26,12 @@ La forma en que (nombre de la red social) retribuirá a los inversionistas será
 
 ## Historias de Usuarias
 
-|                                             Historia de Usuaria  |
-|-----------------------------------------------------------|------|
-| Fecha:  09/07/2018                                        | Nr.1 |
-|--------------------------------------------------|--------|------|
-| Nombre de la Usuaria:  Diana Perez Pineda        | Edad: 36 años |
-|--------------------------------------------------|---------------|
-| Título:  Compartir                                               |
-|------------------------------------------------------------------|
-| Como bióloga quiero compartir mis más recientes descubrimientos  |
-| para que más mujeres biólogas conozcan sobre mi investigación y  |
-| puedan contribuir o usarla como punto de partida.                |
+|   |   Historia de Usuaria |
+|---|---|
+| Fecha:  09/07/2018   |  Nr.1  |
+| Nombre de la Usuaria:  Diana Perez Pineda  | Edad: 36 años |
+|  Título:  Compartir   |   |
+|  Como bióloga quiero compartir mis más recientes descubrimientos para que más mujeres biólogas conozcan sobre mi investigación y puedan contribuir o usarla como punto de partida. |   |
 
 |                                             Historia de Usuaria  |
 |-----------------------------------------------------------|------|
