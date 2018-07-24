@@ -1,0 +1,33 @@
+[debug] [2018-07-23T22:17:10.291Z] ----------------------------------------------------------------------
+[debug] [2018-07-23T22:17:10.303Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\YOCELIN\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-07-23T22:17:10.303Z] CLI Version:   3.19.3
+[debug] [2018-07-23T22:17:10.303Z] Platform:      win32
+[debug] [2018-07-23T22:17:10.303Z] Node Version:  v8.11.3
+[debug] [2018-07-23T22:17:10.306Z] Time:          Mon Jul 23 2018 17:17:10 GMT-0500 (Hora de verano central (México))
+[debug] [2018-07-23T22:17:10.306Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-07-23T22:17:10.343Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-07-23T22:17:10.346Z] > authorizing via signed-in user
+[debug] [2018-07-23T22:17:10.356Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/diabetipsoficial  
+  
+ Mon Jul 23 2018 17:17:10 GMT-0500 (Hora de verano central (México))
+[debug] [2018-07-23T22:17:11.506Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-23T22:17:11.511Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/diabetipsoficial/tokens  
+  
+ Mon Jul 23 2018 17:17:11 GMT-0500 (Hora de verano central (México))
+[debug] [2018-07-23T22:17:11.971Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-23T22:17:11.973Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/diabetipsoficial  
+  
+ Mon Jul 23 2018 17:17:11 GMT-0500 (Hora de verano central (México))
+[debug] [2018-07-23T22:17:12.373Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\YOCELIN\Documents\Laboratoria\javascript\cdmx-2018-06-bc-core-am-social-network'...
+[info] 
+[debug] [2018-07-23T22:17:12.378Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1025645095828/clients/_:getWebAppConfig  
+  
+ Mon Jul 23 2018 17:17:12 GMT-0500 (Hora de verano central (México))
+[debug] [2018-07-23T22:17:12.898Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[info] Shutting down...

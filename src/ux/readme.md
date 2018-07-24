@@ -70,11 +70,11 @@ En conclusión
 
 Esta red social creará una comunidad, en la que sus usuarias podrán interactuar y compartir habitos alimenticios, sus experiencias con esta enfermedad, comentarios de aliento y tips para tener una vida más saludable. Un plus para ellas es poder tener conectarse desde son su perfil de Facebook o correo de Gmail, incluso ellas podrán guardar un perfil con los datos que generalmente son solicitados por su médico a la hora de asistir a una consulta como son: edad, peso, nivel de glucosa, medicamentos de control, número de seguridad social y sus antecedentes familiares.
 
-Es un hecho que tener este padecimiento significa gastar más, por lo que con esta Red social buscaremos descuentos y patrocinios con las empresas que estan dedicadas a la comercialización de medicamentos,  incluso en un futuro buscar hacer un convenio con empresas relacionadas a la distribución de alimentos, queremos incitar a nuestras usuarias a llevar una mejor alimentación para el control de su enfermedad. 
+Es un hecho que tener este padecimiento significa gastar más, por lo que con esta Red social buscaremos descuentos y patrocinios con las empresas que estan dedicadas a la comercialización de medicamentos,  incluso en un futuro buscar hacer un convenio con empresas relacionadas a la distribución de alimentos, queremos incitar a nuestras usuarias a llevar una mejor alimentación para el control de su enfermedad.
 
-Consultamos a expertos en el tema y coinciden en que las mujeres tienen más apertura a cambiar sus hábitos alimenticios, hacer actividad física y llevar un control de sus medicamentos a diferencia de los hombres que al enfrentarse a ciertas "restricciones" entran en negación. 
+Consultamos a expertos en el tema y coinciden en que las mujeres tienen más apertura a cambiar sus hábitos alimenticios, hacer actividad física y llevar un control de sus medicamentos a diferencia de los hombres que al enfrentarse a ciertas "restricciones" entran en negación.
 
-Las mujeres en México tienen un rol muy fuerte, ellas son las líderes del hogar por lo que buscamos ayudar tanto a ellas con el control de su enfermedad y a sus familias promoviendo el cuidado de la salud para todos los integrantes, queremos que las usuarias sean embajadoras de los buenos hábitos no sólo para vivir bien con la enfermadad sino para prevenirla en quienes aún no la padecen. 
+Las mujeres en México tienen un rol muy fuerte, ellas son las líderes del hogar por lo que buscamos ayudar tanto a ellas con el control de su enfermedad y a sus familias promoviendo el cuidado de la salud para todos los integrantes, queremos que las usuarias sean embajadoras de los buenos hábitos no sólo para vivir bien con la enfermadad sino para prevenirla en quienes aún no la padecen.
 
 
 ## Historia de Usuario
