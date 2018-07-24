@@ -78,7 +78,40 @@ También es importante resaltar que los encuestados se encontraron interesados e
 
 >“Me gustaría poder hacer amigos, que compartan tips y que promocionen eventos o recomiendes sitios donde relajarse; así como crear grupos”.
 
-# Benchmark
+# Historias de usuario 
+## Login
+A) Yo como usuarix con depresión y/o ansiedad quiero poder registrarme en una red social que me permita conectarme con personas que están atravesando o han superado una experiencia similar.
+
+- Yo como usuarix de esta red social busco poder loguearme con mi correo y una contraseña para empezar a usarla.
+- Yo como usuarix registradx en esta red social quiero poder usar un nickname para ocultar mi identidad al usar la red.
+
+B) Yo como usuarix logueadx de esta red social quiero poder postear un mensaje sobre algo que me hizo/hace feliz.
+
+C) Yo como usuarix quiero poder ver los post de otras personas.
+
+D) Yo como usuarix quiero poder interactuar con otrxs usuarixs sobre temas en común.
+
+- Yo quiero poder proponer un tema de conversación.
+- Yo quiero que otrxs usuarixs puedan unirse al tema de conversación.
+- Yo quiero poder unirme a temas de conversación existentes.
+
+
+## Muro
+A) Yo como usuarix de LUX quiero poder publicar un nuevo post para que otros usuarixs de LUX lo vean.
+
+B) Yo como usuarix de LUX quiero poder indicar los post que más me gusten para que el autor sepa que me gusta su idea, la comparto o me siento relacionadx con lo que publico.
+
+C) Yo como usuarix de LUX quiero que otros usuarios puedan indicar si mi post les gusto para saber si comparten mi idea o se sienten relacionadxs con lo que publique.
+
+D) Yo como usuarix de LUX quiero poder editar mis post para cambiar el texto si me equivoque o quiero que diga algo diferente.
+
+E) Yo como usuarix de LUX quiero poder borrar mis post para que desaparezcan de la plataforma y ya no puedan ser vistos por otrxs usuarixs.
+
+F) Yo como usuarix de LUX quiero poder ver primero los post más recientes para mantenerme al tanto de las últimas publicaciones.
+
+G) Yo como usuarix de LUX quiero poder cerrar mi sesión para que mi actividad dentro de la plataforma se mantenga privada.
+
+# Benchmark 1.0
 
 En conjunto con la elaboración de encuentas y su análisis preliminar, se empezó a trabajar en un Benchmark para permitirnos analizar tanto los sitios web como las aplicaciones móviles con la que se compartía una visión similar.
 
@@ -87,6 +120,16 @@ En conjunto con la elaboración de encuentas y su análisis preliminar, se empez
 </p>
 <p align="center">
   <img src="../Ux research/img/benchmark2.PNG"  title="Benchmark">
+</p>
+
+# Benchmark 2.0
+ Acorde al feedback recibido de UX Coach Karla Nava decidimos implementar cambios en cunato a la estructura del benchmark 1.0, estos constaron en: 
+ - Reestructuracion de tabla.
+ - Jerarquia en contenido
+ - Comparativos en Login
+ - Comparativos en Muro
+ <p align="center">
+  <img src="../Ux research/img/benchmark3.jpg"  title="Trabjando en equipo">
 </p>
 
 ## Conclusión

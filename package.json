@@ -4,7 +4,7 @@
   "main": "src/index.html",
   "license": "MIT",
   "scripts": {
-    "htmlhint": "htmlhint src/*.html test/*.html",
+    "htmlhint": "htmlhint snpm rc/*.html test/*.html",
     "eslint": "eslint --ext .js src/ test/",
     "pretest": "npm run eslint && npm run htmlhint",
     "test-browser": "opener ./test/index.html",
@@ -15,7 +15,7 @@
     "chai": "^4.1.2",
     "eslint": "^4.19.1",
     "htmlhint": "^0.9.13",
-    "mocha": "^5.1.1",
+    "mocha": "^5.2.0",
     "nyc": "^11.7.1",
     "opener": "^1.4.3"
   }
