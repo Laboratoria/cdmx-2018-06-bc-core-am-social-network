@@ -28,6 +28,7 @@ login.addEventListener('click', event => {
   // Para iniciar sesión 
   const promise = auth.signInWithEmailAndPassword(emailValue, passwordValue);
   promise.catch(event => console.log(event.message));
+  location.href = 'muro.html';
 });
 
 // Añadiendo el evento del botón de registrarse
@@ -69,4 +70,5 @@ loginGoogle.addEventListener('click', event => {
       console.log(result);
       console.log(provider);
     });
+  location.href = 'muro.html';
 });
