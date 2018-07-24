@@ -1,8 +1,8 @@
-#*Social Media*
+# *Social Media*
 
-## __DiabeTips__
+##  __DiabeTips__
 
-###Documentación y desarrollo
+### Documentación y desarrollo
 ________________________________________
 
 *1. Definición de objetivos y estrategia*
