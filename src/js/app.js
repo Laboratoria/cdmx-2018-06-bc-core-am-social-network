@@ -147,6 +147,6 @@ const loginMovil = () => {
 }
 
 const registroMovil = () => {
-    location.href = "src/views/registro.html";
+    location.href = "views/registro.html";
     aparece();
 }
