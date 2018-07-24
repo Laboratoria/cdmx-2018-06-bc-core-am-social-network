@@ -3,6 +3,9 @@
   background-color: #96064e;
   color:antiquewhite;
 }
+#fondo1{
+  background-position: center;
+}
 
 #logo {
   border-radius: 200px;
@@ -27,7 +30,7 @@
 }
 
 #email, #contrasena {
-  margin: 0;
+  margin: 20% !important;
 }
 
 
@@ -77,3 +80,8 @@
   margin-left: 6%;
   margin-top: 10%;
 }
+
+.contenidoC {
+  color: black;
+}
+
