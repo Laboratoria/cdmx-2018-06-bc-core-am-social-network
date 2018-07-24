@@ -2,7 +2,7 @@
   // Get elements
   const btnLogout = document.getElementById('btn-logout');
   // Get a reference to the database service
-  var database = firebase.database();
+  let database = firebase.database();
 
   // Add logout event
   btnLogout.addEventListener('click', event => {
@@ -23,10 +23,12 @@
     } else {
       console.log('not logged in');
     }
-    userConect = database.ref('data');
-    agregarUser(user.uid, user.displayName, user.email);
+    let id = user.uid;
+    userConect = database.ref('users/' + id);
+    addUser(user.displayName, user.email);
   });
 
+<<<<<<< HEAD
   function agregarUser(uid, name, email) {
     let user = firebase.auth().currentUser;
 
@@ -36,6 +38,15 @@
       email: email
     });
   }
+=======
+  addUser = (name, email) => {
+    let conect = userConect.push({
+      name: name,
+      email: email
+    });
+  };
+}());
+>>>>>>> cd36d52b5e1f79137d1b8941c7bcc8ee162a0a06
 
   const postText = document.getElementById('post-entry');
   const btnShare = document.getElementById('new-post');
@@ -54,3 +65,25 @@
   });
 }());
 
+<<<<<<< HEAD
+=======
+btnShare.addEventListener('click', event => {
+  const currentUser = firebase.auth().currentUser;
+  const textInPost = postText.value;
+  if (textInPost === '' || textInPost === ' ') {
+    alert('No ingresaste texto');
+    console.log('vacio');
+  } else {
+    console.log('texto');
+    postText.value = '';
+    // Create a unique key for messages collection
+    const newPostKey = firebase.database().ref().child('posts').push().key;
+    firebase.database().ref(`posts/${newPostKey}`).set({
+      creator: currentUser.uid,
+      creatorName: currentUser.displayName,
+      text: textInPost
+    });
+  };
+  // window.social.displayPost(textInPost);
+});
+>>>>>>> cd36d52b5e1f79137d1b8941c7bcc8ee162a0a06
