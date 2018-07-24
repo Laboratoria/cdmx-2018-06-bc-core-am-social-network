@@ -116,6 +116,7 @@ a) [Ideal] (Pendiente)
 
 b) Versión 1.0 Baja Fidelidad ![Login Mobile](images/mobile.gif)
                               ![Login Web](images/web.gif) 
+                              ![NewsFeed](images/newsfeed.jpg)
 
                [Alta Fidelidad] (https://www.figma.com/file/LeDMOc6n08FLECZQ5FFXlf3B/Welcome-Register)               
 

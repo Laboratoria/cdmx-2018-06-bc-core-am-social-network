@@ -1,3 +1,8 @@
+/*@media (max-width: 992px) {
+  .welcome {
+    width: 50%;
+    float: right;
+    display: block;
 body{
     background-color: rgba(255, 94, 58, 0.95);
     font-family: 'roboto';
@@ -8,7 +13,6 @@ body{
     header {
       height: fixed;
       /*background-image: url("../images/");*/
-    }
 
     .img-fluid {
       width: 25%;
@@ -65,10 +69,20 @@ flex-flow: inherit;
       width: 50%;
   
     }
-  /*.welcome ::before  {
+  .welcome ::before  {
     width: 100%;    
     display: block;
     position: absolute;
+  }
+}*/
+
+/*@media (max-width: 475px) {
+
+
+  .login-form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
   }*/
 
 .form-control{
@@ -78,6 +92,15 @@ flex-flow: inherit;
     border: solid 1px #000000;
     
 }
+
+@media (max-width: 768px) {
+  .container {
+
+  }
+
+  .welcome {
+
+  }
 
 .font-color{
   color: aliceblue;
