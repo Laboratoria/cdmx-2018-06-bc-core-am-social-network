@@ -17,44 +17,42 @@
 
 
 <body>
-       <p class="example">Resize the browser window to see how the background color of this paragraph changes on different screen sizes.</p>
-       <div class="logo">
-           <p>Mom to Mom <br>
-       rompiendo mitos</p>
-       </div>
+    <p class="logo">Mom to Mom
+        <div class="slogan">rompiendo mitos</div>
+      </p>
 
 
-<!--FORMULARIO REGISTRO-->
-<section class="container">
-   <article class="row">
-     <div class="col-lg-4 col-sm-6">
-           <h4>Registrate</h4>
-               <!--NOMBRE-->
-               <div class="form-group">
-         <label for="exampleInputEmail1">Nombre de Mamá</label>
-         <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Ingresa tú Nombre">
-               </div>
-               <!--EDAD PEQUE-->
-       <div class="form-group">
-         <label for="exampleInputEmail1">Edad de tú Peque</label>
-         <input type="text" class="form-control" id="ageBaby" aria-describedby="emailHelp" placeholder="Ingresa la edad de tú Peque">
-       </div>
-          <!--EMAIL-->
-       <div class="form-group">
-         <label for="exampleInputEmail1">Email</label>
-         <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Ingresa email">
-               </div>
-               <!--CONTRASEÑA-->
-       <div class="form-group">
-         <label for="exampleInputPassword1">Contraseña</label>
-         <input type="password" class="form-control" id="password" placeholder="Ingresa Contraseña">
-       </div>
-       <small id="emailHelp" class="form-text text-muted">Todos los datos seran confidenciales</small>
-       <button onclick="registrar()" type="submit" class="btn btn-primary">Registrar</button>
-     </div>
-   </article>
+ <!--FORMULARIO REGISTRO-->
+ <section class="container">
+    <article class="row">
+      <div class="col-lg-4 col-sm-5 registro-top">
+			<h4>Registrate</h4>
+			<!--EMAIL-->
+			<div class="form-group">
+			<label for="exampleInputEmail1">Email</label>
+			<input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Ingresa email">
+			</div>
+			<!--CONTRASEÑA-->
+			<div class="form-group">
+			<label for="exampleInputPassword1">Contraseña</label>
+			<input type="password" class="form-control" id="password" placeholder="Ingresa Contraseña">
+			</div>
+			<!--BOTONES LOGIN REDES-->
+			<div>
+				<small id="emailHelp" class="form-text text-muted small-text">Todos tus datos seran confidenciales</small>
+				<button onclick="registrar()" type="submit" class="btn  boton-registrador">Registrar</button>
+				<div style="text-align: center">o</div>
+				<button onclick="loginGoogle()" type="submit" class="btn  boton-registrador google">
+					<img src="../images/google-plus.png">Ingresar con Google
+				</button>
+				<button onclick="loginFace()" type="submit" class="btn boton-registrador google">
+					<img  src="../images/facebook.png">Ingresar con Facebook
+				</button>
+			</div>
+        
+      </div>
+    </article>
 </section>
-
 
 
 

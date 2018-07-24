@@ -10,6 +10,9 @@
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    <!--FONTS-->
    <link href="https://fonts.googleapis.com/css?family=Merienda|Source+Sans+Pro:300|Pacifico" rel="stylesheet">
+   <style>
+        body { background-color:white; }
+   </style>
 </head>
 
 
@@ -17,43 +20,40 @@
 
 
 <body>
-       <p class="example">Resize the browser window to see how the background color of this paragraph changes on different screen sizes.</p>
-       <div class="logo">
-           <p>Mom to Mom <br>
-       rompiendo mitos</p>
-       </div>
+        <p class="logo">Mom to Mom
+                <div class="slogan">rompiendo mitos</div>
+            </p> 
 <!--FORMULARIO INGRESO-->
 <section class="container">
        <article class="row">
-               <div class="col-lg-4 col-sm-6">
-                   <h4 class="h4ti">Ingresar</h4>
-               </div>
+            <div class="col-lg-4 col-sm-6">
+                <h4 class="h4ti">Ingresar</h4>
+            </div>
        </article>
-
        <!--EMAIL-->
        <article class="row">
-           <div class="col-2 col-sm-3">
-                   <div class="form-group">
-                       <label for="exampleInputEmail1">Email</label>
-                       <input type="email" class="form-control" id="emailIngreso" aria-describedby="emailHelp" placeholder="Ingresa email">
-                   </div>
-                   <button onclick="ingreso()" type="submit" class="btn btn-primary">Ingresar</button>
-               </div>
-       <!--CONTRASEÑA-->
-           <div class="col-2 col-sm-3">
-                   <div class="form-group">
-                       <label for="exampleInputPassword1">Contraseña</label>
-                       <input type="password" class="form-control" id="passwordIngreso" placeholder="Ingresa Contraseña">
-                   </div>
-           </div>
+           <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email</label>
+                    <input type="email" class="form-control" id="emailIngreso" aria-describedby="emailHelp" placeholder="Ingresa email">
+                </div>
+            </div>
+           <!--CONTRASEÑA-->
+           <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Contraseña</label>
+                    <input type="password" class="form-control" id="passwordIngreso" placeholder="Ingresa Contraseña">
+                </div>
+                 <!--BOTON-->
+                <button onclick="ingreso()" type="submit" class="btn  boton-registrador">Ingresar</button>
+           </div>   
        </article>
        
-
+       <!--RESULTADO-->
        <div id="contenido">
        </div>
 </section>
-       <button onclick="loginGoogle()" type="submit" class="btn btn-primary">Google</button>
-       <button onclick="loginFace()" type="submit" class="btn btn-primary">FaceBook</button>
+    
 
 
 
