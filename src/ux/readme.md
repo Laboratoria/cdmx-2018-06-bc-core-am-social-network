@@ -52,4 +52,31 @@ Nuestra Red Social busca concientizar a la población sobre el cuidado y tratami
 
 ## Target, argumentación del proyecto (negocio y usuario)
 
-## Historias de Usuario
+"Diabetips" esta pensansado en mujeres de 20 a 45 años, ya que son mujeres en edad reproductiva y tienen mas riesgo de sufrir este padecimiento, incluso la Federación Internacional de Diabetes nos dice puede haber descenso de fertilidad, y mayor riesgo de complicaciones del embarazo (Diabetes Gestacional).
+
+En México la diabetes es una enfermedad que ha alcanzado proporciones epidémicas y su impacto seguirá creciendo en las siguientes décadas, principalmente por el aumento de la obesidad, actualmente en nuestro país el 33% de la población total tiene obesidad, el problema no termina ahí, sino que deriva en enfermedades que de no tratarse a tiempo o correctamente pueden causar la muerte.
+
+La tasa de nuevos casos de diabetes y fallecimientos asociados a esta enfermad aumentó en los últimos tres años, al pasar de 401 casos a 487 por cada 100 mil habitantes (informe realizado por 'Panorama de la Salud 2017" de la OCDE ).
+
+En conclusión
+
+* La principal víctima, estadísticamente, por este padecimiento son las mujeres. En la región americana, la diabetes afecta tanto a mujeres (8.6%) como a hombres (8,4%). Sin embargo, las mujeres (29.6%) presentan tasas más altas de obesidad que ellos (24%)
+
+* La diabetes no es una sentencia de muerte, se puede vivir una larga vida, sin embargo obliga a las personas a adoptar hábitos más saludables pero con un costo elevado por los medicamentos, complicaciones y cambio de hábitos alimenticios.
+
+* El Instituto Mexicano para la Competitividad (IMCO), señala que los costos sociales de la diabetes asociada al sobrepeso y la obesidad en el país ascienden a más de 85,000 millones de pesos al año.
+
+## "Diabetips"
+
+Esta red social creará una comunidad, en la que sus usuarias podrán interactuar y compartir habitos alimenticios, sus experiencias con esta enfermedad, comentarios de aliento y tips para tener una vida más saludable. Un plus para ellas es poder tener conectarse desde son su perfil de Facebook o correo de Gmail, incluso ellas podrán guardar un perfil con los datos que generalmente son solicitados por su médico a la hora de asistir a una consulta como son: edad, peso, nivel de glucosa, medicamentos de control, número de seguridad social y sus antecedentes familiares.
+
+Es un hecho que tener este padecimiento significa gastar más, por lo que con esta Red social buscaremos descuentos y patrocinios con las empresas que estan dedicadas a la comercialización de medicamentos,  incluso en un futuro buscar hacer un convenio con empresas relacionadas a la distribución de alimentos, queremos incitar a nuestras usuarias a llevar una mejor alimentación para el control de su enfermedad. 
+
+Consultamos a expertos en el tema y coinciden en que las mujeres tienen más apertura a cambiar sus hábitos alimenticios, hacer actividad física y llevar un control de sus medicamentos a diferencia de los hombres que al enfrentarse a ciertas "restricciones" entran en negación. 
+
+Las mujeres en México tienen un rol muy fuerte, ellas son las líderes del hogar por lo que buscamos ayudar tanto a ellas con el control de su enfermedad y a sus familias promoviendo el cuidado de la salud para todos los integrantes, queremos que las usuarias sean embajadoras de los buenos hábitos no sólo para vivir bien con la enfermadad sino para prevenirla en quienes aún no la padecen. 
+
+
+## Historia de Usuario
+
+Yo como mujer diabética de 27 años, trabajadora y dedicada a mi familia, quiero una aplicacón que me permita interactuar con más mujeres que padezcan esta enfermedad, quiero poder compartir mi sentir tanto físico como emocional, recibir consejos de personas que ya llevan tiempo cuidandose, conocer a historias de personas que a pesar de todo llevan una vida feliz, ir al doctor y saltarme esas preguntas que son repetitivas consulta tras consulta, quisiera poder tener un "perfil" que ya tenga todas esas respuestas para poder mostrarlo a mi doctor y hacer más rápido mi paso por el hospital. No quiero que mi familia sufra lo mismo, por lo que quisiera tener toda la información sobre complicaciones o forma de prevenir para hablar con ellos y hacer conciencia de lo que pasará sino se cuidan.
