@@ -37,7 +37,6 @@ const authentificating = (provider) =>{
     // Los permisos del firebase.auth.AuthCredential ya fueron usados.
     var credential = error.credential;
     console.log(credential);
-
   });
 };
 
