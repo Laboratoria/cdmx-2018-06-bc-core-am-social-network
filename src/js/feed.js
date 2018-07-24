@@ -17,9 +17,12 @@ function printComments(comments) {
     output.appendChild(node);
   });
 }
-
-const output = document.getElementById('comentarios');
-const input = document.getElementById('entrada');
+// botón likes
+// const output = document.getElementById('comentarios');
+// const input = document.getElementById('entrada');
+// const btnLike = document.getElementById(btnLike);
+// let likes = document.getElementById(likes);
+// let contador = 0;
 
 
 //
