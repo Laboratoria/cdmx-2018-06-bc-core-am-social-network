@@ -11,6 +11,7 @@ firebase.initializeApp(config); // con el método firebase.initializeApp se apli
 
 var database = firebase.database();
 
+
 // Getting elements (obteniendo elementos globales: inputs y botones)
 let mail = document.getElementById('email');
 let password = document.getElementById('password');
@@ -103,9 +104,11 @@ firebase.auth().onAuthStateChanged(user => { // cambiar el estado de logeado a n
 
 // Firebase database
 
-const messageInput = document.getElementsByClassName('inputMessage');
+const messageInput = document.getElementsById('input-post');
+
 const message = ()=>{
   let currentUser = firebase.auth().currentUser;
+ 
   let messageValue = messageInput.value;
 
   const newMessagekey = firebase.database().ref().child('messages').push().key;
