@@ -7,6 +7,3 @@ document.getElementById('unirse').addEventListener('click', (event)=>{
 document.getElementById('iniciar').addEventListener('click', (event)=>{
   'Ir a login.html';
 });
-
-
-'ya por faavaaaaar'
