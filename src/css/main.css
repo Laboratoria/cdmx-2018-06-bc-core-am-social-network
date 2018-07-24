@@ -3,8 +3,68 @@
     width: 50%;
     float: right;
     display: block;
+body{
+    background-color: rgba(255, 94, 58, 0.95);
+    font-family: 'roboto';
+    font-weight: 700;
+    font-size: 2em;
+    }
 
+    header {
+      height: fixed;
+      /*background-image: url("../images/");*/
+
+    .img-fluid {
+      width: 25%;
+    }
+
+.form-inline{
+flex-flow: inherit;
+}
+
+.p{
+   text-align: right;
+}
+.dropup .dropdown-toggle::after{
+  margin-left: 0 !important ;
+}
+
+/*Medida para RWD en smartphone*/
+  @media (min-width: 576px) {
+  .img-fluid {
+    width: 50%;
   }
+  .input-width {
+    width: 80%;
+  }
+  .navbar-nav {
+    font-size: 0.6em;
+  }
+}  
+/*Medida para RWD en tabletas*/
+@media (min-width: 768px) {
+  .img-fluid {
+    width: 50%;
+  }
+  .input-width{
+    width: 100%;
+  }
+  .navbar-nav {
+    font-size: 1em;
+  }
+}  
+/*Medida para RWD en laps o desktop mediano*/
+@media (min-width: 992px) {
+  .img-fluid {
+    width: 25%;
+  }
+}
+/*Medida para RWD en laps grandes*/
+@media (min-width: 1200px) {
+  .img-fluid {
+    width: 25%;
+  }
+}
     .login-form {
       width: 50%;
   
@@ -23,8 +83,14 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+  }*/
 
-  }
+.form-control{
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    height: 7em;
+    border: solid 1px #000000;
+    
 }
 
 @media (max-width: 768px) {
@@ -35,16 +101,30 @@
   .welcome {
 
   }
+
+.font-color{
+  color: aliceblue;
 }
 
-@media (max-width: 576px) {
-  .container {
- 
-  }
-
-}*/
-
-
-
-
-
+/*@media (max-width: 0px) { /* Change this to 0 */
+    /*.navbar-nav .open .dropdown-menu {
+      position: fixed;
+      float: none;
+      width: auto;
+      margin-top: 0;
+      background-color: transparent;
+      border: 0;
+      box-shadow: none;
+    }
+    .navbar-nav .open .dropdown-menu > li > a,
+    .navbar-nav .open .dropdown-menu .dropdown-header {
+      padding: 5px 15px 5px 25px;
+    }
+    .navbar-nav .open .dropdown-menu > li > a {
+      line-height: 20px;
+    }
+    .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-nav .open .dropdown-menu > li > a:focus {
+      background-image: none;
+    }
+  }*/
