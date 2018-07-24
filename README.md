@@ -85,6 +85,6 @@ Cuando tengas una propuesta de mejora a nuestro producto, te agradeceríamos muc
 
 ### Contáctanos
 
-* [Lex Hernández](www.facebook.com/TheHackerCat)
+* [Lex Hernández](https://facebook.com/TheHackerCat)
 
-* [Andrea García](www.facebook.com/AnndyGrs)
+* [Andrea García](https://facebook.com/AnndyGrs)
