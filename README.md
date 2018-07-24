@@ -37,7 +37,7 @@ Este proyecto esta basado en _Facebook_, ya que creemos que es la red social má
 
 La elección del nombre esta basada en la palabra _Hero_ (héroe), en inglés por los alcances que se tienen en mente para este proyecto. Se modificó esta palabra por _Shero_, adicionando la _S_ al inicio por la pronunciación de "ella" en inglés (_she_). La estilización de las tres primeras letras mayúsculas se para resaltar a nuestras usuarias: ellas.
 
-Se decidió _SHEro_ y no _SHEroes_ porque creemos que ésta última palabra, ademas de más larga, no terminó de convencernos a nosotras, ni a las encuestadas.
+Se decidió _SHEro_ y no _SHEroes_ porque ésta última palabra, ademas de más larga, no terminó de convencernos a nosotras, ni a las encuestadas.
 
 ### ¿Por qué elegir SHEro por encima de otras redes sociales?
 
