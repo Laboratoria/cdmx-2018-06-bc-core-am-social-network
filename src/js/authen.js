@@ -1,31 +1,84 @@
-// Accedo al serviciode autentifacion
-// let authen = firebase.auth();
+let config = {
+  apiKey: "AIzaSyBmvR-XICKHnSpAsppIMfCA9vfE3lT3yBU",
+  authDomain: "feminismi-6e40a.firebaseapp.com",
+  databaseURL: "https://feminismi-6e40a.firebaseio.com",
+  projectId: "feminismi-6e40a",
+  storageBucket: "feminismi-6e40a.appspot.com",
+  messagingSenderId: "638405712713"
+};
+  firebase.initializeApp(config);
 
-// let enter = document.getElementById('enter');
+window.authen = {
+  registerAccount: (email,password) => {
+    firebase.auth().createUserWithEmailAndPassword(email, password)
+    .catch(error => {
+    // Handle Errors here.
+    let errorCode = error.code;
+    let errorMessage = error.message;
+    // ...
+    });
+  },
 
-// buton.addEventListener('click', event => {
-//     let user = new firebase.auth.GoogleAuthProvider();
-//     authen.signInWithPopup(user);
-// })
-let loginGoogle = document.getElementById('google-user');
+  loginAccount: (enterEmail,enterPassword) => {
+    firebase.auth().signInWithEmailAndPassword(enterEmail, enterPassword)
+    .catch(error => {
+      // Handle Errors here.
+      let errorCode = error.code;
+      let errorMessage = error.message;
+      // ...
+    });
+  },
 
-let provider = new firebase.auth.GoogleAuthProvider();
+  loginGoogle: () => {
+    let provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth()
+    .signInWithPopup(provider)
+    .then(result => {
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      let token = result.credential.accessToken;
+      // The signed-in user info.
+      let user = result.user;
+    });
+  },
 
-loginGoogle.addEventListener('click', event => {  
-  firebase.auth()
-  .signInWithPopup(provider)
-  .then(result => {
-  })
-}); 
+  loginFacebook: () => {
+    let provider= new firebase.auth.FacebookAuthProvider();
+    firebase.auth().signInWithPopup(provider).then(result => {
+      // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+      let token = result.credential.accessToken;
+      // The signed-in user info.
+      let user = result.user;
+    });
+  },
 
-let loginFacebook = document.getElementById('facebook-user');
-let providerFacebook = new firebase.auth.FacebookAuthProvider();
+  closeAccount: () => {
+    firebase.auth().signOut().then(function() {
+      // Sign-out successful.
+      window.open('../index.html','_self');  
+      }).catch(function(error) {
+      // An error happened.
+    });
+  },
+};
 
-loginFacebook.addEventListener('click', event => {
-  firebase.auth().signInWithPopup(providerFacebook).then(function(result) {
-    // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-    var token = result.credential.accessToken;
-    // The signed-in user info.
-    var user = result.user;
+const monitor = () => {
+  firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+      // User is signed in.
+      let displayName = user.displayName;
+      let email = user.email;
+      window.open('../src/views/view1.html','_self');
+      // document.location.assign('../src/views/view1.html');
+      let emailVerified = user.emailVerified;
+      let photoURL = user.photoURL;
+      let isAnonymous = user.isAnonymous;
+      let uid = user.uid;
+      let providerData = user.providerData;
+      // ...
+    } else {
+      // User is signed out.
+      // ...
+    }
   });
-});
+}; 
+monitor(); 
