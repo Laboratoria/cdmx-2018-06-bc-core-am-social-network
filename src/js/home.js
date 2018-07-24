@@ -41,6 +41,7 @@
   btnShare.addEventListener('click', event => { // Evento para mandar el texto dee entrada a la database
     const currentUser = firebase.auth().currentUser;
     let textInPost = postText.value;
+    postText.value = '';
     const newPostKey = firebase.database().ref().child('posts').push().key;
     firebase.database().ref(`posts/${newPostKey}`).set({
       creator: currentUser.uid,
