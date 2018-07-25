@@ -1,3 +1,32 @@
+html body{
+    background-color: #edf1f5 !important;
+}
 section div {
     font-size: 100%;
+}
+
+.registro{
+    background-color: #ebddec70;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffc107;
+}
+
+nav.navbar {
+    background-color: #6125c0 !important;
+  /* background-color: #7326c4 !important; */
+}
+
+.btn-outline-success {
+  color: #f7bb07;
+  background-color: transparent;
+  background-image: none;
+  border-color: #f7bb07;
+}
+
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+  box-shadow: 1px 2px 10px #e4dcdc;
 }
