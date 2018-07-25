@@ -83,7 +83,7 @@ const insertUserProfile = () =>{
 };
 
 const profile = (isUser, userName, userAge, userWeight, userSize, blodSugar, medicine, nss, fatherSick, grandPsick, childrenSick) =>{
-  return '<table class="centered striped responsive-table">' +
+  return '<table class="table table-hover">' +
     '<thead>' +
       '<tr>' +
         '<th>Nombre</th>' +
