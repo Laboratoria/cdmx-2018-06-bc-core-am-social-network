@@ -91,10 +91,95 @@ Version Desktop
 <img align="center" src="./imagenes-ux/5.jpeg"/>
 
 
+### Fundamento para el protrotipado
 
+La idea principal de nuestra red social no es sólo ofrecer, como muchas, recetas saludable, si bien se basará en esto, lo principal es crear y fomentar la autonomía de la alimentación de todo aquel que ya haya tomado este primer paso. Nuestra comunidad ayudrá con ese gran paso ofreciendo consejos e ideas de usuaros que estuvieron es esa misma situación y cómo salieron de ello.
+
+Teniendo en cuanta que la comida entra por lo ojos, sabemos que la toma de decisiones en cuanto a colores e imagenes es primordial para motivar al usuario, el uso de lenguaje poco técnico en las recetas y tips, es de las mayores preocupaciones entre los usuarios al igual que los utensilios de cocina. El color es capaz de estimular o deprimir, puede crear alegría o tristeza. Así mismo, determinados colores despiertan actitudes activas o por el contrario pasivas. Con colores se favorecen sensaciones térmicas de frío o de calor, y también podemos tener impresiones de orden o desorden.
+
+Para nuestra red social hemos decidido incorporar el color naranja en nuestro logotipo, este es asociado mayormente a alimentos cítricos que hacen de referencia una vida saludable. Este color tiene el poder de activar nuestro organismo, lo que ocasiona la necesidad repentina de comer y un creciente hambre, mientras nuestro cerebro está siendo influenciado mentalmente para esto.
+
+En el campo de Marketing:
+
+* Significa agresión
+* Crea un llamado a la acción: Compre, Venda, Suscríbase
+* Presente en compradores impulsivos
+* Representa una marca amigable, alegre y confiable
+
+También optamos por un contraste con un color verde que representa:
+
+Verde
+Personalidad/Emociones
+
+* Asociado con salud y tranquilidad
+* Simboliza el dinero
+* Denota naturaleza
+* Alivia la depresión
+* Es utilizado en gafas de visión nocturna porque el ojo humano es más sensible y capaz de discernir los contrastes y las sombras
+* Representa un nuevo crecimiento
+
+Marketing
+
+* Usado para relajar en las tiendas
+* Asociado con riqueza
+* Ha sido un símbolo de fertilidad
+
+Haciendo un benchmark encontramos 15 apps más utilizadas para promover una buena alimentación. Toda se pueden descargar y probar en smartphone o tableta. Todas ellas ayudan a conocer más a fondo el mundo de la comida y a descubrir qué alimentos son más saludables, cuál es su origen, cómo cocinarlos o incluso conocer qué ejercicio físico es necesario para “quemar” esa golosina que te acabas de comer.
+
+### 1 Harvest 
+¿Cuáles son los mejores productos para una determinada época del año? ¿Cómo almacenar la comida? Harvest permite responder a estas preguntas, ofreciendo trucos y respuestas a 120 frutas y verduras, con el objetivo de que los usuarios las conozcan con profundidad. Disponible sólo en plataformas iOS.
+
+### 2 MySugr
+Ideada para ususarios con diabetes, MySugr Logbook es una app que permitirá llevar un registro del azúcar que consumimos con nuestros alimentos. En educación podemos usarla de un modo universal, para que nuestros alumnos investiguen las cantidades de azúcar que implican ciertas comidas, o para descubrir cómo mejorar su alimentación en cuanto a esta variable. La encontramos en iOS y en Android.
+
+### 3 True Food Shoppers Guide
+Aunque destinada a un público adulto que quiera tener una buena alimentación en su día a día, True Food Shoppers Guide puede ser un complemento genial en algunas actividades de Secundaria y Bachillerato: permite conocer los ingredientes con los que se realizan ciertos alimentos, y si éstos han sido modificados genéricamente. Es gratuita y está disponible en iOS y en Android.
+
+### 4 MyFitnessPal
+Una de las apps más conocidas para conocer las calorías de los alimentos es también un excelente complemento para fomentar una buena alimentación. My Fitness Pal cuenta con una enorme base de datos que nos dará la composición de prácticamente cualquier alimento, incluyendo las kilocalorías que aporta y muchos otros datos. Esto incluye desde ingredientes sueltos hasta marcas y alimentos ya preparados, y es una plataforma excelente tanto en su versión web como en sus apps disponibles para iOS y para Android.
+
+### 5 ShopWell
+¿Cómo conocer los alimentos que ingerimos? ¿Son saludables? ShopWell es una app que te permite conocer al instante información relativa a todo tipo de productos, con sólo escanear su código de barras. Esto permitirá que, por ejemplo, los usuarios pueden comprar alimentos y conocerlos con más profundidad a través de esta app. Está disponible en iOS y en Android.
+
+### 6 Diana come Sano
+La Fundación Mútua General de Catalunya ha publicado en las tiendas de aplicaciones móviles Diana come Sano, una app completamente gratuita en la que jugaremos con Diana, una joven pelirroja que nos irá guiando a través de diferentes juegos y puzzles con los que aprenderemos los principios básicos de una buena alimentación. Es completamente gratuita y está disponible en plataformas iOS y en Android.
+
+### 7 Healthy Food Monsters
+Un pequeño monstruito será el personaje que manejaremos en Healthy Food Monsters, y nuestro objetivo es el de ingerir los diferentes alimentos que aparecen en el mapa: deberemos escoger los poco saludables, y eliminar —con unas pequeñas bombas— a los que pueden ser nocivos, como hamburguesas o pizzas. Fácil y sencillo, orientado a niños alrededor de los 6 años para pasar un buen rato; está disponible en iOS y es gratuita.
+
+### 8 Veggie Circus Farm
+Para un público aún más joven, de alrededor de los 2 años, se lanza Veggie Circus Farm: para aprender a pronunciar cómo se dicen 15 vegetales habituales en el mundo, y adentrar así a los pequeños en el mundo de la comida sana con la verdura. Para que les pierdan el miedo a las zanahorias, brócolis y que cuanto los vean en el plato no los rechacen inmediatamente. Disponible una versión ‘lite’ gratuita en iOS y en Android a través de la Amazon App Store.
+
+### 9 Learn Fruits and Vegetables for Kids
+También para un primer contacto, Learn Fruits and Vegetables for Kids es una sencilla app con la que los niños podrán interactuar para conocer la pronunciación y la escritura de algunas frutas y verduras esenciales. Incluyen, además, algunos puzzles para divertirse y tests con los que poner a prueba los conocimientos de niños de hasta 5 años. Disponible en Android gratis.
+
+### 10 Eat Smart
+Aunque hay una comunidad de comida sana con este nombre, la realidad de Eat Smart es que es una aplicación independiente orientada a jóvenes a partir de los 4 años. Se trata de un juego de plataformas en el que deberemos ir saltando para avanzar en cada nivel, procurando evitar la comida nociva y prefiriendo la sana. Sencilla y divertida para jugar un rato, disponible completamente gratis en iOS y en Android.
+
+### 11 Food Truth
+La “verdad sobre la comida” es una página web pero también una app disponible gratis en iOS, que nos cuenta todo sobre los ingredientes. Algunos serán comunes, pero otros de esas rarezas que muchos no se atreven a probar por mero desconocimiento. Food Truth nos permite conocer a fondo los alimentos y, de paso, nos da unas cuantas recetas saludables y de temporada para que conozcamos cómo utilizarlos en la cocina.
+
+### 12 Awesome Eats
+Imagina un huerto virtual en el que tienes que recoger y ordenar frutas, vegetales y grano para ir avanzando. Awesome Eats busca que los más jóvenes se acerquen a los alimentos más sanos de la alimentación en base a mostrarlos con sencillos juegos que han sido pensados para niños a partir de los 6 años. Varias decenas de niveles están disponibles en iOS y Android, en todas ellas de forma gratuita.
+
+### 13 Fooducate
+Fooducate pone en una app móvil (disponible en smartphones y tabletas Android) todo lo necesario para llevar a cabo una dieta sana y equilibrada. En un ámbito educativo es interesante, por ejemplo, para comprobar si las comidas que los jovenes van realizando son saludables o no, y cómo pueden mejorarse, gracias al registro de salud que incluye y que permite escanear los códigos de barras de los alimentos.
+
+### 14 Nicolas’ Garden
+Esta app es un caso muy particular, ya que su idea ha sido desarrollada por Nicolas Come, un ’emprendedor’ de sólo 9 años. El objetivo de Nicolas’ Garden, disponible en iOS y en Android completamente gratis, nos permite disfrutar de cientos de recetas saludables y que los propios niños pueden realizar. Combina explicaciones tanto de los ingredientes como de la secuencia necesaria para realizar cada una de las recetas, todas ellas pensadas en que niños de entre 5 y 15 años puedan ponerlas en práctica.
+
+### 15 Eat & Move-O-Matic
+Y terminamos con Eat & Move-O-Matic, la más “gamificada” de todas las que hablamos aquí. Diseñada y desarrollada por la New Mexico State University, dispone de una serie de pequeños juegos, preguntas y respuestas y comparativas que nos permitirán ahondar tanto en la parte de la nutrición de los alimentos como en la del ejercicio físico, con mucha información que muestra de forma tremendamente visual. Disponible gratis en iOS.
    
-   
-   
+En su mayoria, las aplicaciones usan colores y lenguaje muy sencillo de entender, su interfaz es muy organica y contrastante, usan de fondo el blanco para que los colores, verde, naranja o rojo, que son los que más se usan, no sean tan agresivos.
+
+<img align="center" src="./imagenes-ux/benchmark1.png"/>
+<img align="center" src="./imagenes-ux/benchmark2.jpg"/>
+<img align="center" src="./imagenes-ux/mysugr-logbook-phone.png"/>
+<img align="center" src="./imagenes-ux/selecting-2Harvest.png"/>
+
+
+
 
 Hacer un  prototipo de alta fidelidad. FFIGMAAAAA
 Testear el prototipo con usuarios. --------- Hasta que tengamos el figma
