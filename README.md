@@ -49,13 +49,13 @@ Como lo hemos mencionado antes, **SHEro** es una plataforma orientada a mujeres,
 
 * Yo, como una **feminista**, puedo registrarme en una nueva red social para conectarme con otras personas con ideales como yo.
   - Yo, como usuaria registrada en esta red social puedo loguearme con mi correo para empezar a usar esta red.
-  - Yo, como usuaria registrada en esta red social, puedo poder loguearme con mi cuenta facebook o google+ para empezar a usar esta red.
+  - ~~Yo, como usuaria registrada en esta red social, puedo poder loguearme con mi cuenta facebook o google para empezar a usar esta red.~~
 
 * Yo, como usuaria logueada en esta red social, puedo postear un mensaje en mi muro para que otras personas puedan ver lo que pienso.
 
 * Yo, como usuaria logueada puedo ver los posts publicos de otras usuarias aunque no sean mis amigas.
 
-* Yo, como usuaria logueada puedo cerrar mi sesión cuando yo lo decida.
+* ~~Yo, como usuaria logueada puedo cerrar mi sesión cuando yo lo decida.~~
 
 ## Uso e instalación
 
