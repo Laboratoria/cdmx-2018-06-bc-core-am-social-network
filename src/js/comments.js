@@ -35,6 +35,3 @@ const addLike = () => {
   countLikes = countLikes + 1;
   document.getElementById('likeCounter').textContent = countLikes;
 }
-
-
-// $("#reaccion").text(countLikesadd);

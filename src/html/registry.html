@@ -11,6 +11,7 @@
   <link rel="icon" href="../images/icono.jpg">
 </head>
 <body>
+  <!-- Permisos de Facebook -->
   <script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -22,41 +23,52 @@
   };
 
   (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
 </script>
-  <h2 id='userSpace'></h2>
-  <pre id = 'obj'></pre>
+<h2 id='userSpace'></h2>
+<pre id = 'obj'></pre>
 
-  <header id="encabezado">
-    <h1 class="text-center">DiabeTips</h1>
-  </header>
+<!-- Comienza el cuerpo del contenido -->
 
-  <section class="container-fluid">
-    <div id="cuerpo" class= "text-center col-4 offset-md-4">
-    <form id="usuario" action="home.html" class="text-center form-group">
-      <h4>Ingreso de Usuarios</h4>
+<header id="encabezado">
+  <h1 class="text-center">DiabeTips</h1>
+</header>
 
-      <!--Registro con Gmail de Google-->
-      <button class="btn btn-danger" type="button" name="button" id="btn-google">Ingresa con Google</button>
+<section class="container-fluid">
+  <div class="row">
+    <h4 class="text-center col-12">Registro de Nuevo Usuarios</h4>
+  </div>
 
-      <!--Registro con Facebook-->
-      <button class="btn btn-primary" type="button" name="button" id="btn-facebook">Ingresa con Facebook</button>
+  <div class="row">
+      <div id="cuerpo" class= "text-center col-8 offset-2">
+        <form id="usuario" action="home.html" class="text-center form-group">
+            <!--Registro con Gmail de Google-->
+            <button class="btn btn-danger btn-block" type="button" name="button" id="btn-google">Ingresa con Google</button>
+            <!--Registro con Facebook-->
+            <button class="btn btn-primary btn-block" type="button" name="button" id="btn-facebook">Ingresa con Facebook</button>
+        </form>
+    </div>
+  </div>
 
+  <div class="col-12">
+    <form action="home.html" class="text-center form-group">
       <!--Registro de usuario-->
-      <input type="email" id="uEmail" placeholder="Ingresa email">
-      <input type="password" id="uPsw" placeholder="Ingresa password">
-      <input type="text" id="uName" placeholder="Ingrese su nombre de usuario">
+      <input type="email" id="uEmail" placeholder="Correo electrónico">
+      <input type="password" id="uPsw" placeholder="Contraseña">
+      <input type="text" id="uName" placeholder="Nombre de Usuario">
+      <input type="text" id="name" placeholder="Nombre completo">
+      <input type="text" id="birthday" placeholder="dd / mm / aaaa">
+      <input type="text" id="country" placeholder="Pais">
+      <br>
       <button type="button" id="buttonIngresar" name="enviar" onclick="ingresar()" class="btn btn-dark btn-md">Enviar</button>
-
 
     </form>
   </div>
-  <p>No estás registrado?  <a href="./registro.html" title="Registro de nuevo usuario">Registrate Aquí</a></p>
 </section>
 <div id="container"></div>
 <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
