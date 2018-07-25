@@ -6,10 +6,10 @@
 }
 
 #card { 
-height: 140px;
+/* height: 140px;
 width: 290px;
 left: 25px;
-right: 15px;
+right: 15px; */
 } 
 /* 
 #icon_prefix2 {
@@ -20,7 +20,7 @@ width: 211px;
 }
 
 body{
-   background-image: url("images/fondologin1.jpg");
+   /* background-image: url("../images/fondologin1.jpg"); */
    background-repeat:no-repeat;
    background-size: cover;
    height: 100%;
