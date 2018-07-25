@@ -3,6 +3,8 @@ const db = firebase.database();
 const commentText = document.getElementById('comment-text');
 const commentSend = document.getElementById('send-comment');
 const printComments = document.getElementById('comments');
+const addLikes = document.getElementById('likes');
+const likeCounter = document.getElementById('likeCounter');
 
 // Impresion de mensajes
 /* El metodo ready permite que al cargar la pagina, automaticamente
@@ -15,6 +17,9 @@ $(document).ready(() => {
     $('#comments').append('<div>' + data.val().message + '</div>');
    });
 });
+
+
+
 // Añadir un observador al boton con vanilla js
 commentSend.addEventListener('click', (event) =>{
   let userMessage = commentText.value;
@@ -23,10 +28,18 @@ commentSend.addEventListener('click', (event) =>{
   });
   console.log(userMessage);
 });
-// contador de likes 
+
+// contador de likes
 let countLikes = 0;
-function countLikesadd() {
-  countLikes += 1;
+// function countLikesadd () {
+//   countLikes += 1;
+//   console.log(countLikes);
+// }
+// let contador = countLikes;
+const addLike = () => {
+  countLikes = countLikes + 1;
+  document.getElementById('likeCounter').textContent = countLikes;
 }
 
-$("#reaccion").text(countLikesadd);
+
+// $("#reaccion").text(countLikesadd);
