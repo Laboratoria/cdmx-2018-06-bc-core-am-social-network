@@ -6,7 +6,7 @@ $('#login').click(function(){
   .signInWithPopup(provider)
   .then(function(result) {
     //console.log(result.user);
-    guardaDatos(result.user);
+    window.location.href = "views/wall.html";
     $('#login').hide();
     });
 });
@@ -18,7 +18,7 @@ $('#face').click(function(){
   .signInWithPopup(providerf)
   .then(function(result) {
     //console.log(result.user);
-    guardaDatos(result.user);
+    window.location.href = "views/wall.html";
     $('#face').hide();
     $('#root').append("<img src='"+result.user.photoURL+"'/>")
   });
@@ -29,6 +29,7 @@ $('#gith').click(function(){
   firebase.auth()
   .signInWithPopup(providerg)
   .then(function(result) {
+    window.location.href = "views/wall.html";
     //console.log(result.user);
     /*guardaDatos(result.user);
     $('#face').hide();
