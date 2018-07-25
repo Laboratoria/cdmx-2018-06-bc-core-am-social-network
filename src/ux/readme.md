@@ -1,6 +1,12 @@
 ## Sketching de Diseño Ideal
-Mobie first + Desktop
-
+Mobie first 
+![alt text](img/general.jpg)
+![alt text](img/carruselinicio.jpg)
+![alt text](img/inicio.jpg)
+![alt text](img/inicio1.jpg)
+![alt text](img/registrousuario.jpg)
+![alt text](img/comentario.jpg)
+![alt text](img/feed.jpg)
 ## Benchmark (externo)
 "DiabeTips"
 Mejora tu calidad de vida y la de los demas.
