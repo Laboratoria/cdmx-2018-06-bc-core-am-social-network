@@ -41,7 +41,8 @@
                       <input type="email" id="userEmail" placeholder="Ingresa email">
                       <input type="password" id="userPsw" placeholder="Ingresa password">
                       <input type="text" id="username" placeholder="Ingrese su nombre de usuario">
-                      <button type="button" id="buttonRegistrar" name="enviar" onclick="registrar()">Enviar</button>
+                      <button type="button" id="buttonRegistrar" name="button" class="btn btn-dark btn-md">LogUp</button>
+                      <button type="button" id="buttonIngresar" name="button" class="btn btn-dark btn-md">LogIn</button>
                   </form>
                 </div>
               </section>
@@ -51,7 +52,7 @@
                    <!--Registro con Gmail de Google-->
                 <button class="btn btn-danger" type="button" name="button" id="btn-google">Ingresa con Google</button>
                 <button class="btn btn-primary" type="button" name="button" id="btn-facebook">Ingresa con Facebook</button>
-
+                <div id="container"></div>
                   </div>
               </section>
               <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
@@ -59,7 +60,6 @@
               <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-auth.js"></script>
               <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js"></script>
               <script src="../js/authentications.js"></script>
-
               <script src="../js/index.js"></script>
 
 </body>

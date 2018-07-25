@@ -42,10 +42,7 @@ const authentificating = (provider) =>{
 
 // Registro por correo
 
-registrar = () =>{
-  let email = document.getElementById('uEmail').value;
-  let password = document.getElementById('uPsw').value;
-  let userName = document.getElementById('uName').value;
+const registrar = (email, password, userName) =>{
   firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(function() {
       verificarEmail();
@@ -58,24 +55,22 @@ registrar = () =>{
       console.log(errorMessage);
     });
 };
-ingresar = () =>{
-  let emailU = document.getElementById('uEmail').value;
-  let passwordU = document.getElementById('uPsw').value;
-  let nameU = document.getElementById('uName').value;
+const ingresar = (emailU, passwordU, nameU) =>{
   firebase.auth().signInWithEmailAndPassword(emailU, passwordU)
     .then(function() {
-      observadorEmail();
+      observadorEmail(nameU);
     })
     .catch(function(error) {
     // Manejo de error
-      var errorCode = error.code; console.log(errorCode);
-      var errorMessage = error.message; console.log(errorMessage);
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    console.log(errorCode);
+    console.log(errorMessage);
     // ...
     });
 };
 
-observadorEmail = ()=>{
-  let nameU = document.getElementById('uName').value;
+const observadorEmail = (nameU)=>{
   console.log(nameU);
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
@@ -96,13 +91,12 @@ observadorEmail = ()=>{
 };
 // observadorEmail();
 
-userSpace = (user)=>{
+const userSpace = (user)=>{
   let nameU = user;
-  let contenido = document.getElementById('container');
-  contenido.innerHTML = `<p>${'Bienvenido'}${' '}${nameU}</p>
+  document.getElementById('container').innerHTML = `<p>${'Bienvenido'}${' '}${nameU}</p>
   <button type="button" id="buttonLogout" onclick="cerrar()">LogOut</button>`;
 };
-cerrar = () =>{
+const cerrar = () =>{
   let contenido = document.getElementById('container');
   firebase.auth().signOut()
     .then(function() {
@@ -114,7 +108,7 @@ cerrar = () =>{
     });
 };
 
-verificarEmail = ()=>{
+const verificarEmail = ()=>{
   let vefificarU = firebase.auth().currentUser;
   vefificarU.sendEmailVerification().then(function() {
     console.log('enviando email');
@@ -122,6 +116,20 @@ verificarEmail = ()=>{
     console.log(error);
   });
 };
+
+document.getElementById('buttonRegistrar').addEventListener('click', (event) => {
+  console.log("entra");
+  let email = document.getElementById('userEmail').value;
+  let password = document.getElementById('userPsw').value;
+  let userName = document.getElementById('username').value;
+  registrar(email, password, userName);
+});
+document.getElementById('buttonIngresar').addEventListener('click', (event) => {
+  let emailU = document.getElementById('userEmail').value;
+  let passwordU = document.getElementById('userPsw').value;
+  let nameU = document.getElementById('username').value;
+  ingresar(emailU, passwordU, nameU);
+});
 /* const userPrintSpace = document.getElementById('obj');
 let database = firebase.database().ref().child('obj');
 database.on('value', snap => console.log(snap.val()));*/
