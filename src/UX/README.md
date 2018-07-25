@@ -22,6 +22,9 @@ Contaran con el apoyo de una/un psicóloga/o, para ayudarlos cuando se sientan q
 
 ## ENCUESTAS
 
-    * Se realizo una encuest para saber que gamma de colores  y que tipogragía sería la adecuada para nuestros usuarios, esto se realizo mediante una encuesta de Google. Los resultados fueron los siguinetes:
+* Se realizo una encuest para saber que gamma de colores  y que tipogragía sería la adecuada para nuestros usuarios, esto se realizo mediante una encuesta de Google. Los resultados fueron los siguinetes:
 
-![Grafica Colores](../imagenesux/grafica color.jpg)
+![Grafica Colores](imagenesux/grafica_color.jpg)
+![Resultado Opcion1](imagenesux/opcion1.jpg)
+![Grafica tipografia](imagenesux/tipografia_resultados.jpg)
+![Resultado Opcion1](imagenesux/opcion2.jpg)
