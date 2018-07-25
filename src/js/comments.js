@@ -31,11 +31,6 @@ commentSend.addEventListener('click', (event) =>{
 
 // contador de likes
 let countLikes = 0;
-// function countLikesadd () {
-//   countLikes += 1;
-//   console.log(countLikes);
-// }
-// let contador = countLikes;
 const addLike = () => {
   countLikes = countLikes + 1;
   document.getElementById('likeCounter').textContent = countLikes;
