@@ -8,45 +8,33 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="icon" href="images/icono.jpg">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" href="../images/icono.jpg">
   </head>
   <body>
-    <a class="btn btn-dark" href="profileForm.html" role="button">Continuar con mi Perfil</a>
-    <div class="row">
-      <div class="col-sm-6 col-md-6 col-lg-6">
-        <div class="form-group">
-          <!--This is the area of commit-->
-          <input id="comment-text" type="text" class="form-control" placeholder="¿Qué quieres compartir?">
-          <!-- <textarea id="entrada" placeholder="¿Qué quieres compartir?" cols="20" rows="3" class="form-control"></textarea> <!form-control es una class de Bootstrap la cual sirve para identificar un campo de entrada, ya sea un input, select o un textarea.-->
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-3">
-        <button class="btn btn-success btn-block" type="button" id="send-comment">Compartir</button>
-      </div>
-    </div>
-  </header>
-</div>
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-6 col-md-6 col-lg-6">
-      <div id="comments" class="form-control">
-        <!-- <textarea id="demo" cols="20" rows="3" class="form-control" readonly="true"></textarea> -->
-      </div>
-    </div>
-  </div>
-</div>
+    <input type="text" id="comment-text">
+    <button type="button" id="send-comment">Enviar</button>
+        <div id="comments"></div>
+    <div id="container">
+      <!-- botón likes -->
+      <i type="" id="likes" onclick="addLike()" class="fa fa-heart" aria-hidden="true"></i> <span id="likeCounter" class="">0</span></div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-    <script src="../js/authentications.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBoO-dyO4PywqOJJVLDAucttJLMlM5N3vs",
+        authDomain: "diabetipsoficial.firebaseapp.com",
+        databaseURL: "https://diabetipsoficial.firebaseio.com",
+        projectId: "diabetipsoficial",
+        storageBucket: "diabetipsoficial.appspot.com",
+        messagingSenderId: "1025645095828"
+      };
+      firebase.initializeApp(config);
+    </script>
     <script src="../js/comments.js"></script>
   </body>
 </html>
