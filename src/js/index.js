@@ -22,11 +22,8 @@ const authentificating = (provider) =>{
     var token = result.credential.accessToken;
     // Datos del usuario logeado
     var user = result.user;
-
-    // if (user =="USUARIO1" && password=="CONTRASEÑA1") {
-    //   window.location= 'home.html';
-
-    console.log(result);
+    document.getElementById('container').innerHTML = `<p>${'Bienvenido'}${' '}${'usuario'}</p>
+    <button type="button" id="buttonLogout" onclick="cerrar()">LogOut</button>`;
   }).catch(function(error) {
     // enerar error
     var errorCode = error.code;
@@ -42,7 +39,7 @@ const authentificating = (provider) =>{
 
 // Registro por correo
 
-const registrar = (email, password, userName) =>{
+const registrar = (email, password, userName, name, birthday, country) =>{
   firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(function() {
       verificarEmail();
@@ -119,9 +116,9 @@ const verificarEmail = ()=>{
 
 document.getElementById('buttonRegistrar').addEventListener('click', (event) => {
   console.log("entra");
-  let email = document.getElementById('userEmail').value;
-  let password = document.getElementById('userPsw').value;
-  let userName = document.getElementById('username').value;
+  let email = document.getElementById('uEmail').value;
+  let password = document.getElementById('uPsw').value;
+  let userName = document.getElementById('uName').value;
   registrar(email, password, userName);
 });
 document.getElementById('buttonIngresar').addEventListener('click', (event) => {
