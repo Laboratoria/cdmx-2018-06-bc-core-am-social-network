@@ -10,6 +10,26 @@ html, body {
   min-height: 100%;
 }
 
+/* Botones de Unirse e INICIO */
+
+#footer a {
+    width:48%;
+    padding-top: 30px;
+    color: #fff;
+    text-decoration: none;
+    background-color: black;
+    -webkit-text-decoration-skip: objects
+  }
+
+#footer a:hover{
+  color: #F7D358;
+}
+
+#footer a:active{
+  color: #FE2E2E;
+}
+
+/* Menú footer */
 #footer{
   background-color: #000;
   position: relative;
