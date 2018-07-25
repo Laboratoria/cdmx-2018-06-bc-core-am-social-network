@@ -1,4 +1,7 @@
 {
+  "env": {
+    "browser": true
+  },
   "parserOptions": {
     "ecmaVersion": 6
   },
@@ -27,6 +30,3 @@
     "no-array-constructor": 1
   }
 }
-
-
-
