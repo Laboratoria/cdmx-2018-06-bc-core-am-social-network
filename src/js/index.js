@@ -1,112 +1,125 @@
-var config = {
-  apiKey: "AIzaSyCgMJoPu-MKQgVZpkMTYo6a6CVTrPpllQ0",
-  authDomain: "red-social-f407d.firebaseapp.com",
-  databaseURL: "https://red-social-f407d.firebaseio.com",
-  projectId: "red-social-f407d",
-  storageBucket: "red-social-f407d.appspot.com",
-  messagingSenderId: "862806390134"
+window.initializeFirebase = () => {
+  firebase.initializeApp({ 
+    apiKey: 'AIzaSyCgMJoPu-MKQgVZpkMTYo6a6CVTrPpllQ0',
+    authDomain: 'red-social-f407d.firebaseapp.com',
+    databaseURL: 'https://red-social-f407d.firebaseio.com',
+    projectId: 'red-social-f407d',
+    storageBucket: 'red-social-f407d.appspot.com',
+    messagingSenderId: '862806390134'
+  });
 };
-firebase.initializeApp(config);
 
+document.getElementById('btn-registrar').addEventListener('click', event => {
+  event.preventDefault();
+  let email = document.getElementById('email').value;
+  let password = document.getElementById('password').value;
+  registrar(email, password);
+  console.log('diste un click');
+});
 
-function registrar() {
-  let email = document.getElementById("email").value;
-  let contraseña = document.getElementById("password").value;
-
-  //sie el usuario se regsitro de manera correcta se ejecutara la funcion verificar
-  firebase.auth().createUserWithEmailAndPassword(email, contraseña)
-    .then(function () {
-      verificar()
+const registrar = (email, password) => {
+// si el usuario se regsitro de manera correcta se ejecutara la funcion verificar
+  firebase.auth().createUserWithEmailAndPassword(email, password)
+    .then(result => {
+      verificar();
+      alert('Se te ha enviado un correo para verificar tu cuenta');
     })
-    .catch(function (error) {
-      // Handle Errors here.
-
+    .catch((error) => {
       let errorCode = error.code;
       let errorMessage = error.message;
       console.log(errorCode);
-      console.log(errorMessage);
-      // ...
+      if (errorCode === 'auth/invalid-email') {
+        alert('Ingresa un correo electrónico válido');
+      } else if (errorCode === 'auth/weak-password') {  
+        alert('Ingresa una contraseña válida, mínimo 6 caracteres');
+      } else if (errorCode === 'auth/email-already-in-use') {
+        alert('Usuario ya registrado, favor de verificar datos');
+      }
     });
-}
+};
 
+document.getElementById('btn-ingresar').addEventListener('click', event => {
+  event.preventDefault();
+  let email = document.getElementById('email').value;
+  let password = document.getElementById('password').value;
+  ingresar(email, password);
+  console.log('diste un click');
+});
 
-
-
-function ingresar() {
-  let emailIngreso = document.getElementById("emailIngresar").value;
-  let passwordIngreso = document.getElementById("passwordIngresar").value;
-  firebase.auth().signInWithEmailAndPassword(emailIngreso, passwordIngreso)
-    .catch(function (error) {
-      // Handle Errors here.
+const ingresar = () => {
+  let email = document.getElementById('email-ingresar').value;
+  let password = document.getElementById('password-ingresar').value;
+  firebase
+    .auth()
+    .signInWithEmailAndPassword(email, password)
+    .then(event => {
+      location.href = ('../views/home.html');
+    })
+    .catch(error => {
       let errorCode = error.code;
       let errorMessage = error.message;
-      console.log(errorCode);
       console.log(errorMessage);
-      // ...
+      if (errorCode === 'auth/wrong-password') {
+        alert('Por favor, verifica tu contraseña.'); 
+      } else if (errorCode === 'auth/user-not-found' || errorCode === 'auth/invalid-email' || errorCode === 'auth/argument-error') {
+        alert('Verifica tu usuario');
+      }
     });
+};
 
-}
-//verificar si existe un usuario y darle acceso
-function observador() {
-  //cuando  el usuario esta registrado
-  firebase.auth().onAuthStateChanged(function (user) {
+// verificar si existe un usuario y darle acceso
+const observador = () => {
+  // cuando  el usuario esta registrado
+
+  firebase.auth().onAuthStateChanged(user => {
     if (user) {
-      console.log("existe usuario registrado");
+      // console.log("existe usuario registrado");
       // User is signed in.
 
       aparece();
-      var displayName = user.displayName;
-      var email = user.email;
-      //cuando el usuario ya confirmo correo
-      console.log(user.emailVerified);
-      var emailVerified = user.emailVerified;
-      var photoURL = user.photoURL;
-      var isAnonymous = user.isAnonymous;
-      var uid = user.uid;
-      var providerData = user.providerData;
+      let displayName = user.displayName;
+      let email = user.email;
+      let userPhoto = user.photoURL;
+      // cuando el usuario ya confirmo correo
+      let emailVerified = user.emailVerified;
+      let photoURL = user.photoURL;
+      let isAnonymous = user.isAnonymous;
+      let uid = user.uid;
+      let providerData = user.providerData;
+      let password = user.password;
       // si no existe un usuario
-
     } else {
       // User is signed out.
-      console.log("no existe usuario registrado");
+      console.log('no existe usuario registrado');
       // ...
     }
   });
-}
+};
 observador();
-//contenido que slo se mostrara al estar registrado
-function aparece() {
-  let contenido = document.getElementById("contenido");
+// contenido que slo se mostrara al estar registrado
+const aparece = () => {
+  let contenido = document.getElementById('contenido');
   contenido.innerHTML = `
   
-  <h4>BIENVENIDO</h4>
-  
-  <button onclick = "cerrar()">cerrar sesión</button>
+  <h1>BIENVENIDO</h1>
   
   `;
 };
 
-function cerrar() {
-  firebase.auth().signOut()
-    .then(function () {
-      console.log("Saliendo...")
-    })
-    .catch(function (error) {
-      console.log(eror)
-    })
-};
-//verificar el correo electronico con el que se registra
-function verificar() {
-  //enviara correo para verificar
+
+// verificar el correo electronico con el que se registra
+const verificar = () => {
+  // enviara correo para verificar
   var user = firebase.auth().currentUser;
-  //usuario a quien se le mandara correo
+  // usuario a quien se le mandara correo
   user.sendEmailVerification()
-    .then(function () {
-      //si funciona se mandara correo
+    .then(result => {
+      // si funciona se mandara correo
       // Email sent.
-      console.log("Enviando correo..");
-    }).catch(function (error) {
+      console.log('Enviando correo..');
+    }).catch(error => {
       // An error happened.
-      console.log("error");
+      console.log('error');
     });
-}
+};
+

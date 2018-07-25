@@ -1,7 +1,12 @@
-.container {
-  background-color: #F7D358;
-  width: 60%;
-  border-radius: 10px;
+body {
+  background-image: url("../images/Comida.jpg");
+  font-family: 'Source Sans Pro', sans-serif;
+ }
+ .container { 
+    background-color: #F7D358;
+    width: 50%;
+    border-radius: 10px;
+
 }
 
 h4 {
