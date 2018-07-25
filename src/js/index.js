@@ -43,9 +43,9 @@ const authentificating = (provider) =>{
 // Registro por correo
 
 registrar = () =>{
-  let email = document.getElementById('userEmail').value;
-  let password = document.getElementById('userPsw').value;
-  let userName = document.getElementById('username').value;
+  let email = document.getElementById('uEmail').value;
+  let password = document.getElementById('uPsw').value;
+  let userName = document.getElementById('uName').value;
   firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(function() {
       verificarEmail();
@@ -61,6 +61,7 @@ registrar = () =>{
 ingresar = () =>{
   let emailU = document.getElementById('uEmail').value;
   let passwordU = document.getElementById('uPsw').value;
+  let nameU = document.getElementById('uName').value;
   firebase.auth().signInWithEmailAndPassword(emailU, passwordU)
     .then(function() {
       observadorEmail();
