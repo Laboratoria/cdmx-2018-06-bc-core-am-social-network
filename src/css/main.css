@@ -3,15 +3,16 @@
   padding: 0px;
 }
 
-#encabezado{
-  text-align: center;
-  background-color: #FECC71;
+#carouselExampleIndicators{
+  margin-top: 20px;
 }
 
 nav{
   display:flex;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
+  background-color: blue;
 }
 
 #log-in{
@@ -58,15 +59,7 @@ nav{
 body {
   font-family: 'Montserrat', sans-serif;
   color: #000000;
-  background-color: beige;
-
-}
-
-<<<<<<< HEAD
-#btnregis{
-  display:flex;
-  align-items: center;
-  justify-content: center;
+  background-color;
 }
 
 #sign-up{
@@ -109,3 +102,8 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a2828', endColorstr='#3c3c3c', GradientType=0);
   /* IE6-9 */
 }
+
+section{
+  margin-top: 10px;
+}
+
