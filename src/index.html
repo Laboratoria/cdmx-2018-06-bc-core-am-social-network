@@ -14,14 +14,14 @@
 
     <nav id="titutlo" class="navbar navbar-light bg-light">
          <a id="titutlo"class="navbar-brand" href="#">
-           <img src="views/imagenes/funrun.png" width="30" height="30" class="d-inline-block align-top" alt="">
+           <img src="views/imagenes/titl.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
            Runeat
          </a>
        </nav>
 
          <div class="row">
            <div class="col"id="fondo">
-             <img src="views/imagenes/fondo.png" alt="">
+             <img src="views/imagenes/titl.jpg" alt="">
            </div>
            <div class="col" id="datosUs">
              <h1>Iniciar sesion</h1>
@@ -29,15 +29,16 @@
              <p><span class="fa fa-lock"></span><input id="intPass" type="password" Placeholder="Password" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
 
 
-   <button id="SignUp" type="button" class="btn btn-primary btn-lg btn-block">Registrarse</button>
+   <button id="singUp" type="button" class="btn btn-primary btn-lg btn-block">Registrarse</button>
 
               <button  id="iniciogoogle" type="button" class="btn btn-secondary btn-lg btn-block" onclick="Siguiente()" >Entrar</button>
 
              <div class "col" id="loginSocial">
-               <div id="root"></div>
+               <!--div id="root"></div-->
                <h1>Inicia sesion con</h1>
                <button id="login"><img src="views/imagenes/google-plus.png" alt=""></button>
                <button id="face"><img src="views/imagenes/facebook.png" alt=""></button>
+               <button id="gith"><img src="views/imagenes/github.png" alt=""></button>
 
    </div>
 
@@ -67,8 +68,7 @@
   };
   firebase.initializeApp(config);
 </script>
-<script type="text/javascript" src="js/index.js">
-
-</script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
   </body>
 </html>
