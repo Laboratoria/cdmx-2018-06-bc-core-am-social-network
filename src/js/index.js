@@ -29,3 +29,6 @@ firebase.database().ref("runeat")
   var user = s.val();
  $('#root').append("<img src='"+user.foto+"'/>")
 })
+const Siguiente = () => {
+location.href = ('views/wall.html');
+}
