@@ -17,5 +17,5 @@ database.ref('chat').on('value', snapshot => {
     let post2 = draw.getPost;
     drawPost += `<div >${post2}</div>`;
   });
-  drawPostear.innerHTML += drawPost;
+  drawPostear.innerHTML = drawPost;
 });
