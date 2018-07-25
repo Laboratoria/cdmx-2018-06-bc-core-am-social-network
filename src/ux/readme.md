@@ -1,5 +1,5 @@
 ## Sketching de Diseño Ideal
-Mobie first 
+Mobie first
 ![alt text](img/general.jpg)
 ![alt text](img/carruselinicio.jpg)
 ![alt text](img/inicio.jpg)
@@ -86,3 +86,26 @@ Las mujeres en México tienen un rol muy fuerte, ellas son las líderes del hoga
 ## Historia de Usuario
 
 Yo como mujer diabética de 27 años, trabajadora y dedicada a mi familia, quiero una aplicacón que me permita interactuar con más mujeres que padezcan esta enfermedad, quiero poder compartir mi sentir tanto físico como emocional, recibir consejos de personas que ya llevan tiempo cuidandose, conocer a historias de personas que a pesar de todo llevan una vida feliz, ir al doctor y saltarme esas preguntas que son repetitivas consulta tras consulta, quisiera poder tener un "perfil" que ya tenga todas esas respuestas para poder mostrarlo a mi doctor y hacer más rápido mi paso por el hospital. No quiero que mi familia sufra lo mismo, por lo que quisiera tener toda la información sobre complicaciones o forma de prevenir para hablar con ellos y hacer conciencia de lo que pasará sino se cuidan.
+
+## Formularios aplicados
+
+Durante nuestra investigacion aplicamos diferentes formularios a Expertos en el tema, Mujeres con Diabates y una encuesta para conocer un poco más sobre sus hábitos.
+
+* Resultados de formulario para Expertos
+
+https://docs.google.com/forms/d/1nP3k9PJ8N6f9j1hZzteiIWGFmATQu4fA9IOBdlN74KQ/edit?edit_requested=true#responses
+- Son Enfermeros
+- Cuentan con 4 años de experiencia en promedio
+- El 75% son Mujeres
+- Cuentan con dispositivo móvil y la red social que más revisan durante el día es Facebook
+- En promedio el 50% de las personas que atienden por día son diabéticos y son mujeres
+- Coinciden en que sus pacientes son de mentalidad cerrada ya que no siguen indicaciones ni cambian sus hábitos alimenticios
+- Señalan que las mujeres están más al pendiente sobre el cuidado de su enfermedad
+- Los pacientes que atienden tienen complicaciones en sus niveles de glucosa, no toman medicamentos y tienen obesidad.
+- En caso de complicaciones un diabético gasta alrededor de $3,500.00 pesos mensuales.
+
+* Diabetes en mujeres
+https://docs.google.com/forms/d/1nP3k9PJ8N6f9j1hZzteiIWGFmATQu4fA9IOBdlN74KQ/edit?edit_requested=true#responses
+
+* Vida con diabetes (Hábitos) 
+https://docs.google.com/forms/d/1-YOlKn4PHrXrH825d1zxUUpsnMJjXNXtVJqEWARr6z4/edit?edit_requested=true#responses
