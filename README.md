@@ -64,6 +64,7 @@ La forma en que (nombre de la red social) retribuirá a los inversionistas será
 
 ![Preguntas](src/images/encuesta1.png)
 
+
 1. ¿Qué edad tienes?
 2. ¿Qué tipo de redes sociales usas y cuál es tu favorita? (Respuestas múltiples)
 3. ¿Con qué frecuencia usas alguna Red Social?
@@ -74,6 +75,7 @@ La forma en que (nombre de la red social) retribuirá a los inversionistas será
 8. ¿Crees que debería de haber más mujeres interesadas/estudiando/trabajando las disciplinas CTIM(Ciencias, Tecnología, Ingeniería y Matemáticas)?
 9. ¿Qué tan interesada estarías en una red social dedicada a estas disciplinas?
 10. ¿Con qué frecuencia usarías una Red Social dedicada a mujeres del área STEM?
+
 
 **Resultados:
 
