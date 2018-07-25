@@ -279,7 +279,7 @@ Contacto de colaboradoras:
 
 * Slack: Sakura Bravo.
  * see [GitHub] (https://github.com/SakuraBravo)
- * FaceBook: @Sakura Bravo
+ * FaceBook: @SakuraBravo
  * Gmail: sakura.bravo@gmail.com
 
 •	Yocelin García
