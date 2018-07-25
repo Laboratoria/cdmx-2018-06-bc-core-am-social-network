@@ -9,14 +9,16 @@ h1 {
 
 .centrar {
   position: absolute;
-  /*nos posicionamos en el centro del navegador*/
-  left: 29%;
-  /*determinamos una anchura*/
-  width: 60%;
-  /*indicamos que el margen izquierdo, es la mitad de la anchura*/
-  margin-left: -10%;
-  /*determinamos una altura*/
-  height: 400px;
+  left: 20%;
+  width: 20%;
+  margin-top: 5%
+}
+
+.derecha {
+  margin: 0%;
+  width: 20%;
+  margin-left:75%;
+  height: 25%;
 }
 
 input {
