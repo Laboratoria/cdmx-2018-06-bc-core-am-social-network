@@ -15,10 +15,41 @@
   <body>
     <input type="text" id="comment-text">
     <button type="button" id="send-comment">Enviar</button>
-        <div id="comments"></div>
-    <div id="container">
+        <div id="comments" class="panel panel-success"></div>
+    <div class="panel panel-success"id="container">
       <!-- botón likes -->
       <i type="" id="likes" onclick="addLike()" class="fa fa-heart" aria-hidden="true"></i> <span id="likeCounter" class="">0</span></div>
+
+    <a class="btn btn-dark" href="profileForm.html" role="button">Continuar con mi Perfil</a>
+    <div class="row">
+      <div class="col-sm-6 col-md-6 col-lg-6">
+        <div class="form-group">
+          <!--This is the area of commit-->
+          <input id="comment-text" type="text" class="form-control" placeholder="¿Qué quieres compartir?">
+          <!-- <textarea id="entrada" placeholder="¿Qué quieres compartir?" cols="20" rows="3" class="form-control"></textarea> <!form-control es una class de Bootstrap la cual sirve para identificar un campo de entrada, ya sea un input, select o un textarea.-->
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <button class="btn btn-success btn-block" type="button" id="send-comment">Compartir</button>
+        <button class="btn btn-success btn-block" type="button" id="edit-comment">Editar</button>
+        <button class="btn btn-success btn-block" type="button" id="delete-comment">Borrar</button>
+      </div>
+    </div>
+  </header>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-6">
+      <div id="comments" class="form-control"></div>
+      <div id="container">
+        <!-- botón likes -->
+        <i type="" id="likes" onclick="addLike()" class="fa fa-heart" aria-hidden="true"></i> <span id="likeCounter" class="">0</span>
+    </div>
+  </div>
+</div>
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
