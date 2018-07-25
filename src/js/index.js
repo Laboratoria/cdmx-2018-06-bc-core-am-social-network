@@ -35,6 +35,7 @@ function ingreso() {
   let contrasena2 = document.getElementById('contrasena2').value;
   firebase.auth()
     .signInWithEmailAndPassword(email2, contrasena2)
+    newDoc()
     .catch(function(error) {
     // Handle Errors here.
       var errorCode = error.code;
