@@ -26,5 +26,5 @@ Contaran con el apoyo de una/un psicóloga/o, para ayudarlos cuando se sientan q
 
 ![Grafica Colores](imagenesux/grafica_color.jpg)
 ![Resultado Opcion1](imagenesux/opcion1.jpg)
-![Grafica tipografia](imagenesux/tipografia_resultados.jpg)
-![Resultado Opcion1](imagenesux/opcion2.jpg)
+![Grafica tipografia](imagenesux/tipografia_respuestas.jpg)
+![Resultado Opcion1](imagenesux/opcion8.jpg)
