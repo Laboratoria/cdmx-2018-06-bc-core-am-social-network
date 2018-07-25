@@ -1,133 +1,124 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
- 	<meta charset="UTF-8">
- 	<title>Login</title>
- 	<!--CSS-->
- 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<!--BOOTSTRAP-->
- 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!--FONTS-->
-    <link href="https://fonts.googleapis.com/css?family=Merienda|Source+Sans+Pro:300|Pacifico|PT+Sans+Narrow" rel="stylesheet">
- </head>
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+   	<meta charset="UTF-8">
+   	<title>Login</title>
+   	<!--CSS-->
+   	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--BOOTSTRAP-->
+   	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!--FONTS-->
+      <link href="https://fonts.googleapis.com/css?family=Merienda|Source+Sans+Pro:300|Pacifico|PT+Sans+Narrow" rel="stylesheet">
+   </head>
 
-
-
-
-
- <body>
-<!--LINEA DE COLOR-->
-<section class="example">
-	<!--FORMULARIO INGRESO-->
-	<section class="form1 container">
-		<article class="row">
-			<!--LOGIN-->
-			<div class="col-lg-5 col-sm-4">
-				<p class="logo">Mom to Mom
-					<div class="slogan">rompiendo mitos</div>
-				</p>	
-			</div>
-			<!--EMAIL-->
-			<div class="col-lg-3 col-sm-3">
-				<div class="form-group">
-					<label for="exampleInputEmail1">Email</label>
-					<input type="email" class="form-control" id="emailIngreso" aria-describedby="emailHelp" placeholder="Ingresa email">
-				</div>	
-			</div>
-			<!--CONTRASEÑA-->
-			<div class="col-lg-3 col-sm-3">
-				<div class="form-group">
-					<label for="exampleInputPassword1">Contraseña</label>
-					<input type="password" class="form-control" id="passwordIngreso" placeholder="Ingresa Contraseña">
-				</div>
-			</div>
-			<!--BOTON-->
-			<div class="col-lg-1 col-sm-1 boton-inicio">
-				<button onclick="ingreso()" type="submit" class="btn btn-primary">Ingresar</button>
-			</div>
-		</article>	
-	</section>
-</section>
-<!--RESULTADO-->
-<div id="contenido">
-</div>
-
-
-
- <!--FORMULARIO REGISTRO-->
-<section class="form1 container">
+   <body>
+  <!--LINEA DE COLOR-->
+  <section class="example">
+    <!--FORMULARIO INGRESO-->
+    <section class="form1 container">
     <article class="row">
-      <div class="col-lg-4 col-sm-5 registro-top">
-			<h4>Registrate</h4>
-			<!--EMAIL-->
-			<div class="form-group">
-			<label for="exampleInputEmail1">Email</label>
-			<input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Ingresa email">
-			</div>
-			<!--CONTRASEÑA-->
-			<div class="form-group">
-			<label for="exampleInputPassword1">Contraseña</label>
-			<input type="password" class="form-control" id="password" placeholder="Ingresa Contraseña">
-			</div>
-			<!--BOTONES LOGIN REDES-->
-			<div>
-				<small id="emailHelp" class="form-text text-muted small-text">Todos tus datos seran confidenciales</small>
-				<button onclick="registrar()" type="submit" class="btn btn-primary boton-registrador">Registrar</button>
-				<div style="text-align: center">o</div>
-				<button onclick="loginGoogle()" type="submit" class="btn  boton-registrador google">
-					<img src="images/google-plus.png">Ingresar con Google
-				</button>
-				<button onclick="loginFace()" type="submit" class="btn boton-registrador google">
-					<img  src="images/facebook.png">Ingresar con Facebook
-				</button>
-			</div>
-        
-      </div>
+    <!--LOGIN-->
+    <div class="col-lg-5 col-sm-4">
+    <p class="logo">Mom to Mom
+    <div class="slogan">rompiendo mitos</div>
+    </p>
+    </div>
+    <!--EMAIL-->
+    <div class="col-lg-3 col-sm-3">
+    <div class="form-group">
+    <label for="exampleInputEmail1">Email</label>
+    <input type="email" class="form-control" id="emailIngreso" aria-describedby="emailHelp" placeholder="Ingresa email">
+    </div>
+    </div>
+    <!--CONTRASEÑA-->
+    <div class="col-lg-3 col-sm-3">
+    <div class="form-group">
+    <label for="exampleInputPassword1">Contraseña</label>
+    <input type="password" class="form-control" id="passwordIngreso" placeholder="Ingresa Contraseña">
+    </div>
+    </div>
+    <!--BOTON-->
+    <div class="col-lg-1 col-sm-1 boton-inicio">
+    <button onclick="ingreso()" type="submit" class="btn btn-primary">Ingresar</button>
+    </div>
     </article>
-</section>
+    </section>
+  </section>
+  <!--RESULTADO-->
+  <div id="contenido">
+  </div>
+
+   <!--FORMULARIO REGISTRO-->
+  <section class="form1 container">
+      <article class="row">
+        <div class="col-lg-4 col-sm-5 registro-top">
+    <h4>Registrate</h4>
+    <!--EMAIL-->
+    <div class="form-group">
+    <label for="exampleInputEmail1">Email</label>
+    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Ingresa email">
+    </div>
+    <!--CONTRASEÑA-->
+    <div class="form-group">
+    <label for="exampleInputPassword1">Contraseña</label>
+    <input type="password" class="form-control" id="password" placeholder="Ingresa Contraseña">
+    </div>
+    <!--BOTONES LOGIN REDES-->
+    <div>
+    <small id="emailHelp" class="form-text text-muted small-text">Todos tus datos seran confidenciales</small>
+    <button onclick="registrar()" type="submit" class="btn btn-primary boton-registrador">Registrar</button>
+    <div style="text-align: center">o</div>
+    <button onclick="loginGoogle()" type="submit" class="btn  boton-registrador google">
+    <img src="images/google-plus.png">Ingresar con Google
+    </button>
+    <button onclick="loginFace()" type="submit" class="btn boton-registrador google">
+    <img  src="images/facebook.png">Ingresar con Facebook
+    </button>
+    </div>
+
+        </div>
+      </article>
+  </section>
+
+  <!--LOGIN movil-->
+  <section class="movil">
+  <p class="logo">Mom to Mom
+    <div class="slogan">rompiendo mitos</div>
+  </p>
+  <article class="sec-log">
+     <button onclick="loginMovil()" type="button" class="der boton-login">Ingresar</button>
+     <button onclick="registroMovil()" type="button" class="boton-login">Registrar</button>
+  </article>
+  </section>
 
 
-<!--LOGIN movil-->
-<section class="movil">
-<p class="logo">Mom to Mom
-	<div class="slogan">rompiendo mitos</div>
-</p>
-<article class="sec-log">
-	 <button onclick="loginMovil()" type="button" class="der boton-login">Ingresar</button>
-	 <button onclick="registroMovil()" type="button" class="boton-login">Registrar</button>
-</article> 
-</section>
 
 
 
- 
+
+    <!--SCRIPT-->
+
+    <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+
+    <script>
+    // Initialize Firebase
+    var config = {
+    apiKey: "AIzaSyC3-Ko-NLEwcZEnIRY0sOiR1H-fa3bE1fk",
+    authDomain: "red-social-867d8.firebaseapp.com",
+    databaseURL: "https://red-social-867d8.firebaseio.com",
+    projectId: "red-social-867d8",
+    storageBucket: "red-social-867d8.appspot.com",
+    messagingSenderId: "824981624283"
+    };
+    firebase.initializeApp(config);
+    </script>
 
 
-
-			<!--SCRIPT-->
-
-	<script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
-	
-	<script>
-	// Initialize Firebase
-	var config = {
-			apiKey: "AIzaSyC3-Ko-NLEwcZEnIRY0sOiR1H-fa3bE1fk",
-			authDomain: "red-social-867d8.firebaseapp.com",
-			databaseURL: "https://red-social-867d8.firebaseio.com",
-			projectId: "red-social-867d8",
-			storageBucket: "red-social-867d8.appspot.com",
-			messagingSenderId: "824981624283"
-	};
-	firebase.initializeApp(config);
-	</script>
-
-
-<script src="js/app.js"></script>
-<!--BOOTSTRAP-->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
- </body>
- </html>
-        
+  <script src="js/app.js"></script>
+  <!--BOOTSTRAP-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+   </body>
+   </html>
