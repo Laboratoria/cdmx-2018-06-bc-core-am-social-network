@@ -58,7 +58,7 @@ const observer = () => {
       let providerData = user.providerData;
       console.log(user);
 
-      document.getElementById('content').innerHTML = 'Esto solo lo ve un usuario registrado ;)';
+      location.assign('views/wall.html');
     } else {
     }
   });
