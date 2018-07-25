@@ -38,10 +38,12 @@
                   <form id="usuario" class="text-center form-group">
                     <h4>Registro de Usuarios</h4>
                     <!--Registro para usuarios con correo-->
-                      <input type="email" id="userEmail" placeholder="Correo electrónico">
-                      <input type="password" id="userPsw" placeholder="Contraseña">
-                      <!-- <input type="text" id="username" placeholder="Nombre de Usuario"> -->
-                      <button type="button" id="buttonRegistrar" name="enviar" onclick="registrar()">Enviar</button>
+
+                      <input type="email" id="userEmail" placeholder="Ingresa email">
+                      <input type="password" id="userPsw" placeholder="Ingresa password">
+                      <input type="text" id="username" placeholder="Ingrese su nombre de usuario">
+                      <button type="button" id="buttonIngresar" name="button" class="btn btn-dark btn-md">LogIn</button>
+                      <button type="button" id="buttonRegistrar" name="button" class="btn btn-dark btn-md">LogUp</button>
                   </form>
                 </div>
               </section>
@@ -51,7 +53,7 @@
                    <!--Registro con Gmail de Google-->
                 <button class="btn btn-danger" type="button" name="button" id="btn-google">Ingresa con Google</button>
                 <button class="btn btn-primary" type="button" name="button" id="btn-facebook">Ingresa con Facebook</button>
-
+                <div id="container"></div>
                   </div>
                   <p>No estás registrado?  <a href="./registry.html" title="Registro de nuevo usuario">Registrate Aquí</a></p>
               </section>
@@ -60,7 +62,6 @@
               <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-auth.js"></script>
               <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js"></script>
               <script src="../js/authentications.js"></script>
-
               <script src="../js/index.js"></script>
 
 </body>

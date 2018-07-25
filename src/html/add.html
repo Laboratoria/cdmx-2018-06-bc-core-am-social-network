@@ -32,19 +32,19 @@
   <div class="container">
     <header>
       <h1>DiabeTips</h1>
-      <a class="btn btn-dark" href="formularioperfil.html" role="button">Continuar con mi Perfil</a>
+      <a class="btn btn-dark" href="profileForm.html" role="button">Continuar con mi Perfil</a>
       <div class="row">
         <div class="col-sm-6 col-md-6 col-lg-6">
           <div class="form-group">
             <!--This is the area of commit-->
-            <input id="entrada" type="text" class="form-control" placeholder="¿Qué quieres compartir?">
+            <input id="comment-text" type="text" class="form-control" placeholder="¿Qué quieres compartir?">
             <!-- <textarea id="entrada" placeholder="¿Qué quieres compartir?" cols="20" rows="3" class="form-control"></textarea> <!form-control es una class de Bootstrap la cual sirve para identificar un campo de entrada, ya sea un input, select o un textarea.-->
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-md-3">
-          <button class="btn btn-success btn-block" type="button" onclick="share()">Compartir</button>
+          <button class="btn btn-success btn-block" type="button" id="send-comment">Compartir</button>
         </div>
       </div>
     </header>
@@ -52,7 +52,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-6 col-md-6 col-lg-6">
-        <div id="comentarios" class="form-control">
+        <div id="comments" class="form-control">
           <!-- <textarea id="demo" cols="20" rows="3" class="form-control" readonly="true"></textarea> -->
         </div>
       </div>
