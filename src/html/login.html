@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>DiabeTips</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="CSS/main.css" />
-    <link rel="icon" href="images/icono.jpg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DiabeTips</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="CSS/main.css" />
+  <link rel="icon" href="images/icono.jpg">
 </head>
 <body>
+  <!-- Permisos de Facebook -->
   <script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -21,47 +22,88 @@
   };
 
   (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
 </script>
 <h2 id='userSpace'></h2>
 <pre id = 'obj'></pre>
-        <header>
-              <h1 class="text-center">DiabeTips</h1>
-              </header>
-              <section class="container-fluid offset-md-1"></section>
-              <div id="" class= "text-center col-4 offset-md-4">
-                  <form id="usuario" class="text-center form-group">
-                    <h4>Registro de Usuarios</h4>
-                    <!--Registro para usuarios con correo-->
-                      <input type="email" id="userEmail" placeholder="Correo electrónico">
-                      <input type="password" id="userPsw" placeholder="Contraseña">
-                      <!-- <input type="text" id="username" placeholder="Nombre de Usuario"> -->
-                      <button type="button" id="buttonRegistrar" name="enviar" onclick="registrar()">Enviar</button>
-                  </form>
-                </div>
-              </section>
-              <section class="container-fluid">
-                  <div id="cuerpo-login" class="text-center col-4 offset-md-4">
-                      <h4>Ingresa</h4>
-                   <!--Registro con Gmail de Google-->
-                <button class="btn btn-danger" type="button" name="button" id="btn-google">Ingresa con Google</button>
-                <button class="btn btn-primary" type="button" name="button" id="btn-facebook">Ingresa con Facebook</button>
 
-                  </div>
-                  <p>No estás registrado?  <a href="./registry.html" title="Registro de nuevo usuario">Registrate Aquí</a></p>
-              </section>
-              <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
-              <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
-              <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-auth.js"></script>
-              <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js"></script>
-              <script src="../js/authentications.js"></script>
+<!-- Comienza el cuerpo del contenido -->
 
-              <script src="../js/index.js"></script>
+<header>
+  <h1 class="text-center">DiabeTips</h1>
+</header>
+
+<section class="container-fluid">
+<div class="row">
+  <h4 class="text-center col-12">Inicio de Sesión</h4>
+</div>
+
+<!-- Inicio de seción con Email -->
+<div class="row">
+  <div id="cuerpo-login" class="col-12">
+    <div class="form-group">
+      <form action="comments.html">
+        <div class="form-group">
+          <!--Registro para usuarios con correo-->
+          <label for="exampleInputEmail1">Ingresa tus datos:</label>
+          <input type="email" class="form-control" id="userEmail" aria-describedby="emailHelp" placeholder="Correo electrónico">
+        </div>
+        <div class="form-group">
+          <!-- <input type="text" id="username" placeholder="Nombre de Usuario"> -->
+          <input type="password" class="form-control" id="userPsw" placeholder="Contraseña">
+          <small id="emailHelp" class="form-text text-muted">Nosotros nunca compartiremos tu información con nadie.</small>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Recuerdame</label>
+        </div>
+        <br>
+        <div class="form-group text-center">
+        <button class="btn btn-dark" type="button" id="buttonRegistrar" name="enviar" onclick="registrar()">Enviar</button>
+        <button type="submit" class="btn btn-primary text-center">Submit</button>
+        </div>
+      </form>
+  </div>
+</div>
+</div>
+
+<div class="col-12">
+  <form action="comments.html" class="text-center form-group">
+    <div class="form-group">
+      <small class="form-text text-muted">o también puedes</small>
+    </div>
+  </form>
+</div>
+
+<!-- Inicio de seción con Facebook y Google -->
+<div class="row">
+  <div id="cuerpo" class= "text-center col-8 offset-2">
+    <form id="usuario" action="comments.html" class="text-center form-group">
+      <!--Registro con Gmail de Google-->
+      <button class="btn btn-danger btn-block" type="button" name="button" id="btn-google">Ingresa con Google</button>
+      <!--Registro con Facebook-->
+      <button class="btn btn-primary btn-block" type="button" name="button" id="btn-facebook">Ingresa con Facebook</button>
+      <p>No estás registrado?  <a href="./registry.html" title="Registro de nuevo usuario">Registrate Aquí</a></p>
+
+    </form>
+  </div>
+</div>
+</div>
+</section>
+
+<!-- Librerias -->
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js"></script>
+
+<script src="../js/authentications.js"></script>
+<script src="../js/index.js"></script>
 
 </body>
 </html>
