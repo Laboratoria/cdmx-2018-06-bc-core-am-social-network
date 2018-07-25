@@ -9,11 +9,8 @@
 // 6.Repeat from 1
 
 
-
-
-//AQUI VAN LOS ITS Y ASSERTS
+// AQUI VAN LOS ITS Y ASSERTS
 describe('registrar()', () => {
-
   it('debería ser una función', () => {
     assert.equal(typeof 'registrar()', 'function');
   });
