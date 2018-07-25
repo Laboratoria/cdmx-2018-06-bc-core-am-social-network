@@ -20,7 +20,7 @@ boton.addEventListener("click", event => {
   // console.log(yearDateTime);
 
 
-  // CRUD
+  // CRUD 
   // Aquí se agrega un objeto a la coleccion "comments" del firestore
   // el "add" agrega un id único en automatico
   db.collection("comments").add({

@@ -26,54 +26,37 @@ La forma en que (nombre de la red social) retribuirá a los inversionistas será
 
 ## Historias de Usuarias
 
-|                                             Historia de Usuaria  |
-|-----------------------------------------------------------|------|
-| Fecha:  09/07/2018                                        | Nr.1 |
-|--------------------------------------------------|--------|------|
-| Nombre de la Usuaria:  Diana Perez Pineda        | Edad: 36 años |
-|--------------------------------------------------|---------------|
-| Título:  Compartir                                               |
-|------------------------------------------------------------------|
-| Como bióloga quiero compartir mis más recientes descubrimientos  |
-| para que más mujeres biólogas conozcan sobre mi investigación y  |
-| puedan contribuir o usarla como punto de partida.                |
+| Historia de Usuaria   Nr.1|
+|---|
+| Fecha:  09/07/2018   |
+| Nombre de la Usuaria:  Diana Perez Pineda  |
+|  Edad: 36 años  |
+| Título:  Compartir   |
+|  Como bióloga quiero compartir mis más recientes descubrimientos para que más mujeres biólogas conozcan sobre mi investigación y puedan contribuir o usarla como punto de partida. |
 
-|                                             Historia de Usuaria  |
-|-----------------------------------------------------------|------|
-| Fecha:  16/07/2018                                        | Nr.2 |
-|--------------------------------------------------|--------|------|
-| Nombre de la Usuaria:  Juana Torres Medina       | Edad: 29 años |
-|--------------------------------------------------|---------------|
-| Título:  Busqueda de vacantes                                    |
-|------------------------------------------------------------------|
-| Acabo de recibir mi pasantía y estoy en busqueda de un empleo    |
-| encaminado en mi área de especialización. Como mujer es dificil  |
-| encontrar un trabajo bien pagado y en lo que una estudió. Más,   |
-| tratandose del ámbito de las ciencias.                           |
+| Historia de Usuaria  Nr.2|
+|---|
+| Fecha:  16/07/2018   |
+| Nombre de la Usuaria:  Juana Torres Medina  |
+| Edad: 29 años  |
+| Título:  Busqueda de vacantes  |
+| Acabo de recibir mi pasantía y estoy en busqueda de un empleo encaminado en mi área de especialización. Como mujer es dificil encontrar un trabajo bien pagado y en lo que una estudió. Más, tratandose del ámbito de las ciencias. |
 
-|                                             Historia de Usuaria  |
-|-----------------------------------------------------------|------|
-| Fecha:  14/07/2018                                        | Nr.3 |
-|--------------------------------------------------|--------|------|
-| Nombre de la Usuaria: Susana Lafon Dávila        | Edad: 20 años |
-|--------------------------------------------------|---------------|
-| Título:  Orientación Vocacional                                  |
-|------------------------------------------------------------------|
-| No se que quiero estudiar, pero en esta Red Social no solo puedo |
-| conocer a otras chicas, si no, tambièn me pueden compartir       |
-| experiencias y asesorar.                                         |
+| Historia de Usuaria  Nr.3|
+|---|
+| Fecha:  14/07/2018   |
+| Nombre de la Usuaria:  Susana Lafon Dávila  |
+| Edad: 20 años  |
+| Título:  Orientacion Vocacional  |
+| No se que quiero estudiar, pero en esta Red Social no solo puedo conocer a otras chicas, si no, tambièn me pueden compartir experiencias y asesorar. |
 
-|                                             Historia de Usuaria  |
-|-----------------------------------------------------------|------|
-| Fecha:  11/07/2018                                        | Nr.4 |
-|--------------------------------------------------|--------|------|
-| Nombre de la Usuaria: Reneè Castrejòn            | Edad: 24 años |
-|--------------------------------------------------|---------------|
-| Título:  Curiosidad e interès                                    |
-|------------------------------------------------------------------|
-| Desde niña me ha gustado la tecnologìa y aunque no trabaje ni    |
-| estudie algo relacionado, me gusta mucho explorar el foro y      |
-| aprender nuevas cosas.                                           |
+| Historia de Usuaria  Nr.4|
+|---|
+| Fecha:  11/07/2018   |
+| Nombre de la Usuaria:  Reneè Castrejòn  |
+| Edad: 24 años  |
+| Título:  Curiosidad e interès  |
+| Desde niña me ha gustado la tecnologìa y aunque no trabaje ni estudie algo relacionado, me gusta mucho explorar el foro y aprender nuevas cosas. |
 
 ## Encuestas
 
@@ -81,15 +64,18 @@ La forma en que (nombre de la red social) retribuirá a los inversionistas será
 
 ![Preguntas](src/images/encuesta1.png)
 
->*1. ¿Te asumes mujer o algún otro género que no sea "hombre"?
->*2. ¿Qué tipo de redes sociales usas y cuál es tu favorita? (Respuestas múltiples)
->*3. ¿Con qué frecuencia usas alguna Red Social?
->*4. ¿Qué es lo que mas amas de tu Red Social preferida?
->*5. Tienes redes sociales preferidas pero hay partes del diseño que ODIAS, ¿cuáles son?
->*6. ¿Te interesa alguno de estas disciplinas?
->*7. ¿Estudias o trabajas en alguno de estos campos?
->*8. ¿Crees que debería de haber más mujeres interesadas/estudiando/trabajando las >disciplinas CTIM(Ciencias, Tecnología, Ingeniería y Matemáticas)?
->*9. ¿Qué tan interesada estarías en una red social dedicada a estas disciplinas?
+
+1. ¿Qué edad tienes?
+2. ¿Qué tipo de redes sociales usas y cuál es tu favorita? (Respuestas múltiples)
+3. ¿Con qué frecuencia usas alguna Red Social?
+4. ¿Qué es lo que mas amas de tu Red Social preferida?
+5. Tienes redes sociales preferidas pero hay partes del diseño que ODIAS, ¿cuáles son?
+6. ¿Te interesa alguno de estas disciplinas?
+7. ¿Estudias o trabajas en alguno de estos campos?
+8. ¿Crees que debería de haber más mujeres interesadas/estudiando/trabajando las disciplinas CTIM(Ciencias, Tecnología, Ingeniería y Matemáticas)?
+9. ¿Qué tan interesada estarías en una red social dedicada a estas disciplinas?
+10. ¿Con qué frecuencia usarías una Red Social dedicada a mujeres del área STEM?
+
 
 **Resultados:
 
@@ -153,8 +139,8 @@ se analizaron productos similiares y se compararon en base a sus procesos y func
 
 ### `README.md`
 
-* [ ] Definición del producto.
-* [ ] Benchamark de las principales redes sociales.
+* [x] Definición del producto.
+* [x] Benchamark de las principales redes sociales.
 * [ ] Resumen de entrevistas con usuarios.
 * [ ] Link/screenshots prototipo de alta fidelidad.
 * [ ] Conclusiones de pruebas del prototipo con usuarios.
@@ -168,24 +154,24 @@ se analizaron productos similiares y se compararon en base a sus procesos y func
 
 ### Creación de cuenta (sign up)
 
-* [ ] Permite crear cuenta.
-* [ ] Valida email.
+* [x] Permite crear cuenta.
+* [x] Valida email.
 * [ ] Valida password.
 * [ ] Muestra mensajes de error.
 
 ### Inicio de sesión (sign in)
 
-* [ ] Permite iniciar sesión.
-* [ ] Valida email.
+* [x] Permite iniciar sesión.
+* [x] Valida email.
 * [ ] Valida password.
 * [ ] Muestra mensajes de error.
 
 ### Muro (wall/feed)
 
-* [ ] Muestra _muro_.
-* [ ] Permite publicar nuevos posts.
-* [ ] Permite eliminar posts.
-* [ ] Pide confirmación antes de borrar posts.
+* [x] Muestra _muro_.
+* [x] Permite publicar nuevos posts.
+* [x] Permite eliminar posts.
+* [x] Pide confirmación antes de borrar posts.
 * [ ] Permite editar posts (in place).
 * [ ] Permite filtrar posts por público/amigos.
 * [ ] Permite marcar posts como _gustados_ (like).
