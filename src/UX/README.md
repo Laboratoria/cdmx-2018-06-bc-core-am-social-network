@@ -19,3 +19,9 @@ Contaran con el apoyo de una/un psicóloga/o, para ayudarlos cuando se sientan q
 * Yo como usuario con sobrepeso busco en esta red social poder hacer publicaciones en mi muro.
 * Yo como usuario con sobre peso busco en esta red social crear comunidad con otros usuarios para salir juntos a hacer actividades físicas.
 * Yo como usuario busco que se me recompense por mi esfuerzo al querer cambiar mi físico.
+
+## ENCUESTAS
+
+    * Se realizo una encuest para saber que gamma de colores  y que tipogragía sería la adecuada para nuestros usuarios, esto se realizo mediante una encuesta de Google. Los resultados fueron los siguinetes:
+
+![Grafica Colores](../imagenesux/grafica color.jpg)
