@@ -29,7 +29,7 @@ login.addEventListener('click', event => {
   // Para iniciar sesión 
   const promise = auth.signInWithEmailAndPassword(emailValue, passwordValue);
   promise.catch(event => console.log(event.message));
-  location.href = 'muro.html';
+  location.href = 'views/muro.html';
 });
 
 // Añadiendo el evento del botón de registrarse
@@ -42,7 +42,7 @@ signup.addEventListener('click', event => {
 
   const promise = auth.createUserWithEmailAndPassword(signupEmailValue, signupPasswordValue) // Para registrar un nuevo usuario con correo y contraseña y también hacer que entre.
     .then(function(promise) {
-      location.href = 'muro.html';
+      location.href = 'views/muro.html';
       promise.catch(event => console.log(event.message));
     });
 });
@@ -50,7 +50,7 @@ signup.addEventListener('click', event => {
 firebase.auth().onAuthStateChanged(firebaseUser => { // cuando detecta que el usuario se ha "logeado"
   if (firebaseUser) {
     // console.log(firebaseUser);
-    location.href = 'muro.html';
+    location.href = 'views/muro.html';
   } else {
     console.log('not logged in');
     logout.classList.add('hide');
@@ -68,9 +68,27 @@ loginGoogle.addEventListener('click', event => {
     .signInWithPopup(provider) // popUp te va a dar la ventana de acceso a tu cuenta de google. Parámetro de la variable provider que tiene la autenticación con google.
 
     .then(function(provider) { // entonces ejecuta la función que es el resultado (acceder con google)
-      location.href = 'muro.html';
+      location.href = 'views/muro.html';
       // console.log(result);
       // console.log(provider);
     });
-  location.href = 'muro.html';
 });
+
+// Para ingresar con facebook
+
+const loginFacebook = document.getElementById('login-facebook');
+const provFace = new firebase.auth.FacebookAuthProvider();
+provFace.addScope('public_profile');
+
+loginFacebook.addEventListener('click', event => {
+  event.preventDefault();
+  firebase.auth()
+    .signInWithPopup(provFace) // popUp te va a dar la ventana de acceso a tu cuenta de facebook. Parámetro de la variable provFace que tiene la autenticación con facebook.
+
+    .then(function(provFace) { // entonces ejecuta la función que es el resultado (acceder con Facebook)
+      location.href = 'views/muro.html';
+      // console.log(result);
+      // console.log(provider);
+    });
+});
+
