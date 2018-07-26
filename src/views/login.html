@@ -11,30 +11,43 @@
 </head>
 
 <body>
+    <div class = "container">
+        <div class ="row">
+            <form id = "form-login" class="col-sm-12">
+                <h1>Login</h1>
 
-  <div class"container">
-    <div class="row">
-        <form class="col-sm-12">
-            <h1>Login</h1>
-
-            <div class="row">
-                <input type="text" class="col-sm-12" maxlength="20" placeholder="Ingrese su correo">
-              </div>
-              <div class="row">
-                  <input type="password" class="col-sm-12" maxlength="20" placeholder="Ingrese su contarseña" />
-              </div>
-              <div class="row">
-                  <button type="button" class="col-sm-12">Registrarse</button>
-              </div>
-              <div class="row">
-                  <button type="submit" class="col-sm-12" onclick="">Iniciar Sesión</button>
-              </div>
-          </form>
+                <div class="row">
+                    <input type="text" class="col-sm-12" maxlength="20" placeholder="Ingrese su correo">
+                </div>
+                <div class="row">
+                    <input type="password" class="col-sm-12" maxlength="20" placeholder="Ingrese su contarseña" />
+                </div>
+                <div class="row">
+                    <button type="button" class="col-sm-12">Registrarse</button>
+                </div>
+                <div class="row">
+                    <button type="submit" class="col-sm-12" onclick="">Iniciar Sesión</button>
+                </div>
+                <div class="row">
+                    <!-- <button type="submit" class="btn btn-primary">Enviar</button> -->
+                    <button type="button" id = "submit-google" class="col-sm-12">Iniciar con Google</button>
+                </div>
+                <div class="row">
+                    <!-- <button type="submit" class="btn btn-primary">Enviar</button> -->
+                    <button type="button" id = "submit-facebook" class="col-sm-12">Iniciar con Facebook</button>
+                </div>
+            </form>
+        </div>
     </div>
         
 
-  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
-  <script src="../js/config.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-messaging.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-functions.js"></script>
+  <script src="../js/login.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
