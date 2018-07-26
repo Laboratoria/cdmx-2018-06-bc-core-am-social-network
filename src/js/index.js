@@ -34,8 +34,8 @@ function ingreso() {
   let email2 = document.getElementById('email2').value;
   let contrasena2 = document.getElementById('contrasena2').value;
   firebase.auth()
-    .signInWithEmailAndPassword(email2, contrasena2)
-    newDoc()
+    .signInWithEmailAndPassword(email2, contrasena2);
+  newDoc()
     .catch(function(error) {
     // Handle Errors here.
       var errorCode = error.code;
@@ -51,7 +51,7 @@ function observador() {
       // console.log('Existe usuario activo');
       aparece(user);
       // User is signed in.
-      let displayName = user.displayName;
+      let displayName = user.displayNam  e;
       let email = user.email;
       let emailVerified = user.emailVerified;
       // console.log('*********************');
