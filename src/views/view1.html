@@ -142,9 +142,12 @@
 
         //slider
 
-        document.addEventListener('DOMContentLoaded', function() {
-            let elems = document.querySelectorAll('.slider');
-            let instances = M.Slider.init(elems, options);
+        const slider = document.querySelector('.slider');
+        M.Slider.init(slider, {
+            indicators: false,
+            heigh: 500,
+            transition: 500,
+            interval: 6000
         });
     </script>
 </body>
