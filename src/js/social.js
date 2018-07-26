@@ -12,7 +12,7 @@ function initialization() {
     storageBucket: 'red-social-19985.appspot.com',
     messagingSenderId: '169924096887'
   };
-      
+
   firebase.initializeApp(config);
 
   formSignup = document.getElementById('form-signup'); // Hace referencia al formulario

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
+  
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="../css/log.css">
+  <link rel="stylesheet" href="../css/main.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
@@ -12,38 +12,25 @@
 
 <body>
 
-  <div class"container">
-    <div class="row">
-        <form class="col-sm-12">
-            <h1>Login</h1>
+<h1><center>Bienvenidx</center></h1> 
+<form action="">
+    <label for="name">Nombre</label>
+    <input type="text" id="namePost"></input>
 
-            <div class="row">
-                <input type="text" class="col-sm-10" maxlength="12" placeholder="Ingrese su correo">
-              </div>
-              <div class="row">
-                  <input type="password" class="col-sm-10" maxlength="12" placeholder="Ingrese su contarseña" />
-              </div>
-              <div class="row">
-                  <button type="submit" class="col-sm-4" onclick="">Iniciar Sesión</button>
-              </div>
-              <div class="row">
-                  <button type="button" class="col-sm-4">Registrarse</button>
-              </div>
-              <div class="row">
-                <button type="submit" class="col-sm-4" id="btn-google" onclick="">Iniciar con Google </button>
-          </div>
-          <div class="row">
-                <button type="submit" class="col-sm-4" id= "btn-facebook"onclick="">Iniciar con Facebook</button>
-          </div>
+    <label for="message">Mensaje</label>
+    <textarea id="messagePost"></textarea>
 
-          </form>
-    </div>
-
+    <button type="button" id="btnPost">Publicar</button>
+</form>
+<ul id="chat">
+</ul>
 
   <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+  <script src="../js/wall.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
