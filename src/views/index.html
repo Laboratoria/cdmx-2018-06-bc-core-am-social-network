@@ -6,17 +6,22 @@
   <title>Red Social</title>
   <link rel="stylesheet" type="text/css" href="../css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
 
-    
+  <div class="jumbotron text-center">
     <div class="container">
 
         <h4>Registro de Usuario</h4>
     
         <div class="row">
-          <div class="input-field col s12">
+          <div class="input-field .col-12">
             <input id="email" type="email" class="validate">
             <label for="email">Email</label>
             <span class="helper-text" data-error="wrong" data-success="right"></span>
@@ -59,11 +64,13 @@
         <span class="helper-text" data-error="wrong" data-success="right"></span>
       </div>
     </div>
+    
     <a href="" onclick="ingresar()" class="waves-effect waves-light btn">Acceder</a>
     <button id="login" class="waves-effect waves-light btn">Inicia con Google</button>
   </div>
     </form>
     <div id="contenido">
+    </div>
     </div>
   </div>
   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
