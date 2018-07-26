@@ -13,7 +13,7 @@ $(document).ready(() => {
   // Metodo child_added ayuda a que cada vez que un hijo(mensaje)
   // se añada, firebase añae asíncronamente el mensaje a un espacio
   // sin recargar la pagina
-  let result = db.ref('userMessages').on('child_added', (data) =>{// data trae todo los objetos de la rama
+let result = db.ref('userMessages').on('child_added', (data) =>{// data trae todo los objetos de la rama
     $('#comments').append('<div class="panel-body">' + data.val().message + '</div>');
   });
 });
