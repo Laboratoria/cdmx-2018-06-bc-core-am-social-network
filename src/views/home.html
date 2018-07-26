@@ -12,44 +12,50 @@
 </head>
 
 <body>
-    <nav class="teal lighten-3 row">
-        <div class="nav-wrapper col s12">
-            <button id="btnHome" class=" btn-flat teal lighten-3">
-                    <i class="medium material-icons">home</i>
-            </button>
-            <button id="btnProfile" class=" btn-flat teal lighten-3">
-                    <i class="medium material-icons">people</i>  
-            </button>
-            <button id="btnProfile" class=" btn-flat teal lighten-3">
-                    <i class="medium material-icons">chat</i> 
-            </button>
-            <button id="btnLogout" class=" btn-flat teal lighten-3">Salir</button>
-        </div>
-    </nav>
+    <header class="row">
+        <nav class=" lighten-3  light-blue darken-2 row">
+            <div class="nav-wrapper col s12">
+
+                <button id="btnHome" class="btn-flat col s1 offset-s1">
+                    <i class="large material-icons">home</i>
+                </button>
+                <button id="btnProfile" class="btn-flat col s1 offset-s2">
+                    <i class="large material-icons">people</i>
+                </button>
+                <button id="btnProfile" class=" btn-flat col s1 offset-s2">
+                    <i class="large material-icons">chat</i>
+                </button>
+                <button id="btnRanking" class=" btn-flat col s1 offset-s2">
+                    <i class="large material-icons">filter_vintage</i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
     <div class="container">
         <section class="col s12" id="postForm">
             <h4 id="dataName"></h4>
-            <input type="text"  id="postText" placeholder="¿Cuál es tu pregunta?">
+            <input type="text" id="postText" placeholder="¿Cuál es tu pregunta?">
             <input type="button" id="btnPost" class="btn" value="Publicar">
         </section>
         <section id="borrar">
             <div>
                 <form action="">
-                <p>Nombre</p>
-                    <input type="text" id="input" readonly = "readonly" value="Comentario">
+                    <p>Nombre</p>
+                    <input type="text" id="input" readonly="readonly" value="Comentario">
                     <p id="likes" class="inline"></p>
                     <input type="button" id="btnLike" class="btnEdit" value="Like">
                     <input type="button" id="btnEdit" class="btnEdit" value="Editar">
-                    <input type="button" id="btnErase" value="Eliminar"> 
+                    <input type="button" id="btnErase" value="Eliminar">
                     <input type="button" id="btnSave" class="none" value="Guardar">
                 </form>
-              </div>
+            </div>
         </section>
-        <section id="comentarios" >
+        <section id="comentarios">
 
         </section>
         <section id="profile">
-            
+
         </section>
 
     </div>
