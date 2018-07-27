@@ -6,39 +6,59 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
 </head>
 
 <body>
-    <nav class="teal lighten-3">
-        <div class="nav-wrapper">
-            <button id="btnLogout" class=" btn-flat teal lighten-3">Logout</button>
-        </div>
-    </nav>
+    <header class="row">
+        <nav class=" lighten-3  light-blue darken-2 row">
+            <div class="nav-wrapper col s12">
+
+                <button id="btnHome" class="btn-flat col s1 offset-s1">
+                    <i class="large material-icons">home</i>
+                </button>
+                <button id="btnProfile" class="btn-flat col s1 offset-s2">
+                    <i class="large material-icons">people</i>
+                </button>
+                <button id="btnProfile" class=" btn-flat col s1 offset-s2">
+                    <i class="large material-icons">chat</i>
+                </button>
+                <button id="btnRanking" class=" btn-flat col s1 offset-s2">
+                    <i class="large material-icons">filter_vintage</i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
     <div class="container">
-        <section class="col s12">
+        <section class="col s12" id="postForm">
             <h4 id="dataName"></h4>
-            <input type="text"  id="postText" placeholder="¿Cuál es tu pregunta?">
+            <input type="text" id="postText" placeholder="¿Cuál es tu pregunta?">
             <input type="button" id="btnPost" class="btn" value="Publicar">
         </section>
-        <section id="comentarios" >
-           
+        <section id="borrar">
+            <div>
+                <form action="">
+                    <p>Nombre</p>
+                    <input type="text" id="input" readonly="readonly" value="Comentario">
+                    <p id="likes" class="inline"></p>
+                    <input type="button" id="btnLike" class="btnEdit" value="Like">
+                    <input type="button" id="btnEdit" class="btnEdit" value="Editar">
+                    <input type="button" id="btnErase" value="Eliminar">
+                    <input type="button" id="btnSave" class="none" value="Guardar">
+                </form>
+            </div>
+        </section>
+        <section id="comentarios">
+
+        </section>
+        <section id="profile">
+
         </section>
 
-
-
-
-
     </div>
-
-
-
-
-
-
-
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
