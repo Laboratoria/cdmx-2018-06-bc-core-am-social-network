@@ -53,19 +53,19 @@ window.onload = () => {
     });
 
 
-  const deleteMessagebtn = document.getElementsByTagName('button');
+//   const deleteMessagebtn = document.getElementsByTagName('button');
 
-  deleteMessagebtn.addEventListener('click', deletingMessage);
+//   deleteMessagebtn.addEventListener('click', deletingMessage);
 
   
-  let borrar = firebase.database().ref().child('messages').push().key;
-  let refMessage ;
-  console.log(borrar);
-  const deletingMessage = () => {
-    let refMensaje = refMessage.child(borrar);
-    refMensaje.remove();
-  };
-  console.log(deletingMessage);
+//   let borrar = firebase.database().ref().child('messages').push().key;
+//   let refMessage ;
+//   console.log(borrar);
+//   const deletingMessage = () => {
+//     let refMensaje = refMessage.child(borrar);
+//     refMensaje.remove();
+//   };
+//   console.log(deletingMessage);
 };
 
 
