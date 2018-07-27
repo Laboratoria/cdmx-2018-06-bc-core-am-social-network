@@ -1,2 +1,6 @@
+<<<<<<< HEAD
+node_modules/
+=======
 # Aqui debes poner los archivos que no quieras que se suban a Github
 node_modules/
+>>>>>>> 74f6ca525498f0897365d059798354ca460d5a38
