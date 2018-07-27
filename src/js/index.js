@@ -53,7 +53,7 @@ loginGoogle.addEventListener('click', event => {
 
 const loginFacebook = document.getElementById('login-facebook');
 const provFace = new firebase.auth.FacebookAuthProvider();
-provFace.addScope('public_profile');
+// provFace.addScope('public_profile');
 
 loginFacebook.addEventListener('click', event => {
   event.preventDefault();
