@@ -16,18 +16,19 @@
         <header>
               <h1 class="text-center">Perfil DiabeTips</h1>
               </header>
-              <section class="container-fluid offset-md-1"></section>
-              <div class= "text-center col-4 offset-md-4">
+              <section class="container-fluid">
+              <div class= "text-center form-group col-12">
                   <form id="perfil" class="text-center form-group">
-                      <p>Llena los datos a continuación mencionados,
+                      <p class="font-weight-light font-italic">Llena los datos a continuación mencionados,
                           este perfil lo podrás compartir con tu doctor.
                       </p>
                       <form>
-                        <div class="form-group">
-                          <label for="exampleFormControlFile1">Sube tu foto de perfil</label>
-                          <input type="file" class="form-control-file" id="addPhoto">
+                        <div class="form-group text-center custom-file input-group mb-3">
+                          <label for="exampleFormControlFile1" class="custom-file-label text-center">Sube tu foto</label>
+                          <input type="file" class="form-control-file custom-file-input" id="addPhoto">
                         </div>
                       </form>
+                    <section class = "text-center form-group">
                     <input id = "nameUser" type="text" class="form-control" placeholder="Nombre">
                     <input id = "ageUser" type="number" class="form-control" placeholder="Edad">
                     <input id = "weightUser" type="number" class="form-control" placeholder="Peso">
@@ -41,15 +42,15 @@
                     <label class="checkbox-inline"><input id = "fatherSick" type="checkbox" value="">Padres</label>
                     <label class="checkbox-inline"><input id = "grandPsick" type="checkbox" value="">Abuelos</label>
                     <label class="checkbox-inline"><input id = "childrenSick" type="checkbox" value="">Hijos</label>
-
-
-                        <div><input id = "btnProfile" type="button" value="Guardar Perfil" href="comments.html" class="btn btn-dark btn-md"></div>
-                      </div>
-
+                    </section>
+                        <div class="col-12 text-center">
+                         <input id = "btnProfile" type="button" value="Guardar Perfil" href="comments.html" class="btn btn-secondary btn-block btn-md btn-sm">
+                       </div>
                   </form>
                 </div>
               </section>
               <section id = "profileConteniner"></section>
+              <!--Linrerias y enlaces a archivos js-->
               <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
               <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
               <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
