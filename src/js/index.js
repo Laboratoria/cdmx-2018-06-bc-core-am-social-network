@@ -35,7 +35,7 @@ signUpBtn.addEventListener('click', event => {
       .then((user)=>{
         const newUser = auth.currenUser;
         newUser.updateProfile({displayName: username});
-        location.href = 'view1.html';
+        location.href = '../src/views/view1.html';
         console.log('usuario registrado');
       })
       .catch((error)=> {
@@ -58,7 +58,7 @@ logInBtn.addEventListener('click', event => {
     auth.signInWithEmailAndPassword(emailValue, passwordValue)
       .then(()=>{
         console.log('has iniciado sesión');
-        location.href = 'view1.html';
+        location.href = '../src/views/view1.html';
       // window.homeNetwork.mostrar(usuario); // llamamos a la función que creamos en app.js para cambiar de página
       })
       .catch((error)=> {
@@ -76,9 +76,10 @@ loginGoogleBtn.addEventListener('click', event=>{
   firebase.auth()  
     .signInWithPopup(provider) // popUp te va a dar la ventana de acceso a tu cuenta de google. parámetro de la variable provider que tiene la autenticación con google
     .then((result)=> { // entonces ejecuta la función que es el resultado (acceder con google)
-      location.href = 'view1.html';
-      console.log(result);
-      console.log(provider);
+      location.href = '../src/views/view1.html';
+      console.log(result.user);
+      // console.log(provider);
+      event1(result.user);
     });
 });
 
@@ -87,7 +88,7 @@ loginFacebookBtn.addEventListener('click', event =>{
   const provider = new firebase.auth.FacebookAuthProvider();
   firebase.auth().signInWithPopup(provider)
     .then((result)=> { // entonces ejecuta la función que es el resultado (acceder con google)
-      location.href = 'view1.html';
+      location.href = '../src/views/view1.html';
       console.log('login con facebook');
     });
 });
