@@ -68,12 +68,18 @@ btnLogin.addEventListener('click', e => {
   });
 });
 
-
+// Borra localStorage
 btnGg.addEventListener('click', e => {
+  localStorage.clear();
+  googleLogin();
+});
+
+// Función para Login con Facebook
+const googleLogin = () => {
   var provider = new firebase.auth.GoogleAuthProvider();
   authentication(provider);
   console.log("google");
-});
+}
 
 // Login con Facebook
 btnFb.addEventListener('click', e => {
