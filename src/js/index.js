@@ -1,64 +1,61 @@
-//login
+// login
 let provider = new firebase.auth.GoogleAuthProvider();
 
-$('#login').click(function(){
+$('#login').click(function() {
   firebase.auth()
-  .signInWithPopup(provider)
-  .then(function(result) {
-    //console.log(result.user);
-    window.location.href = "views/wall.html";
-    $('#login').hide();
+    .signInWithPopup(provider)
+    .then(function(result) {
+    // console.log(result.user);
+      window.location.href = 'views/wall.html';
+      $('#login').hide();
     });
 });
 
 
 var providerf = new firebase.auth.FacebookAuthProvider();
-$('#face').click(function(){
+$('#face').click(function() {
   firebase.auth()
-  .signInWithPopup(providerf)
-  .then(function(result) {
-    //console.log(result.user);
-    window.location.href = "views/wall.html";
-    $('#face').hide();
-    $('#root').append("<img src='"+result.user.photoURL+"'/>")
-  });
+    .signInWithPopup(providerf)
+    .then(function(result) {
+    // console.log(result.user);
+      window.location.href = 'views/wall.html';
+      $('#face').hide();
+      $('#root').append('<img src=\'' + result.user.photoURL + '\'/>');
+    });
 });
 
 var providerg = new firebase.auth.GithubAuthProvider();
-$('#gith').click(function(){
+$('#gith').click(function() {
   firebase.auth()
-  .signInWithPopup(providerg)
-  .then(function(result) {
-    window.location.href = "views/wall.html";
-    //console.log(result.user);
-    /*guardaDatos(result.user);
+    .signInWithPopup(providerg)
+    .then(function(result) {
+      window.location.href = 'views/wall.html';
+    // console.log(result.user);
+    /* guardaDatos(result.user);
     $('#face').hide();
     $('#root').append("<img src='"+result.user.photoURL+"'/>")*/
-  });
+    });
 });
 
 
-
-
-
-//esta funcion guarda datos automaticamente
-function guardaDatos(user){
+// esta funcion guarda datos automaticamente
+function guardaDatos(user) {
   var usuario = {
-    uid:user.uid,
-    nombre:user.displayName,
-    email:user.email,
-    foto:user.photoURL
-  }
-  firebase.database().ref("runeat/" +user.uid)
-  .set(usuario)
+    uid: user.uid,
+    nombre: user.displayName,
+    email: user.email,
+    foto: user.photoURL
+  };
+  firebase.database().ref('runeat/' + user.uid)
+    .set(usuario);
 }
 
-//leyendo de la BD
-firebase.database().ref("runeat")
-.on("child_added", function(s){
-  let user = s.val();
- $('#root').append("<img src='"+user.foto+"'/>")
-})
+// leyendo de la BD
+firebase.database().ref('runeat')
+  .on('child_added', function(s) {
+    let user = s.val();
+    $('#root').append('<img src=\'' + user.foto + '\'/>');
+  });
 const Siguiente = () => {
-location.href = ('views/wall.html');
-}
+  location.href = ('views/wall.html');
+};
