@@ -1,0 +1,64 @@
+body {
+  background: red;
+}
+
+.header{
+  text-align: right;
+  background: orange;
+  display: block;
+}
+
+.btn-logout {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+
+
+}
+
+.username {
+  padding: 20px;
+  text-align: right;
+}
+
+.btn-publicar{
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+
+}
+
+.publicacion {
+  margin-bottom: 10px;
+  width: 80%;
+  padding-top: 15px;
+}
+
+.post {
+  border: 2px solid orange;
+  width: 80%;
+  margin: 1% auto;
+  padding: 20px;
+}
+
+.post .comment {
+  font-size: 20px;
+}
+.post .user { }
+.post .date {
+  text-align: right;
+}
+.post .likes {
+  text-align: right;
+}
+.post .controls {
+  text-align: right;
+}
