@@ -34,7 +34,7 @@ const loginGoogle= () => {
         // The firebase.auth.AuthCredential type that was used.
         var credential = error.credential;
         // ...
-    
+
       });
 }
 
@@ -57,7 +57,7 @@ const loginFace= () => {
         // The firebase.auth.AuthCredential type that was used.
         var credential = error.credential;
         // ...
-    
+
       });
 }
 
@@ -84,19 +84,30 @@ const observador = () => {
     //cuando un usuario ya esta registrado
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
-          console.log("existe usuario registrado");
-          // User is signed in. 
-          aparece();
-          var displayName = user.displayName;
-          var email = user.email;
+          // console.log("existe usuario registrado");
+          // User is signed in.
+          // aparece();
+          // var displayName = user.displayName;
+          // var email = user.email;
           //cuando el usuario ya confirmo correo
-          console.log(user.emailVerified);
-          var emailVerified = user.emailVerified;
-          var photoURL = user.photoURL;
-          var isAnonymous = user.isAnonymous;
-          var uid = user.uid;
-          var providerData = user.providerData;
+          // console.log(user.emailVerified);
+          // var emailVerified = user.emailVerified;
+          // var photoURL = user.photoURL;
+          // var isAnonymous = user.isAnonymous;
+          // var uid = user.uid;
+          // var providerData = user.providerData;
           // si no existe un usuario
+
+          // guarda session en localStorage
+          window.localStorage.setItem('session', JSON.stringify({
+            token: user.G,
+            email: user.email,
+            photoURL: user.photoURL,
+            phoneNumber: user.phoneNumber
+          }));
+
+          // redirecciona al timeline
+          return location.href = './views/timeline.html';
         } else {
           // User is signed out.
           console.log("no existe usuario registrado");
@@ -104,17 +115,8 @@ const observador = () => {
         }
       });
 }
+
 observador();
-
-
-//contenido que slo se mostrara al estar registrado
-const aparece = () =>{
-    let contenido = document.getElementById("contenido");
-        contenido.innerHTML = `
-        <h4>BIENVENIDO</h4>
-        <button onclick = "cerrar()">cerrar sesión</button>
-        `; 
-};
 
 const cerrar = () => {
     firebase.auth().signOut()
@@ -122,7 +124,7 @@ const cerrar = () => {
         console.log("Saliendo...")
     })
     .catch(function(error){
-        console.log(eror)
+        console.log(error);
     })
 };
 //verificar el correo electronico con el que se esta registrando
