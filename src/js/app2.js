@@ -1,44 +1,44 @@
 
 
 const loginGoogle= () => {
-    var provider = new firebase.auth.GoogleAuthProvider();
+    let provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider).then(function(result) {
         // This gives you a Google Access Token. You can use it to access the Google API.
-        var token = result.credential.accessToken;
+        let token = result.credential.accessToken;
         // The signed-in user info.
-        var user = result.user;
+        let user = result.user;
         console.log(result)
         // ...
       }).catch(function(error) {
         // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
+        let errorCode = error.code;
+        let errorMessage = error.message;
         // The email of the user's account used.
-        var email = error.email;
+        let email = error.email;
         // The firebase.auth.AuthCredential type that was used.
-        var credential = error.credential;
+        let credential = error.credential;
         // ...
     
       });
 }
 
 const loginFace= () => {
-    var provider = new firebase.auth.FacebookAuthProvider();
+    let provider = new firebase.auth.FacebookAuthProvider();
     firebase.auth().signInWithPopup(provider).then(function(result) {
         // This gives you a Google Access Token. You can use it to access the Google API.
-        var token = result.credential.accessToken;
+        let token = result.credential.accessToken;
         // The signed-in user info.
-        var user = result.user;
+        let user = result.user;
         console.log(result)
         // ...
       }).catch(function(error) {
         // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
+        let errorCode = error.code;
+        let errorMessage = error.message;
         // The email of the user's account used.
-        var email = error.email;
+        let email = error.email;
         // The firebase.auth.AuthCredential type that was used.
-        var credential = error.credential;
+        let credential = error.credential;
         // ...
     
       });
@@ -57,8 +57,8 @@ const ingreso = () => {
         // Handle Errors here.
         let errorCode = error.code;
         let errorMessage = error.message;
-        console.log(errorCode);
-        console.log(errorMessage);
+        alert(errorCode);
+        alert(errorMessage);
         // ...
       });
 }
@@ -67,18 +67,18 @@ const observador = () => {
     //cuando un usuario ya esta registrado
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
-          console.log("existe usuario registrado");
+          alert("existe usuario registrado");
           // User is signed in. 
           aparece();
-          var displayName = user.displayName;
-          var email = user.email;
+          let displayName = user.displayName;
+          let email = user.email;
           //cuando el usuario ya confirmo correo
           console.log(user.emailVerified);
-          var emailVerified = user.emailVerified;
-          var photoURL = user.photoURL;
-          var isAnonymous = user.isAnonymous;
-          var uid = user.uid;
-          var providerData = user.providerData;
+          let emailVerified = user.emailVerified;
+          let photoURL = user.photoURL;
+          let isAnonymous = user.isAnonymous;
+          let uid = user.uid;
+          let providerData = user.providerData;
           // si no existe un usuario
         } else {
           // User is signed out.
@@ -102,9 +102,9 @@ const aparece = () =>{
 const cerrar = () => {
     firebase.auth().signOut()
     .then(function(){
-        console.log("Saliendo...")
+        alert("Saliendo...")
     })
     .catch(function(error){
-        console.log(eror)
+        alert(error)
     })
 };
