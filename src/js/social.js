@@ -12,7 +12,7 @@ function initialization() {
     storageBucket: 'red-social-19985.appspot.com',
     messagingSenderId: '169924096887'
   };
-      
+
   firebase.initializeApp(config);
 
   formSignup = document.getElementById('form-signup'); // Hace referencia al formulario
@@ -35,6 +35,22 @@ function sendSignup(event) { // En esta función se agrega los datos del formula
     alert(event.target.nombre.value + ' quedaste registradx');
   }
   else {
+<<<<<<< HEAD
     alert('Confirma que hayas escrito tus datos correctamente!');
   }
 }
+=======
+    alert('Confirma que hayas escrito tus datos caorrectamente!');
+  }
+}
+
+function authentication(event) {
+  event.preventDefault();
+  refUserAuth.signInWithEmailAndPassword(event.target.correo.value, event.target.password.value).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // ...
+  });
+}
+>>>>>>> upstream/master
