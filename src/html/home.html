@@ -5,23 +5,39 @@
     <title></title>
   </head>
   <body>
-   <script><!--Permiso de facebook-->
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '651409108544978',
-          xfbml      : true,
-          version    : 'v3.0'
-        });
-        FB.AppEvents.logPageView();
-      };
+    <!-- Permisos de Facebook -->
+    <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '651409108544978',
+      xfbml      : true,
+      version    : 'v3.0'
+    });
+    FB.AppEvents.logPageView();
+  };
 
-    (function(d, s, id){
-       var js, fjs = d.getElementsByTagName(s)[0];
-       if (d.getElementById(id)) {return;}
-       js = d.createElement(s); js.id = id;
-       js.src = "https://connect.facebook.net/en_US/sdk.js";
-       fjs.parentNode.insertBefore(js, fjs);
-     }(document, 'script', 'facebook-jssdk'));
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<h2 id='userSpace'></h2>
+<pre id = 'obj'></pre>
+
+<!-- Aquí comienza el contenido de la página -->
+
+<footer>
+  <nav>
+    <div class="col-sm-12 text-center">
+        <a class="btn btn-black btn-lg btn-responsive" href="html/registry.html" role="button" >UNIRSE</a>
+        <a class="btn btn-black btn-lg btn-responsive" href="html/login.html" role="button" >INICIO</a>
+    </div>
+  </nav>
+</footer>
+
    </script>
   </body>
 </html>

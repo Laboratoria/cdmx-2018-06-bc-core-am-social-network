@@ -1,17 +1,18 @@
 # DiabeTips UX
 ## Sketching de Diseño Ideal
 Mobie first
-![alt text](src/images/general.jpg)
-![alt text](src/images/carruselinicio.jpg)
-![alt text](src/images/inicio.jpg)
-![alt text](src/images/inicio1.jpg)
-![alt text](src/images/registrousuario.jpg)
-![alt text](src/images/comentario.jpg)
-![alt text](src/images/feed.jpg)
+![alt text](img/general.jpg)
+![alt text](img/carruselinicio.jpg)
+![alt text](img/inicio.jpg)
+![alt text](img/inicio1.jpg)
+![alt text](img/registrousuario.jpg)
+![alt text](img/comentario.jpg)
+![alt text](img/feed.jpg)
+
 ## Benchmark (externo)
 "DiabeTips"
 Mejora tu calidad de vida y la de los demas.
-Somos una comunidad de personas con diabetes que desean llevar una mejor calidad de vida-------
+Somos una comunidad de personas con diabetes que desean llevar una mejor calidad de vida.
 
 DiabeTips es una Red Social principalmente para mujeres con diabetes, dentro de ella podrán interactuar, compartir recetas saludables, crear eventos, puntuar a los mejores consejos y donar insumos para el cuidado de esta enfermedad.
 
@@ -29,12 +30,27 @@ En nuestra investigación encontramos a varios competidores, todos cuentan con l
 
 Las aplicaciones que se encuentran actualmente mejor rankeadas son  Diabetes-Diario de Glucosa, Diabetes:M y My sugr: App diario de diabetes.
 
+![alt text](playstore.png)
+![alt text](diariodeglucosa.png)
+![alt text](diabetesm.png)
+![alt text](mysugar.png)
 
 - Páginas y Grupos de Facebook
 
 En este sector solo nos encontramos con la página de la Federación Mexicana de Diabetes, escasas páginas de fundaciones y grupos que van desde temas como dieta, compra-venta de insumos y diabetes gestacional.
 
 En facebook nos dimos a la tarea de buscar eventos en la CDMX y nos encontramos con lo escasos que son incluso a nivel nacional, la mayoria estaban ubicados en el extranjero.
+
+* Grupos en Facebook
+![alt text](groupsface.png)
+![alt text](groupsface1.png)
+
+* Páginas en Facebook
+![alt text](pagsface.png)
+
+* Eventos para diabéticos
+![alt text](eventos.png)
+![alt text](eventos1.png)
 
 **Datos demograficos**
 
@@ -110,3 +126,8 @@ https://docs.google.com/forms/d/1nP3k9PJ8N6f9j1hZzteiIWGFmATQu4fA9IOBdlN74KQ/edi
 
 * Vida con diabetes (Hábitos)
 https://docs.google.com/forms/d/1-YOlKn4PHrXrH825d1zxUUpsnMJjXNXtVJqEWARr6z4/edit?edit_requested=true#responses
+
+* Formularios aplicados en Facebook
+
+![alt text](encuestaface.png)
+![alt text](encuestaface1.png)
