@@ -1,6 +1,7 @@
 // Ejecuta tu test
-import { expect } from 'chai';
-import { authGoogle } from '../src/js/index.js';
+const funciones = require('../src/js/index.js')
+ 
+import { authGoogle } from ;
 describe('index', () => { // es el data.js
 
   it('authGoogle debería ser una función', () => {
