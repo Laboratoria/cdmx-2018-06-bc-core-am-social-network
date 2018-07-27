@@ -32,7 +32,9 @@ signUpBtn.addEventListener('click', event => {
     let passwordValue = password.value;
     const auth = firebase.auth();
     auth.createUserWithEmailAndPassword(emailValue, passwordValue) // con este método creamos el usuario en la base de datos firebase
-      .then(()=>{
+      .then((user)=>{
+        const newUser = auth.currenUser;
+        newUser.updateProfile({displayName: username});
         location.href = 'view1.html';
         console.log('usuario registrado');
       })
@@ -89,33 +91,4 @@ loginFacebookBtn.addEventListener('click', event =>{
       console.log('login con facebook');
     });
 });
-
-firebase.auth().onAuthStateChanged(user => { // cambiar el estado de logeado a no logeado
-  if (user) {
-    // estamos logueados
-    console.log(user);
-    // location.href = '../src/views/view1.html';
-  } else {
-    // no estamos logueados
-    console.log('not logged in ');
-  }
-});
-
-
-// Firebase database
-
-const messageInput = document.getElementsById('input-post');
-
-const message = ()=>{
-  let currentUser = firebase.auth().currentUser;
- 
-  let messageValue = messageInput.value;
-
-  const newMessagekey = firebase.database().ref().child('messages').push().key;
-  firebase.database().ref(`messages/${newMessagekey}`).set({
-    creator: currentUser.uid,
-    creatorName: currentUser.displayName,
-    text: messageInput
-  });
-};
 
