@@ -8,32 +8,32 @@ document.getElementById('btn-facebook').addEventListener('click', (event) =>{
 });
 //  Proveedor de credenciales de Gmail. Pasa credenciales a la autenticación
 const authGoogle = () => {
-	var provider = new firebase.auth.GoogleAuthProvider();
+	let provider = new firebase.auth.GoogleAuthProvider();
 	authentificating(provider);
 };
 //  Proveedor de credenciales de facebook. Pasa credenciales a la autenticación
 const authFacebook = () => {
-	var provider = new firebase.auth.FacebookAuthProvider();
+	let provider = new firebase.auth.FacebookAuthProvider();
 	authentificating(provider);
 };
 // autenticación para redes socilaes con Proveedorde credenciales.
 const authentificating = (provider) =>{
 	firebase.auth().signInWithPopup(provider).then(function(result) { // Genera pantalla emergente para pedir autenticación
 		// Da el Token de acceso a Google. Usar para acceder a la API de Google
-		var token = result.credential.accessToken;
+		let token = result.credential.accessToken;
 		// Datos del usuario logeado
-		var user = result.user;
+		let user = result.user;
 		document.getElementById('container').innerHTML = `<p>${'Bienvenido'}${' '}${'usuario'}</p>
     <button type="button" id="buttonLogout" onclick="cerrar()">LogOut</button>`;
 	}).catch(function(error) {
 		// generar error
-		var errorCode = error.code;
-		var errorMessage = error.message;
+	  let errorCode = error.code;
+		let errorMessage = error.message;
 		// Este email ya esta en uso
-		var email = error.email;
+		let email = error.email;
 		console.log(email);
 		// Los permisos del firebase.auth.AuthCredential ya fueron usados.
-		var credential = error.credential;
+		let credential = error.credential;
 		console.log(credential);
 	});
 };
@@ -46,8 +46,8 @@ const registrar = (email, password, userName, name, birthday, country) =>{
 		})
 		.catch(function(error) {
 			// Manejo de errores
-			var errorCode = error.code;
-			var errorMessage = error.message;
+			let errorCode = error.code;
+			let errorMessage = error.message;
 			console.log(errorCode);
 			console.log(errorMessage);
 		});
@@ -60,8 +60,8 @@ const ingresar = (emailU, passwordU, nameU) =>{
 		})
 		.catch(function(error) {
 			// Manejo de error
-			var errorCode = error.code;
-			var errorMessage = error.message;
+			let errorCode = error.code;
+			let errorMessage = error.message;
 			console.log(errorCode);
 			console.log(errorMessage);
 			// ...
@@ -74,13 +74,13 @@ const observadorEmail = (nameU)=>{
 		if (user) {
 			userSpace(nameU);
 			// Usuario logeado
-			var displayName = user.displayName;
-			var email = user.email;
-			var emailVerified = user.emailVerified;
-			var photoURL = user.photoURL;
-			var isAnonymous = user.isAnonymous;
-			var uid = user.uid;
-			var providerData = user.providerData;
+			let displayName = user.displayName;
+			let email = user.email;
+			let emailVerified = user.emailVerified;
+			let photoURL = user.photoURL;
+			let isAnonymous = user.isAnonymous;
+			let uid = user.uid;
+			let providerData = user.providerData;
 			console.log('Activo');
 		} else {
 			console.log('No hay usuario');

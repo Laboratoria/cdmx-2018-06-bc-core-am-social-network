@@ -3,9 +3,9 @@ const db = firebase.database();
 // Variables referidad a espacios del DOM
 const commentText = document.getElementById('comment-text');
 const commentSend = document.getElementById('send-comment');
-const printComments = document.getElementById('comments');
-const addLikes = document.getElementById('likes');
-const likeCounter = document.getElementById('likeCounter');
+// const printComments = document.getElementById('comments');
+// const addLikes = document.getElementById('likes');
+// const likeCounter = document.getElementById('likeCounter');
 
 /* Impresion de mensajes
 El metodo ready permite que al cargar la pagina, automaticamente
