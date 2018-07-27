@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- CSS -->
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="../css/main.css">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
     crossorigin="anonymous">
@@ -81,7 +81,7 @@
   <div class="container" id="publications">
   </div>
   <div class="mx-auto" align="center">
-    <img src="images/loader.gif" alt="" class="mx-auto" width="50" height="50">
+    <img  alt="" class="mx-auto" width="50" height="50">
   </div>
 
 
@@ -103,8 +103,8 @@
   <script src="https://twemoji.maxcdn.com/twemoji.min.js"></script>
   <!--Replacement for JavaScript's popup boxes-->
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <script src="js/data.js"></script>
-  <script src="js/main.js"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 
 </html>
