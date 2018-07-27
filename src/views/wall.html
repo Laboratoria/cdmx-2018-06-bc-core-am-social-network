@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Runneat</title>
+      <link rel="shortcut icon" href="/views/imagenes/running.png" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
@@ -68,15 +69,31 @@
       </div>
       <!-- Comentarios -->
       <div id="coments" class="col-6">
-      <form>
-      <h1>¿Cómo te sientes hoy?: </h1><br>
-    <center><textarea id="item"></textarea>
-    <button id="Share">Compartir</button></center>
-<p></p>
-      <center>  <h2>Comentarios</h2>
-        <p></p>
-        <ul></ul> </center>
-     </form>
+
+        <div class="container">
+       <p>
+         <label for="new-task">Nuevo post</label>
+         <input id="new-task" type="text">
+         <button>Compartir</button>
+       </p>
+
+       <h3>Comentarios</h3>
+       <ul id="incomplete-tasks">
+
+       </ul>
+
+       <!--h3>Completed</h3>
+       <ul id="completed-tasks"-->
+         <!--li>
+           <input type="checkbox" checked>
+
+           <input type="text">
+           <button class="edit">Edit</button>
+           <button class="delete">Delete</button>
+         </li-->
+       </ul>
+     </div>
+
 </div>
 <!-- Grupos -->
 
@@ -98,8 +115,14 @@
 </div>
 
 </div>
-</center>
+
+
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+<script type="text/javascript" src="../js/license.js">
+
+</script>
      <script src="../js/wall.js"></script>
      <script src="../js/index.js"></script>
+
   </body>
 </html>
