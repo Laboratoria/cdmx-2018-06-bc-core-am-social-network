@@ -5,6 +5,10 @@
     font-size:12px;
 }
 
+h3{
+    text-shadow: black;
+}
+
 /* #card {  */
 /* height: 140px;
 width: 290px;

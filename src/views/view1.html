@@ -54,23 +54,26 @@
     <section class="slider">
         <ul class="slides">
             <li>
-                <img src="../images/assorted-diet-edible-247685.jpg">
+                <img src="../images/berries-breads-breakfast-compressed.jpg">
                 <!-- random image -->
+
                 <div class="caption center-align">
                     <h3>¿Quieres Comer saludable?</h3>
                     <h5 class="light grey-text text-lighten-3"></h5>
                 </div>
             </li>
             <li>
-                <img src="../images/black-watch-blogger-blue-cloth-179912.jpg">
+                <img src="../images/bowl-cherries-chicken-compressed.jpg">
                 <!-- random image -->
+
                 <div class="caption left-align">
                     <h3>¡Tú mismo puedes preparalo!</h3>
+
                     <h5 class="light grey-text text-lighten-3"></h5>
                 </div>
             </li>
             <li>
-                <img src="../images/bowl-cherries-chopping-board-793759.jpg">
+                <img src="../images/bowl-delicious-diet-compressed.jpg">
                 <!-- random image -->
                 <div class="caption right-align">
                     <h3>Fácil y con ingredientes locales</h3>
@@ -78,10 +81,12 @@
                 </div>
             </li>
             <li>
-                <img src="../images/bowl-delicious-diet-257816.jpg">
+                <img src="../images/bread-close-up-delicious-compressed.jpg">
                 <!-- random image -->
+
                 <div class="caption center-align">
                     <h3>¡Comparte y encuentra recetas deliciosas!</h3>
+
                     <h5 class="light grey-text text-lighten-3"></h5>
                 </div>
             </li>
@@ -136,13 +141,17 @@
 
         //slider
 
-        const slider = document.querySelector('.slider');
-        M.Slider.init(slider, {
-            indicators: false,
-            heigh: 500,
-            transition: 500,
-            interval: 6000
+         $(document).ready(function(){
+              $('.slider').slider();
         });
+
+        // const slider = document.querySelector('.slider');
+        // M.Slider.init(slider, {
+        //     indicators: false,
+        //     heigh: 500,
+        //     transition: 500,
+        //     interval: 6000
+        // });
     </script>
 </body>
 
