@@ -16,7 +16,6 @@ let publicarBtn = document.getElementById('publicar-btn');
 publicarBtn.addEventListener('click', event1 => {
   let currentUser = firebase.auth().currentUser; // obtener al usuario
   let messageValue = messageInput.value; // obtener el mensaje escrito
-
   const newMessagekey = firebase.database().ref().child('messages').push().key; // En ref se pone la ruta para encontrar los mensajes, luego ¿dónde los vamos a guardar? obteniendo una llave única para nuestros elementos de la colección messages. creo un elemento y saco esa llavve
   firebase.database().ref(`messages/${newMessagekey}`).set({
     creator: currentUser.uid,
@@ -38,16 +37,35 @@ window.onload = () => {
       console.log('not logged in ');
     }
   });
+
   firebase.database().ref('messages')
     .on('child_added', (newMessage) => {
       card.innerHTML +=
          `<div class="card blue lighten-3">
             <p>${newMessage.val().creatorName}:</p>
             <p> ${newMessage.val().text}</p>
-         <i class="small material-icons right">mode_edit</i>
+            <div class ="card-action">
+            <button class = "edit-message-btn">Editar</button>
+           <button class = "delete-message-btn">Borrar</button>
          <i class=" small material-icons right">favorite</i>  
+         </div>
         </div>`;
     });
+
+
+  const deleteMessagebtn = document.getElementsByTagName('button');
+
+  deleteMessagebtn.addEventListener('click', deletingMessage);
+
+  
+  let borrar = firebase.database().ref().child('messages').push().key;
+  let refMessage ;
+  console.log(borrar);
+  const deletingMessage = () => {
+    let refMensaje = refMessage.child(borrar);
+    refMensaje.remove();
+  };
+  console.log(deletingMessage);
 };
 
 
