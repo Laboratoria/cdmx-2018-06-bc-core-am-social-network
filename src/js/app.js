@@ -16,8 +16,8 @@ let publicarBtn = document.getElementById('publicar-btn');
 publicarBtn.addEventListener('click', event1 => {
   let currentUser = firebase.auth().currentUser; // obtener al usuario
   let messageValue = messageInput.value; // obtener el mensaje escrito
-  const newMessagekey = firebase.database().ref().child('messages').push().key; // En ref se pone la ruta para encontrar los mensajes, luego ¿dónde los vamos a guardar? obteniendo una llave única para nuestros elementos de la colección messages. creo un elemento y saco esa llavve
-  firebase.database().ref(`messages/${newMessagekey}`).set({
+  const newMessagekey = firebase.database().ref().child('posts').push().key; // En ref se pone la ruta para encontrar los mensajes, luego ¿dónde los vamos a guardar? obteniendo una llave única para nuestros elementos de la colección messages. creo un elemento y saco esa llavve
+  firebase.database().ref(`posts/${newMessagekey}`).set({
     creator: currentUser.uid,
     creatorName: currentUser.displayName,
     UserEmail: currentUser.email,
@@ -38,7 +38,7 @@ window.onload = () => {
     }
   });
 
-  firebase.database().ref('messages')
+  firebase.database().ref('posts')
     .on('child_added', (newMessage) => {
       card.innerHTML +=
          `<div class="card blue lighten-3">
