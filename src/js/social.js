@@ -35,6 +35,11 @@ function sendSignup(event) { // En esta función se agrega los datos del formula
     alert(event.target.nombre.value + ' quedaste registradx');
   }
   else {
+<<<<<<< HEAD
+    alert('Confirma que hayas escrito tus datos correctamente!');
+  }
+}
+=======
     alert('Confirma que hayas escrito tus datos caorrectamente!');
   }
 }
@@ -48,3 +53,4 @@ function authentication(event) {
     // ...
   });
 }
+>>>>>>> upstream/master
