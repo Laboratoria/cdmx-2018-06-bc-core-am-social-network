@@ -1,12 +1,13 @@
+# DiabeTips UX
 ## Sketching de Diseño Ideal
 Mobie first
-![alt text](img/general.jpg)
-![alt text](img/carruselinicio.jpg)
-![alt text](img/inicio.jpg)
-![alt text](img/inicio1.jpg)
-![alt text](img/registrousuario.jpg)
-![alt text](img/comentario.jpg)
-![alt text](img/feed.jpg)
+![alt text](src/images/general.jpg)
+![alt text](src/images/carruselinicio.jpg)
+![alt text](src/images/inicio.jpg)
+![alt text](src/images/inicio1.jpg)
+![alt text](src/images/registrousuario.jpg)
+![alt text](src/images/comentario.jpg)
+![alt text](src/images/feed.jpg)
 ## Benchmark (externo)
 "DiabeTips"
 Mejora tu calidad de vida y la de los demas.
@@ -107,5 +108,5 @@ https://docs.google.com/forms/d/1nP3k9PJ8N6f9j1hZzteiIWGFmATQu4fA9IOBdlN74KQ/edi
 * Diabetes en mujeres
 https://docs.google.com/forms/d/1nP3k9PJ8N6f9j1hZzteiIWGFmATQu4fA9IOBdlN74KQ/edit?edit_requested=true#responses
 
-* Vida con diabetes (Hábitos) 
+* Vida con diabetes (Hábitos)
 https://docs.google.com/forms/d/1-YOlKn4PHrXrH825d1zxUUpsnMJjXNXtVJqEWARr6z4/edit?edit_requested=true#responses

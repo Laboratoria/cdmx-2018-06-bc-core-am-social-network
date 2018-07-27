@@ -9,16 +9,18 @@
     "pretest": "npm run eslint && npm run htmlhint",
     "test-browser": "opener ./test/index.html",
     "test-node": "nyc mocha ./test/headless.js && nyc report --reporter=html",
-    "test": "npm run test-node && npm run test-browser"
+    "test-mocha": "mocha --compilers js:babel-register",
+    "test": "npm run test-node && npm run test-browser && npm run test-mocha",
+    "test-watch": "mocha --watch --compilers js:babel-register"
   },
   "dependencies": {
-    "chai": "^4.1.2",
     "eslint": "^4.19.1",
     "htmlhint": "^0.9.13",
     "nyc": "^11.7.1",
     "opener": "^1.4.3"
   },
   "devDependencies": {
+    "chai": "^4.1.2",
     "mocha": "^5.2.0"
   }
 }
