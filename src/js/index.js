@@ -68,6 +68,39 @@ btnLogin.addEventListener('click', e => {
   });
 });
 
+
+btnGg.addEventListener('click', e => {
+  var provider = new firebase.auth.GoogleAuthProvider();
+  authentication(provider);
+  console.log("google");
+});
+
+// Login con Facebook
+btnFb.addEventListener('click', e => {
+  var provider = new firebase.auth.FacebookAuthProvider();
+  authentication(provider);
+  console.log("Facebook");
+});
+
+const authentication = (provider) => {
+  firebase.auth().signInWithPopup(provider).then(function(result) {
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    var token = result.credential.accessToken;
+    // The signed-in user info.
+    var user = result.user;
+    // ...
+  }).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // The email of the user's account used.
+    var email = error.email;
+    // The firebase.auth.AuthCredential type that was used.
+    var credential = error.credential;
+    // ...
+  });
+};
+
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
     window.location.assign('views/home.html');
@@ -76,45 +109,3 @@ firebase.auth().onAuthStateChanged(function (user) {
     console.log('no se ha accesado');
   }
 });
-
-btnGg.addEventListener('click', e => {
-  let provider = new firebase.auth.GoogleAuthProvider();
-  authentication(provider);
-  console.log("google");
-});
-
-// Login con Facebook
-btnFb.addEventListener('click', e => {
-  let provider = new firebase.auth.FacebookAuthProvider();
-  authentication(provider);
-  console.log("Facebook");
-});
-
-const authentication = (provider) => {
-  const auth = firebase.auth();
-  const promise = auth.signInWithPopup(provider);
-  console.log(promise);
-  promise
-  .then((result) => {
-    // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-    const token = result.credential.accessToken;
-    // The signed-in user info.
-    const user = result.user;
-    console.log(user);
-    // ...
-  }).catch((error) => {
-    // console.log(error);
-    // Handle Errors here.
-    const errorCode = error.code;
-    // console.log(errorCode);
-    const errorMessage = error.message;
-    // console.log(errorMessage);
-    // The email of the user's account used.
-    const email = error.email;
-    // console.log(email);
-    // The firebase.auth.AuthCredential type that was used.
-    const credential = error.credential;
-    // console.log(credential);
-    // ...
-  });
-};
