@@ -7,33 +7,33 @@ const logout = document.getElementById('logout').addEventListener('click', event
   location.href = '../index.html';
 });
 
-// const publicar = () => {
-//   firebase.auth().onAuthStateChanged(user => {
-//     if (user) {
-const publishButton = document.getElementById('publish').addEventListener('click', event => {
-  event.preventDefault();
-  let postDate = `${new Date()}`;
-  const contentPost = document.getElementById('publication-content').value;
-  db.collection('post').add({
-    content: contentPost,
-    date: postDate,
-    userID: user.uid,
-    // likes: 0
-  })
-    .then(docRef => {
-      console.log('Document written with ID: ', docRef.id);
-      document.getElementById('publication-content').value = '';
-      // drawPost();
-    })
-    .catch(error => {
-      console.error('Error adding document: ', error);
-    });
-});
-//     } else {
-//       location.href = ('../index.html');
-//     }
-//   });
-// };
+const publicar = () => {
+  firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+      const publishButton = document.getElementById('publish').addEventListener('click', event => {
+        event.preventDefault();
+        let postDate = firebase.firestore.FieldValue.serverTimestamp();
+        const contentPost = document.getElementById('publication-content').value;
+        db.collection('post').add({
+          content: contentPost,
+          date: postDate,
+          userID: user.email,
+          likes: []
+        })
+          .then(docRef => {
+            console.log('Document written with ID: ', docRef.id);
+            document.getElementById('publication-content').value = '';
+            drawPost();
+          })
+          .catch(error => {
+            console.error('Error adding document: ', error);
+          });
+      });
+    } else {
+      location.href = ('../index.html');
+    }
+  });
+};
 
 function deletePost(id) {
   db.collection('post').doc(id).delete().then(function() {
@@ -44,12 +44,12 @@ function deletePost(id) {
 };
 
 
-// const drawPost = () => {
-const postContainer = document.getElementById('publications');
-db.collection('post').onSnapshot((querySnapshot) => {
-  querySnapshot.forEach((doc) => {
-    console.log(`${doc.id} => ${doc.data()}`);
-    postContainer.innerHTML += `<div class="card text-white bg-info" my-5 px-2>
+const drawPost = () => {
+  const postContainer = document.getElementById('publications');
+  db.collection('post').onSnapshot((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+    // console.log(`${doc.id} => ${doc.data()}`);
+      postContainer.innerHTML += `<div class="card text-white bg-info" my-5 px-2>
                                    <div class="card-header" id= "${doc.id}">
                                      <h5> <i class="fas fa-user-circle"></i> ${doc.data().userID}</h5>
                                      <p>${doc.data().date}</p>
@@ -72,13 +72,13 @@ db.collection('post').onSnapshot((querySnapshot) => {
                                    </div>
                                     <div class="card-footer mr-auto">
                                       <input id="comment" type="text"> 
-                                      <button class="btn btn-info float-right"><i class="fas fa-comment-alt"></i></button>
+                                      <button class="btn btn-info float-right" id="commenting"><i class="fas fa-comment-alt"></i></button>
                                       </div>
                                 </div>
                                 <br/>`;
+    });
   });
-});
-// };
+};
 
-
-// window.onload = publicar;
+publicar();
+drawPost();
