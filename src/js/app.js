@@ -78,12 +78,12 @@ function edit(texto) {
 
   let inputRef = db.collection('comments').doc(id);
   return inputRef.update({
-    comment: texto
-  })
-    .then(function() {
+      comment: texto
+    })
+    .then(function () {
       console.log('Document successfully updated!');
     })
-    .catch(function(error) {
+    .catch(function (error) {
       // The document probably doesn't exist.
       console.error('Error updating document: ', error);
     });

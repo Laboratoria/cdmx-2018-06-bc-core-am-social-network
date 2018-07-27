@@ -7,9 +7,7 @@ var config = {
   messagingSenderId: '839140955395'
 };
 
-
 firebase.initializeApp(config);
-
 
 registrar.addEventListener('click', function() {
   console.log('diste un click');
@@ -51,7 +49,7 @@ function observador() {
       // console.log('Existe usuario activo');
       aparece(user);
       // User is signed in.
-      let displayName = user.displayNam  e;
+      let displayName = user.displayName;
       let email = user.email;
       let emailVerified = user.emailVerified;
       // console.log('*********************');
@@ -129,3 +127,5 @@ function facebook() {
 function newDoc() {
   window.location.assign('app.html');
 }
+
+
