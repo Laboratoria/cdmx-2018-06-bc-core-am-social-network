@@ -5,12 +5,12 @@
     font-size:12px;
 }
 
-#card { 
+/* #card {  */
 /* height: 140px;
 width: 290px;
 left: 25px;
 right: 15px; */
-} 
+/* }  */
 /* 
 #icon_prefix2 {
 width: 211px;
@@ -30,3 +30,6 @@ html{
     height: 100%;
 }
 
+#brand-logo1, #brand-logo2{
+    font-family: 'Julius Sans One', sans-serif;
+}
