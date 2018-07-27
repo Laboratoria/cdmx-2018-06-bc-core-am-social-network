@@ -107,10 +107,10 @@ const verificar = () =>{
     .then(function() {
     //si funciona se le mandara correo
     // Email sent.
-    console.log("Enviando correo..");
+    alert("Enviando correo..");
     }).catch(function(error) {
     // An error happened.
-    console.log("error");
+    alert("error");
     });
 
 }

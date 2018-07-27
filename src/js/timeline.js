@@ -1,5 +1,5 @@
 // obtiene la session del localStorage
-var session = window.localStorage.getItem('session');
+let session = window.localStorage.getItem('session');
 
 // regresa al login si no tiene session iniciada
 if (!session) {
@@ -10,7 +10,7 @@ session = JSON.parse(session);
 
 // obtiene todos los posts de la base de datos de firebase
 const loadPosts = () => {
-  var url = 'https://red-social-867d8.firebaseio.com/posts.json';
+  let url = 'https://red-social-867d8.firebaseio.com/posts.json';
 
   fetch(url, {
       method: 'GET'
@@ -47,7 +47,7 @@ const logout = () => {
 
 // envia el nuevo post a la base de datos de firebase
 const uploadPost = post => {
-  var url = 'https://red-social-867d8.firebaseio.com/posts.json';
+  let url = 'https://red-social-867d8.firebaseio.com/posts.json';
 
   fetch(url, {
       method: 'POST',
@@ -120,7 +120,7 @@ const addPost = event => {
 
 // methodo que elimina el post
 const deletePost = id => {
-  var url = `https://red-social-867d8.firebaseio.com/posts/${id}.json`;
+  let url = `https://red-social-867d8.firebaseio.com/posts/${id}.json`;
 
   fetch(url, {
       method: 'DELETE',

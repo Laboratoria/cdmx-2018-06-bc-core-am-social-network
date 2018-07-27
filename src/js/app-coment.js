@@ -5,11 +5,11 @@ firebase.initializeApp({
   });
   //Se agregan los siguientes campos como registro
   //  DB Initialize Cloud Firestore through Firebase
-  var db = firebase.firestore();
+  let db = firebase.firestore();
   
 const guardar = () =>{
     //obtener valores
-    var comentario = document.getElementById("comentario").value;
+    let comentario = document.getElementById("comentario").value;
     db.collection("users").add({
         first: comentario,
         last: "Lovelace",
@@ -28,7 +28,7 @@ const guardar = () =>{
 }
 
 //para poder leer y pintar los datos 
-var paint = document.getElementById("getcomentario").value;
+let paint = document.getElementById("getcomentario").value;
 //LLAMA DB (INICIACION DE FIRESTORE) EN NUESTRO CASO LA COLECCIÓN ES USUARIO
 //se susutituye .get para que este mostrando los datos en tiempo real
 db.collection("users").onSnapshot((querySnapshot) => {
@@ -69,9 +69,9 @@ const editar = (id,comentario) =>{
     boton.innerHTML = "Editar";
     //Al presionar el boton q dice editar c correra la sig funcion
     boton.onclick() = function(){ 
-        var washingtonRef = db.collection("users").doc(id);
+        let washingtonRef = db.collection("users").doc(id);
         // Set the "capital" field of the city 'DC'
-    var comentario = document.getElementById("comentario").value;
+    let comentario = document.getElementById("comentario").value;
     return washingtonRef.update({
         first: comentario,
        
