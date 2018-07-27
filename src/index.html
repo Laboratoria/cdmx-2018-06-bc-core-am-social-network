@@ -7,7 +7,7 @@
   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
   <link rel="stylesheet" href="css/style.css"/>
-  <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Montserrat" rel="stylesheet">
 
 </head>
 <body>
@@ -16,14 +16,15 @@
   <div class="container">
     <section class="row">
       <form id="loginform" method="" action="">
+        <h2>Beemom</h2>
         <input type="text" id="name" class="input none" placeholder="Nombre">
         <input type="text" id="mail" class="input" placeholder="Correo">
         <input type="password" id="password" class="input" placeholder="Contraseña">
         <input type="button" id="btnLogin" class="loginbutton iniciar" value="Iniciar sesión">
         <input type="button" id="btnSign" class="loginbutton registrar" value="Registrar">
         <input type="button" id="btnSignup" class="loginbutton registrar none" value="Registrar">
-        <input type="submit" id="btnFb" class="loginbutton face" value="Facebook">
-        <input type="submit" id="btnGg" class="loginbutton google" value="Google">
+        <input type="button" id="btnFb" class="boton loginbutton face" value="f">
+        <input type="button" id="btnGg" class="boton loginbutton google" value="G+">
       </form>
     </section>
 
@@ -33,13 +34,9 @@
     <h3 id="insertar"></h3>
   </div>
 
-
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
   <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
-
-
   <script src="js/firebase.js"></script>
   <script src="js/index.js"></script>
 </body>
