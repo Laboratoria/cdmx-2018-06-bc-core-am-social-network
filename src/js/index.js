@@ -11,6 +11,7 @@ firebase.initializeApp(config); // con el método firebase.initializeApp se apli
 
 var database = firebase.database();
 
+
 // Getting elements (obteniendo elementos globales: inputs y botones)
 let mail = document.getElementById('email');
 let password = document.getElementById('password');
