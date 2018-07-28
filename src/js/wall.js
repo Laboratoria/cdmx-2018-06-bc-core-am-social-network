@@ -21,7 +21,7 @@ const createNewTaskElement = (taskString) => {
   const editButton = document.createElement('button');
   const deleteButton = document.createElement('button');
 
-  checkbox.type = 'checkbox';
+
   editInput.type = 'text';
 
   editButton.innerHTML = 'Edit &#9998;';
@@ -31,7 +31,7 @@ const createNewTaskElement = (taskString) => {
 
   label.innerHTML = taskString;
 
-  listItem.appendChild(checkbox);
+
   listItem.appendChild(label);
   listItem.appendChild(editInput);
   listItem.appendChild(editButton);
@@ -91,7 +91,7 @@ const bindTaskEvents = (taskListItem, checkboxEventHandle) => {
 
   deleteButton.addEventListener('click', deleteTask);
 
-  checkbox.addEventListener('change', checkboxEventHandle);
+
 }
 
 const editTask = () => {
