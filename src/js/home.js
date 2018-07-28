@@ -52,7 +52,7 @@ window.onload = () => {
                     <p id="likes" class="inline"></p>
                     <input type="button" id="btnLike" class="btnEdit btn" value="Like">
                     <input type="button" id="btnEdit" class="btnEdit btn" value="Editar">
-                    <input type="button" id="btnErase" class="btn" value="Eliminar"> 
+                    <input type="button" id="btnErase" class="btn" value="Eliminar btn"> 
                     <input type="button" id="btnSave" class="btn none" value="Guardar">
                 </form>
               </div>`;
