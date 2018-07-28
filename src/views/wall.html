@@ -9,7 +9,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href=../css/main.css>
-  </head>
+  <!-- Chart.js -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js" integrity="sha256-J2sc79NPV/osLcIpzL3K8uJyAD7T5gaEFKlLDM18oxY=" crossorigin="anonymous">
+ </head>
 <!--Parte de el logo-->
     <div id="row" class="row">
       <div id="topLOGO" class="col"> ...
@@ -68,7 +71,7 @@
   </div>
       </div>
       <!-- Comentarios -->
-      <div id="coments" class="col-6">
+      <div id="coments" class="col-5">
 
         <div class="container">
        <p>
@@ -96,7 +99,6 @@
 
 </div>
 <!-- Grupos -->
-
   <center><div id="Grupos" class="col">
     <div id="grupo" class="card">
   <div class="card-body">Grupos</div>
@@ -113,7 +115,16 @@
 <div id="FOOD" class="card">
   <div class="card-body">Restaurantes CDMX</div>
 </div>
-
+<p></p>
+<!--Grafica -->
+<div id="Grafic" class="Card">
+<canvas id="polar-chart" width="300" height="150"></canvas>
+</div>
+<p></p>
+<div id="Notice" class="Card">
+  Seccion de noticias
+</div>
+</center>
 </div>
 
 

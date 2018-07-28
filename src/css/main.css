@@ -58,3 +58,6 @@ padding-bottom: 5px;
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2nIsNDSQIpcu3b0D9eqihR7wRAn5kFJS-yyFgH21G32m7J97Fsw");
   background-blend-mode:luminosity;
 }
+#Grafic{
+  border: 2px solid #AE1A97;
+}
