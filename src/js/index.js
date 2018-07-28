@@ -25,50 +25,87 @@ btnSignup.addEventListener('click', e => {
   const nameValue = name.value;
   localStorage.setItem("mail", mail)
 
-  const promise = firebase.auth().createUserWithEmailAndPassword(mail, pass);
-  promise.catch(e => console.log(e.message))
-
-  let ref = database.ref('user');
-  let data = {
-    name: nameValue,
-    mail: mail
-  }
-  ref.push(data);
-  setTimeout((event) => { window.location.reload();}, 2000);
+  const promise = firebase.auth().createUserWithEmailAndPassword(mail, pass)
+  .then(function(){
+    promise.catch(e => console.log(e.message))
+    let ref = database.ref('user');
+    let data = {
+      name: nameValue,
+      mail: mail
+    }
+    ref.push(data);
+    setTimeout((event) => { window.location.reload();}, 2000);
+  })
+  .catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    console.log(errorCode);
+    console.log(errorMessage);
+    alert("Verifica tus datos");
+    // ...
+  });
 });
+
 
 // Login con email y password
 btnLogin.addEventListener('click', e => {
   const mail = email.value;
   const pass = password.value;
   localStorage.setItem("mail", mail)
-  const promise = firebase.auth().signInWithEmailAndPassword(mail, pass);
-  promise.catch(e => console.log(e.message))
+  const promise = firebase.auth().signInWithEmailAndPassword(mail, pass)
+  .then(function(){
+    promise.catch(e => console.log(e.message))
+  })
+  .catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    console.log(errorCode);
+    console.log(errorMessage);
+    alert("Verifica tus datos");
+    // ...
+  });
 });
 
-//Login with Google
+// Borra localStorage
 btnGg.addEventListener('click', e => {
-
+  localStorage.clear();
+  googleLogin();
 });
+
+// Función para Login con Facebook
+const googleLogin = () => {
+  var provider = new firebase.auth.GoogleAuthProvider();
+  authentication(provider);
+  console.log("google");
+}
 
 // Login con Facebook
 btnFb.addEventListener('click', e => {
-  const provider = new firebase.auth.FacebookAuthProvider();
-  provider.setCustomParameters({
-    'display' : 'popup'
+  var provider = new firebase.auth.FacebookAuthProvider();
+  authentication(provider);
+  console.log("Facebook");
+});
+
+const authentication = (provider) => {
+  firebase.auth().signInWithPopup(provider).then(function(result) {
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    var token = result.credential.accessToken;
+    // The signed-in user info.
+    var user = result.user;
+    // ...
+  }).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // The email of the user's account used.
+    var email = error.email;
+    // The firebase.auth.AuthCredential type that was used.
+    var credential = error.credential;
+    // ...
   });
-  firebase.auth().signInWithPopup(provider)
-    .then (() => {
-      console.log("Login con facebook");
-    })
-    .catch((error) => {
-      console.log("Error de firebase > " + error.code);
-      console.log("Error de firebase, mensaje >" + error.message);
-           
-    })
-}); 
-
-
+};
 
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
@@ -78,6 +115,3 @@ firebase.auth().onAuthStateChanged(function (user) {
     console.log('no se ha accesado');
   }
 });
-
-
-

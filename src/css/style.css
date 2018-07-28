@@ -4,6 +4,15 @@ body{
 	position: static;
 
 }
+.nav-color{
+	background-color: #1661EE;
+}
+
+h2 {
+	font-family: 'Gochi Hand', cursive;
+	text-align: center;
+
+}
 
 #loginform{
 	margin-top:100px;   /*margen superior*/
@@ -15,7 +24,7 @@ body{
 .input{
 	width:270px;  /*ancho*/
     padding:15px 25px;  /*ancho y alto de las cajas de texto*/
-		font-family: 'Merienda', cursive;  /*tipo de letra*/
+		font-family: 'Montserrat', sans-serif;  /*tipo de letra*/
 	background: #f5f5f5;  /*color de fondo de la caja de texto a un blanco un poco mas gris*/
 	border:none;  /*con esta propiedad se quita el borde por defecto*/
 	border-radius: 10px; /*se le asigna un angulo a cada esquina del imput*/
@@ -25,38 +34,40 @@ body{
 }
 
 .iniciar {
-	background-color: #C70039;
+	/*background-color: #C70039;*/
 	width:320px; /*ancho del boton*/
 	border-radius: 10px;
 	color:#F4F6F7;
 }
 
+/*
 .registrar {
 	background-color: #C70039;
-	width:320px; /*ancho del boton*/
+	width:320px; /*ancho del boton*//*
 	border-radius: 10px;
 	color:#F4F6F7;
-}
+}*/
 
 .face {
+	font-size: 40px;
 	background-color: #1661EE;
-	width:158px;
-	border-radius: 10px;
 	color:#F4F6F7;
+	display:inline-flex;
+
 }
 
 .google {
+	font-size: 35px;
 	background-color: #D10202;
-	width:158px;
-	border-radius: 10px;
 	color:#F4F6F7;
+	display:inline-flex;
+
 }
 
 .loginbutton {
-	/* background-color:#ffdd00; /*color del boton iniciar sesion*/ 
+	/* background-color:#ffdd00; /*color del boton iniciar sesion*/
 	display:inline-block;
-	font-family: 'Merienda', cursive;
-	font-size:18px;  /*tamaño de la letra*/
+	font-family: 'Montserrat', sans-serif;
 	font-weight:bold; /*permite que la letra sea gruesa*/
 	text-align:center; /*centra el texto dentro del boton*/
 	line-height:50px;
@@ -79,8 +90,30 @@ body{
 
 .none {
 	display: none;
-} 
+}
 
 .inline {
 	display: inline-block;
-} 
+}
+
+/* botones Facebook y google circulares */
+.boton{
+  width:60px;
+  height:55px;
+  border-radius: 50px;
+	color: #F4F6F7;
+  font-weight: 600; /*grosor de la letra*/
+	border:none;
+	outline:0; /*contorno*/
+	text-align: center;
+
+
+}
+.boton:hover{
+  background-color:#2C3E50;
+	/* position:relative; */
+}
+
+.gradient {
+	background: linear-gradient(to right, #ee6e73, #ee6eb4);
+}

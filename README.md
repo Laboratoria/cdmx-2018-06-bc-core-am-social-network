@@ -69,13 +69,13 @@ Tomando como base a cuatro de las principales redes sosciales, Facebook, Pintere
 ![GitHub Facebook](https://github.com/gloryarz/cdmx-2018-06-bc-core-am-social-network/blob/master/src/images/1.jpg)
 
 
-![GitHub](https://github.com/gloryarz/cdmx-2018-06-bc-core-am-social-network/blob/master/src/images/1.jpg)
+![GitHub Pinterest](https://github.com/gloryarz/cdmx-2018-06-bc-core-am-social-network/blob/master/src/images/2.jpg)
 
 
-![GitHub Instagram](scr/images/3.jpg)
+![GitHub Instagram](https://github.com/gloryarz/cdmx-2018-06-bc-core-am-social-network/blob/master/src/images/3.jpg)
 
 
-![GitHub Snapchat](scr/images/4.jpg)
+![GitHub Snapchat](https://github.com/gloryarz/cdmx-2018-06-bc-core-am-social-network/blob/master/src/images/4.jpg)
 
 
 Evaluando cada una de las redes se acordo en el primer sprint presentar la pantalla Log In
