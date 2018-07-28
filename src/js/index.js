@@ -77,9 +77,6 @@ loginGoogleBtn.addEventListener('click', event=>{
     .signInWithPopup(provider) // popUp te va a dar la ventana de acceso a tu cuenta de google. parámetro de la variable provider que tiene la autenticación con google
     .then((result)=> { // entonces ejecuta la función que es el resultado (acceder con google)
       location.href = '../src/views/view1.html';
-      console.log(result.user);
-      // console.log(provider);
-      event1(result.user);
     });
 });
 
@@ -92,4 +89,5 @@ loginFacebookBtn.addEventListener('click', event =>{
       console.log('login con facebook');
     });
 });
+
 

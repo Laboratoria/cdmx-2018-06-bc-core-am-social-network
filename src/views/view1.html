@@ -16,16 +16,17 @@
 <body>
     <nav>
         <div class="nav-wrapper light-green">
-            <div href="#!" id="brand-logo2" class="brand-logo">Greener</div>
+            <div href="#!" id="brand-logo2" class="center brand-logo">Greener</div>
             <!--Este boton aparece cuando se reduce la resolución-->
-            <a href="profile.html" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">saccount_circle</i></a>
-            <a href="profile.html" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">shome</i></a>
+            <a href="profile.html" data-target="mobile-demo" class="sidenav-trigger" id="profile-info"><i class="material-icons ">account_circle</i></a>
+            <a href="profile.html" data-target="mobile-demo" class="sidenav-trigger"><i class="left material-icons">home</i></a>
             <ul class="right hide-on-med-and-down">
                 <li>
                     <a href="profile.html"><i class="material-icons">account_circle</i></a>
                 </li>
                 <li>
-                    <a href="view1.html"><i class="material-icons">mfavorite_borderenu</i></a>
+                    <!-- <a href="view1.html"><i class="material-icons">mfavorite_borderenu</i></a> -->
+                    <a href="../index.html" id="logout-btn">Log out</a>
                 </li>
 
             </ul>
@@ -40,7 +41,6 @@
             <li>
                 <img src="../src/images/berries-breads-breakfast-compressed.jpg">
                 <!-- random image -->
-
                 <div class="caption center-align">
                     <h3>¿Quieres Comer saludable?</h3>
                     <h5 class="light grey-text text-lighten-3"></h5>
@@ -49,10 +49,8 @@
             <li>
                 <img src="../src/images/bowl-cherries-chicken-compressed.jpg">
                 <!-- random image -->
-
                 <div class="caption left-align">
                     <h3>¡Tú mismo puedes preparalo!</h3>
-
                     <h5 class="light grey-text text-lighten-3"></h5>
                 </div>
             </li>
@@ -67,10 +65,8 @@
             <li>
                 <img src="../src//images/bread-close-up-delicious-compressed.jpg">
                 <!-- random image -->
-
                 <div class="caption center-align">
                     <h3>¡Comparte y encuentra recetas deliciosas!</h3>
-
                     <h5 class="light grey-text text-lighten-3"></h5>
                 </div>
             </li>
@@ -98,11 +94,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col s12 m4 l12">
-                        <a id="logout-btn" class="waves-effect waves-light btn ">salir</a>
+                  
                     </div>
-                </div>
+                </div> -->
             </div>
         </form>
     </div>
@@ -125,17 +121,13 @@
 
         //slider
 
-         $(document).ready(function(){
-              $('.slider').slider();
+        const slider = document.querySelector('.slider');
+        M.Slider.init(slider, {
+            indicators: false,
+            heigh: 500,
+            transition: 500,
+            interval: 6000
         });
-
-        // const slider = document.querySelector('.slider');
-        // M.Slider.init(slider, {
-        //     indicators: false,
-        //     heigh: 500,
-        //     transition: 500,
-        //     interval: 6000
-        // });
     </script>
 </body>
 

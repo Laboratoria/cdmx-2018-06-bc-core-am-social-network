@@ -8,14 +8,15 @@ const config = {
 };
 firebase.initializeApp(config);
 
+// obteniendo imputs y botones globales
 const card = document.getElementById('card');
-// Firebase database
 let messageInput = document.getElementById('input-post');
 let publicarBtn = document.getElementById('publicar-btn');
-// let card = document.getElementById('card');
+
+// botón de publicar
 publicarBtn.addEventListener('click', event1 => {
-  let currentUser = firebase.auth().currentUser; // obtener al usuario
-  let messageValue = messageInput.value; // obtener el mensaje escrito
+  let currentUser = firebase.auth().currentUser; // obtener al usuario con el propiedad .currentUser
+  let messageValue = messageInput.value; // obtener el mensaje escrito 
   const newMessagekey = firebase.database().ref().child('posts').push().key; // En ref se pone la ruta para encontrar los mensajes, luego ¿dónde los vamos a guardar? obteniendo una llave única para nuestros elementos de la colección messages. creo un elemento y saco esa llavve
   firebase.database().ref(`posts/${newMessagekey}`).set({
     creator: currentUser.uid,
@@ -31,6 +32,7 @@ window.onload = () => {
     if (user) {
       // estamos logueados
       console.log(user);
+      obtenerUsuarioDatabase(user);
       // location.href = '../src/views/view1.html';
     } else {
       // no estamos logueados
@@ -51,6 +53,16 @@ window.onload = () => {
          </div>
         </div>`;
     });
+};
+
+// cambiar de página
+const logoutBtn = document.getElementById('logout-btn');
+logoutBtn.addEventListener('click', event => {
+  firebase.auth().signOut();
+  location.href = 'index.html';
+});
+
+// 
 
 
 //   const deleteMessagebtn = document.getElementsByTagName('button');
@@ -66,12 +78,3 @@ window.onload = () => {
 //     refMensaje.remove();
 //   };
 //   console.log(deletingMessage);
-};
-
-
-const logoutBtn = document.getElementById('logout-btn');
-logoutBtn.addEventListener('click', event => {
-  firebase.auth().signOut();
-  location.href = 'index.html';
-});
-
