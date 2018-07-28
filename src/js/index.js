@@ -131,3 +131,7 @@ document.getElementById('buttonIngresar').addEventListener('click', (event) => {
 /* const userPrintSpace = document.getElementById('obj');
 let database = firebase.database().ref().child('obj');
 database.on('value', snap => console.log(snap.val()));*/
+function sum(a, b) {
+  return a + b;
+}
+module.exports = sum;
