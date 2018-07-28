@@ -15,7 +15,7 @@
 <body>
   <nav>
     <div class="nav-wrapper light-green">
-      <div href="#!" id="brand-logo2" class="brand-logo">Greener</div>
+      <div href="#!" id="brand-logo2" class="center brand-logo">Greener</div>
       <!--Este boton aparece cuando se reduce la resolución-->
       <a href="#" data-target="mobile-demo" class="sidenav-trigger">
         <i class="material-icons">menu</i>
@@ -34,9 +34,21 @@
       </ul>
     </div>
   </nav>
-  <div>
-        <p> </p>
+
+  <div id="profile-container">
   </div>
-  
+
 </body>
+<script> 
+        const config = {
+        apiKey: 'AIzaSyCbW5lXCLbbrY6EkFROvAukVs8herq8G-Y',
+        authDomain: 'social-network-5b9ef.firebaseapp.com',
+        databaseURL: 'https://social-network-5b9ef.firebaseio.com',
+        projectId: 'social-network-5b9ef',
+        storageBucket: '',
+        messagingSenderId: '1074635944561'
+      };
+      firebase.initializeApp(config);
+      </script>
+<script src="../js/app.js"> </script>
 </html>
