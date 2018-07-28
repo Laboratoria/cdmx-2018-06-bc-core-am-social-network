@@ -34,18 +34,19 @@ h2 {
 }
 
 .iniciar {
-	background-color: #C70039;
+	/*background-color: #C70039;*/
 	width:320px; /*ancho del boton*/
 	border-radius: 10px;
 	color:#F4F6F7;
 }
 
+/*
 .registrar {
 	background-color: #C70039;
-	width:320px; /*ancho del boton*/
+	width:320px; /*ancho del boton*//*
 	border-radius: 10px;
 	color:#F4F6F7;
-}
+}*/
 
 .face {
 	font-size: 40px;
@@ -111,4 +112,8 @@ h2 {
 .boton:hover{
   background-color:#2C3E50;
 	/* position:relative; */
+}
+
+.gradient {
+	background: linear-gradient(to right, #ee6e73, #ee6eb4);
 }
