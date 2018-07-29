@@ -171,3 +171,11 @@ new Chart(document.getElementById("polar-chart"), {
       }
     }
 });
+
+// contador de likes
+let LikesButton = document.getElementById("Like"),
+  counter = 0;
+LikesButton.onclick = function() {
+  counter += 1;
+  LikesButton.innerHTML = "Likes: " + counter;
+};
