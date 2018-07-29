@@ -1,4 +1,28 @@
-// login
+// Registro Usuarios
+const userName = document.getElementById('userName');
+const email = document.getElementById('txtEmailSignUp');
+const password = document.getElementById('txtPasswordSignUp');
+const btnSignup = document.getElementById('btnSignup');
+
+btnSignup.addEventListener('click', event => {
+  const mail = email.value;
+  const password = password.value;
+  const userName = userName.value;
+  localStorage.setItem('mail', mail);
+  alert('Ingresa tus Datos');
+  console.log('btnSignup');
+      
+
+  firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+  // Handle Errors here.
+    let errorCode = error.code;
+    let errorMessage = error.message;
+    alert('Verifica datos');
+  // ...
+  });
+});
+
+// login Goole
 let provider = new firebase.auth.GoogleAuthProvider();
 
 $('#login').click(function() {
@@ -11,7 +35,7 @@ $('#login').click(function() {
     });
 });
 
-
+// Login FaceBook
 var providerf = new firebase.auth.FacebookAuthProvider();
 $('#face').click(function() {
   firebase.auth()
@@ -24,6 +48,7 @@ $('#face').click(function() {
     });
 });
 
+// Login GitHub
 var providerg = new firebase.auth.GithubAuthProvider();
 $('#gith').click(function() {
   firebase.auth()
