@@ -44,10 +44,10 @@ Nos dimos a la tarea de  entender las motivaciones y  propósitos de nuestros us
 **¿Quiénes son los principales usuarios ?**
 
 Nuestros principales usuarios son mujeres y hombres de entre  los 25 y 30 años que trabajan y/o estudian. Están fuera de casa todo el día, esto implica para ellos no tener tiempo para preparar sus alimentos.
+Los resultados nos hicieron ver la problemática real, la cual nos dice que muchos de estos encuestados son personas que dependen de alguien más para su alimentación. Notamos que no hay coherencia en sus respuestas al decir que no tienen tiempo para preparar alimentos, sin embargo  llevan comida, preparada en su casa, a su oficina o escuela.La pregunta aquí es: *¿quién les prepara esa comida?* 
+Intuimos que como sociedad mexicana, las madres o parejas son quienes se encargan de prepararles estos alimentos y por ello pensamos en nuestro target final: *"las personas que quieren hacerse cargo de su alimentación y ya no desean depender de alguien más para la elaboración de estos alimentos".*
 
-Intuimos que como sociedad mexicana, las madres o parejas son quienes se encargan de prepararles estos alimentos y por ello pensamos en nuestro target final: *"las personas que quieren hacerse cargo de su alimentación y ya no depender de alguien más para su elaboración".*
-
-Las largas jornadas de trabajo sentados frente a un computador o en un salón de clases forman parte de su cotidianeidad,  así como caminos que se complican aún más por el tráfico que deben recorrer por la ciudad al salir de casa para ir a la oficina y viceversa; distintas actividades que van excluyendo el cuidado personal y particularmente, la alimentación y la falta de actividad física, esto conlleva a un desgaste dejándolos sin motivación para realizar actividades extras.
+Las largas jornadas de trabajo sentados frente a un computador o en un salón de clases forman parte de su cotidianeidad,  así como caminos que se complican aún más por el tráfico y que deben recorrer por la ciudad al salir de casa para ir a la oficina y viceversa; distintas actividades que van excluyendo el cuidado personal y particularmente, la alimentación y la falta de actividad física, esto conlleva a un desgaste dejándolos sin motivación para realizar actividades extras.
 
 **¿Cuáles son los objetivos de estos usuarios en relación con el producto?**
  
@@ -55,8 +55,9 @@ Tener una fuente de consulta, aportar a esa fuente y ser un participante activo 
 
 Así mismo planteamos los objetivos de los usuarios con respecto al producto utilizando las historais de usuario.
 
-* Yo usuari@ quiero poder registrarme con facebook o google en una nueva red social 
-* Yo como usuari@ logueado quiero poder hacer publicaciones para comunicarme con personas como yo que busquen una mejora en su alimentación. 
+* Yo usuari@ quiero poder registrarme en 'Greener'
+* Yo usuario quiero poder iniciar sesión con facebook o google para ser parte de 'Greener'
+* Yo como usuari@ logueado quiero poder hacer publicaciones para comunicarme con personas como yo que busquen una mejora en su alimentación sin tener mucho tiempo para preparar alimentos. 
 * Yo como usuari@ quiero poder contribuir y recibir  tips o recetas, videos y fotos, para ayudarnos a mejorar nuestra alimentación, lo cual nos brindará motivación y una mejor calidad de vida
 * Yo como usuari@ quiero poder dar  y recibir like a las publicaciones de mis amigos.
 * Yo como usuari@ quiero poder ver cuántos  likes/Estrella (o similar) tiene una publicación.
@@ -66,14 +67,12 @@ Así mismo planteamos los objetivos de los usuarios con respecto al producto uti
 * Yo usuari@ quiero poder agregar nuevos amigos
 * Yo usuari@ quiero poder aceptar solicitudes de amigos
 * Yo usuari@ quiero poder eliminar amigos
-* Yo usuari@ quiero poder Debe poder filtrar los posts sólo para mis amigos y para todo público.
+* Yo usuari@ quiero poder poder filtrar los posts sólo para mis amigos y para todo público.
 * Yo usuari@ quiero poder publicar solo para mis amigos
 * Yo usuari@ quiero poder poder publicar públicamente, visible para todos los usuarios de la red social.
 * Yo usuari@ quiero poder enviar mensajes privados a mis amigos.
 
-**Conclusión:**
 
-   Estos resultados nos hicieron ver la problemática real, la cual nos dice que muchos de estos encuestados son personas que dependen de alguien más para su alimentación. Notamos que no hay coherencia en sus respuestas al decir que no tienen tiempo para preparar alimentos, sin embargo se llevan comida, la pregunta aquí es: *¿quién les prepara esa comida?* 
   
 # Ideación
 
@@ -97,14 +96,8 @@ La idea principal de nuestra red social no es sólo ofrecer, como muchas, receta
 
 Teniendo en cuanta que la comida entra por lo ojos, sabemos que la toma de decisiones en cuanto a colores e imagenes es primordial para motivar al usuario, el uso de lenguaje poco técnico en las recetas y tips, es de las mayores preocupaciones entre los usuarios al igual que los utensilios de cocina. El color es capaz de estimular o deprimir, puede crear alegría o tristeza. Así mismo, determinados colores despiertan actitudes activas o por el contrario pasivas. Con colores se favorecen sensaciones térmicas de frío o de calor, y también podemos tener impresiones de orden o desorden.
 
-Para nuestra red social hemos decidido incorporar el color naranja en nuestro logotipo, este es asociado mayormente a alimentos cítricos que hacen de referencia una vida saludable. Este color tiene el poder de activar nuestro organismo, lo que ocasiona la necesidad repentina de comer y un creciente hambre, mientras nuestro cerebro está siendo influenciado mentalmente para esto.
-
-En el campo de Marketing:
-
-* Significa agresión
-* Crea un llamado a la acción: Compre, Venda, Suscríbase
-* Presente en compradores impulsivos
-* Representa una marca amigable, alegre y confiable
+Para nuestra red social hemos decidido incorporar el color naranja en nuestro logotipo, este es asociado mayormente a alimentos cítricos que hacen de referencia una vida saludable. Este color tiene el poder de activar nuestro organismo, lo que ocasiona la necesidad repentina de comer y un creciente hambre, mientras nuestro cerebro está siendo influenciado mentalmente para esto. En el campo de Marketing el color 
+ una marca amigable, alegre y confiable.
 
 También optamos por un contraste con un color verde que representa:
 
@@ -181,16 +174,15 @@ En su mayoria, las aplicaciones usan colores y lenguaje muy sencillo de entender
 
 
 
-Hacer un  prototipo de alta fidelidad. FFIGMAAAAA
+
 Testear el prototipo con usuarios. --------- Hasta que tengamos el figma
 Asegurarte de que la implementación en código siga los lineamientos del diseño. -------------------------- 
 Hacer sesiones de testing con el producto en HTML. -----------------------
-Esta vez te pedimos que los ítems de tu Backlog de Producto estén escritos como Historias de Usuario. Esta es una técnica muy simple que te ayudará a: (Hacerlo hoy)
+
 Organizar el trabajo en función del valor que le aporta al usuario.
 Poder publicar partes completas y utilizables del producto al final del sprint.
-Que el equipo trabaje de manera multidisciplinaria de manera natural.
-) Definición del producto
-En el README.md cómo conociste el mercado de las redes sociales, cómo descubriste las necesidades de los usuarios, cómo llegaste  la definición final de tu producto. Es importante que detalles:
+
+
 
 
 

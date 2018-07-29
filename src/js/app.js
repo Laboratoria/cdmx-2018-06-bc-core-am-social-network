@@ -9,15 +9,21 @@ const config = {
 firebase.initializeApp(config);
 
 // obteniendo imputs y botones globales
-const card = document.getElementById('card');
+let card = document.getElementById('card');
 let messageInput = document.getElementById('input-post');
 let publicarBtn = document.getElementById('publicar-btn');
+let deleteBtn = document.getElementsByClassName('delete-message-btn')[0];
+// obteniendo ícono donde daremos click y contenedor 
+let profileIcon = document.getElementById('profile-info');
+let profileContainer = document.getElementById('profile-container');
+let newMessagekey;
 
-// botón de publicar
-publicarBtn.addEventListener('click', event1 => {
+
+// botón de publicar para guardar información en la base de datos
+publicarBtn.addEventListener('click', event => {
   let currentUser = firebase.auth().currentUser; // obtener al usuario con el propiedad .currentUser
   let messageValue = messageInput.value; // obtener el mensaje escrito 
-  const newMessagekey = firebase.database().ref().child('posts').push().key; // En ref se pone la ruta para encontrar los mensajes, luego ¿dónde los vamos a guardar? obteniendo una llave única para nuestros elementos de la colección messages. creo un elemento y saco esa llavve
+  newMessagekey = firebase.database().ref().child('posts').push().key; // En ref se pone la ruta para encontrar los mensajes, luego ¿dónde los vamos a guardar? obteniendo una llave única para nuestros elementos de la colección messages. creo un elemento y saco esa llavve 
   firebase.database().ref(`posts/${newMessagekey}`).set({
     creator: currentUser.uid,
     creatorName: currentUser.displayName,
@@ -26,20 +32,18 @@ publicarBtn.addEventListener('click', event1 => {
   });
 });
 
-
 window.onload = () => {
-  firebase.auth().onAuthStateChanged(user => { // cambiar el estado de logeado a no logeado
+  // observador estamos o no logueados
+  firebase.auth().onAuthStateChanged(user => {
     if (user) {
       // estamos logueados
-      console.log(user);
+      pintarUsuario(user);
       obtenerUsuarioDatabase(user);
-      // location.href = '../src/views/view1.html';
     } else {
-      // no estamos logueados
       console.log('not logged in ');
     }
   });
-
+  // crear publicación por medio del DOM con template string
   firebase.database().ref('posts')
     .on('child_added', (newMessage) => {
       card.innerHTML +=
@@ -53,16 +57,46 @@ window.onload = () => {
          </div>
         </div>`;
     });
+  firebase.database().ref('posts')
+    .on('child_removed', (newMessage) => {
+      console.log('has borrado correctamente');
+    });
 };
 
-// cambiar de página
+// deleteBtn.addEventListener('click', eliminarPostBD);
+// const eliminarPostBD = ()=>{
+//   firebase.database().ref('/posts/' + newMessagekey).remove();
+// };
+ 
+const obtenerUsuarioDatabase = (user)=>{
+  firebase.database().ref('users').set({
+    username: user.displayName,
+    email: user.email,
+    profPicture: user.photoURL
+  });
+};
+
+const pintarUsuario = (user)=>{
+  firebase.database().ref('users')
+    .on('child_added', (newUser) => {
+      profileContainer.innerHTML =
+       `<div class="container center">
+       <div class="row">
+       <p>Bienvenid@ ${newUser.val().username}</p>
+       <p>e-mail: ${newUser.val().email}</p>
+       </div>
+       </div>`;
+    });
+};
+profileIcon.addEventListener('click', pintarUsuario);
+
+
+// cambiar de página a index.html
 const logoutBtn = document.getElementById('logout-btn');
 logoutBtn.addEventListener('click', event => {
   firebase.auth().signOut();
   location.href = 'index.html';
 });
-
-// 
 
 
 //   const deleteMessagebtn = document.getElementsByTagName('button');
