@@ -1,0 +1,25 @@
+/* Hoja de estilo de página de registro */
+div{
+  font-family: 'Lora' , serif ;
+  color: #000000;
+}
+body{
+background: #ffffff;
+  /* background-image: url(../images/registry.jpg); */
+  /* linear-gradient(#00e6ac, #00664d); */
+}
+header{
+  color: #000000;
+}
+h4{
+  color: #000000;
+  font-family: 'Lora' , serif;
+}
+small{
+  color: #000000;
+}
+img{
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  max-width: 100%;
+}
