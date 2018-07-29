@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DiabeTips</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css"/> <!--CDR de firebase-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css" />
     <link rel="icon" href="../images/icono.jpeg">
 </head>
-<body onload = "printUsersDom()">
+<body>
         <header>
               <h1 class="text-center">Perfil DiabeTips</h1>
               </header>
@@ -44,18 +46,19 @@
                     <label class="checkbox-inline"><input id = "childrenSick" type="checkbox" value="">Hijos</label>
                     </section>
                         <div class="col-12 text-center">
-                         <input id = "btnProfile" type="button" value="Guardar Perfil" href="comments.html" class="btn btn-secondary btn-block btn-md btn-sm">
+                         <input id = "btnProfile" type="button" value="Guardar Perfil" class="btn btn-secondary btn-block btn-md btn-sm">
                        </div>
                   </form>
                 </div>
               </section>
-              <section id = "profileConteniner"></section>
+              <div class="container form-group">
+                <section id = "profileConteniner"></section>
+              </div>
               <!--Linrerias y enlaces a archivos js-->
               <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
               <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
-              <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
-              <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
               <script src="../js/authentications.js"></script>
               <script src="../js/profileForm.js"></script>
+
 </body>
 </html>

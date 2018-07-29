@@ -1,3 +1,4 @@
+initiaziling();
 // Evento de autenticaciíon con Gmail de Google
 document.getElementById('btn-google').addEventListener('click', (event) =>{
   authGoogle();
@@ -139,4 +140,7 @@ const registro = document.getElementByName(formulario)[0],
 /* const userPrintSpace = document.getElementById('obj');
 let database = firebase.database().ref().child('obj');
 database.on('value', snap => console.log(snap.val()));*/
-init();
+function sum(a, b) {
+  return a + b;
+}
+module.exports = sum;

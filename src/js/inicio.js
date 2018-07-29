@@ -1,3 +1,4 @@
+initiaziling();
 // ____Funciones botones de pantalla de INICIO
 // __Botón UNIRSE
 document.getElementById('unirse').addEventListener('click', (event)=>{
