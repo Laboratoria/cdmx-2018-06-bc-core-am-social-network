@@ -1,3 +1,4 @@
+initiaziling();
 // __ Function Share Comment:
 let comments = []; // Where the array is gonna live
 

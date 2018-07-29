@@ -1,4 +1,4 @@
-init();
+initiaziling();
 let db = firebase.initializeApp();
 
 const crearPublicacion = () => {
