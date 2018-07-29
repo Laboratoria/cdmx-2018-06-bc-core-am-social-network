@@ -9,9 +9,6 @@ let config = {
 };
 firebase.initializeApp(config); // con el método firebase.initializeApp se aplica la configuración que está nuestra variable config
 
-var database = firebase.database();
-
-
 // Getting elements (obteniendo elementos globales: inputs y botones)
 let mail = document.getElementById('email');
 let password = document.getElementById('password');

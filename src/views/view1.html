@@ -14,121 +14,127 @@
 </head>
 
 <body>
-    <nav>
-        <div class="nav-wrapper light-green">
-            <div href="#!" id="brand-logo2" class="center brand-logo">Greener</div>
-            <!--Este boton aparece cuando se reduce la resolución-->
-            <a href="profile.html" data-target="mobile-demo" class="sidenav-trigger" id="profile-info"><i class="material-icons ">account_circle</i></a>
-            <a href="profile.html" data-target="mobile-demo" class="sidenav-trigger"><i class="left material-icons">home</i></a>
-            <ul class="right hide-on-med-and-down">
-                <li>
-                    <a href="profile.html"><i class="material-icons">account_circle</i></a>
-                </li>
-                <li>
-                    <!-- <a href="view1.html"><i class="material-icons">mfavorite_borderenu</i></a> -->
-                    <a href="../index.html" id="logout-btn">Log out</a>
-                </li>
-
-            </ul>
-        </div>
-    </nav>
-
-    
-    <!--Seccion de carrusel-->
-
-    <section class="slider">
-        <ul class="slides">
-            <li>
-                <img src="../src/images/berries-breads-breakfast-compressed.jpg">
-                <!-- random image -->
-                <div class="caption center-align">
-                    <h3>¿Quieres Comer saludable?</h3>
-                    <h5 class="light grey-text text-lighten-3"></h5>
-                </div>
-            </li>
-            <li>
-                <img src="../src/images/bowl-cherries-chicken-compressed.jpg">
-                <!-- random image -->
-                <div class="caption left-align">
-                    <h3>¡Tú mismo puedes preparalo!</h3>
-                    <h5 class="light grey-text text-lighten-3"></h5>
-                </div>
-            </li>
-            <li>
-                <img src="../src/images/bowl-delicious-diet-compressed.jpg">
-                <!-- random image -->
-                <div class="caption right-align">
-                    <h3>Fácil y con ingredientes locales</h3>
-                    <h5 class="light grey-text text-lighten-3"></h5>
-                </div>
-            </li>
-            <li>
-                <img src="../src//images/bread-close-up-delicious-compressed.jpg">
-                <!-- random image -->
-                <div class="caption center-align">
-                    <h3>¡Comparte y encuentra recetas deliciosas!</h3>
-                    <h5 class="light grey-text text-lighten-3"></h5>
-                </div>
-            </li>
-        </ul>
-    </section>
-
-    <!--Empieza sección de comments-->
-    <div class="conatiner">
-        <form>
-            <div class="row">
-                <div class="col s12 l12 m 12">
-                    <div id="input-publicacion" class="input-field">
-                        <input id="input-post" type="text" placeholder="escribe algo para tus amigos">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12 m12">
-                        <a id="publicar-btn" class="waves-effect waves-light btn col s4 l2">publicar</a>
-                    </div>
-                </div>
-               
-                <div class="row">
-                    <div class="col s12 m12 l12">
-                        <div id="card">
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="row">
-                    <div class="col s12 m4 l12">
-                  
-                    </div>
-                </div> -->
-            </div>
-        </form>
+  <nav>
+    <div class="nav-wrapper light-green">
+      <div href="#!" id="brand-logo2" class="center brand-logo">Greener</div>
+      <!--Este boton aparece cuando se reduce la resolución-->
+      <a id="profile-info-mobile" href="profile.html" data-target="mobile-demo" class="sidenav-trigger">
+        <i class=" small material-icons ">account_circle</i>
+      </a>
+      <a id="log-out-mobile" href="../index.html" data-target="mobile-demo" class="sidenav-trigger">Log out</a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <a id="profile-info">
+            <i class="material-icons">account_circle</i>
+          </a>
+        </li>
+        <li>
+          <a id="logout-btn" href="../index.html">Log out</a>
+        </li>
+      </ul>
     </div>
+  </nav>
 
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-    <script src="../js/app.js"></script>
-    <!-- <script src="../js/print.js"></script> -->
-    <!-- <script src="../js/index.js"> </script> -->
-    <script type="text/javascript">
-        // $(document).ready(function() {
-        //     $('.sidenav').sidenav();
-        // });
+  <section>
+    <div id="profile-container">
+    </div>
+  </section>
 
-        document.addEventListener('DOMContentLoaded', function() {
-            let elems = document.querySelectorAll('.sidenav');
-            let instances = M.Sidenav.init(elems, options);
-        });
+  <!--Seccion de carrusel-->
 
-        //slider
+  <section class="slider">
+    <ul class="slides">
+      <li>
+        <img src="../images/berries-breads-breakfast-compressed.jpg">
+        <!-- random image -->
+        <div class="caption center-align">
+          <h3>¿Quieres Comer saludable?</h3>
+         
+        </div>
+      </li>
+      <li>
+        <img src="../images/bowl-cherries-chicken-compressed.jpg">
+        <!-- random image -->
+        <div class="caption left-align">
+          <h3>¡Tú mismo puedes preparalo!</h3>
+         
+        </div>
+      </li>
+      <li>
+        <img src="../images/bowl-delicious-diet-compressed.jpg">
+        <!-- random image -->
+        <div class="caption right-align">
+          <h3>Fácil y con ingredientes locales</h3>
+         
+        </div>
+      </li>
+      <li>
+        <img src="../images/bread-close-up-delicious-compressed.jpg">
+        <!-- random image -->
+        <div class="caption center-align">
+          <h3>¡Comparte y encuentra recetas deliciosas!</h3>
+         
+        </div>
+      </li>
+    </ul>
+  </section>
 
-        const slider = document.querySelector('.slider');
-        M.Slider.init(slider, {
-            indicators: false,
-            heigh: 500,
-            transition: 500,
-            interval: 6000
-        });
-    </script>
+  <!--Empieza sección de comments-->
+  <div class="conatiner">
+    <form>
+      <div class="row">
+        <div class="col s12 l12 m 12">
+          <div id="input-publicacion" class="input-field">
+            <input id="input-post" type="text" placeholder="escribe algo para tus amigos">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s12 m12">
+            <a id="publicar-btn" class="waves-effect waves-light btn col s4 l2">publicar</a>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s12 m12 l12">
+            <div id="card">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </form>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <script src="../js/app.js"></script>
+  <script type="text/javascript">
+    // $(document).ready(function() {
+    //     $('.sidenav').sidenav();
+    // });
+
+    // document.addEventListener('DOMContentLoaded', function () {
+    //   let elems = document.querySelectorAll('.sidenav');
+    //   let instances = M.Sidenav.init(elems, options);
+    // });
+//     document.addEventListener('DOMContentLoaded', function() {
+//     var elems = document.querySelectorAll('.carousel');
+//     var instances = M.Carousel.init(elems);
+//   });
+    //slider
+
+    const slider = document.querySelector('.slider');
+    M.Slider.init(slider, {
+      indicators: false,
+      heigh: 500,
+      transition: 500,
+      interval: 6000
+    });
+
+  </script>
 </body>
 
 </html>
