@@ -166,7 +166,7 @@ const deleteUserProfile = (idProfile) =>{
 
     let btn = document.getElementById('btnProfile');
     btn.innerHTML = 'Editar';
-
+// Evento del boton
     btn.onclick = () =>{
       var deleteDBRef = DB.collection("diabeTipsUsers").doc(idProfile);
       let editedName = document.getElementById('nameUser').value;
