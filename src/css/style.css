@@ -4,6 +4,15 @@ body{
 	position: static;
 
 }
+.nav-color{
+	background-color: #1661EE;
+}
+
+h2 {
+	font-family: 'Gochi Hand', cursive;
+	text-align: center;
+
+}
 
 h2 {
 	font-family: 'Gochi Hand', cursive;
@@ -31,18 +40,19 @@ h2 {
 }
 
 .iniciar {
-	background-color: #C70039;
+	/*background-color: #C70039;*/
 	width:320px; /*ancho del boton*/
 	border-radius: 10px;
 	color:#F4F6F7;
 }
 
+/*
 .registrar {
 	background-color: #C70039;
-	width:320px; /*ancho del boton*/
+	width:320px; /*ancho del boton*//*
 	border-radius: 10px;
 	color:#F4F6F7;
-}
+}*/
 
 .face {
 	font-size: 40px;
@@ -109,3 +119,10 @@ h2 {
   background-color:#2C3E50;
 	/* position:relative; */
 }
+<<<<<<< HEAD
+=======
+
+.gradient {
+	background: linear-gradient(to right, #ee6e73, #ee6eb4);
+}
+>>>>>>> adc01c3d06574484b36bd363896275f56f783441
