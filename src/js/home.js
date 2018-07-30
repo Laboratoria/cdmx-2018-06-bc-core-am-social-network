@@ -16,9 +16,13 @@ const postForm = document.getElementById('postForm');
 const btnHome = document.getElementById('btnHome');
 
 let user = localStorage.getItem("mail");
+let userPhoto;
 const bringData = () => {
     if (user === "google" || user === "facebook") {
         user = localStorage.getItem("display");
+        userPhoto = localStorage.getItem("photo");
+        console.log(userPhoto);
+        
     } else  {
     } 
 }
@@ -95,7 +99,10 @@ btnProfile.addEventListener('click', e => {
     borrar.style.display = "none";
     comentarios.style.display = "none";
     profile.style.display = "block";
-    profile.innerHTML = `<h3>${user}</h3>`;
+    profile.innerHTML = `<h3>
+    <img src="${userPhoto}" alt="">
+    ${user}</h3>
+    `;
 });
 
 btnHome.addEventListener('click', e => {
