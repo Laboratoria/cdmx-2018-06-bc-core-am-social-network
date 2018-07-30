@@ -1,4 +1,3 @@
-
 # UX
 
 **¿Qué es una red social?**
