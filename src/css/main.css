@@ -34,3 +34,7 @@ a{
  color:white;
 }
 
+#profile-container{
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: bold;
+}

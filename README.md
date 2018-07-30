@@ -26,7 +26,7 @@ en los que le gustaría invertir:
 * Salud
 * Energías Renovables
 
-## Objetivos
+## Objetivosco
 
 El objetivo principal de aprendizaje de este proyecto es construir un sitio web
 [_responsive_](https://github.com/Laboratoria/curricula-js/tree/master/topics/css/02-responsive)
