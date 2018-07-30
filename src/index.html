@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
 <head>
+<meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
     crossorigin="anonymous">
-  <link rel="shortcut icon" href="views/imagenes/running.png" />
+  <link rel="shortcut icon" href="views/imagenes/running.png"/>
   <link rel="stylesheet" href="views/style.css">
-
 </head>
 
 <body>
@@ -16,7 +15,7 @@
 
 
   <nav id="titutlo" class="navbar navbar-light bg-light">
-    <a id="titutlo" class="navbar-brand" href="#">
+    <a id="titulo" class="navbar-brand" href="#">
       <img src="views/imagenes/titl.jpg" width="30" height="30" class="d-inline-block align-top" alt=""> Runeat
     </a>
   </nav>
@@ -25,26 +24,28 @@
     <div class="col" id="fondo">
       <img src="views/imagenes/titl.jpg" alt="">
     </div>
-    <div class="col" id="datosUs">
+    <div class="col" id="datosUs">  
       <h1>Iniciar sesion</h1>
       <p>
         <span class="fa fa-user"></span>
-        <input id="intText" type="email" Placeholder="Email" required>
+        <input id="intText" type="email" placeholder="Email" required>
       </p>
       <!-- JS because of IE support; better: placeholder="Username" -->
       <p>
         <span class="fa fa-lock"></span>
-        <input id="intPass" type="password" Placeholder="Password" required>
+        <input id="intPass" type="password" placeholder="Password" required>
       </p>
       <!-- JS because of IE support; better: placeholder="Password" -->
 
 
       <!--<button id="singUp" type="button" class="btn btn-primary btn-lg btn-block">Registrarse</button>-->
-      <button id="iniciogoogle" type="button" class="btn btn-secondary btn-lg btn-block">Entrar</button>
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#exampleModal">
-  Registrarse
-</button>
+
+      <!--Boton para entrar-->
+      <button id="btnentrar" type="button" class="btn btn-secondary btn-lg btn-block">Entrar</button>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#exampleModal">
+       Registrarse
+      </button>
 
       <div class "col" id="loginSocial">
         <!--div id="root"></div-->
@@ -58,14 +59,10 @@
         <button id="gith">
           <img src="views/imagenes/github.png" alt="">
         </button>
-
       </div>
-
-
     </div>
-
   </div>
-  </form>
+ <!-- </form> -->
 
 <!--ventana de regristro-->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -93,10 +90,10 @@
             <label>Contraseña</label>
             <input id="txtPasswordSignUp" type="password" class="form-control" placeholder="Password" required="">
           </div>
-          <div class="form-group form-check">
+          <!--div class="form-group form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">Acepto los terminos y condiciones</label>
-          </div>
+          </div-->
           <div class="modal-footer">
             <button type="button" class="btn btn-dark" id="btnSignUp">Registrarme</button>
           </div>

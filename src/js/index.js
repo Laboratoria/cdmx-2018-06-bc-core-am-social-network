@@ -1,26 +1,67 @@
-// Registro Usuarios
-const userName = document.getElementById('userName');
-const email = document.getElementById('txtEmailSignUp');
-const password = document.getElementById('txtPasswordSignUp');
-const btnSignup = document.getElementById('btnSignup');
-
-btnSignup.addEventListener('click', event => {
-  const mail = email.value;
-  const password = password.value;
-  const userName = userName.value;
-  localStorage.setItem('mail', mail);
-  alert('Ingresa tus Datos');
+// // Registro Usuarios Nuevos
+// const userName = document.getElementById('userName');
+// const email = document.getElementById('txtEmailSignUp');
+// const password = document.getElementById('txtPasswordSignUp');
+// const btnSignup = document.getElementById('btnSignup');
+   
+btnSignup.addEventListener('click', e => {
   console.log('btnSignup');
-      
-
-  firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-  // Handle Errors here.
-    let errorCode = error.code;
-    let errorMessage = error.message;
-    alert('Verifica datos');
-  // ...
-  });
+  const email = document.getElementById('txtEmailSignUp').value;
+  const password = document.getElementById('txtPasswordSignUp').value;
+  const userName = document.getElementById('userName').value;
+  localStorage.setItem('txtEmailSignUp', mail);
+  window.location.href = 'views/wall.html';
+  alert('Ingresa tus Datos');
+  
+         
+  firebase.auth().createUserWithEmailAndPassword(email, password).then(function() {
+    verificar();
+  })
+    .catch(function(error) {
+    // Handle Errors here.
+      let errorCode = error.code;
+      let errorMessage = error.message;
+      console.log(errorCode);
+      console.log(errorMessage);
+      alert('Verifica datos');
+    // ...
+    });
 });
+
+// Ingreso de Usiario y contraseña
+const email1 = document.getElementById('intText');
+const password1 = document.getElementById('intPass');
+// const btnentrar = document.getElementById('btnentar');
+
+btnentrar.addEventListener('click', e => {
+  const email1 = intText.value;
+  const password1 = intPass.value;
+  localStorage.setItem('intText', email1);
+  firebase.auth().signInWithEmailAndPassword(email1, password1)
+    .then(function() {
+      promise.catch(e => console.log(e.message));
+      window.location.href = 'views/wall.html';
+    })
+    .catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log(errorCode);
+      console.log(errorMessage);
+      alert('Verifica tus datos');
+      // ...
+    });
+}); 
+
+function verificar() {
+  let user = firebase.auth().currentUser;
+
+  user.sendEmailVerification().then(function() {
+    // Email sent.
+  }).catch(function(error) {
+    // An error happened.
+  });
+}
 
 // login Goole
 let provider = new firebase.auth.GoogleAuthProvider();
