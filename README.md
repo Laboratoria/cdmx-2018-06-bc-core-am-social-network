@@ -86,8 +86,8 @@ A continuación mostraremos el primer sketch, pensando primero en el dispositivo
 
 Version Desktop
 
-<img align="center" src="src/UXimagenes-ux/4.jpeg"/>
-<img align="center" src="imagenes-ux/5.jpeg"/>
+<img align="center" src="src/UX/imagenes-ux/4.jpeg"/>
+<img align="center" src="src/UX/imagenes-ux/5.jpeg"/>
 
 
 ### Fundamento para el protrotipado
