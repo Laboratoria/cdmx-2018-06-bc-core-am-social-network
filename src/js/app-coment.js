@@ -66,21 +66,21 @@ const eliminar = (id) => {
 
     document.getElementById('comentario').value = comentario;
     //el boton con este id"guardar" se modificara su texto html a editar
-    let boton = document.getElementById('boton');
-    boton.innerHTML = 'Editar';
+    let editar = document.getElementById('editar');
+    // editar.innerHTML = 'Editar';
    
     //Al presionar el boton q dice editar c correra la sig funcion
-       boton.onclick= function() { 
+       editar.onclick= function() { 
         let washingtonRef = db.collection('users').doc(id);
         // Set the "capital" field of the city 'DC'
     let comentario = document.getElementById('comentario').value;
     return washingtonRef.update({
-        first: comentario,
+        first: comentario
        
     })
     .then(fuction=> {
         console.log('Document successfully updated!');
-        boton.innerHTML = 'Editar';
+        // boton.innerHTML = 'Editar';
         document.getElementById('comentario').value='';
     })
     .catch(error=> {
