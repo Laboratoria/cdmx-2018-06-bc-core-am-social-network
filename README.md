@@ -15,9 +15,9 @@ Es bien sabido que en México es uno de los países con más problemas de obesid
 
 Para tener una mejor idea de la problemática realizamos un sondeo para delimitarla y entender posibles soluciones que el usuario emplearía.
 
-<img align="center" src="./imagenes-ux/1.jpeg"/> 
-<img align="center" src="./imagenes-ux/2.jpeg"/>
-<img align="center" src="./imagenes-ux/3.jpeg"/>
+<img align="center" src="src/UX/imagenes-ux/1.jpeg"/> 
+<img align="center" src="src/UX/imagenes-ux/2.jpeg"/>
+<img align="center" src="src/UX/imagenes-ux/3.jpeg"/>
 
 
 Derivado de esto consideramos conveniente realizar una serie de preguntas en torno a estos resultados, los cuales arrojaron lo siguiente en este
@@ -81,13 +81,13 @@ Así mismo planteamos los objetivos de los usuarios con respecto al producto uti
 A continuación mostraremos el primer sketch, pensando primero en el dispositivo móvil, pues es más cómodo para el usuario accesar a través de éste a una app.
 
 
-<img align="center" src="./imagenes-ux/6.jpeg"/> 
+<img align="center" src="src/UX/imagenes-ux/6.jpeg"/> 
 
 
 Version Desktop
 
-<img align="center" src="./imagenes-ux/4.jpeg"/>
-<img align="center" src="./imagenes-ux/5.jpeg"/>
+<img align="center" src="src/UXimagenes-ux/4.jpeg"/>
+<img align="center" src="imagenes-ux/5.jpeg"/>
 
 
 ### Fundamento para el protrotipado
