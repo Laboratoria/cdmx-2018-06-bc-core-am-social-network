@@ -10,8 +10,8 @@ body{
 
 #loginform{
 	margin-top:100px;   /*margen superior*/
-  margin-left:auto;   /*margen izquierdo*/
-  margin-right:auto;  /*margen derecho*/
+    margin-left:auto;   /*margen izquierdo*/
+    margin-right:auto;  /*margen derecho*/
 	width:335px;       /*ancho*/
 }
 
@@ -87,3 +87,15 @@ body{
 .inline {
 	display: inline-block;
 } 
+.foto-perfil{
+	height: 100px;
+	width: 100px;
+}
+.letra-usuario{
+	font-size: 2em;
+}
+.abeja{
+	height: 15px;
+	width: 15px;
+
+}

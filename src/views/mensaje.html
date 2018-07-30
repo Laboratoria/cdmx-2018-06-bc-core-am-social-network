@@ -34,47 +34,13 @@
             </nav>
         </div>
     </header>
-
-    <section class="row container">
-        <div class="row">
-            <div>
-                <img src="../images/perfil.jpg" class="col s5 offset-3 circle foto-perfil" alt="">
-                <span class="letra-usuario" id="dataName"></span>
-            </div>
-        </div>
-        <hr>
-        <div class="row">
-            <div>
-                <div class="col s2">
-                    <i class="tiny material-icons">location_on</i>
-                </div>
-                <div>
-                    <span>Ciudad de México</span>
-                </div>
-            </div>
-            <div>
-                <div class="col s2">
-                    <img src="../images/bee_baja.png" class="abeja">
-                </div>
-                <div>
-                    <span>Mamá de Juan y María</span>
-                </div>
-            </div>
-            <div>
-                <div class="col s2">
-                    <i class="tiny material-icons">favorite</i>
-                </div>
-                <div>
-                    <span>Me encanta bailar y cocinar.</span>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <div class="col s12" id="postForm">
-            <h4 id="dataName"></h4>
-            <div class="input-field col s12">
-            <input type="text" id="postText" placeholder="Palabras y pensamientos de mamá">
-            <input type="button" id="btnPost" class="btn light-green" value="Publicar">
+    <section class="container">
+        <div>
+            <textarea rows="4" cols="50" name="comment" form="usrform">
+                        Enter text here...
+            </textarea>
+            <input type="texttarea" id="btnEdit" class="btnEdit" value="Editar">
+            <a class="btn disabled col s12">Nuevo mensaje</a>
         </div>
     </section>
 

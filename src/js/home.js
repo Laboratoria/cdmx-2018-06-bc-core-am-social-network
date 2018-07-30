@@ -93,7 +93,7 @@ btnProfile.addEventListener('click', e => {
   borrar.style.display = "none";
   comentarios.style.display = "none";
   profile.style.display = "block";
-  profile.innerHTML = `<h3>${user}</h3>`;
+  profile.innerHTML = `<h1>${user}</h1>`;
 });
 
 btnHome.addEventListener('click', e => {
