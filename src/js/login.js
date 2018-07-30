@@ -60,7 +60,6 @@ function authLogin(event) {
     })
     .catch(function(error) {
       alert('Confirma que hayas escrito tus datos correctamente!');
-      // Manejo de error
       let errorCode = error.code;
       let errorMessage = error.message;
       console.log(errorCode);
