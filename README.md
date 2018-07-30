@@ -52,6 +52,7 @@ Actualmente no se cuenta con una red social con esta temática, ya que la mayor�
 Los beneficios obtenidos al hacer uso de esta red social, es que como usuaria puedes acceder a la información puntual que se está buscando desde cualquier dispositivo, justo en el momento que surge la duda y que esta sea aclararla de manera rápida por otras madres que ya pasaron por lo mismo y tienen mayor experiencia. 
 
 #### **Incentivos:**
+
 Se ha pensado en  reclutar a las usuarias y mantener un portafolio de  “Súper mamás” las cuáles serán las usuarias con mayor actividad en la página, ya sea por consulta de algún tema o por resolver dudas de otra usuaria. A estas “Súper mamás”  se les gratificara por medio de incentivos que se medirán por medio de likes. Mensualmente se llevara a cabo un sorteo donde se premiara a la mami más activa y con mayor número de registro de likes en  sus publicaciones.   
 
 ### **Historia de usuarix:**
@@ -63,6 +64,7 @@ Se ha pensado en  reclutar a las usuarias y mantener un portafolio de  “Súper
 3.-Clara tiene un pequeño de 9 meses, su madre le recomendó que desde pequeño le diera todo tipo de alimentos “para que se acostumbre  ellos”. El pequeño ahora sufre de una alergia alimentaria ya que su sistema digestivo aún no estaba lo suficientemente desarrollado para digerir estos alimentos. Al pertenecer en este comunidad Clara podría recibir información constantemente sobre los alimentos correctos (ingredientes, texturas, etc) que debería de integrar a la dieta de acuerdo a su edad.  
 
 ### **Benchmark :** 
+
 Se realizó el comparativo de 6 redes sociales más populares (Todo bebé, Baby center, Work it Moms, Mi bebé y yo, bbMundo y ABCdelbebé ) según el portal Frontera.info, que hablan sobre cuidado y crianza del  bebé que consultan las mamás latinas.
 Se consideraron diferentes puntos importantes que deben contener estas redes sociales, para que su funcionalidad y contenido sea de interés para estas usuarias. Un punto significativo es que el idioma sea español, ya que esta res social está enfocada en madres latinas, la aplicación tiene que ser responsive ya que de acuerdo a las encuestas realizadas este es el dispositivo en el que la mayoría consulta la información, es importante que tenga la opción de crear un perfil o usuario, ya que  aumenta la privacidad al no permitir que nadie acceda a información de  tu cuenta (consultas, comentarios, etc.). El tener una asesoría de expertos de diferentes temas es un plus de la página ya que las usuarias las consultan regularmente con la confianza de aclarar sus dudas con alguien conocedor del  tema. Existen diferentes temas base que son los que con regularidad consultan estas usuarias (alimentación, salud, cuidado y crianza). También es importante  que en estas comunidades exista la opción de comentar los temas publicados ya que de esta forma se pueden obtener puntos de vista diferentes y enriquecer los mismos. El tema de mitos sobre la crianza es un tema crucial ya que al ser México un país de tradiciones que adoptan estos mitos, haciendo que muchas veces las usuarias tengan duda de que tan ciertos son o en que puede afectar el aplicarlos.
 
@@ -100,3 +102,5 @@ https://www.bbmundo.com/bebes/seis-doce/a-que-edad-debo-revisar-la-vista-a-mi-hi
 http://www.abcdelbebe.com/embarazo/primer-trimestre
 https://wwwhatsnew.com/wp-content/uploads/2010/06/Usos_madres_padres_internet_paraBebes.pdf
 http://www.cunamas.gob.pe/?p=6417
+
+
