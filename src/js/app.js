@@ -109,7 +109,7 @@ logoutBtn.addEventListener('click', event => {
 
 //   deleteMessagebtn.addEventListener('click', deletingMessage);
 
-  
+
 //   let borrar = firebase.database().ref().child('messages').push().key;
 //   let refMessage ;
 //   console.log(borrar);
@@ -118,3 +118,54 @@ logoutBtn.addEventListener('click', event => {
 //     refMensaje.remove();
 //   };
 //   console.log(deletingMessage);
+
+// edit icon
+// Agreagar el boton de editar desde java
+let editIconUI = document.createElement('span');
+editIconUI.class = 'edit-message';
+editIconUI.innerHTML = ' ✎';
+editIconUI.setAttribute('userid', key);
+// Crear un editIconUI span element, después darale un evento click con una función callback editButtonClicked().
+editIconUI.addEventListener('click', editButtonClicked);
+// Append despues li.innerHTML = value.name
+$li.append(editIconUI);
+
+// Mostrar el mensaje modificado de usuario
+document.getElementById('edit-user-module').style.display = 'block';
+
+// Crea el path donde se selecciona la información del usuario por la id de database
+const userRef = dbRef.child('users/' + e.target.getAttribute('userid'));
+// Remplaza la información que ingreso el usuario
+const editUserInputsUI = document.querySelectorAll('.edit-user-input');
+
+// Se define un evento llamado value en la función llada userRef, el segundo argumentoen ese evento es una función call back 
+// con el parametro snap el cual tendrá la información del usuario actual
+userRef.on('value', snap => {
+  for (var i = 0, len = editUserInputsUI.length; i < len; i++) {
+    var key = editUserInputsUI[i].getAttribute('data-key');
+    editUserInputsUI[i].value = snap.val()[key];
+  }
+});
+// Dentro de ese evento callback, recorrera ese arrayy obtendra el valor de un atributo data-keyen cada iteración y lo guardara´
+// en un variable key para poder asignarle un  valor de snap.value()[key] al campo de mensaje.
+
+// guardar los datos modificados del mensaje por usuario
+const saveBtn = document.querySelector('#edit-message-btn');
+saveBtn.addEventListener('click', saveUserBtnClicked);
+
+const messageID = document.querySelector('.edit-messageid').value;
+// se crea una let vacia para almacenar lo que introduzca el usuario
+let editedmessageObject = {};
+// obtener todo lo que ingreso el usuario en un array
+const editMessageInputsUI = document.querySelectorAll('.edit-message-input');
+// creamos un uevo loop para que iterar en el nuevo array creado y obtener los nuevos valores con el atributo data-key
+// guardar los valores en una let key
+editMessageInputsUI.forEach(function(textField) {
+  let key = textField.getAttribute('data-key');
+  let value = textField.value;
+  editedMessageObject[textField.getAttribute('data-key')] = textField.value;
+});
+// Despues usamos el método update para actualizar la información que cambio en el comenario
+userRef.update('editMessage', function() {
+  console.log('Message has been updated');
+});
