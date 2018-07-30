@@ -35,7 +35,7 @@ btnPost.addEventListener('click', e => {
         post: posted
     }
     ref.push(data);
-    posted = '';
+    postText.value = '';
 });
 
 window.onload = () => {
