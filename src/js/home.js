@@ -39,7 +39,10 @@ databaseUser.on('child_added', snap => {
 
 btnPost.addEventListener('click', e => {
     let posted = postText.value;
-    let ref = database.ref('posts');
+    if (posted === "" || posted === " "){
+        alert('Escribe un mensaje')
+    } else {
+        let ref = database.ref('posts');
     let data = {
         name: user,
         post: posted
@@ -47,6 +50,7 @@ btnPost.addEventListener('click', e => {
     ref.push(data);
     console.log(e.id);
     postText.value = '';
+    }
 });
 
 window.onload = () => {
