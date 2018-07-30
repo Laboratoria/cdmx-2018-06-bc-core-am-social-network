@@ -14,12 +14,6 @@ h2 {
 
 }
 
-h2 {
-	font-family: 'Gochi Hand', cursive;
-	text-align: center;
-
-}
-
 #loginform{
 	margin-top:100px;   /*margen superior*/
   margin-left:auto;   /*margen izquierdo*/
@@ -119,10 +113,7 @@ h2 {
   background-color:#2C3E50;
 	/* position:relative; */
 }
-<<<<<<< HEAD
-=======
 
 .gradient {
 	background: linear-gradient(to right, #ee6e73, #ee6eb4);
 }
->>>>>>> adc01c3d06574484b36bd363896275f56f783441

@@ -69,19 +69,11 @@ btnLogin.addEventListener('click', e => {
   });
 });
 
-<<<<<<< HEAD
-
-btnGg.addEventListener('click', e => {
-  var provider = new firebase.auth.GoogleAuthProvider();
-  authentication(provider);
-  console.log("google");
-=======
 // Borra localStorage
 btnGg.addEventListener('click', e => {
   localStorage.clear();
   localStorage.setItem('mail', 'google');
   googleLogin();
->>>>>>> adc01c3d06574484b36bd363896275f56f783441
 });
 
 // Función para Login con Facebook
@@ -93,31 +85,6 @@ const googleLogin = () => {
 
 // Login con Facebook
 btnFb.addEventListener('click', e => {
-<<<<<<< HEAD
-  var provider = new firebase.auth.FacebookAuthProvider();
-  authentication(provider);
-  console.log("Facebook");
-});
-
-const authentication = (provider) => {
-  firebase.auth().signInWithPopup(provider).then(function(result) {
-    // This gives you a Google Access Token. You can use it to access the Google API.
-    var token = result.credential.accessToken;
-    // The signed-in user info.
-    var user = result.user;
-    // ...
-  }).catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // The email of the user's account used.
-    var email = error.email;
-    // The firebase.auth.AuthCredential type that was used.
-    var credential = error.credential;
-    // ...
-  });
-};
-=======
   localStorage.clear();
   localStorage.setItem('mail', 'facebook');
   facebookLogin();
@@ -129,7 +96,6 @@ const facebookLogin = () => {
   console.log("Facebook");
 }
 
->>>>>>> adc01c3d06574484b36bd363896275f56f783441
 
 const authentication = (provider) => {
   firebase.auth().signInWithPopup(provider).then(function(result) {
