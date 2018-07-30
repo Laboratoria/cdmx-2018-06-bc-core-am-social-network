@@ -1,61 +1,45 @@
-// login
-let provider = new firebase.auth.GoogleAuthProvider();
+//login
+window.userRegister = {
 
-$('#login').click(function() {
-  firebase.auth()
-    .signInWithPopup(provider)
-    .then(function(result) {
-    // console.log(result.user);
-      window.location.href = 'views/wall.html';
-      $('#login').hide();
-    });
-});
+loginGoogle: () => {
 
-
-var providerf = new firebase.auth.FacebookAuthProvider();
-$('#face').click(function() {
-  firebase.auth()
-    .signInWithPopup(providerf)
-    .then(function(result) {
-    // console.log(result.user);
-      window.location.href = 'views/wall.html';
-      $('#face').hide();
-      $('#root').append('<img src=\'' + result.user.photoURL + '\'/>');
-    });
-});
-
-var providerg = new firebase.auth.GithubAuthProvider();
-$('#gith').click(function() {
-  firebase.auth()
-    .signInWithPopup(providerg)
-    .then(function(result) {
-      window.location.href = 'views/wall.html';
-    // console.log(result.user);
-    /* guardaDatos(result.user);
-    $('#face').hide();
-    $('#root').append("<img src='"+result.user.photoURL+"'/>")*/
-    });
-});
+  if (!firebase.auth().currentUser) {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+    firebase.auth().signInWithPopup(provider).then(result => {
+     location.href = ("../views/wall.html");
+   })
+    .catch (e => alert(e.message));
+    } else {
+      firebase.auth().signOut();
+    }
+  },
 
 
-// esta funcion guarda datos automaticamente
-function guardaDatos(user) {
-  var usuario = {
-    uid: user.uid,
-    nombre: user.displayName,
-    email: user.email,
-    foto: user.photoURL
-  };
-  firebase.database().ref('runeat/' + user.uid)
-    .set(usuario);
-}
+loginFacebook: () => {
 
-// leyendo de la BD
-firebase.database().ref('runeat')
-  .on('child_added', function(s) {
-    let user = s.val();
-    $('#root').append('<img src=\'' + user.foto + '\'/>');
-  });
-const Siguiente = () => {
-  location.href = ('views/wall.html');
+if (!firebase.auth().currentUser) {
+      const provider = new firebase.auth.FacebookAuthProvider();
+      provider.addScope('public_profile');
+      firebase.auth().signInWithPopup(provider).then(result => {
+        location.href = ("../views/wall.html");
+      })
+      .catch (e => alert(e.message));
+    } else {
+      firebase.auth().signOut();
+    }
+  },
+
+loginGitHub: () => {
+if (!firebase.auth().currentUser) {
+    const provider = new firebase.auth.GithubAuthProvider();
+    provider.addScope('repo');
+    firebase.auth().signInWithPopup(provider).then(result => {
+      location.href = ("../views/wall.html");
+    })
+    .catch(e => alert(e.message));
+    } else {
+      firebase.auth().signOut();
+    }
+  },
 };
