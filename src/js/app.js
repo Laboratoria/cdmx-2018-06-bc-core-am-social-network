@@ -124,7 +124,7 @@ editIconUI.addEventListener("click", editButtonClicked)
     // Append despues li.innerHTML = value.name
 $li.append(editIconUI);
 
-// Mostrar el mensaje modificado de usuario
+// Obntener el mensaje modificado de usuario
 document.getElementById('edit-user-module').style.display = "block";
 
 //Crea el path donde se selecciona la información del usuario por la id de database
