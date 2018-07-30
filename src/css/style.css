@@ -1,0 +1,259 @@
+
+.container1{
+    background-color:#415fb554;
+    width: 60%;
+    border-radius: 10px;
+}
+h4{
+	text-align: center;
+	color: #7de4f1fc;
+    font-weight: bold;
+}
+ body{
+        background-image: url("../images/8.jpeg");
+        font-family: 'Source Sans Pro', sans-serif;
+
+}
+.logo{
+    font-family: 'Pacifico', cursive;
+    font-size: 35px;
+    margin-top: 10px;
+    
+}
+.boton-inicio{
+    margin-top: 32px
+}
+.registro-top{
+    margin-top: 50px;
+}
+.slogan{
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+
+
+/*BOTONES LOGIN1*/
+.boton-login{
+    width: 50%;
+    background-color:#f48978;
+    border: none;
+    height: 50px;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    position: relative;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    color: white;
+    /*top: 1340px;*/
+}
+.boton-login:hover{
+    font-size: 22px;
+    color: white;
+
+}
+.der{
+    float: right;
+    border-left: solid 1px;
+}
+
+.boton-registrador{
+    width: 100%;
+    margin: 15px 0px;
+}
+.small-text{
+    text-align: center;
+}
+.google{
+    background-color: #fc98028a;
+    border: none;
+    text-align: left;
+
+}
+.google img{
+    margin-right: 30px;
+}
+
+.login{
+
+}
+
+.sec-log{
+    background-color: #56e0e0ba;
+    position: absolute;
+    width: 100%;
+    box-shadow: 0px 6px 20px -2px rgba(0,0,0,0.43);
+    display: block;
+    margin-top: 410px;
+}
+/*FORMuLARIO*/
+.form1{
+    font-family: 'Source Sans Pro', sans-serif;
+    
+}
+
+
+
+
+
+
+
+.example {
+    padding: 8px;
+    color: white;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .example {/*background: red;*/
+        display: none;
+    }
+      .form1 {
+    display: none;
+    }
+    .logo{
+        margin-top: 0px;
+        display: block;
+        background-color: #f48977eb;
+        color: white;
+        margin-top: 20px;
+        padding-left: 18px;
+    }
+    .boton-registrador {
+        width: 100%;
+        margin: 15px 0px;
+        background-color: #f49281;
+        margin-top: 15px;
+        margin-top: 15px;
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px){
+    .example {background: green;}
+   
+     /*BOTONES LOGIN1*/
+    .boton-login{
+            font-size: 26px;
+            height: 80px;
+    }
+    .boton-login:hover{
+    font-size: 30px;
+    }
+
+    
+
+
+      
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px){
+    .example {background: #5fe6c1f7;}
+
+     body{
+        background-image: url("../images/9.jpeg");
+    }
+    .google {
+        background-color: #61e5cd78;
+    }
+  
+    /*BOTONES LOGIN1*/
+    .boton-login{
+            font-size: 26px;
+            height: 80px;
+    }
+    .boton-login:hover{
+    font-size: 30px;
+    }
+     .movil {
+        display: none;
+    }
+    .logo {
+        font-size: 30px;
+    }
+    .slogan {
+        font-size: 23px;
+    }
+    .small-text {
+        font-size: 16px;
+    }
+    .form1{
+        font-size: 22px;
+        
+    }
+
+} 
+@media only screen and (max-width: 768px){
+   
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .example {background: #52426f;}
+     body{
+        background-image: url("../images/5.jpeg");
+    }
+    .logo{
+        margin-top: 10px;
+        font-size: 45px;
+    }
+
+    
+    .movil {
+        display: none;
+    }
+    .google {
+        background-color: #9778d294;
+    }
+    .slogan {
+        font-size: 23px;
+    }
+    .small-text {
+        font-size: 16px;
+    }
+    .form1{
+        font-size: 22px;
+        
+    }
+    
+    
+    
+}
+
+@media only screen and (min-width: 1025px) {
+    .example {background: orange;}
+     body{
+        background-image: url("../images/3.jpeg");
+    }
+    .logo{
+        
+        font-size: 45px;
+        
+    }
+
+    
+    .movil {
+        display: none;
+    }
+    .google{
+        background-color: #fc98028a;
+    
+    }
+    .form1{
+        font-size: 18px;
+        
+    }
+    .small-text {
+        font-size: 14px;
+    }
+    
+
+    
+    
+    
+}  
+
+/* Ex
