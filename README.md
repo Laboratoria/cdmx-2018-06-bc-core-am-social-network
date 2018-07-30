@@ -6,7 +6,7 @@
 
 #### **Introducción:**
 
-De acuerdo con el portal de Definición ABC una Red Social es una estructura social integrada por personas, organizaciones o entidades que se encuentran conectadas entre sí por una o varios tipos de relaciones como ser: relaciones de amistad, parentesco, económicas, relaciones sexuales, intereses comunes, experimentación de las mismas creencias, entre otras posibilidades.
+De acuerdo con el portal de Definición ABC una Red Social es una estructura social integrada por personas, organizaciones o entidades que se encuentran conectadas entre sí por una o varios tipos de relaciones como ser: relaciones de amistad, parentesco, económicas, relaciones sexuales,intereses comunes, experimentación de las mismas creencias, entre otras posibilidades.
 
 Desde la década pasada las redes sociales rigen el mundo y han cambiado la forma en la que nos comunicamos. Según la última encuesta de Smart Insights sobre Mobile Marketing, en 2015 el 79% de los usuarios de teléfonos inteligentes aseguró utilizar aplicaciones móviles casi todos los días y pasar cerca del 86% de su tiempo navegando en la web, ¡imagina cómo será para los 
 
@@ -92,18 +92,23 @@ Despues de la comparación de las 6 redes sociales más populares entre las mam�
 
 #### **Prototipo login:** 
 
+
 https://www.figma.com/file/SacBbSk4Wst6RTG1jvTng0G3/Untitled?node-id=20%3A2
 
 ### **User testing:** 
 
 ### **Argumentacion de Visual Desing:** 
 
+
 ### **Referencias bibliograficas:** 
+
+
 https://espanol.babycenter.com/thread/92307/mitos-y-leyendas-?startIndex=10
 https://www.mibebeyyo.com/
 https://www.bbmundo.com/bebes/seis-doce/a-que-edad-debo-revisar-la-vista-a-mi-hijo/
 http://www.abcdelbebe.com/embarazo/primer-trimestre
 https://wwwhatsnew.com/wp-content/uploads/2010/06/Usos_madres_padres_internet_paraBebes.pdf
 http://www.cunamas.gob.pe/?p=6417
+
 
 
