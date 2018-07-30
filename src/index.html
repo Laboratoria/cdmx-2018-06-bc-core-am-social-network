@@ -2,50 +2,48 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Red Social</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Red Social</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="../src/css/main.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
 </head>
 
-<body class="loginBody" background="images/descarga.png">
-  <header class="text-right">
+<body class="loginBody">
+    <header class="text-right">
 
-  </header>
+    </header>
 
-  <div class="container registro">
-    <form>
-      <div class="form-group">
-        <label for="exampleDropdownFormEmail1">Correo</label>
-        <input id="email" type="email" class="form-control" placeholder="email@example.com" my-3>
-      </div>
-      <div class="form-group">
-        <label for="exampleDropdownFormPassword1">Contraseña</label>
-        <input id="password" type="password" class="form-control" placeholder="Password" my-3>
-      </div>
-      <button id="login" class="btn btn-info my-3">Iniciar sesion</button>
-      <button id="login-google" class="btn btn-primary my-1">Iniciar sesion con Google</button>
-      <button id="login-facebook" class="btn btn-primary my-1">Iniciar sesion con Facebook</button>
-      </form>
-      <div class="dropdown-divider"></div>
-      <a class="form-group" align="center" my-2>
-        <h5>
-          <strong>¿Eres Nuevx?
+    <div class="container registro">
+        <form>
+            <div class="form-group">
+                <label for="exampleDropdownFormEmail1">Correo</label>
+                <input id="email" type="email" class="form-control" placeholder="email@example.com" my-3>
+            </div>
+            <div class="form-group">
+                <label for="exampleDropdownFormPassword1">Contraseña</label>
+                <input id="password" type="password" class="form-control" placeholder="Password" my-3>
+            </div>
+            <button id="login" class="btn btn-info my-3">Iniciar sesion</button>
+            <button id="login-google" class="btn btn-danger my-1"><i class="fab fa-google"></i></button>
+            <button id="login-facebook" class="btn btn-primary my-1"><i class="fab fa-facebook"></i></button>
+        </form>
+        <div class="dropdown-divider"></div>
+        <a class="form-group" align="center" my-2>
+            <h5>
+                <strong>¿Eres Nuevx?
             <a href="views/registro.html"> ¡Registrate!</a>
           </strong>
-        </h5>
-      </a>
-  </div>
-  <!-- Scripts -->
-  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
-  <script src="js/index.js"></script>
+            </h5>
+        </a>
+    </div>
+    <!-- Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

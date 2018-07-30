@@ -21,7 +21,6 @@ const signup = document.getElementById('signup');
 // Agregar evento para el botón de inicio de sesión
 login.addEventListener('click', event => {
   event.preventDefault();
-  // console.log('hola');
   // Obtenemos valor de email y password
   const emailValue = email.value;
   const passwordValue = password.value;
@@ -29,7 +28,14 @@ login.addEventListener('click', event => {
   // Para iniciar sesión 
   const promise = auth.signInWithEmailAndPassword(emailValue, passwordValue);
   promise.catch(event => console.log(event.message));
-  location.href = 'views/muro.html';
+});
+
+firebase.auth().onAuthStateChanged(firebaseUser => { // cuando detecta que el usuario se ha "logeado"
+  if (firebaseUser) {
+    location.href = 'views/muro.html';
+  } else {
+    console.log('not logged in');
+  }
 });
 
 // Para ingresar con google
@@ -44,8 +50,6 @@ loginGoogle.addEventListener('click', event => {
 
     .then(function(provider) { // entonces ejecuta la función que es el resultado (acceder con google)
       location.href = 'views/muro.html';
-      // console.log(result);
-      // console.log(provider);
     });
 });
 
@@ -53,7 +57,6 @@ loginGoogle.addEventListener('click', event => {
 
 const loginFacebook = document.getElementById('login-facebook');
 const provFace = new firebase.auth.FacebookAuthProvider();
-// provFace.addScope('public_profile');
 
 loginFacebook.addEventListener('click', event => {
   event.preventDefault();
@@ -62,8 +65,5 @@ loginFacebook.addEventListener('click', event => {
 
     .then(function(provFace) { // entonces ejecuta la función que es el resultado (acceder con Facebook)
       location.href = 'views/muro.html';
-      // console.log(result);
-      // console.log(provider);
     });
 });
-

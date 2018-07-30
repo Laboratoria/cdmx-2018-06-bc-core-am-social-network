@@ -1,39 +1,233 @@
-html body{
+html body {
     background-color: #edf1f5 !important;
 }
+
 section div {
     font-size: 100%;
 }
 
-.registro{
+.registro {
     background-color: #ebddec70;
 }
+
 .navbar-dark .navbar-nav .nav-link {
     color: #ffc107;
 }
 
 nav.navbar {
     background-color: #6125c0 !important;
-  /* background-color: #7326c4 !important; */
+}
+
+.card-post {
+    background-color: #29cbe4 !important;
+    color: #000000 !important;
+}
+
+.card-footer1 {
+    margin-top: 3px;
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+.card-header1 {
+    background-color: rgb(55, 212, 236);
+    padding: 3%;
+}
+
+.card-round {
+    border-radius: 35px 35px 35px 35px !important;
+    -moz-border-radius: 35px 35px 35px 35px !important;
+    -webkit-border-radius: 35px 35px 35px 35px !important;
+    border: 0px solid #000000 !important;
 }
 
 .btn-outline-success {
-  color: #f7bb07;
-  background-color: transparent;
-  background-image: none;
-  border-color: #f7bb07;
+    color: #f7bb07;
+    background-color: transparent;
+    background-image: none;
+    border-color: #f7bb07;
 }
 
-.card-body {
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  padding: 1.25rem;
-  box-shadow: 1px 2px 10px #e4dcdc;
-<<<<<<< HEAD
+.card-body1 {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    box-shadow: 1px 2px 10px #e4dcdc;
 }
 
-.loginBody{
-    margin-top: 45%
-=======
->>>>>>> origin/master
+.loginBody {
+    margin-top: 45%;
+}
+
+.btn-info1 {
+    color: #000;
+    background-color: #fff575bd;
+    border-color: #17a2b8;
+}
+
+.profile-image {
+    border-radius: 100px 100px 100px 100px;
+    -moz-border-radius: 100px 100px 100px 100px;
+    -webkit-border-radius: 100px 100px 100px 100px;
+    border: 0px solid #000000;
+}
+
+
+/* Perfil */
+
+.card {
+    padding: 30px;
+    background-color: rgba(214, 224, 226, 0.2);
+    -webkit-border-top-left-radius: 5px;
+    -moz-border-top-left-radius: 5px;
+    border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-top-right-radius: 5px;
+    border-top-right-radius: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 3px #9da0a2cf;
+}
+
+.card.hovercard {
+    position: relative;
+    padding-top: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 1px 1px 5px #33534f52;
+}
+
+.card.hovercard .card-background {
+    height: 130px;
+}
+
+.card-background img {
+    -webkit-filter: blur(25px);
+    -moz-filter: blur(25px);
+    -o-filter: blur(25px);
+    -ms-filter: blur(25px);
+    filter: blur(25px);
+    margin-left: -100px;
+    margin-top: -200px;
+    min-width: 130%;
+}
+
+.card.hovercard .useravatar {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+}
+
+.card.hovercard .useravatar img {
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+}
+
+.card.hovercard .card-info {
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    right: 0;
+}
+
+.card.hovercard .card-info .card-title {
+    padding: 0 5px;
+    font-size: 20px;
+    line-height: 1;
+    color: #262626;
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.card.hovercard .card-info {
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 20px;
+    color: #737373;
+    text-overflow: ellipsis;
+}
+
+.card.hovercard .bottom {
+    padding: 0 20px;
+    margin-bottom: 17px;
+}
+
+.btn-pref .btn {
+    -webkit-border-radius: 0 !important;
+}
+
+.input-form {
+    border-radius: 30px 30px 30px 30px;
+    -moz-border-radius: 30px 30px 30px 30px;
+    -webkit-border-radius: 30px 30px 30px 30px;
+    border: 1px solid #9df7f0c7;
+    box-shadow: 1px 1px 5px #33534f52;
+}
+
+label {
+    color: #573fa8
+}
+
+@media only screen and (min-width: 1025px) {
+    .loginBody {
+        background-image: url("https://image.ibb.co/hHPh3o/descarga.gif");
+        margin-top: 22%;
+    }
+    /* .registro {
+        background-color: #ebddecc4;
+        margin-left: 38%;
+        color: #000000
+    }
+    .registro-2 {
+        background-color: #ebddecc4;
+        margin-left: 45%;
+        color: #000000
+    } */
+    .container {
+        background-color: #ebddecc4;
+        padding: 15px;
+        margin-left: 40%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .loginBody {
+        background-image: url("https://image.ibb.co/g42VpT/nackipad.png");
+        margin-top: 50%;
+    }
+    .registro {
+        background-color: #ebddecc4;
+    }
+    .container {
+        padding: 5%;
+        margin-right: 3%;
+        margin-left: 3%;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .loginBody {
+        background-image: url("https://image.ibb.co/cp2fpT/cellphonebackground2.png");
+        margin-top: 48%;
+    }
+    .registro {
+        background-color: #ebddecc4;
+    }
+    .container {
+        padding: 5%;
+        margin-right: 1%;
+        margin-left: 0%;
+    }
 }
