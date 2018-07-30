@@ -16,13 +16,14 @@ const postForm = document.getElementById('postForm');
 const btnHome = document.getElementById('btnHome');
 
 let user = localStorage.getItem("mail");
+let userUid = localStorage.getItem("userUid");
+console.log(userUid);
+
 let userPhoto;
 const bringData = () => {
     if (user === "google" || user === "facebook") {
         user = localStorage.getItem("display");
         userPhoto = localStorage.getItem("photo");
-        console.log(userPhoto);
-        
     } else  {
     } 
 }
@@ -45,6 +46,7 @@ btnPost.addEventListener('click', e => {
     } else {
         let ref = database.ref('posts');
         let data = {
+            user : userUid,
             name: user,
             post: posted
         }
@@ -58,8 +60,14 @@ window.onload = () => {
     databasePost.on('child_added', snap => {
         let postName = snap.child("name").val();
         let text = snap.child("post").val();
-        console.log(postName, text);
+        let userId = snap.child("user").val();
+        console.log(userId);
+        printPost(postName, text, userId);
+    });
+};
 
+const printPost = (postName, text, userId) => {
+    if (userUid === userId){
         comentarios.innerHTML += `<div>
                 <form action="">
                 <p>${postName}</p>
@@ -71,8 +79,17 @@ window.onload = () => {
                     <input type="button" class="btn none" onclick="savePost()" value="Guardar">
                 </form>
               </div>`;
-    });
-};
+    } else {
+    comentarios.innerHTML += `<div>
+                <form action="">
+                <p>${postName}</p>
+                    <input type="text" id="input" readonly = "readonly" value="${text} ">
+                    <p id="likes" class="inline"></p>
+                    <input type="button" class="btnEdit btn" onclick="likePost()" value="Like">
+                </form>
+              </div>`;
+            }
+}
 
 //Función para editar post
 const editPost = () => {
