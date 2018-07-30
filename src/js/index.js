@@ -122,6 +122,8 @@ const authentication = (provider) => {
 
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
+    let userUid = user.uid
+    localStorage.setItem("userUid", userUid);
     window.location.assign('views/home.html');
 
   } else {
