@@ -1,6 +1,7 @@
 window.onload = initialization;
 let formSignup;
 let refUsers;
+let refUserAuth;
 
 function initialization() {
   const config = {
@@ -14,12 +15,13 @@ function initialization() {
       
   firebase.initializeApp(config);
 
-  formSignup = document.getElementById('form-signup');
-  formSignup.addEventListener('submit', sendSignup, false);
+  formSignup = document.getElementById('form-signup'); // Hace referencia al formulario
+  formSignup.addEventListener('submit', sendSignup, signupAuth, false); // Se crea el evento del boton submit del formulario
   refUsers = firebase.database().ref().child('users'); // Se hace referencia a la rama de la bd en la que almacenaremos la info
+  refUserAuth = firebase.auth();
 }
 
-function sendSignup(event) { // Llamamos
+function sendSignup(event) { // En esta función se agrega los datos del formulario en la bd
   event.preventDefault();
   refUsers.push({
     ciudad: event.target.ciudad.value,
@@ -29,13 +31,18 @@ function sendSignup(event) { // Llamamos
     pais: event.target.pais.value,
     password: event.target.password.value,
   });
-  alert(event.target.nombre.value + ' Quedaste Registradx');
 }
 
-// function writeUserData(userId, name, email) {
-//   firebase.database().ref('users/' + userId).set({
-//     username: 'esme',
-//     email: 'esme.riveroh@gmail.com',
+// function signupAuth(event) {
+//   event.preventDefault();
+//   let email = event.target.correo.value, password = event.target.password.value;
+//   refUserAuth.createUserWithEmailAndPassword(email.toString(), password.toString()).catch(function(error) {
+//     // Handle Errors here.
+//     var errorCode = error.code;
+//     var errorMessage = error.message;
+//     // ...
 //   });
-//   alert('hola desde la escritura del usuario');
-// };
+//   alert(event.target.nombre.value + ' quedaste Registradx');
+// }
+
+// let provider = new firebase.auth.GoogleAuthProvider();

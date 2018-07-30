@@ -47,16 +47,6 @@ function sendSignup(event) { // En esta función se agrega los datos del formula
     });
 }
 
-// function authentication(event) {
-//   event.preventDefault();
-//   refUserAuth.signInWithEmailAndPassword(event.target.correo.value, event.target.password.value).catch(function(error) {
-//     // Handle Errors here.
-//     var errorCode = error.code;
-//     var errorMessage = error.message;
-//     // ...
-//   });
-// }
-
 function goTimeline(event) {
   window.location.href = '../views/timeline.html';
 }
