@@ -16,6 +16,16 @@ const postForm = document.getElementById('postForm');
 const btnHome = document.getElementById('btnHome');
 
 let user = localStorage.getItem("mail");
+const bringData = () => {
+    if (user === "google"){
+        user = localStorage.getItem("display");
+    } else if (user === "facebook") {
+        alert('facebook');
+    } else {
+
+    }
+}
+bringData()
 
 dataName.innerHTML = user;
 
@@ -35,6 +45,7 @@ btnPost.addEventListener('click', e => {
         post: posted
     }
     ref.push(data);
+    console.log(e.id);
     postText.value = '';
 });
 
