@@ -75,10 +75,11 @@ firebase.database().ref('posts')
         </div>`;
   });
 
-// let deleteBtn = document.getElementsByTagName('button');
-// console.log(deleteBtn);
+// funcion que borra
 const deleteMsg = () =>{
-  console.log(fb);
+  // let nodeparent = event.target.parentNode;
+  const DeleteMsgDataBase = firebase.database().ref().child('posts');
+  DeleteMsgDataBase.remove();
 };
 
 const logoutBtn = document.getElementById('logout-btn');
