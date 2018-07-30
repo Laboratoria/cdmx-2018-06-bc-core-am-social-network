@@ -1,7 +1,7 @@
 firebase.initializeApp({
-    apiKey: "AIzaSyC3-Ko-NLEwcZEnIRY0sOiR1H-fa3bE1fk",
-    authDomain: "red-social-867d8.firebaseapp.com",
-    projectId: "red-social-867d8",
+    apiKey: 'AIzaSyC3-Ko-NLEwcZEnIRY0sOiR1H-fa3bE1fk',
+    authDomain: 'red-social-867d8.firebaseapp.com',
+    projectId: 'red-social-867d8',
   });
   //Se agregan los siguientes campos como registro
   //  DB Initialize Cloud Firestore through Firebase
@@ -9,34 +9,34 @@ firebase.initializeApp({
   
 const guardar = () =>{
     //obtener valores
-    let comentario = document.getElementById("comentario").value;
-    db.collection("users").add({
-        first: comentario,
-        last: "Lovelace",
-        born: 1815
+    let comentario = document.getElementById('comentario').value;
+    db.collection('users').add({
+        first: comentario
+        
     })
     //se agrego correctamente lo anterior aparecera el mensaje del docRef.id
-    .then(function(docRef) {
-        console.log("Document written with ID: ", docRef.id);
+    .then(docRef=> {
+        console.log('Document written with ID: ', docRef.id);
         //limpiar campos al enviar ya un comentario
-        document.getElementById("comentario").value = "";
+        let comentario=document.getElementById('comentario').value = '';
     })
-    .catch(function(error) {
-        console.error("Error adding document: ", error);
+    .catch(error=> {
+        console.error('Error adding document: ', error);
     });
 
 }
 
 //para poder leer y pintar los datos 
-let paint = document.getElementById("getcomentario").value;
+let paint = document.getElementById('getcomentario').value;
 //LLAMA DB (INICIACION DE FIRESTORE) EN NUESTRO CASO LA COLECCIÓN ES USUARIO
 //se susutituye .get para que este mostrando los datos en tiempo real
-db.collection("users").onSnapshot((querySnapshot) => {
-    getcomentario.innerHTML="";
+db.collection('users').onSnapshot((querySnapshot) => {
+    getcomentario.innerHTML='';
     //FOR EACHE SE REPIETIRA EN CADA DOCUMENTO DE USER
     querySnapshot.forEach((doc) => {
         //SE PINTARA EL ID Y LO QUE CONTIENE
         console.log(`${doc.id} => ${doc.data().first}`);
+        
         getcomentario.innerHTML += `
         <section>
         <div>${doc.data().first}</div>
@@ -51,40 +51,42 @@ db.collection("users").onSnapshot((querySnapshot) => {
 
 //borrar datos
 const eliminar = (id) => {
-    db.collection("users").doc(id).delete().then(function() {
-        console.log("Document successfully deleted!");
-    }).catch(function(error) {
-        console.error("Error removing document: ", error);
+    db.collection('users').doc(id).delete().then(function() {
+        console.log('Document successfully deleted!');
+    })
+    .catch(error=> {
+        console.error('Error removing document: ', error);
     });
 }
 
 
 //editar datos
 
-const editar = (id,comentario) =>{
+ const editar = (id,comentario) =>{
 
-    document.getElementById("comentario").value = comentario ;
+    document.getElementById('comentario').value = comentario;
     //el boton con este id"guardar" se modificara su texto html a editar
-    let boton = document.getElementById("guardar");
-    boton.innerHTML = "Editar";
+    let boton = document.getElementById('boton');
+    boton.innerHTML = 'Editar';
+   
     //Al presionar el boton q dice editar c correra la sig funcion
-    boton.onclick() = function(){ 
-        let washingtonRef = db.collection("users").doc(id);
+       boton.onclick= function() { 
+        let washingtonRef = db.collection('users').doc(id);
         // Set the "capital" field of the city 'DC'
-    let comentario = document.getElementById("comentario").value;
+    let comentario = document.getElementById('comentario').value;
     return washingtonRef.update({
         first: comentario,
        
     })
-    .then(function() {
-        console.log("Document successfully updated!");
-        boton.innerHTML = "Guardar";
+    .then(fuction=> {
+        console.log('Document successfully updated!');
+        boton.innerHTML = 'Editar';
+        document.getElementById('comentario').value='';
     })
-    .catch(function(error) {
+    .catch(error=> {
         // The document probably doesn't exist.
-        console.error("Error updating document: ", error);
+        console.error('Error updating document: ', error);
     });
-    }
+    };
          
-}
-
+};
