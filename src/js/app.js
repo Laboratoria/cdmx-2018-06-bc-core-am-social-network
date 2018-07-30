@@ -12,9 +12,7 @@ firebase.initializeApp(config);
 let card = document.getElementById('card');
 let messageInput = document.getElementById('input-post');
 let publicarBtn = document.getElementById('publicar-btn');
-// obteniendo ícono donde daremos click y contenedor 
-let profileIconMobile = document.getElementById('profile-info-mobile');
-let profileIcon = document.getElementById('profile-info');
+// obteniendo  contenedor para el perfil
 let profileContainer = document.getElementById('profile-container');
 let newMessagekey;
 
@@ -38,16 +36,17 @@ const mandarUsuarioDatabase = (user)=>{
 };
 
 const pintarUsuario = (user)=>{
+  let photoProfile = (user.photoURL);
+  console.log((photoProfile));
   profileContainer.innerHTML =
        `<div class="container center">
        <div class="row">
        <p>Bienvenid@ ${user.displayName}</p>
        <p> ${user.email}</p>
-       <p>e-mail: ${user.photoURL}</p>
+       <div> <img src= ${photoProfile}></div>
        </div>
        </div>`;
 };
-profileIconMobile.addEventListener('click', pintarUsuario);
 
 // botón de publicar para guardar información en la base de datos
 publicarBtn.addEventListener('click', event => {
@@ -61,7 +60,7 @@ publicarBtn.addEventListener('click', event => {
     text: messageValue
   });
 });
-
+// crear publicación por medio del DOM con template string
 firebase.database().ref('posts')
   .on('child_added', (newMessage) => {
     card.innerHTML +=
@@ -70,18 +69,18 @@ firebase.database().ref('posts')
             <p> ${newMessage.val().text}</p>
             <div class ="card-action">
             <button type= "button" class = "edit-message-btn">Editar</button>
-           <button type="button" class = "delete-message-btn">Borrar</button>
+           <button type="button" onclick=deleteMsg(); class = "delete-message-btn">Borrar</button>
          <i class=" small material-icons right">favorite</i>  
          </div>
         </div>`;
   });
 
-// crear publicación por medio del DOM con template string
+// let deleteBtn = document.getElementsByTagName('button');
+// console.log(deleteBtn);
+const deleteMsg = () =>{
+  console.log(fb);
+};
 
-let deleteBtn = document.getElementsByClassName('delete-message-btn');
-console.log(deleteBtn);
-
-// cambiar de página a index.html
 const logoutBtn = document.getElementById('logout-btn');
 logoutBtn.addEventListener('click', event => {
   firebase.auth().signOut();
