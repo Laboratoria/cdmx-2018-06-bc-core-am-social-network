@@ -1,5 +1,6 @@
 window.onload = initialization;
 let formLogin;
+let loginEmail;
 let google;
 let facebook;
 let refUserAuth;
@@ -16,7 +17,11 @@ function initialization() {
       
   firebase.initializeApp(config);
 
-  formLogin = document.getElementById('form-login'); // Hace referencia al formulario
+  // formLogin = document.getElementById('form-login'); // Hace referencia al formulario
+  email = document.getElementById('input-correo');
+  pass = document.getElementById('input-password');
+  loginEmail = document.getElementById('submit');
+  loginEmail.addEventListener('click', authLogin);
   google = document.getElementById('submit-google');
   google.addEventListener('click', authGoogle); // Se crea el evento del boton submit del formulario
   facebook = document.getElementById('submit-facebook');
@@ -44,4 +49,25 @@ function valitator(provider) {
     var email = error.email;
     var credential = error.credential;
   });
+}
+
+function authLogin(event) {
+  event.preventDefault();
+  refUserAuth.signInWithEmailAndPassword(email.value, pass.value)
+    .then(function() {
+      alert(email.value + ' Bienvenidx');
+      goTimeline();
+    })
+    .catch(function(error) {
+      alert('Confirma que hayas escrito tus datos correctamente!');
+      // Manejo de error
+      let errorCode = error.code;
+      let errorMessage = error.message;
+      console.log(errorCode);
+      console.log(errorMessage);
+    });
+}
+
+function goTimeline(event) {
+  window.location.href = '../views/timeline.html';
 }
