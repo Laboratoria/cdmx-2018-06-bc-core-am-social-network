@@ -3,11 +3,14 @@ let enter = document.getElementById('enter');
 let loginGoogle = document.getElementById('google-user');
 let loginFacebook = document.getElementById('facebook-user');
 
+
 register.addEventListener('click', event => {
   let email = document.getElementById('email').value;
   let password = document.getElementById('password').value;
   let userName = document.getElementById('user-name').value;
   if (userName != '') {
+    let getName = userName;
+    basesData.users(getName,email);
     authen.registerAccount(email,password);
   } else {
     alert('Ingresa un nombre de usuario');

@@ -2,6 +2,19 @@
 let database = firebase.database();
 let drawPostear = document.getElementById('draw-postear');
 window.basesData = {
+  closeAccount: () => {
+    firebase.auth().signOut().then(function() {
+      // Sign-out successful.
+      }).catch(function(error) {
+      // An error happened.
+    });
+  },
+  users: (getName,getEmail) => {
+      database.ref('userName').push({
+        getName: getName,
+        getEmail: getEmail
+      });
+  },
   comment: (getPost) => {
     // let drawPostear = document.getElementById('draw-postear');
     database.ref('chat').push({
