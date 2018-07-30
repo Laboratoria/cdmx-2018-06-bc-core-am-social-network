@@ -1,4 +1,4 @@
-initiaziling();
+initiazilingAuth();
 // Evento de autenticaciíon con Gmail de Google
 document.getElementById('btn-google').addEventListener('click', (event) =>{
   authGoogle();
@@ -25,6 +25,8 @@ const authentificating = (provider) =>{
     // Datos del usuario logeado
     let user = result.user;
     // Botón dinámico de LogOut
+    // Aqui colocar el if o la redirección a la página.
+    window.location.assign('home.html');
     document.getElementById('container').innerHTML = `<p>${'Bienvenido'}${' '}${'usuario'}</p>
     <button class="btn btn-primary" type="button" id="buttonLogout" onclick="cerrar()">LogOut</button>`;
   }).catch(function(error) {
@@ -39,3 +41,74 @@ const authentificating = (provider) =>{
     console.log(credential);
   });
 };
+
+// Registro por correo
+const registrar = (email, password, userName, name, birthday, country) =>{
+  firebase.auth().createUserWithEmailAndPassword(email, password) // Crea usuarios a apartir del correo
+    .then(function() {
+      verificarEmail(); // Verifica si existe o no y si esta activo o no
+    })
+    .catch(function(error) {
+      // Manejo de errores
+      let errorCode = error.code;
+      let errorMessage = error.message;
+      console.log(errorCode);
+      console.log(errorMessage);
+    });
+};
+
+const observadorEmail = (nameU)=>{
+  console.log(nameU);
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      userSpace(nameU);
+      // Usuario logeado
+      let displayName = user.displayName;
+      let email = user.email;
+      let emailVerified = user.emailVerified;
+      let photoURL = user.photoURL;
+      let isAnonymous = user.isAnonymous;
+      let uid = user.uid;
+      let providerData = user.providerData;
+      console.log('Activo');
+    } else {
+      console.log('No hay usuario');
+    }
+  });
+};
+// observadorEmail();
+
+const userSpace = (user)=>{
+  let nameU = user;
+  document.getElementById('container').innerHTML = `<p>${'Bienvenido'}${' '}${nameU}</p>
+  <button type="button" id="buttonLogout" onclick="cerrar()">LogOut</button>`;
+};
+
+const verificarEmail = ()=>{
+  let vefificarU = firebase.auth().currentUser;
+  vefificarU.sendEmailVerification().then(function() {
+    console.log('enviando email');
+  }).catch(function() {
+    console.log(error);
+  });
+};
+
+document.getElementById('buttonRegistrar').addEventListener('click', (event) => {
+  console.log('entra');
+  let email = document.getElementById('uEmail').value;
+  let password = document.getElementById('uPsw').value;
+  let userName = document.getElementById('uName').value;
+  let nombre = document.getElementById('name').value;
+  let birthday = document.getElementById('birthday').value;
+  registrar(email, password, userName, nombre, birthday);
+});
+
+// Verificar formulario de Registro
+const registro = document.getElementByName(formulario)[0];
+let elementos = registro.elementos;
+let boton = documentGetElementById('buttonRegistrar');
+
+/* const userPrintSpace = document.getElementById('obj');
+let database = firebase.database().ref().child('obj');
+database.on('value', snap => console.log(snap.val()));*/
+module.exports = sum;

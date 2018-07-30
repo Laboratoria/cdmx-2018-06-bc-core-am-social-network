@@ -4,86 +4,87 @@ let DB = initiaziling();
 let btnProfile = document.getElementById('btnProfile');
 // Funciones complementarias
 const cleanRegister = () =>{
-    document.getElementById('nameUser').value = '';
-    document.getElementById('ageUser').value = '';
-    document.getElementById('weightUser').value = '';
-    document.getElementById('sizeUser').value = '';
-    document.getElementById('blodSugar').value = '';
-    document.getElementById('medicine').value = '';
-    document.getElementById('nss').value = '';
-    // Cambia el estado de los botoenes checkbox para que queden limpios al nuevo registro
-    if (fatherSick === 'Si') {
-        fatherSick = true;
-        fatherSick = $('#fatherSick');
-        fatherSick.prop('checked', !fatherSick.prop('checked')); // Invierte estado en DOM
-        fatherSick = false; // Invierte estado logico
-    }
-    if (grandPsick === 'Si') {
-        grandPsick = true;
-        grandPsick = $('#grandPsick');
-        grandPsick.prop('checked', !grandPsick.prop('checked'));
-        grandPsick = false;
-    }
-    if (childrenSick === 'Si') {
-        childrenSick = true;
-        childrenSick = $('#childrenSick');
-        childrenSick.prop('checked', !childrenSick.prop('checked'));
-        childrenSick = false;
-    }
-}
+  document.getElementById('nameUser').value = '';
+  document.getElementById('ageUser').value = '';
+  document.getElementById('weightUser').value = '';
+  document.getElementById('sizeUser').value = '';
+  document.getElementById('blodSugar').value = '';
+  document.getElementById('medicine').value = '';
+  document.getElementById('nss').value = '';
+
+  // Cambia el estado de los botoenes checkbox para que queden limpios al nuevo registro
+  if (fatherSick === 'Si') {
+    fatherSick = true;
+    fatherSick = $('#fatherSick');
+    fatherSick.prop('checked', !fatherSick.prop('checked')); // Invierte estado en DOM
+    fatherSick = false; // Invierte estado logico
+  }
+  if (grandPsick === 'Si') {
+    grandPsick = true;
+    grandPsick = $('#grandPsick');
+    grandPsick.prop('checked', !grandPsick.prop('checked'));
+    grandPsick = false;
+  }
+  if (childrenSick === 'Si') {
+    childrenSick = true;
+    childrenSick = $('#childrenSick');
+    childrenSick.prop('checked', !childrenSick.prop('checked'));
+    childrenSick = false;
+  }
+};
 // Funciones CRUD
 const createUserProfile = () =>{
   // Traer elementos del DOM
   let userName = document.getElementById('nameUser').value;
-	let userAge = document.getElementById('ageUser').value;
-	let userWeight = document.getElementById('weightUser').value;
-	let userSize = document.getElementById('sizeUser').value;
-	let blodSugar = document.getElementById('blodSugar').value;
-	let medicine = document.getElementById('medicine').value;
-	let nss = document.getElementById('nss').value;
-	let fatherSick = document.getElementById('fatherSick').checked;
-	let grandPsick = document.getElementById('grandPsick').checked;
-	let childrenSick = document.getElementById('childrenSick').checked;
-  // Convierte estado checked /no checked a un Stringa para imprimir
+  let userAge = document.getElementById('ageUser').value;
+  let userWeight = document.getElementById('weightUser').value;
+  let userSize = document.getElementById('sizeUser').value;
+  let blodSugar = document.getElementById('blodSugar').value;
+  let medicine = document.getElementById('medicine').value;
+  let nss = document.getElementById('nss').value;
+  let fatherSick = document.getElementById('fatherSick').checked;
+  let grandPsick = document.getElementById('grandPsick').checked;
+  let childrenSick = document.getElementById('childrenSick').checked;
+  // Convierte estado checked /no checked a un String para imprimir
   if (fatherSick === true) fatherSick = 'Si';
   else fatherSick = 'No';
   if (grandPsick === true) grandPsick = 'Si';
   else grandPsick = 'No';
   if (childrenSick === true) childrenSick = 'Si';
   else childrenSick = 'No';
-    DB.collection("diabeTipsUsers").add({
-      userName: userName,
-      userAge: userAge,
-      userWeight: userWeight,
-      userSize: userSize,
-      blodSugar: blodSugar,
-      medicine: medicine,
-      nss: nss,
-      antecedents: {
-        fatherSick: fatherSick,
-        grandPsick: grandPsick,
-        childrenSick: childrenSick
-      }
-    })
+  DB.collection('diabeTipsUsers').add({
+    userName: userName,
+    userAge: userAge,
+    userWeight: userWeight,
+    userSize: userSize,
+    blodSugar: blodSugar,
+    medicine: medicine,
+    nss: nss,
+    antecedents: {
+      fatherSick: fatherSick,
+      grandPsick: grandPsick,
+      childrenSick: childrenSick
+    }
+  })
     .then(function(docRef) {
-        console.log("Registro de perfil de usuario bajo ID: ", docRef.id);
-        // Limpiar los espacios del formulario para un nuevo registro
-        alert('Tu perfil esta completo :D');
+      console.log('Registro de perfil de usuario bajo ID: ', docRef.id);
+      // Limpiar los espacios del formulario para un nuevo registro
+      alert('Tu perfil esta completo :D');
     		cleanRegister();
     })
     .catch(function(error) {
-        console.error("Error: No se concreto el registro", error);
+      console.error('Error: No se concreto el registro', error);
     });
-}
+};
 
 // profile da un formato de tabla para mostrar la información de los usuarios que han llenado si perfil
 const printprofile = () => {
   const userProfileConteiner = document.getElementById('profileConteniner');
-  DB.collection("diabeTipsUsers").onSnapshot((querySnapshot) => {
+  DB.collection('diabeTipsUsers').onSnapshot((querySnapshot) => { // onStapshot va a vigilar cuando haga cambios y si hay un cambio entra y te dice que fue lo que cambió
     userProfileConteiner.innerHTML = '';
     querySnapshot.forEach((doc) => {
-        console.log(`${doc.id} => ${doc.data()}`);
-        userProfileConteiner.innerHTML +=
+      console.log(`${doc.id} => ${doc.data()}`);
+      userProfileConteiner.innerHTML +=
                                `
 <div class="accordion" id="accordionExample">
   <div class="card">
@@ -139,21 +140,21 @@ const printprofile = () => {
       </div>
     </div>
   </div>
-</div>`
-      });
+</div>`;
+    });
   });
-}
+};
 
 const deleteUserProfile = (idProfile) =>{
-    DB.collection("diabeTipsUsers").doc(idProfile).delete().then(function() {
-        console.log("Document successfully deleted!");
-    }).catch(function(error) {
-        console.error("Error removing document: ", error);
-    });
-  }
+  DB.collection('diabeTipsUsers').doc(idProfile).delete().then(function() {
+    console.log('Document successfully deleted!');
+  }).catch(function(error) {
+    console.error('Error removing document: ', error);
+  });
+};
 
-  const editUserProfile = (idProfile, userName, userAge, userWeight, userSize, blodSugar, medicine, nss, fatherSick, grandPsick, childrenSick) =>{
-    document.getElementById('nameUser').value = userName;
+const editUserProfile = (idProfile, userName, userAge, userWeight, userSize, blodSugar, medicine, nss, fatherSick, grandPsick, childrenSick) =>{
+  document.getElementById('nameUser').value = userName;
   	document.getElementById('ageUser').value = userAge;
   	document.getElementById('weightUser').value = userWeight;
   	document.getElementById('sizeUser').value = userSize;
@@ -162,14 +163,14 @@ const deleteUserProfile = (idProfile) =>{
   	document.getElementById('nss').value = nss;
   	document.getElementById('fatherSick').checked = fatherSick;
   	document.getElementById('grandPsick').checked = grandPsick;
-    document.getElementById('childrenSick').checked = childrenSick;
+  document.getElementById('childrenSick').checked = childrenSick;
 
-    let btn = document.getElementById('btnProfile');
-    btn.innerHTML = 'Editar';
-// Evento del boton
-    btn.onclick = () =>{
-      var deleteDBRef = DB.collection("diabeTipsUsers").doc(idProfile);
-      let editedName = document.getElementById('nameUser').value;
+  let btn = document.getElementById('btnProfile');
+  btn.innerHTML = 'Editar';
+  // Evento del boton
+  btn.onclick = () =>{
+    var deleteDBRef = DB.collection('diabeTipsUsers').doc(idProfile);
+    let editedName = document.getElementById('nameUser').value;
     	let editedAge = document.getElementById('ageUser').value;
     	let editedWeight = document.getElementById('weightUser').value;
     	let editedSize = document.getElementById('sizeUser').value;
@@ -179,31 +180,31 @@ const deleteUserProfile = (idProfile) =>{
     	let editedFatherSick = document.getElementById('fatherSick').checked;
     	let editedGrandPsick = document.getElementById('grandPsick').checked;
     	let editedChildrenSick = document.getElementById('childrenSick').checked;
-      return deleteDBRef.update({
-        userName: editedName,
-        userAge: editedAge,
-        userWeight: editedWeight,
-        userSize: editedSize,
-        blodSugar: editedBlodSugar,
-        medicine: editedMedicine,
-        nss: editedNss,
-        antecedents: {
-          fatherSick: editedFatherSick,
-          grandPsick: editedGrandPsick,
-          childrenSick: editedChildrenSick
-        }
-      })
+    return deleteDBRef.update({
+      userName: editedName,
+      userAge: editedAge,
+      userWeight: editedWeight,
+      userSize: editedSize,
+      blodSugar: editedBlodSugar,
+      medicine: editedMedicine,
+      nss: editedNss,
+      antecedents: {
+        fatherSick: editedFatherSick,
+        grandPsick: editedGrandPsick,
+        childrenSick: editedChildrenSick
+      }
+    })
       .then(function() {
-          console.log("Document successfully updated!");
-          btn.innerHTML = 'Guardar Perfil';
+        console.log('Document successfully updated!');
+        btn.innerHTML = 'Guardar Perfil';
       })
       .catch(function(error) {
-          // The document probably doesn't exist.
-          console.error("Error updating document: ", error);
+        // The document probably doesn't exist.
+        console.error('Error updating document: ', error);
       });
-  }
-}
-/*// Funcion para imprimir en el DOM
+  };
+};
+/* // Funcion para imprimir en el DOM
 const printDOM = (it, place) =>{
 	return document.getElementById(it).innerHTML += place;
 };
@@ -232,6 +233,5 @@ const deleteFun = () =>{
 printprofile();
 // Eventos de botones
 btnProfile.addEventListener('click', (event) =>{
-	createUserProfile();
-
+  createUserProfile();
 });
