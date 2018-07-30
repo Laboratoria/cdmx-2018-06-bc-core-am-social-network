@@ -17,13 +17,10 @@ const btnHome = document.getElementById('btnHome');
 
 let user = localStorage.getItem("mail");
 const bringData = () => {
-    if (user === "google"){
+    if (user === "google" || user === "facebook") {
         user = localStorage.getItem("display");
-    } else if (user === "facebook") {
-        alert('facebook');
-    } else {
-
-    }
+    } else  {
+    } 
 }
 bringData()
 
@@ -39,17 +36,16 @@ databaseUser.on('child_added', snap => {
 
 btnPost.addEventListener('click', e => {
     let posted = postText.value;
-    if (posted === "" || posted === " "){
+    if (posted === "" || posted === " ") {
         alert('Escribe un mensaje')
     } else {
         let ref = database.ref('posts');
-    let data = {
-        name: user,
-        post: posted
-    }
-    ref.push(data);
-    console.log(e.id);
-    postText.value = '';
+        let data = {
+            name: user,
+            post: posted
+        }
+        ref.push(data);
+        postText.value = '';
     }
 });
 
