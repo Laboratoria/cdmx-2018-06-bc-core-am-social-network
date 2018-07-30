@@ -166,10 +166,10 @@ Y terminamos con Eat & Move-O-Matic, la más “gamificada” de todas las que h
    
 En su mayoria, las aplicaciones usan colores y lenguaje muy sencillo de entender, su interfaz es muy organica y contrastante, usan de fondo el blanco para que los colores, verde, naranja o rojo, que son los que más se usan, no sean tan agresivos.
 
-<img align="center" src="../UX/imagenes-ux/benchmark1.png"/>
-<img align="center" src="../UX/imagenes-ux/benchmark2.jpg"/>
-<img align="center" src="../UX/imagenes-ux/mysugr-logbook-phone.png"/>
-<img align="center" src="../UX/imagenes-ux/selecting-2Harvest.png"/>
+<img align="center" src="../src/UX/imagenes-ux/benchmark1.png"/>
+<img align="center" src="../src/UX/imagenes-ux/benchmark2.jpg"/>
+<img align="center" src="../src/UX/imagenes-ux/mysugr-logbook-phone.png"/>
+<img align="center" src="../src/UX/imagenes-ux/selecting-2Harvest.png"/>
 
 
 
