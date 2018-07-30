@@ -150,3 +150,32 @@ const sendTaskFirebase = () => {
 }
 
 window.onload = init
+
+//Grafica
+new Chart(document.getElementById("polar-chart"), {
+    type: 'horizontalBar',
+    data: {
+      labels: ["Cereales integrales", "Verduras y frutas", "Proteinas", "Lacteos", "Grasas"],
+      datasets: [
+        {
+          label: "Porcentaje de tipos de alimentos",
+          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+          data: [40,30,15,10,5]
+        }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Gráfica de alimentación saludable'
+      }
+    }
+});
+
+// contador de likes
+let LikesButton = document.getElementById("Like"),
+  counter = 0;
+LikesButton.onclick = function() {
+  counter += 1;
+  LikesButton.innerHTML = "Likes: " + counter;
+};
