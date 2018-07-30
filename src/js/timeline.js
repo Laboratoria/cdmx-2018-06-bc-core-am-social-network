@@ -14,6 +14,7 @@ let namePost = document.getElementById('namePost');
 let messagePost = document.getElementById('messagePost');
 let btnPost = document.getElementById('btnPost');
 let chatUl = document.getElementById('chat');
+let btnLogOut = document.getElementById('btnLogout'); 
 
 btnPost.addEventListener('click', function() {
   let nombre = namePost.value;
@@ -24,16 +25,25 @@ btnPost.addEventListener('click', function() {
     message: mensaje,
   });
 });
+
+btnLogOut.addEventListener('click', function() {
+  firebase.auth().signOut().then(function() {
+    window.location.href = '../index.html';
+  }).catch(function(error) {
+    // An error happened.
+    console.log(error);
+  });
+});
+
 firebase.database().ref('posts').on('value', snapshot => { // objeto que contiene la data
   let html = '';  
   snapshot.forEach(function(elemento) {
     let element = elemento.val();
     let nombre = element.name;
     let mensaje = element.message;  
-    html += `
-          <li> <b>${nombre}</b>${mensaje}</li>
-          `;
+    html += `<div class="card">
+              <li><strong>${nombre}</strong> ${mensaje}</li>
+            </div>`;
   });
   chatUl.innerHTML = html;
 });
- 

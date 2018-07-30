@@ -1,9 +1,10 @@
 window.onload = initialization;
-let formLogin;
 let loginEmail;
 let google;
 let facebook;
 let refUserAuth;
+let email;
+let pass;
 
 function initialization() {
   const config = {
@@ -17,7 +18,6 @@ function initialization() {
       
   firebase.initializeApp(config);
 
-  // formLogin = document.getElementById('form-login'); // Hace referencia al formulario
   email = document.getElementById('input-correo');
   pass = document.getElementById('input-password');
   loginEmail = document.getElementById('submit');
@@ -43,11 +43,17 @@ function valitator(provider) {
   refUserAuth.signInWithPopup(provider).then(function(result) {
     var token = result.credential.accessToken;
     var user = result.user;
+    alert(' Bienvenidx ' + user);
+    goTimeline();
   }).catch(function(error) {
     var errorCode = error.code;
     var errorMessage = error.message;
     var email = error.email;
     var credential = error.credential;
+    console.log(errorCode);
+    console.log(errorMessage);
+    console.log(email);
+    console.log(credential);  
   });
 }
 
