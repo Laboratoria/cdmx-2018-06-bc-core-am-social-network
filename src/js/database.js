@@ -28,7 +28,7 @@ database.ref('chat').on('value', snapshot => {
   snapshot.forEach(e => {
     let draw = e.val();
     let post2 = draw.getPost;
-    drawPost += `<div >${post2}</div>`;
+    drawPost += `<p class="section-post" style="background:#45E8A7;">${post2}<input type="button" onclick="detale()" value="Borrar"> <input type="button" onclick="edit()" value="Editar"> <input type="button" onclick="like()" value="Like"> </p> </br>`;
   });
   drawPostear.innerHTML = drawPost;
 });

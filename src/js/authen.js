@@ -15,6 +15,7 @@ window.authen = {
     // Handle Errors here.
     let errorCode = error.code;
     let errorMessage = error.message;
+    alert(errorMessage);
     // ...
     });
   },
@@ -25,6 +26,7 @@ window.authen = {
       // Handle Errors here.
       let errorCode = error.code;
       let errorMessage = error.message;
+      alert(errorMessage);
       // ...
     });
   },
@@ -58,13 +60,13 @@ const monitor = () => {
       // User is signed in.
       let displayName = user.displayName;
       let email = user.email;
-      window.open('../src/views/view1.html','_self');
       // document.location.assign('../src/views/view1.html');
       let emailVerified = user.emailVerified;
       let photoURL = user.photoURL;
       let isAnonymous = user.isAnonymous;
       let uid = user.uid;
       let providerData = user.providerData;
+      window.open('../src/views/view1.html','_self');
       // ...
     } else {
       // User is signed out.
