@@ -1,1 +1,5 @@
-# Aqui debes poner los archivos que no quieras que se suban a Github
+.DS_Store
+*.swp
+.nyc_output/
+coverage/
+node_modules/
