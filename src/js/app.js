@@ -12,6 +12,7 @@ firebase.initializeApp(config);
 let card = document.getElementById('card');
 let messageInput = document.getElementById('input-post');
 let publicarBtn = document.getElementById('publicar-btn');
+let editButton = document.getElementsByClassName('edit-message-btn');
 // obteniendo  contenedor para el perfil
 let profileContainer = document.getElementById('profile-container');
 let newMessagekey;
@@ -44,7 +45,7 @@ const pintarUsuario = (user) => {
        <div class="row">
        <p>${user.displayName}</p>
        <p> ${user.email}</p>
-       <div> <img class= "circle" src= ${photoProfile}></div>
+       <div> <img class= "circle photoProfile" src= ${photoProfile}></div>
        </div>
        </div>`;
 };
@@ -53,17 +54,19 @@ const pintarUsuario = (user) => {
 publicarBtn.addEventListener('click', event => {
   let currentUser = firebase.auth().currentUser; // obtener al usuario con el propiedad .currentUser
   let messageValue = messageInput.value; // obtener el mensaje escrito 
-  newMessagekey = firebase.database().ref().child('posts').push().key; // En ref se pone la ruta para encontrar los mensajes, luego ¿dónde los vamos a guardar? obteniendo una llave única para nuestros elementos de la colección messages. creo un elemento y saco esa llavve 
-  firebase.database().ref(`posts/${newMessagekey}`).set({
-    creator: currentUser.uid,
-    creatorName: currentUser.displayName,
-    UserEmail: currentUser.email,
-    text: messageValue,
-    key: newMessagekey,
-    countStars: 0,
-    authorPic: currentUser.photoURL
-  });
-  toggleStar(key);
+  if (messageValue !== '') {
+    newMessagekey = firebase.database().ref().child('posts').push().key; // En ref se pone la ruta para encontrar los mensajes, luego ¿dónde los vamos a guardar? obteniendo una llave única para nuestros elementos de la colección messages. creo un elemento y saco esa llavve 
+    firebase.database().ref(`posts/${newMessagekey}`).set({
+      creator: currentUser.uid,
+      creatorName: currentUser.displayName,
+      UserEmail: currentUser.email,
+      text: messageValue,
+      key: newMessagekey,
+      countStars: 0,
+      authorPic: currentUser.photoURL
+    });
+    toggleStar(key);
+  }
 });
 
 // crear publicación por medio del DOM con template string
@@ -71,16 +74,17 @@ const printPost = () => {
   firebase.database().ref('posts')
     .on('child_added', (newMessage) => {
       card.innerHTML +=
-        `<div class="card green lighten-3">
-         <div class="container">
+        `<div class="card">
+         <div class="container post-cont">
+         <div  class ="">
          <div class="row">
             <img class="circle photoImage" src= ${newMessage.val().authorPic}>
              <p class="userPost"> <strong>${newMessage.val().creatorName}</strong>:</p>
-            </div>
             <p class="textMessage"> ${newMessage.val().text}</p>
-            <div class ="card-action">
-            <button type= "button" class= "edit-message-btn">Editar</button>
-           <button type="button" onclick=deleteMsg() data-key="${newMessage.val().key}" class="delete-message-btn delete">Borrar</button>
+            </div>
+            <div class ="card-action ">
+            <button type= "button" onclick=editMsg(); data-key="${newMessage.val().key}" class= "edit-message-btn waves-effect waves-light btn">Editar</button>
+           <button type="button" onclick=deleteMsg() data-key="${newMessage.val().key}" class="delete-message-btn delete waves-effect waves-light btn">Borrar</button>
          <i onclick=toggleStar() class=" small material-icons right favoriteCounter">favorite</i>  
          </div>
          </div>
@@ -93,12 +97,40 @@ const deleteMsg = () => {
   if (confirm('¿Quieres eliminar este mensaje?') === true) {
     let keyRelatedToPost = event.target.dataset.key;
     console.log(event.target.dataset.key);
-    const DeleteMsgDataBase = firebase.database().ref('posts').child(keyRelatedToPost);
-    DeleteMsgDataBase.remove();
+    const deleteMsgDataBase = firebase.database().ref('posts').child(keyRelatedToPost);
+    deleteMsgDataBase.remove();
   }
 };
 
-// const favoriteCounter = document.getElementsByClassName('favoriteCounter')
+const editMsg = () => {
+  let keyRelatedToPost = event.target.dataset.key;
+  console.log(keyRelatedToPost);
+  const editMsgDataBase = firebase.database().ref('posts').child(keyRelatedToPost);
+  card.classList = 'editMode';
+  console.log(card);
+
+  // const refPostToEdit = firebase.database().ref().child('posts').child(keyRelatedToPost);
+  // refPostToEdit.once('value', (snapshot) => {
+  //   const data = snapshot.val();
+  //   if (containsClass) {
+  //     console.log(containsClass);
+  //     refTaskToEdit.update({
+  //       contenidoTask: messageInput
+  //     });
+  //     console.log(contenidoTask);
+  //     editButton.innerHTML = 'Edit ';
+  //     card.classList.remove('editMode');
+  //     messageInput.value = '';
+  //   } else {
+  //     // const data = snapshot.val();
+  //     console.log(containsClass, card);
+  //     editButton.innerHTML = 'Save';
+  //     messageInput.value = data.messageInput.value;
+  //     card.classList.add('editMode');
+  //   };
+  // });
+};
+
 
 const toggleStar = (uid) => {
   console.log(uid);
