@@ -50,7 +50,7 @@ const verificar = () => {
     .then(() => {
       console.log('Enviando correo..');
       alert('Enviando correo de verificación');
-      location.href = 'views/app.html';
+      location.href = '../views/app.html';
     })
     .catch(error => {
       console.log(error);
@@ -80,5 +80,5 @@ document.getElementById('facebook').addEventListener('click', event => {
 });
 
 newDoc = () => {
-  window.location.assign('views/app.html');
+  window.location.assign('../views/app.html');
 };

@@ -56,9 +56,9 @@ db.collection('comments').onSnapshot((querySnapshot) => {
                                   <div class="contenidoC">
                                     <p>${doc.data().dateTime}</p>
                                     <p>${doc.data().comment}</p>
-                                    <button class="btn borrar" onclick="eliminate('${doc.id}')"><i class="fas fa-trash-alt"></i></button>
-                                    <button class="btn editar" onclick="edit('${doc.data().comment}')"><i class="fas fa-edit"></i></button>
-                                    <button class="btn compartir"><i class="fas fa-share"></i></button>
+                                    <button class="btn eliminate" onclick="eliminate('${doc.id}')"><i class="fas fa-trash-alt"></i></button>
+                                    <button class="btn edit" onclick="edit('${doc.data().comment}')"><i class="fas fa-edit"></i></button>
+                                    <button class="btn share"><i class="fas fa-share"></i></button>
                                     <button class="btn like"><i class="fas fa-gem"></i></button>
                                     </div>
                                 </div>`;
@@ -136,5 +136,5 @@ btlogout.addEventListener('click', event => {
     .catch(function (error) {
       console.log(error);
     });
-  location.href = 'index.html';
+  location.href = '../index.html';
 });

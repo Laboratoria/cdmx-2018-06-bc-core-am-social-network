@@ -12,6 +12,6 @@
 // AQUI VAN LOS ITS Y ASSERTS
 describe('registrar()', () => {
   it('debería ser una función', () => {
-    assert.equal(typeof 'registrar()', 'function');
+    assert.equal(typeof registrar, 'function');
   });
 });
