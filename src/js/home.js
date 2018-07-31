@@ -9,7 +9,6 @@ const btnLike = document.getElementById('btnLike');
 const btnSave = document.getElementById('btnSave');
 const likes = document.getElementById('likes');
 const btnProfile = document.getElementById('btnProfile');
-const borrar = document.getElementById('borrar');
 const profile = document.getElementById('profile');
 const home = document.getElementById('home');
 const postForm = document.getElementById('postForm');
@@ -55,15 +54,26 @@ btnPost.addEventListener('click', e => {
     }
 });
 
+let keys;
 window.onload = () => {
     const databasePost = firebase.database().ref().child('posts');
     databasePost.on('child_added', snap => {
         let postName = snap.child("name").val();
         let text = snap.child("post").val();
         let userId = snap.child("user").val();
-        console.log(userId);
+        //console.log(userId);
         printPost(postName, text, userId);
     });
+    databasePost.on('value', data => {
+        let getKeys = data.val();
+        let keysObj = Object.keys(getKeys);
+        for (let i = 0; i < keysObj.length; i++){
+            keys = keysObj[i];
+            editPost(keys);
+             // console.log(keys);
+        }
+       // console.log(keys);
+    })
 };
 
 const printPost = (postName, text, userId) => {
@@ -75,7 +85,7 @@ const printPost = (postName, text, userId) => {
                     <p id="likes" class="inline"></p>
                     <input type="button" class="btnEdit btn" onclick="likePost()" value="Like">
                     <input type="button" class="btnEdit btn" onclick="editPost()" value="Editar">
-                    <input type="button" class="btn" onclick="deletePost()" value="Eliminar"> 
+                    <input type="button" class="btn delete" value="Eliminar" onclick="deletePost()"> 
                     <input type="button" class="btn none" onclick="savePost()" value="Guardar">
                 </form>
               </div>`;
@@ -92,8 +102,9 @@ const printPost = (postName, text, userId) => {
 }
 
 //Función para editar post
-const editPost = () => {
-    alert('editar');
+const editPost = (keys) => {
+   // console.log(keys);
+    
 }
 
 //Función para likear post
@@ -108,8 +119,9 @@ const savePost = () => {
 
 //Función para eliminar post
 const deletePost = () => {
-    alert('eliminar');
+    alert('delete');
 }
+
 
 btnProfile.addEventListener('click', e => {
     postForm.style.display = "none";
