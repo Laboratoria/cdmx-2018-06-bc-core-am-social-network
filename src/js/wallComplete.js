@@ -10,5 +10,5 @@ document.getElementById('toPost').addEventListener('click', event => {
 });
 
 document.getElementById('closeSession').addEventListener('click', event => {
-  window.close.logOut();
+  logOut();
 });
