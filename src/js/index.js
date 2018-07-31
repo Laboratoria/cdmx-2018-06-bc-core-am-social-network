@@ -1,5 +1,13 @@
-initiaziling();
-// Evento de autenticaciíon con Gmail de Google
+let db = initiaziling();
+// Funciones auxiliares
+const getUserInfo = () =>{
+  firebase.auth().onAuthStateChanged((user) =>{
+    if (user){
+      return user;
+    }
+  });
+}
+// Evento de autenticacíon con Gmail de Google
 document.getElementById('btn-google').addEventListener('click', (event) =>{
   authGoogle();
 });
@@ -24,8 +32,13 @@ const authentificating = (provider) =>{
     let token = result.credential.accessToken;
     // Datos del usuario logeado
     let user = result.user;
-    document.getElementById('container').innerHTML = `<p>${'Bienvenido'}${' '}${'usuario'}</p>
-    <button class="btn btn-primary" type="button" id="buttonLogout" onclick="cerrar()">LogOut</button>`;
+    let userAuth = getUserInfo();
+    let userName = userAuth.displayName;
+    let userPhoto = userAuth.photoURL;
+    let userEmail = userAuth.email;
+// ir a HOME
+  /*document.getElementById('containerUserNAme').innerHTML = `<p>${'Bienvenido'} ${'userName'}</p>
+    <button class="btn btn-primary" type="button" id="buttonLogout" onclick="cerrar()">LogOut</button>`;*/
   }).catch(function(error) {
     // generar error
 	  let errorCode = error.code;
@@ -38,26 +51,11 @@ const authentificating = (provider) =>{
     console.log(credential);
   });
 };
-
-// Registro por correo
-const registrar = (email, password, userName, name, birthday, country) =>{
-  firebase.auth().createUserWithEmailAndPassword(email, password) // Crea usuarios a apartir del correo
-    .then(function() {
-      verificarEmail(); // Verifica si existe o no y si esta activo o no
-    })
-    .catch(function(error) {
-      // Manejo de errores
-      let errorCode = error.code;
-      let errorMessage = error.message;
-      console.log(errorCode);
-      console.log(errorMessage);
-    });
-};
 // Ingresar por medio de correo
-const ingresar = (emailU, passwordU, nameU) =>{
+const ingresar = (emailU, passwordU) =>{
   firebase.auth().signInWithEmailAndPassword(emailU, passwordU) // Metodo para inicial sesión
     .then(function() {
-      observadorEmail(nameU); // Llama al observador para analizar estado de la sesion actual
+      observadorEmail(); // Llama al observador para analizar estado de la sesion actual
     })
     .catch(function(error) {
       // Manejo de error
@@ -68,12 +66,11 @@ const ingresar = (emailU, passwordU, nameU) =>{
       // ...
     });
 };
-
-const observadorEmail = (nameU)=>{
+const observadorEmail = ()=>{
   console.log(nameU);
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-      userSpace(nameU);
+      userSpace();
       // Usuario logeado
       let displayName = user.displayName;
       let email = user.email;
@@ -88,10 +85,7 @@ const observadorEmail = (nameU)=>{
     }
   });
 };
-// observadorEmail();
-
-const userSpace = (user)=>{
-  let nameU = user;
+const userSpace = ()=>{
   document.getElementById('container').innerHTML = `<p>${'Bienvenido'}${' '}${nameU}</p>
   <button type="button" id="buttonLogout" onclick="cerrar()">LogOut</button>`;
 };
@@ -106,41 +100,8 @@ const cerrar = () =>{
       console.log(error);
     });
 };
-
-const verificarEmail = ()=>{
-  let vefificarU = firebase.auth().currentUser;
-  vefificarU.sendEmailVerification().then(function() {
-    console.log('enviando email');
-  }).catch(function() {
-    console.log(error);
-  });
-};
-
-document.getElementById('buttonRegistrar').addEventListener('click', (event) => {
-  console.log('entra');
-  let email = document.getElementById('uEmail').value;
-  let password = document.getElementById('uPsw').value;
-  let userName = document.getElementById('uName').value;
-  let nombre = document.getElementById('name').value;
-  let birthday = document.getElementById('birthday').value;
-  registrar(email, password, userName, nombre, birthday);
-});
 document.getElementById('buttonIngresar').addEventListener('click', (event) => {
   let emailU = document.getElementById('userEmail').value;
   let passwordU = document.getElementById('userPsw').value;
-  let nameU = document.getElementById('username').value;
-  ingresar(emailU, passwordU, nameU);
+  ingresar(emailU, passwordU);
 });
-
-// Verificar formulario de Registro
-const registro = document.getElementByName(formulario)[0],
-  elementos = registro.elementos,
-  boton = documentGetElementById('buttonRegistrar');
-
-/* const userPrintSpace = document.getElementById('obj');
-let database = firebase.database().ref().child('obj');
-database.on('value', snap => console.log(snap.val()));*/
-function sum(a, b) {
-  return a + b;
-}
-module.exports = sum;
