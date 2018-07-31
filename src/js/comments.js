@@ -91,7 +91,7 @@ window.close = {
   logOut: () => {
     firebase.auth().signOut().then(function() {
       console.log('Saliendo...');
-      location.assign('newUser.html');    
+      location.assign('../home.html');    
     }).catch(function(error) {
       console.log(error);    
     });
