@@ -28,7 +28,7 @@ const createMessageinUserProfile = (user) =>{
     .catch(function(error) {
       console.error('Error: No se concreto la publicacion', error);
     });
-};//coment
+};//coments to merge
 // Read and Show post
 const printPost = () => {
   const userPostConteiner = document.getElementById('comments');
