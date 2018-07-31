@@ -64,8 +64,11 @@ publicarBtn.addEventListener('click', event => {
       key: newMessagekey,
       countStars: 0,
       authorPic: currentUser.photoURL
-    });
-    toggleStar(key);
+    })
+    // toggleStar(key);
+      .then(data=>{
+        document.getElementById('input-post').value = '';
+      });
   }
 });
 
