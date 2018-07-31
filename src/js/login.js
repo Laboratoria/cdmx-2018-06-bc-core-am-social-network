@@ -5,7 +5,6 @@ let facebook;
 let refUserAuth;
 let email;
 let pass;
-
 function initialization() {
   const config = {
     apiKey: 'AIzaSyCjN9x4Q4B8Nx5xf1ZoKLpWn4mTPiuuC3c',
@@ -17,7 +16,6 @@ function initialization() {
   };
       
   firebase.initializeApp(config);
-
   email = document.getElementById('input-correo');
   pass = document.getElementById('input-password');
   loginEmail = document.getElementById('submit');
@@ -29,22 +27,34 @@ function initialization() {
   refUserAuth = firebase.auth();
 }
 
+function observador() {
+  refUserAuth.onAuthStateChanged(function(user) {
+    if (user) {
+      goTimeline();
+    } else {
+      console.log('No hace nada XD');
+    }
+  });
+}
+
+function goTimeline(event) {
+  window.location.href = '../views/timeline.html';
+}
+
 function authGoogle() {
   let provider = new firebase.auth.GoogleAuthProvider();
   valitator(provider);
 }
-
 function authFacebook() {
   let provider = new firebase.auth.FacebookAuthProvider();
   valitator(provider);
 }
-
 function valitator(provider) {
   refUserAuth.signInWithPopup(provider).then(function(result) {
     var token = result.credential.accessToken;
     var user = result.user;
     alert(' Bienvenidx ' + user);
-    goTimeline();
+    observador();
   }).catch(function(error) {
     var errorCode = error.code;
     var errorMessage = error.message;
@@ -71,8 +81,4 @@ function authLogin(event) {
       console.log(errorCode);
       console.log(errorMessage);
     });
-}
-
-function goTimeline(event) {
-  window.location.href = '../views/timeline.html';
 }
