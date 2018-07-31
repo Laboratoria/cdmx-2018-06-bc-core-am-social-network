@@ -98,9 +98,7 @@ La idea principal de nuestra red social no es sólo ofrecer, como muchas, receta
 
 Teniendo en cuanta que la comida entra por lo ojos, sabemos que la toma de decisiones en cuanto a colores e imagenes es primordial para motivar al usuario, el uso de lenguaje poco técnico en las recetas y tips, es de las mayores preocupaciones entre los usuarios al igual que los utensilios de cocina. El color es capaz de estimular o deprimir, puede crear alegría o tristeza. Así mismo, determinados colores despiertan actitudes activas o por el contrario pasivas. Con colores se favorecen sensaciones térmicas de frío o de calor, y también podemos tener impresiones de orden o desorden.
 
-Para nuestra red social hemos decidido incorporar el color verge en nuestro logotipo, y una fuente haciendo  referencia a una vida saludable y más verde, como lo dice el mismo nombre de la app.
-
-en cuanto a personalidad y emociones, el verde está asociado con:
+Para nuestra red social hemos decidido incorporar el color verde en nuestro logotipo haciendo referencia a una vida saludable y más verde, como  el mismo nombre de la app (greener) lo dice. Así mismo investigamos que dicho color es asociado con:
 
 * salud y tranquilidad
 * Simboliza el dinero
@@ -109,11 +107,13 @@ en cuanto a personalidad y emociones, el verde está asociado con:
 * Es utilizado en gafas de visión nocturna porque el ojo humano es más sensible y capaz de discernir los contrastes y las sombras
 * Representa un nuevo crecimiento
 
-Marketing
+En marketing:
 
 * Usado para relajar en las tiendas
 * Asociado con riqueza
 * Ha sido un símbolo de fertilidad
+
+También hemos  incorporado el color blanco como fondo; éste es asociado mayormente a tópicos relacionados con la pureza, inocencia, optimismo, frescura, limpieza y simplicidad. En el campo de Marketing el color se asocia con una marca amigable, alegre y confiable. Utilizamos fuentes de texto "ligeras" tanto en el logotipo como en los textos de la aplicación con el objetivo de armonizar la interfaz con nuestro concepto.
 
 #Benchmark
 
