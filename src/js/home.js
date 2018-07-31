@@ -158,6 +158,13 @@ btnLike.addEventListener('click', e => {
     likes.innerHTML = count;
 });*/
 
+btnProfile.addEventListener('click', e => {
+  postForm.style.display = "none";
+  borrar.style.display = "none";
+  comentarios.style.display = "none";
+  profile.style.display = "block";
+  profile.innerHTML = `<h1>${user}</h1>`;
+});
 
 // Botón para editar post
 /*
