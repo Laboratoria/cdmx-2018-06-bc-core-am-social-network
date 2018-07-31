@@ -14,7 +14,7 @@ const home = document.getElementById('home');
 const postForm = document.getElementById('postForm');
 const btnHome = document.getElementById('btnHome');
 var db = firebase.firestore();
-
+     
 let user = localStorage.getItem("mail");
 let userUid = localStorage.getItem("userUid");
 console.log(userUid);
