@@ -4,22 +4,14 @@ firebase.initializeApp({
   authDomain: 'red-social-237f9.firebaseapp.com',
   projectId: 'red-social-237f9'
 });
-
 // Con esto se inicializa Nube de firestore a través de Firebase
-let db = firebase.firestore();
-
+const db = firebase.firestore();
 const boton = document.getElementById('botonP');
 boton.addEventListener('click', event => {
-  // console.log('holi');
-  let text = document.getElementById('comentario');
-  // console.log(text);
-
-  let texto = text.value;
-  //   construir nuevo objeto de fecha y convertirlo a un string UTC para pintarlo de manera estandard
-  const yearDateTime = new Date().toUTCString();
-  // console.log(yearDateTime);
-
-
+  const text = document.getElementById('comentario');
+  const texto = text.value;
+  //  construir nuevo objeto de fecha y convertirlo a un string UTC para pintarlo de manera estandard
+  const yearDateTime = firebase.firestore.FieldValue.serverTimestamp();
   // CRUD
   // Aquí se agrega un objeto a la coleccion "comments" del firestore
   // el "add" agrega un id único en automatico
@@ -38,7 +30,7 @@ boton.addEventListener('click', event => {
     });
 });
 
-let container = document.getElementById('container');
+const container = document.getElementById('container');
 // Aquí lee los documentos de la coleccion "comments" y el querySnapshot se repitirá por cada comment por el forEach
 // onSnapshot=agente de escucha--> actualización en tiempo real
 db.collection('comments').onSnapshot((querySnapshot) => {
@@ -52,39 +44,51 @@ db.collection('comments').onSnapshot((querySnapshot) => {
                                   <div class="contenidoC">
                                     <p>${doc.data().dateTime}</p>
                                     <p>${doc.data().comment}</p>
-                                    <button class="btn"><i class="fas fa-gem"></i></button>
+                                    <button class="btn like"><i class="fas fa-gem"></i></button><span id="contador" class="">0</span>
                                     <button class="btn"><i class="fas fa-share"></i></button>
-                                    <button class="btn" onclick="edit('${doc.data().comment}')"><i class="fas fa-edit"></i></button>
+                                    <button class="btn" onclick="edit('${doc.data().comment}', '${doc.id}')"><i class="fas fa-edit"></i></button>
                                     <button class="btn"><i class="fas fa-save"></i></button>
-                                    <button class="btn" onclick="eliminate('${doc.id}')"><i class="fas fa-trash-alt"></i></button>
+                                    <button class="btn eliminate"><i class="fas fa-trash-alt"></i></button>
                                   </div>
                                 </div>`;
   });
 });
 
-
-// Para borrar documentos de la coleccion en tiempo real:
-function eliminate(id) {
+/*
+// funcion para borrar
+ document.getElementsByClassName('eliminate').addEventListener( ${doc.id} => {
   db.collection('comments').doc(id).delete().then(function() {
     console.log('Document successfully deleted!');
   }).catch(function(error) {
     console.error('Error removing document: ', error);
   });
-}
+});*/
 
 // Para editar documentos de la coleccion en tiempo real:
-function edit(texto) {
+function edit(texto, id) {
   document.getElementById('comentario').value = texto;
-
-  let inputRef = db.collection('comments').doc(id);
+  console.log(id);
+  const inputRef = db.collection('comments').doc(id);
   return inputRef.update({
-      comment: texto
-    })
-    .then(function () {
+    comment: texto
+  })
+    .then(function() {
       console.log('Document successfully updated!');
     })
-    .catch(function (error) {
+    .catch(function(error) {
       // The document probably doesn't exist.
       console.error('Error updating document: ', error);
     });
 }
+
+btlogout.addEventListener('click', event => {
+  const logout = document.getElementById('btlogout');
+  firebase.auth().signOut()
+    .then(function() {
+      console.log('saliendo...');
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+  location.href = 'index.html';
+});
