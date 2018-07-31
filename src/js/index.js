@@ -52,6 +52,7 @@ btnSignup.addEventListener('click', e => {
 btnLogin.addEventListener('click', e => {
   const mail = email.value;
   const pass = password.value;
+  localStorage.clear();
   localStorage.setItem("mail", mail)
   const promise = firebase.auth().signInWithEmailAndPassword(mail, pass)
   .then(function(){
@@ -71,6 +72,7 @@ btnLogin.addEventListener('click', e => {
 // Borra localStorage
 btnGg.addEventListener('click', e => {
   localStorage.clear();
+  localStorage.setItem('mail', 'google');
   googleLogin();
 });
 
@@ -83,10 +85,16 @@ const googleLogin = () => {
 
 // Login con Facebook
 btnFb.addEventListener('click', e => {
+  localStorage.clear();
+  localStorage.setItem('mail', 'facebook');
+  facebookLogin();
+});
+
+const facebookLogin = () => {
   var provider = new firebase.auth.FacebookAuthProvider();
   authentication(provider);
-  console.log("Facebook");
-});
+}
+
 
 const authentication = (provider) => {
   firebase.auth().signInWithPopup(provider).then(function(result) {
@@ -95,6 +103,11 @@ const authentication = (provider) => {
     // The signed-in user info.
     var user = result.user;
     // ...
+    localStorage.setItem('user', user);
+    let displayName = user.displayName
+    localStorage.setItem('display', displayName);
+    let photo = user.photoURL
+    localStorage.setItem('photo', photo)
   }).catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
@@ -109,6 +122,8 @@ const authentication = (provider) => {
 
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
+    let userUid = user.uid
+    localStorage.setItem("userUid", userUid);
     window.location.assign('views/home.html');
 
   } else {
