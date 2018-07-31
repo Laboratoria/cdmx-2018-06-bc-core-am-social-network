@@ -87,13 +87,11 @@ const likePost = (id) => {
   }
 };
 
-window.close = {
-  logOut: () => {
-    firebase.auth().signOut().then(function() {
-      console.log('Saliendo...');
-      location.assign('../home.html');    
-    }).catch(function(error) {
-      console.log(error);    
-    });
-  }
+logOut = () => {
+  firebase.auth().signOut().then(function() {
+    console.log('Saliendo...');
+    location.replace('../home.html');    
+  }).catch(function(error) {
+    console.log(error);    
+  });
 };
