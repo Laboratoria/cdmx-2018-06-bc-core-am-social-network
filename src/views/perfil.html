@@ -24,7 +24,7 @@
                     <button id="btnProfile" class="btn-flat col s1 offset-s2">
                         <i class="large material-icons">person</i>
                     </button>
-                    <button id="btnProfile" class=" btn-flat col s1 offset-s2">
+                    <button id="btnMessage" class=" btn-flat col s1 offset-s2">
                         <i class="large material-icons">chat</i>
                     </button>
                     <button id="btnRanking" class=" btn-flat col s1 offset-s2">
@@ -38,7 +38,7 @@
     <section class="row container" id="profile">
         <div class="row">
             <div>
-                <img src="" class="col s5 m4 l2 offset-3 circle foto-perfil" alt="">
+                <img id="user-photo" class="col s5 m4 l2 offset-3 circle foto-perfil" alt="">
                 <span class="letra-usuario" id="dataName"></span>
             </div>
         </div>
@@ -77,6 +77,7 @@
             <input type="button" id="btnPost" class="btn light-green" value="Publicar">
         </div>
     </section>
+    <button id="btnLogout" value="salir">Salir</button>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>

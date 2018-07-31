@@ -13,6 +13,10 @@ const profile = document.getElementById('profile');
 const home = document.getElementById('home');
 const postForm = document.getElementById('postForm');
 const btnHome = document.getElementById('btnHome');
+const btnRanking = document.getElementById('btnRanking');
+const bntMessage = document.getElementById('btnMessage');
+const userPrintPhoto = document.getElementById('user-photo');
+
 
 let user = localStorage.getItem("mail");
 let userUid = localStorage.getItem("userUid");
@@ -125,11 +129,23 @@ const deletePost = () => {
 
 btnProfile.addEventListener('click', e => {
    window.location.assign('../views/perfil.html');
-});
+   userPrintPhoto.src='userPrintPhoto3';
+   profile.innerHTML = `<h1>${user}</h1>`;
+  });
+
 
 btnHome.addEventListener('click', e => {
-    window.location.reload()
+    window.location.assign('../views/home.html');
 });
+
+btnRanking.addEventListener('click', e => {
+    window.location.assign('../views/ranking.html');
+});
+
+bntMessage.addEventListener('click', e => {
+    window.location.assign('../views/mensaje.html');
+});
+
 
 
 
