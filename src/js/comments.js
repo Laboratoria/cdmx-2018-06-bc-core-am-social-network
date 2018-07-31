@@ -8,14 +8,16 @@ const cleanRegister = () =>{
   document.getElementById('comment-text').value = '';
 };
 // Funciones CRUD Create post
-const createMessageinUserProfile = () =>{
+const createMessageinUserProfile = (user) =>{
+  let userRef = user;
+  console.log(user.displayName);
   // Traer elementos del DOM
   let userPost = document.getElementById('comment-text').value;
   //const timestamp = firebase.firestore.FieldValue.serverTimestamp().ref.update({ updatedAt: new Date() });
   DB.collection('diabeTipsUsersPost').add({
     userPost: userPost,
-    //datePost: timestamp,
-    //likesState: likes
+    userName: user.displayName,
+    userId: user.uid,
   })
     .then(function(docRef) {
       console.log('Registro de post de usuario bajo ID: ', docRef.id);
@@ -36,6 +38,7 @@ const printPost = () => {
       userPostConteiner.innerHTML +=
                                `
                                <div class="form-control">
+                                <p>${doc.data().userName}  dice: </p>
                                 <p>${doc.data().userPost}</p>
                                  <button class="btn btn-success btn-block" type="button" onclick = "editPost('${doc.id}', '${doc.data().userPost}')">Editar</button>
                                  <button class="btn btn-success btn-block" type="button" onclick = "deletePost('${doc.id}')">Borrar</button>
@@ -79,7 +82,14 @@ const addLike = () => { /* Cuando sucede una llamada al evento del boton like, s
   countLikes = countLikes + 1;
   document.getElementById('likeCounter').textContent = countLikes;
 };
-printPost();
+
 commentSend.addEventListener('click', (event) => {
-  createMessageinUserProfile();
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user){
+          createMessageinUserProfile(user);
+          printPost();
+        } else {
+          alert("No, no, no ... No te has iniciado sesion");
+        }
+    });
 });
