@@ -20,6 +20,8 @@ const createNewTaskElement = (taskString) => {
   const editInput = document.createElement('input'); // Texto a editar
   const editButton = document.createElement('button');
   const deleteButton = document.createElement('button');
+  const likeButton = document.createElement('button');
+  const numberLike = document.createElement('p');
 
 
   editInput.type = 'text';
@@ -28,6 +30,10 @@ const createNewTaskElement = (taskString) => {
   editButton.className = 'edit';
   deleteButton.innerHTML = 'Delete &#x1F5D1;';
   deleteButton.className = 'delete';
+  likeButton.className = 'like';
+  likeButton.innerHTML = 'Likes:0';
+  numberLike.className = 'count';
+  numberLike.innerHTML = '0';
 
   label.innerHTML = taskString;
 
@@ -36,6 +42,8 @@ const createNewTaskElement = (taskString) => {
   listItem.appendChild(editInput);
   listItem.appendChild(editButton);
   listItem.appendChild(deleteButton);
+  listItem.appendChild(likeButton);
+  listItem.appendChild(numberLike);
 
   return listItem;
 };
@@ -84,11 +92,21 @@ const bindTaskEvents = (taskListItem, checkboxEventHandle) => {
   const checkbox = taskListItem.querySelector('input[type=checkbox]');
   const editButton = taskListItem.querySelector('button.edit');
   const deleteButton = taskListItem.querySelector('button.delete');
+  const likeButton = taskListItem.querySelector('button.like');
+  const numberLike = taskListItem.querySelector('p.count');
 
   editButton.addEventListener('click', editTask);
 
   deleteButton.addEventListener('click', deleteTask);
+
+  likeButton.addEventListener('click', counterLikes );
 };
+
+const counterLikes = () => {
+  document.getElementById('like').innerHTML= count++;
+}
+}
+
 
 const editTask = () => {
   const listItem = event.target.parentNode;
