@@ -9,21 +9,26 @@ const btnLike = document.getElementById('btnLike');
 const btnSave = document.getElementById('btnSave');
 const likes = document.getElementById('likes');
 const btnProfile = document.getElementById('btnProfile');
-const borrar = document.getElementById('borrar');
 const profile = document.getElementById('profile');
 const home = document.getElementById('home');
 const postForm = document.getElementById('postForm');
 const btnHome = document.getElementById('btnHome');
+const btnRanking = document.getElementById('btnRanking');
+const bntMessage = document.getElementById('btnMessage');
+const userPrintPhoto = document.getElementById('user-photo');
+
 
 let user = localStorage.getItem("mail");
-const bringData = () => {
-    if (user === "google"){
-        user = localStorage.getItem("display");
-    } else if (user === "facebook") {
-        alert('facebook');
-    } else {
+let userUid = localStorage.getItem("userUid");
+console.log(userUid);
 
-    }
+let userPhoto;
+const bringData = () => {
+    if (user === "google" || user === "facebook") {
+        user = localStorage.getItem("display");
+        userPhoto = localStorage.getItem("photo");
+    } else  {
+    } 
 }
 bringData()
 
@@ -39,27 +44,44 @@ databaseUser.on('child_added', snap => {
 
 btnPost.addEventListener('click', e => {
     let posted = postText.value;
-    if (posted === "" || posted === " "){
+    if (posted === "" || posted === " ") {
         alert('Escribe un mensaje')
     } else {
         let ref = database.ref('posts');
-    let data = {
-        name: user,
-        post: posted
-    }
-    ref.push(data);
-    console.log(e.id);
-    postText.value = '';
+        let data = {
+            user : userUid,
+            name: user,
+            post: posted
+        }
+        ref.push(data);
+        postText.value = '';
     }
 });
 
+let keys;
 window.onload = () => {
     const databasePost = firebase.database().ref().child('posts');
     databasePost.on('child_added', snap => {
         let postName = snap.child("name").val();
         let text = snap.child("post").val();
-        console.log(postName, text);
+        let userId = snap.child("user").val();
+        //console.log(userId);
+        printPost(postName, text, userId);
+    });
+    databasePost.on('value', data => {
+        let getKeys = data.val();
+        let keysObj = Object.keys(getKeys);
+        for (let i = 0; i < keysObj.length; i++){
+            keys = keysObj[i];
+            editPost(keys);
+             // console.log(keys);
+        }
+       // console.log(keys);
+    })
+};
 
+const printPost = (postName, text, userId) => {
+    if (userUid === userId){
         comentarios.innerHTML += `<div>
                 <form action="">
                 <p>${postName}</p>
@@ -67,16 +89,26 @@ window.onload = () => {
                     <p id="likes" class="inline"></p>
                     <input type="button" class="btnEdit btn" onclick="likePost()" value="Like">
                     <input type="button" class="btnEdit btn" onclick="editPost()" value="Editar">
-                    <input type="button" class="btn" onclick="deletePost()" value="Eliminar"> 
+                    <input type="button" class="btn delete" value="Eliminar" onclick="deletePost()"> 
                     <input type="button" class="btn none" onclick="savePost()" value="Guardar">
                 </form>
               </div>`;
-    });
-};
+    } else {
+    comentarios.innerHTML += `<div>
+                <form action="">
+                <p>${postName}</p>
+                    <input type="text" id="input" readonly = "readonly" value="${text} ">
+                    <p id="likes" class="inline"></p>
+                    <input type="button" class="btnEdit btn" onclick="likePost()" value="Like">
+                </form>
+              </div>`;
+            }
+}
 
 //Función para editar post
-const editPost = () => {
-    alert('editar');
+const editPost = (keys) => {
+   // console.log(keys);
+    
 }
 
 //Función para likear post
@@ -91,20 +123,31 @@ const savePost = () => {
 
 //Función para eliminar post
 const deletePost = () => {
-    alert('eliminar');
+    alert('delete');
 }
 
+
 btnProfile.addEventListener('click', e => {
-    postForm.style.display = "none";
-    borrar.style.display = "none";
-    comentarios.style.display = "none";
-    profile.style.display = "block";
-    profile.innerHTML = `<h3>${user}</h3>`;
-});
+   window.location.assign('../views/perfil.html');
+   userPrintPhoto.src='userPrintPhoto3';
+   profile.innerHTML = `<h1>${user}</h1>`;
+  });
+
 
 btnHome.addEventListener('click', e => {
-    window.location.reload()
+    window.location.assign('../views/home.html');
 });
+
+btnRanking.addEventListener('click', e => {
+    window.location.assign('../views/ranking.html');
+});
+
+bntMessage.addEventListener('click', e => {
+    window.location.assign('../views/mensaje.html');
+});
+
+
+
 
 
 // Botón para guardar edición HTML 
@@ -126,6 +169,13 @@ btnLike.addEventListener('click', e => {
     likes.innerHTML = count;
 });*/
 
+btnProfile.addEventListener('click', e => {
+  postForm.style.display = "none";
+  borrar.style.display = "none";
+  comentarios.style.display = "none";
+  profile.style.display = "block";
+  profile.innerHTML = `<h1>${user}</h1>`;
+});
 
 // Botón para editar post
 /*
