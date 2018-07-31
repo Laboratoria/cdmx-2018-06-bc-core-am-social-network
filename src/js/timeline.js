@@ -9,7 +9,7 @@ const config = {
 firebase.initializeApp(config);
 const database = firebase.database();
 let namePost = document.getElementById('namePost');
-let messagePost = document.getElementById('messagePost');
+let messagePost = document.getElementById('messagePost')
 let btnPost = document.getElementById('btnPost');
 let chatUl = document.getElementById('chat');
 let btnLogOut = document.getElementById('btnLogout');
@@ -32,9 +32,9 @@ btnLogOut.addEventListener('click', function() {
   });
 });
 firebase.database().ref('posts').on('value', snapshot => { // objeto que contiene la data
-  let html = '';  
-  snapshot.forEach(function(elemento) {
-    let element = elemento.val();
+  let html ='';  
+  snapshot.forEach(function(event) {
+    let element = event.val();
     let nombre = element.name;
     let mensaje = element.message;  
     html += `<div class="card">
