@@ -22,16 +22,18 @@ const addPost = (comment) => {
     });
 };
 
+// Publicacion de comentarios
 db.collection('posts').onSnapshot((querySnapshot) => {
   document.getElementById('finalWall').innerHTML = '';
   querySnapshot.forEach((doc) => {
     console.log(`${doc.id} => ${doc.data().post}`);
     finalWall.innerHTML += `<div class="card col-sm-10 col-md-8">
         <div class="card-body">
-            <p>${doc.data().post} \t\t\t\t <span id="likess"><i class="far fa-heart"></i></span></p>
+            <p>${doc.data().post}</p>
             <button id="deleteComment" onclick="deletePost('${doc.id}')">Borrar</button>
             <button id="editComment" onclick="editPost('${doc.id}', '${doc.data().post}')">Editar</button>
             <button id="like" onclick="likePost('${doc.id}')">Like</button>
+            <span id="likess"><i class="far fa-heart"></i></span>
         </div>
     </div>`;
   });
@@ -46,6 +48,7 @@ const deletePost = (id) => {
   });
 };
 
+// Editar comentario en especifico
 const editPost = (id, comment) => {
   document.getElementById('post').value = comment;
   let buttonEdit = document.getElementById('toPost');
@@ -67,6 +70,7 @@ const editPost = (id, comment) => {
   });
 };
 
+// Da y quita like
 let like = false;
 let contLike = 0;
 const likePost = (id) => {
@@ -87,6 +91,7 @@ const likePost = (id) => {
   }
 };
 
+// Cerrar sesion
 logOut = () => {
   firebase.auth().signOut().then(function() {
     console.log('Saliendo...');
