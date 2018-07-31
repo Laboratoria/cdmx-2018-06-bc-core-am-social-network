@@ -15,6 +15,7 @@ let messagePost = document.getElementById('messagePost');
 let btnPost = document.getElementById('btnPost');
 let chatUl = document.getElementById('chat');
 let btnLogOut = document.getElementById('btnLogout'); 
+let keyPost;
 
 btnPost.addEventListener('click', function() {
   let nombre = namePost.value;
@@ -23,7 +24,7 @@ btnPost.addEventListener('click', function() {
   firebase.database().ref('posts').push();
 
   let postNew = firebase.database().ref('posts').push();
-  let keyPost = postNew.getKey();
+  keyPost = postNew.getKey();
 
   firebase.database().ref(`posts/${keyPost}`).set({
     //uid: getUserUid(),
@@ -48,11 +49,14 @@ firebase.database().ref("posts").on("value", snapshot => {//objeto que contiene 
   let html ="";  
   let key = 0;
   snapshot.forEach(function (e) {
+      
       let element = e.val();
       let nombre = element.name;
       let mensaje = element.message;  
       html += `
         <li> <b> ${nombre}</b>: ${mensaje}
+        <p id="${e.val().keyPost}"> ${e.val().keyPost}</p>
+        
         <button type="button" class="btnDelete borrar" data-message= "'${key}'">
         <span><svg-icon><src href="sprite.svg#si-glyph-circle-remove" /></svg-icon></span>
         </button>
@@ -71,13 +75,9 @@ firebase.database().ref("posts").on("value", snapshot => {//objeto que contiene 
 
   });
 
-
-  function deleteMessage(key) {
-    const refposts = firebase.database().ref("posts").child("key").value;
-    console.log(this)
-      let keyMessage = this.getAttribute("data-message");
-      console.log(refposts);
-      let refMessage = refposts.child(keyMessage);
-      refMessage.remove();
+  function deleteMessage() {
+      let ref = firebase.database().ref("posts");
+      let idPost = this.parentNode.childNodes[3].id;
+      ref.child(idPost).remove();  
   }
   //reset()//Elimina el contenido de los input sin actualizar la página.

@@ -12,7 +12,6 @@ nav{
   align-items: center;
   justify-content: center;
   margin-top: 20px;
-  background-color: blue;
 }
 
 #log-in{
@@ -59,7 +58,7 @@ nav{
 body {
   font-family: 'Montserrat', sans-serif;
   color: #000000;
-  background-color;
+  background-color: #FFCC78;
 }
 
 #sign-up{
