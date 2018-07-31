@@ -9,11 +9,9 @@ let db = firebase.firestore();
 const settings = { timestampsInSnapshots: true };
 db.settings(settings);
 
-const addPost = (comment) => {
-  let likes = 0;
+const addPost = (comment) => {  
   db.collection('posts').add({
-    post: comment,
-    reaction: likes
+    post: comment
   })
     .then(function(docRef) {
       console.log('Document written with ID: ', docRef.id);
@@ -30,11 +28,10 @@ db.collection('posts').onSnapshot((querySnapshot) => {
     console.log(`${doc.id} => ${doc.data().post}`);
     finalWall.innerHTML += `<div class="card col-sm-10 col-md-8">
         <div class="card-body">
-            <p>${doc.data().post}</p>
-            <p id="likess"></p>
+            <p>${doc.data().post} \t\t\t\t <span id="likess"><i class="far fa-heart"></i></span></p>
             <button id="deleteComment" onclick="deletePost('${doc.id}')">Borrar</button>
             <button id="editComment" onclick="editPost('${doc.id}', '${doc.data().post}')">Editar</button>
-            <button id="like" onclick="likePost('${doc.id}', '${doc.reaction}')">Like</button>
+            <button id="like" onclick="likePost('${doc.id}')">Like</button>
         </div>
     </div>`;
   });
@@ -70,16 +67,23 @@ const editPost = (id, comment) => {
   });
 };
 
-let contLike = false;
-const likePost = (id, likes) => {
-  if (contLike === true) {
-    contLike = false;
+let like = false;
+let contLike = 0;
+const likePost = (id) => {
+  if (like === true) {
+    like = false;
+    contLike--;
     document.getElementById('like').innerHTML = 'Like';
-    document.getElementById('likess').innerHTML = contLike;
+    if (contLike === 0) {
+      document.getElementById('likess').innerHTML = '<i class="far fa-heart"></i>';
+    } else {
+      document.getElementById('likess').innerHTML = `<i class="far fa-heart">   ${contLike}</i>`;
+    }
   } else {
-    contLike = true;
+    like = true;
+    contLike++;
     document.getElementById('like').innerHTML = 'Dislike';
-    document.getElementById('likess').innerHTML = contLike;
+    document.getElementById('likess').innerHTML = `<i class="fas fa-heart">   ${contLike}</i>`;
   }
 };
 
