@@ -1,40 +1,62 @@
 /* index.html FORMAT */
 #bodyindex, #bodyapp {
   background-color: #96064e;
-  color:antiquewhite;
+  color: antiquewhite;
 }
-#fondo1{
+
+#fondo1 {
   background-position: center;
 }
 
 #logo {
   border-radius: 200px;
-  width: 15%;
+  width: 24%;
+  margin-top: 20%;
+  margin-left: 39% !important;
+}
+
+#logo2 {
+  border-radius: 200px;
+  width: 16%;
+}
+
+.subtitulo {
+  margin-left: -7%;
+  margin-bottom: 10%;
+}
+
+input {
+  margin-bottom: 18% !important;
+}
+
+·bodyindex {
+  text-align: center;
+  width: 10%;
+  margin-left: 25%;
   margin-top: 2%;
 }
 
-
-·bodyindex{
-  text-align:center;
-  width: 10%;
-  margin-left: 25%;
-  margin-top: 2%
-
-}
 .inicio {
-  text-align:center;
-  width: 40%;
-  margin-left: 25%;
-  margin-top: 2%
-
+  text-align: center;
+  width: 60%;
+  margin-left: 23%;
+  margin-top: 8%;
 }
 
 #email, #contrasena {
   margin: 20% !important;
 }
 
-
 /* app.html FORMAT */
+
+/* i {
+  color: #680134;
+} */
+
+nav {
+  background-color: #680134;
+}
+
 #textInput {
   padding: 5px;
   border-radius: 7px;
@@ -47,29 +69,35 @@
   border-radius: 7px;
   box-shadow: 0;
   border: none;
-  padding: 4px 5px;
+  padding: 10px 20px;
   float: right;
 }
 
-#registrar,#facebook,#google{
-
+#registrar, #facebook, #google {
   background-color: #680134;
   color: antiquewhite;
   border-radius: 8px;
   box-shadow: 0;
   border: none;
   padding: 4px 5px;
-  float:none
+  float: none
 }
-#enviar{
 
+#enviar {
+  margin-top: -1%;
   background-color: #680134;
   color: antiquewhite;
   border-radius: 8px;
   box-shadow: 0;
   border: none;
-  padding: 4px 5px;
-  float:none
+  padding: 10px 20px;
+  float: none;
+  margin-left: -8%;
+}
+
+#pie {
+  margin-top: 25%;
+  margin-left: -10%;
 }
 
 #newPost {
@@ -83,12 +111,64 @@
 
 .contenidoC {
   color: black;
+  background-color: antiquewhite;
+}
+
+.btn {
+  float: right;
+  margin: 0% 1%;
+  color: #680134;
+  background-color: antiquewhite;
 }
 
 #comentario {
   border-radius: 10px;
+  margin-top: 2%;
+  margin-bottom: 6%
 }
 
 .card {
   margin: 5%;
+}
+
+h2 {
+  margin-left: 0%;
+}
+
+
+
+/* Toggle Sidebar */
+
+#toggleSidebar {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  margin-top: 98.5%;
+  margin-left: -5%;
+  background: antiquewhite;
+  left: -200px;
+  transition: all 500ms linear;
+}
+
+#toggleSidebar.active {
+  left: 0px;
+}
+
+#toggleSidebar ul li {
+  color: #680134;
+  list-style: none;
+  padding: 15px 10px 15px 0px;
+  border-bottom: 1px solid rgba(100, 100, 100, 0.3)
+
+}
+
+#profilePic {
+  width: 75%;
+  border-radius: 50%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+#toBottom {
+  margin-top: 50%;
 }

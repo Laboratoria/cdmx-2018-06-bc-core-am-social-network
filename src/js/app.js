@@ -25,12 +25,18 @@ boton.addEventListener('click', event => {
     // console.log(yearDateTime);
 
 
+
+//AQUI VA LO DEL USUARIO
+
+
+
     // CRUD
     // Aquí se agrega un objeto a la coleccion "comments" del firestore
     // el "add" agrega un id único en automatico
     db.collection('comments').add({
       dateTime: yearDateTime,
-      comment: texto
+      comment: texto,
+      likeCounter: 0,
     })
       // luego, 
       .then(function(docRef) {
@@ -59,15 +65,61 @@ db.collection('comments').onSnapshot((querySnapshot) => {
                                   <div class="contenidoC">
                                     <p>${doc.data().dateTime}</p>
                                     <p>${doc.data().comment}</p>
-                                    <button class="btn like"><i class="fas fa-gem"></i></button>
-                                    <button class="btn compartir"><i class="fas fa-share"></i></button>
-                                    <button class="btn editar" onclick="edit('${doc.data().comment}')"><i class="fas fa-edit"></i></button>
-                                    <button class="btn guardar"><i class="fas fa-save"></i></button>
                                     <button class="btn borrar" onclick="eliminate('${doc.id}')"><i class="fas fa-trash-alt"></i></button>
-                                  </div>
+                                    <button class="btn editar" onclick="edit('${doc.data().comment}')"><i class="fas fa-edit"></i></button>
+                                    <button class="btn compartir"><i class="fas fa-share"></i></button>
+                                    <button class="btn like"><i class="fas fa-gem"></i></button>
+                                    </div>
                                 </div>`;
   });
 });
+
+
+sort = (id) => {
+
+  sortComments
+
+
+  db.collection('comments').doc(id).sort()
+  
+}
+
+// Para editar documentos de la coleccion en tiempo real:
+edit = (texto) => {
+  document.getElementById('comentario').value = texto;
+  let inputRef = db.collection('comments').doc(id);
+  return inputRef.update({
+    comment: texto
+  })
+  .then(function () {
+    console.log('Document successfully updated!');
+  })
+  .catch(function (error) {
+    // The document probably doesn't exist.
+    console.error('Error updating document: ', error);
+  });
+};
+
+
+
+eliminate = (id) => {
+  db.collection('comments').doc(id).delete()
+  .then(function() {
+    console.log('Document successfully deleted!');
+  })
+  .catch(function(error) {
+    console.error('Error removing document: ', error);
+  });
+}
+
+
+
+// TOGGLE SIDEBAR
+const toggleBtn = document.getElementById('pullSidebar');
+toggleBtn.addEventListener('click', event = () => {
+  document.getElementById('toggleSidebar').classList.toggle('active');
+});
+
 
 //   // validar si se creó el elementos(boton y comment)
 //   let botonesBorrar = document.getElementsByClassName('borrar');
@@ -87,25 +139,3 @@ db.collection('comments').onSnapshot((querySnapshot) => {
 // });
 
 // Para borrar documentos de la coleccion en tiempo real:
-
-function eliminate(id) {
-  db.collection('comments').doc(id).delete().then(function() {
-    console.log('Document successfully deleted!');
-  }).catch(function(error) {
-    console.error('Error removing document: ', error);
-  });
-}
-
-// Para editar documentos de la coleccion en tiempo real:
-function edit(texto) {
-  document.getElementById('comentario').value = texto;
-  let inputRef = db.collection('comments').doc(id);
-  return inputRef.update({
-    comment: texto
-  }).then(function() {
-    console.log('Document successfully updated!');
-  }).catch(function(error) {
-    // The document probably doesn't exist.
-    console.error('Error updating document: ', error);
-  });
-};
