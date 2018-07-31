@@ -108,52 +108,28 @@ const deleteMsg = () => {
 const editMsg = () => {
   let keyRelatedToPost = event.target.dataset.key;
   console.log(keyRelatedToPost);
+  const containsClass = card.classList.contains('editMode');
   const editMsgDataBase = firebase.database().ref('posts').child(keyRelatedToPost);
-  card.classList = 'editMode';
-  console.log(card);
 
-  // const refPostToEdit = firebase.database().ref().child('posts').child(keyRelatedToPost);
-  // refPostToEdit.once('value', (snapshot) => {
-  //   const data = snapshot.val();
-  //   if (containsClass) {
-  //     console.log(containsClass);
-  //     refTaskToEdit.update({
-  //       contenidoTask: messageInput
-  //     });
-  //     console.log(contenidoTask);
-  //     editButton.innerHTML = 'Edit ';
-  //     card.classList.remove('editMode');
-  //     messageInput.value = '';
-  //   } else {
-  //     // const data = snapshot.val();
-  //     console.log(containsClass, card);
-  //     editButton.innerHTML = 'Save';
-  //     messageInput.value = data.messageInput.value;
-  //     card.classList.add('editMode');
-  //   };
-  // });
+  editMsgDataBase.once('value', (snapshot) => {
+    const data = snapshot.val();
+    console.log(data);
+    if (containsClass) {
+      editMsgDataBase.update({
+        text: messageInput.value
+      });
+      // console.log(contenidoTask);
+      editButton.innerHTML = 'Editar';
+      card.classList.remove('editMode');
+      messageInput.value = '';
+    } else {
+      messageInput.value = data.text ;
+      card.classList.add('editMode');
+      editButton.innerHTML = 'Save';
+    } 
+  });
 };
 
-
-const toggleStar = (uid) => {
-  console.log(uid);
-  // postRef.transaction(function(post) {
-  //   if (post) {
-  //     if (post.stars && post.stars[uid]) {
-  //       post.starCount--;
-  //       post.stars[uid] = null;
-  //     } else {
-  //       post.starCount++;
-  //       if (!post.stars) {
-  //         post.stars = {};
-  //       }
-  //       post.stars[uid] = true;
-  //     }
-  //   }
-  //   return post;
-  // });
-};
-// favoriteCounter.addEventListener('click', toggleStar);
 
 const logoutBtn = document.getElementById('logout-btn');
 logoutBtn.addEventListener('click', event => {
@@ -161,53 +137,21 @@ logoutBtn.addEventListener('click', event => {
   location.href = 'index.html';
 });
 
-
-// Agreagar el boton de editar desde javascript
-let editIconUI = document.createElement('span');
-editIconUI.class = 'edit-message';
-editIconUI.innerHTML = ' ✎';
-editIconUI.setAttribute('userid', key);
-// Crear un editIconUI span element, después darale un evento click con una función callback editButtonClicked().
-editIconUI.addEventListener('click', editButtonClicked);
-// Append despues li.innerHTML = value.name
-$li.append(editIconUI);
-
-// Mostrar el mensaje modificado de usuario
-document.getElementById('edit-user-module').style.display = 'block';
-
-// Crea el path donde se selecciona la información del usuario por la id de database
-const userRef = dbRef.child('users/' + e.target.getAttribute('userid'));
-// Remplaza la información que ingreso el usuario
-const editUserInputsUI = document.querySelectorAll('.edit-user-input');
-
-// Se define un evento llamado value en la función llada userRef, el segundo argumentoen ese evento es una función call back 
-// con el parametro snap el cual tendrá la información del usuario actual
-userRef.on('value', snap => {
-  for (var i = 0, len = editUserInputsUI.length; i < len; i++) {
-    var key = editUserInputsUI[i].getAttribute('data-key');
-    editUserInputsUI[i].value = snap.val()[key];
-  }
-});
-// Dentro de ese evento callback, recorrera ese arrayy obtendra el valor de un atributo data-keyen cada iteración y lo guardara´
-// en un variable key para poder asignarle un  valor de snap.value()[key] al campo de mensaje.
-
-// guardar los datos modificados del mensaje por usuario
-const saveBtn = document.querySelector('#edit-message-btn');
-saveBtn.addEventListener('click', saveUserBtnClicked);
-
-const messageID = document.querySelector('.edit-messageid').value;
-// se crea una let vacia para almacenar lo que introduzca el usuario
-let editedmessageObject = {};
-// obtener todo lo que ingreso el usuario en un array
-const editMessageInputsUI = document.querySelectorAll('.edit-message-input');
-// creamos un uevo loop para que iterar en el nuevo array creado y obtener los nuevos valores con el atributo data-key
-// guardar los valores en una let key
-editMessageInputsUI.forEach(function(textField) {
-  let key = textField.getAttribute('data-key');
-  let value = textField.value;
-  editedMessageObject[textField.getAttribute('data-key')] = textField.value;
-});
-// Despues usamos el método update para actualizar la información que cambio en el comenario
-userRef.update('editMessage', function() {
-  console.log('Message has been updated');
-});
+// const toggleStar = (uid) => {
+//   console.log(uid);
+// postRef.transaction(function(post) {
+//   if (post) {
+//     if (post.stars && post.stars[uid]) {
+//       post.starCount--;
+//       post.stars[uid] = null;
+//     } else {
+//       post.starCount++;
+//       if (!post.stars) {
+//         post.stars = {};
+//       }
+//       post.stars[uid] = true;
+//     }
+//   }
+//   return post;
+// });
+// favoriteCounter.addEventListener('click', toggleStar);
