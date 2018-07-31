@@ -21,6 +21,7 @@ firebase.auth().onAuthStateChanged(user => {
   if (user) {
     // estamos logueados
     mandarUsuarioDatabase(user);
+    printPost();
   } else {
     console.log('not logged in ');
   }
@@ -41,9 +42,9 @@ const pintarUsuario = (user)=>{
   profileContainer.innerHTML =
        `<div class="container center">
        <div class="row">
-       <p>Bienvenid@ ${user.displayName}</p>
+       <p>${user.displayName}</p>
        <p> ${user.email}</p>
-       <div> <img src= ${photoProfile}></div>
+       <div> <img class= "circle" src= ${photoProfile}></div>
        </div>
        </div>`;
 };
@@ -57,30 +58,45 @@ publicarBtn.addEventListener('click', event => {
     creator: currentUser.uid,
     creatorName: currentUser.displayName,
     UserEmail: currentUser.email,
-    text: messageValue
+    text: messageValue,
+    key: newMessagekey,
+    countStars: 0,
+    authorPic: currentUser.photoURL
   });
 });
+
 // crear publicación por medio del DOM con template string
-firebase.database().ref('posts')
-  .on('child_added', (newMessage) => {
-    card.innerHTML +=
-         `<div class="card blue lighten-3">
-            <p><strong>${newMessage.val().creatorName}</strong>:</p>
-            <p> ${newMessage.val().text}</p>
+const printPost = () => {
+  firebase.database().ref('posts')
+    .on('child_added', (newMessage) => {      
+      card.innerHTML +=
+         `<div class="card green lighten-3">
+         <div class="container">
+         <div class="row">
+            <img class="circle photoImage" src= ${newMessage.val().authorPic}>
+             <p class="userPost"> <strong>${newMessage.val().creatorName}</strong>:</p>
+            </div>
+            <p class="textMessage"> ${newMessage.val().text}</p>
             <div class ="card-action">
-            <button type= "button" class = "edit-message-btn">Editar</button>
-           <button type="button" onclick=deleteMsg(); class = "delete-message-btn">Borrar</button>
+            <button type= "button" class= "edit-message-btn">Editar</button>
+           <button type="button" onclick=deleteMsg() data-key="${newMessage.val().key}" class="delete-message-btn delete">Borrar</button>
          <i class=" small material-icons right">favorite</i>  
          </div>
+         </div>
         </div>`;
-  });
+    });
+};
 
 // funcion que borra
 const deleteMsg = () =>{
-  // let nodeparent = event.target.parentNode;
-  const DeleteMsgDataBase = firebase.database().ref().child('posts');
-  DeleteMsgDataBase.remove();
+  if (confirm('VAS A BORRAAAAARRTS??????') === true) {
+    let keyRelatedToPost = event.target.dataset.key;
+    console.log(event.target.dataset.key);
+    const DeleteMsgDataBase = firebase.database().ref('posts').child(keyRelatedToPost);
+    DeleteMsgDataBase.remove(); 
+  }
 };
+
 
 const logoutBtn = document.getElementById('logout-btn');
 logoutBtn.addEventListener('click', event => {
@@ -88,39 +104,8 @@ logoutBtn.addEventListener('click', event => {
   location.href = 'index.html';
 });
 
-// deleteBtn.addEventListener('click', ()=>{
-//   console.log('holi');
-// });
 
-// firebase.database().ref('posts')
-//   .on('child_removed', (newMessage) => {
-//     console.log('has borrado correctamente');
-//   });
-// };
-
-
-// const eliminarPostBD = ()=>{
-//   firebase.database().ref('/posts/' + newMessagekey).remove();
-
-// ----
-
-
-//   const deleteMessagebtn = document.getElementsByTagName('button');
-
-//   deleteMessagebtn.addEventListener('click', deletingMessage);
-
-
-//   let borrar = firebase.database().ref().child('messages').push().key;
-//   let refMessage ;
-//   console.log(borrar);
-//   const deletingMessage = () => {
-//     let refMensaje = refMessage.child(borrar);
-//     refMensaje.remove();
-//   };
-//   console.log(deletingMessage);
-
-// edit icon
-// Agreagar el boton de editar desde java
+// Agreagar el boton de editar desde javascript
 let editIconUI = document.createElement('span');
 editIconUI.class = 'edit-message';
 editIconUI.innerHTML = ' ✎';
