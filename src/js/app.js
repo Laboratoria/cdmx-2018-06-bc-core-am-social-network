@@ -25,9 +25,9 @@ firebase.auth().onAuthStateChanged(user => {
   } else {
     console.log('not logged in ');
   }
-}); 
+});
 
-const mandarUsuarioDatabase = (user)=>{
+const mandarUsuarioDatabase = (user) => {
   firebase.database().ref('users').set({
     username: user.displayName,
     email: user.email,
@@ -36,11 +36,11 @@ const mandarUsuarioDatabase = (user)=>{
   pintarUsuario(user);
 };
 
-const pintarUsuario = (user)=>{
+const pintarUsuario = (user) => {
   let photoProfile = (user.photoURL);
   console.log((photoProfile));
   profileContainer.innerHTML =
-       `<div class="container center">
+    `<div class="container center">
        <div class="row">
        <p>${user.displayName}</p>
        <p> ${user.email}</p>
@@ -63,14 +63,15 @@ publicarBtn.addEventListener('click', event => {
     countStars: 0,
     authorPic: currentUser.photoURL
   });
+  toggleStar(key);
 });
 
 // crear publicación por medio del DOM con template string
 const printPost = () => {
   firebase.database().ref('posts')
-    .on('child_added', (newMessage) => {      
+    .on('child_added', (newMessage) => {
       card.innerHTML +=
-         `<div class="card green lighten-3">
+        `<div class="card green lighten-3">
          <div class="container">
          <div class="row">
             <img class="circle photoImage" src= ${newMessage.val().authorPic}>
@@ -80,7 +81,7 @@ const printPost = () => {
             <div class ="card-action">
             <button type= "button" class= "edit-message-btn">Editar</button>
            <button type="button" onclick=deleteMsg() data-key="${newMessage.val().key}" class="delete-message-btn delete">Borrar</button>
-         <i class=" small material-icons right">favorite</i>  
+         <i onclick=toggleStar() class=" small material-icons right favoriteCounter">favorite</i>  
          </div>
          </div>
         </div>`;
@@ -88,15 +89,36 @@ const printPost = () => {
 };
 
 // funcion que borra
-const deleteMsg = () =>{
-  if (confirm('VAS A BORRAAAAARRTS??????') === true) {
+const deleteMsg = () => {
+  if (confirm('¿Quieres eliminar este mensaje?') === true) {
     let keyRelatedToPost = event.target.dataset.key;
     console.log(event.target.dataset.key);
     const DeleteMsgDataBase = firebase.database().ref('posts').child(keyRelatedToPost);
-    DeleteMsgDataBase.remove(); 
+    DeleteMsgDataBase.remove();
   }
 };
 
+// const favoriteCounter = document.getElementsByClassName('favoriteCounter')
+
+const toggleStar = (uid) => {
+  console.log(uid);
+  // postRef.transaction(function(post) {
+  //   if (post) {
+  //     if (post.stars && post.stars[uid]) {
+  //       post.starCount--;
+  //       post.stars[uid] = null;
+  //     } else {
+  //       post.starCount++;
+  //       if (!post.stars) {
+  //         post.stars = {};
+  //       }
+  //       post.stars[uid] = true;
+  //     }
+  //   }
+  //   return post;
+  // });
+};
+// favoriteCounter.addEventListener('click', toggleStar);
 
 const logoutBtn = document.getElementById('logout-btn');
 logoutBtn.addEventListener('click', event => {
