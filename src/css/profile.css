@@ -20,6 +20,7 @@ html, body {
 
 #profilePicture {
   min-width: inherit;
+  min-height: inherit;
   background: #EB656A;
   position: relative;
   margin-top: 20px;
@@ -34,13 +35,22 @@ html, body {
 }
 
 #profileContent {
+  position: relative;
+  /* height: 100%; */
   margin-top: 0px;
+
 }
 
-#footer{
-  /* background-color: #000; */
+#navbar {
+  /* z-index: 1000; */
+  /* width: 100%;*/
+  /* padding-top: 10px;
+  padding-bottom: 0px; */
   background-color: #EB656A;
-  position: relative;
-  height: 60px;
-  margin-top: -60px;
-  clear: both;
+  margin-bottom: inherit;
+  /* clear: both; */
+}
+
+#navbar a {
+  text-align: center;
+}
