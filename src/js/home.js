@@ -1,138 +1,62 @@
-const dataName = document.getElementById('dataName');
-const btnPost = document.getElementById('btnPost');
-const postText = document.getElementById('postText');
-const comentarios = document.getElementById('comentarios');
-const input = document.getElementById('input');
-const btnEdit = document.getElementById('btnEdit');
-const btnErase = document.getElementById('btnErase');
-const btnLike = document.getElementById('btnLike');
-const btnSave = document.getElementById('btnSave');
-const likes = document.getElementById('likes');
-const btnProfile = document.getElementById('btnProfile');
-const borrar = document.getElementById('borrar');
-const profile = document.getElementById('profile');
-const home = document.getElementById('home');
-const postForm = document.getElementById('postForm');
-const btnHome = document.getElementById('btnHome');
+<!DOCTYPE html>
 
-let user = localStorage.getItem("mail");
-const bringData = () => {
-    if (user === "google"){
-        user = localStorage.getItem("display");
-    } else if (user === "facebook") {
-        alert('facebook');
-    } else {
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
+</head>
 
-    }
-}
-bringData()
+<body>
 
-dataName.innerHTML = user;
+<header class="row">
+        <div class="navbar-fixed">
+        <nav class="lighten-3 pink darken-1 row color-nav">
+            <div class="nav-wrapper col s12">
 
-const databaseUser = firebase.database().ref().child('user');
-databaseUser.on('child_added', snap => {
-    let userName = snap.child("name").val();
-    let userMail = snap.child("mail").val();
-    //console.log(userName, userMail);
+                <button id="btnHome" class="btn-flat col s1 offset-s1">
+                    <i class="large material-icons">home</i>
+                </button>
+                <button id="btnProfile" class="btn-flat col s1 offset-s2">
+                    <i class="large material-icons">person</i>
+                    <a href="../views/perfil.html"></a>
+                </button>
+                <button id="btnMessage" class=" btn-flat col s1 offset-s2">
+                    <i class="large material-icons">chat</i>
+                </button>
+                <button id="btnRanking" class=" btn-flat col s1 offset-s2">
+                    <i class="large material-icons">filter_vintage</i>
+                </button>
+            </div>
+        </nav>
+        </div>
+    </header>
 
-});
+    <button id="btnLogout" value="salir">Salir</button>
 
-btnPost.addEventListener('click', e => {
-    let posted = postText.value;
-    if (posted === "" || posted === " "){
-        alert('Escribe un mensaje')
-    } else {
-        let ref = database.ref('posts');
-    let data = {
-        name: user,
-        post: posted
-    }
-    ref.push(data);
-    console.log(e.id);
-    postText.value = '';
-    }
-});
+    <div class="container">
+        <section class="col s12" id="postForm">
+            <h4 id="dataName"></h4>
+            <input type="text" id="postText" placeholder="Inquietudes de mamá">
+            <input type="button" id="btnPost" class="btn" value="Publicar">
+        </section>
+        <section id="comentarios">
 
-window.onload = () => {
-    const databasePost = firebase.database().ref().child('posts');
-    databasePost.on('child_added', snap => {
-        let postName = snap.child("name").val();
-        let text = snap.child("post").val();
-        console.log(postName, text);
-
-        comentarios.innerHTML += `<div>
-                <form action="">
-                <p>${postName}</p>
-                    <input type="text" id="input" readonly = "readonly" value="${text} ">
-                    <p id="likes" class="inline"></p>
-                    <input type="button" class="btnEdit btn" onclick="likePost()" value="Like">
-                    <input type="button" class="btnEdit btn" onclick="editPost()" value="Editar">
-                    <input type="button" class="btn" onclick="deletePost()" value="Eliminar"> 
-                    <input type="button" class="btn none" onclick="savePost()" value="Guardar">
-                </form>
-              </div>`;
-    });
-};
-
-//Función para editar post
-const editPost = () => {
-    alert('editar');
-}
-
-//Función para likear post
-const likePost = () => {
-    alert('like');
-}
-
-//Función para salvar post
-const savePost = () => {
-    alert('save');
-}
-
-//Función para eliminar post
-const deletePost = () => {
-    alert('eliminar');
-}
-
-btnProfile.addEventListener('click', e => {
-    postForm.style.display = "none";
-    borrar.style.display = "none";
-    comentarios.style.display = "none";
-    profile.style.display = "block";
-    profile.innerHTML = `<h3>${user}</h3>`;
-});
-
-btnHome.addEventListener('click', e => {
-    window.location.reload()
-});
+        </section>
 
 
-// Botón para guardar edición HTML 
-/*
-btnSave.addEventListener('click', e => {
-    let readonly = document.createAttribute("readonly");
-    readonly.value = "readonly";
-    input.setAttributeNode(readonly);
-    btnLike.style.display = "inline-block";
-    btnEdit.style.display = "inline-block";
-    btnErase.style.display = "inline-block";
-    btnSave.style.display = "none";
-});*/
+    </div>
 
-/*
-let count = 0;
-btnLike.addEventListener('click', e => {
-    count++;
-    likes.innerHTML = count;
-});*/
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+    <script src="../js/firebase.js"></script>
+    <script src="../js/home.js"></script>
+    <script src="../js/logout.js"></script>
+</body>
 
-
-// Botón para editar post
-/*
-btnEdit.addEventListener('click', e => {
-    input.removeAttribute("readonly");
-    btnLike.style.display = "none";
-    btnEdit.style.display = "none";
-    btnErase.style.display = "none";
-    btnSave.style.display = "block";
-});*/
+</html>

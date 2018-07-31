@@ -24,7 +24,7 @@
                     <button id="btnProfile" class="btn-flat col s1 offset-s2">
                         <i class="large material-icons">person</i>
                     </button>
-                    <button id="btnMessage" class=" btn-flat col s1 offset-s2">
+                    <button id="btnProfile" class=" btn-flat col s1 offset-s2">
                         <i class="large material-icons">chat</i>
                     </button>
                     <button id="btnRanking" class=" btn-flat col s1 offset-s2">
@@ -34,50 +34,43 @@
             </nav>
         </div>
     </header>
-
-    <section class="row container" id="profile">
-        <div class="row">
-            <div>
-                <img id="user-photo" class="col s5 m4 l2 offset-3 circle foto-perfil" alt="">
-                <span class="letra-usuario" id="dataName"></span>
-            </div>
+    <section class="container">
+        <h2>Ranking</h2>
+        <div>
+            <span>
+                <img src="../images/bee_baja.png" class="abeja">
+            </span>
+            <span class="tamaño-letra">Usuario</span>
+            <span>
+                <div class="progress tamaño-barra">
+                    <div class="determinate light-green" style="width: 70%"></div>
+                </div>
+            </span>
         </div>
-        <hr>
-        <div class="row">
-            <div>
-                <div class="col s2 m2 l1">
-                    <i class="tiny material-icons">location_on</i>
+        <div>
+            <span>
+                <img src="../images/bee_baja.png" class="abeja">
+            </span>
+            <span class="tamaño-letra">Usuario</span>
+            <span>
+                <div class="progress tamaño-barra">
+                    <div class="determinate light-blue" style="width: 70%"></div>
                 </div>
-                <div>
-                    <span>Ciudad de México</span>
-                </div>
-            </div>
-            <div>
-                <div class="col s2 m2 l1">
-                    <img src="../images/bee_baja.png" class="abeja">
-                </div>
-                <div>
-                    <span>Mamá de Juan y María</span>
-                </div>
-            </div>
-            <div>
-                <div class="col s2 m2 l1">
-                    <i class="tiny material-icons">favorite</i>
-                </div>
-                <div>
-                    <span>Me encanta bailar y cocinar.</span>
-                </div>
-            </div>
+            </span>
         </div>
-        <hr>
-        <div class="col s12" id="postForm">
-            <h4 id="dataName"></h4>
-            <div class="input-field col s12">
-            <input type="text" id="postText" placeholder="Palabras y pensamientos de mamá">
-            <input type="button" id="btnPost" class="btn light-green" value="Publicar">
+        <div>
+            <span>
+                <img src="../images/bee_baja.png" class="abeja">
+            </span>
+            <span class="tamaño-letra">Usuario</span>
+            <span>
+                <div class="progress tamaño-barra">
+                    <div class="determinate orange lighten-1" style="width: 70%"></div>
+                </div>
+            </span>
         </div>
     </section>
-    <button id="btnLogout" value="salir">Salir</button>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
