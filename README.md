@@ -45,9 +45,9 @@ Se decidió _SHEro_ y no _SHEroes_ porque ésta última palabra, ademas de más 
 
 ### ¿Qué puedes hacer en SHEro? Historia de usuaria
 
-Como lo hemos mencionado antes, **SHEro** es una plataforma orientada a mujeres, feministas, que busquen apoyar, compar, vender o debatir acerca de diversos temas con otras mujeres con la misma ideología político-social. A continuación, te presentaremos la funcionalidad de **SHEro** a través de una dinámica llamada "_Historias de usuario_":
+Como lo hemos mencionado antes, **SHEro** es una plataforma orientada a mujeres, feministas, que busquen apoyar, comprar, vender o debatir acerca de diversos temas con otras mujeres con la misma ideología político-social. A continuación, te presentaremos la funcionalidad de **SHEro** a través de una dinámica llamada "_Historias de usuario_":
 
-* Yo, como una **feminista**, puedo registrarme en una nueva red social para conectarme con otras personas con ideales como yo.
+* Yo, como una mujer **feminista**, puedo registrarme en una nueva red social para conectarme con otras personas con ideales como yo.
   - Yo, como usuaria registrada en esta red social puedo loguearme con mi correo para empezar a usar esta red.
   - ~~Yo, como usuaria registrada en esta red social, puedo poder loguearme con mi cuenta facebook o google para empezar a usar esta red.~~
 
