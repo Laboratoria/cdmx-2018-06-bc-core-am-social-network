@@ -25,7 +25,7 @@ const authentificating = (provider) =>{
     // Datos del usuario logeado
     let user = result.user;
 
-    window.location.assign('home.html'); 
+    window.location.assign('home.html');
   }).catch(function(error) {
     // generar error
 	  let errorCode = error.code;
@@ -40,10 +40,10 @@ const authentificating = (provider) =>{
 };
 
 // Ingresar por medio de correo
-const ingresar = (emailU, passwordU, nameU) =>{
+const ingresar = (emailU, passwordU) =>{
   firebase.auth().signInWithEmailAndPassword(emailU, passwordU) // Metodo para inicial sesión
     .then(function() {
-      observadorEmail(nameU); // Llama al observador para analizar estado de la sesion actual
+      observadorEmail(); // Llama al observador para analizar estado de la sesion actual
     })
     .catch(function(error) {
       // Manejo de error
@@ -55,11 +55,10 @@ const ingresar = (emailU, passwordU, nameU) =>{
     });
 };
 
-const observadorEmail = (nameU)=>{
-  console.log(nameU);
+const observadorEmail = ()=>{
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-      userSpace(nameU);
+      userSpace();
       // Usuario logeado
       let displayName = user.displayName;
       let email = user.email;
@@ -76,10 +75,10 @@ const observadorEmail = (nameU)=>{
 };
 // observadorEmail();
 
-const userSpace = (user)=>{
-  let nameU = user;
-  document.getElementById('container').innerHTML = `<p>${'Bienvenido'}${' '}${nameU}</p>
-  <button type="button" id="buttonLogout" onclick="cerrar()">LogOut</button>`;
+const userSpace = ()=>{
+  window.location.assign('home.html');
+  document.getElementById('container').innerHTML = `<p>${'Bienvenido'}${' '}${'usuario'}</p>
+  <button class="btn btn-primary" type="button" id="buttonLogout" onclick="cerrar()">LogOut</button>`;
 };
 const cerrar = () =>{
   let contenido = document.getElementById('container');
@@ -104,16 +103,14 @@ const verificarEmail = ()=>{
 document.getElementById('buttonIngresar').addEventListener('click', (event) => {
   let emailU = document.getElementById('userEmail').value;
   let passwordU = document.getElementById('userPsw').value;
-  let nameU = document.getElementById('username').value;
-  ingresar(emailU, passwordU, nameU);
+  ingresar(emailU, passwordU);
 });
 
 // Verificar formulario de Registro
-const registro = document.getElementByName(formulario)[0],
+/* const registro = document.getElementByName(formulario)[0],
   elementos = registro.elementos,
-  boton = documentGetElementById('buttonRegistrar');
+  boton = documentGetElementById('buttonRegistrar'); */
 
 /* const userPrintSpace = document.getElementById('obj');
 let database = firebase.database().ref().child('obj');
 database.on('value', snap => console.log(snap.val()));*/
-module.exports = sum;
