@@ -6,14 +6,16 @@
   "scripts": {
     "htmlhint": "htmlhint src/*.html test/*.html",
     "eslint": "eslint --ext .js src/ test/",
-    "pretest": "npm run eslint && npm run htmlhint",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "pretest": "npm run eslint && npm run htmlhint"
   },
   "dependencies": {
     "eslint": "^4.19.1",
+    "firebase-admin": "^5.13.1",
     "htmlhint": "^0.9.13"
   },
   "devDependencies": {
-    "firebase-functions-test": "^0.1.3"
+    "firebase-functions-test": "^0.1.3",
+    "jest": "^23.4.2"
   }
 }

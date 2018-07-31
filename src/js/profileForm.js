@@ -11,7 +11,6 @@ const cleanRegister = () =>{
   document.getElementById('blodSugar').value = '';
   document.getElementById('medicine').value = '';
   document.getElementById('nss').value = '';
-
   // Cambia el estado de los botoenes checkbox para que queden limpios al nuevo registro
   if (fatherSick === 'Si') {
     fatherSick = true;
