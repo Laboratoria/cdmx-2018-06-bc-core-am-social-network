@@ -14,7 +14,7 @@ body {
 }
 
 form {
-  background-color: #FEC248;
+  background-color: rgba(254, 193, 72, 0.555);
   width: 160px;
   border: 1px solid #FFAF2C;
   border-radius: 3px;
@@ -84,4 +84,14 @@ form button:active {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a2828', endColorstr='#3c3c3c', GradientType=0);
   /* IE6-9 */
+}
+
+#imgloging{
+  height: 25px;
+  margin-right: 5px;
+}
+
+#imgloginf{
+  height: 25px;
+  margin-right: 5px;
 }
