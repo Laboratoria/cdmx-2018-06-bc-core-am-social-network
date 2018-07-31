@@ -6,12 +6,9 @@ Instagram, Snapchat, Twitter, Facebook, Twitch, Linkedin, etc. Las redes
 sociales han invadido nuestras vidas. Las amamos u odiamos, y muchos no podemos
 vivir sin ellas.
 
-Hay redes sociales de todo tipo y para todo tipo de intereses. Por ejemplo,
-en una ronda de financiamiento con inversionistas, se presentó una red social
-para químicos en la que los usuarios podían publicar artículos sobre sus
-investigaciones, comentar en los artículos de sus colegas, y filtrar artículos
-de acuerdo a determinadas etiquetas o su popularidad, lo más reciente, o lo
-más comentado.
+Hay redes sociales de todo tipo y para todo tipo de intereses. Por ejemplo, debe seleccionarse
+el tema de interes y desglosarlo, para crear una interacción entre público segmentado.
+
 
 ## Introducción
 
@@ -26,6 +23,18 @@ en los que le gustaría invertir:
 * Salud
 * Energías Renovables
 
+Hoy en dia las redes sociales se han convertido en parte de la vida cotidiana, lamentablemente el uso 
+inadecuado de las plataformas hace creer al público que no son funcionales, partiendo de esta idea erronea,
+nos dimos a la tarea de impulsar esta plataforma teniendo público cautivo, con el principal objetivo
+poder concientizar a las personas sobre acciones que debemos llevar a diario.
+
+Es asi como el equipo de trabajo decidio fusionar tres categorias para enfocarlo a un tipo de público,
+se selecciono "Alimentación", "Educación" y "Salud".
+
+El cual en este primera fase se denomino "Soy mamá", una red social para la interaccion entre madres, de niños 
+de entre O a 12 años.
+
+
 ## Objetivos
 
 El objetivo principal de aprendizaje de este proyecto es construir un sitio web
@@ -36,33 +45,66 @@ Algunos objetivos específicos:
 
 * Entender las necesidades de los usuarios para los que crearás el producto y
   que ayudarás a resolver.
+Madres que tienen experiencia que ofrecer y madres en apuros que busvan un tip, para 
+cualquier situación, desde una pequeña roncha hasta recomenaciones de productos o
+metologías.
+
 * Poner en juego tu creatividad para generar ideas que lleven a una solución
   original y valiosa del problema.
-* Cuentas con el apoyo de tus compañeras, debes trabajar en equipo buscando
-  _feedback_ constante.
+Buscamos la diaria interacción entre madres, es asi como brindaremos un ranking en
+dondes mostraremos a las madres con mayor participaciones que agreguen valor, buscando 
+asi que sean premiadas por marcas patrocinadoras. Nos hemos dado a la tarea de buscar 
+y enmedio de todo no encontramos una red social que solucione de manera eficaz la 
+comunicación entre madres.
 
 ## Consideraciones generales
 
-Este proyecto se debe "resolver" en trios.
-
-La lógica del proyecto debe estar implementada completamente en JavaScript
-(ES6), HTML y CSS. En este proyecto **SÍ está permitido** usar librerías o
-frameworks, pero **no es obligatorio** :smiley:.
-
-Para comenzar tendrás que hacer un _fork_ y _clonar_ este
-repositorio.
-
-## Parte obligatoria
-
 ### General
 
-En este proyecto, hay un _boilerplate_ basico , sin configuración y una estructura recomendada de carpetas (Puedes modificar, agregar o quitar lo que creas necesario), puedes guiarte de los proyectos anteriores. Por lo tanto, los _tests_ y el _setup_ necesario para ejecutarlos serán hechos por ti misma. Recuerda, _todos los archivos estan vacios_  :smiley:.
+Comenzando con la tarea de busqueda logramos obtener los siguientes datos respecto al benchmark:
 
-En tu  `README.md`, cuéntanos cómo pensaste y te acercaste a los usuarios,
-y cuál fue tu proceso para definir el producto final en términos de experiencia
-y de interfaz. Si tienes fotos de entrevistas, cuestionarios y/o
-sketches(bocetos) compártelos.
+Tomando como base a cuatro de las principales redes sosciales, Facebook, Pinterest, Instagram y Snapchat.
 
+* Redes sociales
+![GitHub Facebook](https://github.com/gloryarz/cdmx-2018-06-bc-core-am-social-network/blob/master/src/images/1.jpg)
+
+
+![GitHub Pinterest](https://github.com/gloryarz/cdmx-2018-06-bc-core-am-social-network/blob/master/src/images/2.jpg)
+
+
+![GitHub Instagram](https://github.com/gloryarz/cdmx-2018-06-bc-core-am-social-network/blob/master/src/images/3.jpg)
+
+
+![GitHub Snapchat](https://github.com/gloryarz/cdmx-2018-06-bc-core-am-social-network/blob/master/src/images/4.jpg)
+
+
+Evaluando cada una de las redes se acordo en el primer sprint presentar la pantalla Log In
+en colores solidos, y con acciones a realizar precisas.
+
+Respecto al contenido a mostrar, evaluamos páginas que son competencia e inspiración. Nos encontramos 
+con que no hay una red social para madres, pero si blogs y páginas web con este contenido.
+
+[BBtips](http://www.bbtipsmexico.com.mx/)
+
+[BBmundo](https://www.bbmundo.com/)
+
+[GuíaInfantil](https://www.guiainfantil.com/)
+
+[SerPadres](http://serpadres.com/)
+
+* Historias de usuario
+
+HISTORIAS DE USUARIO EN UNA RED SOCIAL PARA MAMAS
+1. Como usuario quiero poder crear mi propio perfil de acuerdo a mis necesidades e intereses.
+2. Como usuario necesito poder darle me gusta a las publicaciones que mas me son de utilidad.
+3. Como usuario necesito un espacio para publicar mis servicios que serviran de ayuda a las mamás para el desarrollo de sus hijos.
+4. Como usuario quiero poder encontrar contenido informativo de utilidad sobre las etapas de mi hijo.
+5. Como usuario necesito un grupo social donde pueda conocer mamás que tienen las mismas dudas hacerca de nuestros hijos.
+6. Como usuario requiero una red social para expresar mis experiencias y conocimiento en la crianza de mis hijos.
+7. Como usuario necesito un sitio donde encuentre productos y servicios que necesite en el instante y saber cuales son los mejores en el mercado.
+8. Como usuario necesito los comentarios de un experto o madres que han tenido las mismas experiencias que yo y me puedan dar un consejo.
+
+[Referencia](https://www.youtube.com/watch?v=Zi9E1aUO_1U)
 ### Responsive
 
 Debe verse bien en dispositivos de pantallas grandes
