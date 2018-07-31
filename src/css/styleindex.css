@@ -5,36 +5,37 @@
 
 html, body {
   height: 100%;
+
 }
 #container {
   min-height: 100%;
+  background-image: linear-gradient(180deg, #61c4e3 30%, #ffffff 100%);
 }
 
 /* Botones de Unirse e INICIO */
-
 #footer a {
     width:48%;
-    padding-top: 30px;
+    padding-top: 10px;
     color: #fff;
     text-decoration: none;
-    background-color: black;
+    /* background-color: black; */
+    background-color: #EB656A;
     -webkit-text-decoration-skip: objects
   }
-
 #footer a:hover{
-  color: #e600ac;
+  color: #61c4e3;
 }
 
 #footer a:active{
   color: #FE2E2E;
 }
-
 /* Menú footer */
 #footer{
-  background-color: #000;
+  /* background-color: #000; */
+  background-color: #EB656A;
   position: relative;
-  height: 100px;
-  margin-top: -100px;
+  height: 60px;
+  margin-top: -60px;
   clear: both;
 }
 img{
@@ -48,8 +49,8 @@ body{
   background: #ffffff;
 }
 p {
-  font-family : 'Lora' , serif ;
-  font-size: 30px ;
+  font-style: italic;
+  font-size: 20pt ;
   text-align: center;
   color: #e600ac;
 }

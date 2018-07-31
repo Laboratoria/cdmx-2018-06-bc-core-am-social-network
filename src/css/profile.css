@@ -1,0 +1,46 @@
+/* Utilizar todo el body 100% */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+.container-fluid {
+  min-height: 100%;
+  background: #61c4e3;
+}
+
+#buttons{
+  margin-top: 5px;
+  padding-right: 0;
+  color: #EB656A;
+}
+
+#profilePicture {
+  min-width: inherit;
+  background: #EB656A;
+  position: relative;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+
+#profileBack{
+  min-height: inherit;
+  background: #ffffff;
+  position: relative;
+  margin-top: 10px;
+}
+
+#profileContent {
+  margin-top: 0px;
+}
+
+#footer{
+  /* background-color: #000; */
+  background-color: #EB656A;
+  position: relative;
+  height: 60px;
+  margin-top: -60px;
+  clear: both;
