@@ -31,26 +31,22 @@ function sendSignup(event) { // En esta función se agrega los datos del formula
     pais: event.target.pais.value,
     password: event.target.password.value,
   });
-  if (refUserAuth.createUserWithEmailAndPassword(event.target.correo.value, event.target.password.value)) {
-    alert(event.target.nombre.value + ' quedaste registradx');
-  }
-  else {
-<<<<<<< HEAD
-    alert('Confirma que hayas escrito tus datos correctamente!');
-  }
-}
-=======
-    alert('Confirma que hayas escrito tus datos caorrectamente!');
-  }
+  refUserAuth.createUserWithEmailAndPassword(event.target.correo.value, event.target.password.value) // Metodo para inicial sesión
+    .then(function() {
+      alert(event.target.nombre.value + ' quedaste registradx');
+      goTimeline();
+    })
+    .catch(function(error) {
+      alert('Confirma que hayas escrito tus datos correctamente!');
+      // Manejo de error
+      let errorCode = error.code;
+      let errorMessage = error.message;
+      console.log(errorCode);
+      console.log(errorMessage);
+      // ...
+    });
 }
 
-function authentication(event) {
-  event.preventDefault();
-  refUserAuth.signInWithEmailAndPassword(event.target.correo.value, event.target.password.value).catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // ...
-  });
+function goTimeline(event) {
+  window.location.href = '../views/timeline.html';
 }
->>>>>>> upstream/master
