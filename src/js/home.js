@@ -31,19 +31,19 @@ const cerrar = () =>{
 };
 const userActive = () =>{
   firebase.auth().onAuthStateChanged((user) =>{
-    if (user){
+    if (user) {
       let displayName = user.displayName;
       let userPhoto = user.photoURL;
       let userEmail = user.email;
       // Impresión de nombre y botón de LogOut
       document.getElementById('userName').textContent = displayName;
       document.getElementById('userEmail').textContent = userEmail;
-      document.getElementById('userPhoto').style.background = 'url('+userPhoto+')';
+      document.getElementById('userPhoto').style.background = 'url(' + userPhoto + ')';
       document.getElementById('buttonLogout').innerHTML = `
       <button class="btn btn-primary" type="button" id="buttonLogout" onclick="cerrar()">LogOut</button>`;
     }
-  })
-}
+  });
+};
 window.onload = () =>{
   userActive();
-}
+};

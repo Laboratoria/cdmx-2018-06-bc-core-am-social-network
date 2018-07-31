@@ -1,4 +1,4 @@
-//initiaziling();
+// initiaziling();
 // autenticación para redes socilaes con Proveedorde credenciales.
 const authentificating = (provider) =>{
   firebase.auth().signInWithPopup(provider).then(function(result) { // Genera pantalla emergente para pedir autenticación
