@@ -19,12 +19,21 @@ let btnLogOut = document.getElementById('btnLogout');
 btnPost.addEventListener('click', function() {
   let nombre = namePost.value;
   let mensaje = messagePost.value;
-        
-  firebase.database().ref('posts').push({
+
+  firebase.database().ref('posts').push();
+
+  let postNew = firebase.database().ref('posts').push();
+  let keyPost = postNew.getKey();
+
+  firebase.database().ref(`posts/${keyPost}`).set({
+    //uid: getUserUid(),
     name: nombre,
     message: mensaje,
+    //posts: posts,
+    keyPost: keyPost
   });
-});
+  });
+
 
 btnLogOut.addEventListener('click', function() {
   firebase.auth().signOut().then(function() {
@@ -37,27 +46,38 @@ btnLogOut.addEventListener('click', function() {
 
 firebase.database().ref("posts").on("value", snapshot => {//objeto que contiene la data
   let html ="";  
+  let key = 0;
   snapshot.forEach(function (e) {
       let element = e.val();
       let nombre = element.name;
       let mensaje = element.message;  
       html += `
-        "<li> <b>${nombre}</b>: ${mensaje}</li>" +
-        '<button type="button" class="btnDelete borrar" data-message= "' + key + '">' +
-        <span class="glyphicon glyphicon-trash"></span>
+        <li> <b> ${nombre}</b>: ${mensaje}
+        <button type="button" class="btnDelete borrar" data-message= "'${key}'">
+        <span><svg-icon><src href="sprite.svg#si-glyph-circle-remove" /></svg-icon></span>
         </button>
+        </li>
          `;
+    key++;
     });
+
     chatUl.innerHTML = html;
     if( chatUl != ""){
         let deleteElements = document.getElementsByClassName("borrar");
-        for (let i=0, i < deleteElements.length, i++){
-            deleteElements[i].addEventListener("click" deleteMessage, false)
+        for(let i = 0; i < deleteElements.length; i++){
+            deleteElements[i].addEventListener("click", deleteMessage, false)
         }
     }
+
   });
 
-  function deleteMessage = () => {
-      let keyMessage = this.getAttribute("")
+
+  function deleteMessage(key) {
+    const refposts = firebase.database().ref("posts").child("key").value;
+    console.log(this)
+      let keyMessage = this.getAttribute("data-message");
+      console.log(refposts);
+      let refMessage = refposts.child(keyMessage);
+      refMessage.remove();
   }
   //reset()//Elimina el contenido de los input sin actualizar la página.
