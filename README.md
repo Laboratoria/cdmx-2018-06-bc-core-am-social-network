@@ -1,7 +1,7 @@
 
-# UX
+# Greener
 
-**¿Qué es una red social?**
+** Instroducción: ¿qué es una red social?**
 
 Para poder entender lo que nuestro cliente solicita y con ello empatar nuestras ideas sobre el producto, debemos aterrizar el concepto y los elementos de una red social. Hoy en día todos utilizamos distintas redes sociales: Instagram, Facebook, twitter, entre las más conocidas. De éstas podemos observar que son servicios centrados en los intereses del usuario y sus relaciones personales. 
 
@@ -89,6 +89,8 @@ Version Desktop
 <img align="center" src="src/UX/imagenes-ux/4.jpeg"/>
 <img align="center" src="src/UX/imagenes-ux/5.jpeg"/>
 
+prototipo de alta fidelidad
+[prototipo de alta fidelidad](https://www.figma.com/proto/cI2y8tMN0p8NghxQI8fsfBME/foodbook?node-id=4%3A2&scaling=scale-down)
 
 ### Fundamento para el protrotipado
 
@@ -96,15 +98,11 @@ La idea principal de nuestra red social no es sólo ofrecer, como muchas, receta
 
 Teniendo en cuanta que la comida entra por lo ojos, sabemos que la toma de decisiones en cuanto a colores e imagenes es primordial para motivar al usuario, el uso de lenguaje poco técnico en las recetas y tips, es de las mayores preocupaciones entre los usuarios al igual que los utensilios de cocina. El color es capaz de estimular o deprimir, puede crear alegría o tristeza. Así mismo, determinados colores despiertan actitudes activas o por el contrario pasivas. Con colores se favorecen sensaciones térmicas de frío o de calor, y también podemos tener impresiones de orden o desorden.
 
-Para nuestra red social hemos decidido incorporar el color naranja en nuestro logotipo, este es asociado mayormente a alimentos cítricos que hacen de referencia una vida saludable. Este color tiene el poder de activar nuestro organismo, lo que ocasiona la necesidad repentina de comer y un creciente hambre, mientras nuestro cerebro está siendo influenciado mentalmente para esto. En el campo de Marketing el color 
- una marca amigable, alegre y confiable.
+Para nuestra red social hemos decidido incorporar el color verge en nuestro logotipo, y una fuente haciendo  referencia a una vida saludable y más verde, como lo dice el mismo nombre de la app.
 
-También optamos por un contraste con un color verde que representa:
+en cuanto a personalidad y emociones, el verde está asociado con:
 
-Verde
-Personalidad/Emociones
-
-* Asociado con salud y tranquilidad
+* salud y tranquilidad
 * Simboliza el dinero
 * Denota naturaleza
 * Alivia la depresión
@@ -117,7 +115,10 @@ Marketing
 * Asociado con riqueza
 * Ha sido un símbolo de fertilidad
 
-Haciendo un benchmark encontramos 15 apps más utilizadas para promover una buena alimentación. Toda se pueden descargar y probar en smartphone o tableta. Todas ellas ayudan a conocer más a fondo el mundo de la comida y a descubrir qué alimentos son más saludables, cuál es su origen, cómo cocinarlos o incluso conocer qué ejercicio físico es necesario para “quemar” esa golosina que te acabas de comer.
+#Benchmark
+
+ Realizamos un bechmark específicamente con las redes sociales que giran entorno a temas alimenticios : [benchmark](https://docs.google.com/spreadsheets/d/14YIrKK5kG2i1GkdOf4_KPQNa5-7Ytr2HgYstnk-Ihzs/edit#gid=1389167076)
+ Así mismo encontramos las 15 apps (no necesariamente redes sociales) más utilizadas para promover una buena alimentación. Toda se pueden descargar y probar en smartphone o tableta. Todas ellas ayudan a conocer más a fondo el mundo de la comida y a descubrir qué alimentos son más saludables, cuál es su origen, cómo cocinarlos o incluso conocer qué ejercicio físico es necesario para “quemar” esa golosina que te acabas de comer.
 
 ### 1 Harvest 
 ¿Cuáles son los mejores productos para una determinada época del año? ¿Cómo almacenar la comida? Harvest permite responder a estas preguntas, ofreciendo trucos y respuestas a 120 frutas y verduras, con el objetivo de que los usuarios las conozcan con profundidad. Disponible sólo en plataformas iOS.
@@ -171,6 +172,9 @@ En su mayoria, las aplicaciones usan colores y lenguaje muy sencillo de entender
 <img align="center" src="src/UX/imagenes-ux/mysugr-logbook-phone.png"/>
 <img align="center" src="src/UX/imagenes-ux/selecting-2Harvest.png"/>
 
+#Instructivo
+
+Para utilizar Greener puedes acceder desde tu cuenta de Google o Facebook clickando en los botones correspondientes o bien puedes registrarte  con otra cuenta que desees de correo e iniciar sesión. Comparte publicaciones con tus amigos escribiendo en el input y dando click en publicar. Es necesario escribir "algo" para poder publicar. Borra tus posts o los de tus amigos dando click en borrar. Disfruta cambiar a una vida más saludable agregando a Greener contenido que tus amigos y tú comparten sobre alimentación saludable con recetas sencillas. 
 
 
 
@@ -183,6 +187,5 @@ Organizar el trabajo en función del valor que le aporta al usuario.
 Poder publicar partes completas y utilizables del producto al final del sprint.
 
 PUNTOS QUE FALTAN DESARROLLAR
-Cuáles son las principales funcionalidades del producto y cuál es su prioridad
 Cómo verificaste que el producto les está resolviendo sus problemas
 Cómo te asegurarás que estos usuarios usen este producto
