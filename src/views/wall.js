@@ -123,7 +123,7 @@ const deleteTask = () => {
   confirm('Seguro lo quieres borrar');
   const keyListItem = event.target.parentNode.dataset.keytask;
   const refTaskToDelete = refTask.child(keyListItem);
-  refTaskToDelete.remove(); 
+  refTaskToDelete.remove();
 };
 
 const getTaskOfFirebase = () => {
@@ -145,7 +145,3 @@ const sendTaskFirebase = () => {
 };
 
 window.onload = init;
-
-// Grafica
-
-
