@@ -51,9 +51,9 @@ const editPost = (id, comment) => {
   let buttonEdit = document.getElementById('toPost');
   buttonEdit.innerHTML = 'Guardar';
   buttonEdit.addEventListener('click', event => {
-    let postRef = db.collection('posts').doc(id);
+    // let postRef = db.collection('posts').doc(id);
     let comment = document.getElementById('post').value;
-    return postRef.update({
+    return db.collection('posts').doc(id).update({
       post: comment
     })
       .then(function() {
