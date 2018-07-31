@@ -1,62 +1,115 @@
-<!DOCTYPE html>
+const dataName = document.getElementById('dataName');
+const btnPost = document.getElementById('btnPost');
+const postText = document.getElementById('postText');
+const comentarios = document.getElementById('comentarios');
+const input = document.getElementById('input');
+const btnEdit = document.getElementById('btnEdit');
+const btnErase = document.getElementById('btnErase');
+const btnLike = document.getElementById('btnLike');
+const btnSave = document.getElementById('btnSave');
+const likes = document.getElementById('likes');
+const btnProfile = document.getElementById('btnProfile');
+const profile = document.getElementById('profile');
+const home = document.getElementById('home');
+const postForm = document.getElementById('postForm');
+const btnHome = document.getElementById('btnHome');
+var db = firebase.firestore();
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
-</head>
+let user = localStorage.getItem("mail");
+let userUid = localStorage.getItem("userUid");
+console.log(userUid);
 
-<body>
+let userPhoto;
+const bringData = () => {
+    if (user === "google" || user === "facebook") {
+        user = localStorage.getItem("display");
+        userPhoto = localStorage.getItem("photo");
+    } else {
+    }
+}
+bringData()
 
-<header class="row">
-        <div class="navbar-fixed">
-        <nav class="lighten-3 pink darken-1 row color-nav">
-            <div class="nav-wrapper col s12">
+dataName.innerHTML = user;
 
-                <button id="btnHome" class="btn-flat col s1 offset-s1">
-                    <i class="large material-icons">home</i>
-                </button>
-                <button id="btnProfile" class="btn-flat col s1 offset-s2">
-                    <i class="large material-icons">person</i>
-                    <a href="../views/perfil.html"></a>
-                </button>
-                <button id="btnMessage" class=" btn-flat col s1 offset-s2">
-                    <i class="large material-icons">chat</i>
-                </button>
-                <button id="btnRanking" class=" btn-flat col s1 offset-s2">
-                    <i class="large material-icons">filter_vintage</i>
-                </button>
-            </div>
-        </nav>
-        </div>
-    </header>
+btnPost.addEventListener('click', e => {
+    let posted = postText.value;
+    if (posted === "" || posted === " ") {
+        alert('Escribe un mensaje')
+    } else {
+        db.collection("posted").add({
+            user: userUid,
+            name: user,
+            post: posted
+        })
+            .then(function (docRef) {
+                console.log("Document written with ID: ", docRef.id);
+                postText.value = '';
+            })
+            .catch(function (error) {
+                console.error("Error adding document: ", error);
+            });
+    }
+});
 
-    <button id="btnLogout" value="salir">Salir</button>
+db.collection("posted").onSnapshot((querySnapshot) => {
+    comentarios.innerHTML = '';
+    querySnapshot.forEach((doc) => {
+        let postID = doc.id
+        let postName = doc.data().name
+        let text = doc.data().post
+        let userId = doc.data().user
+        printPost(postID, postName, text, userId);
+    });
+});
 
-    <div class="container">
-        <section class="col s12" id="postForm">
-            <h4 id="dataName"></h4>
-            <input type="text" id="postText" placeholder="Inquietudes de mamá">
-            <input type="button" id="btnPost" class="btn" value="Publicar">
-        </section>
-        <section id="comentarios">
+const printPost = (postID, postName, text, userId) => {
+    if (userUid === userId) {
+        comentarios.innerHTML += `<div>
+                <form action="">
+                <p>${postName}</p>
+                    <input type="text" id="input" readonly = "readonly" value="${text} ">
+                    <p id="likes" class="inline"></p>
+                    <input type="button" class="btnEdit btn" onclick="likePost()" value="Like">
+                    <input type="button" class="btnEdit btn" onclick="editPost('${postID}')" value="Editar">
+                    <input type="button" class="btn delete" value="Eliminar" onclick="deletePost('${postID}','${postName}', '${text}', '${userId}')">
+                    <input type="button" class="btn none" onclick="savePost()" value="Guardar">
+                </form>
+              </div>`;
+    } else {
+        comentarios.innerHTML += `<div>
+                <form action="">
+                <p>${postName}</p>
+                    <input type="text" id="input" readonly = "readonly" value="${text} ">
+                    <p id="likes" class="inline"></p>
+                    <input type="button" class="btnEdit btn" onclick="likePost()" value="Like">
+                </form>
+              </div>`;
+    }
+}
 
-        </section>
+const deletePost = (postID) => {
+    db.collection("posted").doc(postID).delete().then(function () {
+        console.log("Document successfully deleted!");
+    }).catch(function (error) {
+        console.error("Error removing document: ", error);
+    });
+}
 
+const editPost = (postID, postName, text, userId) => {
+    let newPost = prompt('Escribe tus cambios');
+    let postRef = db.collection("posted").doc(postID);
 
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
-    <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
-    <script src="../js/firebase.js"></script>
-    <script src="../js/home.js"></script>
-    <script src="../js/logout.js"></script>
-</body>
-
-</html>
+    // Set the "capital" field of the city 'DC'
+    return postRef.update({
+        user: userUid,
+        name: user,
+        post: newPost
+    })
+        .then(function () {
+            console.log("Document successfully updated!");
+        })
+        .catch(function (error) {
+            // The document probably doesn't exist.
+            console.error("Error updating document: ", error);
+        });
+};
