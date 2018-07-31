@@ -27,6 +27,7 @@ const bringData = () => {
     if (user === "google" || user === "facebook") {
         user = localStorage.getItem("display");
         userPhoto = localStorage.getItem("photo");
+       
     } else  {
     } 
 }
@@ -129,8 +130,9 @@ const deletePost = () => {
 
 btnProfile.addEventListener('click', e => {
    window.location.assign('../views/perfil.html');
-   userPrintPhoto.src='userPrintPhoto3';
-   profile.innerHTML = `<h1>${user}</h1>`;
+   
+   profile.innerHTML = `<img src="${userPhoto}" class="col s5 m4 l2 offset-3 circle foto-perfil" alt="foto">
+    <h1>${user}</h1>`;
   });
 
 
