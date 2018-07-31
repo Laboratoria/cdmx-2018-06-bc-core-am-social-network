@@ -1,5 +1,7 @@
 /* index.html FORMAT */
-#bodyindex, #bodyapp {
+
+#bodyindex,
+#bodyapp {
   background-color: #96064e;
   color: antiquewhite;
 }
@@ -43,15 +45,12 @@ input {
   margin-top: 8%;
 }
 
-#email, #contrasena {
+#email,
+#contrasena {
   margin: 20% !important;
 }
 
 /* app.html FORMAT */
-
-/* i {
-  color: #680134;
-} */
 
 nav {
   background-color: #680134;
@@ -73,7 +72,9 @@ nav {
   float: right;
 }
 
-#registrar, #facebook, #google {
+#registrar,
+#facebook,
+#google {
   background-color: #680134;
   color: antiquewhite;
   border-radius: 8px;
@@ -122,9 +123,14 @@ nav {
 }
 
 #comentario {
+  float: left;
+  height: 100px;
+  width: 70%;
+  /* width: 80%;
+  height: 50%; */
   border-radius: 10px;
   margin-top: 2%;
-  margin-bottom: 6%
+  margin-bottom: 6%;
 }
 
 .card {
@@ -134,8 +140,6 @@ nav {
 h2 {
   margin-left: 0%;
 }
-
-
 
 /* Toggle Sidebar */
 
@@ -159,7 +163,6 @@ h2 {
   list-style: none;
   padding: 15px 10px 15px 0px;
   border-bottom: 1px solid rgba(100, 100, 100, 0.3)
-
 }
 
 #profilePic {
