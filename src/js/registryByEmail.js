@@ -1,4 +1,7 @@
- let dataBase = initiazilingAuth();
+//import firebase from 'firebase';
+//import 'firebase/firestore';
+ let DB = initiaziling();
+ // let auth = initiaziling().[1];
 // CRUD para registrar con Correo
 const cleanEmailRegister = () =>{ // Limpiar cajas de form de registro
   document.getElementById('uEmail').value = '';
@@ -19,7 +22,6 @@ const createUserByEmailinCloud = () =>{
   let userBirth = document.getElementById('birthday').value;
   let usercontry = document.getElementById('country').value;
   console.log(usercontry);
-  let DB = firebase.firestore();
   DB.collection('diabeTipsUsers').add({
     userEmail: userEmail,
     userPassword: userPassword,
