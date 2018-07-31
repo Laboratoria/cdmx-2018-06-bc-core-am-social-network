@@ -9,23 +9,36 @@
 
 #logo {
   border-radius: 200px;
-  width: 15%;
-  margin-top: 2%;
+  width: 24%;
+  margin-top: 20%;
+  margin-left: 39% !important;
 }
 
+#logo2 {
+  border-radius: 200px;
+  width: 16%;
+}
 
-·bodyindex{
+.subtitulo {
+  margin-left: -7%;
+  margin-bottom: 10%;
+}
+
+input {
+margin-bottom: 18% !important;
+}
+
+·bodyindex {
   text-align:center;
   width: 10%;
   margin-left: 25%;
-  margin-top: 2%
-
+  margin-top: 2%;
 }
 .inicio {
-  text-align:center;
-  width: 40%;
-  margin-left: 25%;
-  margin-top: 2%
+  text-align: center;
+    width: 60%;
+    margin-left: 23%;
+    margin-top: 8%;
 
 }
 
@@ -47,7 +60,7 @@
   border-radius: 7px;
   box-shadow: 0;
   border: none;
-  padding: 4px 5px;
+  padding: 10px 20px;
   float: right;
 }
 
@@ -61,15 +74,23 @@
   padding: 4px 5px;
   float:none
 }
+
 #enviar{
 
+  margin-top: -1%;
   background-color: #680134;
   color: antiquewhite;
   border-radius: 8px;
   box-shadow: 0;
   border: none;
-  padding: 4px 5px;
-  float:none
+  padding: 10px 20px;
+  float: none;
+  margin-left: -8%;
+}
+
+#pie {
+  margin-top: 25%;
+  margin-left: -10%;
 }
 
 #newPost {
@@ -87,4 +108,16 @@
 
 #comentario {
   border-radius: 10px;
+<<<<<<< HEAD
+=======
+  margin-top: 2%;
+  margin-bottom: 6%
+}
+
+.card {
+  margin: 5%;
+}
+h2{
+  margin-left: 0%; 
+>>>>>>> upstream/master
 }
