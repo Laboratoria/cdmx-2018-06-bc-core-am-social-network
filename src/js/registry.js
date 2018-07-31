@@ -45,6 +45,8 @@ const authentificating = (provider) =>{
     // Datos del usuario logeado
     let user = result.user;
     // Botón dinámico de LogOut
+    // Aqui colocar el if o la redirección a la página.
+    window.location.assign('home.html');
     document.getElementById('container').innerHTML = `<p>${'Bienvenido'}${' '}${'usuario'}</p>
     <button class="btn btn-primary" type="button" id="buttonLogout" onclick="cerrar()">LogOut</button>`;
   }).catch(function(error) {

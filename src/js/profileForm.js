@@ -44,7 +44,7 @@ const createUserProfile = () =>{
   let fatherSick = document.getElementById('fatherSick').checked;
   let grandPsick = document.getElementById('grandPsick').checked;
   let childrenSick = document.getElementById('childrenSick').checked;
-  // Convierte estado checked /no checked a un Stringa para imprimir
+  // Convierte estado checked /no checked a un String para imprimir
   if (fatherSick === true) fatherSick = 'Si';
   else fatherSick = 'No';
   if (grandPsick === true) grandPsick = 'Si';
@@ -79,7 +79,7 @@ const createUserProfile = () =>{
 // profile da un formato de tabla para mostrar la información de los usuarios que han llenado si perfil
 const printprofile = () => {
   const userProfileConteiner = document.getElementById('profileConteniner');
-  DB.collection('diabeTipsUsers').onSnapshot((querySnapshot) => {
+  DB.collection('diabeTipsUsers').onSnapshot((querySnapshot) => { // onStapshot va a vigilar cuando haga cambios y si hay un cambio entra y te dice que fue lo que cambió
     userProfileConteiner.innerHTML = '';
     querySnapshot.forEach((doc) => {
       console.log(`${doc.id} => ${doc.data()}`);
