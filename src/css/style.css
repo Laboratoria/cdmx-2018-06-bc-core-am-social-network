@@ -16,15 +16,15 @@ h2 {
 
 #loginform{
 	margin-top:100px;   /*margen superior*/
-  margin-left:auto;   /*margen izquierdo*/
-  margin-right:auto;  /*margen derecho*/
+    margin-left:auto;   /*margen izquierdo*/
+    margin-right:auto;  /*margen derecho*/
 	width:335px;       /*ancho*/
 }
 
 .input{
 	width:270px;  /*ancho*/
     padding:15px 25px;  /*ancho y alto de las cajas de texto*/
-		font-family: 'Montserrat', sans-serif;  /*tipo de letra*/
+	font-family: 'Montserrat', sans-serif;  /*tipo de letra*/
 	background: #f5f5f5;  /*color de fondo de la caja de texto a un blanco un poco mas gris*/
 	border:none;  /*con esta propiedad se quita el borde por defecto*/
 	border-radius: 10px; /*se le asigna un angulo a cada esquina del imput*/
@@ -94,26 +94,26 @@ h2 {
 
 .inline {
 	display: inline-block;
+} 
+.foto-perfil{
+	height: 100px;
+	width: 100px;
 }
-
-/* botones Facebook y google circulares */
-.boton{
-  width:60px;
-  height:55px;
-  border-radius: 50px;
-	color: #F4F6F7;
-  font-weight: 600; /*grosor de la letra*/
-	border:none;
-	outline:0; /*contorno*/
-	text-align: center;
-
+.letra-usuario{
+	font-size: 2em;
+}
+.abeja{
+	height: 15px;
+	width: 15px;
 
 }
-.boton:hover{
-  background-color:#2C3E50;
-	/* position:relative; */
+.tamaño-barra{
+	border-radius: 5px;
+	height: 20px;
+	background-color: gainsboro;
 }
-
-.gradient {
-	background: linear-gradient(to right, #ee6e73, #ee6eb4);
+.tamaño-letra{
+	font-size: 1.5em;
+	font-family: 'Montserrat', sans-serif;
+	
 }
