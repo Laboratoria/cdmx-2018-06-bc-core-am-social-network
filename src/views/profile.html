@@ -34,11 +34,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link">Muro</a>
-                </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="profile" href="profile.html">Perfil</a>
+                    <a class="nav-link" href="wall.html">Muro</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link">Perfil</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="closeSession" href="#">Cerrar sesion</a>
@@ -48,13 +48,16 @@
     </nav>
     <div class="container">
         <section class="ml-5 mt-3">
+            <p id="nameUser"><h2>USER</h2></p>
+            <p id="bornUser">DD/MM/AAAA</p>
+        </section>
+        <section class="ml-5">
             <input type="text" id="post" placeholder="Que estas pensando?">
             <button id="toPost">Publicar</button>
         </section>
 
-        <section class+ "ml-4">
+        <section class = "ml-4">
             <hr>
-            <h1>MURO</h1>
             <p id="finalWall"></p>
         </section>
     </div>
