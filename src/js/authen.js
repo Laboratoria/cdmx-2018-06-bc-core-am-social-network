@@ -49,16 +49,7 @@ window.authen = {
       // The signed-in user info.
       let user = result.user;
     });
-  },
-
-  closeAccount: () => {
-    firebase.auth().signOut().then(function() {
-      // Sign-out successful.
-      window.open('../index.html','_self');  
-      }).catch(function(error) {
-      // An error happened.
-    });
-  },
+  }
 };
 
 const monitor = () => {

@@ -4,12 +4,8 @@ let post = document.getElementById('post');
 // let drawPostear = document.getElementById('draw-postear');
 
 close.addEventListener('click', event => { 
-  firebase.auth().signOut().then(function() {
-    // Sign-out successful.
-    window.open('../index.html','_self');
-  }).catch(function(error) {
-    // An error happened.
-  });
+  basesData.closeAccount();
+  history.back();
 });
 
 postear.addEventListener('click', event => {
@@ -18,4 +14,9 @@ postear.addEventListener('click', event => {
     // drawPostear.innerHTML += basesData.comment(getPost);
     basesData.comment(getPost);
   }
+});
+
+let prueba = document.getElementById('perfil');
+prueba.addEventListener('click', event => {
+  window.open('perfil.html','_self');
 });
