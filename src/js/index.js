@@ -93,7 +93,6 @@ btnFb.addEventListener('click', e => {
 const facebookLogin = () => {
   var provider = new firebase.auth.FacebookAuthProvider();
   authentication(provider);
-  console.log("Facebook");
 }
 
 
@@ -107,6 +106,8 @@ const authentication = (provider) => {
     localStorage.setItem('user', user);
     let displayName = user.displayName
     localStorage.setItem('display', displayName);
+    let photo = user.photoURL
+    localStorage.setItem('photo', photo)
   }).catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
@@ -121,6 +122,8 @@ const authentication = (provider) => {
 
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
+    let userUid = user.uid
+    localStorage.setItem("userUid", userUid);
     window.location.assign('views/home.html');
 
   } else {
