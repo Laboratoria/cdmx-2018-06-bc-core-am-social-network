@@ -18,6 +18,7 @@ enviar.addEventListener('click', event => {
       alert('Contraseña incorrecto');
     });
 });
-function newDoc() {
-  window.location.assign('app.html');
+
+newDoc = () => {
+  window.location.assign('views/app.html');
 }

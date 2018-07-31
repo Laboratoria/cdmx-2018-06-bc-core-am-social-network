@@ -20,7 +20,7 @@ registrar.addEventListener('click', event => {
     });
 });
 // observa al usuario
-const observador = () =>{
+const observador = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       console.log('Existe usuario');
@@ -44,13 +44,13 @@ const observador = () =>{
 };
 observador();
 // verifica y envia correo
-const verificar = () =>{
+const verificar = () => {
   const user = firebase.auth().currentUser;
   user.sendEmailVerification()
     .then(() => {
       console.log('Enviando correo..');
       alert('Enviando correo de verificación');
-      location.href = 'index.html';
+      location.href = 'views/app.html';
     })
     .catch(error => {
       console.log(error);
@@ -63,7 +63,7 @@ document.getElementById('google').addEventListener('click', event => {
   provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
   firebase.auth()
     .signInWithPopup(provider)
-    .then(function(result) {
+    .then(function (result) {
       newDoc();
     });
 });
@@ -74,11 +74,11 @@ document.getElementById('facebook').addEventListener('click', event => {
   console.log('Diste un click2');
   firebase.auth()
     .signInWithPopup(provider)
-    .then(function(result) {
+    .then(function (result) {
       newDoc();
     });
 });
 
 newDoc = () => {
-  window.location.assign('app.html');
+  window.location.assign('views/app.html');
 };
