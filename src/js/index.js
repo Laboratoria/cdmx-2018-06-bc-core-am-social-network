@@ -20,5 +20,5 @@ enviar.addEventListener('click', event => {
 });
 
 newDoc = () => {
-  window.location.assign('/views/app.html');
+  window.location.assign('views/app.html');
 }
