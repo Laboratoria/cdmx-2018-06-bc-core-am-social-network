@@ -4,48 +4,45 @@ firebase.initializeApp({
   authDomain: 'red-social-237f9.firebaseapp.com',
   projectId: 'red-social-237f9'
 });
-
 // Con esto se inicializa Nube de firestore a través de Firebase
-let db = firebase.firestore();
+const db = firebase.firestore();
 
 const boton = document.getElementById('botonP');
 
 boton.addEventListener('click', event => {
-  // console.log('holi');
-  let text = document.getElementById('comentario');
-  // console.log(text);
 
+  const text = document.getElementById('comentario');
   let texto = text.value;
 
-  if (texto === '') {
+  if (texto ==='') {
     alert('Por favor ingresa un mensaje.');
   } else {
-    //   construir nuevo objeto de fecha y convertirlo a un string UTC para pintarlo de manera estandard
-    const yearDateTime = new Date().toUTCString();
-    // console.log(yearDateTime);
+    //  construir nuevo objeto de fecha y convertirlo a un string UTC para pintarlo de manera estandard
+    const yearDateTime = firebase.firestore.FieldValue.serverTimestamp();
 
+    // AQUI VA LO DEL USUARIO
 
     // CRUD
     // Aquí se agrega un objeto a la coleccion "comments" del firestore
     // el "add" agrega un id único en automatico
     db.collection('comments').add({
-      dateTime: yearDateTime,
-      comment: texto
-    })
-      // luego, 
-      .then(function(docRef) {
+        dateTime: yearDateTime,
+        comment: texto,
+        likeCounter: 0
+      })
+      // luego,
+      .then(function (docRef) {
         console.log('Document written with ID: ', docRef.id);
         // con esto se reinician los input despues con el "click", o sea, una vez que se haya guardado el dato, va a generar un string vacio
         text.value = '';
       })
-      .catch(function(error) {
+      .catch(function (error) {
         console.error('Error adding document: ', error);
       });
   }
 });
 
-
-let container = document.getElementById('container');
+const container = document.getElementById('container');
 // Aquí lee los documentos de la coleccion "comments" y el querySnapshot se repitirá por cada comment por el forEach
 // onSnapshot=agente de escucha--> actualización en tiempo real
 db.collection('comments').onSnapshot((querySnapshot) => {
@@ -53,21 +50,43 @@ db.collection('comments').onSnapshot((querySnapshot) => {
   querySnapshot.forEach((doc) => {
     // console.log(`${doc.id} => ${doc.data().comment}`);
 
-    // 
+    //
 
     container.innerHTML += `<div class="card">
                                   <div class="contenidoC">
                                     <p>${doc.data().dateTime}</p>
                                     <p>${doc.data().comment}</p>
-                                    <button class="btn like"><i class="fas fa-gem"></i></button>
-                                    <button class="btn compartir"><i class="fas fa-share"></i></button>
-                                    <button class="btn editar" onclick="edit('${doc.data().comment}')"><i class="fas fa-edit"></i></button>
-                                    <button class="btn guardar"><i class="fas fa-save"></i></button>
                                     <button class="btn borrar" onclick="eliminate('${doc.id}')"><i class="fas fa-trash-alt"></i></button>
-                                  </div>
+                                    <button class="btn editar" onclick="edit('${doc.data().comment}')"><i class="fas fa-edit"></i></button>
+                                    <button class="btn compartir"><i class="fas fa-share"></i></button>
+                                    <button class="btn like"><i class="fas fa-gem"></i></button>
+                                    </div>
                                 </div>`;
   });
 });
+
+sort = (id) => {
+
+  sortComments
+  db.collection('comments').doc(id).sort()
+}
+
+// CRUD - UPDATE FUNCTION
+edit = (texto) => {
+  document.getElementById('comentario').value = texto;
+  let inputRef = db.collection('comments').doc(id);
+  return inputRef.update({
+      comment: texto
+    })
+    .then(function () {
+      console.log('Document successfully updated!');
+    })
+    .catch(function (error) {
+      // The document probably doesn't exist.
+      console.error('Error updating document: ', error);
+    });
+};
+
 
 //   // validar si se creó el elementos(boton y comment)
 //   let botonesBorrar = document.getElementsByClassName('borrar');
@@ -86,26 +105,36 @@ db.collection('comments').onSnapshot((querySnapshot) => {
 //   // obtener los elementos
 // });
 
-// Para borrar documentos de la coleccion en tiempo real:
 
-function eliminate(id) {
-  db.collection('comments').doc(id).delete().then(function() {
-    console.log('Document successfully deleted!');
-  }).catch(function(error) {
-    console.error('Error removing document: ', error);
-  });
+// CRUD - DELETE FUNCTION
+
+eliminate = (id) => {
+  db.collection('comments').doc(id).delete()
+    .then(function () {
+      console.log('Document successfully deleted!');
+    })
+    .catch(function (error) {
+      console.error('Error removing document: ', error);
+    });
 }
 
-// Para editar documentos de la coleccion en tiempo real:
-function edit(texto) {
-  document.getElementById('comentario').value = texto;
-  let inputRef = db.collection('comments').doc(id);
-  return inputRef.update({
-    comment: texto
-  }).then(function() {
-    console.log('Document successfully updated!');
-  }).catch(function(error) {
-    // The document probably doesn't exist.
-    console.error('Error updating document: ', error);
-  });
-};
+
+
+// TOGGLE SIDEBAR FUNCTION
+const toggleBtn = document.getElementById('pullSidebar');
+toggleBtn.addEventListener('click', event = () => {
+  document.getElementById('toggleSidebar').classList.toggle('active');
+});
+
+// EVENT TO LOG OUT
+btlogout.addEventListener('click', event => {
+  const logout = document.getElementById('btlogout');
+  firebase.auth().signOut()
+    .then(function () {
+      console.log('saliendo...');
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  location.href = 'index.html';
+});
