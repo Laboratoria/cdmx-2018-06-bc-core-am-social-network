@@ -110,6 +110,7 @@ const editMsg = () => {
   console.log(keyRelatedToPost);
   const containsClass = card.classList.contains('editMode');
   const editMsgDataBase = firebase.database().ref('posts').child(keyRelatedToPost);
+  editButton = event.target;
 
   editMsgDataBase.once('value', (snapshot) => {
     const data = snapshot.val();
@@ -123,9 +124,9 @@ const editMsg = () => {
       card.classList.remove('editMode');
       messageInput.value = '';
     } else {
+      editButton.innerHTML = 'Save';
       messageInput.value = data.text ;
       card.classList.add('editMode');
-      editButton.innerHTML = 'Save';
     } 
   });
 };
