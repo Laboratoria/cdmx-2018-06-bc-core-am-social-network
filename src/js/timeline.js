@@ -35,15 +35,29 @@ btnLogOut.addEventListener('click', function() {
   });
 });
 
-firebase.database().ref('posts').on('value', snapshot => { // objeto que contiene la data
-  let html = '';  
-  snapshot.forEach(function(elemento) {
-    let element = elemento.val();
-    let nombre = element.name;
-    let mensaje = element.message;  
-    html += `<div class="card">
-              <li><strong>${nombre}</strong> ${mensaje}</li>
-            </div>`;
+firebase.database().ref("posts").on("value", snapshot => {//objeto que contiene la data
+  let html ="";  
+  snapshot.forEach(function (e) {
+      let element = e.val();
+      let nombre = element.name;
+      let mensaje = element.message;  
+      html += `
+        "<li> <b>${nombre}</b>: ${mensaje}</li>" +
+        '<button type="button" class="btnDelete borrar" data-message= "' + key + '">' +
+        <span class="glyphicon glyphicon-trash"></span>
+        </button>
+         `;
+    });
+    chatUl.innerHTML = html;
+    if( chatUl != ""){
+        let deleteElements = document.getElementsByClassName("borrar");
+        for (let i=0, i < deleteElements.length, i++){
+            deleteElements[i].addEventListener("click" deleteMessage, false)
+        }
+    }
   });
-  chatUl.innerHTML = html;
-});
+
+  function deleteMessage = () => {
+      let keyMessage = this.getAttribute("")
+  }
+  //reset()//Elimina el contenido de los input sin actualizar la página.
