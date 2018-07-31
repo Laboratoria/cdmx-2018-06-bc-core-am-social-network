@@ -6,6 +6,7 @@ let post = document.getElementById('post');
 close.addEventListener('click', event => { 
   basesData.closeAccount();
   history.back();
+  location.replace('../index.html');
 });
 
 postear.addEventListener('click', event => {
@@ -13,6 +14,7 @@ postear.addEventListener('click', event => {
   if (getPost != '') {
     // drawPostear.innerHTML += basesData.comment(getPost);
     basesData.comment(getPost);
+    post.value = '' 
   }
 });
 
@@ -20,3 +22,15 @@ let prueba = document.getElementById('perfil');
 prueba.addEventListener('click', event => {
   window.open('perfil.html','_self');
 });
+
+const edit = () => {
+
+};
+
+const like = () => {
+
+};
+
+const detale = () => {
+ 
+};
