@@ -1,34 +1,85 @@
-initiaziling();
-// Variables referidad a espacios del DOM
-const commentText = document.getElementById('comment-text');
-const commentSend = document.getElementById('send-comment');
-const printComments = document.getElementById('comments');
-const addLikes = document.getElementById('likes');
-const likeCounter = document.getElementById('likeCounter');
-
-/* Impresion de mensajes
-El metodo ready permite que al cargar la pagina, automaticamente
-se manden pedir los datos a firebase*/
-// $(document).ready(() => {
-/* En result se agrega una referencia a la base de datos (db) que se dirige
-	a la rama "userMessage", donde se acumulan los mensajes generados en la app y con el metodo child_added
-	cada vez que un hijo(mensaje) se añada, firebase añade asíncronamente el mensaje a un espacio sin recargar la pagina.  */
-// let result = db.ref('userMessages').on('child_added', (data) =>{ // data trae todo los objetos de la rama
-// $('#comments').append('<div class="panel-body">' + data.val().message + '</div>'); /* Templete string que genera una llamada
-// a la rama de mensajes e imprime -concatenando- en el DOM (espacio con id = 'comments') los mensajes acuamulados dentro de un div c/u */
-// });
-// });
-// Añadir un observador al boton con vanilla js
-// commentSend.addEventListener('click', (event) =>{ // Si detecta el evento del boton...
-// let userMessage = commentText.value; // Toma el texto del text area ...
-//  db.ref('userMessages').push({ // Guarda el texto y lo guarda con push en la rama mensajes del db
-// message: userMessage // Guarda el mensaje como una propiedad de la rama
-//  });
-// });
-
+let DB = initiaziling();
+// Variables referidad a espacios del DOM y variables globales
+var likes = 0;
+var dislikes = 0;
+let commentSend = document.getElementById('send-comment');
+// Funcion de crud para limpiar las entradas
+const cleanRegister = () =>{
+  document.getElementById('comment-text').value = '';
+};
+// Funciones CRUD Create post
+const createMessageinUserProfile = () =>{
+  // Traer elementos del DOM
+  let userPost = document.getElementById('comment-text').value;
+  //const timestamp = firebase.firestore.FieldValue.serverTimestamp().ref.update({ updatedAt: new Date() });
+  DB.collection('diabeTipsUsersPost').add({
+    userPost: userPost,
+    //datePost: timestamp,
+    //likesState: likes
+  })
+    .then(function(docRef) {
+      console.log('Registro de post de usuario bajo ID: ', docRef.id);
+      // Limpiar los espacios del formulario para un nuevo registro
+      alert('Tu post esta completo :D');
+    		cleanRegister();
+    })
+    .catch(function(error) {
+      console.error('Error: No se concreto la publicacion', error);
+    });
+};
+// Read and Show post
+const printPost = () => {
+  const userPostConteiner = document.getElementById('comments');
+  DB.collection('diabeTipsUsersPost').onSnapshot((querySnapshot) => { // onStapshot va a vigilar cuando haga cambios y si hay un cambio entra y te dice que fue lo que cambió
+    userPostConteiner.innerHTML = '';
+    querySnapshot.forEach((doc) => {
+      userPostConteiner.innerHTML +=
+                               `
+                               <div class="form-control">
+                                <p>${doc.data().userPost}</p>
+                                 <button class="btn btn-success btn-block" type="button" onclick = "editPost('${doc.id}', '${doc.data().userPost}')">Editar</button>
+                                 <button class="btn btn-success btn-block" type="button" onclick = "deletePost('${doc.id}')">Borrar</button>
+                                 <i class ="likes" onclick="addLike()" class="fa fa-heart" aria-hidden="true"></i>
+                                 <i class ="dislikes" onclick="restLike()" class="fal fa-heartbeat" aria-hidden="true"></i>
+                                 </div>`;
+    });
+  });
+};
+const deletePost = (idProfile) =>{
+  DB.collection('diabeTipsUsersPost').doc(idProfile).delete().then(function() {
+    console.log('Post successfully deleted!');
+  }).catch(function(error) {
+    console.error('Error removing post: ', error);
+  });
+};
+const editPost = (idProfile, userPost) =>{
+  document.getElementById('comment-text').value = userPost;
+  let btn = document.getElementById('send-comment');
+  btn.innerHTML = 'Editar';
+  // Evento del boton
+  btn.onclick = () =>{
+    var deleteDBRef = DB.collection('diabeTipsUsersPost').doc(idProfile);
+    let userPost = document.getElementById('comment-text').value;
+    return deleteDBRef.update({
+      userPost: userPost
+    })
+      .then(function() {
+        console.log('Post successfully updated!');
+        btn.innerHTML = 'Compartir';
+      })
+      .catch(function(error) {
+        // The document probably doesn't exist.
+        console.error('Error updating post: ', error);
+      });
+  };
+};
 // Contador de likes
 let countLikes = 0;
 const addLike = () => { /* Cuando sucede una llamada al evento del boton like, se acumula un punto que se mostrara al lado */
   countLikes = countLikes + 1;
   document.getElementById('likeCounter').textContent = countLikes;
 };
+printPost();
+commentSend.addEventListener('click', (event) => {
+  createMessageinUserProfile();
+});

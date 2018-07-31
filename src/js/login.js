@@ -1,4 +1,4 @@
-initiazilingAuth();
+let DB = initiaziling();
 // Evento de autenticaciíon con Gmail de Google
 document.getElementById('btn-google').addEventListener('click', (event) =>{
   authGoogle();
