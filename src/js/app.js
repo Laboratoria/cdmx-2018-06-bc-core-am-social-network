@@ -124,7 +124,7 @@ const editMsg = () => {
       card.classList.remove('editMode');
       messageInput.value = '';
     } else {
-      editButton.innerHTML = 'Save';
+      editButton.innerHTML = 'Guardar';
       messageInput.value = data.text ;
       card.classList.add('editMode');
     } 
