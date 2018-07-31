@@ -11,11 +11,10 @@ body{
 h2 {
 	font-family: 'Gochi Hand', cursive;
 	text-align: center;
-
 }
 
 #loginform{
-	margin-top:100px;   /*margen superior*/
+	margin-top:40px;   /*margen superior*/
   margin-left:auto;   /*margen izquierdo*/
   margin-right:auto;  /*margen derecho*/
 	width:335px;       /*ancho*/
@@ -33,27 +32,18 @@ h2 {
 	margin-top:15px;  /*margen que existe entre cada imput*/
 }
 
-.iniciar {
-	/*background-color: #C70039;*/
+.btncolor{	/*background-color: #C70039;*/
 	width:320px; /*ancho del boton*/
 	border-radius: 10px;
 	color:#F4F6F7;
 }
 
-/*
-.registrar {
-	background-color: #C70039;
-	width:320px; /*ancho del boton*//*
-	border-radius: 10px;
-	color:#F4F6F7;
-}*/
 
 .face {
 	font-size: 40px;
 	background-color: #1661EE;
 	color:#F4F6F7;
 	display:inline-flex;
-
 }
 
 .google {
@@ -61,7 +51,6 @@ h2 {
 	background-color: #D10202;
 	color:#F4F6F7;
 	display:inline-flex;
-
 }
 
 .loginbutton {
@@ -79,13 +68,12 @@ h2 {
 	outline:0; /*contorno*/
 }
 
-.loginbutton:active, .loginbuttonredes:active {
-	position:relative;
-	top:1px;
+.gradient {
+	background: linear-gradient(to right, #ee6e73, #ee6eb4);
 }
 
-.loginbutton:hover, .loginbuttonredes:hover{
-	background-color:#2C3E50;
+.gradient:hover {
+	background: linear-gradient(to right, #F1C40F, #F1C40F);
 }
 
 .none {
@@ -106,14 +94,40 @@ h2 {
 	border:none;
 	outline:0; /*contorno*/
 	text-align: center;
-
-
+	display:inline-block;
 }
+
 .boton:hover{
-  background-color:#2C3E50;
+  background-color:#F1C40F;
 	/* position:relative; */
 }
 
-.gradient {
-	background: linear-gradient(to right, #ee6e73, #ee6eb4);
+.centrar {
+	display:block;
+  margin:auto;
+}
+
+/*Estilos para el muro home.html*/
+
+.foto-perfil{
+	height: 100px;
+	width: 100px;
+}
+.letra-usuario{
+	font-size: 2em;
+}
+.abeja{
+	height: 15px;
+	width: 15px;
+}
+
+.tamaño-barra{
+	border-radius: 5px;
+	height: 20px;
+	background-color: gainsboro;
+}
+.tamaño-letra{
+	font-size: 1.5em;
+	font-family: 'Montserrat', sans-serif;
+
 }
