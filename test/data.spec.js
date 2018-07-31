@@ -9,12 +9,13 @@ describe('btnSign', () => {
     it('es una funcion', () => {
         assert.isFunction(btnSign);
         it('debería permitir ingresar nuevo usuario', () => {
-            assert._______(btnSign);
+            assert.isFuntction(auhtFacebook);
         })
+
     });
 });
 describe('btnSignup', () => {
-    it('debería permitir crear nuevo usuario', () => {
+    it('debería ser una función que crea un nuevo usuario', () => {
         assert.isFunction(btnSignup);
     });
 });
