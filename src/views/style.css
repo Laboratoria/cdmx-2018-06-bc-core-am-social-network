@@ -1,6 +1,6 @@
-<<<<<<< HEAD
 #datosUs {
-  background: #AAF0E5 text-align: center;
+  background: #AAF0E5 
+  text-align: center;
   vertical-align: middle;
   margin: 15%;
 }
@@ -34,38 +34,3 @@ h1 {
 .titutlo {
   font-family: 'Audiowide', cursive;
 }
-=======
-#datosUs{
-  background: #AAF0E5
-  text-align: center;
-  vertical-align: middle;
-  margin: 15% ;
-
-;
-}
-#fondo{
-  text-align: center;
-  vertical-align: middle;
-  margin: 12% ;
-
-}
-.row{
-  height: 100%;
-}
-input[type=password]{
-  padding: 15px;
-     margin: 10px 0 10px 0;
-     cursor: pointer;
-}
-input[type=email]{
-  padding: 15px;
-     margin: 15px 0 10px 0;
-     cursor: pointer;
-}
-h1{
-font-family: 'Audiowide', cursive;
-}
-.titutlo{
-  font-family: 'Audiowide', cursive;
-}
->>>>>>> origin/master

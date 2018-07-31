@@ -1,48 +1,44 @@
-// // Registro Usuarios Nuevos
-// const userName = document.getElementById('userName');
-// const email = document.getElementById('txtEmailSignUp');
-// const password = document.getElementById('txtPasswordSignUp');
-// const btnSignup = document.getElementById('btnSignup');
+// Registro Usuarios Nuevos
 
-btnSignup.addEventListener('click', e => {
-  console.log('btnSignup');
-  const email = document.getElementById('txtEmailSignUp').value;
-  const password = document.getElementById('txtPasswordSignUp').value;
-  const userName = document.getElementById('userName').value;
-  localStorage.setItem('txtEmailSignUp', mail);
-  window.location.href = 'views/wall.html';
-  alert('Ingresa tus Datos');
+const btnSignUpModal = document.getElementById('btnSignUpModal');
 
 
-  firebase.auth().createUserWithEmailAndPassword(email, password).then(function () {
-      verificar();
-    })
-    .catch(function (error) {
-      // Handle Errors here.
-      let errorCode = error.code;
-      let errorMessage = error.message;
-      console.log(errorCode);
-      console.log(errorMessage);
-      alert('Verifica datos');
-      // ...
-    });
-});
+const registrar = () =>{
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  // cons t userName = document.getElementById('userName').value;
+  localStorage.setItem('email', email);
+ // alert('Ingresa tus Datos');
 
-// Ingreso de Usiario y contraseña
-const email1 = document.getElementById('intText');
-const password1 = document.getElementById('intPass');
-// const btnentrar = document.getElementById('btnentar');
+  firebase.auth().createUserWithEmailAndPassword(email, password).then(function() {
+    verificar();
+    console.log(verificar);
+  }).catch(function(error) {
+    // Handle Errors here.
+    let errorCode = error.code;
+    let errorMessage = error.message;
+    console.log(errorCode);
+    console.log(errorMessage);
+    // alert('Verifica datos');
+    // ...
+  });
+};
+btnSignUpModal.addEventListener('click', registrar);
 
-btnentrar.addEventListener('click', e => {
-  const email1 = intText.value;
-  const password1 = intPass.value;
-  localStorage.setItem('intText', email1);
+// Ingreso de Usuario y contraseña
+const btnentrar = document.getElementById('btnentrar');
+
+
+const entrar = () => {
+  const email1 = document.getElementById('email1').value;
+  const password1 = document.getElementById('password1').value;
+  localStorage.setItem('email1', email1);
   firebase.auth().signInWithEmailAndPassword(email1, password1)
-    .then(function () {
-      promise.catch(e => console.log(e.message));
+    .then(function() {
+      // promise.catch(console.log(e.message));
       window.location.href = 'views/wall.html';
     })
-    .catch(function (error) {
+    .catch(function(error) {
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
@@ -51,17 +47,35 @@ btnentrar.addEventListener('click', e => {
       alert('Verifica tus datos');
       // ...
     });
-});
+};
+btnentrar.addEventListener('click', entrar);
 
-function verificar() {
+// verificar correo
+const verificar = () => {
   let user = firebase.auth().currentUser;
 
-  user.sendEmailVerification().then(function () {
+  user.sendEmailVerification().then(function() {
     // Email sent.
-  }).catch(function (error) {
+  }).catch(function(error) {
     // An error happened.
   });
-}
+};
+
+// Observador
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    let usuarioAct = user.usuarioAct;
+    console.log('usuario activo');
+    localStorage.setItem('usuarioAct', usuarioAct);
+    window.location.href = 'views/wall.html';
+    // User is signed in.
+  } else {
+    console.log('No hay usuario activo');
+      
+    // No user is signed in.
+  }
+});
+
 
 // login
 window.userRegister = {
