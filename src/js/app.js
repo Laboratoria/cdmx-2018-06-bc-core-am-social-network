@@ -155,4 +155,4 @@ logoutBtn.addEventListener('click', event => {
 //   }
 //   return post;
 // });
-// favoriteCounter.addEventListener('click', toggleStar);
+// favoriteCounter.addEventListener('click', toggleStar
