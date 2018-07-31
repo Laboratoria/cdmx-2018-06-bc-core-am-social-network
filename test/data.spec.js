@@ -14,10 +14,7 @@ describe('btnSign', () => {
     });
 });
 describe('btnSignup', () => {
-    it('es una funcion', () => {
+    it('debería permitir crear nuevo usuario', () => {
         assert.isFunction(btnSignup);
-        it('debería permitir crear nuevo usuario', () => {
-            assert._______(btnSignup);
-        })
     });
 });
