@@ -124,19 +124,14 @@ const deletePost = () => {
 
 
 btnProfile.addEventListener('click', e => {
-    postForm.style.display = "none";
-    borrar.style.display = "none";
-    comentarios.style.display = "none";
-    profile.style.display = "block";
-    profile.innerHTML = `<h3>
-    <img src="${userPhoto}" alt="">
-    ${user}</h3>
-    `;
+   window.location.assign('../views/perfil.html');
 });
 
 btnHome.addEventListener('click', e => {
     window.location.reload()
 });
+
+
 
 
 // Botón para guardar edición HTML 
