@@ -86,5 +86,3 @@ loginFacebookBtn.addEventListener('click', event =>{
       console.log('login con facebook');
     });
 });
-
-

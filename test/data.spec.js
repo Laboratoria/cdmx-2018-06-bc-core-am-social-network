@@ -24,5 +24,3 @@ describe(deleteMsg = () => {
     assert.equal(confirm, true);
   });
 }); 
-
-describe() 
