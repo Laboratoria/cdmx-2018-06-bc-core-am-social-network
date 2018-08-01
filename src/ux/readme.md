@@ -1,6 +1,7 @@
 # DiabeTips UX
+
 ## Sketching de Diseño Ideal
-Mobie first
+Mobile first
 ![alt text](img/general.jpg)
 ![alt text](img/carruselinicio.jpg)
 ![alt text](img/inicio.jpg)
@@ -9,6 +10,21 @@ Mobie first
 ![alt text](img/comentario.jpg)
 ![alt text](img/feed.jpg)
 
+Desktop
+![alt text](img/carruseldesk.jpg)
+![alt text](img/iniciodesk.jpg)
+![alt text](img/iniciodesk1.jpg)
+![alt text](img/perfilusuaria.jpg)
+![alt text](img/feeddesk.jpg)
+
+## Prototipo 
+
+[Marvel](https://marvelapp.com/4cf0091)
+
+## Diagrama de flujo 
+
+![alt text](img/diagramadeflujo.jpg)
+
 ## Benchmark (externo)
 "DiabeTips"
 Mejora tu calidad de vida y la de los demas.
@@ -16,7 +32,7 @@ Somos una comunidad de personas con diabetes que desean llevar una mejor calidad
 
 DiabeTips es una Red Social principalmente para mujeres con diabetes, dentro de ella podrán interactuar, compartir recetas saludables, crear eventos, puntuar a los mejores consejos y donar insumos para el cuidado de esta enfermedad.
 
-Al registrarse en esta Red Social contaran con un perfil que tendra como datos principales Nombre, edad, Tipo de Diabetes que padecen, contacto y su ubicación.
+Al registrarse en esta Red Social contaran con un perfil que tendra como datos principales Nombre, edad, peso, estatura, nivel de glucosa, medicamento de control y antecedentes familiares.
 
 ## Principales competidores de "DiabeTips"
 
