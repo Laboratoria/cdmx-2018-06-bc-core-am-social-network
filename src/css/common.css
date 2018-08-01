@@ -1,11 +1,13 @@
-*,*:before,*:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
 body {
   margin: 10px;
   font-family: 'Open Sans', 'sans-serif';
-  background-color: #fcfcfc ;
+  background-color: #fcfcfc;
   color: #ffffff;
   padding: 10px;
   text-align: center;
@@ -19,11 +21,10 @@ body {
 }
 
 @media screen and (min-width: 500px) {
-
-    #enter,input[type=button] {
-     width: 50%;   
-    }
-
+  #enter,
+  input[type=button] {
+    width: 50%;
+  }
   .sidebar {
     float: left;
     width: 19.1489%;
@@ -42,9 +43,8 @@ body {
   .footer {
     grid-column: 1 / -1;
     clear: both;
-    font-size: 100%;
+    font-size: 100vmin, 200vmax;
   }
-
 }
 
 .wrapper>* {

@@ -6,6 +6,7 @@ b {
 
 p {
   margin: 0%;
+  font-size: 100vmin, 200vmax;
 }
 
 .centrar {
@@ -18,11 +19,21 @@ p {
 .derecha {
   margin: 0%;
   width: 20%;
-  margin-left:75%;
+  margin-left: 75%;
   height: 25%;
 }
 
-input, input[type=button] {
+input {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=button] {
   background-color: rgba(30, 20, 36, 0.589);
   color: white;
   padding: 14px 20px;
@@ -34,4 +45,20 @@ input, input[type=button] {
 
 input[type=button]:hover {
   background-color: #b428cf;
+}
+
+#close,
+#perfil,
+#retur,
+#close2 {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: rgba(30, 20, 36, 0.589);
+  color: white;
+  border: none;
+  cursor: pointer;
 }
