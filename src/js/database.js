@@ -38,7 +38,7 @@ const detale = (id) => {
 };
 
 const edit = () => {
-
+git
 };
 
 const like = () => {

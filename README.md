@@ -3,9 +3,9 @@
 ## Introducción
 
 Una emprendedora nos ha encargado crear una red social. No nos da mucho detalle
-sobre qué tipo de red social quiere, sólo nos dice que creemos la mejor que
-podamos, y que luego la convenzamos de lanzarla al mercado. Nos da ciertos temas
-en los que le gustaría invertir:
+sobre qué tipo de red social quiere, sólo nos dice que creemos la mejor que podamos,
+ y que luego la convenzamos de lanzarla al mercado.
+Nos da ciertos temas en los que le gustaría invertir:
 
 * Alimentación
 * Feminismo
@@ -15,38 +15,33 @@ en los que le gustaría invertir:
 
 ## Análisis argumentativo de la elección de la red social
 
-El feminismo como otros movimientos que contradicen los canones establecidos no tiene una plataforma única o específica, sino que ha encontrado espacio (o se lo ha hecho) en cualquier red social que tenga a la mano, usandolas para compartir ideas, comunicar, promocionar eventos, dar apoyo entre otras cosas, así como ha ido encontrando espacio les han atacado pues se alterna con personas que no solo no comparten la visión si no que pretenden herir y perjudicar a quienes quieren aprender, piensan y se expresan como inclusivos, feministas, etc.
+El feminismo como otros movimientos que contradicen los cánones establecidos no tiene una plataforma única o específica, sino que ha encontrado espacio (o se lo ha hecho) en cualquier red social que tenga a la mano, usandolas para compartir ideas, comunicar, promocionar eventos, dar apoyo entre otras cosas, así como ha ido encontrando espacio les han atacado pues se alterna con personas que no solo no comparten la visión si no que pretenden herir y perjudicar a quienes quieren aprender, piensan y se expresan como inclusivos, feministas, etc.
 
-Hemos elegido como tema para la red social Feminismo por que vemos um potencial sin explotar,
-Y por que creemos que podemos solucionar algunas de las problematicas que enfrentan 
-Al buscar medios para comunicarse, expresarse o buscar apoyo, nuestro enfoque es inclusivo
-Cualquier persona que quiera participar, desde el respeto podrá hacerlo.
+Hemos elegido como tema para la red social *Deconstrucción" que es uno de los temas más abordados por feministas y personas que buscan el bienestar social así también vemos un potencial sin explotar y por que creemos que podemos solucionar algunas de las problemáticas que enfrentan al buscar medios para comunicarse, expresarse o buscar apoyo. Desde un enfoque inclusivo cualquier persona que quiera participar, desde el respeto podrá hacerlo
 
-Por una cuestion practica no se enunciara al feminismo directamente pues esto cierra 
-Las posibilidades de inclusion y nos da una apariencia menos "Atacable"
+Por una cuestión práctica no se enunciará al feminismo directamente pues esto cierra 
+Las posibilidades de inclusión y nos da una apariencia menos "Atacable" que es una
+de las principales problemáticas de las comunidades feministas en redes sociales.
 
-En general el mercado de feministas o de movimientos en busqueda de igualdad y cambio
-puede sonar a que son "dificiles" por que abordarlo desde las maneras tradicionales resulta
-En el rechazo contundente de toda la comunidad.
-Hacerlo requiere un verdadero compromiso con la comunidad, ganas de apoyar los movimientos
-Así como creatividad y empatia, cosas que sin duda podemos aportar y sabemos 
-Nos llevaran a crecer como profecionistas y personas.
+En general el mercado de feministas o de movimientos en búsqueda de igualdad y cambio
+puede sonar a que son "dificiles" por que abordarlo desde las maneras capitalistas tradicionales resulta en el rechazo contundente de toda la comunidad.
+Hacerlo requiere un verdadero compromiso con la comunidad, ganas de apoyar los movimientos, así como creatividad y empatía, cosas que sin duda podemos aportar y sabemos nos llevarán a crecer como profesionistas y personas.
 
-Así tambien debemos mencionar los riesgos, que son estar en la mira de personas que podrian considerarnos
-"Peligrosas" para sus creencias, sin embargo es algo que se pueda prevenir con las consideraciones de seguridad 
+Así también debemos mencionar los riesgos, que son estar en la mira de personas que podrían considerarnos "Peligrosas" para sus creencias, sin embargo es algo que se pueda prevenir con las consideraciones de seguridad 
 que publicaremos y tomamos prestadas de una pagina con mas experiencia en el tema: https://gendersec.tacticaltech.org/wiki/index.php/Usos_creativos_feministas_de_las_redes_sociales
 
+
+
+La finalidad de la red social será compartir documentos y puntos de vista sobre la deconstrucción termino atribuido a JACQUES DERRIDA (fuente: https://artilleriainmanente.noblogs.org/post/2016/05/05/jacques-derrida-que-es-la-deconstruccion/)
+deconstrucción: Tomar lo establecido, lo ya construido y ponerlo a prueba, analizar cuál es su origen  y si ese origen es bueno y sano, de otra manera con la conciencia de lo que es y para qué sirve darle otra forma construyendo de nuevo.
 
 ## Argumentación del proyecto
 
   **Negocio**
 
-El sentido de pertenencia de la comunidad Feminista nos puede brindar un público cautivo importante y fiel
-Si les brindamos el servicio que requieren, basandonos en un analisis de diversas fuentes mencionando
-Como la mas reelevante : https://gendersec.tacticaltech.org/wiki/index.php/Usos_creativos_feministas_de_las_redes_sociales
+El sentido de pertenencia de la comunidad deconstructiva nos puede brindar un público cautivo importante y fiel, si les brindamos el servicio que requieren, basándonos en un análisis de diversas fuentes mencionando como la mas reelevante : https://gendersec.tacticaltech.org/wiki/index.php/Usos_creativos_feministas_de_las_redes_sociales
 
-Podemos afirmar que el mercado feminista tiene necesidades concretas y establecimos como probables formas de monetizar la
-Red Social inspirandonos el modelo de una pagina periodistica Argentina: https://www.elsaltodiario.com/
+Podemos afirmar que el mercado feminista tiene necesidades concretas y establecimos como probables formas de monetizar la Red Social inspirandonos el modelo de una pagina periodistica Argentina: https://www.elsaltodiario.com/
 
   **Apoyanos a apoyarte** Dona una cantidad que tu elijas en el momento que lo elijas.
         Quiero donar
@@ -57,13 +52,13 @@ Red Social inspirandonos el modelo de una pagina periodistica Argentina: https:/
         no aceptamos contenidos patrocinados ni publicidad de las empresas que violan derechos humanos, sociales, laborales o ambientales.
         Por eso te necesitamos para seguir publicando artículos como este.
 
-  **Forma parte del colectivo/Ser socia** Comprometete a aportar una cantidad fija al mes.
+  **Forma parte del colectivo/Ser socia** Comprométete a aportar una cantidad fija al mes.
         Cuando mucha gente se une, pasan cosas grandes. Hacerse socio o socia es la mejor forma de apoyar este proyecto: 
         un medio de propiedad colectiva con una web de información diaria y una revista mensual que recibirás a partir 
         de febrero. Puedes pagar de forma anual o mensual.
 
         *En nuestro caso la propuesta es hacer intercambios, que una parte de la publicidad responsable se pague con los 
-        Productos o descuentos en servicios, asi como hacer compras a precio de mayoreo a socias de articulos tipo muestras
+        Productos o descuentos en servicios, así como hacer compras a precio de mayoreo a socias de artículos tipo muestras
         y estos darlos a las socias, recibir invitaciones a eventos primero y puedes participar, si lo deseas,
         en las decisiones clave del proyecto con un porcentaje de voto (Esta parte es escalable).
 
@@ -86,30 +81,24 @@ Red Social inspirandonos el modelo de una pagina periodistica Argentina: https:/
         25% de descuento en todos los espacios publicitarios.
         25% de descuento en todos nuestros servicios editoriales.
 
-  El riezgo del negocio que ya muchas otras paginas que ofrecen membresias tienen es que las personas no esten interesadas en pagar por
-  Obtener los beneficios, una de las cosas por hacer es apelar a su sentido de pertenencia de apoyo y de colectivo, si logramos el sentido
-  De pertenencia lograremos la fidelidad necesaria para apoyar el proyecto y continuarlo e involucrarse.
+El riesgo del negocio que ya muchas otras páginas que ofrecen membresías tienen es que las personas no estén interesadas en pagar por obtener los beneficios, una de las cosas por hacer es apelar a su sentido de pertenencia de apoyo y de colectivo, si logramos el sentido
+de pertenencia lograremos la fidelidad necesaria para apoyar el proyecto y continuarlo e involucrarse.
        
   **Usuario**
 
-Una red social Libre e inclusiva es una enorme oportunidad de aportar a la sociedad, una plataforma de cambio, apoyando un movimiento como el 
-Feminismo que promueve la igualdad y el respeto, algo tan controversial y escaso.
+Una red social Libre e inclusiva es una enorme oportunidad de aportar a la sociedad, una plataforma de cambio, apoyando un movimiento como la deconstruccion que promueve la igualdad y el respeto, algo tan controversial y escaso.
 
-les animamos a reflexionar, compartir, debatir, siempre en el respeto que todxs merecemos y promoveremos que este sea el espacio para encontrarlo.
+
+
+Les animamos a reflexionar, compartir, debatir, siempre en el respeto que todxs merecemos y promoveremos que este sea el espacio para encontrarlo.
 Sin embargo algo que debe quedar claro: El odio y la violencia no son bienvenidos. 
 
-El feminismo como otros movimientos que contradicen los canones establecidos no tiene una plataforma única o específica, sino que ha encontrado espacio (o se lo ha hecho) en cualquier red social que tenga a la mano, usandolas para compartir ideas, comunicar, promocionar eventos, dar apoyo entre otras cosas, así como ha ido encontrando espacio les han atacado pues se alterna con personas que no solo no comparten la visión si no que pretenden herir y perjudicar a quienes quieren aprender, piensan y se expresan como inclusivos, feministas, etc. en un sinsentido de violencia y odio, entendemos la importancia que tiene la libertad en una red social como la que proponemos después de tanta censura, nuestra visión es una red social que permita que todo lo anterior sea compartido, nos limitaremos a dar recomendaciones de seguridad y normas en algunos grupos para poder incluir a lxs menores de edad.
+*La red social puede inicialmente enfocarse hacia la difusión de contenido deconstructivo, invitando y generando alianzas con páginas web que ya manejan este tipo de contenido y hacer alianzas de publicidad con ellos.
 
-Unas de las propuestas para atraer a las primeras personas es:
+*Unos de los primeras empresas a las que pudiéramos ofrecerles publicidad es: Laudrive, que ofrece transporte de mujeres para mujeres y ha sido llamado por la revista Expanción como el Uber para mujeres en CDMX: https://expansion.mx/tecnologia/2017/03/08/mexicanos-lanzan-plataforma-tipo-uber-exclusiva-para-mujeres
 
-*Emplear mujeres en oficios que normalmente se consideran de hombre y por lo tanto tienen dificultades para emplearse, así
-Unos de los primeras empresas a las que pudieramos ofrecerles publicidad es: Laudrive, que ofrece transporte de mujeres para mujeres
-Y ha sido llamado por la revista Expanción como el Uber para mujeres en CDMX: https://expansion.mx/tecnologia/2017/03/08/mexicanos-lanzan-plataforma-tipo-uber-exclusiva-para-mujeres
-
-*Trueques entre las personas de la red, lo cual ya tiene bastantes usuarios en Facebook, sin embargo presenta la dificultad 
-Al momento de segmentar las cosas que quieren troquear o los lineamientos bajo los cuales quieren hacerlo (solo el ciertas Zonas, intercambio 
-solo por ropa o alimentos, etc.)
-
-*Mercados contra la violencia economica, hablando principal pero no limitativamente de las mujeres que cuidan de los hijos y se "quedan"
-en el hogar lo cual les limita las horas a las que pueden trabajar y les facilita vender artesanias y articulos varios para generar
-ingresos propios que les den independencia.
+Las razones por las cuales una persona interactuaria a diario con nuestra red social son:
+1.-Contenido que les resulta interesante y hasta estimulante.
+2.-Participación en debates y conocer la opinión de otros.
+3.-Conocer otras personas con sus inquietudes.
+4.-Saber de eventos y lugares de reunión.
