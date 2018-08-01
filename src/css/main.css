@@ -6,6 +6,7 @@ b {
 
 p {
   margin: 0%;
+  font-size: 1.9vmax;
 }
 
 .centrar {
@@ -44,4 +45,22 @@ input[type=button] {
 
 input[type=button]:hover {
   background-color: #b428cf;
+}
+
+#close, #perfil {
+
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: rgba(30, 20, 36, 0.589);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
