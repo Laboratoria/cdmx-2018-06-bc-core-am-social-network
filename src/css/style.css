@@ -2,16 +2,22 @@ body{
 	background-image: white;
 	background-repeat: no-repeat;   /* no repite la imagen*/
 	position: static;
-
 }
-.nav-color{
-	background-color: #1661EE;
+
+.logo-bim {
+	display:block;
+  margin:auto;
+	height: 150px;
+	width: 150px;
+	margin-top:10px;
 }
 
 h2 {
 	font-family: 'Gochi Hand', cursive;
 	text-align: center;
+	margin-top:10px;
 }
+
 
 #loginform{
 	margin-top:40px;   /*margen superior*/
@@ -102,12 +108,10 @@ h2 {
 	/* position:relative; */
 }
 
-.centrar {
-	display:block;
-  margin:auto;
-}
-
 /*Estilos para el muro home.html*/
+.nav-color{
+	background-color: #1661EE;
+}
 
 .foto-perfil{
 	height: 100px;
@@ -130,4 +134,3 @@ h2 {
 	font-size: 1.5em;
 	font-family: 'Montserrat', sans-serif;
 }
-
