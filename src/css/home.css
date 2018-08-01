@@ -1,15 +1,8 @@
 /* Estilos de Home */
-@import "reset";
-* {
-  margin: 0;
-  padding: 0;
+body {
+  padding-top: 35%;
 }
-
-html, body {
-  height: 100%;
-  padding-top: 0;
-}
-
+/* Barra de Status */
 header {
   top: 0;
   min-height: 20%;
@@ -19,13 +12,43 @@ header {
 }
 
 #logoDiabeTips {
-  /* margin-top: 20px; */
   width: 30%;
+  padding-top: 5%;
+  padding-left: 20px;
 }
 
+#barraProgreso {
+  margin-top: 10px;
+  font-size: 9pt;
+  color: #fff;
+  text-align: right;
+}
+
+/* Curpo del contenido */
 section {
+  font-size: 14pt;
+  color: #6a557f;
+}
 
+#userName {
+  font-size:
+}
 
+#comment{
+  border-color: #61c4e3;
+  border-style: double;
+}
+
+#comment p{
+  margin: 0;
+  text-align: left;
+  padding: 15px;
+}
+
+#actions a {
+  font-size: 15pt;
+  text-align: left;
+  color: #eb656a;
 }
 
 /* Barra de Navegador */
