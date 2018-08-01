@@ -7,7 +7,7 @@ const loginFacebook = () => {
     // The signed-in user info.
     var user = result.user;
     // ...
-    window.location.replace('views/wall.html');
+    // window.location.replace('views/wall.html');
   }).catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
@@ -22,6 +22,7 @@ const loginFacebook = () => {
 let facebookAu = document.getElementById('logFacebook');
 facebookAu.addEventListener('click', r => {
   loginFacebook();
+  window.location.replace('views/wall.html');
 });
 // /aqui ya sale google
 
@@ -34,7 +35,7 @@ const loginGoogle = () => {
     // The signed-in user info.
     var user = result.user;
     // ...
-    window.location.replace('views/wall.html');
+    // window.location.replace('views/wall.html');
   }).catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
