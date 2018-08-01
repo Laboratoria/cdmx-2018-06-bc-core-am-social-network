@@ -5,58 +5,73 @@ const config = {
   projectId: 'red-social-19985',
   storageBucket: 'red-social-19985.appspot.com',
   messagingSenderId: '169924096887'
-};   
+};  
 firebase.initializeApp(config);
 const database = firebase.database();
 let namePost = document.getElementById('namePost');
 let messagePost = document.getElementById('messagePost');
 let btnPost = document.getElementById('btnPost');
 let chatUl = document.getElementById('chat');
-let btnLogOut = document.getElementById('btnLogout');
 let userEmail = document.getElementById('welcome');
+let btnLogOut = document.getElementById('btnLogout'); 
+let keyPost;
 btnPost.addEventListener('click', function() {
+  let user = firebase.auth().currentUser;
+  let email;
   let nombre = namePost.value;
   let mensaje = messagePost.value;
-        
-  firebase.database().ref('posts').push({
+  email = user.email;
+  firebase.database().ref('posts').push();
+  let postNew = firebase.database().ref('posts').push();
+  keyPost = postNew.getKey();
+  firebase.database().ref(`posts/${keyPost}`).set({
     name: nombre,
     message: mensaje,
+    keyPost: keyPost
   });
 });
 btnLogOut.addEventListener('click', function() {
   firebase.auth().signOut().then(function() {
     window.location.href = '../index.html';
   }).catch(function(error) {
-    // An error happened.
     console.log(error);
   });
 });
-firebase.database().ref('posts').on('value', snapshot => { // objeto que contiene la data
-  let html = '';  
-  snapshot.forEach(function(elemento) {
-    let element = elemento.val();
+firebase.database().ref('posts').on('value', snapshot => {// objeto que contiene la data
+  infoUser();
+  let html = ''; 
+  let key = 0;
+  snapshot.forEach(function(e) {
+    let element = e.val();
     let nombre = element.name;
-    let mensaje = element.message;  
-    html += `<div class="card">
-              <li><strong>${nombre}</strong> ${mensaje}</li>
-            </div>`;
+    let mensaje = element.message; 
+    html += `
+     <li> <b> ${nombre}</b>: ${mensaje}
+     <p id="${e.val().keyPost}"> ${e.val().keyPost}</p>
+     <button type="button" class="btnDelete borrar" data-message= "'${key}'">
+     <span><svg-icon><src href="sprite.svg#si-glyph-circle-remove" /></svg-icon></span>
+     </button>
+     </li>
+      `;
+    key++;
   });
   chatUl.innerHTML = html;
-  infoUser();
+  if (chatUl !== '') {
+    let deleteElements = document.getElementsByClassName('borrar');
+    for (let i = 0; i < deleteElements.length; i++) {
+      deleteElements[i].addEventListener('click', deleteMessage, false);
+    }
+  }
 });
 function infoUser() {
   var user = firebase.auth().currentUser;
-  var email; // name,, photoUrl, uid, emailVerified; 
+  var email;
   email = user.email;
   userEmail.innerHTML = `<h1><center>Bienvenidx</center></h1>
-                          <h2><center>${email}</center></h2>`;
-  // if (user !== null) {
-  //   console.log(user.displayName);
-    
-  //   name = user.displayName;
-  //   email = user.email;
-  //   photoUrl = user.photoURL;
-  //   emailVerified = user.emailVerified;
-  //   uid = user.uid;
-  // }
+              <h2><center>${email}</center></h2>`;
+}
+function deleteMessage() {
+  let ref = firebase.database().ref('posts');
+  let idPost = this.parentNode.childNodes[3].id;
+  ref.child(idPost).remove(); 
 }
