@@ -1,33 +1,166 @@
-#content{
-    text-align: center;
+body{
+    background-color: white;
+}
+.logo-first{
+    margin-left: 50px;
+    padding-bottom: 20px;
+}
+.messageOne{
+    color: black;
+}
+.leftWelcome{
+    background: url(../images/leftShero.png) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 800px;
+    color: white;
+    font-size: 1.2rem;
+}
+.buttonFacebook{
+    background-color: #3b5998;
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.fbLogo{
+    height: 5%;
+    width: 10%;
+    margin-bottom: 7px;
+}
+.buttonGoogle{
+    color: black;
+}
+.gLogo{
+    height: 4%;
+    width: 7%;
+    margin-bottom: 7px;
+    margin-right: 4%;
 }
 
-#registeredUser {
-    display: none;
+p{
+    margin-left: 25%;
+    font-size: 100%;
+}
+.wrap-messages{
+    margin-left: 150px;
+    margin-top: 300px;
+}
+.one{
+    padding: 5%;
+}
+.two{
+    padding: 5%;
+}
+.tree{
+    padding: 5%;
 }
 
-#newUser {
-    display: none;
-}
-
-.btn {
-    background-color: #C27BA0;
-    color: #FFFFFF;
+#buttonSignIn {
+    background-color: #f081a8;
     font-size: 1em;
-    border-radius: .3rem;
-    padding: .5rem 2.5rem;
-    margin-top: 6px;
-    position: center;
+    border-radius: 15px;
+    color: white;
+    transition-duration: 0.4s;
+    margin-bottom: 15px;
+}
+#buttonLogin {
+    background-color: white;
+    color: black;
+    font-size: 1em;
+    border-color: #f081a8;
+    border-radius: 15px;
+}
+.signUp{
+    margin-top: 5%;
+    
 }
 
-.fondo {
-    position: absolute;
-    bottom: 6em;
+@media(max-width:570px){
+    .logo-first{
+        margin-top: 250px;
+        margin-left: 5px;
+        padding-bottom: 30px;
+    }
+    body {
+        width: 100wh;
+        height: 90vh;
+        color: #fff;
+        background: linear-gradient(-45deg,  #2e2f53, #2e2f53, #f081a8, #f1ede4);
+        background-size: 400% 400%;
+        -webkit-animation: Gradient 15s ease infinite;
+        -moz-animation: Gradient 15s ease infinite;
+        animation: Gradient 15s ease infinite;
+    }
+    .messageOne{
+        color: #fff;
+    }
+    @-webkit-keyframes Gradient {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }
+    
+    @-moz-keyframes Gradient {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }
+    
+    @keyframes Gradient {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }
+    
+    h1,
+    h6 {
+        font-family: 'Open Sans';
+        font-weight: 300;
+        text-align: center;
+        position: absolute;
+        top: 45%;
+        right: 0;
+        left: 0;
+    }
+    }
+
+@media(max-width:767px){
+    .logo-first{
+        margin-top: 180px; 
+        padding-bottom: 30px;
+        
+    }
+    .messageOne{
+        color: #fff;
+    }
 }
 
-.p-bottom {
-    position: relative;
-    text-align: center;
-    font-size: 3em;
-    color: rgb(65, 21, 105);
+@media(max-width:1025px){
+    .logo-first{
+        margin-top: 150px;
+        padding-bottom: 30px;
+    }
+
+    .messageOne{
+        color: #fff;
+    }
 }
