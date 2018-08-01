@@ -1,6 +1,6 @@
 const loginFacebook = () => {
   
- var providerFacebook = new firebase.auth.FacebookAuthProvider();
+ var provider = new firebase.auth.FacebookAuthProvider();
   
   firebase.auth().signInWithPopup(providerFacebook).then(function(result) {
     // This gives you a Facebook Access Token. You can use it to access the Facebook API.
@@ -27,11 +27,12 @@ facebookAu.addEventListener('click', the => {
 });
 // /aqui ya sale google
 
+
 firebase.auth().signInWithPopup(providerGoogle).then(function(result) {
 
 const loginGoogle = () => {
   
-    var providerGoogle = new firebase.auth.GoogleAuthProvider();
+    var provider = new firebase.auth.GoogleAuthProvider();
     // This gives you a Google Access Token. You can use it to access the Google API.
     var token = result.credential.accessToken;
     // The signed-in user info.
