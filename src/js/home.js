@@ -18,19 +18,25 @@ const bntMessage = document.getElementById('btnMessage');
 const userPrintPhoto = document.getElementById('user-photo');
 
 
+
 let user = localStorage.getItem("mail");
 let userUid = localStorage.getItem("userUid");
 console.log(userUid);
+console.log(user);
 
 let userPhoto;
 const bringData = () => {
     if (user === "google" || user === "facebook") {
         user = localStorage.getItem("display");
+        console.log(user);
         userPhoto = localStorage.getItem("photo");
-       
-    } else  {
-    } 
+        console.log(userPhoto);
+
+    } else {
+
+    }
 }
+
 bringData()
 
 dataName.innerHTML = user;
@@ -50,7 +56,7 @@ btnPost.addEventListener('click', e => {
     } else {
         let ref = database.ref('posts');
         let data = {
-            user : userUid,
+            user: userUid,
             name: user,
             post: posted
         }
@@ -72,17 +78,20 @@ window.onload = () => {
     databasePost.on('value', data => {
         let getKeys = data.val();
         let keysObj = Object.keys(getKeys);
-        for (let i = 0; i < keysObj.length; i++){
+        for (let i = 0; i < keysObj.length; i++) {
             keys = keysObj[i];
             editPost(keys);
-             // console.log(keys);
+            // console.log(keys);
         }
-       // console.log(keys);
+        // console.log(keys);
     })
 };
 
 const printPost = (postName, text, userId) => {
-    if (userUid === userId){
+    const comentarios = document.getElementById('comentarios');
+    //console.log(comentarios);
+
+    if (userUid === userId) {
         comentarios.innerHTML += `<div>
                 <form action="">
                 <p>${postName}</p>
@@ -95,7 +104,8 @@ const printPost = (postName, text, userId) => {
                 </form>
               </div>`;
     } else {
-    comentarios.innerHTML += `<div>
+      //  console.log(comentarios);
+        comentarios.innerHTML += `<div>
                 <form action="">
                 <p>${postName}</p>
                     <input type="text" id="input" readonly = "readonly" value="${text} ">
@@ -103,13 +113,15 @@ const printPost = (postName, text, userId) => {
                     <input type="button" class="btnEdit btn" onclick="likePost()" value="Like">
                 </form>
               </div>`;
-            }
+    }
 }
+
+
 
 //Función para editar post
 const editPost = (keys) => {
-   // console.log(keys);
-    
+    // console.log(keys);
+
 }
 
 //Función para likear post
@@ -129,25 +141,32 @@ const deletePost = () => {
 
 
 btnProfile.addEventListener('click', e => {
-   window.location.assign('../views/perfil.html');
-   
-   profile.innerHTML = `<img src="${userPhoto}" class="col s5 m4 l2 offset-3 circle foto-perfil" alt="foto">
+    e.preventDefault();
+    window.location.href = '../views/perfil.html';
+    console.log(user);
+    profile.innerHTML = `<img src="${user.photoURL}" class="col s5 m4 l2 offset-3 circle foto-perfil" alt="foto">
     <h1>${user}</h1>`;
-  });
+});
 
 
 btnHome.addEventListener('click', e => {
-    window.location.assign('../views/home.html');
+    e.preventDefault();
+    window.location.href = '../views/home.html';
+
 });
 
 btnRanking.addEventListener('click', e => {
-    window.location.assign('../views/ranking.html');
+    e.preventDefault();
+    console.log('hola');
+    window.location.href = '../views/ranking.html';
 });
 
 bntMessage.addEventListener('click', e => {
-    window.location.assign('../views/mensaje.html');
-});
+    e.preventDefault();
+    console.log('hola3');
 
+    window.location.href = '../views/mensaje.html';
+});
 
 
 
@@ -172,11 +191,11 @@ btnLike.addEventListener('click', e => {
 });*/
 
 btnProfile.addEventListener('click', e => {
-  postForm.style.display = "none";
-  borrar.style.display = "none";
-  comentarios.style.display = "none";
-  profile.style.display = "block";
-  profile.innerHTML = `<h1>${user}</h1>`;
+    postForm.style.display = "none";
+    borrar.style.display = "none";
+    comentarios.style.display = "none";
+    profile.style.display = "block";
+    profile.innerHTML = `<h1>${user}</h1>`;
 });
 
 // Botón para editar post
