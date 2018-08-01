@@ -1,17 +1,10 @@
-// Initialize Firebase
-let config = {
-  apiKey: 'AIzaSyBaECVsMzOMbR75yky-nvW0-WYpnXv7E88',
-  authDomain: 'post-cloud.firebaseapp.com',
-  projectId: 'post-cloud'
-};
-firebase.initializeApp(config);
-let db = firebase.firestore();
-const settings = { timestampsInSnapshots: true };
-db.settings(settings);
+let userName = localStorage.getItem('mail');
 
 const addPost = (comment) => {  
   db.collection('posts').add({
-    post: comment
+    nameUser: userName,
+    post: comment,
+    likes: like
   })
     .then(function(docRef) {
       console.log('Document written with ID: ', docRef.id);
@@ -22,16 +15,19 @@ const addPost = (comment) => {
     });
 };
 
+// Publicacion de comentarios
 db.collection('posts').onSnapshot((querySnapshot) => {
   document.getElementById('finalWall').innerHTML = '';
   querySnapshot.forEach((doc) => {
     console.log(`${doc.id} => ${doc.data().post}`);
     finalWall.innerHTML += `<div class="card col-sm-10 col-md-8">
         <div class="card-body">
-            <p>${doc.data().post} \t\t\t\t <span id="likess"><i class="far fa-heart"></i></span></p>
+            <p>${userName}</p>
+            <p>${doc.data().post}</p>
             <button id="deleteComment" onclick="deletePost('${doc.id}')">Borrar</button>
             <button id="editComment" onclick="editPost('${doc.id}', '${doc.data().post}')">Editar</button>
             <button id="like" onclick="likePost('${doc.id}')">Like</button>
+            <span id="likess"><i class="far fa-heart"></i></span>
         </div>
     </div>`;
   });
@@ -46,15 +42,16 @@ const deletePost = (id) => {
   });
 };
 
+// Editar comentario en especifico
 const editPost = (id, comment) => {
   document.getElementById('post').value = comment;
   let buttonEdit = document.getElementById('toPost');
   buttonEdit.innerHTML = 'Guardar';
   buttonEdit.addEventListener('click', event => {
     // let postRef = db.collection('posts').doc(id);
-    let comment = document.getElementById('post').value;
+    let newComment = document.getElementById('post').value;
     return db.collection('posts').doc(id).update({
-      post: comment
+      post: newComment
     })
       .then(function() {
         console.log('Document successfully updated!');
@@ -67,9 +64,11 @@ const editPost = (id, comment) => {
   });
 };
 
+// Da y quita like
 let like = false;
 let contLike = 0;
 const likePost = (id) => {
+  db.collection('posts').doc(id).like;
   if (like === true) {
     like = false;
     contLike--;
@@ -87,6 +86,7 @@ const likePost = (id) => {
   }
 };
 
+// Cerrar sesion
 logOut = () => {
   firebase.auth().signOut().then(function() {
     console.log('Saliendo...');

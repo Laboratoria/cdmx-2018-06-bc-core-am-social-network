@@ -1,29 +1,16 @@
-let config = {
-  apiKey: 'AIzaSyBSQUIbzVSxmdELMXnGowhEkEH2QX0joEQ',
-  authDomain: 'social-network-edfb3.firebaseapp.com',
-  databaseURL: 'https://social-network-edfb3.firebaseio.com',
-  projectId: 'social-network-edfb3',
-  storageBucket: 'social-network-edfb3.appspot.com',
-  messagingSenderId: '342564191947'
-};
-firebase.initializeApp(config);
-let db = firebase.firestore();
-
 const addUser = (newEmail, newPassword) => {
-  firebase.auth().createUserWithEmailAndPassword(newEmail, newPassword).catch(function(error) {
-    let errorCode = error.code;
-    let errorMessage = error.message;
-    alert('Usuario o contraseña no validos! Recuerda que no debe haber campos vacios.');
-  });
+  firebase.auth().createUserWithEmailAndPassword(newEmail, newPassword)
+    .then(function() {
+      emailChecker();    
+    }).catch(function(error) {
+      let errorCode = error.code;
+      let errorMessage = error.message;
+      alert('Usuario o contraseña no validos! Recuerda que no debe haber campos vacios.');
+    });
 };
 
 firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
   .then(function() {
-    // Existing and future Auth states are now persisted in the current
-    // session only. Closing the window would clear any existing state even
-    // if a user forgets to sign out.
-    // ...
-    // New sign-in will be persisted with session persistence.
     return firebase.auth().signInWithEmailAndPassword(email, password);
   })
   .catch(function(error) {
@@ -33,6 +20,8 @@ firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
   });
 
 const enterUser = (email, password) => {
+  localStorage.clear();
+  localStorage.setItem('mail', email);
   firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
     let errorCode = error.code;
     let errorMessage = error.message;
@@ -51,12 +40,20 @@ const observer = () => {
       let isAnonymous = user.isAnonymous;
       let uid = user.uid;
       let providerData = user.providerData;
-      console.log(user.emailVerified);
-      
-  
-      location.assign('wall.html');
+      if (user.emailVerified) {
+        location.replace('wall.html');
+      }
     }
   });
 };
   
 observer();
+
+const emailChecker = () => {
+  let user = firebase.auth().currentUser;
+  user.sendEmailVerification().then(function() {
+    console.log('Email sent.');
+  }).catch(function(error) {
+  // An error happened.
+  });
+};

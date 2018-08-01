@@ -8,3 +8,5 @@ document.getElementById('logIn').addEventListener('click', event => {
     enterUser(email, password);
   }
 });
+
+observer();
