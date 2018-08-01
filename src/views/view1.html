@@ -13,49 +13,50 @@
     <div class=" container">
         <header>
             <h1>Registrate</h1>
-            <h2>Es super fácil y rápido!</h2>
+
+            <h3>Es super fácil y rápido!</h3>
         </header>
         <main>
             <section class="container-fluid">
                 <form id = "form-signup">
-                    <div class="form-group ">
+                    <div class="form-group offset-lg-3 col-sm-10 col-lg-6">
                         <label for="input-name">Ingresa tu nombre</label>
-                        <input type="text" class="form-control col-sm-10 col-lg-6" name = "nombre" id="input-name" placeholder="Nombre">
+                        <input type="text" class="form-control" name = "nombre" id="input-name" placeholder="Nombre">
                     </div>
-                        <div class="form-group">
-                            <label for="input-email">Ingresa tu correo electrónico</label>
-                            <input type="email" class="form-control col-sm-10 col-lg-6" name = "correo" id="input-email" placeholder="Coreo electrónico"></div>
-                        <div class="form-group">
-                            <label for="input-password">Ingresa una contraseña (Debe contener letras, números, mayusculas y minusculas)</label>
-                            <input type="password" class="form-control col-sm-10 col-lg-6" name = "password" id="input-password" placeholder="Contraseña">
-                        </div>
-                        <div class="form-group">
-                                <label for="input-age">Ingresa tu edad</label>
-                                <input type="number" min="18" max="99" class="form-control" name = "edad" id="input-age" placeholder="Edad">
-                            </div>
-                            <div class="form-group">
-                                    <label for="input-pais">Ingresa tu pais</label>
-                                    <input type="text" class="form-control" name = "pais" id="input-pais" placeholder="Pais">
-                            </div>
-                            <div class="form-group">
-                                    <label for="input-ciudad">Ingresa tu ciudad</label>
-                                    <input type="text" class="form-control" name = "ciudad" id="input-ciudad" placeholder="Ciudad">
-                            </div>
-                            <button type="submit" class="offset-lg-2 col-sm-4 col-lg-5">Enviar</button>
-                            <p><a href="../index.html">Regresar</a></p>
-                          </form>
-
-                    
+                    <div class="form-group offset-lg-3 col-sm-10 col-lg-6">
+                        <label for="input-email">Ingresa tu correo electrónico</label>
+                        <input type="email" class="form-control" name = "correo" id="input-email" placeholder="Coreo electrónico">
+                    </div>
+                    <div class="form-group offset-lg-3 col-sm-10 col-lg-6">
+                        <label for="input-password">Ingresa una contraseña (Debe contener letras, números, mayusculas y minusculas)</label>
+                        <input type="password" class="form-control" name = "password" id="input-password" placeholder="Contraseña">
+                    </div>
+                    <div class="form-group offset-lg-3 col-sm-10 col-lg-6">
+                        <label for="input-age">Ingresa tu edad</label>
+                        <input type="number" min="18" max="99" class="form-control" name = "edad" id="input-age" placeholder="Edad">
+                    </div>
+                    <div class="form-group offset-lg-3 col-sm-10 col-lg-6">
+                        <label for="input-pais">Ingresa tu pais</label>
+                        <input type="text" class="form-control" name = "pais" id="input-pais" placeholder="Pais">
+                    </div>
+                    <div class="form-group offset-lg-3 col-sm-10 col-lg-6">
+                        <label for="input-ciudad">Ingresa tu ciudad</label>
+                        <input type="text" class="form-control" name = "ciudad" id="input-ciudad" placeholder="Ciudad">
+                    </div>
+                </form>
+                    <section class="row offset-lg-5 col-sm-1 col-lg-3">
+                        <button type="submit"  id="log-in">Enviar</button>
+                    </section>
+                    <section class=" row offset-lg-4 col-sm-2 col-lg-3">
+                        <p><a href="../index.html">Regresar</a></p>
+                    </section>
             </section>
-
         </main>
-
     </div>
-    <footer></footer>   
+    <footer>
 
- 
-
-   
+    </footer>
+    
    <!-- <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script> -->
    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-auth.js"></script>
@@ -64,7 +65,8 @@
    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-messaging.js"></script>
    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-functions.js"></script>
 
-   <!-- <script src="../js/credenciales.js"></script> -->
-   <script src="../js/social.js"></script>
+<!-- <script src="../js/credenciales.js"></script> -->
+<script src="../js/social.js"></script>
+
 </body>
 </html>
