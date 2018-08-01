@@ -5,39 +5,45 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>zoryaColect.</title>
-  <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
-  <section>
-    <header>
-      <h1>ZoryaColect.</h1>
+  <div class="wrapper">
+    <header class="header">
+      <b>ZoryaColect.</b>
+      <p>Deconstrucción social</p>
     </header>
-    <section class="centrar">
-      <row>
-        <form>
-          <input type="email" id="enter-email" placeholder="Email">
-          <input type="password" id="enter-password" placeholder="Password">
-          <input type="button" value="Entrar" id="enter">
-        </form>
-      </row>
-      <row>
-        <form>
-          <input type="button" id="google-user" value="Ingresa con google">
-          <input type="button" id="facebook-user" value="Ingresa con facebook">
-        </form>
-      </row>
-      <row>
-        <form>
-          <input type="email" id="email" placeholder="Email de usuario">
-          <input type="password" id="password" placeholder="Contraseña">
-          <input type="text" placeholder="Nombre de usuario" id="user-name">
-          <input type="button" value="Registrar" id="register">
-        </form>
-      </row>
-    </section>
-  </section>
+    <aside class="sidebar">
+      Red social para la Deconstrucción social: Tomar lo establecido socialmente, lo ya construido y ponerlo a prueba, analizar
+      cuál es su origen y significado, de otra manera con la conciencia clara, darle otra forma construyendo de nuevo.
+    </aside>
+    <article class="content">
+      <form>
+        <input type="email" id="enter-email" placeholder="Email">
+        <input type="password" id="enter-password" placeholder="Password">
+        <input type="button" value="Entrar" id="enter">
+      </form>
+      <form>
+        <input type="button" id="google-user" value="Ingresa con google">
+      </form>
+      <form>
+        <input type="button" id="facebook-user" value="Ingresa con facebook">
+      </form>
+      <form>
+        <input type="email" id="email" placeholder="Email de usuario">
+        <input type="password" id="password" placeholder="Contraseña">
+        <input type="text" placeholder="Nombre de usuario" id="user-name">
+      </form>
+      <form>
+        <input type="button" value="Registrar" id="register">
+      </form>
+    </article>
+    <footer class="footer">
+
+    </footer>
+  </div>
   <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-auth.js"></script>
@@ -47,4 +53,5 @@
   <script src="./js/authen.js"></script>
   <script src="./js/database.js"></script>
 </body>
+
 </html>
