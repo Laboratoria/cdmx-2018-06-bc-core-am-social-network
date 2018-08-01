@@ -9,6 +9,7 @@ header {
   background: #6a557f;
   padding: 0;
   position: fixed;
+  z-index: 1000;
 }
 
 #logoDiabeTips {
@@ -28,6 +29,7 @@ header {
 section {
   font-size: 14pt;
   color: #6a557f;
+  margin-bottom: 20%;
 }
 
 #userName {
@@ -42,16 +44,17 @@ section {
   text-align: ;
 }
 
-#comments{
+#box {
+  color: #6a557f;
   border-color: #61c4e3;
   border-style: double;
 }
 
-#comments p{
+/* #box p{
   margin: 0;
   text-align: left;
   padding: 15px;
-}
+} */
 
 #actions a {
   font-size: 15pt;

@@ -37,14 +37,15 @@ const printPost = () => {
     querySnapshot.forEach((doc) => {
       userPostConteiner.innerHTML +=
                                `
-                               <div class="form-control">
+                               <div id="box" class="form-control">
                                 <p>${doc.data().userName}  dice: </p>
                                 <p>${doc.data().userPost}</p>
-                                <a class = "btn" onclick = "deletePost('${doc.id}')"><i class="far fa-trash-alt"></i></a>
-                                <a class = "btn" onclick = "editPost('${doc.id}', '${doc.data().userPost}')"><i class="far fa-edit"></i></a>
-                                 <i class ="likes" onclick="addLike()" class="fa fa-heart" aria-hidden="true"></i>
-                                 <i class ="dislikes" onclick="restLike()" class="fal fa-heartbeat" aria-hidden="true"></i>
-                                 </div>`;
+                                <div id="actions" class="text-right">
+                                  <a class = "btn" onclick = "deletePost('${doc.id}')"><i class="far fa-trash-alt"></i></a>
+                                  <a class = "btn" onclick = "editPost('${doc.id}', '${doc.data().userPost}')"><i class="far fa-edit"></i></a>
+                                  <a class = "btn" onclick="addLike()"><i class="fas fa-heart"></i></i></a>
+                                </div>
+                              </div>`;
     });
   });
 };
@@ -89,7 +90,7 @@ commentSend.addEventListener('click', (event) => {
       createMessageinUserProfile(user);
       printPost();
     } else {
-      alert('No, no, no ... No te has iniciado sesion');
+      alert('No, no, no ... No has iniciado sesion');
     }
   });
 });
@@ -134,7 +135,7 @@ const userActive = () =>{
       // document.getElementById('userEmail').textContent = userEmail;
       document.getElementById('userPhoto').style.background = 'url(' + userPhoto + ')';
       document.getElementById('buttonLogout').innerHTML = `
-      <button class="btn btn-link" type="button" id="buttonLogout" onclick="cerrar()">LogOut</button>`;
+      <a href="../index.html" class="btn btn-link" type="button" id="buttonLogout" onclick="cerrar()">LogOut</a>`;
     }
   });
 };

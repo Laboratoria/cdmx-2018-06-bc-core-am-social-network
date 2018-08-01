@@ -89,28 +89,17 @@
     <div class="form-group">
       <textarea id="comment-text" placeholder="Comparte algo con la comunidad" cols="40" rows="4" class="form-control"></textarea>
       <div id="send" class="text-right">
-        <!-- <a id="send-comment" class = "btn"><i class="fas fa-share-square"></i>Publicar</a> -->
-        <button class="btn btn-success btn-block" type="button" id="send-comment">Compartir</button>
-      </div>
+        <a id="send-comment" class = "btn" onclick = "commentSend"><i class="fas fa-share-square"></i>Publicar</a>
     </div>
   </div>
-  <div class="row">
-    <div class="form-group col-12">
-      <div id="comments">
-        <p>Esta es una prueba del espacio que ocupará el div</p>
-        <div id="actions" class="text-right">
-          <a class = "btn" onclick = "deleteUserProfile"><i class="far fa-trash-alt"></i></a>
-          <a class = "btn" onclick = "editUserProfile"><i class="far fa-edit"></i></a>
-          <a class = "btn" onclick = "editUserProfile"><i class="fas fa-heart"></i></i></a>
-        </div>
-      </div>
-    </div>
+  <!-- Impresión de comentarios -->
+  <div id="comments" class="col-12"></div>
   </div>
 </section>
 <!--  -->
 <footer id="navbar"class="col-12">
   <a id="home" class="btn btn-black btn-lg btn-responsive" href="home.html" role="button" ><i class="fas fa-home"></i></a>
-  <a id="add" class="btn btn-black btn-lg btn-responsive" href="comments.html" role="button" ><i class="fas fa-plus"></i></a>
+  <a id="add" class="btn btn-black btn-lg btn-responsive" href="home.html" role="button" ><i class="fas fa-plus"></i></a> <!-- Botón deshabilitado hasta solucionar la impresión desde un input distinto al html -->
   <a id="prof" class="btn btn-black btn-lg btn-responsive" href="profile.html" role="button" ><i class="fas fa-user-circle"></i></a>
 </footer>
 
