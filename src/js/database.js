@@ -28,7 +28,19 @@ database.ref('chat').on('value', snapshot => {
   snapshot.forEach(e => {
     let draw = e.val();
     let post2 = draw.getPost;
-    drawPost += `<p class="section-post" style="background:#45E8A7;">${post2}<input type="button" onclick="detale()" value="Borrar"> <input type="button" onclick="edit()" value="Editar"> <input type="button" onclick="like()" value="Like"> </p> </br>`;
+    drawPost += `<p class="section-post" style="background:#45E8A7;">${post2}<input type="button" onclick="detale('${e.key}')" value="Borrar"> <input type="button" onclick="edit('${e.key}')" value="Editar"> <input type="button" onclick="like('${e.key}')" value="Like"> </p> </br>`;
   });
   drawPostear.innerHTML = drawPost;
 });
+
+const detale = (id) => {
+  database.ref('chat/' + id).remove();
+};
+
+const edit = () => {
+git
+};
+
+const like = () => {
+  
+};

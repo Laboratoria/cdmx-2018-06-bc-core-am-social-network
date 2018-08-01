@@ -22,15 +22,3 @@ let prueba = document.getElementById('perfil');
 prueba.addEventListener('click', event => {
   window.open('perfil.html','_self');
 });
-
-const edit = () => {
-
-};
-
-const like = () => {
-
-};
-
-const detale = () => {
- 
-};
