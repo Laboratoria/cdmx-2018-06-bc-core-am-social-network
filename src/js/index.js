@@ -2,11 +2,11 @@ let db = initiaziling();
 // Funciones auxiliares
 const getUserInfo = () =>{
   firebase.auth().onAuthStateChanged((user) =>{
-    if (user){
+    if (user) {
       return user;
     }
   });
-}
+};
 // Evento de autenticacíon con Gmail de Google
 document.getElementById('btn-google').addEventListener('click', (event) =>{
   authGoogle();

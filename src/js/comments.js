@@ -4,11 +4,11 @@ var likes = 0;
 var dislikes = 0;
 let commentSend = document.getElementById('send-comment');
 // Funcion de crud para limpiar las entradas
-const cleanRegister = () => {
+const cleanRegister = () =>{
   document.getElementById('comment-text').value = '';
 };
 // Funciones CRUD Create post
-const createMessageinUserProfile = (user) => {
+const createMessageinUserProfile = (user) =>{
   let userRef = user;
   console.log(user.displayName);
   // Traer elementos del DOM
@@ -23,7 +23,7 @@ const createMessageinUserProfile = (user) => {
       console.log('Registro de post de usuario bajo ID: ', docRef.id);
       // Limpiar los espacios del formulario para un nuevo registro
       alert('Tu post esta completo :D');
-      cleanRegister();
+    		cleanRegister();
     })
     .catch(function(error) {
       console.error('Error: No se concreto la publicacion', error);
@@ -36,7 +36,7 @@ const printPost = () => {
     userPostConteiner.innerHTML = '';
     querySnapshot.forEach((doc) => {
       userPostConteiner.innerHTML +=
-                `
+                               `
                                <div class="form-control">
                                 <p>${doc.data().userName}  dice: </p>
                                 <p>${doc.data().userPost}</p>
@@ -48,19 +48,19 @@ const printPost = () => {
     });
   });
 };
-const deletePost = (idProfile) => {
+const deletePost = (idProfile) =>{
   DB.collection('diabeTipsUsersPost').doc(idProfile).delete().then(function() {
     console.log('Post successfully deleted!');
   }).catch(function(error) {
     console.error('Error removing post: ', error);
   });
 };
-const editPost = (idProfile, userPost) => {
+const editPost = (idProfile, userPost) =>{
   document.getElementById('comment-text').value = userPost;
   let btn = document.getElementById('send-comment');
   btn.innerHTML = 'Editar';
   // Evento del boton
-  btn.onclick = () => {
+  btn.onclick = () =>{
     var deleteDBRef = DB.collection('diabeTipsUsersPost').doc(idProfile);
     let userPost = document.getElementById('comment-text').value;
     return deleteDBRef.update({
