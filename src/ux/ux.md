@@ -1,7 +1,8 @@
 # UX
 
 ##Benchmarck
-<img src="../images/Benchmarck.jpg" />
+
+<img src="../images/Benchmarck.JPG" />
 
 ### Prototipo de alta fidelidad
 ***Sketch para movil***
