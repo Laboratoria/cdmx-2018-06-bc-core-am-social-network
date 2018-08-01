@@ -10,7 +10,6 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
   <link rel="stylesheet" href="../css/main.css">
 </head>
-
 <body>
   <div class="container">
       <header id ="welcome"></header>
@@ -29,22 +28,11 @@
           <ul id="chat">
           </ul>
         </section>
-        <section class="row">
-            <button type="button" id="btnLogout" class="offset-lg-4 col-sm-10 col-lg-2">Cerrar Sesión</button>
+        <section>
+            <button type="button" id="btnLogout">Cerrar Sesión</button>
         </section>
   </div>
-  <!--Botón de Facebook-->
-  <section>
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.1';
-      fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
-      <div class="fb-like" data-href="https://www.facebook.com/Fighting-together-261213907937767/?modal=admin_todo_tour" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-  </section>
+  
   
   <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
   <script src="../js/timeline.js"></script>
