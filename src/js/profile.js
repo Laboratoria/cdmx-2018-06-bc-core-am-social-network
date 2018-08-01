@@ -1,7 +1,7 @@
-let DB = initiaziling();
+let db = initiaziling();
 const getUserInfo = (user)=>{
     const userProfileConteiner = document.getElementById('profileContent');
-    DB.collection('diabeTipsUsers').onSnapshot((querySnapshot) => { // onStapshot va a vigilar cuando haga cambios y si hay un cambio entra y te dice que fue lo que cambió
+    db.collection('diabeTipsUsers').onSnapshot((querySnapshot) => { // onStapshot va a vigilar cuando haga cambios y si hay un cambio entra y te dice que fue lo que cambió
       userProfileConteiner.innerHTML = '';
       querySnapshot.forEach((doc) => {
         console.log(`${doc.id} => ${doc.data()}`);
@@ -19,14 +19,18 @@ const getUserInfo = (user)=>{
       });
     });
   };
-}
 
-window.onload {
+
+const llamaContenido = () => {
+  console.log("hola onload");
   firebase.auth().onAuthStateChanged((user) => {
     if (user){
+      console.log("hola usuario");
         getUserInfo(user);
       } else {
         alert("No, no, no ... No te has iniciado sesion");
       }
   });
-}
+};
+
+llamaContenido();
