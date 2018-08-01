@@ -20,23 +20,35 @@
     <title>DiabeTips</title>
   </head>
   <body>
-      <a class="btn btn-dark" href="profileForm.html" role="button">Continuar con mi Perfil</a>
+    <header class="text-center">
+      <img id="logoDiabeTips" src="../images/LogoDiabeTips.png" alt="">
+      <div class="col-1">
+        <div class="form-group">
+          <!-- Boton de logout -->
+          <div id="buttonLogout" class=""></div>
+        </div>
+      </div>
+    </header>
+    <section>
       <div class="row">
-        <div class="col-sm-6 col-md-6 col-lg-6">
+        <div class="col-10 offset-1 text-right">
+          <a id="cancel" class="btn" href="home.html" role="button"><i class="fas fa-times-circle"></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-10 offset-1 text-center">
           <div class="form-group">
-            <!--This is the area of commit-->
-            <input id="comment-text" type="text" class="form-control" placeholder="¿Qué quieres compartir?">
-            <!-- <textarea id="entrada" placeholder="¿Qué quieres compartir?" cols="20" rows="3" class="form-control"></textarea> <!form-control es una class de Bootstrap la cual sirve para identificar un campo de entrada, ya sea un input, select o un textarea.-->
+            <textarea id="comment-text" placeholder="Comparte algo con la comunidad" cols="20" rows="4" class="form-control"></textarea> <!--form-control es una class de Bootstrap la cual sirve para identificar un campo de entrada, ya sea un input, select o un textarea.-->
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-6 offset-3">
           <!--Botones para CRUD con comentarios-->
           <button class="btn btn-success btn-block" type="button" id="send-comment">Compartir</button>
         </div>
       </div>
-    </header>
+    </section>
   </div>
   <div class="container-fluid">
     <div class="row">

@@ -1,7 +1,7 @@
 let DB = initiaziling();
 // Variables referidad a espacios del DOM y variables globales
-var likes = 0;
-var dislikes = 0;
+let likes = 0;
+let dislikes = 0;
 let commentSend = document.getElementById('send-comment');
 // Funcion de crud para limpiar las entradas
 const cleanRegister = () =>{

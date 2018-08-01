@@ -1,11 +1,11 @@
 /* Estilos de Home */
 body {
-  padding-top: 35%;
+  padding-top: 15%;
 }
 /* Barra de Status */
 header {
   top: 0;
-  min-height: 20%;
+  min-height: 5%;
   background: #6a557f;
   padding: 0;
   position: fixed;
@@ -17,12 +17,12 @@ header {
   padding-left: 20px;
 }
 
-#barraProgreso {
+/* #barraProgreso {
   margin-top: 10px;
   font-size: 9pt;
   color: #fff;
   text-align: right;
-}
+} */
 
 /* Curpo del contenido */
 section {
@@ -33,13 +33,21 @@ section {
 #userName {
   font-size:
 }
-
-#comment{
+#comment-text{
   border-color: #61c4e3;
   border-style: double;
 }
 
-#comment p{
+#send a {
+  text-align: ;
+}
+
+#comments{
+  border-color: #61c4e3;
+  border-style: double;
+}
+
+#comments p{
   margin: 0;
   text-align: left;
   padding: 15px;
@@ -47,7 +55,6 @@ section {
 
 #actions a {
   font-size: 15pt;
-  text-align: left;
   color: #eb656a;
 }
 
