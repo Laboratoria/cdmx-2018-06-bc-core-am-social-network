@@ -3,9 +3,7 @@
 }
 
 h3{
-    /* text-shadow: ; */
     color: black;
-    /* font-weight: bold; */
     background-color: white;
     text-align: center;
     opacity: 0.7;
@@ -16,15 +14,6 @@ h3{
     background-color: #8bc34a;
 }
 
-body{
-   background-repeat:no-repeat;
-   background-size: cover;
-   height: 100%;
-}
-
-html{
-    height: 100%;
-}
 
 #brand-logo1, #brand-logo2{
     font-family: 'Julius Sans One', sans-serif;
@@ -41,7 +30,7 @@ a{
 
 .userPost{
 display: inline-block;
-font-size: 200%;
+font-size: 140%;
 margin-left:10px;
 font-family: 'Montserrat Alternates';
 font-weight: bolder;
@@ -53,6 +42,8 @@ margin-top: 0;
     font-size: 150%;
     margin-left: 30px;
 font-family: 'Montserrat Alternates', sans-serif;
+padding-right: 10%;
+text-align: left;
 
 }
 
@@ -68,8 +59,4 @@ font-family: 'Montserrat Alternates', sans-serif;
 
 .post-cont{
     width:100%;
-}
-
-.card{
-    border: green;
 }

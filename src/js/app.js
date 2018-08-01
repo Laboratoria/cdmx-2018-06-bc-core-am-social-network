@@ -39,8 +39,8 @@ const mandarUsuarioDatabase = (user) => {
 
 const pintarUsuario = (user) => {
   let photoProfile = (user.photoURL);
-  console.log((photoProfile));
-  profileContainer.innerHTML =
+  if (user.displayName !== null) {
+    profileContainer.innerHTML =
     `<div class="container center">
        <div class="row">
        <p>${user.displayName}</p>
@@ -48,6 +48,15 @@ const pintarUsuario = (user) => {
        <div> <img class= "circle photoProfile" src= ${photoProfile}></div>
        </div>
        </div>`;
+  } else {
+    profileContainer.innerHTML =
+    `<div class="container center">
+       <div class="row">
+       <p> ${user.email}</p>
+       <div> <img class= "circle photoProfile" src= ${photoProfile}></div>
+       </div>
+       </div>`;
+  }
 };
 
 // botón de publicar para guardar información en la base de datos
@@ -76,14 +85,15 @@ publicarBtn.addEventListener('click', event => {
 const printPost = () => {
   firebase.database().ref('posts')
     .on('child_added', (newMessage) => {
-      card.innerHTML +=
-        `<div class="card">
+      if (newMessage.val().creatorName === undefined) {
+        card.innerHTML +=
+        `<div id="allCard-${newMessage.val().key}" class="card">
          <div class="container post-cont">
          <div  class ="">
          <div class="row">
             <img class="circle photoImage" src= ${newMessage.val().authorPic}>
-             <p class="userPost"> <strong>${newMessage.val().creatorName}</strong>:</p>
-            <p class="textMessage"> ${newMessage.val().text}</p>
+             <p class="userPost"> <strong>${newMessage.val().UserEmail}</strong>:</p>
+            <p id="card${newMessage.val().key}" class="textMessage"> ${newMessage.val().text}</p>
             </div>
             <div class ="card-action ">
             <button type= "button" onclick=editMsg(); data-key="${newMessage.val().key}" class= "edit-message-btn waves-effect waves-light btn">Editar</button>
@@ -92,6 +102,24 @@ const printPost = () => {
          </div>
          </div>
         </div>`;
+      } else if (newMessage.val().creatorName !== null) {
+        card.innerHTML +=
+        `<div id="allCard-${newMessage.val().key}" class="card">
+         <div class="container post-cont">
+         <div  class ="">
+         <div class="row">
+            <img class="circle photoImage" src= ${newMessage.val().authorPic}>
+             <p class="userPost"> <strong>${newMessage.val().creatorName}</strong>:</p>
+            <p id="card-${newMessage.val().key}" class="textMessage"> ${newMessage.val().text}</p>
+            </div>
+            <div class ="card-action ">
+            <button type= "button" onclick=editMsg(); data-key="${newMessage.val().key}" class= "edit-message-btn waves-effect waves-light btn">Editar</button>
+           <button type="button" onclick=deleteMsg() data-key="${newMessage.val().key}" class="delete-message-btn delete waves-effect waves-light btn">Borrar</button>
+           <p id ="count${newMessage.val().key}" class="favorite-counter right"></p><i onclick=starCounter() data-key="${newMessage.val().key}" class=" small material-icons right favoriteCounter">favorite</i>
+         </div>
+         </div>
+        </div>`;
+      }
     });
 };
 
@@ -99,35 +127,36 @@ const printPost = () => {
 const deleteMsg = () => {
   if (confirm('¿Quieres eliminar este mensaje?') === true) {
     let keyRelatedToPost = event.target.dataset.key;
-    console.log(event.target.dataset.key);
+    let allCardActualization = document.getElementById(`allCard-${keyRelatedToPost}`);     
     const deleteMsgDataBase = firebase.database().ref('posts').child(keyRelatedToPost);
     deleteMsgDataBase.remove();
+    allCardActualization.innerHTML = null;
   }
 };
 
 const editMsg = () => {
   let keyRelatedToPost = event.target.dataset.key;
-  console.log(keyRelatedToPost);
   const containsClass = card.classList.contains('editMode');
   const editMsgDataBase = firebase.database().ref('posts').child(keyRelatedToPost);
+  let cardActualization = document.getElementById(`card-${keyRelatedToPost}`);  
+
   editButton = event.target;
 
   editMsgDataBase.once('value', (snapshot) => {
     const data = snapshot.val();
-    console.log(data);
     if (containsClass) {
       editMsgDataBase.update({
         text: messageInput.value
       });
-      // console.log(contenidoTask);
       editButton.innerHTML = 'Editar';
       card.classList.remove('editMode');
+      cardActualization.innerHTML = messageInput.value;
       messageInput.value = '';
     } else {
       editButton.innerHTML = 'Guardar';
       messageInput.value = data.text ;
       card.classList.add('editMode');
-    } 
+    }
   });
 }; 
 const starCounter = () => {
@@ -135,7 +164,7 @@ const starCounter = () => {
   let counter;
   let starCountRef = firebase.database().ref('posts').child(postId);
   let counterFavorites = document.getElementById(`count${postId}`);
-  console.log(counterFavorites);
+  
   starCountRef.once('value', (snapshot) =>{
     const data = snapshot.val();
     counter = data.countStars;
@@ -145,24 +174,6 @@ const starCounter = () => {
     counterFavorites.innerHTML = data.countStars;
   });
 };
-  //   console.log(uid);
-  // postRef.transaction(function(post) {
-  //   if (post) {
-  //     if (post.stars && post.stars[uid]) {
-  //       post.starCount--;
-  //       post.stars[uid] = null;
-  //     } else {
-  //       post.starCount++;
-  //       if (!post.stars) {
-  //         post.stars = {};
-  //       }
-  //       post.stars[uid] = true;
-  //     }
-  //   }
-  //   return post;
-  // });
-  // favoriteCounter.addEventListener('click', toggleStar);
-
 
 const logoutBtn = document.getElementById('logout-btn');
 logoutBtn.addEventListener('click', event => {

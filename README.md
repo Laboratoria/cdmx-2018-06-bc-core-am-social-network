@@ -175,9 +175,10 @@ En su mayoria, las aplicaciones usan colores y lenguaje muy sencillo de entender
 #Instructivo
 
 Para utilizar Greener puedes acceder desde tu cuenta de Google o Facebook clickando en los botones correspondientes o bien puedes registrarte con otra cuenta de correo e iniciar sesión. Comparte publicaciones con tus amigos escribiendo en el input y dando click en publicar. Así mismo:
+ *Si estás logueado con una cuenta que registraste en tu nombre aparecerá tu mail.
  *Es necesario escribir "algo" para poder publicar.
- *Puedes eliminar tus posts o los de tus amigos dando click en BORRAR y recargando la página.
+ *Puedes eliminar tus posts o los de tus amigos dando click en BORRAR.
  *Puedes editar tus posts o los de tus amigos dando click en el botón "EDITAR"; después edita tu texto y da click en el botón GUARDAR para actualizar tu post. 
- *Para visualizar los cambios recarga la página. 
+ *Para ver el conteo de favoritos en la publicación y agregar un favorito, da click en el corazón.
  *Disfruta cambiar a una vida más saludable agregando a "Greener" contenido que tus amigos y tú comparten sobre alimentación saludable con recetas sencillas. 
  *Si deseas salir de la aplicación da click en "LOG OUT". 
