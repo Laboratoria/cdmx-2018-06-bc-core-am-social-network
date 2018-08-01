@@ -13,6 +13,9 @@ const profile = document.getElementById('profile');
 const home = document.getElementById('home');
 const postForm = document.getElementById('postForm');
 const btnHome = document.getElementById('btnHome');
+const btnRanking = document.getElementById('btnRanking');
+const bntMessage = document.getElementById('btnMessage');
+const userPrintPhoto = document.getElementById('user-photo');
 var db = firebase.firestore();
 
 let user = localStorage.getItem("mail");
@@ -113,4 +116,21 @@ const editPost = (postID, postName, text, userId) => {
             console.error("Error updating document: ", error);
         });
 };
-    
+
+btnProfile.addEventListener('click', e => {
+    window.location.assign('../views/perfil.html');
+ });
+
+ btnHome.addEventListener('click', e => {
+    window.location.assign('../views/home.html');
+});
+
+btnRanking.addEventListener('click', e => {
+    window.location.assign('../views/ranking.html');
+});
+
+ bntMessage.addEventListener('click', e => {
+    window.location.assign('../views/mensaje.html');
+});
+
+
