@@ -9,7 +9,7 @@ const config = {
 firebase.initializeApp(config);
 const database = firebase.database();
 let namePost = document.getElementById('namePost');
-let messagePost = document.getElementById('messagePost');
+let messagePost = document.getElementById('messagePost')
 let btnPost = document.getElementById('btnPost');
 let chatUl = document.getElementById('chat');
 let userEmail = document.getElementById('welcome');
