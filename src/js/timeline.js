@@ -5,8 +5,7 @@ const config = {
   projectId: 'red-social-19985',
   storageBucket: 'red-social-19985.appspot.com',
   messagingSenderId: '169924096887'
-};
-
+};   
 firebase.initializeApp(config);
 const database = firebase.database();
 let namePost = document.getElementById('namePost');
@@ -21,6 +20,7 @@ btnPost.addEventListener('click', function() {
   let user = firebase.auth().currentUser;
   let email;
   let mensaje = messagePost.value;
+
   email = user.email;
   firebase.database().ref('posts').push();
   let postNew = firebase.database().ref('posts').push();
@@ -46,20 +46,19 @@ firebase.database().ref('posts').on('value', snapshot => { // objeto que contien
   email = user.email;
   userEmail.innerHTML = `<h1><center>Bienvenidx</center></h1>
                           <h2><center>${email}</center></h2>`;
-  let html = ''; 
+  let html = '';  
   let key = 0;
   snapshot.forEach(function(e) {
     let element = e.val();
     let nombre = element.name;
-    let mensaje = element.message; 
+    let mensaje = element.message;  
     html += `
-     <li> <b> ${nombre}</b>: ${mensaje}
-     <p id="${e.val().keyPost}"> ${e.val().keyPost}</p>
-     <button type="button" class="btnDelete borrar" data-message= "'${key}'">
-     <span><svg-icon><src href="sprite.svg#si-glyph-circle-remove" /></svg-icon></span>
-     </button>
-     </li>
-      `;
+            <div class="card">
+              <b> ${nombre}</b>: ${mensaje}
+              <p id="${e.val().keyPost}"> ${e.val().keyPost}</p>
+              <button type="button" class="btnDelete borrar" data-message= "'${key}'">Borrar mensaje</button>
+          </div> 
+         `;
     key++;
   });
 
@@ -72,15 +71,8 @@ firebase.database().ref('posts').on('value', snapshot => { // objeto que contien
   }
 });
 
-function infoUser() {
-  var user = firebase.auth().currentUser;
-  var email;
-  email = user.email;
-  userEmail.innerHTML = `<h1><center>Bienvenidx</center></h1>
-              <h2><center>${email}</center></h2>`;
-}
 function deleteMessage() {
   let ref = firebase.database().ref('posts');
   let idPost = this.parentNode.childNodes[3].id;
-  ref.child(idPost).remove(); 
+  ref.child(idPost).remove();  
 }
