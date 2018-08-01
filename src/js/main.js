@@ -1,4 +1,5 @@
 socialNetwork.initFirebase();
+
 document.getElementById('btn-login').addEventListener('click', event => {
   event.preventDefault();
   let email = document.getElementById('login-email').value;

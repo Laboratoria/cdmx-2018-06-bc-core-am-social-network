@@ -16,7 +16,7 @@ window.socialNetwork = {
     firebase.auth().signInWithEmailAndPassword(email, password)
       .then(result => {
         // De ser correcta la información de usuario se le enviara a la pagina de news(muro donde estarán los post/comentarios)
-        location.href = ('views/news.html');
+        location.href = 'views/newpost.html';
       })
     // Verifica que no contenga un error y de ser así efectua lo siguiente
       .catch(error => {
@@ -48,7 +48,7 @@ window.socialNetwork = {
         let token = result.credential.accessToken;
         let user = result.user;
         // De ser correcta la información de usuario se le enviara a la pagina de news(muro donde estarán los post/comentarios)
-        location.href = ('views/news.html');
+        location.href = 'views/newpost.html';
         console.log(result);
         // Si contiene algun error verificara y mandará lo siguiente
       }).catch(error => {
@@ -74,7 +74,7 @@ window.socialNetwork = {
       .then(result => {
         let token = result.credential.accessToken;
         let user = result.user;
-        location.href = ('views/news.html');
+        location.href = 'views/newpost.html';
       }).catch(error => { 
         let errorCode = error.code;
         let errorMessage = error.message;
@@ -121,13 +121,13 @@ window.socialNetwork = {
 
   // Cerrar sesión
 
-  singOut: () => {
+  signOut: () => {
     firebase.auth().signOut()
       .then(result =>{
         // Enviara al usuario a la página principal (login 'index.html')
-        location.href('../index.html');
+        location.href = ('../index.html');
       }).catch(error =>{
-        console.log('Error al cerrar sesión');
+        console.log('Error al cerrar sesión', error);
       });
   }        
 };
