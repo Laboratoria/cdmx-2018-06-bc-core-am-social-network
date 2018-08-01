@@ -77,13 +77,13 @@ const printPost = (postID, postName, text, userId) => {
               <p>${text}</p>
             </div>
             <div class="card-action">
-                    <button id="btnLogout" class="btn-flat pink-text" onclick="likePost('${postID}')">
+                    <button class="btn-flat pink-text" onclick="likePost('${postID}')">
                             <i class="large material-icons">favorite</i>
                     </button>
-                    <button id="btnLogout" class="btn-flat" onclick="editPost('${postID}')">
+                    <button class="btn-flat" onclick="editPost('${postID}')">
                             <i class="large material-icons">mode_edit</i>
                     </button>
-                    <button id="btnLogout" class="btn-flat" onclick="deletePost('${postID}','${postName}', '${text}', '${userId}')">
+                    <button class="btn-flat" onclick="deletePost('${postID}','${postName}', '${text}', '${userId}')">
                             <i class="large material-icons">delete</i>
                     </button>
             </div>
@@ -99,7 +99,7 @@ const printPost = (postID, postName, text, userId) => {
               <p>${text}</p>
             </div>
             <div class="card-action">
-                    <button id="btnLogout" class="btn-flat pink-text" onclick="likePost('${postID}')">
+                    <button class="btn-flat pink-text" onclick="likePost('${postID}')">
                             <i class="large material-icons">favorite</i>
                     </button>
             </div>
