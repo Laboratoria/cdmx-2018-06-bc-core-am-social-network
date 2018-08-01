@@ -36,8 +36,8 @@ const authentificating = (provider) =>{
     let userName = userAuth.displayName;
     let userPhoto = userAuth.photoURL;
     let userEmail = userAuth.email;
-// ir a HOME
-  /*document.getElementById('containerUserNAme').innerHTML = `<p>${'Bienvenido'} ${'userName'}</p>
+    // ir a HOME
+  /* document.getElementById('containerUserNAme').innerHTML = `<p>${'Bienvenido'} ${'userName'}</p>
     <button class="btn btn-primary" type="button" id="buttonLogout" onclick="cerrar()">LogOut</button>`;*/
   }).catch(function(error) {
     // generar error
