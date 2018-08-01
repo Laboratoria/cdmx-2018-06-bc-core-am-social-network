@@ -58,44 +58,42 @@
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-10 offset-1">
+    <!-- <div class="row"> -->
+      <!-- <div class="col-10 offset-1"> -->
         <!-- Barra de progreso -->
-        <div class="progress">
-          <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 65%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+        <!-- <div class="progress"> -->
+          <!-- <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 65%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div> -->
           <!-- <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
           <div class="progress-bar bg-warning" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">Cuidado</div>
           <div class="progress-bar bg-danger" role="progressbar" style="width: 40%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div> -->
-        </div>
+        <!-- </div> -->
         <!-- Mensaje de status que puede ser dinámico -->
-      </div>
-      <!-- Foto de usuario en prueba -->
-      <div id="userPhoto"></div>
-      <div id="barraProgreso" class="col-6 offset-5">
-        <p>¡ Tus niveles de glucosa esán ligeramente altos !</p>
-      </div>
-    </div>
+      <!-- </div> -->
+      <!-- <div id="barraProgreso" class="col-6 offset-5"> -->
+        <!-- <p>¡ Tus niveles de glucosa esán ligeramente altos !</p> -->
+      <!-- </div> -->
+    <!-- </div> -->
   </div>
 </header>
 
 <section id="container" class="container-fluid col-10 offset-1">
   <div class="row">
     <div class="form-group">
+      <!-- Foto de usuario en prueba -->
+      <div id="userPhoto"></div>
       <!-- Div para imprimir nombre de usuario -->
       <div id="userName" class=""></div>
     </div>
   </div>
   <div class="row">
     <div class="form-group">
-      <div id="comment">
-        <p>Esta es una prueba del espacio que ocupará el div</p>
-        <div id="actions" class="text-right">
-          <a class = "btn" onclick = "deleteUserProfile"><i class="far fa-trash-alt"></i></a>
-          <a class = "btn" onclick = "editUserProfile"><i class="far fa-edit"></i></a>
-          <a class = "btn" onclick = "editUserProfile"><i class="fas fa-heart"></i></i></a>
-        </div>
-      </div>
+      <textarea id="comment-text" placeholder="Comparte algo con la comunidad" cols="40" rows="4" class="form-control"></textarea>
+      <div id="send" class="text-right">
+        <a id="send-comment" class = "btn" onclick = "commentSend"><i class="fas fa-share-square"></i>Publicar</a>
     </div>
+  </div>
+  <!-- Impresión de comentarios -->
+  <div id="comments" class="col-12"></div>
   </div>
 </section>
 <!--  -->

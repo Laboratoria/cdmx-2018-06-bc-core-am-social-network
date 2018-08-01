@@ -1,0 +1,19 @@
+
+#logoDiabeTips {
+  width: 170px;
+  padding-top: 5%;
+  padding-left: 20px;
+}
+
+#cancel{
+  text-align: right;
+  color: #eb656a;
+  padding: 0;
+  padding-right: 10px;
+}
+
+#buttonLogout{
+  font-size: 9pt;
+  text-align: right;
+  color: #000;
+}

@@ -28,6 +28,12 @@ body {
 }
 /* Tamaño de botones de Editar y Borrar */
 #buttons a{
+  color: #EB656A;
+  font-size: 15pt;
+}
+
+#buttons a:active {
+  color: #61c4e3;
   font-size: 15pt;
 }
 
