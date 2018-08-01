@@ -30,11 +30,12 @@ Hacerlo requiere un verdadero compromiso con la comunidad, ganas de apoyar los m
 Así también debemos mencionar los riesgos, que son estar en la mira de personas que podrían considerarnos "Peligrosas" para sus creencias, sin embargo es algo que se pueda prevenir con las consideraciones de seguridad 
 que publicaremos y tomamos prestadas de una pagina con mas experiencia en el tema: https://gendersec.tacticaltech.org/wiki/index.php/Usos_creativos_feministas_de_las_redes_sociales
 
-
-
 La finalidad de la red social será compartir documentos y puntos de vista sobre la deconstrucción termino atribuido a JACQUES DERRIDA (fuente: https://artilleriainmanente.noblogs.org/post/2016/05/05/jacques-derrida-que-es-la-deconstruccion/)
 deconstrucción: Tomar lo establecido, lo ya construido y ponerlo a prueba, analizar cuál es su origen  y si ese origen es bueno y sano, de otra manera con la conciencia de lo que es y para qué sirve darle otra forma construyendo de nuevo.
 
+el nombre: ZoyraColect.
+Es la union de dos palabras Zoyra:
+Colecti en referencia a colectivo haciendo alucion a 
 ## Argumentación del proyecto
 
   **Negocio**

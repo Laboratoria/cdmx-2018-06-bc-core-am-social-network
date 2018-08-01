@@ -1,16 +1,13 @@
 /* Estilos */
 
-h1 {
-  background-color: #6c22b1;
-  color: #ffffff;
-  padding: 10px;
-  text-align: center;
+b {
+  font-size: 200%;
 }
 
 .centrar {
   position: absolute;
-  left: 20%;
-  width: 20%;
+  left: 30%;
+  width: 50%;
   margin-top: 5%
 }
 
@@ -22,7 +19,7 @@ h1 {
 }
 
 input {
-  width: 100%;
+  width: 80%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -32,8 +29,7 @@ input {
 }
 
 input[type=button] {
-  width: 100%;
-  background-color: rgba(139, 76, 175, 0.589);
+  background-color: rgba(30, 20, 36, 0.589);
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
