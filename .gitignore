@@ -1,2 +1,4 @@
 # Aqui debes poner los archivos que no quieras que se suban a Github
 package-lock.json
+/node_modules
+/.nyc_output

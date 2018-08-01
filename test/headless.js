@@ -2,8 +2,5 @@
 
 global.window = global;
 global.assert = require('chai').assert;
-global.fixtures = {
-  users: require('../package.json'),
-};
-require('../src/data');
+require('../src/js/data.js');
 require('./data.spec.js');
