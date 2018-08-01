@@ -7,7 +7,7 @@ const loginFacebook = () => {
     // The signed-in user info.
     var user = result.user;
     // ...
-    window.location.replace('views/wall.html');
+    // window.location.replace('views/wall.html');
   }).catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
@@ -34,7 +34,7 @@ const loginGoogle = () => {
     // The signed-in user info.
     var user = result.user;
     // ...
-    window.location.replace('views/wall.html');
+    // window.location.replace('views/wall.html');
   }).catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
