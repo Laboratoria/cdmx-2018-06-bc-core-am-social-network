@@ -2,7 +2,22 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <!--Este meta es para que reconozca los diferentes tamaños de pantallas de dispositivos.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Es el la hoja de estilos del bootstrap que esta en la página versión 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lora:700" rel="stylesheet">
+    <!--Link de libreria de Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <!--Link GoogleFonts para las tipografias-->
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500" rel="stylesheet">
+    <!--Íconos de Material-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Vínculo con archivo Css-->
+    <link rel="stylesheet" type="text/css" href="../css/home.css"/>
+    <!--Ícono de pestaña de ventana-->
+    <link rel="icon" href="../images/icono.jpeg">
+    <title>DiabeTips</title>
   </head>
   <body>
     <!-- Permisos de Facebook -->
@@ -28,12 +43,34 @@
       <pre id = 'obj'></pre>
 
       <!-- Aquí comienza el contenido de la página -->
-      <div id="container">
-        <div id="userName" class=""></div>
-        <div id="userEmail" class=""></div>
-        <div id="userPhoto" class=""></div>
-        <div id="buttonLogout" class=""></div>
-      </div>
+      <!--  -->
+      <header>
+        <div class="row">
+          <div id="glucometer" class="col-12">
+            <div class="form-group">
+              <img id="logoDiabeTips" src="../images/LogoDiabeTips.png" alt="">
+            </div>
+          </div>
+        </div>
+      </header>
+      <!--  -->
+      <section class="container-fluid">
+
+        <!-- Div para pruebas -->
+        <div id="container">
+          <div id="userName" class=""></div>
+          <div id="userEmail" class=""></div>
+          <div id="userPhoto" class=""></div>
+          <div id="buttonLogout" class=""></div>
+        </div>
+
+      </section>
+      <!--  -->
+      <footer id="navbar"class="col-12">
+        <a id="home" class="btn btn-black btn-lg btn-responsive" href="html/registry.html" role="button" ><i class="fas fa-home"></i></a>
+        <a id="add" class="btn btn-black btn-lg btn-responsive" href="html/login.html" role="button" ><i class="fas fa-plus"></i></a>
+        <a id="prof" class="btn btn-black btn-lg btn-responsive" href="html/login.html" role="button" ><i class="fas fa-user-circle"></i></a>
+      </footer>
 
       <!--Enlaces para llevar secuencia entre JS y html-->
       <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

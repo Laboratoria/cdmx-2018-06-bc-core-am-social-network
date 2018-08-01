@@ -1,0 +1,71 @@
+/* Estilos de Home */
+@import "reset";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  padding-top: 0;
+}
+
+header {
+  top: 0;
+  min-height: 20%;
+  background: #6a557f;
+  padding: 0;
+  position: fixed;
+}
+
+#logoDiabeTips {
+  /* margin-top: 20px; */
+  width: 30%;
+}
+
+section {
+
+
+}
+
+/* Barra de Navegador */
+#navbar {
+  bottom: 0;
+  position: fixed;
+  z-index: 1000;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  text-align: center;
+  background-color: #EB656A;
+  margin-bottom: auto;
+}
+
+/* Botones del Navegador */
+#home {
+  padding-right: 25%;
+  font-size: 25pt;
+  color: #fff;
+  padding-bottom: 10px;
+}
+
+#add {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 0px;
+  text-align: center;
+  font-size: 40pt;
+  color: #fff;
+
+}
+#prof {
+  padding-left: 25%;
+  font-size: 25pt;
+  color: #fff;
+  padding-bottom: 10px;
+}
+
+/* #glucometer{
+  min-height: 100%;
+  background: #6a557f;
+} */
