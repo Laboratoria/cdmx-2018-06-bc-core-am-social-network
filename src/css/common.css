@@ -42,7 +42,7 @@ body {
   .footer {
     grid-column: 1 / -1;
     clear: both;
-    font-size: 150%;
+    font-size: 100%;
   }
 
 }
