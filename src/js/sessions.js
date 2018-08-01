@@ -1,14 +1,3 @@
-let config = {
-  apiKey: 'AIzaSyBSQUIbzVSxmdELMXnGowhEkEH2QX0joEQ',
-  authDomain: 'social-network-edfb3.firebaseapp.com',
-  databaseURL: 'https://social-network-edfb3.firebaseio.com',
-  projectId: 'social-network-edfb3',
-  storageBucket: 'social-network-edfb3.appspot.com',
-  messagingSenderId: '342564191947'
-};
-firebase.initializeApp(config);
-let db = firebase.firestore();
-
 const addUser = (newEmail, newPassword) => {
   firebase.auth().createUserWithEmailAndPassword(newEmail, newPassword)
     .then(function() {
@@ -31,6 +20,8 @@ firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
   });
 
 const enterUser = (email, password) => {
+  localStorage.clear();
+  localStorage.setItem('mail', email);
   firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
     let errorCode = error.code;
     let errorMessage = error.message;
