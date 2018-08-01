@@ -28,7 +28,7 @@ database.ref('chat').on('value', snapshot => {
   snapshot.forEach(e => {
     let draw = e.val();
     let post2 = draw.getPost;
-    drawPost += `<p class="section-post" style="background:#45E8A7;">${post2}<input type="button" onclick="detale('${e.key}')" value="Borrar"> <input type="button" onclick="edit('${e.key}')" value="Editar"> <input type="button" onclick="like('${e.key}')" value="Like"> </p> </br>`;
+    drawPost += `<p class="section-post">${post2}<input type="button" onclick="detale('${e.key}')" value="Borrar"> <input type="button" onclick="edit('${e.key}','${post2}')" value="Editar"> <input type="button" onclick="like('${e.key}')" value="Like"> </p> </br>`;
   });
   drawPostear.innerHTML = drawPost;
 });
@@ -37,8 +37,16 @@ const detale = (id) => {
   database.ref('chat/' + id).remove();
 };
 
-const edit = () => {
-git
+const edit = (id,post) => {
+  document.getElementById('post').value = post;
+  let editButon = document.getElementById('postear');
+  editButon.value = 'Editar';
+  editButon.addEventListener('click', event => {
+    let post2 = document.getElementById('post').value;
+    document.getElementById('postear').value = 'Postear';
+    database.ref('chat/' + id).set({getPost:post2});
+    database.ref('chat/' + id).remove();
+  });
 };
 
 const like = () => {
