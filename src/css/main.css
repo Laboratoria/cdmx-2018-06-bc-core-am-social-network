@@ -105,3 +105,8 @@ body {
 section{
   margin-top: 10px;
 }
+
+#messagePost{
+  height: 150px;
+  width: 150px;
+}
