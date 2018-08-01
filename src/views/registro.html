@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+     <link rel="shortcut icon" href="imagenes/running.png"/>﻿
+     <!--link rel="stylesheet" href="views/style.css"-->
+
+  </head>
+  <body>
+  <section class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <section class="modal-dialog" role="document">
+          <section class="modal-content">
+            <section class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Registro de nuevo usuario</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </section>
+            <section class="modal-body">
+              <section class="form-group">
+                <label for="name">Nombre</label>
+                <input id="newUser" placeholder="Ingresa tu Nombre" class="form-control"  type="text" />
+              </section>
+              <section class="form-group">
+                <label for="lastName">Apellido</label>
+                <input id="lastName" placeholder="Ingresa tu Apellido" class="form-control"  type="text" />
+              </section>
+              <section class="form-group">
+                <label for="email">Email</label>
+                <input id="newMail" placeholder="Ingresa tu email" class="form-control"  type="text" />
+              </section>
+              <section class="form-group">
+                <label for="password">Password</label>
+                <input id="newPassword" placeholder="Ingresa tu contraseña" class="form-control"  type="password" />
+              </section>
+            </section>
+            <section class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCELAR</button>
+              <button id="singUp" onclick="registrar()" type="button" class="btn btn-primary">GUARDAR</button>
+            </section>
+          </section>
+        </section>
+      </section>
+
+
+<!--Links jquery y database-->
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBIK_C5c7qWNN5vdWV3SF5WjPkfah4o4HQ",
+    authDomain: "foodness-inc.firebaseapp.com",
+    databaseURL: "https://foodness-inc.firebaseio.com",
+    projectId: "foodness-inc",
+    storageBucket: "foodness-inc.appspot.com",
+    messagingSenderId: "705442568830"
+  };
+  firebase.initializeApp(config);
+</script>
+<script type="text/javascript" src="/src/js/index.js"></script>
+<script type="text/javascript" src="src/js/login.js"></script>
+  </body>
+</html>

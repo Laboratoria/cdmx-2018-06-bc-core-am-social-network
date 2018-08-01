@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Runneat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+    crossorigin="anonymous">
+  <link rel="shortcut icon" href="views/imagenes/running.png" />
+  <link rel="stylesheet" href="views/style.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt=""> Bootstrap
+    </a>
+  </nav>
+
+  <div class="row">
+    <div class="col" id="fondo">
+      <img src="views/imagenes/fondo.png" alt="">
+    </div>
+    <div class="col" id="login">
+      <h1>Iniciar sesion</h1>
+      <p>
+        <span class="fa fa-user"></span>
+        <input id="intText" type="email" Placeholder="Email" required>
+      </p>
+      <!-- JS because of IE support; better: placeholder="Username" -->
+      <p>
+        <span class="fa fa-lock"></span>
+        <input id="intPass" type="password" Placeholder="Password" required>
+      </p>
+      <!-- JS because of IE support; better: placeholder="Password" -->
+
+
+      <button id="SignUp" type="button" class="btn btn-primary btn-lg btn-block">Registrarse</button>
+
+      <button id="iniciogoogle" type="button" class="btn btn-secondary btn-lg btn-block">Entrar</button>
+
+      <div class "col" id="loginSocial">
+        <h1>Inicia sesion con</h1>
+        <button onclick="googleSignin()">
+          <img src="views/imagenes/google-plus.png" alt="">
+        </button>
+
+        <button onclick="facebookSignin()">
+          <img src="views/imagenes/facebook.png" alt="">
+        </button>
+
+      </div>
+
+
+    </div>
+
+  </div>
+  </form>
+
+  <script src="../src/js/index.js"></script>
+
+  <script src="../src/css/main.css"></script>
+
+</body>
+
+</html>

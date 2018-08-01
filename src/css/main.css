@@ -1,0 +1,68 @@
+#topLOGO{
+  height: 100%;
+  background-color: #2193A2;
+  color: #2193A2;
+}
+body{
+  height: 100%;
+
+}
+#coments{
+  color: black;
+  height: 100%;
+
+}
+textarea{
+background-color:white;
+padding: 90px;
+padding-bottom: 5px;
+   border: 1px solid #AE1A97;
+}
+#Grupos{
+  border: 2px solid #AE1A97;
+  height: 100%;
+}
+#row2{
+  border: 1px solid black;
+}
+#grupo{
+  border: 1px solid white;
+}
+#RCDMX{
+  color: white;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVCallEXoJoi7SrV6xslYfW5akxs-qeGxyk60ilnvg7myhce1Hbg");
+  background-size: cover;
+}
+#RCDMX:hover{
+  color: white;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVCallEXoJoi7SrV6xslYfW5akxs-qeGxyk60ilnvg7myhce1Hbg");
+  background-blend-mode:luminosity;
+}
+#MCDMX{
+  color: white;
+  background-image: url("http://www.pisainformaflash.it/wp-content/uploads/2018/05/corripisa.jpg");
+  background-size: cover;
+}
+#MCDMX:hover{
+  color: white;
+  background-image: url("http://www.pisainformaflash.it/wp-content/uploads/2018/05/corripisa.jpg");
+  background-blend-mode:luminosity;
+}
+#FOOD{
+  color: white;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2nIsNDSQIpcu3b0D9eqihR7wRAn5kFJS-yyFgH21G32m7J97Fsw");
+  background-size: cover;
+}
+#FOOD:hover{
+  color: white;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2nIsNDSQIpcu3b0D9eqihR7wRAn5kFJS-yyFgH21G32m7J97Fsw");
+  background-blend-mode:luminosity;
+}
+#Grafic{
+  border: 2px solid #AE1A97;
+}
+
+iframe {
+  border: 2px solid #AE1A97;
+  background-size: cover;
+}
