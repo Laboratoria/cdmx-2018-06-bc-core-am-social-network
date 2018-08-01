@@ -1,5 +1,5 @@
 let db = initiaziling();
-const getUserInfo = (user)=>{
+const getUserInfo = (user)=>{// Lama a la info de firebase
     const userProfileConteiner = document.getElementById('profileContent');
     db.collection('diabeTipsUsers').onSnapshot((querySnapshot) => { // onStapshot va a vigilar cuando haga cambios y si hay un cambio entra y te dice que fue lo que cambió
       userProfileConteiner.innerHTML = '';
