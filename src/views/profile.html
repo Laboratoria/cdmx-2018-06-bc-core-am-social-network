@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
 
@@ -27,7 +28,9 @@
 
 <body>
     <nav class="navbar sticky-top navbar-light navbar-expand-lg" style="background-color: #F081A8;">
-        <a class="navbar-brand" href="#">SHEro</a>
+        <a class="navbar-brand" href="#">
+            <img src="../images/logo.png" height="30" alt="">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -47,16 +50,22 @@
         </div>
     </nav>
     <div class="container">
-        <section class="mt-3">
-            <h3><p id="nameUser">USER</p></h3>
-            <!-- <p id="bornUser">DD/MM/AAAA</p> -->
-        </section>
-        <section class="ml-5">
-            <input type="text" id="post" placeholder="Que estas pensando?">
-            <button id="toPost">Publicar</button>
-        </section>
-
-        <section class = "ml-4">
+        <div class="card col-sm-10 col-md-8 mt-3 mb-3">
+            <div class="card-body">
+                <section class="ml-5 mt-3">
+                    <h3>
+                        <p>Hola,
+                            <span id="nameUser">USER</span>
+                        </p>
+                    </h3>
+                </section>
+                <section class="ml-5">
+                    <input type="text" id="post" placeholder="Que estas pensando?">
+                    <button id="toPost">Publicar</button>
+                </section>
+            </div>
+        </div>
+        <section class="ml-4">
             <hr>
             <p id="finalWall"></p>
         </section>
