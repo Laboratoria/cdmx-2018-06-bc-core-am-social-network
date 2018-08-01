@@ -22,7 +22,6 @@ const loginFacebook = () => {
 let facebookAu = document.getElementById('logFacebook');
 facebookAu.addEventListener('click', r => {
   loginFacebook();
-  window.location.replace('views/wall.html');
 });
 // /aqui ya sale google
 
