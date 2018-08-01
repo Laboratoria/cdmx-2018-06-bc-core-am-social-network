@@ -38,7 +38,7 @@
     <section class="row container" id="profile">
         <div class="row">
             <div>
-                
+                <img id="user-photo" class="col s5 m4 l2 offset-3 circle foto-perfil" alt="">
                 <span class="letra-usuario" id="dataName"></span>
             </div>
         </div>
@@ -73,11 +73,8 @@
         <div class="col s12" id="postForm">
             <h4 id="dataName"></h4>
             <div class="input-field col s12">
-            <input type="text" id="postTextProfile" placeholder="Palabras y pensamientos de mamá">
-            <input type="button" id="btnPostPerfil" class="btn light-green" value="Publicar">
-        </div>
-        <div id="comentariosPerfil">
-
+            <input type="text" id="postText" placeholder="Palabras y pensamientos de mamá">
+            <input type="button" id="btnPost" class="btn light-green" value="Publicar">
         </div>
     </section>
     <button id="btnLogout" value="salir">Salir</button>
@@ -87,7 +84,6 @@
     <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
     <script src="../js/firebase.js"></script>
     <script src="../js/home.js"></script>
-    <script src="../js/profilePost.js"></script>
     <script src="../js/logout.js"></script>
 </body>
 
