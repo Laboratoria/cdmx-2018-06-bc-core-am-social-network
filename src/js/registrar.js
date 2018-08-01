@@ -1,10 +1,12 @@
 firedatos.initializeFirebase();
+
+
 // funcion de registrar
 registrar.addEventListener('click', event => {
   console.log('diste un click');
   const email = document.getElementById('email').value;
   const contrasena = document.getElementById('contrasena').value;
-  const usuario = document.getElementById('nombre').value;
+  const user = document.getElementById('nombre').value;
   const auth = firebase.auth();
   auth.createUserWithEmailAndPassword(email, contrasena)
     .then(() => {
@@ -19,14 +21,15 @@ registrar.addEventListener('click', event => {
       console.log(errorMessage);
     });
 });
+
 // observa al usuario
 const observador = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       console.log('Existe usuario');
       // existe usuario
-      const displayName = user.displayName;
-      const email = user.email;
+      const displayUserName = user.displayName;
+      const UserEmail = user.email;
       console.log('*********');
       console.log(user.emailVerified);
       console.log('*********');
@@ -42,6 +45,7 @@ const observador = () => {
     }
   });
 };
+
 observador();
 // verifica y envia correo
 const verificar = () => {
@@ -56,28 +60,6 @@ const verificar = () => {
       console.log(error);
     });
 };
-// funcion de ingreso con google
-document.getElementById('google').addEventListener('click', event => {
-  console.log('Diste un click');
-  const provider = new firebase.auth.GoogleAuthProvider();
-  provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
-  firebase.auth()
-    .signInWithPopup(provider)
-    .then(function (result) {
-      newDoc();
-    });
-});
-// funcion de ingreso con facebook
-document.getElementById('facebook').addEventListener('click', event => {
-  console.log('Diste un click');
-  const provider = new firebase.auth.FacebookAuthProvider();
-  console.log('Diste un click2');
-  firebase.auth()
-    .signInWithPopup(provider)
-    .then(function (result) {
-      newDoc();
-    });
-});
 
 newDoc = () => {
   window.location.assign('../views/app.html');

@@ -19,6 +19,30 @@ enviar.addEventListener('click', event => {
     });
 });
 
+// funcion de ingreso con google
+document.getElementById('google').addEventListener('click', event => {
+  console.log('Diste un click');
+  const provider = new firebase.auth.GoogleAuthProvider();
+  provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+  firebase.auth()
+    .signInWithPopup(provider)
+    .then(function (result) {
+      newDoc();
+    });
+});
+
+// funcion de ingreso con facebook
+document.getElementById('facebook').addEventListener('click', event => {
+  console.log('Diste un click');
+  const provider = new firebase.auth.FacebookAuthProvider();
+  console.log('Diste un click2');
+  firebase.auth()
+    .signInWithPopup(provider)
+    .then(function (result) {
+      newDoc();
+    });
+});
+
 newDoc = () => {
-  window.location.assign('views/app.html');
+  window.location.assign('../src/views/app.html');
 }
