@@ -1,6 +1,6 @@
-document.getElementById('logIn').addEventListener('click', event => {
-  let email = document.getElementById('email').value;
-  let password = document.getElementById('password').value;
+document.getElementById('buttonLogin').addEventListener('click', event => {
+  let email = document.getElementById('userMail').value;
+  let password = document.getElementById('userPass').value;
   
   if (email === null && password === null) {
     console.log('No se admiten campos vacios');
