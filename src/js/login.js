@@ -24,8 +24,9 @@ const authentificating = (provider) =>{
     let token = result.credential.accessToken;
     // Datos del usuario logeado
     let user = result.user;
-
     window.location.assign('home.html');
+    document.getElementById('container').innerHTML = `<p>${'Bienvenido'}${' '}${'usuario'}</p>
+    <button class="btn btn-primary" type="button" id="buttonLogout" onclick="cerrar()">LogOut</button>`;
   }).catch(function(error) {
     // generar error
 	  let errorCode = error.code;
@@ -38,7 +39,6 @@ const authentificating = (provider) =>{
     console.log(credential);
   });
 };
-
 // Ingresar por medio de correo
 const ingresar = (emailU, passwordU) =>{
   firebase.auth().signInWithEmailAndPassword(emailU, passwordU) // Metodo para inicial sesión
@@ -54,7 +54,6 @@ const ingresar = (emailU, passwordU) =>{
       // ...
     });
 };
-
 const observadorEmail = ()=>{
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
@@ -73,8 +72,6 @@ const observadorEmail = ()=>{
     }
   });
 };
-// observadorEmail();
-
 const userSpace = ()=>{
   window.location.assign('home.html');
   document.getElementById('container').innerHTML = `<p>${'Bienvenido'}${' '}${'usuario'}</p>
@@ -105,12 +102,3 @@ document.getElementById('buttonIngresar').addEventListener('click', (event) => {
   let passwordU = document.getElementById('userPsw').value;
   ingresar(emailU, passwordU);
 });
-
-// Verificar formulario de Registro
-/* const registro = document.getElementByName(formulario)[0],
-  elementos = registro.elementos,
-  boton = documentGetElementById('buttonRegistrar'); */
-
-/* const userPrintSpace = document.getElementById('obj');
-let database = firebase.database().ref().child('obj');
-database.on('value', snap => console.log(snap.val()));*/
