@@ -27,10 +27,10 @@ facebookAu.addEventListener('click', the => {
 });
 // /aqui ya sale google
 
-
+firebase.auth().signInWithPopup(providerGoogle).then(function(result) {
 
 const loginGoogle = () => {
-  firebase.auth().signInWithPopup(providerGoogle).then(function(result) {
+  
     var providerGoogle = new firebase.auth.GoogleAuthProvider();
     // This gives you a Google Access Token. You can use it to access the Google API.
     var token = result.credential.accessToken;
