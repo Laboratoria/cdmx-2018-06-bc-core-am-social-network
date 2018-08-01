@@ -75,6 +75,10 @@ p{
     margin-top: 5%;
     
 }
+#logoNatbar{
+    height: 5%;
+    width: 10%;
+}
 
 @media(max-width:570px){
     .logo-first{
