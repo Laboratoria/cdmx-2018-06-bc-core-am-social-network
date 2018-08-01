@@ -88,6 +88,11 @@ section {
   padding-bottom: 10px;
 }
 
+#buttonLogout{
+  font-size: 9pt;
+  text-align: right;
+  color: #fff;
+}
 /* #glucometer{
   min-height: 100%;
   background: #6a557f;
