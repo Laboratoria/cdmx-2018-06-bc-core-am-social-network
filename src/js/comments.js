@@ -22,6 +22,7 @@ db.collection('posts').onSnapshot((querySnapshot) => {
     console.log(`${doc.id} => ${doc.data().post}`);
     finalWall.innerHTML += `<div class="card col-sm-10 col-md-8 mb-3">
         <div class="card-body">
+            <p>${userName}</p>
             <p>${doc.data().post}</p>
             <button id="deleteComment" onclick="deletePost('${doc.id}')">Borrar</button>
             <button id="editComment" onclick="editPost('${doc.id}', '${doc.data().post}')">Editar</button>
