@@ -1,4 +1,19 @@
-# **Red social ""**
+# **Red social **
+
+# Creando una Red Social.
+
+Una emprendedora nos ha solicitado crear una red social. Nos menciona que podemos elegir cualquier tema de los que ella suguiere para poder brindarle diferentes propuestas, para que de manera posterior podamos convenzerla  de lanzarla al mercado. Los temas que suguiere son:
+
+* Alimentación
+* Feminismo
+* Educación
+* Salud
+* Energías Renovables
+
+Acudimos a la primera entrevista con tres propuesta en diferentes temas, la cliente elige la idea de crear una red social en apoyo a personas que padecen leucemia  el tema de salud.
+
+# Planteamiento del problema.
+La leusemia es una enfermedad que se caracteriza por  ocasionar al paciente diversas limitaciones y cambios, una de estas limitantes es que lo vuelve aislado e incomprendido de la sociedad; sin embargo al contar con una Red social permitimos a las personas que padecen  o han padecido leusemia poder interacturar y compartir sus sentimientos, emociones e inquietudes con pacientes igual a ellos.
 
 ----
 ## Introducción
