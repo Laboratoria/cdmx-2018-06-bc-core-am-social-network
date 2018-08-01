@@ -13,7 +13,7 @@ Una emprendedora nos ha solicitado crear una red social. Nos menciona que podemo
 Acudimos a la primera entrevista con tres propuesta en diferentes temas, la cliente elige la idea de crear una red social en apoyo a personas que padecen leucemia  el tema de salud.
 
 # Planteamiento del problema.
-La leusemia es una enfermedad que se caracteriza por  ocasionar al paciente diversas limitaciones y cambios, una de estas limitantes es que lo vuelve aislado e incomprendido de la sociedad; sin embargo al contar con una Red social permitimos a las personas que padecen  o han padecido leusemia poder interacturar y compartir sus sentimientos, emociones e inquietudes con pacientes igual a ellos.
+La leucemia es una enfermedad que se caracteriza por  ocasionar al paciente diversas limitaciones y cambios, una de estas limitantes es que lo vuelve aislado e incomprendido de la sociedad; sin embargo al contar con una Red social permitimos a las personas que padecen  o han padecido leusemia poder interacturar y compartir sus sentimientos, emociones e inquietudes con pacientes igual a ellos.
 
 ----
 ## Introducción
