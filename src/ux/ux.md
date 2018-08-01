@@ -7,7 +7,7 @@
 ### Sketch
 ***Sketch para movil***
 
-<img align="center" src="./images/movil1.png" />
+<img align="center" src="../images/movil1.png" />
 <img align="center" src="./imagenes/movil2.png" />
 <img align="center" src="./imagenes/movil3.png" />
 <img align="center" src="./imagenes/movil4.png" />
