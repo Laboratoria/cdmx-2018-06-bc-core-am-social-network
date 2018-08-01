@@ -42,9 +42,7 @@ const observer = () => {
       let isAnonymous = user.isAnonymous;
       let uid = user.uid;
       let providerData = user.providerData;
-      if (user.emailVerified) {
         location.replace('views/wall.html');
-      }
     }
   });
 };
