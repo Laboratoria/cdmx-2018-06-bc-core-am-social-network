@@ -88,7 +88,7 @@ const printPost = () => {
             <div class ="card-action ">
             <button type= "button" onclick=editMsg(); data-key="${newMessage.val().key}" class= "edit-message-btn waves-effect waves-light btn">Editar</button>
            <button type="button" onclick=deleteMsg() data-key="${newMessage.val().key}" class="delete-message-btn delete waves-effect waves-light btn">Borrar</button>
-         <i onclick=toggleStar() class=" small material-icons right favoriteCounter">favorite</i>  
+           <p id ="count${newMessage.val().key}" class="favorite-counter right"></p><i onclick=starCounter() data-key="${newMessage.val().key}" class=" small material-icons right favoriteCounter">favorite</i>
          </div>
          </div>
         </div>`;
@@ -129,7 +129,39 @@ const editMsg = () => {
       card.classList.add('editMode');
     } 
   });
+}; 
+const starCounter = () => {
+  let postId = event.target.dataset.key;
+  let counter;
+  let starCountRef = firebase.database().ref('posts').child(postId);
+  let counterFavorites = document.getElementById(`count${postId}`);
+  console.log(counterFavorites);
+  starCountRef.once('value', (snapshot) =>{
+    const data = snapshot.val();
+    counter = data.countStars;
+    starCountRef.update({
+      countStars: counter + 1
+    });
+    counterFavorites.innerHTML = data.countStars;
+  });
 };
+  //   console.log(uid);
+  // postRef.transaction(function(post) {
+  //   if (post) {
+  //     if (post.stars && post.stars[uid]) {
+  //       post.starCount--;
+  //       post.stars[uid] = null;
+  //     } else {
+  //       post.starCount++;
+  //       if (!post.stars) {
+  //         post.stars = {};
+  //       }
+  //       post.stars[uid] = true;
+  //     }
+  //   }
+  //   return post;
+  // });
+  // favoriteCounter.addEventListener('click', toggleStar);
 
 
 const logoutBtn = document.getElementById('logout-btn');
@@ -138,21 +170,3 @@ logoutBtn.addEventListener('click', event => {
   location.href = 'index.html';
 });
 
-// const toggleStar = (uid) => {
-//   console.log(uid);
-// postRef.transaction(function(post) {
-//   if (post) {
-//     if (post.stars && post.stars[uid]) {
-//       post.starCount--;
-//       post.stars[uid] = null;
-//     } else {
-//       post.starCount++;
-//       if (!post.stars) {
-//         post.stars = {};
-//       }
-//       post.stars[uid] = true;
-//     }
-//   }
-//   return post;
-// });
-// favoriteCounter.addEventListener('click', toggleStar);

@@ -181,16 +181,3 @@ Para utilizar Greener puedes acceder desde tu cuenta de Google o Facebook clicka
  *Para visualizar los cambios recarga la página. 
  *Disfruta cambiar a una vida más saludable agregando a "Greener" contenido que tus amigos y tú comparten sobre alimentación saludable con recetas sencillas. 
  *Si deseas salir de la aplicación da click en "LOG OUT". 
-
-
-
-Testear el prototipo con usuarios. --------- Hasta que tengamos el figma
-Asegurarte de que la implementación en código siga los lineamientos del diseño. -------------------------- 
-Hacer sesiones de testing con el producto en HTML. -----------------------
-
-Organizar el trabajo en función del valor que le aporta al usuario.
-Poder publicar partes completas y utilizables del producto al final del sprint.
-
-PUNTOS QUE FALTAN DESARROLLAR
-Cómo verificaste que el producto les está resolviendo sus problemas
-Cómo te asegurarás que estos usuarios usen este producto
