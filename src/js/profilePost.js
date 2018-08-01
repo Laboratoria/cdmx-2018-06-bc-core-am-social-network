@@ -69,6 +69,3 @@ const printPostPerfil = (postName, text, userId) => {
               </div>`;
     }
 }
-//btnPostPerfil.addEventListener('click', e => {
-  //  printPostPerfil();
-//});
