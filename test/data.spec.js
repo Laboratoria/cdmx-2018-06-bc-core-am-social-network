@@ -1,4 +1,4 @@
-// Ejecuta tu test 
+// Crea y ejecuta test
 describe('socialNetwork', () => {
   it('deberia ser un objeto', () => {
     assert.equal(typeof socialNetwork, 'object');
