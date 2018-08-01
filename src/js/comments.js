@@ -20,9 +20,8 @@ db.collection('posts').onSnapshot((querySnapshot) => {
   document.getElementById('finalWall').innerHTML = '';
   querySnapshot.forEach((doc) => {
     console.log(`${doc.id} => ${doc.data().post}`);
-    finalWall.innerHTML += `<div class="card col-sm-10 col-md-8">
+    finalWall.innerHTML += `<div class="card col-sm-10 col-md-8 mb-3">
         <div class="card-body">
-            <p>${userName}</p>
             <p>${doc.data().post}</p>
             <button id="deleteComment" onclick="deletePost('${doc.id}')">Borrar</button>
             <button id="editComment" onclick="editPost('${doc.id}', '${doc.data().post}')">Editar</button>
@@ -90,7 +89,7 @@ const likePost = (id) => {
 logOut = () => {
   firebase.auth().signOut().then(function() {
     console.log('Saliendo...');
-    location.replace('../home.html');    
+    location.replace('../index.html');    
   }).catch(function(error) {
     console.log(error);    
   });

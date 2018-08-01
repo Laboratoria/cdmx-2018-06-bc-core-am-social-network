@@ -9,10 +9,6 @@ document.getElementById('toPost').addEventListener('click', event => {
   }
 });
 
-/* document.getElementById('profile').addEventListener('click', event => {
- printProfile();
- }); */
-
 document.getElementById('closeSession').addEventListener('click', event => {
   logOut();
 });
