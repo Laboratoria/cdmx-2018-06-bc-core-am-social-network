@@ -22,7 +22,7 @@ const loginFacebook = () => {
   });
 };
 let facebookAu = document.getElementById('logFacebook');
-facebookAu.addEventListener('click', r => {
+facebookAu.addEventListener('click', the => {
   loginFacebook();
 });
 // /aqui ya sale google
@@ -50,6 +50,6 @@ const loginGoogle = () => {
   });
 };
 let googleAu = document.getElementById('logGoogle');
-googleAu.addEventListener('click', e => {
+googleAu.addEventListener('click', aft => {
   loginGoogle();
 });
