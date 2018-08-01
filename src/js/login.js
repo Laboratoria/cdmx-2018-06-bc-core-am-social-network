@@ -1,13 +1,5 @@
-let db = initiaziling();
-// Funciones auxiliares
-const getUserInfo = () =>{
-  firebase.auth().onAuthStateChanged((user) =>{
-    if (user){
-      return user;
-    }
-  });
-}
-// Evento de autenticacíon con Gmail de Google
+let DB = initiaziling();
+// Evento de autenticaciíon con Gmail de Google
 document.getElementById('btn-google').addEventListener('click', (event) =>{
   authGoogle();
 });
@@ -32,13 +24,8 @@ const authentificating = (provider) =>{
     let token = result.credential.accessToken;
     // Datos del usuario logeado
     let user = result.user;
-    let userAuth = getUserInfo();
-    let userName = userAuth.displayName;
-    let userPhoto = userAuth.photoURL;
-    let userEmail = userAuth.email;
-// ir a HOME
-  /*document.getElementById('containerUserNAme').innerHTML = `<p>${'Bienvenido'} ${'userName'}</p>
-    <button class="btn btn-primary" type="button" id="buttonLogout" onclick="cerrar()">LogOut</button>`;*/
+
+    window.location.assign('home.html');
   }).catch(function(error) {
     // generar error
 	  let errorCode = error.code;
@@ -51,6 +38,7 @@ const authentificating = (provider) =>{
     console.log(credential);
   });
 };
+
 // Ingresar por medio de correo
 const ingresar = (emailU, passwordU) =>{
   firebase.auth().signInWithEmailAndPassword(emailU, passwordU) // Metodo para inicial sesión
@@ -66,8 +54,8 @@ const ingresar = (emailU, passwordU) =>{
       // ...
     });
 };
+
 const observadorEmail = ()=>{
-  console.log(nameU);
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       userSpace();
@@ -85,9 +73,12 @@ const observadorEmail = ()=>{
     }
   });
 };
+// observadorEmail();
+
 const userSpace = ()=>{
-  document.getElementById('container').innerHTML = `<p>${'Bienvenido'}${' '}${nameU}</p>
-  <button type="button" id="buttonLogout" onclick="cerrar()">LogOut</button>`;
+  window.location.assign('home.html');
+  document.getElementById('container').innerHTML = `<p>${'Bienvenido'}${' '}${'usuario'}</p>
+  <button class="btn btn-primary" type="button" id="buttonLogout" onclick="cerrar()">LogOut</button>`;
 };
 const cerrar = () =>{
   let contenido = document.getElementById('container');
@@ -100,8 +91,26 @@ const cerrar = () =>{
       console.log(error);
     });
 };
+
+const verificarEmail = ()=>{
+  let vefificarU = firebase.auth().currentUser;
+  vefificarU.sendEmailVerification().then(function() {
+    console.log('enviando email');
+  }).catch(function() {
+    console.log(error);
+  });
+};
 document.getElementById('buttonIngresar').addEventListener('click', (event) => {
   let emailU = document.getElementById('userEmail').value;
   let passwordU = document.getElementById('userPsw').value;
   ingresar(emailU, passwordU);
 });
+
+// Verificar formulario de Registro
+/* const registro = document.getElementByName(formulario)[0],
+  elementos = registro.elementos,
+  boton = documentGetElementById('buttonRegistrar'); */
+
+/* const userPrintSpace = document.getElementById('obj');
+let database = firebase.database().ref().child('obj');
+database.on('value', snap => console.log(snap.val()));*/

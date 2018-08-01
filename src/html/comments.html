@@ -13,13 +13,6 @@
     <link rel="icon" href="../images/icono.jpeg">
   </head>
   <body>
-      <!-- <input type="text" id="comment-text">
-      <button type="button" id="send-comment">Enviar</button>
-          <div id="comments" class="panel panel-success"></div>
-      <div class="panel panel-success"id="container">
-        <!botón likes -->
-        <i type="" id="likes" onclick="addLike()" class="fa fa-heart" aria-hidden="true"></i> <span id="likeCounter" class="">0</span></div> -->
-
       <a class="btn btn-dark" href="profileForm.html" role="button">Continuar con mi Perfil</a>
       <div class="row">
         <div class="col-sm-6 col-md-6 col-lg-6">
@@ -34,8 +27,6 @@
         <div class="col-md-3">
           <!--Botones para CRUD con comentarios-->
           <button class="btn btn-success btn-block" type="button" id="send-comment">Compartir</button>
-          <button class="btn btn-success btn-block" type="button" id="edit-comment">Editar</button>
-          <button class="btn btn-success btn-block" type="button" id="delete-comment">Borrar</button>
         </div>
       </div>
     </header>
@@ -44,17 +35,20 @@
     <div class="row">
       <div class="col-sm-6 col-md-6 col-lg-6">
         <div id="comments" class="form-control"></div>
-        <div id="container">
-          <!-- botón likes -->
-          <i type="" id="likes" onclick="addLike()" class="fa fa-heart" aria-hidden="true"></i> <span id="likeCounter" class="">0</span>
+        <!--<div id="container">
+          <button class="btn btn-success btn-block" type="button" id="edit-comment">Editar</button>
+          <button class="btn btn-success btn-block" type="button" id="delete-comment">Borrar</button>
+          <i type="" id="likes" onclick="addLike()" class="fa fa-heart" aria-hidden="true"></i> <span id="likeCounter" class="">0</span></div>
+          <i type="" id="dislikes" onclick="restLike()" class="fal fa-heartbeat" aria-hidden="true"></i> <span id="dislikeCounter" class="">0</span></div>-->
+      </div>
+      <div id = "userPhoto">
       </div>
     </div>
   </div>
     <!--Enlaces para llevar secuencia entre JS y html-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
-    <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
     <script src="../js/authentications.js"></script>
     <script src="../js/comments.js"></script>
   </body>

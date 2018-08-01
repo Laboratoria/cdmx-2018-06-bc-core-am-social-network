@@ -6,38 +6,41 @@
   </head>
   <body>
     <!-- Permisos de Facebook -->
-    <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '651409108544978',
-      xfbml      : true,
-      version    : 'v3.0'
-    });
-    FB.AppEvents.logPageView();
-  };
+      <script>
+          window.fbAsyncInit = function() {
+            FB.init({
+              appId      : '651409108544978',
+              xfbml      : true,
+              version    : 'v3.0'
+            });
+            FB.AppEvents.logPageView();
+      };
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-<h2 id='userSpace'></h2>
-<pre id = 'obj'></pre>
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+      </script>
+      <h2 id='userSpace'></h2>
+      <pre id = 'obj'></pre>
 
-<!-- Aquí comienza el contenido de la página -->
+      <!-- Aquí comienza el contenido de la página -->
+      <div id="container">
+        <div id="userName" class=""></div>
+        <div id="userEmail" class=""></div>
+        <div id="userPhoto" class=""></div>
+        <div id="buttonLogout" class=""></div>
+      </div>
 
-<footer>
-  <nav>
-    <div class="col-sm-12 text-center">
-        <a class="btn btn-black btn-lg btn-responsive" href="html/registry.html" role="button" >UNIRSE</a>
-        <a class="btn btn-black btn-lg btn-responsive" href="html/login.html" role="button" >INICIO</a>
-    </div>
-  </nav>
-</footer>
-
-   </script>
+      <!--Enlaces para llevar secuencia entre JS y html-->
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+      <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+      <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+      <script src="../js/authentications.js"></script>
+      <script src="../js/home.js"></script>
   </body>
 </html>
