@@ -179,5 +179,6 @@ Para utilizar Greener puedes acceder desde tu cuenta de Google o Facebook clicka
  *Puedes eliminar tus posts o los de tus amigos dando click en BORRAR y recargando la página.
  *Puedes editar tus posts o los de tus amigos dando click en el botón "EDITAR"; después edita tu texto y da click en el botón GUARDAR para actualizar tu post. 
  *Para visualizar los cambios recarga la página. 
+ *Para ver el conteo de favoritos en la publicación y agregar un favorito, da click en el corazón.
  *Disfruta cambiar a una vida más saludable agregando a "Greener" contenido que tus amigos y tú comparten sobre alimentación saludable con recetas sencillas. 
  *Si deseas salir de la aplicación da click en "LOG OUT". 

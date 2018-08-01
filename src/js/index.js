@@ -68,7 +68,7 @@ logInBtn.addEventListener('click', event => {
 });
 
 // autenticar con GOOGLE
-loginGoogleBtn.addEventListener('click', event=>{
+loginGoogleBtn.addEventListener('click', event =>{
   const provider = new firebase.auth.GoogleAuthProvider();// google es nuestro proveedor y lo autentifique con firebase
   firebase.auth()  
     .signInWithPopup(provider) // popUp te va a dar la ventana de acceso a tu cuenta de google. parámetro de la variable provider que tiene la autenticación con google
