@@ -13,6 +13,10 @@ const profile = document.getElementById('profile');
 const home = document.getElementById('home');
 const postForm = document.getElementById('postForm');
 const btnHome = document.getElementById('btnHome');
+const btnRanking = document.getElementById('btnRanking');
+const bntMessage = document.getElementById('btnMessage');
+const userPrintPhoto = document.getElementById('user-photo');
+const addingPhoto = document.getElementById('photo');
 var db = firebase.firestore();
 
 let user = localStorage.getItem("mail");
@@ -39,7 +43,8 @@ btnPost.addEventListener('click', e => {
         db.collection("posted").add({
             user: userUid,
             name: user,
-            post: posted
+            post: posted,
+            like: 0
         })
             .then(function (docRef) {
                 console.log("Document written with ID: ", docRef.id);
@@ -64,26 +69,43 @@ db.collection("posted").onSnapshot((querySnapshot) => {
 
 const printPost = (postID, postName, text, userId) => {
     if (userUid === userId) {
-        comentarios.innerHTML += `<div>
-                <form action="">
-                <p>${postName}</p>
-                    <input type="text" id="input" readonly = "readonly" value="${text} ">
-                    <p id="likes" class="inline"></p>
-                    <input type="button" class="btnEdit btn" onclick="likePost()" value="Like">
-                    <input type="button" class="btnEdit btn" onclick="editPost('${postID}')" value="Editar">
-                    <input type="button" class="btn delete" value="Eliminar" onclick="deletePost('${postID}','${postName}', '${text}', '${userId}')">
-                    <input type="button" class="btn none" onclick="savePost()" value="Guardar">
-                </form>
-              </div>`;
+        comentarios.innerHTML += `<div class="row">
+        <div class="col s12 m6">
+          <div class="card blue-grey lighten-5">
+            <div class="card-content black-text">
+              <span class="card-title pink-text">${postName}</span>
+              <p>${text}</p>
+            </div>
+            <div class="card-action">
+                    <button id="btnLogout" class="btn-flat pink-text" onclick="likePost('${postID}')">
+                            <i class="large material-icons">favorite</i>
+                    </button>
+                    <button id="btnLogout" class="btn-flat" onclick="editPost('${postID}')">
+                            <i class="large material-icons">mode_edit</i>
+                    </button>
+                    <button id="btnLogout" class="btn-flat" onclick="deletePost('${postID}','${postName}', '${text}', '${userId}')">
+                            <i class="large material-icons">delete</i>
+                    </button>
+            </div>
+          </div>
+        </div>
+      </div>`;
     } else {
-        comentarios.innerHTML += `<div>
-                <form action="">
-                <p>${postName}</p>
-                    <input type="text" id="input" readonly = "readonly" value="${text} ">
-                    <p id="likes" class="inline"></p>
-                    <input type="button" class="btnEdit btn" onclick="likePost()" value="Like">
-                </form>
-              </div>`;
+        comentarios.innerHTML += `<div class="row">
+        <div class="col s12 m6">
+          <div class="card white">
+            <div class="card-content black-text">
+              <span class="card-title pink-text">${postName}</span>
+              <p>${text}</p>
+            </div>
+            <div class="card-action">
+                    <button id="btnLogout" class="btn-flat pink-text" onclick="likePost('${postID}')">
+                            <i class="large material-icons">favorite</i>
+                    </button>
+            </div>
+          </div>
+        </div>
+      </div>`;
     }
 }
 
@@ -99,7 +121,6 @@ const editPost = (postID, postName, text, userId) => {
     let newPost = prompt('Escribe tus cambios');
     let postRef = db.collection("posted").doc(postID);
 
-    // Set the "capital" field of the city 'DC'
     return postRef.update({
         user: userUid,
         name: user,
@@ -113,4 +134,21 @@ const editPost = (postID, postName, text, userId) => {
             console.error("Error updating document: ", error);
         });
 };
-    
+
+
+
+btnProfile.addEventListener('click', e => {
+    window.location.assign('../views/perfil.html');
+    addingPhoto.innerHTML = `<img id="user-photo" src="${userPhoto}" class="col s5 m4 l2 offset-3 circle foto-perfil" alt="">`;
+ });
+
+ btnHome.addEventListener('click', e => {
+    window.location.assign('../views/home.html');
+});
+
+ bntMessage.addEventListener('click', e => {
+    location.href = '../views/mensaje.html';
+});
+
+
+
