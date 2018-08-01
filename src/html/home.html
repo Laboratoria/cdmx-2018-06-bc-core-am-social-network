@@ -1,83 +1,110 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <!--Este meta es para que reconozca los diferentes tamaños de pantallas de dispositivos.-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!--Es el la hoja de estilos del bootstrap que esta en la página versión 4 -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Lora:700" rel="stylesheet">
-    <!--Link de libreria de Font Awesome-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-    <!--Link GoogleFonts para las tipografias-->
-    <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500" rel="stylesheet">
-    <!--Íconos de Material-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Vínculo con archivo Css-->
-    <link rel="stylesheet" type="text/css" href="../css/home.css"/>
-    <!--Ícono de pestaña de ventana-->
-    <link rel="icon" href="../images/icono.jpeg">
-    <title>DiabeTips</title>
-  </head>
-  <body>
-    <!-- Permisos de Facebook -->
-      <script>
-          window.fbAsyncInit = function() {
-            FB.init({
-              appId      : '651409108544978',
-              xfbml      : true,
-              version    : 'v3.0'
-            });
-            FB.AppEvents.logPageView();
-      };
+<head>
+  <meta charset="utf-8">
+  <!--Este meta es para que reconozca los diferentes tamaños de pantallas de dispositivos.-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!--Es el la hoja de estilos del bootstrap que esta en la página versión 4 -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Lora:700" rel="stylesheet">
+  <!--Link de libreria de Font Awesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <!--Link GoogleFonts para las tipografias-->
+  <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500" rel="stylesheet">
+  <!--Íconos de Material-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Vínculo con archivo Css-->
+  <link rel="stylesheet" type="text/css" href="../css/home.css"/>
+  <!--Ícono de pestaña de ventana-->
+  <link rel="icon" href="../images/icono.jpeg">
+  <title>DiabeTips</title>
+</head>
+<body>
+  <!-- Permisos de Facebook -->
+  <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '651409108544978',
+      xfbml      : true,
+      version    : 'v3.0'
+    });
+    FB.AppEvents.logPageView();
+  };
 
-      (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "https://connect.facebook.net/en_US/sdk.js";
-         fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
-      </script>
-      <h2 id='userSpace'></h2>
-      <pre id = 'obj'></pre>
+  (function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <h2 id='userSpace'></h2>
+  <pre id = 'obj'></pre>
 
-      <!-- Aquí comienza el contenido de la página -->
-      <!--  -->
-      <header>
-        <div class="row">
-          <div id="glucometer" class="col-12">
-            <div class="form-group">
-              <img id="logoDiabeTips" src="../images/LogoDiabeTips.png" alt="">
-            </div>
-          </div>
+  <!-- Aquí comienza el contenido de la página -->
+  <!--  -->
+  <header>
+    <div class="row">
+      <div id="glucometer" class="col-12">
+        <div class="form-group">
+          <img id="logoDiabeTips" src="../images/LogoDiabeTips.png" alt="">
         </div>
-      </header>
-      <!--  -->
-      <section class="container-fluid">
-
-        <!-- Div para pruebas -->
-        <div id="container">
-          <div id="userName" class=""></div>
-          <div id="userEmail" class=""></div>
-          <div id="userPhoto" class=""></div>
-          <div id="buttonLogout" class=""></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-10 offset-1">
+        <!-- Barra de progreso -->
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 65%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+          <!-- <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+          <div class="progress-bar bg-warning" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">Cuidado</div>
+          <div class="progress-bar bg-danger" role="progressbar" style="width: 40%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div> -->
         </div>
+        <!-- Mensaje de status que puede ser dinámico -->
+      </div>
+      <div id="barraProgreso" class="col-6 offset-5">
+        <p>¡ Tus niveles de glucosa esán ligeramente altos !</p>
+      </div>
+    </div>
+  </div>
+</header>
+<!--  -->
+<section id="container" class="container-fluid col-10 offset-1">
+  <div class="row">
+    <div class="form-group">
+      <!-- Div para imprimir nombre de usuario -->
+      <div id="userName" class="">Bienvenida Usuaria</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group">
+      <div id="comment">
+        <p>Esta es una prueba del espacio que ocupará el div</p>
+        <div id="actions" class="text-right">
+          <a class = "btn" onclick = "deleteUserProfile"><i class="far fa-trash-alt"></i></a>
+          <a class = "btn" onclick = "editUserProfile"><i class="far fa-edit"></i></a>
+          <a class = "btn" onclick = "editUserProfile"><i class="fas fa-heart"></i></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Boton de logout -->
+  <div id="buttonLogout" class=""></div>
+</section>
+<!--  -->
+<footer id="navbar"class="col-12">
+  <a id="home" class="btn btn-black btn-lg btn-responsive" href="html/registry.html" role="button" ><i class="fas fa-home"></i></a>
+  <a id="add" class="btn btn-black btn-lg btn-responsive" href="html/login.html" role="button" ><i class="fas fa-plus"></i></a>
+  <a id="prof" class="btn btn-black btn-lg btn-responsive" href="html/login.html" role="button" ><i class="fas fa-user-circle"></i></a>
+</footer>
 
-      </section>
-      <!--  -->
-      <footer id="navbar"class="col-12">
-        <a id="home" class="btn btn-black btn-lg btn-responsive" href="home.html" role="button" ><i class="fas fa-home"></i></a>
-        <a id="add" class="btn btn-black btn-lg btn-responsive" href="comments.html" role="button" ><i class="fas fa-plus"></i></a>
-        <a id="prof" class="btn btn-black btn-lg btn-responsive" href="profile.html" role="button" ><i class="fas fa-user-circle"></i></a>
-      </footer>
-
-      <!--Enlaces para llevar secuencia entre JS y html-->
-      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-      <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
-      <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
-      <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
-      <script src="../js/authentications.js"></script>
-      <script src="../js/home.js"></script>
-  </body>
+<!--Enlaces para llevar secuencia entre JS y html-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+<script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+<script src="../js/authentications.js"></script>
+<script src="../js/home.js"></script>
+</body>
 </html>

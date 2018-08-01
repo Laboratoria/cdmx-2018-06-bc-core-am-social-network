@@ -13,7 +13,7 @@ const createMessageinUserProfile = (user) =>{
   console.log(user.displayName);
   // Traer elementos del DOM
   let userPost = document.getElementById('comment-text').value;
-  //const timestamp = firebase.firestore.FieldValue.serverTimestamp().ref.update({ updatedAt: new Date() });
+  // const timestamp = firebase.firestore.FieldValue.serverTimestamp().ref.update({ updatedAt: new Date() });
   DB.collection('diabeTipsUsersPost').add({
     userPost: userPost,
     userName: user.displayName,
@@ -28,7 +28,7 @@ const createMessageinUserProfile = (user) =>{
     .catch(function(error) {
       console.error('Error: No se concreto la publicacion', error);
     });
-};//coments to merge
+};// coments to merge
 // Read and Show post
 const printPost = () => {
   const userPostConteiner = document.getElementById('comments');
@@ -78,18 +78,18 @@ const editPost = (idProfile, userPost) =>{
 };
 // Contador de likes
 let countLikes = 0;
-const addLike = () => { /* Cuando sucede una llamada al evento del boton like, se acumula un punto que se mostrara al lado */
+const addLike = () => { // Cuando sucede una llamada al evento del boton like, se acumula un punto que se mostrara al lado //
   countLikes = countLikes + 1;
   document.getElementById('likeCounter').textContent = countLikes;
 };
 
 commentSend.addEventListener('click', (event) => {
-    firebase.auth().onAuthStateChanged((user) => {
-      if (user){
-          createMessageinUserProfile(user);
-          printPost();
-        } else {
-          alert("No, no, no ... No te has iniciado sesion");
-        }
-    });
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+      createMessageinUserProfile(user);
+      printPost();
+    } else {
+      alert('No, no, no ... No te has iniciado sesion');
+    }
+  });
 });
