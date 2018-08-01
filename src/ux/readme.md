@@ -25,6 +25,10 @@ Desktop
 
 ![alt text](img/diagramadeflujo.jpg)
 
+## Persona Profile
+
+[xtensio](https://app.xtensio.com/edit/rrt6tv8m)
+
 ## Benchmark (externo)
 "DiabeTips"
 Mejora tu calidad de vida y la de los demas.
