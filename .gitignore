@@ -1,6 +1,1 @@
-.DS_Store
-*.swp
-.nyc_output/
-coverage/
-node_modules/
-/.vscode/settings.json
+.vscode/settings.json
