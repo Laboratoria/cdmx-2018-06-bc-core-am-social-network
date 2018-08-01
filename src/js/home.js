@@ -13,10 +13,7 @@ const profile = document.getElementById('profile');
 const home = document.getElementById('home');
 const postForm = document.getElementById('postForm');
 const btnHome = document.getElementById('btnHome');
-const btnRanking = document.getElementById('btnRanking');
-const bntMessage = document.getElementById('btnMessage');
-const userPrintPhoto = document.getElementById('user-photo');
-
+var db = firebase.firestore();
 
 let user = localStorage.getItem("mail");
 let userUid = localStorage.getItem("userUid");
@@ -27,74 +24,59 @@ const bringData = () => {
     if (user === "google" || user === "facebook") {
         user = localStorage.getItem("display");
         userPhoto = localStorage.getItem("photo");
-    } else  {
-    } 
+    } else {
+    }
 }
 bringData()
 
 dataName.innerHTML = user;
-
-const databaseUser = firebase.database().ref().child('user');
-databaseUser.on('child_added', snap => {
-    let userName = snap.child("name").val();
-    let userMail = snap.child("mail").val();
-    //console.log(userName, userMail);
-
-});
 
 btnPost.addEventListener('click', e => {
     let posted = postText.value;
     if (posted === "" || posted === " ") {
         alert('Escribe un mensaje')
     } else {
-        let ref = database.ref('posts');
-        let data = {
-            user : userUid,
+        db.collection("posted").add({
+            user: userUid,
             name: user,
             post: posted
-        }
-        ref.push(data);
-        postText.value = '';
+        })
+            .then(function (docRef) {
+                console.log("Document written with ID: ", docRef.id);
+                postText.value = '';
+            })
+            .catch(function (error) {
+                console.error("Error adding document: ", error);
+            });
     }
 });
 
-let keys;
-window.onload = () => {
-    const databasePost = firebase.database().ref().child('posts');
-    databasePost.on('child_added', snap => {
-        let postName = snap.child("name").val();
-        let text = snap.child("post").val();
-        let userId = snap.child("user").val();
-        //console.log(userId);
-        printPost(postName, text, userId);
+db.collection("posted").onSnapshot((querySnapshot) => {
+    comentarios.innerHTML = '';
+    querySnapshot.forEach((doc) => {
+        let postID = doc.id
+        let postName = doc.data().name
+        let text = doc.data().post
+        let userId = doc.data().user
+        printPost(postID, postName, text, userId);
     });
-    databasePost.on('value', data => {
-        let getKeys = data.val();
-        let keysObj = Object.keys(getKeys);
-        for (let i = 0; i < keysObj.length; i++){
-            keys = keysObj[i];
-            editPost(keys);
-             // console.log(keys);
-        }
-       // console.log(keys);
-    })
-};
+});
 
-const printPost = (postName, text, userId) => {
-    if (userUid === userId){
+const printPost = (postID, postName, text, userId) => {
+    if (userUid === userId) {
         comentarios.innerHTML += `<div>
                 <form action="">
                 <p>${postName}</p>
                     <input type="text" id="input" readonly = "readonly" value="${text} ">
                     <p id="likes" class="inline"></p>
                     <input type="button" class="btnEdit btn" onclick="likePost()" value="Like">
-                    <input type="button" class="btnEdit btn" onclick="editPost()" value="Editar">
-                    <input type="button" class="btn delete" value="Eliminar" onclick="deletePost()"> 
+                    <input type="button" class="btnEdit btn" onclick="editPost('${postID}')" value="Editar">
+                    <input type="button" class="btn delete" value="Eliminar" onclick="deletePost('${postID}','${postName}', '${text}', '${userId}')">
                     <input type="button" class="btn none" onclick="savePost()" value="Guardar">
                 </form>
               </div>`;
     } else {
-    comentarios.innerHTML += `<div>
+        comentarios.innerHTML += `<div>
                 <form action="">
                 <p>${postName}</p>
                     <input type="text" id="input" readonly = "readonly" value="${text} ">
@@ -102,87 +84,33 @@ const printPost = (postName, text, userId) => {
                     <input type="button" class="btnEdit btn" onclick="likePost()" value="Like">
                 </form>
               </div>`;
-            }
+    }
 }
 
-//Función para editar post
-const editPost = (keys) => {
-   // console.log(keys);
+const deletePost = (postID) => {
+    db.collection("posted").doc(postID).delete().then(function () {
+        console.log("Document successfully deleted!");
+    }).catch(function (error) {
+        console.error("Error removing document: ", error);
+    });
+}
+
+const editPost = (postID, postName, text, userId) => {
+    let newPost = prompt('Escribe tus cambios');
+    let postRef = db.collection("posted").doc(postID);
+
+    // Set the "capital" field of the city 'DC'
+    return postRef.update({
+        user: userUid,
+        name: user,
+        post: newPost
+    })
+        .then(function () {
+            console.log("Document successfully updated!");
+        })
+        .catch(function (error) {
+            // The document probably doesn't exist.
+            console.error("Error updating document: ", error);
+        });
+};
     
-}
-
-//Función para likear post
-const likePost = () => {
-    alert('like');
-}
-
-//Función para salvar post
-const savePost = () => {
-    alert('save');
-}
-
-//Función para eliminar post
-const deletePost = () => {
-    alert('delete');
-}
-
-
-btnProfile.addEventListener('click', e => {
-   window.location.assign('../views/perfil.html');
-   userPrintPhoto.src='userPrintPhoto3';
-   profile.innerHTML = `<h1>${user}</h1>`;
-  });
-
-
-btnHome.addEventListener('click', e => {
-    window.location.assign('../views/home.html');
-});
-
-btnRanking.addEventListener('click', e => {
-    window.location.assign('../views/ranking.html');
-});
-
-bntMessage.addEventListener('click', e => {
-    window.location.assign('../views/mensaje.html');
-});
-
-
-
-
-
-// Botón para guardar edición HTML 
-/*
-btnSave.addEventListener('click', e => {
-    let readonly = document.createAttribute("readonly");
-    readonly.value = "readonly";
-    input.setAttributeNode(readonly);
-    btnLike.style.display = "inline-block";
-    btnEdit.style.display = "inline-block";
-    btnErase.style.display = "inline-block";
-    btnSave.style.display = "none";
-});*/
-
-/*
-let count = 0;
-btnLike.addEventListener('click', e => {
-    count++;
-    likes.innerHTML = count;
-});*/
-
-btnProfile.addEventListener('click', e => {
-  postForm.style.display = "none";
-  borrar.style.display = "none";
-  comentarios.style.display = "none";
-  profile.style.display = "block";
-  profile.innerHTML = `<h1>${user}</h1>`;
-});
-
-// Botón para editar post
-/*
-btnEdit.addEventListener('click', e => {
-    input.removeAttribute("readonly");
-    btnLike.style.display = "none";
-    btnEdit.style.display = "none";
-    btnErase.style.display = "none";
-    btnSave.style.display = "block";
-});*/
