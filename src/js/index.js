@@ -33,16 +33,14 @@ function sendSignup(event) { // En esta función se agrega los datos del formula
   });
 }
 
-// function signupAuth(event) {
-//   event.preventDefault();
-//   let email = event.target.correo.value, password = event.target.password.value;
-//   refUserAuth.createUserWithEmailAndPassword(email.toString(), password.toString()).catch(function(error) {
-//     // Handle Errors here.
-//     var errorCode = error.code;
-//     var errorMessage = error.message;
-//     // ...
-//   });
-//   alert(event.target.nombre.value + ' quedaste Registradx');
-// }
-
-// let provider = new firebase.auth.GoogleAuthProvider();
+function signupAuth(event) {
+  event.preventDefault();
+  let email = event.target.correo.value, password = event.target.password.value;
+  refUserAuth.createUserWithEmailAndPassword(email.toString(), password.toString()).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // ...
+  });
+  alert(event.target.nombre.value + ' quedaste Registradx');
+}

@@ -5,31 +5,33 @@ const config = {
   projectId: 'red-social-19985',
   storageBucket: 'red-social-19985.appspot.com',
   messagingSenderId: '169924096887'
-};  
+};
+
 firebase.initializeApp(config);
 const database = firebase.database();
 let namePost = document.getElementById('namePost');
-let messagePost = document.getElementById('messagePost');
+let messagePost = document.getElementById('messagePost')
 let btnPost = document.getElementById('btnPost');
 let chatUl = document.getElementById('chat');
 let userEmail = document.getElementById('welcome');
 let btnLogOut = document.getElementById('btnLogout'); 
 let keyPost;
+
 btnPost.addEventListener('click', function() {
   let user = firebase.auth().currentUser;
   let email;
-  let nombre = namePost.value;
   let mensaje = messagePost.value;
   email = user.email;
   firebase.database().ref('posts').push();
   let postNew = firebase.database().ref('posts').push();
   keyPost = postNew.getKey();
   firebase.database().ref(`posts/${keyPost}`).set({
-    name: nombre,
+    name: email,
     message: mensaje,
     keyPost: keyPost
   });
 });
+
 btnLogOut.addEventListener('click', function() {
   firebase.auth().signOut().then(function() {
     window.location.href = '../index.html';
@@ -37,8 +39,13 @@ btnLogOut.addEventListener('click', function() {
     console.log(error);
   });
 });
-firebase.database().ref('posts').on('value', snapshot => {// objeto que contiene la data
-  infoUser();
+
+firebase.database().ref('posts').on('value', snapshot => { // objeto que contiene la data
+  var user = firebase.auth().currentUser;
+  var email;
+  email = user.email;
+  userEmail.innerHTML = `<h1><center>Bienvenidx</center></h1>
+                          <h2><center>${email}</center></h2>`;
   let html = ''; 
   let key = 0;
   snapshot.forEach(function(e) {
@@ -55,6 +62,7 @@ firebase.database().ref('posts').on('value', snapshot => {// objeto que contiene
       `;
     key++;
   });
+
   chatUl.innerHTML = html;
   if (chatUl !== '') {
     let deleteElements = document.getElementsByClassName('borrar');
@@ -63,6 +71,7 @@ firebase.database().ref('posts').on('value', snapshot => {// objeto que contiene
     }
   }
 });
+
 function infoUser() {
   var user = firebase.auth().currentUser;
   var email;

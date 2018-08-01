@@ -53,7 +53,6 @@ function valitator(provider) {
   refUserAuth.signInWithPopup(provider).then(function(result) {
     var token = result.credential.accessToken;
     var user = result.user;
-    alert(' Bienvenidx ' + user);
     observador();
   }).catch(function(error) {
     var errorCode = error.code;
