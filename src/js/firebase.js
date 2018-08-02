@@ -7,7 +7,7 @@ var config = {
   storageBucket: 'red-social-96a75.appspot.com',
   messagingSenderId: '775319261849'
 };
-firebase.initializeApp(config);
+firebase.initializeApp(config); 
 let database = firebase.database();
 
 var db = firebase.firestore();
