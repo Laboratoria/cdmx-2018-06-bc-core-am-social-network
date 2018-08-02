@@ -1,7 +1,7 @@
 
 # Greener
 
-** Instroducción: ¿qué es una red social?**
+**Introducción: ¿qué es una red social?**
 
 Para poder entender lo que nuestro cliente solicita y con ello empatar nuestras ideas sobre el producto, debemos aterrizar el concepto y los elementos de una red social. Hoy en día todos utilizamos distintas redes sociales: Instagram, Facebook, twitter, entre las más conocidas. De éstas podemos observar que son servicios centrados en los intereses del usuario y sus relaciones personales. 
 
@@ -41,7 +41,7 @@ Por ello pensamos en crear una red social que brinde un espacio para personas qu
 Nos dimos a la tarea de  entender las motivaciones y  propósitos de nuestros usuarios para brindar en conjunto con ellos herramientas que puedan ayudarlos a sustentar buenas prácticas alimenticias haciéndolos partícipes en este proceso. Con esto pretendemos dar apoyo a los usuarios que buscan mejorar su calidad de vida pensando en el contexto en el que se desenvuelven día a día.
 
 
-**¿Quiénes son los principales usuarios ?**
+**¿Quiénes son los principales usuarios?**
 
 Nuestros principales usuarios son mujeres y hombres de entre  los 25 y 30 años que trabajan y/o estudian. Están fuera de casa todo el día, esto implica para ellos no tener tiempo para preparar sus alimentos.
 Los resultados nos hicieron ver la problemática real, la cual nos dice que muchos de estos encuestados son personas que dependen de alguien más para su alimentación. Notamos que no hay coherencia en sus respuestas al decir que no tienen tiempo para preparar alimentos, sin embargo  llevan comida, preparada en su casa, a su oficina o escuela.La pregunta aquí es: *¿quién les prepara esa comida?* 
@@ -64,6 +64,10 @@ Así mismo planteamos los objetivos de los usuarios con respecto al producto uti
 * Yo usuari@ quiero poder eliminar un post/publicación específico.
 * Yo usuari@ quiero darle click en el botón editar, cambiar el texto, imagen, post e imagen, o lo que contenga la publicación. 
 * Yo usuari@ quiero que al recargar la página pueda ver los textos editados y publicaciones anteriores (persistencia).
+* Yo usiari@ quiero poder cerrar sesión.
+
+Como un segundo alcance se plantearon las siguientes hisotrias:
+
 * Yo usuari@ quiero poder agregar nuevos amigos
 * Yo usuari@ quiero poder aceptar solicitudes de amigos
 * Yo usuari@ quiero poder eliminar amigos
@@ -72,8 +76,6 @@ Así mismo planteamos los objetivos de los usuarios con respecto al producto uti
 * Yo usuari@ quiero poder poder publicar públicamente, visible para todos los usuarios de la red social.
 * Yo usuari@ quiero poder enviar mensajes privados a mis amigos.
 
-
-  
 # Ideación
 
 **Prototipado**
@@ -89,8 +91,7 @@ Version Desktop
 <img align="center" src="src/UX/imagenes-ux/4.jpeg"/>
 <img align="center" src="src/UX/imagenes-ux/5.jpeg"/>
 
-prototipo de alta fidelidad
-[prototipo de alta fidelidad](https://www.figma.com/proto/cI2y8tMN0p8NghxQI8fsfBME/foodbook?node-id=4%3A2&scaling=scale-down)
+Así mismo elaboramos un [prototipo de alta fidelidad](https://www.figma.com/proto/cI2y8tMN0p8NghxQI8fsfBME/foodbook?node-id=4%3A2&scaling=scale-down). Cabe aclarar que en el proceso de construcción de la web app, fuimos transformando el diseño de acuerdo a los feedbacks recibidos. 
 
 ### Fundamento para el protrotipado
 
@@ -172,13 +173,13 @@ En su mayoria, las aplicaciones usan colores y lenguaje muy sencillo de entender
 <img align="center" src="src/UX/imagenes-ux/mysugr-logbook-phone.png"/>
 <img align="center" src="src/UX/imagenes-ux/selecting-2Harvest.png"/>
 
-#Instructivo
+# Instructivo
 
 Para utilizar Greener puedes acceder desde tu cuenta de Google o Facebook clickando en los botones correspondientes o bien puedes registrarte con otra cuenta de correo e iniciar sesión. Comparte publicaciones con tus amigos escribiendo en el input y dando click en publicar. Así mismo:
- *Si estás logueado con una cuenta que registraste en tu nombre aparecerá tu mail.
- *Es necesario escribir "algo" para poder publicar.
- *Puedes eliminar tus posts o los de tus amigos dando click en BORRAR.
- *Puedes editar tus posts o los de tus amigos dando click en el botón "EDITAR"; después edita tu texto y da click en el botón GUARDAR para actualizar tu post. 
- *Para ver el conteo de favoritos en la publicación y agregar un favorito, da click en el corazón.
- *Disfruta cambiar a una vida más saludable agregando a "Greener" contenido que tus amigos y tú comparten sobre alimentación saludable con recetas sencillas. 
- *Si deseas salir de la aplicación da click en "LOG OUT". 
+ * Si estás logueado con una cuenta que registraste en tu nombre aparecerá tu mail.
+ * Es necesario escribir "algo" para poder publicar.
+ * Puedes eliminar tus posts o los de tus amigos dando click en BORRAR.
+ * Puedes editar tus posts o los de tus amigos dando click en el botón "EDITAR"; después edita tu texto y da click en el botón GUARDAR para actualizar tu post. 
+ * Para ver el conteo de favoritos en la publicación y agregar un favorito, da click en el corazón.
+ * Si deseas salir de la aplicación da click en "LOG OUT". 
+ * Disfruta y ayuda a tus amigos a cambiar su alimentación por una vida más saludable. Agrega a "Greener" contenido que tus amigos y tú comparten sobre alimentación saludable con recetas sencillas.  
