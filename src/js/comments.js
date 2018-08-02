@@ -23,10 +23,10 @@ db.collection('posts').onSnapshot((querySnapshot) => {
     finalWall.innerHTML += `<div class="card col-sm-10 col-md-8 mb-3">
         <div class="card-body">
             <p>${userName}</p>
-            <p>${doc.data().post}</p>
-            <button id="deleteComment" onclick="deletePost('${doc.id}')">Borrar</button>
-            <button id="editComment" onclick="editPost('${doc.id}', '${doc.data().post}')">Editar</button>
-            <button id="like" onclick="likePost('${doc.id}')">Like</button>
+            <p><h4>${doc.data().post}</h4></p>
+            <button type="button" class="btn btn-outline-danger btn-sm" id="deleteComment" onclick="deletePost('${doc.id}')">Borrar</button>
+            <button type="button" class="btn btn-outline-success btn-sm" id="editComment" onclick="editPost('${doc.id}', '${doc.data().post}')">Editar</button>
+            <button type="button" class="btn btn-outline-dark btn-sm" id="like" onclick="likePost('${doc.id}')">Like</button>
             <span id="likess"><i class="far fa-heart"></i></span>
         </div>
     </div>`;
