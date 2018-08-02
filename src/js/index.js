@@ -7,7 +7,7 @@ const btnSignup = document.getElementById('btnSignup');
 const name = document.getElementById('name');
 const btnFb = document.getElementById('btnFb');
 const btnGg = document.getElementById('btnGg');
-
+ 
 // Sign up new users
 btnSign.addEventListener('click', e => {
   name.style.display = 'block';
