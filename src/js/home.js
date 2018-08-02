@@ -7,7 +7,7 @@ const btnEdit = document.getElementById('btnEdit');
 const btnErase = document.getElementById('btnErase');
 const btnLike = document.getElementById('btnLike');
 const btnSave = document.getElementById('btnSave');
-const likes = document.getElementById('likes');
+const likes = document.getElementById('likes'); 
 const btnProfile = document.getElementById('btnProfile');
 const profile = document.getElementById('profile');
 const home = document.getElementById('home');
@@ -19,57 +19,57 @@ const userPrintPhoto = document.getElementById('user-photo');
 const addingPhoto = document.getElementById('photo');
 var db = firebase.firestore();
 
-let user = localStorage.getItem("mail");
-let userUid = localStorage.getItem("userUid");
+let user = localStorage.getItem('mail');
+let userUid = localStorage.getItem('userUid');
 console.log(userUid);
 
 let userPhoto;
 const bringData = () => {
-    if (user === "google" || user === "facebook") {
-        user = localStorage.getItem("display");
-        userPhoto = localStorage.getItem("photo");
-    } else {
-    }
-}
-bringData()
+  if (user === 'google' || user === 'facebook') {
+    user = localStorage.getItem('display');
+    userPhoto = localStorage.getItem('photo');
+  } else {
+  }
+};
+bringData();
 
 dataName.innerHTML = user;
 
 btnPost.addEventListener('click', e => {
-    let posted = postText.value;
-    if (posted === "" || posted === " ") {
-        alert('Escribe un mensaje')
-    } else {
-        db.collection("posted").add({
-            user: userUid,
-            name: user,
-            post: posted,
-            like: 0
-        })
-            .then(function (docRef) {
-                console.log("Document written with ID: ", docRef.id);
-                postText.value = '';
-            })
-            .catch(function (error) {
-                console.error("Error adding document: ", error);
-            });
-    }
+  let posted = postText.value;
+  if (posted === '' || posted === ' ') {
+    alert('Escribe un mensaje');
+  } else {
+    db.collection('posted').add({
+      user: userUid,
+      name: user,
+      post: posted,
+      like: 0
+    })
+      .then(function(docRef) {
+        console.log('Document written with ID: ', docRef.id);
+        postText.value = '';
+      })
+      .catch(function(error) {
+        console.error('Error adding document: ', error);
+      });
+  }
 });
 
-db.collection("posted").onSnapshot((querySnapshot) => {
-    comentarios.innerHTML = '';
-    querySnapshot.forEach((doc) => {
-        let postID = doc.id
-        let postName = doc.data().name
-        let text = doc.data().post
-        let userId = doc.data().user
-        printPost(postID, postName, text, userId);
-    });
+db.collection('posted').onSnapshot((querySnapshot) => {
+  comentarios.innerHTML = '';
+  querySnapshot.forEach((doc) => {
+    let postID = doc.id;
+    let postName = doc.data().name;
+    let text = doc.data().post;
+    let userId = doc.data().user;
+    printPost(postID, postName, text, userId);
+  });
 });
 
 const printPost = (postID, postName, text, userId) => {
-    if (userUid === userId) {
-        comentarios.innerHTML += `<div class="row">
+  if (userUid === userId) {
+    comentarios.innerHTML += `<div class="row">
         <div class="col s12 m6">
           <div class="card blue-grey lighten-5">
             <div class="card-content black-text">
@@ -90,8 +90,8 @@ const printPost = (postID, postName, text, userId) => {
           </div>
         </div>
       </div>`;
-    } else {
-        comentarios.innerHTML += `<div class="row">
+  } else {
+    comentarios.innerHTML += `<div class="row">
         <div class="col s12 m6">
           <div class="card white">
             <div class="card-content black-text">
@@ -106,49 +106,44 @@ const printPost = (postID, postName, text, userId) => {
           </div>
         </div>
       </div>`;
-    }
-}
-
-const deletePost = (postID) => {
-    db.collection("posted").doc(postID).delete().then(function () {
-        console.log("Document successfully deleted!");
-    }).catch(function (error) {
-        console.error("Error removing document: ", error);
-    });
-}
-
-const editPost = (postID, postName, text, userId) => {
-    let newPost = prompt('Escribe tus cambios');
-    let postRef = db.collection("posted").doc(postID);
-
-    return postRef.update({
-        user: userUid,
-        name: user,
-        post: newPost
-    })
-        .then(function () {
-            console.log("Document successfully updated!");
-        })
-        .catch(function (error) {
-            // The document probably doesn't exist.
-            console.error("Error updating document: ", error);
-        });
+  }
 };
 
+const deletePost = (postID) => {
+  db.collection('posted').doc(postID).delete().then(function() {
+    console.log('Document successfully deleted!');
+  }).catch(function(error) {
+    console.error('Error removing document: ', error);
+  });
+};
 
+const editPost = (postID, postName, text, userId) => {
+  let newPost = prompt('Escribe tus cambios');
+  let postRef = db.collection('posted').doc(postID);
+
+  return postRef.update({
+    user: userUid,
+    name: user,
+    post: newPost
+  })
+    .then(function() {
+      console.log('Document successfully updated!');
+    })
+    .catch(function(error) {
+      // The document probably doesn't exist.
+      console.error('Error updating document: ', error);
+    });
+};
 
 btnProfile.addEventListener('click', e => {
-    window.location.assign('../views/perfil.html');
-    addingPhoto.innerHTML = `<img id="user-photo" src="${userPhoto}" class="col s5 m4 l2 offset-3 circle foto-perfil" alt="">`;
- });
-
- btnHome.addEventListener('click', e => {
-    window.location.assign('../views/home.html');
+  window.location.assign('../views/perfil.html');
+  addingPhoto.innerHTML = `<img id="user-photo" src="${userPhoto}" class="col s5 m4 l2 offset-3 circle foto-perfil" alt="">`;
 });
 
- bntMessage.addEventListener('click', e => {
-    location.href = '../views/mensaje.html';
+btnHome.addEventListener('click', e => {
+  window.location.assign('../views/home.html');
 });
 
-
-
+bntMessage.addEventListener('click', e => {
+  location.href = '../views/mensaje.html';
+});
