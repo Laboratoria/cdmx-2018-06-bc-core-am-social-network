@@ -5,7 +5,7 @@ document.getElementById('signout').addEventListener('click', event => {
   event.preventDefault();
   socialNetwork.signOut();
 });
-
+// Se crea perfil de usuario 
 const userProfile = user => {
   if (user.displayName === null) {
     document.getElementById('user-name').innerHTML = user.email;
@@ -29,10 +29,10 @@ const getUserInfo = () => {
         document.getElementById('send-post').addEventListener('click', event => {
           event.preventDefault();
           let datePost = firebase.firestore.FieldValue.serverTimestamp();
-          const contentPost = document.getElementById('user-content-post').value;
+          const contentPost = document.getElementById('content-post').value;
           if (contentPost !== '' && contentPost !== ' ') {
             if (user.photoURL === null) {
-              userPhotoLink = '../images/profile-photo.jpg';
+              userPhotoLink = '../images/user.png';
             } else {
               userPhotoLink = user.photoURL;
             }
@@ -50,7 +50,7 @@ const getUserInfo = () => {
               content: contentPost
             }).then(result => {
               alert('Publicación exitosa');
-              document.getElementById('user-content-post').value = '';
+              document.getElementById('content-posts').value = '';
               drawPost();
             }).catch(error => {
               console.error('Error', error);
@@ -75,6 +75,7 @@ const drawPost = () => {
             let result = '';
             element.forEach(post => {
               if (currentUserID === post.data().userID) {
+                // Se crea un templete string para pintar los comentarios del usuario activo con los botones para que pueda editar o borrar
                 result += `<div class="card card-post card-roud" my-2 px-2>
                 <div class="card-header1">
                 <strong>${post.data().userName}</strong><p>${post.data().time}</p>
@@ -93,6 +94,7 @@ const drawPost = () => {
                 </div>
                 </div>`;
               } else {
+                // Si no es el usuario que realizo el comentario se le mostrara solo la opción de poder dar like
                 result += `<div class="card card-post card-round" my-2 px-2>
                 <div class="card-header col-10 col-md-10 pl-0">
                 <strong>${post.data().userName}</strong><p>${post.data().time}</p>
@@ -117,11 +119,12 @@ const drawPost = () => {
     });
 };
 
-
+// Borrar post
 const deletePost = (postID) => {
   // Se busca el post por id y se realiza la acción delete (borrar)
   db.collection('post').doc(postID).delete()
     .then(element => {
+      // Se le manda una confirmación para saber si en verdad quiere eliminarlo
       confirm('Seguro que deseas eliminarla');
       if (confirme === true) {
         drawPost();
@@ -130,7 +133,7 @@ const deletePost = (postID) => {
       alert('No se puede borrar');
     });
 };
-// postID post a editar
+// se llama la propiedad del objeto postID para poder editarlo
 const createEditInput = postID => {
   // Busca en la collección 'post' el id del post a editar y lo llama
   db.collection('post').doc(postID).get()
@@ -141,7 +144,7 @@ const createEditInput = postID => {
       console.log('Error al editar');
     });
 };
-
+// Actualización del post
 const updatePost = postID => {
   // Se crea una variable (const) para poder guardar el nuevo valor del post introducido por el usuario
   const postContentEdit = document.getElementById(`post${postID}`).value;
