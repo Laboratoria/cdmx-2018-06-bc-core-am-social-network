@@ -27,7 +27,7 @@ db.collection('posts').onSnapshot((querySnapshot) => {
             <button type="button" class="btn btn-outline-danger btn-sm" id="deleteComment" onclick="deletePost('${doc.id}')">Borrar</button>
             <button type="button" class="btn btn-outline-success btn-sm" id="editComment" onclick="editPost('${doc.id}', '${doc.data().post}')">Editar</button>
             <button type="button" class="btn btn-outline-dark btn-sm" id="like" onclick="likePost('${doc.id}')">Like</button>
-            <span id="likess"><i class="far fa-heart"></i></span>
+            <span id="likess" class="ml-20"><i class="far fa-heart"></i></span>
         </div>
     </div>`;
   });
