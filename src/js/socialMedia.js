@@ -1,8 +1,10 @@
 const loginFacebook = () => {
-  var providerFacebook = new firebase.auth.FacebookAuthProvider();
-
+  
+ var provider = new firebase.auth.FacebookAuthProvider();
+  
   firebase.auth().signInWithPopup(providerFacebook).then(function(result) {
     // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+   
     var token = result.credential.accessToken;
     // The signed-in user info.
     var user = result.user;
@@ -20,21 +22,23 @@ const loginFacebook = () => {
   });
 };
 let facebookAu = document.getElementById('logFacebook');
-facebookAu.addEventListener('click', r => {
+facebookAu.addEventListener('click', the => {
   loginFacebook();
 });
 // /aqui ya sale google
 
-var providerGoogle = new firebase.auth.GoogleAuthProvider();
+
+firebase.auth().signInWithPopup(providerGoogle).then(function(result) {
 
 const loginGoogle = () => {
-  firebase.auth().signInWithPopup(providerGoogle).then(function(result) {
+  
+    var provider = new firebase.auth.GoogleAuthProvider();
     // This gives you a Google Access Token. You can use it to access the Google API.
     var token = result.credential.accessToken;
     // The signed-in user info.
     var user = result.user;
     // ...
-    // window.location.replace('views/wall.html');
+    //window.location.replace('views/wall.html');
   }).catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
@@ -47,6 +51,6 @@ const loginGoogle = () => {
   });
 };
 let googleAu = document.getElementById('logGoogle');
-googleAu.addEventListener('click', e => {
+googleAu.addEventListener('click', aft => {
   loginGoogle();
 });
