@@ -169,18 +169,21 @@ const editPost = (postID, postName, text, userId) => {
     });
 };
 
-// Botón de Perfil
+// Botón de Perfil 
 btnProfile.addEventListener('click', el => {
+  // Se asigna ruta
   window.location.assign('../views/perfil.html');
   addingPhoto.innerHTML = `<img id="user-photo" src="${userPhoto}" class="col s5 m4 l2 offset-3 circle foto-perfil" alt="">`;
 });
 
 // Botón de Home
 btnHome.addEventListener('click', el => {
+  // Se asigna ruta
   window.location.assign('../views/home.html');
 });
 
 // Botón de Mensaje
 bntMessage.addEventListener('click', el => {
+  // Se asigna ruta
   location.href = '../views/mensaje.html';
 });
