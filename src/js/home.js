@@ -171,19 +171,19 @@ const editPost = (postID, postName, text, userId) => {
 
 // Botón de Perfil 
 btnProfile.addEventListener('click', el => {
-  // Se asigna ruta
+  // Se asigna ruta para ir a html perfil
   window.location.href = '../views/perfil.html';
   addingPhoto.innerHTML = `<img id="user-photo" src="${userPhoto}" class="col s5 m4 l2 offset-3 circle foto-perfil" alt="">`;
 });
 
 // Botón de Home
 btnHome.addEventListener('click', el => {
-  // Se asigna ruta
+  // Se asigna ruta para ir a html home
   window.location.href = '../views/home.html';
 });
 
 // Botón de Mensaje
 bntMessage.addEventListener('click', el => {
-  // Se asigna ruta
+  // Se asigna ruta para ir a html mensaje
   window.location.href = '../views/mensaje.html';
 });
