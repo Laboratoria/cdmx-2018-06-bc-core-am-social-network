@@ -1,3 +1,4 @@
+// Elementos de HTML
 const dataName = document.getElementById('dataName');
 const btnPost = document.getElementById('btnPost');
 const postText = document.getElementById('postText');
@@ -17,59 +18,85 @@ const btnRanking = document.getElementById('btnRanking');
 const bntMessage = document.getElementById('btnMessage');
 const userPrintPhoto = document.getElementById('user-photo');
 const addingPhoto = document.getElementById('photo');
-var db = firebase.firestore();
+var db = firebase.firestore(); // Firestore
 
-let user = localStorage.getItem("mail");
-let userUid = localStorage.getItem("userUid");
+/* Con index.js se agrega a localStorage un key mail,
+el que contiene un string con un correo electrónico, la palabra facebook
+o google. También se guarda el uid de cada usuario y su foto.
+ */
+
+// Se agrega a la variable user el valor de localStorage de la key mail
+let user = localStorage.getItem('mail');
+// Se agrega a la variable userUid el uid del usuario que inició sesión
+let userUid = localStorage.getItem('userUid');
 console.log(userUid);
 
+/* Se declara la variable userPhoto, en la función bringData se hace una 
+condicional que determina el método de inicio de sesión del usuario, si 
+el key mail equivale a google o facebook la variable user cambia su valor
+al nombre de usuario de la red utilizada, además a userPhoto se le
+asigna la URL de la foto del usuario, si no la variable user
+mantiene la dirección de correo electrónico */
 let userPhoto;
 const bringData = () => {
-    if (user === "google" || user === "facebook") {
-        user = localStorage.getItem("display");
-        userPhoto = localStorage.getItem("photo");
-    } else {
-    }
-}
-bringData()
+  if (user === 'google' || user === 'facebook') {
+    user = localStorage.getItem('display');
+    userPhoto = localStorage.getItem('photo');
+  } else {
+  }
+};
+bringData();
 
 dataName.innerHTML = user;
 
-btnPost.addEventListener('click', e => {
-    let posted = postText.value;
-    if (posted === "" || posted === " ") {
-        alert('Escribe un mensaje')
-    } else {
-        db.collection("posted").add({
-            user: userUid,
-            name: user,
-            post: posted,
-            like: 0
-        })
-            .then(function (docRef) {
-                console.log("Document written with ID: ", docRef.id);
-                postText.value = '';
-            })
-            .catch(function (error) {
-                console.error("Error adding document: ", error);
-            });
-    }
+// Función para subir mensaje a firestore
+btnPost.addEventListener('click', el => {
+  // Se obtiene el valor del input
+  let posted = postText.value;
+  // Si el input está vacío se alerta al usuario
+  if (posted === '' || posted === ' ') {
+    alert('Escribe un mensaje');
+  } else {
+    db.collection('posted').add({
+      user: userUid, // ID del usuario logeado
+      name: user, // Nombre del usuario
+      post: posted, // Texto del post
+      like: 0 // Número de likes
+    })
+      .then(function(docRef) {
+        console.log('Document written with ID: ', docRef.id);
+        postText.value = '';
+      })
+      .catch(function(error) {
+        console.error('Error adding document: ', error);
+      });
+  }
 });
 
-db.collection("posted").onSnapshot((querySnapshot) => {
-    comentarios.innerHTML = '';
-    querySnapshot.forEach((doc) => {
-        let postID = doc.id
-        let postName = doc.data().name
-        let text = doc.data().post
-        let userId = doc.data().user
-        printPost(postID, postName, text, userId);
-    });
+// Se obtienen mensajes de firestore
+db.collection('posted').onSnapshot((querySnapshot) => {
+  comentarios.innerHTML = '';
+  querySnapshot.forEach((doc) => {
+    let postID = doc.id; // ID del post
+    let postName = doc.data().name; // Nombre del usuario
+    let text = doc.data().post; // Texto del post
+    let userId = doc.data().user; // ID del usuario logeado
+    printPost(postID, postName, text, userId);
+  });
 });
 
+// Función para imprimir
+/* Se pasan como parámetros el ID del post, nombre del usuario, texto
+y ID del usuario. Se declara una condicional que compara si el ID del usuario
+logeado coincide con el ID del usuario del post publicado, si son iguales 
+se imprime una caja con el nombre del usuario, el post, el botón de like, 
+botón para editar y botón para borrar. Si no es el mismo se imprime caja con 
+nombre de usuario, texto y botón de like.
+Se utiliza onclick para accionar los botones, se pasa como parámetro el ID del post   
+*/
 const printPost = (postID, postName, text, userId) => {
-    if (userUid === userId) {
-        comentarios.innerHTML += `<div class="row">
+  if (userUid === userId) {
+    comentarios.innerHTML += `<div class="row">
         <div class="col s12 m6">
           <div class="card blue-grey lighten-5">
             <div class="card-content black-text">
@@ -90,8 +117,8 @@ const printPost = (postID, postName, text, userId) => {
           </div>
         </div>
       </div>`;
-    } else {
-        comentarios.innerHTML += `<div class="row">
+  } else {
+    comentarios.innerHTML += `<div class="row">
         <div class="col s12 m6">
           <div class="card white">
             <div class="card-content black-text">
@@ -106,49 +133,57 @@ const printPost = (postID, postName, text, userId) => {
           </div>
         </div>
       </div>`;
-    }
-}
-
-const deletePost = (postID) => {
-    db.collection("posted").doc(postID).delete().then(function () {
-        console.log("Document successfully deleted!");
-    }).catch(function (error) {
-        console.error("Error removing document: ", error);
-    });
-}
-
-const editPost = (postID, postName, text, userId) => {
-    let newPost = prompt('Escribe tus cambios');
-    let postRef = db.collection("posted").doc(postID);
-
-    return postRef.update({
-        user: userUid,
-        name: user,
-        post: newPost
-    })
-        .then(function () {
-            console.log("Document successfully updated!");
-        })
-        .catch(function (error) {
-            // The document probably doesn't exist.
-            console.error("Error updating document: ", error);
-        });
+  }
 };
 
+// Función para borrar post
+// Se selecciona el nombre del objeto y el ID del post
+const deletePost = (postID) => {
+  db.collection('posted').doc(postID).delete().then(function() {
+    console.log('Post borrado');
+  }).catch(function(error) {
+    console.error('Error: ', error);
+  });
+};
 
+// Función para editar post
+/* Se pasan como parametros el ID del post, el nombre de usuario, 
+el texto y el ID del usuario. Al momento de presionar el botón
+activa un prompt donde se escriben los cambios, se guardan en la 
+variable newPost y se actualiza el objeto*/
+const editPost = (postID, postName, text, userId) => {
+  let newPost = prompt('Escribe tus cambios');
+  let postRef = db.collection('posted').doc(postID);
 
-btnProfile.addEventListener('click', e => {
-    window.location.assign('../views/perfil.html');
-    addingPhoto.innerHTML = `<img id="user-photo" src="${userPhoto}" class="col s5 m4 l2 offset-3 circle foto-perfil" alt="">`;
- });
+  return postRef.update({
+    user: userUid,
+    name: user,
+    post: newPost
+  })
+    .then(function() {
+      console.log('Document successfully updated!');
+    })
+    .catch(function(error) {
+      // The document probably doesn't exist.
+      console.error('Error updating document: ', error);
+    });
+};
 
- btnHome.addEventListener('click', e => {
-    window.location.assign('../views/home.html');
+// Botón de Perfil 
+btnProfile.addEventListener('click', el => {
+  // Se asigna ruta para ir a html perfil
+  window.location.href = '../views/perfil.html';
+  addingPhoto.innerHTML = `<img id="user-photo" src="${userPhoto}" class="col s5 m4 l2 offset-3 circle foto-perfil" alt="">`;
 });
 
- bntMessage.addEventListener('click', e => {
-    location.href = '../views/mensaje.html';
+// Botón de Home
+btnHome.addEventListener('click', el => {
+  // Se asigna ruta para ir a html home
+  window.location.href = '../views/home.html';
 });
 
-
-
+// Botón de Mensaje
+bntMessage.addEventListener('click', el => {
+  // Se asigna ruta para ir a html mensaje
+  window.location.href = '../views/mensaje.html';
+});
