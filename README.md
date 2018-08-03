@@ -8,7 +8,7 @@
 
 **Cluster** es una nueva red social enfocada a las mujeres interesadas en las CTIM (Ciencias, Tecnología, Ingenierías y Matemáticas). Esta red surge como respuesta a la poca visibilidad de las mujeres en las ciencias y la necesidad de difundir las ciencias en las niñas y jóvenes.
 
-**Cluster**, que en inglés significa “grupo”, refleja el valor central de esta red social: hacer grupos de apoyos para mujeres que trabajan y están interesadas en las CTIM; otro de los motivos por la que se eligió esta palabra para nombrar a nuestra red social reside en que dicha palabra se usa con mucha frecuencia dentro del universo de las CTIM. 
+**Cluster**, que en inglés significa “grupo”, refleja el valor central de esta red social: hacer grupos de apoyos para mujeres que trabajan y están interesadas en las CTIM; otro de los motivos por la que se eligió esta palabra para nombrar a nuestra red social reside en que dicha palabra se usa con mucha frecuencia dentro del universo de las CTIM.
 
 Siguiendo con el mismo pensamiento, nuestro logo consta de dos “grupos” que se unen y uno de ellos tiene pequeños subgrupos. Con este logo queremos dar a entender que en esta red social habrá una gran red de apoyo no solo dentro del grupo predilecto de la usuaria, sino que además en otros y que nunca se sentirá sola.
 
@@ -24,14 +24,14 @@ También se llegó a la conclusión que la mayoría de las mujeres perciben las 
 
 Para combatir la brecha de género en las CTIM  este estudio propone varios puntos, por ejemplo:
 
- - Apoyar actividades extracurriculares relacionadas con las CTIM
- - Modelos femeninos a seguir visibles para las niñas
- - Proporcionar experiencias prácticas y ejemplos del mundo real.
- - Demostrar el impacto que tienen los trabajos de STEM en el mundo.
- - Enfatizar los aspectos creativos de las ingenierías y la informática.
- - Alentar a padres, maestros y otros influyentes en la vida de una niña a apoyar y fomentar el interés en este campo de estudio.
- - Apoyar a maestros para que desarrollen estrategias para involucrar a las chicas que tienen miedo de hacer preguntas o que necesitan ayuda vocacional relacionadas con carreras STEM.
- 
+- Apoyar actividades extracurriculares relacionadas con las CTIM
+- Modelos femeninos a seguir visibles para las niñas
+- Proporcionar experiencias prácticas y ejemplos del mundo real.
+- Demostrar el impacto que tienen los trabajos de STEM en el mundo.
+- Enfatizar los aspectos creativos de las ingenierías y la informática.
+- Alentar a padres, maestros y otros influyentes en la vida de una niña a apoyar y fomentar el interés en este campo de estudio.
+- Apoyar a maestros para que desarrollen estrategias para involucrar a las chicas que tienen miedo de hacer preguntas o que necesitan ayuda vocacional relacionadas con carreras STEM.
+
 El equipo de trabajo se preguntó ¿y si hubiera un lugar donde todos los puntos anteriores se congregarán? Y así nació **Cluster** una herramienta que ayudará a acortar la brecha de género, creando una red de apoyo para estas mujeres interesadas en las CTIM.
 
 Aquí encontrarán de una manera rápida y al alcance de su celular apoyo entre ellas, discusiones constructivas e influenciar positivamente a las jóvenes que estén pensando desarrollarse en este mundo, pero que por ciertas circunstancias aún no toman esa decisión.
@@ -43,7 +43,6 @@ A lo largo del proyecto se han hecho varias mejoras: el 18 de julio se hizo **Cl
 Para el 25 de junio se entregó **Cluster v.2** donde se añadió que la usuaria se pudiera loguear por medio de su cuenta de Google y de Facebook, y poder hacer comentarios y borrar dichos comentarios, así como ver comentarios de otras personas.
 
 Por último, el 1 de agosto se pretende entregar **Cluster v.3**, una plataforma donde el usuario pueda ver su perfil, editar su comentario, borrarlo y darle «me gusta» a su propio comentario como al de otros usuarios.
-
   
 ## Features   :microscope:
 
@@ -55,7 +54,7 @@ En **Cluster** la usuaria no solo podrá compartir sus propios estados, links y 
 
 Así la usuaria no solo podrá compartir contenido con sus amigas y colegas, sino que podrá iniciar debates con otras personas alrededor del mundo sobre algún tema en interés.
 
-**## Historias de Usuarias**   :information_desk_person:
+## Historias de Usuarias   :information_desk_person:
 
 | Historia de Usuaria  Nr.1|
 |---|
@@ -165,7 +164,7 @@ Para nuestro proceso de maquetado decidimos usar la plataforma digital "Canva". 
 ## Prototipo de alta fidelidad   :green_book:
 
 Para poder interactuar con el flujo de usuario es necesario ingresar a la siguiente url:
-(https://marvelapp.com/72dcg23)
+(<https://marvelapp.com/72dcg23)>
 
 ## Boilerplate
 
@@ -208,71 +207,71 @@ Para poder interactuar con el flujo de usuario es necesario ingresar a la siguie
 
 ### General
 
-* [x] Producto final sigue los lineamientos del diseño.
+*[x] Producto final sigue los lineamientos del diseño.
 
 ### `README.md`
 
-* [x] Definición del producto.
+*[x] Definición del producto.
 
-* [x] Benchamark de las principales redes sociales.
+*[x] Benchamark de las principales redes sociales.
 
-* [x] Resumen de entrevistas con usuarios.
+*[x] Resumen de entrevistas con usuarios.
 
-* [x] Link/screenshots prototipo de alta fidelidad.
+*[x] Link/screenshots prototipo de alta fidelidad.
 
-* [ ] Conclusiones de pruebas del prototipo con usuarios.
+*[ ] Conclusiones de pruebas del prototipo con usuarios.
 
-* [ ] Conclusiones de pruebas con el producto en HTML.
+*[ ] Conclusiones de pruebas con el producto en HTML.
 
 ### Pruebas / tests
 
-* [ ] Tests unitarios cubren un mínimo del 70% de statements, functions, lines,
+*[ ] Tests unitarios cubren un mínimo del 70% de statements, functions, lines,
 
 y branches.
 
-* [ ] Pasa tests (y linters) (`yarn test`).
+*[ ] Pasa tests (y linters) (`yarn test`).
 
 ### Creación de cuenta (sign up)
 
-* [x] Permite crear cuenta.
+*[x] Permite crear cuenta.
 
-* [x] Valida email.
+*[x] Valida email.
 
-* [x] Valida password.
+*[x] Valida password.
 
-* [x] Muestra mensajes de error.
+*[x] Muestra mensajes de error.
 
-**### Inicio de sesión (sign in)**
+### Inicio de sesión (sign in)
 
-* [x] Permite iniciar sesión.
+*[x] Permite iniciar sesión.
 
-* [x] Valida email.
+*[x] Valida email.
 
-* [ ] Valida password.
+*[ ] Valida password.
 
-* [x] Muestra mensajes de error.
+*[x] Muestra mensajes de error.
 
-**### Muro (wall/feed)**
+### Muro (wall/feed)
 
-* [x] Muestra __muro__.
+*[x] Muestra __muro__.
 
-* [x] Permite publicar nuevos posts.
+*[x] Permite publicar nuevos posts.
 
-* [x] Permite eliminar posts.
+*[x] Permite eliminar posts.
 
-* [x] Pide confirmación antes de borrar posts.
+*[x] Pide confirmación antes de borrar posts.
 
-* [x] Permite editar posts (in place).
+*[x] Permite editar posts (in place).
 
-* [ ] Permite filtrar posts por público/amigos.
+*[ ] Permite filtrar posts por público/amigos.
 
-* [ ] Permite marcar posts como __gustados__ (like).
+*[ ] Permite marcar posts como __gustados__ (like).
 
 ## ¿Cómo usar Cluster?    :interrobang:
 
 Para entrar a **Cluster** es necesario contar con un correo electrónico o una cuenta de Facebook o de Google.
 
-Primero, la primera página te pedirá tus datos si es que ya eres una usuaria de **Cluster**, si no es así solo es cuestión de darle click al texto "Regístrate aquí", marcado en azul, esto te llevará a otra página donde podrás ingresar con alguna de las cuentas antes mencionadas. 
+Primero, la primera página te pedirá tus datos si es que ya eres una usuaria de **Cluster**, si no es así solo es cuestión de darle click al texto "Regístrate aquí", marcado en azul, esto te llevará a otra página donde podrás ingresar con alguna de las cuentas antes mencionadas.
 
 Para entrar con una cuenta de Facebook solo es cuestión de clickear el botón con la leyenda "Facebook" y se mostrará un pop-up donde se debe de ingresar el nombre de usuaria de dicha red social y la contraseña, al darle click al botón de confirmar se desplegará la página principal de la red social.
 
