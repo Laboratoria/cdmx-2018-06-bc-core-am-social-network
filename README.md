@@ -91,7 +91,7 @@ Así la usuaria no solo podrá compartir contenido con sus amigas y colegas, sin
 
 ## Encuestas   :bar_chart:
 
-**Preguntas de la encuesta:
+### Preguntas de la encuesta:
 
 ![Preguntas](src/images/encuesta1.png)
 
@@ -134,7 +134,8 @@ La segunda encuesta fue sobre la paleta de colores. En dicha encuesta se le pidi
 ![encuestaColores](src/images/encuestaC2.jpg)
 ![encuestaColores](src/images/encuestaC3.jpg)
 Aunque las personas encuestadas solo fueron 30, el 50% votó por la primera paleta de colores y dado que nuestro diseño está enfocado a priorizar a nuestras usuarias se optó por elegir esta paleta, además que el equipo cree firmemente en que estos colores gracias a su dinamismo representan perfectamente el espíritu de **Cluster**.
-**## Benchmark**   :clipboard:
+
+## Benchmark  :clipboard:
 
 Para poder diseñar una red social que satisfaga a las usuarias al màximo
 
@@ -144,26 +145,29 @@ se analizaron productos similares y se compararon en base a sus procesos y funci
 
 **Resultados:
 
-**## Mockups**   :pencil2:
+## Mockups  :pencil2:
 
 ![mockup 1](src/images/mockup1.png)
 
 ![mockup 2](src/images/mockup2.jpeg)
 
-**## Maquetado**   :notebook_with_decorative_cover:
+## Maquetado   :notebook_with_decorative_cover:
 
 Para nuestro proceso de maquetado decidimos usar la plataforma digital "Canva". Esta maqueta es el reflejo de los datos obtenidos en las encuestas, por ejemplo, la paleta de colores y el hacer un diseño sencillo e intuitivo donde fueran pocos botones, pero con funcionalidad clara.
 ![maquetado 1](src/images/1.png)
+
 ![maquetado 2](src/images/2.png)
+
 ![maquetado 3](src/images/3.png)
+
 ![maquetado 4](src/images/4.png)
 
-**## Prototipo de alta fidelidad**   :green_book:
+## Prototipo de alta fidelidad   :green_book:
 
 Para poder interactuar con el flujo de usuario es necesario ingresar a la siguiente url:
 (https://marvelapp.com/72dcg23)
 
-**## Boilerplate**
+## Boilerplate
 
 ```text
 ./
@@ -200,13 +204,13 @@ Para poder interactuar con el flujo de usuario es necesario ingresar a la siguie
 
 ```
 
-**## Checklist**   :clipboard:
+## Checklist  :clipboard:
 
-**### General**
+### General
 
 * [x] Producto final sigue los lineamientos del diseño.
 
-**### `README.md`**
+### `README.md`
 
 * [x] Definición del producto.
 
@@ -220,7 +224,7 @@ Para poder interactuar con el flujo de usuario es necesario ingresar a la siguie
 
 * [ ] Conclusiones de pruebas con el producto en HTML.
 
-**### Pruebas / tests**
+### Pruebas / tests
 
 * [ ] Tests unitarios cubren un mínimo del 70% de statements, functions, lines,
 
@@ -228,7 +232,7 @@ y branches.
 
 * [ ] Pasa tests (y linters) (`yarn test`).
 
-**### Creación de cuenta (sign up)**
+### Creación de cuenta (sign up)
 
 * [x] Permite crear cuenta.
 
@@ -264,7 +268,7 @@ y branches.
 
 * [ ] Permite marcar posts como __gustados__ (like).
 
-## Cómo usar Cluster?    :interrobang:
+## ¿Cómo usar Cluster?    :interrobang:
 
 Para entrar a **Cluster** es necesario contar con un correo electrónico o una cuenta de Facebook o de Google.
 
