@@ -1,44 +1,47 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width initial-scale=1.0">
   <title>LOGIN</title>
-  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css"/>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
   <link rel="stylesheet" href="css/style.css"/>
   <link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Montserrat" rel="stylesheet">
+
 </head>
 <body>
+
   <!-- FORMULARIO DE INCIO DE SESION -->
   <div class="container">
     <section class="row">
       <section class="col-7">
-        <form id="loginform"> 
+        <form id="loginform">
           <div class="">
-            <img src="images/beeMom.svg" class="logo-bim responsive-img" alt="abeja">
+            <img src="images/beeMom.svg" class="logo-bim responsive-img">
             <h2>Beemom</h2>
-          </div>
-          <input type="text" id="name" class="input none" placeholder="Nombre">
-          <input type="text" id="mail" class="input" placeholder="Correo">
-          <input type="password" id="password" class="input" placeholder="Contraseña">
-          <input type="button" id="btnLogin" class="loginbutton btncolor gradient" value="Iniciar sesión">
-          <input type="button" id="btnSign" class="loginbutton btncolor gradient" value="Registrar">
-          <input type="button" id="btnSignup" class="loginbutton btncolor gradient none" value="Registrar">
-          <input type="button" id="btnFb" class="boton loginbutton face margin-left" value="f">
-          <input type="button" id="btnGg" class="boton loginbutton google" value="G">
-        </form>
+            </div>
+            <input type="text" id="name" class="input none" placeholder="Nombre">
+            <input type="text" id="mail" class="input" placeholder="Correo">
+            <input type="password" id="password" class="input" placeholder="Contraseña">
+            <input type="button" id="btnLogin" class="loginbutton btncolor gradient" value="Iniciar sesión">
+            <input type="button" id="btnSign" class="loginbutton btncolor gradient" value="Registrar">
+            <input type="button" id="btnSignup" class="loginbutton btncolor gradient none" value="Registrar">
+            <input type="button" id="btnFb" class="boton loginbutton face margin-left" value="f">
+            <input type="button" id="btnGg" class="boton loginbutton google" value="G">
+          </form>
+        </section>
       </section>
-    </section>
-  </div>
-  <div id="google" class="none">
-    <h2>Google On</h2>
-    <h3 id="insertar"></h3>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
-  <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
-  <script src="js/firebase.js"></script>
-  <script src="js/index.js"></script>
-</body>
-</html>
+    </div>
+    <div id="google" class="none">
+      <h2>Google On</h2>
+      <h3 id="insertar"></h3>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+  </html>

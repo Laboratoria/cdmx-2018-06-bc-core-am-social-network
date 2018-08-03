@@ -7,15 +7,15 @@ const btnSignup = document.getElementById('btnSignup');
 const name = document.getElementById('name');
 const btnFb = document.getElementById('btnFb');
 const btnGg = document.getElementById('btnGg');
- 
+
 // Sign up new users
 btnSign.addEventListener('click', e => {
-  name.style.display = 'block';
-  btnLogin.style.display = 'none';
-  btnFb.style.display = 'none';
-  btnGg.style.display = 'none';
-  btnSign.style.display = 'none';
-  btnSignup.style.display = 'block';
+  name.style.display = "block";
+  btnLogin.style.display = "none";
+  btnFb.style.display = "none";
+  btnGg.style.display = "none";
+  btnSign.style.display = "none";
+  btnSignup.style.display = "block";
 });
 
 // Crear usuario nuevo mail, contraseña, nombre
@@ -23,30 +23,28 @@ btnSignup.addEventListener('click', e => {
   const mail = email.value;
   const pass = password.value;
   const nameValue = name.value;
-  localStorage.setItem('mail', mail);
+  localStorage.setItem("mail", mail)
 
   const promise = firebase.auth().createUserWithEmailAndPassword(mail, pass)
-    .then(function() {
-      promise.catch(e => console.log(e.message));
-      let ref = database.ref('user');
-      let data = {
-        name: nameValue,
-        mail: mail
-      };
-      ref.push(data);
-      setTimeout((event) => {
-        window.location.reload();
-      }, 2000);
-    })
-    .catch(function(error) {
+  .then(function(){
+    promise.catch(e => console.log(e.message))
+    let ref = database.ref('user');
+    let data = {
+      name: nameValue,
+      mail: mail
+    }
+    ref.push(data);
+    setTimeout((event) => { window.location.reload();}, 2000);
+  })
+  .catch(function(error) {
     // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      console.log(errorCode);
-      console.log(errorMessage);
-      alert('Verifica tus datos');
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    console.log(errorCode);
+    console.log(errorMessage);
+    alert("Verifica tus datos");
     // ...
-    });
+  });
 });
 
 
@@ -55,20 +53,20 @@ btnLogin.addEventListener('click', e => {
   const mail = email.value;
   const pass = password.value;
   localStorage.clear();
-  localStorage.setItem('mail', mail);
+  localStorage.setItem("mail", mail)
   const promise = firebase.auth().signInWithEmailAndPassword(mail, pass)
-    .then(function() {
-      promise.catch(e => console.log(e.message));
-    })
-    .catch(function(error) {
+  .then(function(){
+    promise.catch(e => console.log(e.message))
+  })
+  .catch(function(error) {
     // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      console.log(errorCode);
-      console.log(errorMessage);
-      alert('Verifica tus datos');
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    console.log(errorCode);
+    console.log(errorMessage);
+    alert("Verifica tus datos");
     // ...
-    });
+  });
 });
 
 // Borra localStorage
@@ -82,8 +80,8 @@ btnGg.addEventListener('click', e => {
 const googleLogin = () => {
   var provider = new firebase.auth.GoogleAuthProvider();
   authentication(provider);
-  console.log('google');
-};
+  console.log("google");
+}
 
 // Login con Facebook
 btnFb.addEventListener('click', e => {
@@ -95,7 +93,7 @@ btnFb.addEventListener('click', e => {
 const facebookLogin = () => {
   var provider = new firebase.auth.FacebookAuthProvider();
   authentication(provider);
-};
+}
 
 
 const authentication = (provider) => {
@@ -106,10 +104,10 @@ const authentication = (provider) => {
     var user = result.user;
     // ...
     localStorage.setItem('user', user);
-    let displayName = user.displayName;
+    let displayName = user.displayName
     localStorage.setItem('display', displayName);
-    let photo = user.photoURL;
-    localStorage.setItem('photo', photo);
+    let photo = user.photoURL
+    localStorage.setItem('photo', photo)
   }).catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
@@ -122,11 +120,12 @@ const authentication = (provider) => {
   });
 };
 
-firebase.auth().onAuthStateChanged(function(user) {
+firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
-    let userUid = user.uid;
-    localStorage.setItem('userUid', userUid);
+    let userUid = user.uid
+    localStorage.setItem("userUid", userUid);
     window.location.assign('views/home.html');
+
   } else {
     console.log('no se ha accesado');
   }
