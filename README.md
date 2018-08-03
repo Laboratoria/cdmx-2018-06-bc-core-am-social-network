@@ -1,7 +1,10 @@
+# Cluster
+
+---
 
 ![Cluster](src/images/icon1.png)
 
-## Cluster   :busts_in_silhouette:
+## Introducción   :busts_in_silhouette:
 
 **Cluster** es una nueva red social enfocada a las mujeres interesadas en las CTIM (Ciencias, Tecnología, Ingenierías y Matemáticas). Esta red surge como respuesta a la poca visibilidad de las mujeres en las ciencias y la necesidad de difundir las ciencias en las niñas y jóvenes.
 
@@ -148,19 +151,21 @@ se analizaron productos similares y se compararon en base a sus procesos y funci
 ![mockup 2](src/images/mockup2.jpeg)
 
 **## Maquetado**   :notebook_with_decorative_cover:
+
 Para nuestro proceso de maquetado decidimos usar la plataforma digital "Canva". Esta maqueta es el reflejo de los datos obtenidos en las encuestas, por ejemplo, la paleta de colores y el hacer un diseño sencillo e intuitivo donde fueran pocos botones, pero con funcionalidad clara.
 ![maquetado 1](src/images/1.png)
 ![maquetado 2](src/images/2.png)
 ![maquetado 3](src/images/3.png)
 ![maquetado 4](src/images/4.png)
+
 **## Prototipo de alta fidelidad**   :green_book:
+
 Para poder interactuar con el flujo de usuario es necesario ingresar a la siguiente url:
 (https://marvelapp.com/72dcg23)
+
 **## Boilerplate**
 
 ```text
-
-```
 ./
 │
 └── src
@@ -192,7 +197,6 @@ Para poder interactuar con el flujo de usuario es necesario ingresar a la siguie
 ├── .gitignore
 ├── package.json
 └── README.md
-```
 
 ```
 
@@ -200,7 +204,7 @@ Para poder interactuar con el flujo de usuario es necesario ingresar a la siguie
 
 **### General**
 
-* [ ] Producto final sigue los lineamientos del diseño.
+* [x] Producto final sigue los lineamientos del diseño.
 
 **### `README.md`**
 
@@ -208,9 +212,9 @@ Para poder interactuar con el flujo de usuario es necesario ingresar a la siguie
 
 * [x] Benchamark de las principales redes sociales.
 
-* [ ] Resumen de entrevistas con usuarios.
+* [x] Resumen de entrevistas con usuarios.
 
-* [ ] Link/screenshots prototipo de alta fidelidad.
+* [x] Link/screenshots prototipo de alta fidelidad.
 
 * [ ] Conclusiones de pruebas del prototipo con usuarios.
 
@@ -261,6 +265,7 @@ y branches.
 * [ ] Permite marcar posts como __gustados__ (like).
 
 ## Cómo usar Cluster?    :interrobang:
+
 Para entrar a **Cluster** es necesario contar con un correo electrónico o una cuenta de Facebook o de Google.
 
 Primero, la primera página te pedirá tus datos si es que ya eres una usuaria de **Cluster**, si no es así solo es cuestión de darle click al texto "Regístrate aquí", marcado en azul, esto te llevará a otra página donde podrás ingresar con alguna de las cuentas antes mencionadas. 
@@ -277,6 +282,5 @@ Dentro de la página principal la usuaria podrá hacer su primer comentario: Sol
 ¡Felicidades! Ya sabes usar **Cluster**, la red social de las mujeres CTIM.
 
 ## Agradecimientos     :pray:
-Queremos agradecer a Bluuweb! y a Falcon Master por sus videos en Youtube que nos ayudaron para ingresar a Firebase. También a todas nuestras compañeras, a nuestra coach Amalia, a nuestra Jedi Lucile y a todo el equipo de Laboratoria,
 
-  
+Queremos agradecer a Bluuweb! y a Falcon Master por sus videos en Youtube que nos ayudaron para ingresar a Firebase. También a todas nuestras compañeras, a nuestra coach Amalia, a nuestra Jedi Lucile y a todo el equipo de Laboratoria.
