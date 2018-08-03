@@ -55,59 +55,35 @@ Así la usuaria no solo podrá compartir contenido con sus amigas y colegas, sin
 **## Historias de Usuarias**   :information_desk_person:
 
 | Historia de Usuaria  Nr.1|
-
 |---|
-
 | Fecha:  09/07/2018  |
-
 | Nombre de la Usuaria:  Diana Perez Pineda  |
-
 |  Edad: 36 años  |
-
 | Título:  Compartir  |
-
 |  Como bióloga quiero compartir mis más recientes descubrimientos para que más mujeres biólogas conozcan sobre mi investigación y puedan contribuir o usarla como punto de partida. |
 
 | Historia de Usuaria  Nr.2|
-
 |---|
-
 | Fecha:  16/07/2018  |
-
 | Nombre de la Usuaria:  Juana Torres Medina  |
-
 | Edad: 29 años  |
-
 | Título:  Busqueda de vacantes  |
-
 | Acabo de recibir mi pasantía y estoy en búsqueda de un empleo encaminado en mi área de especialización. Como mujer es difícil encontrar un trabajo bien pagado y en lo que una estudió. Más, tratándose del ámbito de las ciencias. |
 
 | Historia de Usuaria  Nr.3|
-
 |---|
-
 | Fecha:  14/07/2018  |
-
 | Nombre de la Usuaria:  Susana Lafon Dávila  |
-
 | Edad: 20 años  |
-
 | Título:  Orientación Vocacional  |
-
 | No sé que quiero estudiar, pero me siempre me han interesado las matemáticas, me gustaría encontrar una red social donde pueda conocer a mujeres matemáticas y así animarme a entrar a la carrera en matemáticas. |
 
 | Historia de Usuaria  Nr.4|
-
 |---|
-
 | Fecha:  11/07/2018  |
-
 | Nombre de la Usuaria:  Reneè Castrejón  |
-
 | Edad: 24 años  |
-
 | Título:  Curiosidad e interés  |
-
 | Desde niña me ha gustado la tecnología y aunque no trabajo ni estudié algo relacionado, me gusta mucho explorar en internet y aprender nuevas cosas. |
 
 ## Encuestas   :bar_chart:
