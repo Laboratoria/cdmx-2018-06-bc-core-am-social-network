@@ -185,5 +185,5 @@ btnHome.addEventListener('click', el => {
 // Botón de Mensaje
 bntMessage.addEventListener('click', el => {
   // Se asigna ruta
-  location.href = '../views/mensaje.html';
+  window.location.href = '../views/mensaje.html';
 });
