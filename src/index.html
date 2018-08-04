@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bienvenidx a SHEro</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/popbox.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+</head>
+
+<body>
+    <section class="container-fluid">
+        <section class="row">
+            <section class="leftWelcome col-6 d-none d-md-block">
+                <div class="wrap-messages">
+                    <div class="row one">
+                        <strong>
+                            <i class="fas fa-female"></i>
+                            <i class="fas fa-female"></i> Construye redes de apoyo</strong>
+                    </div>
+                    <div class="row two">
+                        <strong>
+                            <i class="fas fa-calendar-alt"></i> Enterate de eventos</strong>
+                    </div>
+                    <div class="row tree">
+                        <strong>
+                            <i class="fas fa-comments"></i> Unete a la conversación</strong>
+                    </div>
+                </div>
+                </div>
+            </section>
+            <section class="rightWelcome align-self-xl-center col-sm-9 col-md-6 col-xl-6">
+                <div class="logo-first">
+                    <img src="../src/images/logo.png" class="img-fluid" alt="Responsive image">
+                </div>
+                <p class="messageOne col-sm-12 col-6 font-weight-bold">Únete hoy a la primera Red Social feminista</p>
+                <div class="row">
+                    <button data-popbox-target="mypopbox1" class="btn mx-auto col-sm-3 col-md-8 col-xl-6 font-weight-bold" style="width: 200px;"
+                        id="buttonSignIn">Registrate</button>
+                </div>
+                <div class="row">
+                    <button data-popbox-target="mypopbox2" class="btn mx-auto col-sm-3 col-md-8 col-xl-6 font-weight-bold" style="width: 200px;"
+                        id="buttonLogin">Iniciar Sesión</button>
+                </div>
+            </section>
+        </section>
+    </section>
+    </section>
+    <div data-popbox-id="mypopbox1" class="popbox">
+        <div class="popbox_container">
+            <form>
+                <!-- <div class="form-group"> -->
+
+                <!-- <input type="name" class="form-control" id="newUserNa" aria-describedby="nameOfNewUser" placeholder="Ingresa tu nombre">
+                </div>
+                <div class="form-group">
+
+                    <input type="name" class="form-control" id="newUserSe" aria-describedby="secondnameOfNewUser" placeholder="Ingresa tu apellido">
+                </div> -->
+                <div class="form-group">
+                    <input type="email" class="form-control" id="newUserMail" aria-describedby="emailNewUser" placeholder="Ingresa tu correo electronico">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="newUserPass" placeholder="Elije una contraseña/Password">
+                </div>
+                <!-- <div>
+                    <input type="date" class="form-control" id="dateBirth" placeholder="Tu cumpleaños">
+                </div> -->
+                <div>
+                    <button class="signUp btn btn-primary" id="signUp">Registrarte</button>
+                    <button data-popbox-close="mypopbox1" class="signUp btn">Cerrar</button>
+                </div>
+                <div>
+                    <button type="button" class="btn buttonFacebook col-sm-12 col-md-12 col-xl-12" id="logFacebook">
+                        <img src="../src/images/facebookicon.png" class="img-fluid fbLogo" alt="Responsive image"> Iniciar sesión con Facebook</button>
+                </div>
+                <div>
+                    <button type="button" class="buttonGoogle btn col-sm-12 col-md-12 col-xl-12" id="logGoogle">
+                        <img src="../src/images/google-1015752_960_720.png" class="img-fluid gLogo" alt="Responsive image">Iniciar sesión con Google</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div data-popbox-id="mypopbox2" class="popbox">
+        <div class="popbox_container">
+            <form>
+                <div class="form-group">
+                    <label for="userEmail">Email</label>
+                    <input type="email" class="form-control" id="userMail" aria-describedby="emailHelp" placeholder="Ingresa tu correo registrado">
+                </div>
+                <div class="form-group">
+                    <label for="userPassword">Password</label>
+                    <input type="password" class="form-control" id="userPass" placeholder="Ingresa tu contraseña/Password">
+                </div>
+                <div>
+                    <button class="btn btn-primary" id="signIn">Enviar</button>
+                    <button data-popbox-close="mypopbox2" class="btn">Cerrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/popbox.js"></script>
+    <script src="js/takeData.js"></script>
+    <script src="js/sessions.js"></script>
+    <script src="js/socialMedia.js"></script>
+    <script type="text/javascript">
+        var popbox = new Popbox({
+            blur: true,
+            overlay: true,
+        });
+    </script>
+
+</body>
+
+</html>
