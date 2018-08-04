@@ -23,11 +23,12 @@ db.collection('posts').onSnapshot((querySnapshot) => {
     finalWall.innerHTML += `<div class="card col-sm-10 col-md-8 mb-3">
         <div class="card-body">
             <p>${userName}</p>
-            <p>${doc.data().post}</p>
-            <button id="deleteComment" onclick="deletePost('${doc.id}')">Borrar</button>
-            <button id="editComment" onclick="editPost('${doc.id}', '${doc.data().post}')">Editar</button>
-            <button id="like" onclick="likePost('${doc.id}')">Like</button>
-            <span id="likess"><i class="far fa-heart"></i></span>
+            <p><h4>${doc.data().post}</h4></p>
+            <button type="button" class="btn btn-outline-danger btn-sm" id="deleteComment" onclick="deletePost('${doc.id}')">Borrar</button>
+            <button type="button" class="btn btn-outline-success btn-sm" id="editComment" onclick="editPost('${doc.id}', '${doc.data().post}')">Editar</button>
+            <a href="#" onclick="likePost('${doc.id}')" class="btn-outline-dark btn-sm">
+              <span id="likess" class="ml-20"><i class="far fa-heart"></i></span>
+            </a>
         </div>
     </div>`;
   });
@@ -68,21 +69,19 @@ const editPost = (id, comment) => {
 let like = false;
 let contLike = 0;
 const likePost = (id) => {
-  db.collection('posts').doc(id).like;
+  db.collection('posts').doc(id);
   if (like === true) {
     like = false;
     contLike--;
-    document.getElementById('like').innerHTML = 'Like';
     if (contLike === 0) {
-      document.getElementById('likess').innerHTML = '<i class="far fa-heart"></i>';
+      document.getElementById('likess').innerHTML = `<i class="far fa-heart"></i>`;
     } else {
-      document.getElementById('likess').innerHTML = `<i class="far fa-heart">   ${contLike}</i>`;
+      document.getElementById('likess').innerHTML = `<i class="far fa-heart ml-100">         ${contLike}</i>`;
     }
   } else {
     like = true;
     contLike++;
-    document.getElementById('like').innerHTML = 'Dislike';
-    document.getElementById('likess').innerHTML = `<i class="fas fa-heart">   ${contLike}</i>`;
+    document.getElementById('likess').innerHTML = `<i class="fas fa-heart ml-100">         ${contLike}</i>`;
   }
 };
 
