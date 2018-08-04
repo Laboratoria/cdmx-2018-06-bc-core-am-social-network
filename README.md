@@ -1,4 +1,4 @@
-# Creando una Red Social
+# Beemom
 
 ## Preámbulo
 
@@ -23,16 +23,26 @@ en los que le gustaría invertir:
 * Salud
 * Energías Renovables
 
+### Surgimiento de Beemom
+
+Beemom es una red social diseñada para promover la interacción de madres o personas que estén interesadas o inmersas en la crianza de niños, su principal objetivo es resolver las dudas que se puedan tener sobre los temas de educación, salud y alimentación. Dentro de la red social se pretende crear una comunidad de personas que genere contenidos que apoyen a las madres a resolver problemas específicos de manera sencilla y rápida.  
+
 Hoy en dia las redes sociales se han convertido en parte de la vida cotidiana, lamentablemente el uso 
-inadecuado de las plataformas hace creer al público que no son funcionales, partiendo de esta idea erronea,
-nos dimos a la tarea de impulsar esta plataforma teniendo público cautivo, con el principal objetivo
-poder concientizar a las personas sobre acciones que debemos llevar a diario.
+inadecuado de las plataformas hace creer al público que no son funcionales, partiendo de esta idea errónea, nos dimos a la tarea de crear una plataforma para un público cautivo.
+
+##### Datos sobre las mujeres
+Según datos del INEGI (2015) la población de México es aproximadamente de 119 millones de personas, 51.4% son mujeres y se estima que 32.7 millones son madres.
+Así mismo se estima que en promedio el 1er embarazo es a los 21 años, y la tasa de fecundidad más alta es entre los 20 a 24 años de edad.
+El 7.8% son adolescentes de 13 a 19 años.
+28 de cada 100 mujeres ejerce su maternidad sin pareja.
+De las madres mayores a 15 años un 43.4% cuenta con un empleo.
+
+Se estima según encuesta realizada por Groupon Latam, que el 83% de las madres mexicanas con acceso a internet cuentan e interactúan con redes sociales; siendo Whatsapp la más popular con 79%, seguida por Facebook con 73%, Instagram con 13% y Twitter con 14.5%. Se determinó que los principales usos de sus redes son para hablar con la familia, enterarse de noticias, buscar consejos de salud, destinos turísticos, productos para el hogar y planes para compartir con su familia. Los dispositivos que utilizan para interactuar con sus redes son smartphones con un 78%, seguido por tablets con 46% y computadoras con 45%.
 
 Es asi como el equipo de trabajo decidio fusionar tres categorias para enfocarlo a un tipo de público,
 se selecciono "Alimentación", "Educación" y "Salud".
 
-El cual en este primera fase se denomino "Soy mamá", una red social para la interaccion entre madres, de niños 
-de entre O a 12 años.
+El cual en este primera fase se denominó "Beemom", una red social para la interaccion entre madres, de niños de entre O a 12 años.
 
 
 ## Objetivos
@@ -104,7 +114,7 @@ HISTORIAS DE USUARIO EN UNA RED SOCIAL PARA MAMAS
 
 ### Responsive, UI y comportamiento
 
-Nuestra red social es completamente responsive, y tienes los principios first mobile, esta diseñado especificamente para usuarios que tienen un alto uso de redes sociales y apps, por medio de un smartphone. Pero no descartamos el uso de nuestra red social por medio de un ordenador.
+Nuestra red social es completamente responsive, y tienes los principios first mobile, está diseñada especificamente para usuarios que tienen un alto uso de redes sociales y apps, por medio de un smartphone. Pero no descartamos el uso de nuestra red social por medio de un ordenador.
 
 Nuestra red social ofrece las siguientes funciones:
 
@@ -125,8 +135,7 @@ Nuestra red social ofrece las siguientes funciones:
   - La aplicación **NO** permite hacer publicaciones vacías de ningún tipo.
   - El usuario puede agregar, editar y eliminar contenido de la red
     social.
-  - Al editar contenido, el contenido editado se verá automáticamente,
-    inmediatamente después de guardar.
+  - Al editar contenido, el contenido editado se verá reflejado automáticamente después de guardar.
   - Al recargar la página se deben poder ver los contenidos editados.
 
 
@@ -160,7 +169,7 @@ Se hace un benchmark de facebook, Pinterest, Intagram y Snapchat, con el cúal s
 
 * Hacer un _benchamark_ de las principales redes sociales.
 * Hacer al menos 2 o 3 entrevistas con usuarios.
-* Hacer un  prototipo de alta fidelidad.
+* Hacer un  prototipo de alta fidelidad.
 * Testear el prototipo con usuarios.
 * Asegurarte de que la implementación en código siga los lineamientos del
   diseño.
@@ -171,7 +180,7 @@ Se hace un benchmark de facebook, Pinterest, Intagram y Snapchat, con el cúal s
 #### 1) Definición del producto
 
 En el `README.md` cómo conociste el mercado de las redes sociales, cómo
-descubriste las necesidades de los usuarios, cómo llegaste  la definición final
+descubriste las necesidades de los usuarios, cómo llegaste  la definición final
 de tu producto. Es importante que detalles:
 
 * Cuáles son los elementos básicos que tiene una red social
@@ -230,3 +239,9 @@ entrevistas con usuarios y tests de usabilidad.
 * [ ] Permite editar posts (in place).
 * [ ] Permite filtrar posts por público/amigos.
 * [ ] Permite marcar posts como _gustados_ (like).
+
+#### Fuentes de Información 
+http://www.nielsen.com/content/dam/nielsenglobal/latam/docs/reports/2016/GlobalMillennialMindset.pdf
+http://www.nielsen.com/content/dam/nielsenglobal/latam/docs/reports/2016/EstilosdeVidaGeneracionales.pdf
+http://www.infochannel.info/ser-madre-en-mexico-segun-el-inegi
+http://www.beta.inegi.org.mx/temas/estructura/
