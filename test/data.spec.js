@@ -1,7 +1,9 @@
 // Crea y ejecuta test
 describe('socialNetwork', () => {
   it('deberia ser un objeto', () => {
+    // assert.equal prueba si dos valores son iguales
     assert.equal(typeof socialNetwork, 'object');
+    // typeof indica el tipo de operador
   });
 
   describe('socialNetwork.loginUser', () => {
