@@ -43,7 +43,7 @@ const getUserInfo = () => {
         // Es un metodo de firebase que para incluir una marca de tiempo generada por el servidor
         let datePost = firebase.firestore.FieldValue.serverTimestamp();
         // Se obtiene el valor introducido por el usuario dentro de el input
-        const contentPost = document.getElementById('content-post').value;
+        const contentPost = document.getElementById('content-posts').value;
         // Se analiza que no contenga espacios el post para que el usuario pueda publicar
         if (contentPost !== '' && contentPost !== ' ') {
           // Si el usuario se logeo con correo y contraseña se le dara una por default
