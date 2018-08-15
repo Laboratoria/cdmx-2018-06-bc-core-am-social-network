@@ -1,59 +1,53 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 html, body {
-  height: 100%;
-
-}
-#container {
+  /* height: 100%; */
   min-height: 100%;
   background-image: linear-gradient(180deg, #61c4e3 30%, #ffffff 100%);
+
+}
+/* Carousel de imagenes */
+#main{
+  z-index: 1000;
 }
 
-/* Botones de Unirse e INICIO */
-#footer a {
-    width:48%;
-    padding-top: 10px;
-    color: #fff;
-    text-decoration: none;
-    /* background-color: black; */
-    background-color: #EB656A;
-    -webkit-text-decoration-skip: objects
-  }
-#footer a:hover{
-  color: #61c4e3;
+img {
+  width: 50%;
+  margin-bottom: 10px;
 }
 
-#footer a:active{
-  color: #FE2E2E;
-}
-/* Menú footer */
-#footer{
-  /* background-color: #000; */
-  background-color: #EB656A;
-  position: relative;
-  height: 60px;
-  margin-top: -60px;
-  clear: both;
-}
-img{
-  opacity: 0.9;
-  filter: alpha(opacity=90);
-  max-width: 100%;
-  height: auto;
-  border-radius: 30px;
-}
-body{
-  background: #ffffff;
-}
 p {
+  font-size: 15pt;
   font-style: italic;
-  font-size: 20pt ;
-  text-align: center;
-  color: #e600ac;
+  color: #eb656a;
 }
-h1{
-  color: #e600ac;
+
+#carusel{
+
+  margin-top: 50%;
+  margin-bottom: 0;
+  z-index: 1000;
+  position: fixed;
+}
+
+/* Barra de Navegador */
+#navbar {
+  bottom: 0;
+  position: fixed;
+  z-index: 1000;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  text-align: center;
+  background-color: #EB656A;
+  margin-bottom: auto;
+}
+
+#navbar a{
+  font-size: 17pt;
+  color: #fff;
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+#navbar a:active{
+  color: #61c4e3;
 }
