@@ -1,7 +1,7 @@
 # Cluster
 
 ---
-## Desarrollado para ![Laboratoria](https://www.laboratoria.la/)
+## Desarrollado para [Laboratoria](https://www.laboratoria.la/)
 
 ![Cluster](src/images/icon1.png)
 
