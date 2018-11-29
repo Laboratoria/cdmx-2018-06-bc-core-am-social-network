@@ -3,7 +3,7 @@
 ---
 ## Desarrollado para [Laboratoria](https://www.laboratoria.la/)
 
-![Cluster](src/images/icon1.png)
+![maquetado 1](src/images/1.png)
 
 ## Introducción   :busts_in_silhouette:
 
