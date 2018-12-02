@@ -158,9 +158,9 @@ Issues: Ver issues en: see [Issues del equipo] (https://github.com/SakuraBravo/c
 
 Acuerdos de trabajo:
 
-•	Miembro Nallely Bravo (NB) se especializa en UX.
+•	Miembro Nallely Bravo (NB) se especializa en UX, flujo y diseño de la applicación.
 
-•	Miembro Yocelin Garcia (YG) se especializa en Firebase.
+•	Miembro Yocelin Garcia (YG) se especializa en Firebase, funcionalidades en js.
 
 •	Miembro Zareth Abarca (ZA) se especializa en CSS y Responsive.
 
@@ -203,14 +203,14 @@ Acuerdos de trabajo:
    * Sección de comentarios con capacidad de publicar en ella: Nallely Bravo.
    * Primer comentario: Nallely Bravo.
    * Nombre de usuario en DOM dinámicamente: Yocelin Garcia.
-   * Estructura y visualización del DOM: Zarth Abarca.
+   * Estructura y visualización del DOM: Nallely Bravo.
   * Segundo Sprint:
    * Login con google y/o facebook y/o twitter y/o github: YG
    * Validación post. NB
    * Crear sus propios test y pasarlos (mínimo 3 test con 2 puntos cada uno): NB
    * Muro/timeline de la red social (cumpir mínimo 8 tareas): ZA.
    * Que los mensajes del muro continúen después de recargar la página y se vean desde cualquier dispositivo en línea (persistencia): YG
-   * Ver el perfil del usuario: ZA
+   * Ver el perfil del usuario: NB
    * LogOut: YG
 
 *9. Fechas importantes*
@@ -273,7 +273,7 @@ Nivel Alcanzado
 
 •	Nallely Bravo Rodríguez
 
-Sus capacidades como UX Designer destacan, además tiene excelentes capacidades para programar en CSS, HTML y Javascript. Es capaz de usar Frameworks de CSS tales como: Bootstrap, hace uso de plataformas de maquetación tales como: Framer. Buen uso de GitHub colaborativo. Sus habilidades de UX Research son de reconocerse. Buen uso de Firebase.
+Sus capacidades como UX Designer destacan, además tiene excelentes capacidades para programar en CSS, HTML y Javascript. Es capaz de usar Frameworks de CSS tales como: Bootstrap, hace uso de plataformas de maquetación tales como: Figma y Sketch. Buen uso de GitHub colaborativo. Sus habilidades de UX Research son de reconocerse. Buen uso de Firebase.
 
 Contacto de colaboradoras:
 
@@ -284,7 +284,7 @@ Contacto de colaboradoras:
 
 •	Yocelin García
 
-Habilidad de UX Research, además tiene excelentes capacidades para programar en CSS, HTML y JavaScript. Hace uso de GitHub colaborativo y presenta buena lógica de uso de Firebase.
+Habilidad de UX Research, presentación de producto con el cliente, además tiene excelentes capacidades para programar en CSS, HTML y JavaScript. Hace uso de GitHub colaborativo y presenta excelente lógica de uso de Firebase, testing, 
 
 Contacto:
 
@@ -295,7 +295,7 @@ Contacto:
 
 •	Zareth Abarca
 
-Habilidad de UX Designer, además tiene excelentes capacidades para programar en CSS, HTML y JavaScript. Hace uso de GitHub colaborativo y presenta buena lógica de uso de Firebase. Hace buen uso de frameworks de CSS como Boostrap. Buena habilidad enla búsqueda y aplicación de datos.
+Habilidad de UX Designer, además tiene excelentes capacidades para programar en CSS, HTML y JavaScript. Hace uso de GitHub colaborativo. Hace buen uso de frameworks de CSS como Boostrap. Buena habilidad enla búsqueda y aplicación de datos.
 
 Contacto:
 
