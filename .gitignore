@@ -1,1 +1,5 @@
-# Aqui debes poner los archivos que no quieras que se suban a Github
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json

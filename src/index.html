@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>zoryaColect.</title>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <b>ZoryaColect.</b>
+      <p>
+        <i>Deconstrucción social</i>
+      </p>
+    </header>
+    <aside class="sidebar">
+      Deconstrucción social: Tomar lo establecido socialmente, analizar su origen y significado y con la conciencia clara, darle
+      otra forma. No destruirlo, ir por más, Deconstruir.
+    </aside>
+    <article class="content">
+      <form>
+        <p>Ingresa con tu correo</p>
+        <input type="email" id="enter-email" placeholder="Email">
+        <input type="password" id="enter-password" placeholder="Password">
+        <input type="button" value="Entrar" id="enter">
+      </form>
+      <p>_________________________</p>
+      <br>
+      <form>
+        <input type="button" id="google-user" value="Ingresa con google">
+      </form>
+      <form>
+        <input type="button" id="facebook-user" value="Ingresa con facebook">
+      </form>
+      <p>_________________________</p>
+      <br>
+      <form>
+        <p>Registro para nuevo usuario</p>
+        <input type="email" id="email" placeholder="Email de usuario">
+        <input type="password" id="password" placeholder="Contraseña">
+        <input type="text" placeholder="Nombre de usuario" id="user-name">
+      </form>
+      <form>
+        <input type="button" value="Registrar" id="register">
+      </form>
+    </article>
+    <footer class="footer">
+      <i>Aprende, comunica, comparte, deconstrulle...</i>
+    </footer>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-database.js"></script>
+
+  <script src="./js/index.js"></script>
+  <script src="./js/authen.js"></script>
+  <script src="./js/database.js"></script>
+</body>
+
+</html>
