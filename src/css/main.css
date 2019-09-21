@@ -1,0 +1,15 @@
+body {
+  background-image: url("../images/Comida.jpg");
+  font-family: 'Source Sans Pro', sans-serif;
+ }
+ .container { 
+    background-color: #F7D358;
+    width: 50%;
+    border-radius: 10px;
+
+}
+
+h4 {
+  text-align: center;
+  color: #045FB4;
+}
