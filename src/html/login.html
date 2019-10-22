@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!--Este meta es para que reconozca los diferentes tamaños de pantallas de dispositivos.-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!--Es el la hoja de estilos del bootstrap que esta en la página versión 4 -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Lora:700" rel="stylesheet">
+  <!--Link de libreria de Font Awesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <!--Link GoogleFonts para las tipografias-->
+  <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500" rel="stylesheet">
+  <!--Íconos de Material-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Vínculo con archivo Css-->
+  <link rel="stylesheet" type="text/css" href="../css/home.css"/>
+  <!--Ícono de pestaña de ventana-->
+  <link rel="icon" href="../images/icono.jpeg">
+  <title>DiabeTips</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="css/main.css" /> -->
+  <link rel="icon" href="images/icono.jpeg">
+</head>
+<body>
+  <!-- Permisos de Facebook -->
+  <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '651409108544978',
+      xfbml      : true,
+      version    : 'v3.0'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+<h2 id='userSpace'></h2>
+<pre id = 'obj'></pre>
+
+<!-- Comienza el cuerpo del contenido -->
+
+<header class="text-center">
+  <img id="logoDiabeTips" src="../images/LogoDiabeTips.png" alt="">
+  <div class="col-1">
+    <div class="form-group">
+      <!-- Boton de logout -->
+      <div id="buttonLogout" class=""></div>
+    </div>
+  </div>
+</header>
+
+<section class="container-fluid">
+<div class="row text-center">
+  <h4 class="text-center col-12">Inicio de Sesión</h4>
+</div>
+
+<!-- Inicio de seción con Email -->
+<div class="row">
+  <div id="cuerpo-login" class="col-12">
+    <div class="form-group">
+      <form>
+        <div class="form-group">
+          <!--Registro para usuarios con correo-->
+          <label for="exampleInputEmail1">Ingresa tus datos:</label>
+          <input type="email" class="form-control" id="userEmail" aria-describedby="emailHelp" placeholder="Correo electrónico">
+        </div>
+        <div class="form-group">
+          <!-- <input type="text" id="username" placeholder="Nombre de Usuario"> -->
+          <input type="password" class="form-control" id="userPsw" placeholder="Contraseña">
+          <small id="emailHelp" class="form-text text-muted">Nosotros nunca compartiremos tu información con nadie.</small>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Recuerdame</label>
+        </div>
+        <br>
+        <div class="form-group text-center">
+        <button class="btn btn-dark" type="button" id="buttonIngresar" name="enviar">Enviar</button>
+        </div>
+      </form>
+  </div>
+</div>
+</div>
+
+<div class="col-12">
+  <form action="comments.html" class="text-center form-group">
+    <div class="form-group">
+      <small class="form-text text-muted">o también puedes</small>
+    </div>
+  </form>
+</div>
+
+<!-- Inicio de seción con Facebook y Google -->
+<div class="row">
+  <div id="cuerpo" class= "text-center col-8 offset-2">
+    <form id="usuario" action="comments.html" class="text-center form-group">
+      <!--Registro con Gmail de Google-->
+      <button class="btn btn-danger btn-block" type="button" name="button" id="btn-google">Ingresa con Google</button>
+      <!--Registro con Facebook-->
+      <button class="btn btn-primary btn-block" type="button" name="button" id="btn-facebook">Ingresa con Facebook</button>
+      <p>No estás registrado?  <a href="./registry.html" title="Registro de nuevo usuario">Registrate Aquí</a></p>
+
+    </form>
+  </div>
+</div>
+</div>
+</section>
+<!-- Librerias -->
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+
+<script src="../js/authentications.js"></script>
+<script src="../js/login.js"></script>
+</body>
+</html>

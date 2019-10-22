@@ -1,0 +1,22 @@
+/* Hoja de estilo de página de registro */
+div{
+  font-family: 'Lora' , serif ;
+  color: #000000;
+}
+body{
+background: #ffffff;
+  /* background-image: url(../images/registry.jpg); */
+  /* linear-gradient(#00e6ac, #00664d); */
+}
+#logoDiabeTips {
+  width: 170px;
+  padding-top: 5%;
+  padding-left: 20px;
+}
+h4{
+  color: #000000;
+  font-family: 'Lora' , serif;
+}
+small{
+  color: #000000;
+}

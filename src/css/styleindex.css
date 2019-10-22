@@ -1,0 +1,53 @@
+html, body {
+  /* height: 100%; */
+  min-height: 100%;
+  background-image: linear-gradient(180deg, #61c4e3 30%, #ffffff 100%);
+
+}
+/* Carousel de imagenes */
+#main{
+  z-index: 1000;
+}
+
+img {
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 15pt;
+  font-style: italic;
+  color: #eb656a;
+}
+
+#carusel{
+
+  margin-top: 50%;
+  margin-bottom: 0;
+  z-index: 1000;
+  position: fixed;
+}
+
+/* Barra de Navegador */
+#navbar {
+  bottom: 0;
+  position: fixed;
+  z-index: 1000;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  text-align: center;
+  background-color: #EB656A;
+  margin-bottom: auto;
+}
+
+#navbar a{
+  font-size: 17pt;
+  color: #fff;
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+#navbar a:active{
+  color: #61c4e3;
+}

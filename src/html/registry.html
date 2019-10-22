@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!--Este meta es para que reconozca los diferentes tamaños de pantallas de dispositivos.-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!--Es el la hoja de estilos del bootstrap que esta en la página versión 4 -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Lora:700" rel="stylesheet">
+  <!--Link de libreria de Font Awesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <!--Link GoogleFonts para las tipografias-->
+  <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500" rel="stylesheet">
+  <!--Íconos de Material-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Vínculo con archivo Css-->
+  <link rel="stylesheet" href="../css/registry.css">
+  <!--Ícono de pestaña de ventana-->
+  <link rel="icon" href="../images/icono.jpeg">
+  <title>DiabeTips</title>
+</head>
+<body>
+  <!-- Permisos de Facebook -->
+  <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '651409108544978',
+      xfbml      : true,
+      version    : 'v3.0'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+<h2 id='userSpace'></h2>
+<pre id = 'obj'></pre>
+
+<!-- Comienza el cuerpo del contenido -->
+
+<header class="text-center">
+  <img id="logoDiabeTips" src="../images/logoDiabeTips.png" alt="">
+</header>
+
+<section class="container-fluid">
+  <div class="row text-center">
+    <h4 class="text-center col-12">Registro de Nuevo Usuarios</h4>
+  </div>
+  <!--Los dos botones de Ingreso automático están dentro de un Row -->
+  <div class="row">
+    <div id="cuerpo" class= "text-center col-8 offset-2">
+      <form id="usuario" action="comments.html" class="text-center form-group">
+        <!--Registro con Gmail de Google-->
+        <button class="btn btn-danger btn-block" type="button" name="button" id="btn-google"><i class="fab fa-facebook"></i>
+Ingresa con Google</button>
+        <!--Registro con Facebook-->
+        <button class="btn btn-primary btn-block" type="button" name="button" id="btn-facebook">Ingresa con Facebook</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="col-12">
+    <form action="comments.html" class="text-center form-group">
+      <div class="form-group" style="font-family: 'Lora' , serif ;">
+        <small class="form-text text-muted">o también puedes</small>
+      </div>
+    </form>
+  </div>
+
+  <!--Registro de usuario-->
+  <div class="row">
+    <div class="col-12">
+      <div class="form-group">
+<!--  -->
+        <form action="home.html" name="registro" method="get"><!-- Redirige a la página de Home al validar -->
+          <div class="form-group">
+            <label>Por favor agrega tus datos:</label>
+            <input type="email" class="form-control" id="uEmail" aria-describedby="emailHelp" placeholder="Correo electrónico">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" id="uPsw" placeholder="Contraseña">
+          </div>
+          <div class="form-group" style="font-family: 'Lora' , serif ;">
+            <input type="text" class="form-control" id="uName" placeholder="Nombre de Usuario">
+          </div>
+          <div class="form-group" style="font-family: 'Lora' , serif ;">
+            <input type="text" class="form-control" id="name" placeholder="Nombre completo">
+          </div>
+          <div class="form-group" style="font-family: 'Lora' , serif ;">
+            <input type="date" class="form-control" id="birthday" placeholder="dd / mm / aaaa">
+          </div>
+          <div class="form-group" style="font-family: 'Lora' , serif ;">
+            <select class="form-control" id="country">
+              <option>País</option>
+              <option>México</option>
+              <option>Lima</option>
+              <option>Santiago</option>
+              <option>Sao Paolo</option>
+            </select>
+          </div>
+
+          <div class="form-group form-check" style="font-family: 'Lora' , serif ;">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Recuerdame</label>
+          </div>
+
+          <div class="form-group" style="font-family: 'Lora' , serif ;">
+            <small id="dataHelp" class="form-text text-muted">Nosotros nunca compartiremos tu información con nadie.</small>
+          </div>
+          <input id="buttonRegistrar" type="button" class="btn btn-dark" value = "Registrar"></input>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+<!-- Silvana comentó que estas líneas de firebase ya no son necesarias -->
+<!--  -->
+<script src="../js/authentications.js"></script>
+<script src="../js/registryBySocialNetwork.js"></script>
+<script src="../js/registryByEmail.js"></script>
+</body>
+</html>
