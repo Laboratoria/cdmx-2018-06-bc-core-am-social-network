@@ -1,497 +1,185 @@
-# Creando una Red Social
 
-## Preámbulo
+# Greener
 
-Instagram, Snapchat, Twitter, Facebook, Twitch, Linkedin, etc. Las redes
-sociales han invadido nuestras vidas. Las amamos u odiamos, y muchos no podemos
-vivir sin ellas.
+**Introducción: ¿qué es una red social?**
 
-Hay redes sociales de todo tipo y para todo tipo de intereses. Por ejemplo,
-en una ronda de financiamiento con inversionistas, se presentó una red social
-para químicos en la que los usuarios podían publicar artículos sobre sus
-investigaciones, comentar en los artículos de sus colegas, y filtrar artículos
-de acuerdo a determinadas etiquetas o su popularidad, lo más reciente, o lo
-más comentado.
-
-## Introducción
-
-Una emprendedora nos ha encargado crear una red social. No nos da mucho detalle
-sobre qué tipo de red social quiere, sólo nos dice que creemos la mejor que
-podamos, y que luego la convenzamos de lanzarla al mercado. Nos da ciertos temas
-en los que le gustaría invertir:
-
-* Alimentación
-* Feminismo
-* Educación
-* Salud
-* Energías Renovables
-
-## Objetivos
-
-El objetivo principal de aprendizaje de este proyecto es construir un sitio web
-[_responsive_](https://github.com/Laboratoria/curricula-js/tree/master/topics/css/02-responsive)
-con más de una vista (página), y en el que podamos leer y escribir datos.
-
-Algunos objetivos específicos:
-
-* Entender las necesidades de los usuarios para los que crearás el producto y
-  que ayudarás a resolver.
-* Poner en juego tu creatividad para generar ideas que lleven a una solución
-  original y valiosa del problema.
-* Cuentas con el apoyo de tus compañeras, debes trabajar en equipo buscando
-  _feedback_ constante.
-
-## Consideraciones generales
-
-Este proyecto se debe "resolver" en trios.
-
-La lógica del proyecto debe estar implementada completamente en JavaScript
-(ES6), HTML y CSS. En este proyecto **SÍ está permitido** usar librerías o
-frameworks, pero **no es obligatorio** :smiley:.
-
-Para comenzar tendrás que hacer un _fork_ y _clonar_ este
-repositorio.
-
-## Parte obligatoria
-
-### General
-
-En este proyecto, hay un _boilerplate_ basico , sin configuración y una estructura recomendada de carpetas (Puedes modificar, agregar o quitar lo que creas necesario), puedes guiarte de los proyectos anteriores. Por lo tanto, los _tests_ y el _setup_ necesario para ejecutarlos serán hechos por ti misma. Recuerda, _todos los archivos estan vacios_  :smiley:.
-
-En tu  `README.md`, cuéntanos cómo pensaste y te acercaste a los usuarios,
-y cuál fue tu proceso para definir el producto final en términos de experiencia
-y de interfaz. Si tienes fotos de entrevistas, cuestionarios y/o
-sketches(bocetos) compártelos.
-
-### Responsive
-
-Debe verse bien en dispositivos de pantallas grandes
-(computadoras/es, laptops, etc.) y pequeñas (tablets, celulares, etc.). Te
-sugerimos Seguir la técnica de `mobile first` (más detalles sobre esta técnica
-al final).
-
-### Tests
-
-Los tests unitarios deben cubrir un mínimo del 70% de _statements_, _functions_,
-_lines_, y _branches_.
-
-### UI y comportamiento (User Interface / Interfaz de Usuario)
-
-La interfaz debe permitir lo siguiente:
-
-#### Creación de cuenta de usuario e inicio de sesión
-
-* Login con Firebase:
-  - Solamente para el login es obligatorio usar Firebase, no para las
-    publicaciones en el muro ni las demás funcionalidades, pare eso puedes
-    usar [`localStorage`](https://developer.mozilla.org/es/docs/Web/API/API_de_almacenamiento_web/Usando_la_API_de_almacenamiento_web).
-  - Autenticación con Facebook - Google.
-* Validaciones:.
-  - No pueden haber usuarios repetidos.
-  - La cuenta de usuario debe ser un correo electrónico válido.
-  - Lo que se escriba en el campo(_input_) de contraseña debe ser secreto.
-* Comportamiento:
-  - Al enviarse un formulario de registro o inicio de sesión, debe validarse.
-  - En caso haya errores, el sistema debe mostrar mensajes de error para
-    ayudar al usuario a corregirlos.
-  - La aplicación solo permitirá el acceso a usuarios con cuentas válidas.
-  - Al recargar la aplicación, se debe verificar si el usuario está
-    logueado antes de mostrarle el contenido privado.
-* Perspectiva de interfaz:
-  ![Login](https://user-images.githubusercontent.com/9284690/40994765-c3cf9602-68c2-11e8-89ac-8254859b5ebb.png)
-
-#### Muro/timeline de la red social
-
-* Validaciones (debe tener al menos 8):
-  - Al apretar el botón de publicar, debe validar que exista contenido en el input.
-* Comportamiento:
-  - Debe poder publicar un post, imagen, post e imagen, etc.
-  - Poder poder like/Estrella (o similar) a una publicación.
-  - Debe poder llevar ó ver cuántos me like/Estrella (o similar) tiene una publicación.
-  - Debe poder eliminar un post/publicación específico.
-  - Debe pedir una confirmación antes de eliminar un post/publicación.
-  - Al darle click en el botón *editar*, debe poder cambiar el texto, imagen, post e imagen, o lo que contenga la publicación.
-    (se sugiere que el texto cambie a un input, permita editar el texto y que el
-    tenga un botón `editar` se convierta en `guardar`).
-  - Al editar solo debe poder editar sus propios post y **NO** los post de los demás usuarios.
-  - Al darle `guardar` debe regresar de vuelta a la forma que tenia antes la publicación
-    a un texto normal pero con la información editada.
-  - Al recargar la página debo de poder ver los textos editados y publicaciones
-    anteriores (persistencia).
-  - Debe poder agregar nuevos amigos
-  - Debe poder aceptar solicitudes de amigos
-  - Debe poder eliminar amigos
-  - Debe poder filtrar los posts sólo para mis amigos y para todo público.
-  - Debe poder publicar solo para mis amigos
-  - Debe poder publicar públicamente, visible para todos los usuarios de la red social.
-  - Debe poder enviar mensajes privados a mis amigos.
-* Perspectiva de interfaz:
-  ![Muro](https://user-images.githubusercontent.com/9284690/40994768-c52c3442-68c2-11e8-99a5-9e127e700dee.png)
-
-#### Otras consideraciones
-
-  - La aplicación **NO** debe poder dejar hacer publicaciones vacías de ningún tipo.
-  - El usuario debe poder agregar, editar y eliminar contenido de la red
-    social.
-  - El usuario debe poder definir la privacidad de lo que pública.
-  - Al editar contenido, el contenido editado se verá automáticamente,
-    inmediatamente después de guardar.
-  - Al recargar la página se deben poder ver los contenidos editados.
-
-Para armar la interfaz visual, utiliza como base alguna de estas guías de
-componentes:
-
-* [Guía Desktop 1](https://www.figma.com/file/F3aUqpHWOfZsEQifTPIleXo6/material-kit-free)
-* [Guía Desktop 2](https://www.figma.com/file/S39H0B1LOnaVICIUiApFTfoP/_Style-Guide---Desktop---Style-Guide)
-* [Guía Mobile 1](https://www.figma.com/file/00VTwmTNvLVaBLkxrMFbT8/Google-Material-Design)
-* [Guía Mobile 2](https://www.figma.com/file/O2Xraz3mraQHvevNsicMl91V/ejemplos-2)
-
-Personaliza estas guías con los colores y/o tipografías que creas convenientes.
-Recuerda que al hacer estas adaptaciones deberás seguir los fundamentos de
-_visual design_ como contraste, alineación, jerarquía, entre otros.
-
-## Implementación
-
-### Front end
-
-El corazón de este proyecto incluye:
-
-* Separar la manipulación del DOM de la lógica (Separación de responsabilidades).
-* Que el sitio sea responsive, ya dicho.
-* Alterar y persistir datos.  Los datos que agregues o modifiques deberán
-  persistir a lo largo de la aplicación, te recomendamos que uses
-  [`localStorage`](https://developer.mozilla.org/es/docs/Web/API/API_de_almacenamiento_web/Usando_la_API_de_almacenamiento_web)
-  como primera opción para resolver este desafío, aun así, tú
-  puedes optar por la que se acomode más a tu equipo.
-
-Además, podrías agregar algunas tareas nuevas de acuerdo a tus decisiones:
-
-* Recuerda que puedes usar una librería y/o framework si así lo desea el equipo,
-  al navegar en internet te darás cuenta de que algunas de estas construyen un
-  **boilerplate** por ti (Si no quieres usar la estructura propuesta), tenlo presente al iniciar tu proyecto.
-* Recuerda que no hay un setup de **tests** definido, dependerá de
-  la estructura de tu proyecto también, pero algo que no debes de olvidar es
-  pensar en éstas pruebas, incluso te podrían ayudar a definir la estructura y nomenclatura de tu lógica.
-
-### UX
-
-Desde el punto de vista de UX, deberás:  
-
-* Hacer un _benchamark_ de las principales redes sociales.
-* Hacer al menos 2 o 3 entrevistas con usuarios.
-* Hacer un  prototipo de alta fidelidad.
-* Testear el prototipo con usuarios.
-* Asegurarte de que la implementación en código siga los lineamientos del
-  diseño.
-* Hacer sesiones de testing con el producto en HTML.
-
-### Ágil
-
-Vamos a dar un paso importante para seguir aprendiendo de Ágil. Te será de mucha
-ayuda para ir avanzando tu proyecto de forma incremental y no en cascada.
-
-Esta vez te pedimos que los ítems de tu Backlog de Producto estén escritos
-como [Historias de Usuario](http://jmbeas.es/guias/historias-de-usuario/).
-Esta es una técnica muy simple que te ayudará a:
-
-* Organizar el trabajo en función del valor que le aporta al usuario.
-* Poder publicar partes completas y utilizables del producto al final del
-  sprint.
-* Que el equipo trabaje de manera multidisciplinaria de manera natural.
-
-### Habilidades Blandas
-
-Trabajar en equipo es un gran desafío porque coordinarse no es una tarea fácil,
-y es más difícil entre tres que entre dos. Trata que tu equipo te entienda,
-facilitando siempre el diálogo en dentro del squad **Apoyate de "Minestrone e Issues en Github"**.
-
-Planifica enumerando las tareas y distribuyéndolas, considerando los
-recursos, las habilidades, y el tiempo del que dispones. Planifica de manera
-que te permita avanzar en los distintos aspectos del proyecto de forma paralela,
-teniendo un tablero donde puedas ver en qué está trabajando cada compañera.
-
-Entrega tu trabajo a tu equipo a tiempo y colabora con el objetivo
-final del proyecto, lo que puede implicar ayudar a los demás miembros del equipo
-con sus pendientes, con el fin de entregar una red social de calidad.
-
-**La división del trabajo debe permitir que todo el equipo
-practique el aprendizaje de todas las habilidades esperadas. No se dividan el
-trabajo como en una fábrica**
-
-Para conocer a los usuario para eso debes salir e investigar. Tienes que
-ejercitar tus habilidades de comunicación y toma de decisiones.
-Existen infinitas opciones, depende de ti el camino que escoges.
-Para que tu red social responda a las necesidades de sus usuarios, probablemente
-deberás adquirir nuevos conocimientos para implementar sus preferencias.
-
-Esta vez, haz _code review_(feedback de tu código) con **otro squad**, para
-que puedas mejorar el producto. Mientras más feedback reciban, mejor.
-
-Esperamos que valores y escuches los comentarios y críticas de los demás,
-rescatando aquellos aspectos que sirven para tu crecimiento. Entrega siempre
-tu opinión de manera constructiva, fundamentada y coherente, con el propósito
-de ayudar a tus compañeras. Estos comentarios los debes hacer de manera honesta,
-empática e inmediata.
-
-Finalmente, deberás presentar el proyecto que creaste, al usuario que escogiste
-y las necesidades que lograste resolver en este proceso. Como siempre, sabemos
-que presentar puede ser una tarea difícil, esperamos que tengas capacidad de
-síntesis y articules tus ideas con claridad para que logres mostrar tu trabajo
-y que los demás lo comprendan.
-
-## Hacker edition
-
-* Crear posts con imágenes
-* Reemplazar `localStorage`, ¿le has compartido tu red social a tus amigxs? Si
-  lo has hecho, te darás cuenta de que ellxs no pueden ver tus posts ni tú el de
-  ellxs. Esto es debido a que `localStorage` almacena los datos localmente
-  (en tu navegador) por lo que esos datos no se comparten. Para resolver esto
-  podrías implementar una base de datos pero el tiempo podría jugar en contra,
-  para ello existen algunos servicios como [Firebase](https://firebase.google.com/products/database/)
-  que te proveen soluciones rápidas a este problema y solo usando su SDK :scream:.
-
-## Entrega
-
-El proyecto será _entregado_ subiendo tu código a GitHub (`commit`/`push`) y la
-interfaz será desplegada usando GitHub pages u otro servicio de hosting que
-puedas haber encontrado en el camino.
-
-### Entregables
-
-#### 1) Definición del producto
-
-En el `README.md` cómo conociste el mercado de las redes sociales, cómo
-descubriste las necesidades de los usuarios, cómo llegaste  la definición final
-de tu producto. Es importante que detalles:
-
-* Cuáles son los elementos básicos que tiene una red social
-* Quiénes son los principales usuarios de producto
-* Qué problema resuelve el producto para estos usuarios
-* Cuáles son los objetivos de estos usuarios en relación con el producto
-* Cuáles son las principales funcionalidades del producto y cuál es su prioridad
-* Cómo verificaste que el producto les está resolviendo sus problemas
-* Cómo te asegurarás que estos usuarios usen este producto
-
-Para poder llegar a estas definiciones te recomendamos ver: benchmarks,
-entrevistas con usuarios y tests de usabilidad.
-
-#### 2) Diseño de la Interfaz de Usuario (prototipo de alta fidelidad)
-
-Debes definir cuál será el flujo que seguirá el usuario dentro de tu producto y
-con eso deberás diseñar la Interfaz de Usuario (UI por sus siglas en inglés) de
-esta red social que siga este flujo. Para esto debes utilizar la herramienta de
-diseño visual de tu preferencia. Nosotros te recomendamos Figma dado que es una
-herramienta que funciona en el navegador y puedes crear una cuenta gratis. Sin
-embargo, eres libre de utilizar otros editores gráficos como Illustrator,
-Photoshop, PowerPoint, Keynote, etc.
-
-Este diseño debe representar la solución que se implementará finalmente en
-código.
-
-Tu diseño debe seguir los fundamentos de visual design, como: contraste,
-alineación, jerarquía, entre otros. Tip: revisa el contenido de UX de la unidad
-de visual design.
-
-#### 3) Implementación de la Interfaz de Usuario
-
-La idea para este producto es que el producto a desarrollar siga los
-lineamientos propuestos en el diseño de la interfaz de usuario. Asegúrate a lo
-largo de la implementación que los elementos propuestos están siendo
-implementados correctamente. (Hint: testing)
-
-## Evaluación
-
-### Tech
-
-| Habilidad | Nivel esperado |
-|-----------|----------------|
-| **JavaScript** | |
-| Estilo | 3
-| Nomenclatura/semántica | 3
-| Funciones/modularidad | 2
-| Estructuras de datos | 2
-| Tests | 2
-| **HTML** | |
-| Validación | 3
-| Estilo | 3
-| Semántica | 3
-| SEO | n/a
-| **CSS** | |
-| DRY | 3
-| Responsive | 3
-| **SCM** | |
-| Git | 3
-| GitHub | 3
-| **CS** | |
-| Lógica | 2
-| Arquitectura | 2
-| Patrones/paradigmas | n/a
-
-### UX
-
-| Habilidad | Nivel esperado |
-|-----------|----------------|
-| User Centricity | 3
-| Entrevistas | 2 |
-| Testing | 2
-| User Flow | 2
-| Jerarquía | 3
-| Alineación | 3
-| Contraste | 3
-| Color | 3
-| Tipografía | 3
-
-### Habilidades Blandas
-
-Para este proyecto esperamos que ya hayas alcanzado el nivel 3 en todas tus
-habilidades blandas. Te aconsejamos revisar la rúbrica:
-
-| Habilidad | Nivel esperado |
-|-----------|----------------|
-| Planificación y organización | 3
-| Autoaprendizaje | 3
-| Solución de Problemas | 3
-| Dar y recibir feedback | 3
-| Adaptabilidad | 3
-| Trabajo en equipo (trabajo colaborativo y responsabilidad) | 3
-| Comunicación eficaz | 3
-| Presentaciones | 3
-
-***
-
-## Pistas / Tips / Lecturas complementarias
-
-### Mobile first
-
-El concepto de [_mobile first_](https://www.mediaclick.es/blog/diseno-web-responsive-design-y-la-importancia-del-mobile-first/)
-hace referencia a un proceso de diseño y desarrollo donde partimos de cómo se ve
-y cómo funciona la aplicación en un dispositivo móvil primero, y más adelante se
-ve como adaptar la aplicación a pantallas progresivamente grandes y
-características específicas del entorno desktop. Esto es en contraposición al
-modelo tradicional, donde primero se diseñaban los websites (o webapps) para
-desktop y después se trataba de _arrugar_ el diseño para que entre en pantallas
-más chicas. La clave acá es asegurarse de que desde el principio diseñan usando
-la vista _responsive_ de las herramientas de desarrollador (developer tools) del
-navegador. De esa forma, partimos de cómo se ve y comporta la aplicación en una
-pantalla y entorno móvil.
-
-### Múltiples vistas
-
-En proyectos anteriores nuestras aplicaciones habían estado compuestas de una
-sola _vista_ principal (una sóla _página_). En este proyecto se introduce la
-necesidad de tener que dividir nuestra interfaz en varias _vistas_ o _páginas_
-y ofrecer una manera de navegar entre estas vistas. Este problema se puede
-afrontar de muchas maneras: con archivos HTML independientes (cada uno con su
-URL) y links tradicionales, manteniendo estado en memoria y rederizando
-condicionalmente (sin refrescar la página), [manipulando el historial del
-navegador](https://developer.mozilla.org/es/docs/DOM/Manipulando_el_historial_del_navegador)
-con [`window.history`](https://developer.mozilla.org/es/docs/Web/API/Window/history),
-usando una librería (por ejemplo [`react-router`](https://github.com/ReactTraining/react-router)
-o [`vue-router`](https://router.vuejs.org/)). En este proyecto te invitamos a
-explorar opciones y decidir una opción de implementación.
-
-### Escritura de datos
-
-En los proyectos anteriores hemos consumido (leído) datos, pero todavía no
-habíamos escrito datos (salvar cambios, crear datos, borrar, ...). En este
-proyecto tendrás que crear (salvar) nuevos datos, así como leer, actualizar y
-modificar datos existentes. Estos datos se podrán guardar localmente usando
-[`localStorage`](https://developer.mozilla.org/es/docs/Web/API/Window/localStorage)
-o de forma remota usando [Firebase](https://firebase.google.com/).
-
-### Te dejamos un ejemplo de una historias de usuario del proyecto anterior (_Data-dasboard_)
-
-En el proyecto "Data Dashboard", la primera historia "épica" podría haber sido:
-
-Yo, como **Training Manager** quiero poder **ver el progreso de solución de
-ejercicios de JS de las estudiantes de mi(s) cohort(s)** para **entender
-cuánto están practicando y qué tan bien les está yendo**
-
-Esta la podríamos haber dividido en algunas más pequeñas, por ejemplo:
-
-1. Yo, como **Training Manager** quiero poder **seleccionar cada uno de los
-   cohorts de mi ciudad** para **ver un listado de todas las estudiantes de ese
-   cohort, y que incluya el % de progreso de solución de ejercicios de cada una
-   de ellas**
-2. Yo, como **Training Manager** quiero poder **seleccionar a una estudiante en
-   particular** para **ver el % de progreso de solución de todos los ejercicios
-   y el resultado decada uno de ellos**
-
-Como ves, dividirla en 1 y 2, hace que sea mucho más fácil imaginar y entender
-lo que el equipo tiene que conseguir para completarla.
-
-### Te dejamos un ejemplo de una historias de usuario para este proyecto
-
-En el proyecto de la *"red social"*, las primeras historias podrían ser:
-
-* Yo, como una **feminista**, quiero poder registrarme en una nueva red social  para conectarme con otras personas con ideales como yo.
-  - Yo, como usuaria registrada en esta red social quiero poder loguearme con mi correo para empezar a usar esta red.
-  - Yo, como usuaria registrada en esta red social, quiero poder loguearme con mi cuenta facebook o google para empezar a usar esta red.
-
-* Yo, como usuaria logueada en esta red social, quiero poder postear un mensaje en mi muro para que otras personas puedan ver lo que pienso.
-
-* Yo, como usuaria logueada en esta red social, quiero poder editar o eliminar mis posts por si me arrepiento de lo que puse.
-
-* Yo, como usuaria logueada  quiero poder darle like/estrellas a un posts para expresar mi apoyo a una publicación.
-
-* Yo, como usuaria logueada quiero poder ver los posts publicos de otrxs usuarixs aunque no sean mis amigxs.
-
-* Yo, como usuaria logueada quiero poder compartir posts de texto, imagen ó texto con imagen para comunicar mejor mis ideas.
-
-Como ves en la primer historia, podemos dividir dicha historia en historias mas pequeñas, haciendo mas fácil imaginar y entender lo que el equipo tiene que conseguir para completarla e incluso podiendo dividir en tareas aún más pequeñas.
-
-Otras:
-
-* [Diseño web, responsive design y la importancia del mobile first - Media Click](https://www.mediaclick.es/blog/diseno-web-responsive-design-y-la-importancia-del-mobile-first/)
-* [Mobile First: el enfoque actual del diseño web móvil - 1and1](https://www.1and1.es/digitalguide/paginas-web/diseno-web/mobile-first-la-nueva-tendencia-del-diseno-web/)
-* [Mobile First - desarrolloweb.com](https://desarrolloweb.com/articulos/mobile-first-responsive.html)
-* [Mobile First - ZURB](https://zurb.com/word/mobile-first)
-* [Mobile First Is NOT Mobile Only - Nielsen Norman Group](https://www.nngroup.com/articles/mobile-first-not-mobile-only/)
-* [Offline first manifesto](http://offlinefirst.org/)
-
-***
-
-## Checklist
-
-### General
-
-* [ ] Producto final sigue los lineamientos del diseño.
-
-### `README.md`
-
-* [ ] Definición del producto.
-* [ ] Benchamark de las principales redes sociales.
-* [ ] Resumen de entrevistas con usuarios.
-* [ ] Link/screenshots prototipo de alta fidelidad.
-* [ ] Conclusiones de pruebas del prototipo con usuarios.
-* [ ] Conclusiones de pruebas con el producto en HTML.
-
-### Pruebas / tests
-
-* [ ] Tests unitarios cubren un mínimo del 70% de statements, functions, lines,
-  y branches.
-* [ ] Pasa tests (y linters) (`yarn test`).
-
-### Creación de cuenta (sign up)
-
-* [ ] Permite crear cuenta.
-* [ ] Valida email.
-* [ ] Valida password.
-* [ ] Muestra mensajes de error.
-
-### Inicio de sesión (sign in)
-
-* [ ] Permite iniciar sesión.
-* [ ] Valida email.
-* [ ] Valida password.
-* [ ] Muestra mensajes de error.
-
-### Muro (wall/feed)
-
-* [ ] Muestra _muro_.
-* [ ] Permite publicar nuevos posts.
-* [ ] Permite eliminar posts.
-* [ ] Pide confirmación antes de borrar posts.
-* [ ] Permite editar posts (in place).
-* [ ] Permite filtrar posts por público/amigos.
-* [ ] Permite marcar posts como _gustados_ (like).
+Para poder entender lo que nuestro cliente solicita y con ello empatar nuestras ideas sobre el producto, debemos aterrizar el concepto y los elementos de una red social. Hoy en día todos utilizamos distintas redes sociales: Instagram, Facebook, twitter, entre las más conocidas. De éstas podemos observar que son servicios centrados en los intereses del usuario y sus relaciones personales. 
+
+Una red social nos permite crear un perfil (público o privado)  para poder ser identificados por otros. Nos permiten compartir información de nuestro interés, publicar información en nuestro perfil, publicar en perfiles de nuestros conocidos; evaluar publicaciones y ser evaluados. Permiten  la posibilidad de interacción con otra persona, fomentan y fortalecen las relaciones entre usuarios creando comunidades con intereses similares o relaciones interpersonales en común.
+
+En las ciudades como la CDMX es bastante común encontrar que las Redes Sociales se han convertido en algo constante, cotidiano e indispensable para la mayoría de las  personas. Gracias a éstas nos es posible encontrar un espacio creativo de convivencia virtual que nos une a nuestros seres queridos y a las personas con nuestros mismos intereses. 
+
+**Problemática**
+
+Es bien sabido que en México es uno de los países con más problemas de obesidad. Según un artículo de la *BBC*, La Organización para la Cooperación y el Desarrollo Económicos (OCDE) realizó un estudio en 2015, se encontró que Estados Unidos es el país que encabeza la lista, con el 38,2% de la población mayor de 15 años con obesidad mientras México ocupa el segundo lugar con el 32,4% de la población y Nueva Zelanda con el 30,7%. Se estima que a largo plazo los niveles de obesidad aumentarán para el 2030, como también ocurre en otros países como Estados Unidos, Inglaterra, Canadá, Francia y España.
+
+Para tener una mejor idea de la problemática realizamos un sondeo para delimitarla y entender posibles soluciones que el usuario emplearía.
+
+<img align="center" src="src/UX/imagenes-ux/1.jpeg"/> 
+<img align="center" src="src/UX/imagenes-ux/2.jpeg"/>
+<img align="center" src="src/UX/imagenes-ux/3.jpeg"/>
+
+
+Derivado de esto consideramos conveniente realizar una serie de preguntas en torno a estos resultados, los cuales arrojaron lo siguiente en este
+[Cuestionario](https://docs.google.com/forms/d/1y8orWsIOjkrOVd1Yfd35Uo6qiF26XfBipm9aP9Tksmw/edit#responses)
+
+
+Lo más destacado de ésta encuesta, se mencionan en los siguientes puntos:
+
+
+* Nuestros encuestados están en un rango de edad de entre los  24 a los 35 años.
+* Trabajan y/o  estudian tiempo completo.
+* Consideran que tienen problemas para alimentarse sanamente
+* No encuentran opciones saludables, cuentan con poco tiempo para la elaboración de sus alimentos, cuentan con poco presupuesto, no quieren invertir tanto tiempo en la preparación y no les son apetecibles las opciones sanas.
+* Están conscientes de la importancia de los buenos hábitos de la alimentación y su solución, sin embargo viendo los resultados de los puntos anteriores carecen de una buena organización.
+
+ A pesar de que la mayoría lleva su comida al trabajo o escuela, consideran que no son las mejores opciones y esto es porque no conocen más variantes a la hora de la preparación. 
+
+
+Por ello pensamos en crear una red social que brinde un espacio para personas que busquen un cambio significativo en su alimentación de la manera más creativa, atractiva y sencilla.
+
+Nos dimos a la tarea de  entender las motivaciones y  propósitos de nuestros usuarios para brindar en conjunto con ellos herramientas que puedan ayudarlos a sustentar buenas prácticas alimenticias haciéndolos partícipes en este proceso. Con esto pretendemos dar apoyo a los usuarios que buscan mejorar su calidad de vida pensando en el contexto en el que se desenvuelven día a día.
+
+
+**¿Quiénes son los principales usuarios?**
+
+Nuestros principales usuarios son mujeres y hombres de entre  los 25 y 30 años que trabajan y/o estudian. Están fuera de casa todo el día, esto implica para ellos no tener tiempo para preparar sus alimentos.
+Los resultados nos hicieron ver la problemática real, la cual nos dice que muchos de estos encuestados son personas que dependen de alguien más para su alimentación. Notamos que no hay coherencia en sus respuestas al decir que no tienen tiempo para preparar alimentos, sin embargo  llevan comida, preparada en su casa, a su oficina o escuela.La pregunta aquí es: *¿quién les prepara esa comida?* 
+Intuimos que como sociedad mexicana, las madres o parejas son quienes se encargan de prepararles estos alimentos y por ello pensamos en nuestro target final: *"las personas que quieren hacerse cargo de su alimentación y ya no desean depender de alguien más para la elaboración de estos alimentos".*
+
+Las largas jornadas de trabajo sentados frente a un computador o en un salón de clases forman parte de su cotidianeidad,  así como caminos que se complican aún más por el tráfico y que deben recorrer por la ciudad al salir de casa para ir a la oficina y viceversa; distintas actividades que van excluyendo el cuidado personal y particularmente, la alimentación y la falta de actividad física, esto conlleva a un desgaste dejándolos sin motivación para realizar actividades extras.
+
+**¿Cuáles son los objetivos de estos usuarios en relación con el producto?**
+ 
+Tener una fuente de consulta, aportar a esa fuente y ser un participante activo dentro de la misma, encontrar motivación en una comunidad que tiene el mismo fin de independizarse en cuanto a su hábitos alimenticios y conocer gente dentro de esa misma comunidad.
+
+Así mismo planteamos los objetivos de los usuarios con respecto al producto utilizando las historais de usuario.
+
+* Yo usuari@ quiero poder registrarme en 'Greener'
+* Yo usuario quiero poder iniciar sesión con facebook o google para ser parte de 'Greener'
+* Yo como usuari@ logueado quiero poder hacer publicaciones para comunicarme con personas como yo que busquen una mejora en su alimentación sin tener mucho tiempo para preparar alimentos. 
+* Yo como usuari@ quiero poder contribuir y recibir  tips o recetas, videos y fotos, para ayudarnos a mejorar nuestra alimentación, lo cual nos brindará motivación y una mejor calidad de vida
+* Yo como usuari@ quiero poder dar  y recibir like a las publicaciones de mis amigos.
+* Yo como usuari@ quiero poder ver cuántos  likes/Estrella (o similar) tiene una publicación.
+* Yo usuari@ quiero poder eliminar un post/publicación específico.
+* Yo usuari@ quiero darle click en el botón editar, cambiar el texto, imagen, post e imagen, o lo que contenga la publicación. 
+* Yo usuari@ quiero que al recargar la página pueda ver los textos editados y publicaciones anteriores (persistencia).
+* Yo usiari@ quiero poder cerrar sesión.
+
+Como un segundo alcance se plantearon las siguientes hisotrias:
+
+* Yo usuari@ quiero poder agregar nuevos amigos
+* Yo usuari@ quiero poder aceptar solicitudes de amigos
+* Yo usuari@ quiero poder eliminar amigos
+* Yo usuari@ quiero poder poder filtrar los posts sólo para mis amigos y para todo público.
+* Yo usuari@ quiero poder publicar solo para mis amigos
+* Yo usuari@ quiero poder poder publicar públicamente, visible para todos los usuarios de la red social.
+* Yo usuari@ quiero poder enviar mensajes privados a mis amigos.
+
+# Ideación
+
+**Prototipado**
+
+A continuación mostraremos el primer sketch, pensando primero en el dispositivo móvil, pues es más cómodo para el usuario accesar a través de éste a una app.
+
+
+<img align="center" src="src/UX/imagenes-ux/6.jpeg"/> 
+
+
+Version Desktop
+
+<img align="center" src="src/UX/imagenes-ux/4.jpeg"/>
+<img align="center" src="src/UX/imagenes-ux/5.jpeg"/>
+
+Así mismo elaboramos un [prototipo de alta fidelidad](https://www.figma.com/proto/cI2y8tMN0p8NghxQI8fsfBME/foodbook?node-id=4%3A2&scaling=scale-down). Cabe aclarar que en el proceso de construcción de la web app, fuimos transformando el diseño de acuerdo a los feedbacks recibidos. 
+
+### Fundamento para el protrotipado
+
+La idea principal de nuestra red social no es sólo ofrecer, como muchas, recetas saludable, si bien se basará en esto, lo principal es crear y fomentar la autonomía de la alimentación de todo aquel que ya haya tomado este primer paso. Nuestra comunidad ayudrá con ese gran paso ofreciendo consejos e ideas de usuaros que estuvieron es esa misma situación y cómo salieron de ello.
+
+Teniendo en cuanta que la comida entra por lo ojos, sabemos que la toma de decisiones en cuanto a colores e imagenes es primordial para motivar al usuario, el uso de lenguaje poco técnico en las recetas y tips, es de las mayores preocupaciones entre los usuarios al igual que los utensilios de cocina. El color es capaz de estimular o deprimir, puede crear alegría o tristeza. Así mismo, determinados colores despiertan actitudes activas o por el contrario pasivas. Con colores se favorecen sensaciones térmicas de frío o de calor, y también podemos tener impresiones de orden o desorden.
+
+Para nuestra red social hemos decidido incorporar el color verde en nuestro logotipo haciendo referencia a una vida saludable y más verde, como  el mismo nombre de la app (greener) lo dice. Así mismo investigamos que dicho color es asociado con:
+
+* salud y tranquilidad
+* Simboliza el dinero
+* Denota naturaleza
+* Alivia la depresión
+* Es utilizado en gafas de visión nocturna porque el ojo humano es más sensible y capaz de discernir los contrastes y las sombras
+* Representa un nuevo crecimiento
+
+En marketing:
+
+* Usado para relajar en las tiendas
+* Asociado con riqueza
+* Ha sido un símbolo de fertilidad
+
+También hemos  incorporado el color blanco como fondo; éste es asociado mayormente a tópicos relacionados con la pureza, inocencia, optimismo, frescura, limpieza y simplicidad. En el campo de Marketing el color se asocia con una marca amigable, alegre y confiable. Utilizamos fuentes de texto "ligeras" tanto en el logotipo como en los textos de la aplicación con el objetivo de armonizar la interfaz con nuestro concepto.
+
+#Benchmark
+
+ Realizamos un bechmark específicamente con las redes sociales que giran entorno a temas alimenticios : [benchmark](https://docs.google.com/spreadsheets/d/14YIrKK5kG2i1GkdOf4_KPQNa5-7Ytr2HgYstnk-Ihzs/edit#gid=1389167076)
+ Así mismo encontramos las 15 apps (no necesariamente redes sociales) más utilizadas para promover una buena alimentación. Toda se pueden descargar y probar en smartphone o tableta. Todas ellas ayudan a conocer más a fondo el mundo de la comida y a descubrir qué alimentos son más saludables, cuál es su origen, cómo cocinarlos o incluso conocer qué ejercicio físico es necesario para “quemar” esa golosina que te acabas de comer.
+
+### 1 Harvest 
+¿Cuáles son los mejores productos para una determinada época del año? ¿Cómo almacenar la comida? Harvest permite responder a estas preguntas, ofreciendo trucos y respuestas a 120 frutas y verduras, con el objetivo de que los usuarios las conozcan con profundidad. Disponible sólo en plataformas iOS.
+
+### 2 MySugr
+Ideada para ususarios con diabetes, MySugr Logbook es una app que permitirá llevar un registro del azúcar que consumimos con nuestros alimentos. En educación podemos usarla de un modo universal, para que nuestros alumnos investiguen las cantidades de azúcar que implican ciertas comidas, o para descubrir cómo mejorar su alimentación en cuanto a esta variable. La encontramos en iOS y en Android.
+
+### 3 True Food Shoppers Guide
+Aunque destinada a un público adulto que quiera tener una buena alimentación en su día a día, True Food Shoppers Guide puede ser un complemento genial en algunas actividades de Secundaria y Bachillerato: permite conocer los ingredientes con los que se realizan ciertos alimentos, y si éstos han sido modificados genéricamente. Es gratuita y está disponible en iOS y en Android.
+
+### 4 MyFitnessPal
+Una de las apps más conocidas para conocer las calorías de los alimentos es también un excelente complemento para fomentar una buena alimentación. My Fitness Pal cuenta con una enorme base de datos que nos dará la composición de prácticamente cualquier alimento, incluyendo las kilocalorías que aporta y muchos otros datos. Esto incluye desde ingredientes sueltos hasta marcas y alimentos ya preparados, y es una plataforma excelente tanto en su versión web como en sus apps disponibles para iOS y para Android.
+
+### 5 ShopWell
+¿Cómo conocer los alimentos que ingerimos? ¿Son saludables? ShopWell es una app que te permite conocer al instante información relativa a todo tipo de productos, con sólo escanear su código de barras. Esto permitirá que, por ejemplo, los usuarios pueden comprar alimentos y conocerlos con más profundidad a través de esta app. Está disponible en iOS y en Android.
+
+### 6 Diana come Sano
+La Fundación Mútua General de Catalunya ha publicado en las tiendas de aplicaciones móviles Diana come Sano, una app completamente gratuita en la que jugaremos con Diana, una joven pelirroja que nos irá guiando a través de diferentes juegos y puzzles con los que aprenderemos los principios básicos de una buena alimentación. Es completamente gratuita y está disponible en plataformas iOS y en Android.
+
+### 7 Healthy Food Monsters
+Un pequeño monstruito será el personaje que manejaremos en Healthy Food Monsters, y nuestro objetivo es el de ingerir los diferentes alimentos que aparecen en el mapa: deberemos escoger los poco saludables, y eliminar —con unas pequeñas bombas— a los que pueden ser nocivos, como hamburguesas o pizzas. Fácil y sencillo, orientado a niños alrededor de los 6 años para pasar un buen rato; está disponible en iOS y es gratuita.
+
+### 8 Veggie Circus Farm
+Para un público aún más joven, de alrededor de los 2 años, se lanza Veggie Circus Farm: para aprender a pronunciar cómo se dicen 15 vegetales habituales en el mundo, y adentrar así a los pequeños en el mundo de la comida sana con la verdura. Para que les pierdan el miedo a las zanahorias, brócolis y que cuanto los vean en el plato no los rechacen inmediatamente. Disponible una versión ‘lite’ gratuita en iOS y en Android a través de la Amazon App Store.
+
+### 9 Learn Fruits and Vegetables for Kids
+También para un primer contacto, Learn Fruits and Vegetables for Kids es una sencilla app con la que los niños podrán interactuar para conocer la pronunciación y la escritura de algunas frutas y verduras esenciales. Incluyen, además, algunos puzzles para divertirse y tests con los que poner a prueba los conocimientos de niños de hasta 5 años. Disponible en Android gratis.
+
+### 10 Eat Smart
+Aunque hay una comunidad de comida sana con este nombre, la realidad de Eat Smart es que es una aplicación independiente orientada a jóvenes a partir de los 4 años. Se trata de un juego de plataformas en el que deberemos ir saltando para avanzar en cada nivel, procurando evitar la comida nociva y prefiriendo la sana. Sencilla y divertida para jugar un rato, disponible completamente gratis en iOS y en Android.
+
+### 11 Food Truth
+La “verdad sobre la comida” es una página web pero también una app disponible gratis en iOS, que nos cuenta todo sobre los ingredientes. Algunos serán comunes, pero otros de esas rarezas que muchos no se atreven a probar por mero desconocimiento. Food Truth nos permite conocer a fondo los alimentos y, de paso, nos da unas cuantas recetas saludables y de temporada para que conozcamos cómo utilizarlos en la cocina.
+
+### 12 Awesome Eats
+Imagina un huerto virtual en el que tienes que recoger y ordenar frutas, vegetales y grano para ir avanzando. Awesome Eats busca que los más jóvenes se acerquen a los alimentos más sanos de la alimentación en base a mostrarlos con sencillos juegos que han sido pensados para niños a partir de los 6 años. Varias decenas de niveles están disponibles en iOS y Android, en todas ellas de forma gratuita.
+
+### 13 Fooducate
+Fooducate pone en una app móvil (disponible en smartphones y tabletas Android) todo lo necesario para llevar a cabo una dieta sana y equilibrada. En un ámbito educativo es interesante, por ejemplo, para comprobar si las comidas que los jovenes van realizando son saludables o no, y cómo pueden mejorarse, gracias al registro de salud que incluye y que permite escanear los códigos de barras de los alimentos.
+
+### 14 Nicolas’ Garden
+Esta app es un caso muy particular, ya que su idea ha sido desarrollada por Nicolas Come, un ’emprendedor’ de sólo 9 años. El objetivo de Nicolas’ Garden, disponible en iOS y en Android completamente gratis, nos permite disfrutar de cientos de recetas saludables y que los propios niños pueden realizar. Combina explicaciones tanto de los ingredientes como de la secuencia necesaria para realizar cada una de las recetas, todas ellas pensadas en que niños de entre 5 y 15 años puedan ponerlas en práctica.
+
+### 15 Eat & Move-O-Matic
+Y terminamos con Eat & Move-O-Matic, la más “gamificada” de todas las que hablamos aquí. Diseñada y desarrollada por la New Mexico State University, dispone de una serie de pequeños juegos, preguntas y respuestas y comparativas que nos permitirán ahondar tanto en la parte de la nutrición de los alimentos como en la del ejercicio físico, con mucha información que muestra de forma tremendamente visual. Disponible gratis en iOS.
+   
+En su mayoria, las aplicaciones usan colores y lenguaje muy sencillo de entender, su interfaz es muy organica y contrastante, usan de fondo el blanco para que los colores, verde, naranja o rojo, que son los que más se usan, no sean tan agresivos.
+
+<img align="center" src="src/UX/imagenes-ux/benchmark1.png"/>
+<img align="center" src="src/UX/imagenes-ux/benchmark2.jpg"/>
+<img align="center" src="src/UX/imagenes-ux/mysugr-logbook-phone.png"/>
+<img align="center" src="src/UX/imagenes-ux/selecting-2Harvest.png"/>
+
+# Instructivo
+
+Para utilizar Greener puedes acceder desde tu cuenta de Google o Facebook clickando en los botones correspondientes o bien puedes registrarte con otra cuenta de correo e iniciar sesión. Comparte publicaciones con tus amigos escribiendo en el input y dando click en publicar. Así mismo:
+ * Si estás logueado con una cuenta que registraste en tu nombre aparecerá tu mail.
+ * Es necesario escribir "algo" para poder publicar.
+ * Puedes eliminar tus posts o los de tus amigos dando click en BORRAR.
+ * Puedes editar tus posts o los de tus amigos dando click en el botón "EDITAR"; después edita tu texto y da click en el botón GUARDAR para actualizar tu post. 
+ * Para ver el conteo de favoritos en la publicación y agregar un favorito, da click en el corazón.
+ * Si deseas salir de la aplicación da click en "LOG OUT". 
+ * Disfruta y ayuda a tus amigos a cambiar su alimentación por una vida más saludable. Agrega a "Greener" contenido que tus amigos y tú comparten sobre alimentación saludable con recetas sencillas.  
